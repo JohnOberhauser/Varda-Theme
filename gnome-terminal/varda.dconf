@@ -1,0 +1,8 @@
+[/]
+background-color='rgb(12,14,17)'
+default-size-columns=150
+default-size-rows=50
+foreground-color='rgb(229,255,255)'
+palette=['rgb(46,52,54)', 'rgb(115,52,71)', 'rgb(37,123,118)', 'rgb(199,140,86)', 'rgb(208,235,238)', 'rgb(221,142,145)', 'rgb(82,103,124)', 'rgb(66,71,90)', 'rgb(85,87,83)', 'rgb(147,57,74)', 'rgb(52,159,151)', 'rgb(246,193,145)', 'rgb(227,255,255)', 'rgb(249,160,145)', 'rgb(155,169,178)', 'rgb(86,86,105)']
+use-theme-colors=false
+visible-name='Varda'
