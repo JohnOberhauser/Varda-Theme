@@ -3,8 +3,9 @@ Varda theme for various programs
 
 #Color Pallete
 ```
-text: E5FFFF # white
+foreground: E5FFFF # white
 background: 0C0E11 # black
+
 palette_0: 2E3436 # dark grey
 palette_1: 733447 # red
 palette_2: 257B76 # teal
@@ -21,4 +22,8 @@ palette_12: E3FFFF # white
 palette_13: F9A091 # peach
 palette_14: 9BA9B2 # light steel blue
 palette_15: 565669 # light steel purple
+
+green_strings: 49AD65 # for strings
+green_main: 43706a
+neon: 80BB00
 ```
