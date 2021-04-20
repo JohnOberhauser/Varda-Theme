@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 384 384"
+   id="svg33477"
+   sodipodi:docname="spotify.svg"
+   inkscape:version="0.92.4 (fd57863, 2020-04-02)">
+  <metadata
+     id="metadata33481">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2492"
+     inkscape:window-height="1384"
+     id="namedview33479"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="256"
+     inkscape:cy="256"
+     inkscape:window-x="68"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg33477" />
+  <defs
+     id="defs33463">
+    <clipPath
+       id="f">
+      <path
+         d="m111 119h177v23h-177z"
+         id="path33435" />
+    </clipPath>
+    <clipPath
+       id="d">
+      <path
+         d="m177 130h45v89h-45z"
+         id="path33438" />
+    </clipPath>
+    <clipPath
+       id="b">
+      <path
+         d="m111 207h177v89h-177z"
+         id="path33441" />
+    </clipPath>
+    <clipPath
+       id="h">
+      <rect
+         width="384"
+         height="384"
+         id="rect33444" />
+    </clipPath>
+    <g
+       clip-path="url(#h)"
+       id="g33447" />
+    <clipPath
+       id="e">
+      <path
+         d="m111 119h177v23h-177z"
+         id="path33449" />
+    </clipPath>
+    <clipPath
+       id="c">
+      <path
+         d="m177 130h45v89h-45z"
+         id="path33452" />
+    </clipPath>
+    <clipPath
+       id="a">
+      <path
+         d="m111 207h177v89h-177z"
+         id="path33455" />
+    </clipPath>
+    <clipPath
+       id="g">
+      <rect
+         width="384"
+         height="384"
+         id="rect33458" />
+    </clipPath>
+    <g
+       clip-path="url(#g)"
+       id="g33461" />
+  </defs>
+  <path
+     d="m176.62 360.09c-33.68-3.2344-65.656-16.148-91.723-37.043-27.715-22.219-50.234-59.262-57.875-95.203-2.8477-13.398-3.668-21.449-3.668-36.02 0-20.203 2.5117-35.699 8.8086-54.395 20.539-60.953 74.168-104.56 139.31-113.28 8.9922-1.2031 32.191-1.2031 41.188 0 38.27 5.1211 72.105 21.668 98.828 48.332 25.949 25.898 42.395 58.598 47.996 95.449 1.8359 12.09 1.8281 35.508-0.0156 47.781-5.5234 36.734-22.07 69.777-47.875 95.602-7.3438 7.3476-21.543 18.934-29.465 24.043-6.5391 4.2188-19.629 10.77-28.875 14.449-21.445 8.5391-52.043 12.645-76.633 10.281z"
+     style="fill:#1c7a74;fill-opacity:1"
+     id="path33465" />
+  <g
+     transform="translate(-3.4639 21.361)"
+     id="g33471">
+    <path
+       d="m252.22 250.48c-17.254-8.6133-33.82-13.68-54.762-16.746-6.6445-0.97265-13.551-1.293-27.949-1.2969-20.312-4e-3 -30.699 0.88281-50.785 4.3398-7.2383 1.2422-11.117 1.6016-12.648 1.1602-9.1445-2.6211-11.125-11.844-3.8594-17.957 4.5195-3.7969 19.516-6.9648 42.285-8.9297 42.773-3.6914 83.277 3.0586 113.96 18.996 17.359 9.0156 22.152 18.723 12.184 24.672-1.4141 0.84766-3.5664 1.5195-4.7812 1.5-1.2188-0.0195-7.3086-2.5781-13.641-5.7383zm25.043-43.203c-23.75-12.859-46.996-19.957-78.332-23.914-9.4414-1.1914-44.324-1.1953-55.531-8e-3 -12.879 1.3672-26.117 3.0312-33.512 4.2148-9.043 1.4453-13.059 1.3516-16.473-0.39062-5.6328-2.8711-7.8203-8.5039-5.582-14.367 2.7969-7.3203 11.578-10.859 35.34-14.25 45.102-6.4336 86.18-4.0977 122.98 6.9922 16.633 5.0117 34.133 13.051 43.66 20.055 11.133 8.1875 12.656 17.312 3.8164 22.914-5.1172 3.2422-8.5547 2.9805-16.363-1.2461zm23.418-49.891c-30.797-16.648-59.102-25.184-99.176-29.914-10.723-1.2656-45.266-1.0195-59.578 0.42187-14.078 1.4219-29.523 3.582-40.309 5.6367-13.031 2.4844-17.781 1.6055-23.074-4.2656-6.6094-7.3242-3.2656-17.535 7.5195-22.977 6.9766-3.5195 20.918-6.418 44.832-9.3242 15.629-1.8984 63.395-1.8789 79.066 0.03516 40.531 4.9453 77.926 16.625 100.24 31.305 12.918 8.5 17.484 16.887 13.27 24.383-2.4844 4.4141-8.8906 8.0156-14.258 8.0156-1.4453 0-4.8359-1.3164-8.5352-3.3164z"
+       style="fill:#222828;fill-opacity:1"
+       id="path33469" />
+  </g>
+</svg>
