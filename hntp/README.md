@@ -1,0 +1,1 @@
+To import, go to HNTP settings in firefox and copy/paste the json text into the import section
