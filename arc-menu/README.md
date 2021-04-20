@@ -1,0 +1,1 @@
+Place file in ~/.local/share/arcmenu

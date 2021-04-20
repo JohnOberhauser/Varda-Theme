@@ -19,7 +19,7 @@
  */
 /* Global Values */
 stage {
-  font-size: 10pt;
+  font-size: 11pt;
   color: #D0EBEE; }
 
 /* Common Stylings */
@@ -253,7 +253,7 @@ StScrollBar {
 /* Popovers/Menus */
 .popup-menu-boxpointer, .candidate-popup-boxpointer {
   -arrow-border-radius: 12px;
-  -arrow-background-color: #0C0E11;
+  -arrow-background-color: #2E3436;
   -arrow-border-width: 1px;
   -arrow-border-color: #0C0E11;
   -arrow-base: 24px;
@@ -2251,10 +2251,10 @@ StScrollBar {
 /* Popovers/Menus */
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
-  -arrow-border-radius: 11px;
-  -arrow-background-color: #2E3436;
-  -arrow-border-width: 12px;
-  -arrow-border-color: transparent;
+  -arrow-border-radius: 2px;
+  -arrow-background-color: #0C0E11;
+  -arrow-border-width: 1px;
+  -arrow-border-color: #52677C;
   -arrow-base: 0;
   -arrow-rise: 0;
   -arrow-box-shadow: none;
@@ -2518,7 +2518,7 @@ StScrollBar {
 .search-entry {
   color: #0C0E11;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #0C0E11;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
   border-radius: 100px;
   font-size: 1.1em;

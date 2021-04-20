@@ -1,0 +1,1 @@
+To import, go to plugins and install plugin from disk.
