@@ -1,0 +1,1 @@
+If using the pamac status tray indicator, you must disable and re-enable the extension after changing the theme for the icon to be themed properly.
