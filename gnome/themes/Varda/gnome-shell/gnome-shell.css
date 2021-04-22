@@ -1237,13 +1237,14 @@ StScrollBar {
         #panel .panel-button.clock-display:hover .clock, #panel .panel-button.clock-display:active .clock, #panel .panel-button.clock-display:overview .clock, #panel .panel-button.clock-display:focus .clock, #panel .panel-button.clock-display:checked .clock {
           box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.2); }
     #panel .panel-button .system-status-icon {
-      icon-size: 1.09em;
-      padding: 5px;
-      margin: 0 4px; }
+      icon-size: 1.4em;
+      padding: 3px;
+      margin: 0 0px; }
     #panel .panel-button .panel-status-indicators-box .system-status-icon,
     #panel .panel-button .panel-status-menu-box .system-status-icon {
       margin: 0; }
     #panel .panel-button .app-menu-icon {
+      width: 0;
       -st-icon-style: symbolic; }
     #panel #panelActivities.panel-button {
       -natural-hpadding: 18px; }
@@ -1268,8 +1269,8 @@ StScrollBar {
     color: transparent; }
 
 #appMenu .panel-status-menu-box {
-  padding: 0 6px;
-  spacing: 6px; }
+  padding: 0 0px;
+  spacing: 0px; }
 
 /* Activities Ripple */
 .ripple-box {
