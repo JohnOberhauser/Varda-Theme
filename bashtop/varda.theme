@@ -19,7 +19,7 @@ theme[main_fg]="#D0EBEE"
 theme[title]="#D0EBEE"
 
 # Higlight color for keyboard shortcuts
-theme[hi_fg]="#E3FFFF"
+theme[hi_fg]="#733447"
 
 # Background color of selected item in processes box
 theme[selected_bg]="#52677C" 
@@ -43,47 +43,49 @@ theme[mem_box]="#52677C"
 theme[net_box]="#52677C"
 
 # Processes box outline color
-theme[proc_box]="#733447"
+theme[proc_box]="#52677C"
 
 # Box divider line and small boxes line color
 theme[div_line]="#52677C"
 
-# Temperature graph colors
-theme[temp_start]="#733447"
-theme[temp_mid]="#93394A"
-theme[temp_end]="#b3596A"
-
-# CPU graph colors
-theme[cpu_start]="#257B76"
-theme[cpu_mid]="#349F97"
-theme[cpu_end]="#54bFb7"
-
+#================= Meters ==================
 # Mem/Disk free meter
 theme[free_start]="#257B76"
-theme[free_mid]="#349F97"
-theme[free_end]="#54bFb7"
+theme[free_mid]="#257B76"
+theme[free_end]="#257B76"
 
 # Mem/Disk cached meter
-theme[cached_start]="#DD8E91"
-theme[cached_mid]="#F9A091"
-theme[cached_end]="#Ffc0b1"
+theme[cached_start]="#733447"
+theme[cached_mid]="#733447"
+theme[cached_end]="#733447"
 
 # Mem/Disk available meter
 theme[available_start]="#257B76"
-theme[available_mid]="#349F97"
-theme[available_end]="#54bFb7"
+theme[available_mid]="#257B76"
+theme[available_end]="#257B76"
 
 # Mem/Disk used meter
 theme[used_start]="#733447"
-theme[used_mid]="#93394A"
-theme[used_end]="#b3596A"
+theme[used_mid]="#733447"
+theme[used_end]="#733447"
+
+#================== Graphs ==================
+# Temperature graph colors
+theme[temp_start]="#257B76"
+theme[temp_mid]="#52677C"
+theme[temp_end]="#733447"
+
+# CPU graph colors
+theme[cpu_start]="#257B76"
+theme[cpu_mid]="#52677C"
+theme[cpu_end]="#733447"
 
 # Download graph colors
 theme[download_start]="#257B76"
-theme[download_mid]="#349F97"
-theme[download_end]="#54bFb7"
+theme[download_mid]="#52677C"
+theme[download_end]="#733447"
 
 # Upload graph colors
-theme[upload_start]="#733447"
-theme[upload_mid]="#93394A"
-theme[upload_end]="#b3596A"
+theme[upload_start]="#257B76"
+theme[upload_mid]="#52677C"
+theme[upload_end]="#733447"
