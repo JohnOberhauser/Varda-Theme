@@ -1,6 +1,7 @@
 .desk-label-active {
   margin-left: 4px;
   margin-right: 4px;
+  padding-top: 4px;
   background-color: #D0EBEE;
   color: #0C0E11;
   border: 1px solid #D0EBEE;
@@ -10,6 +11,7 @@
 .desk-label-inactive {
   margin-left: 4px;
   margin-right: 4px;
+  padding-top: 4px;
   background-color: #0C0E11;
   color: #D0EBEE;
   border: 1px solid #D0EBEE;
