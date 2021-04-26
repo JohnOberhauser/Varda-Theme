@@ -1095,9 +1095,10 @@ StScrollBar StButton#hhandle:active {
   min-height: 56px;
   width: 34em;
   margin: 5px;
-  border: 0;
+  border: 1px;
   border-radius: 4px;
   font-size: 1em;
+  border-color: #52677C;
 }
 .notification-banner, .notification-banner:focus, .notification-banner:hover, .notification-banner:active {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.44);
