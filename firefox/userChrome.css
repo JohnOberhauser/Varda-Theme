@@ -70,14 +70,29 @@ T A B S
     max-height: 32px !important;
 }
 
-.tab-background {
+/*.tab-background {
     border: none !important;
-    background-color: #15171a;
-}
+    background-color: #191b1f;
+}*/
 
-.tab-background[selected='true'] {
+/*.tab-background[selected='true'] {
     -moz-appearance: none !important;
     background-image: none !important;
+}*/
+
+.tab-background[selected="true"] {
+     -moz-appearance: none !important;
+     background-image: none !important;
+     background-color: #0C0E11 !important;
+} tab[selected="true"] {
+     color: #D0EBEE !important;
+     font-weight:bold !important;
+     border-style: solid;
+     border-width: 1px;
+     border-color: #ffffff;
+} tab:not([selected="true"]) {
+    background: #191b1f !important;
+    color: #D0EBEE99 !important;
 }
 
 .tabbrowser-tabs {
