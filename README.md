@@ -27,4 +27,9 @@ light white: E5FFFF # white
 green_strings: 49AD65 # for strings
 green_main: 43706a
 neon: 80BB00
+
+black: [12, 14, 17]
+white: [208, 235, 238]
+blue: [82, 103, 124]
+grey: [46, 52, 54]
 ```
