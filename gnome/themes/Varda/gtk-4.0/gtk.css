@@ -201,7 +201,7 @@ window.assistant .sidebar {
   padding: 4px 0;
 }
 window.assistant .sidebar > label {
-  min-height: 32px;
+  min-height: 28px;
   padding: 0 12px;
   color: rgba(208, 235, 238, 0.5);
   font-weight: 500;
@@ -294,7 +294,7 @@ spinner:disabled {
  */
 spinbutton:not(.vertical),
 entry {
-  min-height: 32px;
+  min-height: 28px;
   padding: 0 8px;
   border-spacing: 4px;
   border-radius: 4px 4px 0 0;
@@ -349,8 +349,8 @@ entry > text > block-cursor {
 }
 spinbutton:not(.vertical) > image,
 entry > image {
-  min-width: 24px;
-  min-height: 24px;
+  min-width: 20px;
+  min-height: 20px;
   border-radius: 9999px;
   color: rgba(208, 235, 238, 0.7);
   margin-top: 4px;
@@ -554,7 +554,7 @@ treeview entry, treeview entry:focus-within, treeview entry.flat, treeview entry
 button {
   min-height: 24px;
   min-width: 16px;
-  padding: 4px 8px;
+  padding: 2px 6px;
   border-radius: 4px;
   background-color: #0C0E11;
   color: #d0ebee;
@@ -610,7 +610,7 @@ button.text-button {
 }
 button.image-button {
   min-width: 24px;
-  padding: 4px;
+  padding: 2px;
   border-radius: 9999px;
 }
 button.text-button.image-button {
@@ -721,15 +721,15 @@ button.flat.text-button {
 infobar.info > revealer > box button.text-button.image-button, infobar.question > revealer > box button.text-button.image-button, filechooser #pathbarbox > stack > box > button.text-button.image-button, window.dialog.message .dialog-action-area > button.text-button.image-button, .app-notification button.text-button.image-button, actionbar > revealer > box button.text-button.image-button:not(.suggested-action):not(.destructive-action), popover.menu button.text-button.image-button.model, .titlebar button.text-button.image-button:not(.suggested-action):not(.destructive-action), .toolbar button.text-button.image-button,
 button.flat.text-button.image-button {
   min-width: 24px;
-  padding: 4px;
+  padding: 2px;
 }
 infobar.info > revealer > box button.text-button.image-button label:first-child, infobar.question > revealer > box button.text-button.image-button label:first-child, filechooser #pathbarbox > stack > box > button.text-button.image-button label:first-child, window.dialog.message .dialog-action-area > button.text-button.image-button label:first-child, .app-notification button.text-button.image-button label:first-child, actionbar > revealer > box button.text-button.image-button:not(.suggested-action):not(.destructive-action) label:first-child, popover.menu button.text-button.image-button.model label:first-child, .titlebar button.text-button.image-button:not(.suggested-action):not(.destructive-action) label:first-child, .toolbar button.text-button.image-button label:first-child,
 button.flat.text-button.image-button label:first-child {
-  margin-left: 8px;
+  margin-left: 10px;
 }
 infobar.info > revealer > box button.text-button.image-button label:last-child, infobar.question > revealer > box button.text-button.image-button label:last-child, filechooser #pathbarbox > stack > box > button.text-button.image-button label:last-child, window.dialog.message .dialog-action-area > button.text-button.image-button label:last-child, .app-notification button.text-button.image-button label:last-child, actionbar > revealer > box button.text-button.image-button:not(.suggested-action):not(.destructive-action) label:last-child, popover.menu button.text-button.image-button.model label:last-child, .titlebar button.text-button.image-button:not(.suggested-action):not(.destructive-action) label:last-child, .toolbar button.text-button.image-button label:last-child,
 button.flat.text-button.image-button label:last-child {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 infobar.info > revealer > box .linked:not(.vertical) > button:not(:only-child), infobar.question > revealer > box .linked:not(.vertical) > button:not(:only-child), filechooser #pathbarbox > stack > box.linked:not(.vertical) > button:not(:only-child), window.dialog.message .dialog-action-area.linked:not(.vertical) > button:not(:only-child), .app-notification .linked:not(.vertical) > button:not(:only-child), actionbar > revealer > box .linked:not(.vertical) > button:not(:only-child):not(.suggested-action):not(.destructive-action), popover.menu .linked:not(.vertical) > button.model:not(:only-child), .titlebar .linked:not(.vertical) > button:not(:only-child):not(.suggested-action):not(.destructive-action), .toolbar .linked:not(.vertical) > button:not(:only-child), infobar.info > revealer > box .linked.vertical > button:not(:only-child), infobar.question > revealer > box .linked.vertical > button:not(:only-child), filechooser #pathbarbox > stack > box.linked.vertical > button:not(:only-child), window.dialog.message .dialog-action-area.linked.vertical > button:not(:only-child), .app-notification .linked.vertical > button:not(:only-child), actionbar > revealer > box .linked.vertical > button:not(:only-child):not(.suggested-action):not(.destructive-action), popover.menu .linked.vertical > button.model:not(:only-child), .titlebar .linked.vertical > button:not(:only-child):not(.suggested-action):not(.destructive-action), .toolbar .linked.vertical > button:not(:only-child),
 .linked:not(.vertical) > button.flat:not(:only-child),
@@ -743,10 +743,10 @@ infobar.info > revealer > box .linked:not(.vertical) > button:not(:only-child).i
 }
 
 button.osd {
-  padding: 8px 12px;
+  padding: 6px 10px;
 }
 button.osd.image-button {
-  padding: 8px;
+  padding: 6px;
 }
 button.osd:disabled {
   opacity: 0;
@@ -864,8 +864,8 @@ button.close, menubutton.circular > button, button.circular {
 }
 
 button.sidebar-button, notebook > header > tabs > tab button.flat, spinbutton:not(.vertical) > button {
-  min-height: 24px;
-  min-width: 24px;
+  min-height: 20px;
+  min-width: 20px;
   padding: 0;
   border-radius: 9999px;
 }
@@ -942,8 +942,8 @@ modelbutton.flat arrow.right {
 }
 
 button.color {
-  min-width: 24px;
-  min-height: 24px;
+  min-width: 20px;
+  min-height: 20px;
   padding: 4px;
 }
 
@@ -1024,16 +1024,16 @@ spinbutton:not(.vertical) > button.up:dir(rtl) {
   margin-left: -4px;
 }
 spinbutton.vertical > text {
-  min-height: 32px;
-  min-width: 40px;
+  min-height: 28px;
+  min-width: 36px;
   padding: 0;
 }
 spinbutton.vertical > text > selection {
   background-color: rgba(82, 103, 124, 0.24);
 }
 spinbutton.vertical button {
-  min-height: 32px;
-  min-width: 40px;
+  min-height: 28px;
+  min-width: 36px;
   padding: 0;
 }
 spinbutton.vertical button:focus:not(:hover):not(:active) {
@@ -1109,18 +1109,18 @@ combobox > popover.menu > contents modelbutton {
   padding-right: 8px;
 }
 combobox > .linked:not(.vertical) > entry:not(:only-child):first-child {
-  margin-right: -36px;
-  padding-right: 32px;
+  margin-right: -32px;
+  padding-right: 28px;
 }
 combobox > .linked:not(.vertical) > entry:not(:only-child):last-child {
-  margin-left: -36px;
-  padding-left: 32px;
+  margin-left: -32px;
+  padding-left: 28px;
 }
 combobox > .linked:not(.vertical) > button:not(:only-child) {
   min-height: 16px;
   min-width: 16px;
   margin: 4px;
-  padding: 4px;
+  padding: 2px;
   border-radius: 9999px;
 }
 
@@ -1275,11 +1275,13 @@ windowcontrols:not(:only-child):not(.empty).start:dir(rtl), windowcontrols:not(:
   padding-left: 12px;
   padding-right: 12px;
   font-weight: bold;
+  color: transparent;
 }
 .titlebar .subtitle {
   padding-left: 12px;
   padding-right: 12px;
   font-size: smaller;
+  color: transparent;
 }
 .titlebar .subtitle,
 .titlebar .dim-label {
@@ -1374,8 +1376,8 @@ windowcontrols:not(:only-child):not(.empty).start:dir(rtl), windowcontrols:not(:
 }
 .titlebar .path-bar button:not(.suggested-action):not(.destructive-action).text-button {
   min-width: 0;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 .titlebar.selection-mode {
   transition: background-color 0.1ms 225ms, color 75ms cubic-bezier(0, 0, 0.2, 1);
@@ -1432,7 +1434,7 @@ windowcontrols:not(:only-child):not(.empty).start:dir(rtl), windowcontrols:not(:
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0), 0 2px 2px 0 rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0);
 }
 .titlebar.default-decoration {
-  min-height: 24px;
+  min-height: 20px;
   padding: 4px;
   box-shadow: inset 0 1px rgba(208, 235, 238, 0.05);
 }
@@ -1440,8 +1442,8 @@ windowcontrols:not(:only-child):not(.empty).start:dir(rtl), windowcontrols:not(:
   box-shadow: none;
 }
 .titlebar.default-decoration button.titlebutton {
-  min-height: 24px;
-  min-width: 24px;
+  min-height: 20px;
+  min-width: 20px;
   margin: 0;
   padding: 0;
 }
@@ -1454,7 +1456,7 @@ windowcontrols:not(:only-child):not(.empty).start:dir(rtl), windowcontrols:not(:
 }
 
 headerbar > windowhandle > box {
-  min-height: 40px;
+  min-height: 36px;
   padding: 0 4px;
   border-spacing: 4px;
 }
@@ -1465,13 +1467,13 @@ headerbar > windowhandle > box button {
   margin-bottom: 4px;
 }
 headerbar > windowhandle > box separator.titlebutton {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 9px;
+  margin-bottom: 9px;
   background-color: rgba(208, 235, 238, 0.2);
 }
 headerbar > windowhandle > box switch {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 headerbar > windowhandle > box spinbutton button {
   margin-top: 0;
@@ -1486,8 +1488,8 @@ headerbar > windowhandle > box .entry-tag {
  * Pathbars
  */
 pathbar.linked:not(.vertical) > button {
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #52677C 0%, transparent 0%) 0 0 0/0 0 0px;
   border-radius: 4px;
 }
@@ -1892,8 +1894,8 @@ notebook > header > tabs > arrow:disabled {
   color: rgba(208, 235, 238, 0.3);
 }
 notebook > header > tabs > tab {
-  min-height: 24px;
-  min-width: 24px;
+  min-height: 20px;
+  min-width: 20px;
   padding: 4px 12px;
   color: rgba(208, 235, 238, 0.7);
   font-weight: 500;
@@ -2243,20 +2245,20 @@ scale {
   min-width: 2px;
 }
 scale.horizontal {
-  padding: 15px 12px;
+  padding: 13px 12px;
 }
 scale.vertical {
-  padding: 12px 15px;
+  padding: 12px 13px;
 }
 scale.fine-tune.horizontal {
   min-height: 4px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 scale.fine-tune.vertical {
   min-width: 4px;
-  padding-left: 14px;
-  padding-right: 14px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 scale.fine-tune > trough > slider {
   margin: -14px;
@@ -2463,7 +2465,7 @@ levelbar.horizontal > trough > block {
   min-height: 4px;
 }
 levelbar.horizontal.discrete > trough > block {
-  min-width: 32px;
+  min-width: 28px;
 }
 levelbar.horizontal.discrete > trough > block:not(:last-child) {
   margin-right: 2px;
@@ -2472,7 +2474,7 @@ levelbar.vertical > trough > block {
   min-width: 4px;
 }
 levelbar.vertical.discrete > trough > block {
-  min-height: 32px;
+  min-height: 28px;
 }
 levelbar.vertical.discrete > trough > block:not(:last-child) {
   margin-bottom: 2px;
@@ -2683,7 +2685,7 @@ columnview.data-table > listview > row > cell {
 
 .rich-list > row {
   padding: 12px;
-  min-height: 32px;
+  min-height: 28px;
 }
 .rich-list > row > box {
   border-spacing: 12px;
@@ -3383,8 +3385,8 @@ stackswitcher.circular {
   border-spacing: 12px;
 }
 stackswitcher.circular > button.circular {
-  min-width: 32px;
-  min-height: 32px;
+  min-width: 28px;
+  min-height: 28px;
   padding: 0;
 }
 

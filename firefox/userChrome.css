@@ -166,7 +166,7 @@ Here you can comment if you want your buttons to be showed up!
 }*/
 
 /* This one clears the tabs icon when they're not pinned  */
-.tabbrowser-tab:not([pinned]) .tab-icon-image {
+.tabbrowser-tab:not([selected="true"]) .tab-icon-image {
     /*display: none !important;*/
     filter: grayscale(70%);
 }
