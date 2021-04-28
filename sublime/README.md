@@ -1,4 +1,5 @@
 To import, go to Preferences -> Browse Packages
-Go to the Theme folder (create one if it doesn't exist) and place the theme there.
-Back in sublime, clock preferences -> color scheme and choose Varda
-go to preferences -> theme and choose Adaptive.sublime-theme
+Go up one folder.
+Go to the InstalledPackages folder and place the zip file there.
+Back in sublime, click preferences -> color scheme and choose Varda
+go to preferences -> theme and choose Varda.sublime-theme
