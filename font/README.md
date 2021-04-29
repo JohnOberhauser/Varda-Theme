@@ -1,3 +1,6 @@
+Jetbrains mono comes from here https://fonts.google.com/specimen/JetBrains+Mono?query=jetb
+Symbola comes from here https://www.wfonts.com/font/symbola
+
 Move ttf files into ~/.local/share/fonts
 In Tweaks, set fonts
 Interface: JetBrains Mono Regular 11
