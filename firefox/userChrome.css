@@ -316,9 +316,9 @@ U R L - B A R
     box-shadow: none !important;
 }
 
-#page-action-buttons {
+/*#page-action-buttons {
     display: none !important;
-}
+}*/
 
 .urlbarView {
     margin: 0px !important;
