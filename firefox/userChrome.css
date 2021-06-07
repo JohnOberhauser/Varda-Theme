@@ -57,6 +57,7 @@ T A B S
 :root {
     --tabs-border: transparent !important;
     --toolbox-border-bottom-color: transparent !important;
+    --tab-min-height: 32px !important;
 }
 
 #navigator-toolbox {
@@ -98,6 +99,7 @@ T A B S
 .tabbrowser-tabs {
     border: none !important;
     opacity: 0 !important;
+    --tab-min-height: 32px !important;
 }
 
 /*.tabbrowser-tab::before {
