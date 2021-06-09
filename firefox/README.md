@@ -1,4 +1,5 @@
-Technique and base files from https://github.com/migueravila/SimplerentFox
+Based off of https://github.com/migueravila/SimplerentFox
+and https://github.com/black7375/Firefox-UI-Fix/tree/v1.0
 
 In the searchbar type about:config. A dialog will be shown to you. Press the I accept the risk button.
 

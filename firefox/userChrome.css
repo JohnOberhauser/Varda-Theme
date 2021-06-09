@@ -67,19 +67,8 @@ T A B S
 #TabsToolbar {
     margin-top: -1px !important;
     margin-bottom: 1px !important;
-    /*margin-left: var(--urlbar-width) !important;*/
     max-height: 32px !important;
 }
-
-/*.tab-background {
-    border: none !important;
-    background-color: #191b1f;
-}*/
-
-/*.tab-background[selected='true'] {
-    -moz-appearance: none !important;
-    background-image: none !important;
-}*/
 
 .tab-background[selected="true"] {
      -moz-appearance: none !important;
@@ -102,16 +91,6 @@ T A B S
     --tab-min-height: 32px !important;
 }
 
-/*.tabbrowser-tab::before {
-    opacity: 0 !important;
-    border-left: none !important;
-}*/
-
-/*.tabbrowser-tab::after {
-    opacity: 0 !important;
-    border-left: none !important;
-}*/
-
 .titlebar-placeholder {
     border: none !important;
 }
@@ -127,6 +106,47 @@ T A B S
 
 .titlebar-placeholder[type='pre-tabs'] {
     display: none !important;
+}
+
+/* 
+SOUND - ICON
+*/
+
+/** Sound Tab - Hide Label **************************************************/
+.tab-secondary-label:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture]){
+    display: none !important;
+}
+
+/** Sound Tab - Show with Favicons ******************************************/
+/* Makes the favicons always visible (also on hover) */
+.tab-icon-image:not([pinned]){
+    opacity: 1 !important
+}
+
+/* Makes the speaker icon to always appear if the tab is playing (not only on hover) */
+.tab-icon-overlay:not([crashed]),
+.tab-icon-overlay[pinned][crashed][selected] {
+    /* Position */
+    top: -3.5px !important;
+    inset-inline-end: -9px !important;
+    z-index: 1 !important;
+
+    /* Shape */
+    padding: 1.5px !important;
+    border-radius: 10px !important;
+    width:  17px !important;
+    height: 17px !important;
+}
+.tab-icon-overlay:not([sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+    /* Color */
+    color:  currentColor !important;
+    stroke: transparent !important;
+    background: transparent !important;
+    fill-opacity: 0.8 !important;
+    opacity: 1 !important;
+}
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+    margin-inline-end: 9.5px !important;
 }
 
 /* 
@@ -157,16 +177,6 @@ Here you can comment if you want your buttons to be showed up!
     display: none !important;
 }
 
-/* This one is the hamburger menu!  */
-/*#PanelUI-button {
-    display: none !important;
-}*/
-
-/* This one removes the close button  */
-/*.tabbrowser-tab:not([pinned]) .tab-close-button {
-    display: none !important;
-}*/
-
 /* This one clears the tabs icon when they're not pinned  */
 .tabbrowser-tab:not([selected="true"]) .tab-icon-image {
     /*display: none !important;*/
@@ -182,67 +192,6 @@ Here you can comment if you want your buttons to be showed up!
 #pageActionButton {
     display: none !important;
 }
-
-/* 
-N A V B A R
-*/
-
-/*#navigator-toolbox::after {
-    border: 0px !important;
-}*/
-
-/*#nav-bar {
-    border: none !important;
-    box-shadow: none !important;
-    border-top-width: 0px !important;
-    border-bottom-width: 0px !important;
-    margin-top: -32px !important;
-    margin-bottom: -1px !important;
-    margin-right: calc(100vw - var(--urlbar-width)) !important;
-    height: 32px !important;
-}*/
-
-/* 
-S I D E - B A R
-*/
-
-/*#history-panel,
-#sidebar-search-container,
-#bookmarksPanel {
-    background: var(--srf-color-primary) !important;
-}
-
-#search-box {
-    -moz-appearance: none !important;
-    background: var(--srf-color-primary) !important;
-    border-radius: 6px !important;
-}
-
-#sidebar-icon {
-    display: none !important;
-}
-
-.sidebar-placesTree {
-    color: var(--srf-color-selection) !important;
-}
-
-#sidebar-switcher-target {
-    color: var(--srf-color-selection) !important;
-}
-
-#sidebar-header {
-    background: var(--srf-color-primary) !important;
-}
-
-#sidebar-splitter {
-    border: none !important;
-    opacity: 1 !important;
-    background-color: var(--srf-color-primary) !important;
-}
-
-splitter#sidebar-splitter {
-    border: none !important;
-}*/
 
 /* 
 U R L - B A R
@@ -318,9 +267,9 @@ U R L - B A R
     box-shadow: none !important;
 }
 
-/*#page-action-buttons {
+#page-action-buttons {
     display: none !important;
-}*/
+}
 
 .urlbarView {
     margin: 0px !important;
@@ -330,25 +279,3 @@ U R L - B A R
 #urlbar-label-box, #urlbar-search-mode-indicator {
     display: none !important;
 }
-
-/* 
-If you want to show the URLBar extended you must
-change this two blocks:
-
-In order to show it, you must change the value of "transparent" in the first block 
-and erease the second block. 
-*/
-
-/*#urlbar-background {
-    background: transparent !important;
-    border: transparent !important;
-    animation: none !important;
-}*/
-
-/*#urlbar .urlbarView {
-    display: none !important;
-}*/
-
-/* 
-Designed and Coded by Miguel R. Ávila: https://github.com/MiguelRAvila
-*/
