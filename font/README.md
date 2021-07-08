@@ -1,3 +1,6 @@
+Update: using patch jetbrains font now from nerd-fonts
+https://github.com/ryanoasis/nerd-fonts
+
 Jetbrains mono comes from here https://fonts.google.com/specimen/JetBrains+Mono?query=jetb
 Symbola comes from here https://www.wfonts.com/font/symbola
 
