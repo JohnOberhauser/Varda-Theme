@@ -1,9 +1,13 @@
+# This theme requires nerd fonts
+# https://github.com/ryanoasis/nerd-fonts
+
 # edit these to change behavior
 # possible values are defined in the function "define_chars" below
 set_settings() {
   SEPARATOR_SET=$HALF_CIRCLE
   SEPARATOR_MODE=$SEPARATOR_MODE_ALL_LEFT_BUT_LAST
-  START_SYMBOL=$ARCH_LINUX
+  START_SYMBOL=$EMPTY
+  SYMBOL_MODE=$SYMBOL_MODE_ENABLED
 }
 
 define_chars() {
@@ -21,8 +25,19 @@ define_chars() {
   SEPARATOR_MODE_ALL_LEFT_BUT_LAST=2
   SEPARATOR_MODE_ALL_LEFT=3
 
+  # Symbol Modes
+  SYMBOL_MODE_DISABLED=0
+  SYMBOL_MODE_ENABLED=1
+
   # Start Symbols
+  EMPTY=''
   ARCH_LINUX=$'\uf303'
+  DEBIAN=$'\uf306'
+  UBUNTU=$'\uf31b'
+  APPLE=$'\uf302'
+  TUX=$'\uf31a'
+  GNOME=$'\uf7ab'
+  BIOHAZARD=$'\ue286'
 }
 
 set_chars() {
@@ -60,7 +75,11 @@ prompt_segment() {
     fi
     FIRST_SEPARATOR_SET=true
   else
-    echo -n "%{$bg%}%{$fg%} "
+    if [[ $3 == $EMPTY ]]; then
+      echo -n "%{$bg%}%{$fg%}"
+    else
+      echo -n "%{$bg%}%{$fg%} "
+    fi
   fi
   CURRENT_BG=$1
   [[ -n $3 ]] && echo -n $3
@@ -90,7 +109,9 @@ prompt_context() {
 
 ### show symbol
 prompt_symbol() {
-  prompt_segment black red "$START_SYMBOL"
+  if [[ $SYMBOL_MODE == $SYMBOL_MODE_ENABLED ]]; then
+    prompt_segment black white "$START_SYMBOL"
+  fi
 }
 
 # Git: branch/detached head, dirty status
