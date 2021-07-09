@@ -1,0 +1,14 @@
+{
+  "name": "varda-syntax",
+  "theme": "syntax",
+  "version": "1.0.0",
+  "description": "A syntax theme based on 'One Dark'. Modified colors.",
+  "keywords": [
+    "varda",
+    "syntax"
+  ],
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}

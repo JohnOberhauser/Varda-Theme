@@ -17,8 +17,13 @@ blue: [82, 103, 124]
 grey: [46, 52, 54]
 
 # Secondary
-peach: DD8E91 # peach
-dark_grey: 2E3436 
+peach: C78C56
+purple: 42475A
+dark_grey: 2E3436
 light_white: E5FFFF # white
 neon: 80BB00
+
+# Secondary RGB
+peach: [199, 140, 86]
+purple: [66, 71, 90]
 ```

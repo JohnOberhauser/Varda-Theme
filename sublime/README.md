@@ -1,3 +1,6 @@
+### Deprecated
+Using atom instead of sublime now.  This theme works for sublime text 3, but has markdown issues in sublime text 4.
+
 To import, go to Preferences -> Browse Packages
 Go up one directory, and enter Installed Packages
 Extract the package here.
