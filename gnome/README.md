@@ -1,6 +1,6 @@
 If using the pamac status tray indicator, you must disable and re-enable the extension after changing the theme for the icon to be themed properly.
 
-Icons are a mix of 
+Icons are a mix of
 Flatery
 https://www.gnome-look.org/s/Gnome/p/1332404
 Archdroid from this theme creator
@@ -13,3 +13,5 @@ https://github.com/nana-4/materia-theme
 
 Check the varda branch on my fork for the source
 https://github.com/JohnOberhauser/materia-theme/tree/varda
+
+For the cursor to work properly with gtk4 windows, you must also copy to icons folder to /user/local/share/icons/
