@@ -1,0 +1,46 @@
+[global_config]
+  title_hide_sizetext = True
+  title_transmit_fg_color = "#d0ebee"
+  title_transmit_bg_color = "#0c0e11"
+  title_receive_fg_color = "#d0ebee"
+  title_receive_bg_color = "#0c0e11"
+  title_inactive_bg_color = "#0c0e11"
+  inactive_color_offset = 1.0
+  suppress_multiple_term_dialog = True
+  always_split_with_profile = True
+[keybindings]
+  new_tab = <Alt>z
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+  [[Varda]]
+    audible_bell = True
+    background_color = "#0c0e11"
+    cursor_shape = underline
+    cursor_color = "#aaaaaa"
+    font = JetBrainsMono Nerd Font 10
+    foreground_color = "#d0ebee"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#0c0e11:#733447:#257b76:#c78c56:#52677c:#42475a:#52677c:#d0ebee:#2e3436:#733447:#257b76:#c78c56:#52677c:#42475a:#52677c:#d0ebee"
+    use_theme_colors = True
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 26:23
+      maximised = False
+      fullscreen = False
+      size = 1241, 1332
+      title = john@Varda:~
+      last_active_term = 6b84d2b9-f19c-482c-bbd3-c5ff262c3ba3
+      last_active_window = True
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = Varda
+      uuid = 6b84d2b9-f19c-482c-bbd3-c5ff262c3ba3
+[plugins]
