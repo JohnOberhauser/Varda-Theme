@@ -4,7 +4,7 @@
 # edit these to change behavior
 # possible values are defined in the function "define_chars" below
 set_settings() {
-  SEPARATOR_SET=$HALF_CIRCLE
+  SEPARATOR_SET=$ARROW
   SEPARATOR_MODE=$SEPARATOR_MODE_ALL_LEFT_BUT_LAST
   START_SYMBOL=$EMPTY
   SYMBOL_MODE=$SYMBOL_MODE_ENABLED
