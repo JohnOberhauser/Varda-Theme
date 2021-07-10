@@ -1,0 +1,22 @@
+                   ${c3}/|${c1}
+                   ${c3}||${c1}
+                   ${c3}||${c1}
+                  '${c3}||${c1}'
+                 'X${c3}||${c1}X'
+                'XX${c3}||${c1}XX'
+               'XXX${c3}||${c1}XXX'
+              'XXXX${c3}||${c1}XXXX'
+             'XXXXX${c3}||${c1}XXXXX'
+              'XXXX${c3}||${c1}XXXXXX'
+           'XXx_'XX${c3}||${c1}XXXXXXX'
+          'XXXXXxXX${c3}||${c1}XXXXXXXX'
+         'XXXXXXXXX${c3}||${c1}XXXXXXXXX'
+        'XXXXXXXXXX${c3}||${c1}XXXXXXXXXX'
+       'XXXXXXXXXXX${c3}||${c1}XXXXXXXXXXX'
+      'XXXXXXXXXXXX${c3}||${c1}XXXXXXXXXXXX'
+     'XXXXXXXXXXXXX${c3}||${c1}XXXXXXXx`''XX'
+    'XXXXXXXXXXX'  ${c3}||${c1}  'XXXXXXXx
+   'XXXXXXXX::'   ${c3}::::${c1}  '::XXXXXXXX'
+  'XXXXXX:'`       ${c3}||${c1}       `':XXXXXX'
+ 'XX:'`            ${c3}||${c1}             `':XX'
+'`                 ${c3}00${c1}                 `'

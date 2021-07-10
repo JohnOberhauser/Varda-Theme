@@ -1,4 +1,9 @@
-Update: using patched jetbrains font from nerd-fonts
+Only install JetBrainsMonoPatchedGlyphs-Regular.tff and the symbola fonts
+The other doesn't have a custom character I added for neofetch ascii art.
+The character in question is unicode uee44  
+Character was added using font forge.
+
+Using patched jetbrains font from nerd-fonts
 https://github.com/ryanoasis/nerd-fonts
 https://github.com/JetBrains/JetBrainsMono
 
