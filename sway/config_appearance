@@ -1,0 +1,17 @@
+gaps outer 10
+gaps inner 10
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #000000 #0C0E11 #D0EBEE #257B76   #257B76
+client.focused_inactive #000000 #0C0E11 #D0EBEE #52677C   #52677C
+client.unfocused        #000000 #0C0E11 #D0EBEE #52677C   #52677C
+client.urgent           #000000 #0C0E11 #D0EBEE #733447   #733447
+client.placeholder      #000000 #0C0E11 #D0EBEE #52677C   #52677C
+
+client.background       #0C0E11
+
+default_border pixel 3
+default_floating_border pixel 3
+titlebar_border_thickness 0
+
+seat seat0 xcursor_theme /home/john/.icons/Varda-Cursor-Main/index.theme
