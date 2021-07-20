@@ -15,11 +15,11 @@ set $term terminator
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+#set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-set $wsa1 "A1"
-set $wsa2 "A2"
-set $wsa3 "A3"
+set $wsa1 "1"
+set $wsa2 "2"
+set $wsa3 "3"
 
 set $wsb1 "B1"
 set $wsb2 "B2"
@@ -95,7 +95,8 @@ input "1133:49983:Logitech_G815_RGB_MECHANICAL_GAMING_KEYBOARD" {
     bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+Space exec $menu
+    #bindsym $mod+Space exec $menu
+    bindsym $mod+Space exec wofi --show run
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -209,7 +210,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
+    position bottom
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
@@ -220,7 +221,14 @@ bar {
         background #323232
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
+
+    output DP-1
+
+    swaybar_command waybar
 }
 
 include /home/john/.config/sway/config_appearance
 include /etc/sway/config.d/*
+
+#exec /usr/lib/polkit-1/polkitd --no-debug
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

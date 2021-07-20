@@ -1,17 +1,25 @@
-gaps outer 10
-gaps inner 10
+#gaps outer 10
+gaps inner 20
+#gaps vertical horizontal top right bottom left all current
+
+font "JetBrainsMono Patched Glyphs" 9
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #000000 #0C0E11 #D0EBEE #257B76   #257B76
+client.focused          #000000 #0C0E11 #D0EBEE #52677C   #52677C
 client.focused_inactive #000000 #0C0E11 #D0EBEE #52677C   #52677C
-client.unfocused        #000000 #0C0E11 #D0EBEE #52677C   #52677C
+client.unfocused        #000000 #0C0E11 #D0EBEE #0C0E11   #0C0E11
 client.urgent           #000000 #0C0E11 #D0EBEE #733447   #733447
-client.placeholder      #000000 #0C0E11 #D0EBEE #52677C   #52677C
+client.placeholder      #000000 #0C0E11 #D0EBEE #0C0E11   #0C0E11
 
 client.background       #0C0E11
 
-default_border pixel 3
-default_floating_border pixel 3
+default_border pixel 1
+default_floating_border none
 titlebar_border_thickness 0
+
+#border_images.focused ~/.config/sway/focused.png
+#border_images.focused_inactive ~/.config/sway/unfocused.png
+#border_images.unfocused ~/.config/sway/unfocused.png
+#border_images.urgent ~/.config/sway/unfocused.png
 
 seat seat0 xcursor_theme /home/john/.icons/Varda-Cursor-Main/index.theme
