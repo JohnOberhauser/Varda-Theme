@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = gnome-shell
+
+[Action]
+Description = Replace GDM theme with Varda
+When = PostTransaction
+Exec = /usr/bin/sh -c "cd /ssd/home/workspace/Varda-Theme/gnome/themes/Varda/gnome-shell && glib-compile-resources --target=/usr/share/gnome-shell/gnome-shell-theme.gresource gnome-shell-theme.gresource.xml"
+Depends = bash
+Depends = glib2

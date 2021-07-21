@@ -20,3 +20,29 @@ My fork with the varda theme changes, built from this source
 https://github.com/JohnOberhauser/BreezeX_Cursor/tree/varda
 
 For the cursor to work properly with gtk4 windows, you must also copy to icons folder to /usr/local/share/icons/
+
+
+
+
+
+GDM shell instructions:
+
+place the hook file from the shell directory in
+/usr/share/libalpm/hooks
+to auto apply the theme after a gdm update.  Make sure the path is correct in the hook file
+
+
+to install
+backup file
+
+    sudo cp -av /usr/share/gnome-shell/gnome-shell-theme.gresource{,~}
+
+install
+
+    THEME_NAME="$(gsettings get org.gnome.desktop.interface gtk-theme | sed "s/'//g")"
+    THEME_SRC_DIR="/usr/share/themes/$THEME_NAME/gnome-shell"
+    sudo glib-compile-resources --target="/usr/share/gnome-shell/gnome-shell-theme.gresource" --sourcedir="$THEME_SRC_DIR" "$THEME_SRC_DIR/gnome-shell-theme.gresource.xml"
+
+uninstall
+
+    sudo mv -v /usr/share/gnome-shell/gnome-shell-theme.gresource{~,}
