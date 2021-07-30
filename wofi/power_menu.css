@@ -1,0 +1,52 @@
+window {
+    border: 1px solid #52677C;
+    background-color: #0C0E11;
+}
+
+#input {
+    border: 1px solid #52677C;
+    background-color: #0C0E11;
+    font-size: 18px;
+    border-radius: 4px;
+    height: 50px;
+    width: 0px;
+}
+
+#inner-box {}
+
+#outer-box {
+    margin: 10px;
+}
+
+#scroll {
+    margin: 5px 0px;
+    font-size: 16px;
+    color: #52677C;
+}
+
+#scroll label {
+    margin: 2px 0px;
+}
+
+#entry {
+}
+
+#entry:selected {
+    border: 0px solid #52677C;
+    background-color: rgb(12, 14, 17);
+
+    border: 3px solid green;
+}
+
+#text:selected {
+    color: #52677C;
+}
+
+#text {
+    /*border: 0px;*/
+    color: #D0EBEE;
+    font-size: 40px;
+    width: 100px;
+    text-align: center;
+    border: 3px solid red;
+}

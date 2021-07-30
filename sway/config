@@ -96,7 +96,7 @@ input "1133:49983:Logitech_G815_RGB_MECHANICAL_GAMING_KEYBOARD" {
 
     # Start your launcher
     #bindsym $mod+Space exec $menu
-    bindsym $mod+Space exec wofi --show run
+    bindsym $mod+Space exec rofi -show run
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -110,6 +110,15 @@ input "1133:49983:Logitech_G815_RGB_MECHANICAL_GAMING_KEYBOARD" {
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+#
+# Sound:
+#
+    bindsym XF86AudioRaiseVolume exec /home/john/.config/sway/volumeUp.sh
+    bindsym XF86AudioLowerVolume exec /home/john/.config/sway/volumeDown.sh
+    bindsym XF86AudioMute exec /home/john/.config/sway/toggleMute.sh
+    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86AudioPrev exec playerctl previous
+    bindsym XF86AudioPlay exec playerctl play-pause
 #
 # Moving around:
 #
@@ -232,3 +241,4 @@ include /etc/sway/config.d/*
 
 #exec /usr/lib/polkit-1/polkitd --no-debug
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec /usr/bin/megasync
