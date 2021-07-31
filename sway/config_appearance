@@ -5,11 +5,11 @@ gaps inner 20
 font "JetBrainsMono Patched Glyphs" 9
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #000000 #0C0E11 #D0EBEE #52677C   #52677C
+client.focused          #000000 #0C0E11 #D0EBEE #D0EBEE   #D0EBEE
 client.focused_inactive #000000 #0C0E11 #D0EBEE #52677C   #52677C
-client.unfocused        #000000 #0C0E11 #D0EBEE #0C0E11   #0C0E11
+client.unfocused        #000000 #0C0E11 #D0EBEE #52677C   #52677C
 client.urgent           #000000 #0C0E11 #D0EBEE #733447   #733447
-client.placeholder      #000000 #0C0E11 #D0EBEE #0C0E11   #0C0E11
+client.placeholder      #000000 #0C0E11 #D0EBEE #52677C   #52677C
 
 client.background       #0C0E11
 

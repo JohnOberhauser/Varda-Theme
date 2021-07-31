@@ -2,7 +2,8 @@
 
 userPaths=$(ls $HOME/.local/share/applications/*.desktop)
 systemPaths=$(ls /usr/share/applications/*.desktop)
-paths="$userPaths $systemPaths"
+flatpakPaths=$(find /var/lib/flatpak/app/ | grep "\.desktop$" | grep files/share)
+paths="$userPaths $systemPaths $flatpakPaths"
 paths=(${paths// / })
 
 listApps() {
@@ -10,16 +11,22 @@ listApps() {
   do
     echo $(cat $path | grep -m 1 ^Name= | sed 's/Name=//')
   done
+  # Custom entries
+  echo Pamac
 }
 
-SELECTION="$(listApps | rofi -dmenu -i)"
+selection="$(listApps | rofi -dmenu -i)"
 
 for path in "${paths[@]}"
 do
   name=$(cat $path | grep -m 1 ^Name= | sed 's/Name=//')
-  if [[ $SELECTION == $name ]]; then
+  if [[ $selection == $name ]]; then
     app=$(echo $path | sed 's/.*\///' | sed 's/.desktop//')
     gtk-launch $app
     break
+  fi
+  # Custom entries
+  if [[ $selection == "Pamac" ]]; then
+    gtk-launch org.manjaro.pamac.manager
   fi
 done

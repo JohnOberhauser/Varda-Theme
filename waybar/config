@@ -29,6 +29,15 @@
     //         "default": ""
     //     }
     // },
+    "sway/workspaces": {
+        "persistent_workspaces": {
+            "I": [],
+            "II": [],
+            "III": [],
+            "IV": [],
+            "V": []
+        }
+    },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },

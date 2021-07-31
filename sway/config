@@ -17,13 +17,17 @@ set $term terminator
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-set $wsa1 "1"
-set $wsa2 "2"
-set $wsa3 "3"
+set $wsa1 "I"
+set $wsa2 "II"
+set $wsa3 "III"
+set $wsa4 "IV"
+set $wsa5 "V"
 
 set $wsb1 "B1"
 set $wsb2 "B2"
 set $wsb3 "B3"
+set $wsb4 "B4"
+set $wsb5 "B5"
 
 focus_follows_mouse no
 
@@ -43,10 +47,14 @@ output DP-2 resolution 2560x1440@144Hz position 2560,0
 workspace $wsa1 output DP-1
 workspace $wsa2 output DP-1
 workspace $wsa3 output DP-1
+workspace $wsa4 output DP-1
+workspace $wsa5 output DP-1
 
 workspace $wsb1 output DP-2
 workspace $wsb2 output DP-2
 workspace $wsb3 output DP-2
+workspace $wsb4 output DP-2
+workspace $wsb5 output DP-2
 
 ### Idle configuration
 #
@@ -148,11 +156,11 @@ input "1133:49983:Logitech_G815_RGB_MECHANICAL_GAMING_KEYBOARD" {
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+Ctrl+KP_9 exec /home/john/.config/sway/workspace_move_right.sh $wsa1 $wsa2 $wsa3 $wsb1 $wsb2 $wsb3
-    bindsym $mod+Ctrl+KP_7 exec /home/john/.config/sway/workspace_move_left.sh $wsa1 $wsa2 $wsa3 $wsb1 $wsb2 $wsb3
+    bindsym $mod+Ctrl+KP_9 exec /home/john/.config/sway/workspace_move_right.sh $wsa1 $wsa2 $wsa3 $wsa4 $wsa5 $wsb1 $wsb2 $wsb3 $wsb4 $wsb5
+    bindsym $mod+Ctrl+KP_7 exec /home/john/.config/sway/workspace_move_left.sh $wsa1 $wsa2 $wsa3 $wsa4 $wsa5 $wsb1 $wsb2 $wsb3 $wsb4 $wsb5
     # Move focused container to workspace
-    bindsym $mod+Ctrl+KP_6 exec /home/john/.config/sway/container_move_right.sh $wsa1 $wsa2 $wsa3 $wsb1 $wsb2 $wsb3
-    bindsym $mod+Ctrl+KP_4 exec /home/john/.config/sway/container_move_left.sh $wsa1 $wsa2 $wsa3 $wsb1 $wsb2 $wsb3
+    bindsym $mod+Ctrl+KP_6 exec /home/john/.config/sway/container_move_right.sh $wsa1 $wsa2 $wsa3 $wsa4 $wsa5 $wsb1 $wsb2 $wsb3 $wsb4 $wsb5
+    bindsym $mod+Ctrl+KP_4 exec /home/john/.config/sway/container_move_left.sh $wsa1 $wsa2 $wsa3 $wsa4 $wsa5 $wsb1 $wsb2 $wsb3 $wsb4 $wsb5
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
@@ -174,7 +182,9 @@ input "1133:49983:Logitech_G815_RGB_MECHANICAL_GAMING_KEYBOARD" {
     bindsym $mod+KP_5 fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    # When the modifier key is held down, you may hold left click to move windows,
+    # and right click to resize them.
+    bindsym $mod+f floating toggle
 
     # Swap focus between the tiling area and the floating area
     #bindsym $mod+space focus mode_toggle
