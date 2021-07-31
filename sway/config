@@ -95,8 +95,8 @@ input "1133:49983:Logitech_G815_RGB_MECHANICAL_GAMING_KEYBOARD" {
     bindsym $mod+q kill
 
     # Start your launcher
-    #bindsym $mod+Space exec $menu
-    bindsym $mod+Space exec rofi -show run
+    #bindsym $mod+Space exec rofi -show run
+    bindsym $mod+Space exec /home/john/.config/sway/searchApplications.sh
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
