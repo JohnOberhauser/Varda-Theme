@@ -12,17 +12,13 @@ listApps() {
   done
 }
 
-echo launching rofi
 SELECTION="$(listApps | rofi -dmenu -i)"
-
-echo next
 
 for path in "${paths[@]}"
 do
   name=$(cat $path | grep -m 1 ^Name= | sed 's/Name=//')
   if [[ $SELECTION == $name ]]; then
     app=$(echo $path | sed 's/.*\///' | sed 's/.desktop//')
-    echo $app
     gtk-launch $app
     break
   fi
