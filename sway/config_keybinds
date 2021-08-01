@@ -10,6 +10,8 @@ set $wsb3 "B3"
 set $wsb4 "B4"
 set $wsb5 "B5"
 
+set $wsc1 "M"
+
 ### Key bindings
 #
 # Basics:
@@ -83,14 +85,16 @@ set $wsb5 "B5"
 #
 # Workspaces:
 #
-    # Switch to workspace
+    # Cycle through workspaces
     bindsym $mod+Ctrl+KP_9 exec /home/john/.config/sway/workspace_move_right.sh $wsa1 $wsa2 $wsa3 $wsa4 $wsa5 $wsb1 $wsb2 $wsb3 $wsb4 $wsb5
     bindsym $mod+Ctrl+KP_7 exec /home/john/.config/sway/workspace_move_left.sh $wsa1 $wsa2 $wsa3 $wsa4 $wsa5 $wsb1 $wsb2 $wsb3 $wsb4 $wsb5
-    # Move focused container to workspace
+
+    # Move focused container to next workspace
     bindsym $mod+Ctrl+KP_6 exec /home/john/.config/sway/container_move_right.sh $wsa1 $wsa2 $wsa3 $wsa4 $wsa5 $wsb1 $wsb2 $wsb3 $wsb4 $wsb5
     bindsym $mod+Ctrl+KP_4 exec /home/john/.config/sway/container_move_left.sh $wsa1 $wsa2 $wsa3 $wsa4 $wsa5 $wsb1 $wsb2 $wsb3 $wsb4 $wsb5
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
+
+    # Move to special workspace for gui startup programs
+    bindsym $mod+m workspace $wsc1
 #
 # Layout stuff:
 #

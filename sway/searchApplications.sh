@@ -14,6 +14,7 @@ listApps() {
   # Custom entries
   echo Pamac
   echo GIMP
+  echo LX Appearance
 }
 
 selection="$(listApps | rofi -dmenu -i)"
@@ -28,6 +29,11 @@ fi
 if [[ $selection == "GIMP" ]]; then
   echo launching gimp
   gtk-launch gimp
+  exit 0
+fi
+if [[ $selection == "LX Appearance" ]]; then
+  echo launching gimp
+  /usr/bin/lxappearance
   exit 0
 fi
 

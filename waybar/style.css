@@ -41,6 +41,7 @@ window#waybar.chromium {
 
 #workspaces button {
     margin: 4px;
+    padding: 0px;
     border-width: 1px;
     border-style: solid;
     border-color: #D0EBEE;
@@ -63,7 +64,7 @@ window#waybar.chromium {
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #733447;
 }
 
 #mode {
@@ -86,7 +87,6 @@ window#waybar.chromium {
 #mode,
 #idle_inhibitor,
 #mpd {
-    padding: 0 10px;
     margin: 0 4px;
     color: #D0EBEE;
 }
@@ -167,11 +167,15 @@ label:focus {
 }
 
 #pulseaudio {
-    
+
 }
 
 #pulseaudio.muted {
 
+}
+
+#custom-updates {
+    margin: 0 20px;
 }
 
 #custom-media {
