@@ -2,12 +2,13 @@
 gaps inner 20
 #gaps vertical horizontal top right bottom left all current
 
-font "JetBrainsMono Patched Glyphs" 9
+#font "JetBrainsMono Patched Glyphs" 9
+#font "Cantarell" 11
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #000000 #0C0E11 #D0EBEE #D0EBEE   #D0EBEE
-client.focused_inactive #000000 #0C0E11 #D0EBEE #52677C   #52677C
-client.unfocused        #000000 #0C0E11 #D0EBEE #52677C   #52677C
+client.focused          #000000 #0C0E11 #D0EBEE #C78C56   #D0EBEE
+client.focused_inactive #000000 #0C0E11 #D0EBEE #C78C56   #52677C
+client.unfocused        #000000 #0C0E11 #D0EBEE #C78C56   #52677C
 client.urgent           #000000 #0C0E11 #D0EBEE #733447   #733447
 client.placeholder      #000000 #0C0E11 #D0EBEE #52677C   #52677C
 

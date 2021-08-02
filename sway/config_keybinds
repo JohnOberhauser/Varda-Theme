@@ -61,26 +61,20 @@ set $wsc1 "M"
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+Alt+Left focus left
-    bindsym $mod+Alt+Down focus down
-    bindsym $mod+Alt+Up focus up
-    bindsym $mod+Alt+Right focus right
-
     bindsym $mod+Alt+KP_6 focus right
     bindsym $mod+Alt+KP_4 focus left
     bindsym $mod+Alt+KP_2 focus down
     bindsym $mod+Alt+KP_8 focus up
 
-    # Move the focused window with the same, but add Shift
-    bindsym $mod+Left move left
-    bindsym $mod+Down move down
-    bindsym $mod+Up move up
-    bindsym $mod+Right move right
-
+    # Move the focused window
     bindsym $mod+KP_6 move right
     bindsym $mod+KP_4 move left
     bindsym $mod+KP_2 move down
     bindsym $mod+KP_8 move up
+    bindsym $mod+KP_1 exec $HOME/.config/sway/moveLeftVertical.sh
+    bindsym $mod+KP_3 exec $HOME/.config/sway/moveRightVertical.sh
+    bindsym $mod+Alt+KP_1 exec $HOME/.config/sway/moveLeftVertical.sh
+    bindsym $mod+Alt+KP_3 exec $HOME/.config/sway/moveRightVertical.sh
 
 #
 # Workspaces:
