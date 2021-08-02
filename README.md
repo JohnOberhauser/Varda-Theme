@@ -4,11 +4,14 @@ Varda theme for various programs
 #Color Pallete
 ```
 # Primary Hex
-white: D0EBEE # white
-black: 0C0E11 # black
-steel_blue: 52677C # steel blue
-red: 733447 # red
-green: 257B76 # teal
+white: D0EBEE
+black: 0C0E11
+steel_blue: 52677C
+red: 733447
+green: 257B76
+peach: C78C56
+purple: 604575
+aqua: 134A5A
 
 # Primary RGB
 black: [12, 14, 17]
@@ -17,8 +20,6 @@ blue: [82, 103, 124]
 grey: [46, 52, 54]
 
 # Secondary
-peach: C78C56
-purple: 42475A
 dark_grey: 2E3436
 light_white: E5FFFF # white
 neon: 80BB00
