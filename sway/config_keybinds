@@ -112,9 +112,6 @@ set $wsc1 "M"
     # and right click to resize them.
     bindsym $mod+f floating toggle
 
-    # Swap focus between the tiling area and the floating area
-    #bindsym $mod+space focus mode_toggle
-
     # Move focus to the parent container
     bindsym $mod+a focus parent
 #
