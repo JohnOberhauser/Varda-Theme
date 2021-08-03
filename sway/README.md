@@ -2,6 +2,7 @@ programs required:
 
 rofi - application launcher
 swaylock - lock screen
+swayidle - for turning off screen when idle (in lock screen)
 grim - screenshot util
 slurp - select screen area for grim
 waybar - top bar
