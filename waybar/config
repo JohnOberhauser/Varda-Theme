@@ -5,10 +5,13 @@
     "height": 30,
 
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces"],
+    "modules-left": ["sway/workspaces", "sway/window"],
     "modules-center": ["clock"],
     "modules-right": ["custom/updates", "pulseaudio", "custom/power"],
 
+    "sway/window": {
+        "max-length": 100
+    },
     "sway/workspaces": {
         "persistent_workspaces": {
             "I": [],

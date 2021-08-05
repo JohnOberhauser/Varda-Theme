@@ -23,4 +23,7 @@ titlebar_border_thickness 0
 #border_images.unfocused ~/.config/sway/unfocused.png
 #border_images.urgent ~/.config/sway/unfocused.png
 
+# set cursor
+# also use lxappearance to set gtk cursor
+# also move cursor folder to /usr/share/icons and set Inherits={theme folder name} in /usr/share/icons/default/index.theme
 seat seat0 xcursor_theme Varda-Cursor-Main

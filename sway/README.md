@@ -11,3 +11,5 @@ polkit-gnome - polkit program
 pacman-contrib - used for the checkupdates command for icon in waybar
 jq - json parser
 vorbis-tools - play ogg sound files
+xdg-desktop-portal-wlr - allow screen sharing
+  wofi - maybe dependency for choosing options?

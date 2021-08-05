@@ -6,16 +6,11 @@
 
 ### Variables
 #
-# Logo key. Use Mod1 for Alt.
+# Logo key
 set $mod Mod4
 
 # Your preferred terminal emulator
 set $term terminator
-
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-#set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 set $wsa1 "I"
 set $wsa2 "II"
@@ -55,19 +50,6 @@ workspace $wsb2 output DP-2
 workspace $wsb3 output DP-2
 workspace $wsb4 output DP-2
 workspace $wsb5 output DP-2
-
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
 #
@@ -114,12 +96,11 @@ bar {
     swaybar_command waybar
 }
 
-include /home/john/.config/sway/config_appearance
+include /home/john/.config/swCay/config_appearance
 include /home/john/.config/sway/config_keybinds
 include /etc/sway/config.d/*
+include /home/john/.config/sway/config.d/*
 
 #exec /usr/lib/polkit-1/polkitd --no-debug
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-workspace V
-exec /usr/bin/megasync
-workspace I
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
