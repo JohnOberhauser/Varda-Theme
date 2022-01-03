@@ -28,11 +28,6 @@ focus_follows_mouse no
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /ssd/home/workspace/Varda-Theme/wallpaper/varda.jpg fill
-#
-# Example configuration:
-#
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -74,33 +69,16 @@ input "1133:49983:Logitech_G815_RGB_MECHANICAL_GAMING_KEYBOARD" {
   xkb_numlock enabled
 }
 
-#
 # Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
 bar {
-    position bottom
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-
-    output DP-1
-
     swaybar_command waybar
 }
 
-include /home/john/.config/swCay/config_appearance
-include /home/john/.config/sway/config_keybinds
 include /etc/sway/config.d/*
 include /home/john/.config/sway/config.d/*
 
 #exec /usr/lib/polkit-1/polkitd --no-debug
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# for screen sharing https://github.com/emersion/xdg-desktop-portal-wlr
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway

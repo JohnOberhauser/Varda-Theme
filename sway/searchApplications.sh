@@ -21,6 +21,7 @@ listApps() {
   echo GIMP
   echo LX Appearance
   echo Seahorse
+  echo DConf Editor
 }
 
 # show menu, get selection
@@ -46,6 +47,11 @@ fi
 if [[ $selection == "Seahorse" ]]; then
   echo launching seahorse
   /usr/bin/seahorse
+  exit 0
+fi
+if [[ $selection == "DConf Editor" ]]; then
+  echo launching DConf Editor
+  /usr/bin/dconf-editor
   exit 0
 fi
 

@@ -24,7 +24,8 @@ set $wsc1 "M"
 
     # Start your launcher
     #bindsym $mod+Space exec rofi -show run
-    bindsym $mod+Space exec /home/john/.config/sway/searchApplications.sh
+    #bindsym $mod+Space exec /home/john/.config/sway/searchApplications.sh
+    bindsym $mod+Space exec kmenu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -53,6 +54,8 @@ set $wsc1 "M"
 #
     #everything
     bindsym Print exec grim $(xdg-user-dir PICTURES)/screenshots/$(date +'%s_grim.png')
+    #everything include cursor
+    bindsym $mod+F5 exec grim -c $(xdg-user-dir PICTURES)/screenshots/$(date +'%s_grim.png')
     #selected window (not working, works in terminal)
     bindsym $mod+Alt+Print exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" $(xdg-user-dir PICTURES)/screenshots/$(date +'%s_grim.png')
     #selected area
@@ -121,11 +124,11 @@ set $wsc1 "M"
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+    bindsym $mod+g move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+    bindsym $mod+Alt+g scratchpad show
 #
 # Resizing containers:
 #

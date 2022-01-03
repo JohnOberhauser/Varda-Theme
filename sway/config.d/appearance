@@ -5,6 +5,10 @@ gaps inner 20
 #font "JetBrainsMono Patched Glyphs" 9
 #font "Cantarell" 11
 
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output DP-1 bg /ssd/home/workspace/Varda-Theme/wallpaper/varda.jpg tile
+output DP-2 bg /ssd/home/workspace/Varda-Theme/wallpaper/varda_right.jpg fill
+
 # class                 border  backgr. text    indicator child_border
 client.focused          #000000 #0C0E11 #D0EBEE #C78C56   #D0EBEE
 client.focused_inactive #000000 #0C0E11 #D0EBEE #C78C56   #52677C
@@ -24,6 +28,8 @@ titlebar_border_thickness 0
 #border_images.urgent ~/.config/sway/unfocused.png
 
 # set cursor
-# also use lxappearance to set gtk cursor
+# also use lxappearance to set gtk cursor (maybe not necessary?)
+# also set Inherits={theme folder name} in ~/.icons/default/index.theme
+# also set gtk-cursor-theme-name={theme folder name} in ~/.config/gtk-3.0/settings.ini
 # also move cursor folder to /usr/share/icons and set Inherits={theme folder name} in /usr/share/icons/default/index.theme
-seat seat0 xcursor_theme Varda-Cursor-Main
+seat seat0 xcursor_theme Varda-Cursor-Dark

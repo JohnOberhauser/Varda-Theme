@@ -150,7 +150,8 @@
     },
     "custom/power": {
         "format": "⏼",
-        "on-click": "$HOME/.config/waybar/powerMenu.sh"
+        //"on-click": "$HOME/.config/waybar/powerMenu.sh"
+        "on-click": "kpower"
     },
     "custom/updates": {
         "format": "{}",
