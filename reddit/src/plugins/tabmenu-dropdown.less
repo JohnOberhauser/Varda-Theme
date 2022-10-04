@@ -1,0 +1,47 @@
+/* eddited plugin
+   Tabmenu Dropdown
+/*============================*/
+
+
+/*---- Define Plugin ----*/
+
+.tabmenu-dropdown(@enabled) when (@enabled) {
+
+  #header .tabmenu {
+    margin: -4px 0 0 12px !important;
+    background: @color-background;
+    border: 1px solid @color-border;
+
+    // hide unselected options unless hover
+    &:not(:hover) {
+      li:not(.selected) {
+        display: none;
+      }
+    }
+
+    a, li {
+      display: block;
+      margin: 0;
+      color: @color-text-subtle;
+    }
+
+    li a,
+    li.selected a {
+      width: 100%;
+      padding: 6px 12px;
+      border: 1px solid transparent;
+      border-bottom-color: @color-shadow;
+    }
+
+    li:hover a,
+    li.selected a {
+      color: @color-link;
+    }
+
+  }
+
+}
+
+/*---- Use Plugin if Enabled ----*/
+
+.tabmenu-dropdown(@enable-tabmenu-dropdown);

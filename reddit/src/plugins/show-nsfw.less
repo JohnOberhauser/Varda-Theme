@@ -1,0 +1,24 @@
+/* eddited plugin
+   Show NSFW thumbnails
+/*============================*/
+
+
+/*---- Define Plugin ----*/
+
+.show-nsfw(@enabled) when (@enabled) {
+
+  .thing.over18 .thumbnail {
+    img {
+      display: block !important;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+}
+
+/*---- Use Plugin if Enabled ----*/
+
+.show-nsfw(@enable-nsfw-thumbnails);

@@ -1,0 +1,37 @@
+/* eddited plugin
+   Body Margin
+/*============================*/
+
+
+/*---- Define Plugin ----*/
+
+.body-margin(@enabled) when (@enabled) {
+
+  body {
+    background: @color-body-margin !important;
+    padding-left: @width-body-margin;
+    padding-right: @width-body-margin;
+    margin-top: @width-body-margin !important;
+
+    .titlebox .redditname a:after when (@enable-header-box) {
+      left: @width-body-margin;
+      right: @width-body-margin;
+      top: @width-body-margin + 38px;
+    }
+
+    .side .usertext-body h1:first-of-type when (@enable-headline-box) {
+      left: 20px + @width-body-margin;
+      & when (@enable-header-box) {
+        top: @header-box-height + @width-body-margin + 31px;
+      }
+      & when not (@enable-header-box) {
+        top: @width-body-margin + 26px;
+      }
+    }
+  }
+
+}
+
+/*---- Use Plugin if Enabled ----*/
+
+.body-margin(@enable-body-margin);

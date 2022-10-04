@@ -1,0 +1,111 @@
+/* eddited
+   Sidebar core styles
+/*============================*/
+
+.side {
+  margin: 33px 0 0;
+  width: @width-sidebar;
+  border-left: 1px solid @color-border;
+
+  order: 2;
+
+  .md {
+    color: @color-text;
+  }
+
+}
+
+// Hide "Recently Viewed Links"
+.loggedin .side .spacer:nth-last-child(2) {
+  display: none;
+}
+
+// mute some text
+.titlebox .bottom,
+.sidecontentbox .more a,
+.sidecontentbox .title h1 {
+  color: @color-text-subtle;
+}
+
+.sidecontentbox .title h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.sidecontentbox a,
+.create .morelink a,
+.sidecontentbox .title h1,
+.account-activity-box a {
+  font-size: @font-small;
+}
+
+// remove some backgrounds
+.side .icon-menu a,
+.titlebox form.toggle {
+  background: transparent;
+}
+
+.login-form-side {
+  border: none;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid @color-border;
+
+  input[type=text],
+  input[type=password] {
+    margin: 0 0 5px;
+    width: calc(@width-sidebar - 25px);
+  }
+}
+
+.linkinfo {
+  padding: 12px;
+  border-radius: 0;
+  color: @color-link;
+  border: 1px solid @color-link;
+  background-color: @color-background;
+
+  .date,
+  .shortlink {
+    font-size: @font-small;
+  }
+}
+
+.sidebox.create {
+  margin: 24px 0 26px;
+}
+
+.sidecontentbox {
+  margin-bottom: 24px;
+
+  .title {
+    margin-bottom: 12px;
+  }
+
+  .collapse-button {
+    border-color: transparent;
+    background: transparent;
+    font-size: 0;
+    line-height: 7px;
+
+    &:before {
+      content: "[-]";
+      font-size: @font-small;
+    }
+  }
+
+  .content {
+    padding: 0;
+    border: none;
+  }
+}
+
+#moderation_tools .title h1 {
+  font-size: 0;
+
+  &:before {
+    content: "Mod Tools";
+    text-transform: capitalize;
+    font-size: @font-small;
+  }
+}

@@ -1,0 +1,19 @@
+/* eddited
+   Sidebar usertext
+   the user-edited sidebar
+/*============================*/
+
+.side .usertext-body {
+  margin-top: 12px;
+  padding: 12px 0;
+  border-top: 1px solid @color-border;
+}
+
+// center text content by using double hr elements
+hr + hr {
+  display: none;
+
+  & + p {
+    text-align: center;
+  }
+}

@@ -1,0 +1,114 @@
+/* eddited
+   Links, text fields, buttons
+/*============================*/
+
+a {
+  color: @color-link;
+}
+
+.md a {
+  border-bottom: 1px dotted;
+}
+
+/*---- text fields ----*/
+
+textarea,
+input[type=text],
+input[type=password] {
+  box-sizing: border-box;
+  padding: 6px 12px !important;
+  border: 1px solid @color-border !important;
+  background: @color-background !important;
+  color: @color-text !important;
+
+  &:focus {
+    outline: none;
+    border-color: @color-link !important;
+  }
+}
+
+/*---- buttons ----*/
+
+.btn,
+[href^="#btn"] + a,
+[href^="#obtn"] + a,
+[href^="#btn"] + span + a,
+[href^="#obtn"] + span + a {
+  padding: 6px 12px;
+}
+
+.sidebox.create {
+  clear: both;
+  .spacer {
+    display: none;
+  }
+}
+
+.morelink {
+  border: none;
+  background-image: none !important;
+}
+
+[href^="#btn"] + a,
+[href^="#obtn"] + a,
+[href^="#btn"] + span + a,
+[href^="#obtn"] + span + a {
+  display: inline-block;
+  font-size: @font-small;
+}
+
+[href^="#btn"] + a,
+[href^="#btn"] + span + a {
+  background: @color-button;
+  color: @color-button-text !important;
+}
+
+.btn,
+button,
+.morelink a,
+[href^="#obtn"] {
+  background: transparent;
+  color: @color-button !important;
+}
+
+[href$="-f"] + a,
+[href$="-f"] + span + a {
+  width: 100%;
+  text-align: center;
+}
+
+// core button styles
+
+.btn,
+button,
+.morelink a,
+[href^="#btn"] + a,
+[href^="#obtn"] + a,
+[href^="#btn"] + span + a,
+[href^="#obtn"] + span + a,
+.res-fancy-toggle-button,
+.fancy-toggle-button .option,
+.fancy-toggle-button .option.active {
+  box-sizing: border-box;
+  border: 1px solid @color-button;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.content [href^="#btn"]:not([href$="-f"]) + a,
+.content [href^="#obtn"]:not([href$="-f"]) + a,
+.content [href^="#btn"]:not([href$="-f"]) + span + a,
+.content [href^="#obtn"]:not([href$="-f"]) + span + a {
+  margin: 0 10px;
+}
+.content [href="#btn-f"] + a,
+.content [href="#obtn-f"] + a,
+.content [href="#btn-f"] + span + a,
+.content [href="#obtn-f"] + span + a {
+  margin: 10px 0;
+}

@@ -1,0 +1,31 @@
+/* eddited
+   Generated/Static Variables
+/*============================*/
+
+// Static Variables
+
+@font-family: ".SFNSText-Light",".SFUIText-Light",".HelveticaNeueDeskInterface-Light","HelveticaNeue","Segoe UI","Roboto","Arial","Apple Color Emoji",sans-serif;
+@font-family-bolder: ".SFNSText-Regular",".SFUIText-Regular",".HelveticaNeueDeskInterface-Regular","HelveticaNeue","Segoe UI","Roboto","Arial","Apple Color Emoji",sans-serif;
+
+@font-base: 13px;
+@font-smaller: 10px;
+@font-small: 11px;
+@font-big: 16px;
+@font-bigger: 24px;
+
+// auto generated variables
+.compiled-variables(@bg) when (lightness(@bg) >= 50%) {
+  @color-shadow: darken(@bg, 5%);
+  @color-border: darken(@bg, 8%);
+  @color-locked-text: darken(@color-locked, 60%);
+  @color-text-subtle: mix(@color-text, @bg, 40%);
+}
+.compiled-variables(@bg) when (lightness(@bg) < 50%) {
+  @color-shadow: lighten(@bg, 5%);
+  @color-border: lighten(@bg, 8%);
+  @color-locked-text: lighten(@color-locked, 10%);
+  @color-text-subtle: mix(@color-text, @bg, 60%);
+}
+.compiled-variables(@bg) {
+}
+.compiled-variables(@color-background);

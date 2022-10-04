@@ -1,0 +1,120 @@
+/* eddited
+   Sidebar titlebox
+   (subscribe, submit, etc)
+/*============================*/
+
+.titlebox .bottom {
+  padding-bottom: 12px;
+  font-size: @font-small;
+  border-top-color: @color-border;
+}
+
+.tagline a, .search-result-meta a {
+  color: @color-link;
+}
+
+.titlebox form.toggle, .leavemoderator {
+  color: @color-text-subtle;
+}
+
+#search {
+  margin-top: -6px;
+
+  input[type=text] {
+    width: 100%;
+    border-color: transparent transparent @color-border !important;
+
+    &::placeholder {
+      color: @color-border;
+      text-transform: capitalize;
+    }
+
+    &:hover::placeholder,
+    &:focus::placeholder {
+      color: @color-text-subtle;
+    }
+  }
+
+  input[type=submit] {
+    opacity: 0.6;
+  }
+
+  &:not(:hover) {
+    input[type=submit] {
+      opacity: 0.2;
+    }
+  }
+}
+
+.side .nub,
+span.multi-count,
+.leavemoderator,
+form.leavecontributor-button {
+  display: none !important;
+}
+
+
+/*---- submit button styles ----*/
+/* Submit Button Text is located in base/pretty */
+
+.morelink {
+  font-size: @font-base;
+}
+
+.submit-link .morelink,
+.submit-text .morelink {
+  margin-bottom: 6px;
+  border: none;
+  background: transparent;
+}
+
+
+/*---- reddit name ----*/
+
+.titlebox {
+
+  .redditname {
+    margin-bottom: -4px;
+
+    a {
+      display: inline-block;
+      margin-top: 8px;
+      color: @color-link;
+
+      &:before {
+        content: @text-sub-prefix;
+        font-size: @font-big;
+      }
+    }
+  }
+}
+
+/*---- subscribe button ----*/
+
+.fancy-toggle-button {
+  padding: 8px 0;
+  padding: .5rem 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+
+  .option.active {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 0;
+    font-size: @font-small;
+  }
+
+  .remove {
+    border-color: @color-border !important;
+    background: @color-border;
+    color: @color-text;
+  }
+
+  .add {
+    border-color: @color-button;
+    background: @color-button;
+    color: @color-button-text;
+  }
+}

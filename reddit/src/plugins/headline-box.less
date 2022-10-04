@@ -1,0 +1,54 @@
+/* eddited plugin
+   Sidebar Image
+/*============================*/
+
+
+/*---- Define Plugin ----*/
+
+.headline-box(@enabled) when (@enabled) {
+
+  .side .usertext-body h1:first-of-type {
+    position: absolute;
+    left: 20px;
+    z-index: 90;
+    font-size: @font-base - 1px;
+    font-weight: 700;
+    padding: 4px 20px;
+    background: @headline-box-bg-color;
+    color: @headline-box-text-color;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    & when (@enable-header-box) {
+      & when (@enable-submenu-fade) {
+        top: @header-box-height + 31px;
+      }
+      & when not (@enable-submenu-fade) {
+        top: @header-box-height + 51px;
+      }
+    }
+
+    & when not (@enable-header-box) {
+      & when (@enable-submenu-fade) {
+        top: 34px;
+      }
+      & when not (@enable-submenu-fade) {
+        top: 54px;
+      }
+    }
+
+    a {
+      color: @headline-box-text-color;
+      border-bottom: 1px dotted;
+    }
+  }
+
+  body > .content {
+    padding-top: 36px;
+  }
+
+}
+
+/*---- Use Plugin if Enabled ----*/
+
+.headline-box(@enable-headline-box);

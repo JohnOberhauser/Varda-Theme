@@ -1,0 +1,146 @@
+/* eddited
+   Plugin Import / List
+/*============================*/
+/* eddited config default
+   Theme options and toggles.
+/*============================*/
+/*== Colors ==*/
+/*== Options ==*/
+/*== Editable Text ==*/
+/*== Plugins ===*/
+/* eddited
+   Generated/Static Variables
+/*============================*/
+/* eddited plugin
+   Body Margin
+/*============================*/
+/*---- Define Plugin ----*/
+/*---- Use Plugin if Enabled ----*/
+/* eddited plugin
+   Header Box and Title
+/*============================*/
+/*---- Define Plugin ----*/
+/*---- Use Plugin if Enabled ----*/
+@-webkit-keyframes backgroundScroll {
+  from {
+    background-position: center center;
+  }
+  to {
+    background-position: -3000px 0px;
+  }
+}
+@keyframes backgroundScroll {
+  from {
+    background-position: center center;
+  }
+  to {
+    background-position: -3000px 0px;
+  }
+}
+body {
+  padding-top: 258px;
+}
+.titlebox .redditname a:after {
+  display: block;
+  left: 0;
+  right: 0;
+  top: 38px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 2px;
+  line-height: 250px;
+  height: 250px;
+  position: absolute;
+  color: #ffffff;
+  border-bottom: 2px solid #3d3d3d;
+  background-color: #ffffff;
+  background-image: url(%%header%%);
+  background-size: cover;
+  background-position: center center;
+  /* Header Box Text is located in base/pretty */
+}
+.titlebox .redditname a:hover:after {
+  -webkit-animation: backgroundScroll 150s infinite linear;
+  -webkit-animation-fill-mode: forwards;
+  animation: backgroundScroll 150s infinite linear;
+  animation-fill-mode: forwards;
+}
+/* eddited plugin
+   Align submit buttons on the
+   same line.
+/*============================*/
+/*---- Define Plugin ----*/
+/*---- Use Plugin if Enabled ----*/
+.submit-link,
+.submit-text {
+  width: 47.5%;
+  box-sizing: border-box;
+}
+.submit-link {
+  float: left;
+}
+.submit-text {
+  float: right;
+}
+/* eddited plugin
+   Show NSFW thumbnails
+/*============================*/
+/*---- Define Plugin ----*/
+/*---- Use Plugin if Enabled ----*/
+/* eddited plugin
+   Sidebar Image
+/*============================*/
+/*---- Define Plugin ----*/
+/*---- Use Plugin if Enabled ----*/
+body > .side:before {
+  content: '';
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  background-image: url(%%sidebar%%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 206px;
+}
+/* eddited plugin
+   Sidebar Image
+/*============================*/
+/*---- Define Plugin ----*/
+/*---- Use Plugin if Enabled ----*/
+.side .usertext-body h1:first-of-type {
+  position: absolute;
+  left: 20px;
+  z-index: 90;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 20px;
+  background: #3d3d3d;
+  color: #ffffff;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  top: 281px;
+}
+.side .usertext-body h1:first-of-type a {
+  color: #ffffff;
+  border-bottom: 1px dotted;
+}
+body > .content {
+  padding-top: 36px;
+}
+/* eddited plugin
+   Tabmenu Dropdown
+/*============================*/
+/*---- Define Plugin ----*/
+/*---- Use Plugin if Enabled ----*/
+/* eddited plugin
+   Tabmenu Dropdown
+/*============================*/
+/*---- Define Plugin ----*/
+/*---- Use Plugin if Enabled ----*/
+#header:not(:hover) #sr-header-area {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}

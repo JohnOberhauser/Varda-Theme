@@ -1,0 +1,22 @@
+/* eddited plugin
+   Tabmenu Dropdown
+/*============================*/
+
+
+/*---- Define Plugin ----*/
+
+.submenu-fade(@enabled) when (@enabled) {
+
+  #header:not(:hover) {
+    #sr-header-area {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+
+}
+
+/*---- Use Plugin if Enabled ----*/
+
+.submenu-fade(@enable-submenu-fade);

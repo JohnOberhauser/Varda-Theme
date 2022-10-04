@@ -1,0 +1,170 @@
+/* eddited
+   Content styles
+   (the main body of the page)
+/*============================*/
+
+body > .content {
+  margin: 33px 0 0 !important;
+  border-right-color: @color-background;
+
+  order: 1;
+  flex: 0 1 calc(~"100% - " @width-sidebar);
+}
+
+#preview-table table,
+#subreddit_stylesheet > div {
+  width: 100%;
+}
+
+.gray, h2 {
+  color: @color-text-subtle;
+}
+
+.error {
+  color: @color-nsfw;
+}
+
+.md a {
+  color: @color-link;
+}
+
+// stickied
+.tagline .stickied-tagline,
+.thing.stickied.link a.title,
+.search-result-meta .stickied-tagline {
+  color: @color-stickied;
+}
+
+// locked
+.gold-accent {
+  border-color: @color-locked;
+  border-radius: 3px;
+  background-color: lighten(@color-locked, 90%);
+}
+
+// inline expand buttons
+.thing .md .expando-button {
+  position: relative;
+  margin: 0 4px;
+}
+
+// submit page
+.formtabs-content,
+.content > .tabpane-content {
+  padding-top: 12px;
+  border: 2px solid transparent;
+  border-top-color: @color-link;
+}
+
+ul.tabmenu.formtab,
+.content > .tabmenu {
+  padding: 12px;
+
+  &:hover {
+    border: none;
+    background: transparent;
+  }
+
+  a {
+    border: none;
+    font-size: @font-base !important;
+  }
+}
+
+.submit_text.roundfield.enabled {
+  display: none;
+}
+
+ul.formtab li a:hover,
+.tabmenu.formtab .selected a,
+.content > .tabmenu li a:hover
+.content > .tabmenu .selected a {
+  color: @color-link !important;
+  background-color: transparent;
+}
+
+.linefield,
+.roundfield {
+  padding: 10px;
+  border: 1px solid @color-border;
+  border-radius: 0px;
+  background-color: @color-shadow;
+}
+
+// misc pages
+
+pre {
+  padding: 3px 6px !important;
+  color: @color-text !important;
+  border: 1px solid @color-border;
+  display: inline-block !important;
+  background-color: @color-shadow !important;
+}
+
+.submit-page {
+
+  #reddit-field {
+    display: none;
+  }
+
+  #suggest-title {
+    margin-top: 6px;
+  }
+
+  #items-required {
+    font-size: 0;
+  }
+}
+
+.fancy-settings h1 {
+  margin: 12px 0;
+}
+
+.usertable {
+  margin: 0;
+}
+
+.flaircell,
+.flairlist .header {
+  margin-right: 0;
+}
+
+.content > .menuarea {
+  border: none;
+  background: @color-link;
+  color: @color-background;
+  display: inline-block;
+  border-radius: 3px;
+
+  .flat-list a,
+  .flat-list .selected a,
+  .dropdown.lightdrop .selected {
+    color: @color-background;
+  }
+}
+
+.sheets .btn,
+.sheets label {
+  margin-top: 4px;
+  padding: 4px 8px;
+  font-size: @font-smaller;
+}
+
+.sheets textarea {
+  color: #ccc !important;
+  padding: 20px !important;
+  background: #000 !important;
+}
+
+#image-upload #file,
+#image-upload #sumbit-img {
+  margin: 10px 0;
+}
+
+#image-upload label input {
+  margin: 2px 5px;
+}
+
+ul.image-list {
+  font-size: @font-base;
+}

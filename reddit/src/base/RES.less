@@ -1,0 +1,161 @@
+/* eddited
+   RES Tweaks
+/*============================*/
+
+
+.res-navTop #header-bottom-right {
+  margin-bottom: -3px;
+}
+
+#RESShortcutsAdd,
+#RESShortcutsEditContainer,
+#RESShortcutsLeft,
+#RESShortcutsRight,
+#RESShortcutsSort {
+  font-size: 10px;
+  text-align: center;
+  background: @color-background !important;
+  color: #000000 !important;
+}
+
+#header #sr-header-area a.RESShortcutsCurrentSub {
+  color: @color-submenu-selected-text !important;
+}
+
+#RESShortcutsEditContainer {
+  margin: 1px 7px 0 0;
+}
+
+#RESShortcutsEditContainer .res-icon {
+  font-size: @font-smaller;
+}
+
+.titlebox .toggle.res-sr-style-toggle {
+  font-size: @font-smaller;
+  margin-bottom: -5px;
+}
+
+.subscribe-button + .res-fancy-toggle-button {
+  float: none;
+}
+
+.res-fancy-toggle-button {
+  margin: 0 0 15px;
+  padding: 6px 24px;
+  border-color: @color-border;
+  border-radius: 0;
+  background: transparent;
+  color: @color-text;
+
+  &.remove, &:hover {
+    background: @color-border;
+    background-image: none;
+  }
+}
+
+.RESDashboardToggle {
+  float: right;
+}
+
+.res .entry.res-selected,
+.res .entry.res-selected .md-container,
+.res .commentarea .RES-keyNav-activeElement.entry .noncollapsed,
+.res .commentarea .RES-keyNav-activeElement .md,
+.res .RES-keyNav-activeElement,
+.res .RES-keyNav-activeElement .md-container {
+  background-color: transparent !important;
+}
+
+.res-commentBoxes .comment {
+  border-color: @color-border !important;
+}
+
+.res-voteEnhancements-highlightScores span.score {
+  color: @color-link;
+}
+
+.res-commentBoxes .comment .comment, .res-commentBoxes .comment .comment .comment .comment, .res-commentBoxes .comment .comment .comment .comment .comment .comment, .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background-color: @color-shadow !important;
+}
+
+.res-commentBoxes .comment .comment .comment, .res-commentBoxes .comment .comment .comment .comment .comment, .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background-color: @color-background !important;
+}
+
+.entry.RES-keyNav-activeElement {
+  border-right: 1px solid @color-link;
+}
+
+.res-show-link {
+  top: auto !important;
+  bottom: 0;
+}
+
+.res-userHighlight .tagline .author.submitter, .res-userHighlight .crosspost-preview-tagline .author.submitter {
+  color: @color-background !important;
+  background-color: @color-link !important;
+}
+
+.RESHoverTitle .fancy-toggle-button {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.res-userHighlight .entry .tagline .author.moderator {
+  padding: 0 2px;
+  color: @color-background !important;
+  background-color: @color-stickied !important;
+}
+
+.NERPageMarker,
+#progressIndicator.neverEndingReddit {
+  color: @color-text-subtle;
+  background: @color-shadow;
+  border-color: @color-border;
+
+  .gearIcon {
+    opacity: 0.3;
+  }
+}
+
+#NREFloat  {
+  top: 65px !important;
+  display: block !important;
+  a:not(.pageNavigator) {
+    display: none;
+  }
+}
+
+/* Night Mode */
+.res-nightmode {
+  #sr-header-area,
+  #RESShortcutsEditContainer *,
+  #header-bottom-left,
+  .fancy-toggle-button .remove {
+    background: #333 !important;
+  }
+
+  #header-bottom-left a {
+    color: #fff !important;
+  }
+
+  .tabmenu a {
+    border-color: transparent !important;
+  }
+
+  .tabmenu li a:hover {
+    background: #000 !important;
+  }
+
+  .thing,
+  #header,
+  .titlebox .bottom,
+  .side .usertext-body {
+    border-color: #3c3c3c !important;
+  }
+
+  .link .usertext-body .md {
+    background-color: transparent!important;
+  }
+}

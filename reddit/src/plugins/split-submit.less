@@ -1,0 +1,29 @@
+/* eddited plugin
+   Align submit buttons on the
+   same line.
+/*============================*/
+
+
+/*---- Define Plugin ----*/
+
+.split-submit(@enabled) when (@enabled) {
+
+  .submit-link,
+  .submit-text {
+    width: 47.5%;
+    box-sizing: border-box;
+  }
+
+  .submit-link {
+    float: left;
+  }
+
+  .submit-text {
+    float: right;
+  }
+
+}
+
+/*---- Use Plugin if Enabled ----*/
+
+.split-submit(@enable-split-submit-buttons);

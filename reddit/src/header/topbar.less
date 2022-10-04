@@ -1,0 +1,49 @@
+/* eddited
+   Top background
+   (subreddits, front, all)
+/*============================*/
+
+#sr-header-area {
+  left: 0;
+  right: 0;
+  top: 40px;
+  padding: 0 7px;
+  overflow: visible;
+  position: absolute;
+  box-sizing: border-box;
+  color: @color-submenu-text;
+  transition: all 0.2s ease;
+  background: @color-submenu;
+  font-size: @font-smaller - 1px;
+
+  a {
+    color: @color-submenu-text;
+  }
+
+  // buffer to prevent accidental un-focus
+  &:before {
+    left: 0;
+    right: 0;
+    top: 18px;
+    content: "";
+    height: 12px;
+    display: block;
+    position: absolute;
+    background: transparent;
+  }
+
+  // Subreddits
+  .drop-choices a {
+    color: @color-submenu;
+  }
+}
+
+.dropdown.srdrop .selected {
+  padding-right: 5px;
+  background-image: none;
+  color: @color-submenu-text;
+}
+
+#sr-more-link {
+  background: @color-submenu;
+}
