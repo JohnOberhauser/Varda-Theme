@@ -1,0 +1,23 @@
+/* hide buttons I never click under a post */
+
+li.share, li.link-save-button, li.report-button, li.give-gold-button, form.hide-button, li.crosspost-button, a.noCtrlF {
+    visibility: hidden;
+    display: none !important;
+}
+
+/* hide buttons I never click under a comment */
+
+li.viewSource, a.embed-comment, li.comment-save-button, li.saveComments, li.report-button, li.give-gold-button, a.toggleChildren {
+    visibility: hidden;
+    display: none !important;
+}
+
+a[data-event-action="parent"] {
+    visibility: hidden;
+    display: none !important;
+}
+
+div.panestack-title {
+    visibility: hidden;
+    display: none !important;
+}
