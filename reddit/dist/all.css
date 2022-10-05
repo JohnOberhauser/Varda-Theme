@@ -1289,3 +1289,7 @@ div.panestack-title {
   visibility: hidden;
   display: none !important;
 }
+div.email-collection-banner {
+  visibility: hidden;
+  display: none !important;
+}
