@@ -4,7 +4,31 @@
 /* eddited config default
    Theme options and toggles.
 /*============================*/
-/*== Colors ==*/
+/*== Colors==*/
+/*= Dark Mode Colors
+@color-background: #0C0E11;
+@color-text: #D0EBEE;
+@color-submenu: #0C0E11;
+@color-submenu-text: #D0EBEE;
+@color-submenu-selected-text: #ffffff;
+
+@color-link: #D0EBEE;
+@color-button: @color-link;
+@color-button-text: @color-background;
+
+@color-upvote: #f44336;
+@color-downvote: #0071c5;
+@color-thumbnail: #f1f1f1;
+
+@color-nsfw: #d86a62;
+@color-locked: #ead340;
+@color-stickied: #399b76;
+@color-visited: @color-text-subtle;
+
+@color-red-flair: @color-nsfw;
+@color-green-flair: @color-stickied;
+
+=*/
 /*== Options ==*/
 /*== Editable Text ==*/
 /*== Plugins ===*/
@@ -1044,9 +1068,17 @@ hr + hr + p {
   font-size: 10px;
   text-align: center;
   background: #ffffff !important;
-  color: #000000 !important;
 }
 #header #sr-header-area a.RESShortcutsCurrentSub {
+  color: #000000 !important;
+}
+div.res-filterline,
+div.res-filterline-preamble,
+div.res-filterline-filters {
+  background: #ffffff !important;
+  color: #191a23 !important;
+}
+div.res-filterline-filter-hiding {
   color: #000000 !important;
 }
 #RESShortcutsEditContainer {
@@ -1240,7 +1272,8 @@ body {
   max-height: 50px;
 }
 #sr-header-area {
-  color: #fff;
+  color: #ffffff;
+  background: #ffffff;
   font-size: 14px;
 }
 /* Hide useless text */
