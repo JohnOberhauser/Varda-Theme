@@ -462,8 +462,8 @@
             "layer": 2000
         },
         "editor.search.results": {
-            "bgColor": "peach",
-            "stripeColor": "D49550",
+            "bgColor": "steel_blue",
+            "stripeColor": "white",
             "layer": 100
         },
         "comment": {
@@ -471,11 +471,11 @@
             "layer": 5
         },
         "comment.parameter": {
-            "fgColor": "779E9E",
+            "fgColor": "white",
             "layer": 5
         },
         "comment.parameter.value": {
-            "fgColor": "F095E8",
+            "fgColor": "white",
             "layer": 5
         },
         "link": {
@@ -492,39 +492,39 @@
             }
         },
         "keyword": {
-            "fgColor": "88DBD7",
+            "fgColor": "red-medium",
             "layer": 20
         },
         "keyword.typeModifier": {
-            "fgColor": "88DBD7",
+            "fgColor": "red-medium",
             "layer": 20
         },
         "metadata": {
-            "fgColor": "B7DE87",
+            "fgColor": "red-medium",
             "layer": 20
         },
         "number": {
-            "fgColor": "F7D18F",
+            "fgColor": "steel_blue",
             "layer": 10
         },
         "boolean": {
-            "fgColor": "88DBD7",
+            "fgColor": "green",
             "layer": 10
         },
         "string": {
-            "fgColor": "F095E8",
+            "fgColor": "green-light",
             "layer": 15
         },
         "string.escape": {
-            "fgColor": "88DBD7",
+            "fgColor": "teal",
             "layer": 15
         },
         "string.escape.alternative": {
-            "fgColor": "AD99FF",
+            "fgColor": "teal",
             "layer": 15
         },
         "string.formatItem": {
-            "fgColor": "F7D18F",
+            "fgColor": "teal",
             "layer": 15
         },
         "identifier": {
@@ -533,15 +533,15 @@
         },
         "identifier.underCaret": {
             "bgColor": "black",
-            "stripeColor": "27706C",
+            "stripeColor": "white",
             "layer": 1000
         },
         "identifier.constant": {
-            "fgColor": "AD99FF",
+            "fgColor": "red-medium",
             "layer": 10
         },
         "identifier.constant.predefined": {
-            "fgColor": "88DBD7",
+            "fgColor": "red-medium",
             "layer": 10
         },
         "identifier.variable.local": {
@@ -566,74 +566,74 @@
             }
         },
         "identifier.function.call": {
-            "fgColor": "F7D18F",
+            "fgColor": "white",
             "layer": 20
         },
         "identifier.function.call.suspend": {
-            "fgColor": "F7D18F",
+            "fgColor": "white",
             "layer": 20
         },
         "identifier.function.call.package": {
-            "fgColor": "F7D18F",
+            "fgColor": "white",
             "layer": 20
         },
         "identifier.method.static": {
-            "fgColor": "F7D18F",
+            "fgColor": "green-medium",
             "layer": 20,
             "fontModifier": {
                 "italic": true
             }
         },
         "identifier.type": {
-            "fgColor": "7DBEFF",
+            "fgColor": "green-medium",
             "layer": 20
         },
         "identifier.field": {
-            "fgColor": "AD99FF",
+            "fgColor": "green-medium",
             "layer": 20
         },
         "identifier.field.static": {
-            "fgColor": "AD99FF",
+            "fgColor": "green-medium",
             "layer": 20,
             "fontModifier": {
                 "italic": true
             }
         },
         "identifier.interface": {
-            "fgColor": "7DBEFF",
+            "fgColor": "green-medium",
             "layer": 20
         },
         "identifier.type.class": {
-            "fgColor": "7DBEFF",
+            "fgColor": "green-medium",
             "layer": 20
         },
         "identifier.type.enum": {
-            "fgColor": "7DBEFF",
+            "fgColor": "green-medium",
             "layer": 20
         },
         "identifier.type.struct": {
-            "fgColor": "white",
+            "fgColor": "green-medium",
             "layer": 20
         },
         "identifier.type.valueType": {
-            "fgColor": "B7DE87",
+            "fgColor": "green-medium",
             "layer": 20
         },
         "identifier.typeParameter": {
-            "fgColor": "7DBEFF",
+            "fgColor": "green-medium",
             "layer": 20
         },
         "identifier.namedArgument": {
-            "fgColor": "AD99FF",
+            "fgColor": "peach",
             "layer": 20
         },
         "identifier.other": {
-            "fgColor": "7DBEFF",
+            "fgColor": "green-medium",
             "layer": 20
         },
 
         "markup.heading": {
-            "fgColor": "88DBD7",
+            "fgColor": "white",
             "layer": 20,
             "fontModifier": {
                 "bold": true
@@ -654,11 +654,11 @@
             }
         },
         "markup.code.block": {
-            "fgColor": "EB83E2",
+            "fgColor": "white",
             "layer": 20
         },
         "markup.href": {
-            "fgColor": "F095E8",
+            "fgColor": "white",
             "layer": 20,
             "fontModifier": {
                 "italic": true
@@ -681,7 +681,7 @@
         },
 
         "debug.currentFrame": {
-            "bgColor": "3E5454",
+            "bgColor": "white",
             "layer": -68,
             "fullLine": true
         },
@@ -710,17 +710,17 @@
             "showEmptyIntervals": true
         },
         "diff.deleted": {
-            "bgColor": "red",
+            "bgColor": "red-medium",
             "layer": -69,
             "fullLine": true
         },
         "diff.deleted.word": {
-            "bgColor": "red",
+            "bgColor": "red-medium",
             "layer": -60,
             "showEmptyIntervals": true
         },
         "diff.deleted.withBorder": {
-            "bgColor": "red",
+            "bgColor": "red-medium",
             "layer": -69,
             "fullLine": true,
             "decoration": {
@@ -729,7 +729,7 @@
             }
         },
         "diff.deleted.empty": {
-            "bgColor": "red",
+            "bgColor": "red-medium",
             "layer": -60,
             "showEmptyIntervals": true
         },
@@ -769,7 +769,7 @@
         "problem.error": {
             "layer": 70,
             "decoration": {
-                "color": "FF5269",
+                "color": "red-medium",
                 "thickness": 2.0
             }
         },
@@ -777,21 +777,21 @@
             "layer": 100,
             "showEmptyIntervals": true,
             "decoration": {
-                "color": "FF5269",
+                "color": "red-medium",
                 "style": "WAVY"
             }
         },
         "problem.warning": {
             "layer": 60,
             "decoration": {
-                "color": "FACB66",
+                "color": "peach",
                 "thickness": 2.0
             }
         },
         "problem.warning.weak": {
             "layer": 40,
             "decoration": {
-                "color": "695937",
+                "color": "peach",
                 "thickness": 2.0
             }
         },
@@ -805,7 +805,7 @@
         "problem.info": {
             "layer": 50,
             "decoration": {
-                "color": "a366c4"
+                "color": "white"
             }
         },
         "problem.unknown": {
@@ -831,6 +831,11 @@
         "grey-2": "181C23",
 
         "grey-5": "839193",
+
+        "red-medium": "93394a",
+        "green-light": "98C379",
+        "green-medium": "62958f",
+        "teal": "349f97",
 
         "Transparent": "ffffff0%"
     }
