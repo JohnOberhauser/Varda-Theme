@@ -1,0 +1,7 @@
+(src[*]:*..*
+file[*]:*.gradle.kts
+file[*]:*.gradle
+file[*]:AndroidManifest.xml
+file[*]:*.graphql
+file[*]:*.graphqls
+file[*]:*.sq)&&!file[*]:res/drawable-*/&&!file[*]:res/mipmap*/&&!file[*]:res/values-*/
