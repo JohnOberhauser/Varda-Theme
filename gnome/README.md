@@ -23,7 +23,8 @@ changes are in the varda branch
 
 
 to generate the theme, use the install script
-    ./install.sh -n Varda -c dark -s compact
+    ./install.sh -n Varda -t blue -c dark -s compact
+then copy the contents from the new theme in the ~/.theme directory to this project's varda theme
 
 
 
@@ -34,13 +35,10 @@ place the hook file from the shell directory in
 to auto apply the theme after a gdm update.  Make sure the path is correct in the hook file
 
 
-move the varda folder to /usr/share/themes
-
 backup file
     sudo cp -av /usr/share/gnome-shell/gnome-shell-theme.gresource{,~}
 then do
-    THEME_SRC_DIR="/usr/share/themes/Varda/gnome-shell"
-    sudo glib-compile-resources --target="/usr/share/gnome-shell/gnome-shell-theme.gresource" --sourcedir="$THEME_SRC_DIR" "$THEME_SRC_DIR/gnome-shell-theme.gresource.xml"
+    sudo glib-compile-resources --target=/usr/share/gnome-shell/gnome-shell-theme.gresource /ssd/home/workspace/Varda-Theme/gnome/themes/Varda/gnome-shell/gnome-shell-theme.gresource.xml
 uninstall
     sudo mv -v /usr/share/gnome-shell/gnome-shell-theme.gresource{~,}
 
@@ -55,6 +53,13 @@ uninstall
 
 
 
+
+
+
+old install instructions
+move the varda folder to /usr/share/themes
+THEME_SRC_DIR="/usr/share/themes/Varda/gnome-shell"
+sudo glib-compile-resources --target="/usr/share/gnome-shell/gnome-shell-theme.gresource" --sourcedir="$THEME_SRC_DIR" "$THEME_SRC_DIR/gnome-shell-theme.gresource.xml"
 
 
 The old theme is a hacked version of Materia theme

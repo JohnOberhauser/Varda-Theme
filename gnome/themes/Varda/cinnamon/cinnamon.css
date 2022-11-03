@@ -125,7 +125,7 @@ stage {
 
 #menu-search-entry StIcon.capslock-warning, .notification StEntry StIcon.capslock-warning, .menu #notification StEntry StIcon.capslock-warning, .popup-menu #notification StEntry StIcon.capslock-warning, #notification StEntry StIcon.capslock-warning {
   icon-size: 16px;
-  warning-color: #FDD633;
+  warning-color: #C78C56;
   padding: 0 4px;
 }
 
@@ -435,7 +435,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel:highlight {
   border-image: none;
-  background-color: rgba(242, 139, 130, 0.5);
+  background-color: rgba(115, 52, 71, 0.5);
 }
 
 #panelLeft {
@@ -533,11 +533,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .panel-dummy {
-  background-color: rgba(242, 139, 130, 0.5);
+  background-color: rgba(115, 52, 71, 0.5);
 }
 
 .panel-dummy:entered {
-  background-color: rgba(242, 139, 130, 0.6);
+  background-color: rgba(115, 52, 71, 0.6);
 }
 
 .panel-status-button {
@@ -1078,7 +1078,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .run-dialog-error-label {
-  color: #F28B82;
+  color: #733447;
 }
 
 .run-dialog-error-box {
@@ -1122,7 +1122,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .mount-password-reask {
-  color: #FDD633;
+  color: #C78C56;
 }
 
 .show-processes-dialog,
@@ -1495,7 +1495,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .window-list-box:highlight {
-  background-color: rgba(242, 139, 130, 0.5);
+  background-color: rgba(115, 52, 71, 0.5);
 }
 
 .window-list-item-label {
@@ -1616,15 +1616,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .window-list-item-box .progress {
   background-gradient-direction: vertical;
-  background-gradient-start: #81C995;
-  background-gradient-end: #81C995;
+  background-gradient-start: #257B76;
+  background-gradient-end: #257B76;
   border-radius: 2px;
   box-shadow: none;
 }
 
 .window-list-item-demands-attention {
-  background-gradient-start: #FDD633;
-  background-gradient-end: #FDD633;
+  background-gradient-start: #C78C56;
+  background-gradient-end: #C78C56;
 }
 
 .window-list-preview {
@@ -1642,7 +1642,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .grouped-window-list-thumbnail-alert {
-  background-color: rgba(242, 139, 130, 0.5);
+  background-color: rgba(115, 52, 71, 0.5);
 }
 
 .grouped-window-list-thumbnail-menu {
@@ -1734,15 +1734,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .grouped-window-list-item-box .progress {
   background-gradient-direction: vertical;
-  background-gradient-start: #81C995;
-  background-gradient-end: #81C995;
+  background-gradient-start: #257B76;
+  background-gradient-end: #257B76;
   border-radius: 2px;
   box-shadow: none;
 }
 
 .grouped-window-list-item-demands-attention {
-  background-gradient-start: #FDD633;
-  background-gradient-end: #FDD633;
+  background-gradient-start: #C78C56;
+  background-gradient-end: #C78C56;
 }
 
 .sound-button {
@@ -2047,7 +2047,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .applet-box:highlight {
   background-image: none;
   border-image: none;
-  background-color: rgba(242, 139, 130, 0.5);
+  background-color: rgba(115, 52, 71, 0.5);
 }
 
 .applet-label {
@@ -2090,7 +2090,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .desklet:highlight {
-  background-color: rgba(242, 139, 130, 0.5);
+  background-color: rgba(115, 52, 71, 0.5);
 }
 
 .desklet-with-borders {
@@ -2101,7 +2101,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .desklet-with-borders:highlight {
-  background-color: rgba(242, 139, 130, 0.5);
+  background-color: rgba(115, 52, 71, 0.5);
 }
 
 .desklet-with-borders-and-header {
@@ -2115,7 +2115,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .desklet-with-borders-and-header:highlight {
-  background-color: rgba(242, 139, 130, 0.5);
+  background-color: rgba(115, 52, 71, 0.5);
 }
 
 .desklet-header {

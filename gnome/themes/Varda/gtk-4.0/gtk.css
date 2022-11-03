@@ -316,7 +316,7 @@ entry.error {
 
 entry.error:focus-within {
   background-color: rgba(208, 235, 238, 0.08);
-  box-shadow: inset 0 0 0 2px #F28B82;
+  box-shadow: inset 0 0 0 2px #733447;
   outline: none;
 }
 
@@ -337,7 +337,7 @@ entry.warning {
 
 entry.warning:focus-within {
   background-color: rgba(208, 235, 238, 0.08);
-  box-shadow: inset 0 0 0 2px #FDD633;
+  box-shadow: inset 0 0 0 2px #C78C56;
   outline: none;
 }
 
@@ -685,8 +685,8 @@ button.suggested-action.flat:checked {
 }
 
 button.destructive-action {
-  background-color: #F28B82;
-  color: rgba(12, 14, 17, 0.87);
+  background-color: #733447;
+  color: #D0EBEE;
   box-shadow: none;
 }
 
@@ -698,24 +698,24 @@ button.destructive-action:disabled {
 }
 
 button.destructive-action:hover {
-  box-shadow: inset 0 0 0 9999px transparent, 0 2px 2.4px -1px rgba(242, 139, 130, 0.2), 0 4px 3px 0 rgba(242, 139, 130, 0.14), 0 1px 6px 0 rgba(242, 139, 130, 0.12);
+  box-shadow: inset 0 0 0 9999px transparent, 0 2px 2.4px -1px rgba(115, 52, 71, 0.2), 0 4px 3px 0 rgba(115, 52, 71, 0.14), 0 1px 6px 0 rgba(115, 52, 71, 0.12);
 }
 
 button.destructive-action:checked {
-  background-color: rgba(185, 108, 102, 0.961);
+  background-color: #8f6b79;
 }
 
 button.destructive-action:checked:hover {
-  box-shadow: inset 0 0 0 9999px transparent, 0 3px 3px -3px rgba(242, 139, 130, 0.3), 0 2px 3px -1px rgba(242, 139, 130, 0.24), 0 2px 5px 0 rgba(242, 139, 130, 0.12);
+  box-shadow: inset 0 0 0 9999px transparent, 0 3px 3px -3px rgba(115, 52, 71, 0.3), 0 2px 3px -1px rgba(115, 52, 71, 0.24), 0 2px 5px 0 rgba(115, 52, 71, 0.12);
 }
 
 button.destructive-action:focus {
-  box-shadow: 0 0 0 2px rgba(242, 139, 130, 0.35);
+  box-shadow: 0 0 0 2px rgba(115, 52, 71, 0.35);
 }
 
 button.destructive-action.flat {
   background-color: transparent;
-  color: #F28B82;
+  color: #733447;
 }
 
 button.destructive-action.flat:disabled {
@@ -725,7 +725,7 @@ button.destructive-action.flat:disabled {
 }
 
 button.destructive-action.flat:checked {
-  background-color: rgba(242, 139, 130, 0.3);
+  background-color: rgba(115, 52, 71, 0.3);
 }
 
 button.card {
@@ -1018,8 +1018,8 @@ list > row button.image-button:not(.flat).suggested-action {
 
 
 list > row button.image-button:not(.flat).destructive-action {
-  background-color: #F28B82;
-  color: rgba(12, 14, 17, 0.87);
+  background-color: #733447;
+  color: #D0EBEE;
 }
 
 /*********
@@ -3324,7 +3324,7 @@ levelbar trough {
 }
 
 levelbar block.low {
-  background-color: #FDD633;
+  background-color: #C78C56;
 }
 
 levelbar block.high, levelbar block:not(.empty) {
@@ -3332,7 +3332,7 @@ levelbar block.high, levelbar block:not(.empty) {
 }
 
 levelbar block.full {
-  background-color: #81C995;
+  background-color: #257B76;
 }
 
 levelbar block.empty {
@@ -3854,7 +3854,7 @@ window.dialog.message.csd .dialog-action-area > button:not(:disabled) {
 }
 
 window.dialog.message.csd .dialog-action-area > button.destructive-action:not(:disabled) {
-  color: #F28B82;
+  color: #733447;
 }
 
 window.background.csd.dialog > headerbar.titlebar {
@@ -4176,37 +4176,37 @@ infobar.action:hover > revealer > box, infobar.question:hover > revealer > box {
 }
 
 infobar.warning > revealer > box, infobar.warning:backdrop > revealer > box {
-  background-color: #FDD633;
-  color: rgba(12, 14, 17, 0.87);
+  background-color: #C78C56;
+  color: #D0EBEE;
 }
 
 infobar.warning > revealer > box button, infobar.warning > revealer > box button:hover, infobar.warning > revealer > box button:focus, infobar.warning > revealer > box button:active, infobar.warning > revealer > box button:checked, infobar.warning > revealer > box button.text-button:not(:disabled), infobar.warning:backdrop > revealer > box button, infobar.warning:backdrop > revealer > box button:hover, infobar.warning:backdrop > revealer > box button:focus, infobar.warning:backdrop > revealer > box button:active, infobar.warning:backdrop > revealer > box button:checked, infobar.warning:backdrop > revealer > box button.text-button:not(:disabled) {
-  color: rgba(12, 14, 17, 0.87);
+  color: #D0EBEE;
 }
 
 infobar.warning > revealer > box *:link, infobar.warning:backdrop > revealer > box *:link {
-  color: rgba(12, 14, 17, 0.87);
+  color: #D0EBEE;
 }
 
 infobar.warning:hover > revealer > box {
-  background-color: #fdd11a;
+  background-color: #c17f43;
 }
 
 infobar.error > revealer > box, infobar.error:backdrop > revealer > box {
-  background-color: #F28B82;
-  color: rgba(12, 14, 17, 0.87);
+  background-color: #733447;
+  color: #D0EBEE;
 }
 
 infobar.error > revealer > box button, infobar.error > revealer > box button:hover, infobar.error > revealer > box button:focus, infobar.error > revealer > box button:active, infobar.error > revealer > box button:checked, infobar.error > revealer > box button.text-button:not(:disabled), infobar.error:backdrop > revealer > box button, infobar.error:backdrop > revealer > box button:hover, infobar.error:backdrop > revealer > box button:focus, infobar.error:backdrop > revealer > box button:active, infobar.error:backdrop > revealer > box button:checked, infobar.error:backdrop > revealer > box button.text-button:not(:disabled) {
-  color: rgba(12, 14, 17, 0.87);
+  color: #D0EBEE;
 }
 
 infobar.error > revealer > box *:link, infobar.error:backdrop > revealer > box *:link {
-  color: rgba(12, 14, 17, 0.87);
+  color: #D0EBEE;
 }
 
 infobar.error:hover > revealer > box {
-  background-color: #f0766b;
+  background-color: #612c3c;
 }
 
 /************
@@ -4858,8 +4858,8 @@ carousel.card {
 }
 
 .context-tile-lozenge.green, .context-tile-lozenge.details-rating-0 {
-  color: #4cb168;
-  background-color: rgba(129, 201, 149, 0.15);
+  color: #13403e;
+  background-color: rgba(37, 123, 118, 0.15);
 }
 
 .context-tile-lozenge.blue, .context-tile-lozenge.details-rating-5 {
@@ -4868,8 +4868,8 @@ carousel.card {
 }
 
 .context-tile-lozenge.yellow, .context-tile-lozenge.details-rating-12 {
-  color: #e1b602;
-  background-color: rgba(253, 214, 51, 0.15);
+  color: #9d6634;
+  background-color: rgba(199, 140, 86, 0.15);
 }
 
 .context-tile-lozenge.details-rating-15 {
@@ -4878,8 +4878,8 @@ carousel.card {
 }
 
 .context-tile-lozenge.red, .context-tile-lozenge.details-rating-18 {
-  color: #eb4b3d;
-  background-color: rgba(242, 139, 130, 0.15);
+  color: #3e1c26;
+  background-color: rgba(115, 52, 71, 0.15);
 }
 
 screenshot-carousel box.frame.view {
@@ -5498,9 +5498,9 @@ widgets main borders color on backdrop windows */
 @define-color unfocused_borders rgba(208, 235, 238, 0.12);
 /*
 these are pretty self explicative */
-@define-color warning_color #FDD633;
-@define-color error_color #F28B82;
-@define-color success_color #81C995;
+@define-color warning_color #C78C56;
+@define-color error_color #733447;
+@define-color success_color #257B76;
 /*
 these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
@@ -5521,7 +5521,7 @@ FIXME this is really an API */
 @define-color budgie_tasklist_indicator_color white;
 @define-color budgie_tasklist_indicator_color_active white;
 @define-color budgie_tasklist_indicator_color_active_window rgba(255, 255, 255, 0.54);
-@define-color budgie_tasklist_indicator_color_attention #FDD633;
+@define-color budgie_tasklist_indicator_color_attention #C78C56;
 @define-color STRAWBERRY_100 #FF9262;
 @define-color STRAWBERRY_300 #FF793E;
 @define-color STRAWBERRY_500 #F15D22;
@@ -5578,18 +5578,18 @@ FIXME this is really an API */
 @define-color accent_bg_color #52677C;
 @define-color accent_fg_color #D0EBEE;
 @define-color accent_color #52677C;
-@define-color destructive_bg_color #F28B82;
-@define-color destructive_fg_color rgba(12, 14, 17, 0.87);
-@define-color destructive_color #F28B82;
-@define-color success_bg_color #81C995;
-@define-color success_fg_color rgba(12, 14, 17, 0.87);
-@define-color success_color #81C995;
-@define-color warning_bg_color #FDD633;
-@define-color warning_fg_color rgba(12, 14, 17, 0.87);
-@define-color warning_color #FDD633;
-@define-color error_bg_color #F28B82;
-@define-color error_fg_color rgba(12, 14, 17, 0.87);
-@define-color error_color #F28B82;
+@define-color destructive_bg_color #733447;
+@define-color destructive_fg_color #D0EBEE;
+@define-color destructive_color #733447;
+@define-color success_bg_color #257B76;
+@define-color success_fg_color #D0EBEE;
+@define-color success_color #257B76;
+@define-color warning_bg_color #C78C56;
+@define-color warning_fg_color #D0EBEE;
+@define-color warning_color #C78C56;
+@define-color error_bg_color #733447;
+@define-color error_fg_color #D0EBEE;
+@define-color error_color #733447;
 @define-color window_bg_color #0C0E11;
 @define-color window_fg_color #D0EBEE;
 @define-color view_bg_color #0C0E11;

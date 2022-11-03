@@ -814,7 +814,7 @@ StWidget.focused .app-well-app-running-dot {
 
 .end-session-dialog .end-session-dialog-battery-warning,
 .end-session-dialog .dialog-list-title {
-  color: #FDD633;
+  color: #C78C56;
 }
 
 .message-dialog-content {
@@ -923,7 +923,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .prompt-dialog-error-label {
-  color: #F28B82;
+  color: #733447;
 }
 
 .prompt-dialog-info-label,
@@ -938,7 +938,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .polkit-dialog-user-layout .polkit-dialog-user-root-label {
-  color: #FDD633;
+  color: #C78C56;
 }
 
 .audio-device-selection-dialog .modal-dialog-content-box {
@@ -1017,7 +1017,7 @@ StEntry:insensitive, .popup-menu .search-entry:insensitive {
 
 StEntry StIcon.capslock-warning, .popup-menu .search-entry StIcon.capslock-warning {
   icon-size: 16px;
-  warning-color: #FDD633;
+  warning-color: #C78C56;
   padding: 0 0;
 }
 
@@ -1412,7 +1412,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 }
 
 .login-dialog-message-warning {
-  color: #FDD633;
+  color: #C78C56;
 }
 
 .login-dialog-message-hint {
@@ -1936,7 +1936,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
   text-align: center;
   padding-bottom: 8px;
   font-size: 11pt;
-  color: #FDD633;
+  color: #C78C56;
 }
 
 /* Network Dialogs */
@@ -2182,7 +2182,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
   -barlevel-height: 3px;
   -barlevel-background-color: rgba(82, 103, 124, 0.15);
   -barlevel-active-background-color: #52677C;
-  -barlevel-overdrive-color: #F28B82;
+  -barlevel-overdrive-color: #733447;
   -barlevel-overdrive-separator-width: 2px;
   -barlevel-border-width: 0;
   -barlevel-border-color: rgba(208, 235, 238, 0.12);
@@ -2388,7 +2388,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 
 #panel .screencast-indicator,
 #panel .remote-access-indicator {
-  color: #FDD633;
+  color: #C78C56;
 }
 
 /* Popovers/Menus */
@@ -3022,7 +3022,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -barlevel-border-color: transparent;
   -barlevel-active-background-color: #52677C;
   -barlevel-active-border-color: transparent;
-  -barlevel-overdrive-color: #F28B82;
+  -barlevel-overdrive-color: #733447;
   -barlevel-overdrive-border-color: transparent;
   -barlevel-overdrive-separator-width: 2px;
   -barlevel-border-width: 0;
