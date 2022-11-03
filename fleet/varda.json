@@ -710,17 +710,17 @@
             "showEmptyIntervals": true
         },
         "diff.deleted": {
-            "bgColor": "red-medium",
+            "bgColor": "red",
             "layer": -69,
             "fullLine": true
         },
         "diff.deleted.word": {
-            "bgColor": "red-medium",
+            "bgColor": "red",
             "layer": -60,
             "showEmptyIntervals": true
         },
         "diff.deleted.withBorder": {
-            "bgColor": "red-medium",
+            "bgColor": "red",
             "layer": -69,
             "fullLine": true,
             "decoration": {
@@ -729,7 +729,7 @@
             }
         },
         "diff.deleted.empty": {
-            "bgColor": "red-medium",
+            "bgColor": "red",
             "layer": -60,
             "showEmptyIntervals": true
         },

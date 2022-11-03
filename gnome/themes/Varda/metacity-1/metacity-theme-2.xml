@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-  <name>Materia</name>
-  <author>nana-4</author>
+  <name>Orchis</name>
+  <author>vinceliucie</author>
   <copyright>GPL</copyright>
   <date>2020</date>
-  <description>Materia Metacity theme</description>
+  <description>Orchis Metacity theme</description>
 </info>
 
 <!-- meaningful constants -->
 
-<constant name="C_titlebar_focused" value="#272727"/>
-<constant name="C_titlebar_unfocused" value="#1e1e1e"/>
-<constant name="C_highlight_focused" value="blend/#272727/#ffffff/0.05"/>
-<constant name="C_highlight_unfocused" value="blend/#1e1e1e/#ffffff/0.05"/>
-<constant name="C_title_focused" value="blend/#272727/#ffffff/0.87"/>
-<constant name="C_title_unfocused" value="blend/#1e1e1e/#ffffff/0.6"/>
+<constant name="C_titlebar_focused" value="#2d2d2d"/>
+<constant name="C_titlebar_unfocused" value="#242424"/>
+<constant name="C_highlight_focused" value="blend/#2d2d2d/#ffffff/0.1"/>
+<constant name="C_highlight_unfocused" value="blend/#242424/#ffffff/0.1"/>
+<constant name="C_title_focused" value="blend/#2d2d2d/#ffffff/0.87"/>
+<constant name="C_title_unfocused" value="blend/#242424/#ffffff/0.6"/>
 
 <!-- geometries -->
 
@@ -480,10 +480,10 @@
   <piece position="titlebar" draw_ops="entire_background_unfocused"/>
 </frame_style>
 
-<frame_style name="dialog_focused" geometry="normal" parent="normal_focused">
+<frame_style name="dialog_focused" geometry="nobuttons" parent="normal_focused">
 </frame_style>
 
-<frame_style name="dialog_unfocused" geometry="normal" parent="normal_unfocused">
+<frame_style name="dialog_unfocused" geometry="nobuttons" parent="normal_unfocused">
 </frame_style>
 
 <frame_style name="modal_dialog_focused" geometry="modal" parent="normal_focused">

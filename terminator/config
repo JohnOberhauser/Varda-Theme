@@ -1,10 +1,4 @@
 [global_config]
-  title_hide_sizetext = True
-  title_transmit_fg_color = "#d0ebee"
-  title_transmit_bg_color = "#0c0e11"
-  title_receive_fg_color = "#d0ebee"
-  title_receive_bg_color = "#0c0e11"
-  title_inactive_bg_color = "#0c0e11"
   inactive_color_offset = 1.0
   suppress_multiple_term_dialog = True
   always_split_with_profile = True
@@ -12,20 +6,17 @@
   new_tab = <Alt>z
 [profiles]
   [[default]]
-    cursor_color = "#aaaaaa"
     font = Cantarell 10
   [[Varda]]
     audible_bell = True
     background_color = "#0c0e11"
     cursor_shape = underline
-    cursor_color = "#aaaaaa"
     font = Cantarell 10
     foreground_color = "#d0ebee"
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 10000
     palette = "#0c0e11:#733447:#257b76:#c78c56:#52677c:#604575:#134a5a:#d0ebee:#1c1e21:#733447:#257b76:#c78c56:#52677c:#604575:#134a5a:#d0ebee"
-    use_theme_colors = True
 [layouts]
   [[default]]
     [[[child0]]]

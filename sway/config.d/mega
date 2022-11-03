@@ -1,5 +1,0 @@
-for_window [title="MEGAsync"] floating enable
-
-workspace V
-exec /usr/bin/megasync
-workspace I

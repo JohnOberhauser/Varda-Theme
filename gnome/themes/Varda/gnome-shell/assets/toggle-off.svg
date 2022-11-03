@@ -1,13 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="24" viewBox="0 0 40 24">
-  <defs>
-    <filter id="shadow-z1" color-interpolation-filters="sRGB">
-      <feFlood flood-color="#000" flood-opacity=".5" result="flood"/>
-      <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/>
-      <feGaussianBlur in="composite1" result="blur" stdDeviation="1.5"/>
-      <feOffset dy="1" result="offset"/>
-      <feComposite in="SourceGraphic" in2="offset" result="composite2"/>
-    </filter>
-  </defs>
-  <rect x="2" y="5" width="36" height="14" ry="7" fill="#fff" fill-opacity=".26"/>
-  <circle cx="12" cy="12" r="10" fill="#a0a0a0" filter="url(#shadow-z1)"/>
+<svg width="40" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(0 -1032.4)" fill="#000000" stroke-width="0">
+  <path d="m10 1032.4c-5.54 0-10 4.46-10 10s4.46 10 10 10h20c5.54 0 10-4.46 10-10s-4.46-10-10-10zm0 1h20c4.986 0 9 4.014 9 9s-4.014 9-9 9h-20c-4.986 0-9-4.014-9-9s4.014-9 9-9z" opacity=".5" style="paint-order:stroke fill markers"/>
+  <circle transform="scale(-1,1)" cx="-10" cy="1042.4" r="5" opacity=".5" style="paint-order:stroke fill markers"/>
+ </g>
 </svg>

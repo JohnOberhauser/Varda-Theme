@@ -24,5 +24,4 @@ vorbis-tools - play ogg sound files
 
 xdg-desktop-portal-wlr - allow screen sharing
 
-wofi - maybe dependency for choosing options?
-
+swaybg - enables wallpapers
