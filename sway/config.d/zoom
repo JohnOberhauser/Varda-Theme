@@ -3,5 +3,7 @@
 #for_window [title="zoom$"] floating enable
 #for_window [title="Zoom - Licensed Account"] floating enable
 
-for_window [app_id="zoom" title="Choose ONE of the audio conference options"] floating enable
-for_window [app_id="zoom" title="zoom"] floating enable
+#for_window [app_id="zoom" title="Choose ONE of the audio conference options"] floating enable
+#for_window [app_id="zoom" title="zoom"] floating enable
+
+# just use the browser app

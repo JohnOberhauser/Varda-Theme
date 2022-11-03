@@ -19,7 +19,9 @@
             "III": [],
             "IV": [],
             "V": []
-        }
+        },
+        "disable-click": true,
+        "disable-scroll": true
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"

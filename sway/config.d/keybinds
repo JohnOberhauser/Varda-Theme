@@ -23,7 +23,7 @@ set $wsc1 "M"
     bindsym $mod+q kill
 
     # Start your launcher
-    #bindsym $mod+Space exec rofi -show run
+    #bindsym $mod+Space exec wofi -show run
     #bindsym $mod+Space exec /home/john/.config/sway/searchApplications.sh
     bindsym $mod+Space exec kmenu
 
