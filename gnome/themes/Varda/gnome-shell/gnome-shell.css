@@ -230,70 +230,81 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 /* Buttons */
-.quick-settings-system-item .icon-button, .hotplug-notification-item {
+.hotplug-notification-item {
   color: #D0EBEE;
   background-color: #0C0E11;
   box-shadow: none !important;
 }
 
-.quick-settings-system-item .icon-button:focus, .hotplug-notification-item:focus {
+.hotplug-notification-item:focus {
   color: #D0EBEE;
   background-color: rgba(208, 235, 238, 0.08);
   box-shadow: none !important;
 }
 
-.quick-settings-system-item .icon-button:hover, .hotplug-notification-item:hover {
+.hotplug-notification-item:hover {
   color: #D0EBEE;
   background-color: rgba(208, 235, 238, 0.12);
   box-shadow: none !important;
 }
 
-.quick-settings-system-item .icon-button:active, .hotplug-notification-item:active {
+.hotplug-notification-item:active {
   color: #D0EBEE;
   background-color: rgba(208, 235, 238, 0.2);
   box-shadow: none !important;
 }
 
-.quick-settings-system-item .icon-button:insensitive, .hotplug-notification-item:insensitive {
+.hotplug-notification-item:insensitive {
   color: rgba(208, 235, 238, 0.35);
   background-color: #0C0E11;
   box-shadow: none !important;
 }
 
-.lg-obj-inspector-button, #LookingGlassDialog > #Toolbar .lg-toolbar-button, .candidate-page-button, .modal-dialog-linked-button, .popup-menu .button {
+.lg-obj-inspector-button, #LookingGlassDialog > #Toolbar .lg-toolbar-button, .candidate-page-button, .modal-dialog-linked-button, .popup-menu .button, .popup-menu .icon-button {
   color: #D0EBEE;
   background-color: transparent;
   box-shadow: none !important;
 }
 
-.lg-obj-inspector-button:focus, #LookingGlassDialog > #Toolbar .lg-toolbar-button:focus, .candidate-page-button:focus, .modal-dialog-linked-button:focus, .popup-menu .button:focus {
+.lg-obj-inspector-button:focus, #LookingGlassDialog > #Toolbar .lg-toolbar-button:focus, .candidate-page-button:focus, .modal-dialog-linked-button:focus, .popup-menu .button:focus, .popup-menu .icon-button:focus {
   color: #D0EBEE;
   background-color: rgba(208, 235, 238, 0.08);
   box-shadow: none !important;
 }
 
-.lg-obj-inspector-button:hover, #LookingGlassDialog > #Toolbar .lg-toolbar-button:hover, .candidate-page-button:hover, .modal-dialog-linked-button:hover, .popup-menu .button:hover {
+.lg-obj-inspector-button:hover, #LookingGlassDialog > #Toolbar .lg-toolbar-button:hover, .candidate-page-button:hover, .modal-dialog-linked-button:hover, .popup-menu .button:hover, .popup-menu .icon-button:hover {
   color: #D0EBEE;
   background-color: rgba(208, 235, 238, 0.12);
 }
 
-.lg-obj-inspector-button:active, #LookingGlassDialog > #Toolbar .lg-toolbar-button:active, .candidate-page-button:active, .modal-dialog-linked-button:active, .popup-menu .button:active {
+.lg-obj-inspector-button:active, #LookingGlassDialog > #Toolbar .lg-toolbar-button:active, .candidate-page-button:active, .modal-dialog-linked-button:active, .popup-menu .button:active, .popup-menu .icon-button:active {
   color: #D0EBEE;
   background-color: rgba(208, 235, 238, 0.2);
   box-shadow: none !important;
 }
 
-.lg-obj-inspector-button:insensitive, #LookingGlassDialog > #Toolbar .lg-toolbar-button:insensitive, .candidate-page-button:insensitive, .modal-dialog-linked-button:insensitive, .popup-menu .button:insensitive {
+.lg-obj-inspector-button:insensitive, #LookingGlassDialog > #Toolbar .lg-toolbar-button:insensitive, .candidate-page-button:insensitive, .modal-dialog-linked-button:insensitive, .popup-menu .button:insensitive, .popup-menu .icon-button:insensitive {
   background-color: transparent;
   color: rgba(208, 235, 238, 0.35);
   box-shadow: none !important;
 }
 
-.button {
+.button, .icon-button {
   min-height: 28px;
   padding: 0 8px;
   border-radius: 2px;
   border: none;
+}
+
+.icon-button {
+  border-radius: 99px;
+  padding: 8px;
+  min-height: 16px;
+}
+
+.icon-button StIcon {
+  icon-size: 18px;
+  -st-icon-style: symbolic;
 }
 
 /* Date/Time Menu */
@@ -2592,7 +2603,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
   spacing: 4px;
 }
 
-.quick-toggle.button {
+.quick-toggle.button, .quick-toggle.icon-button {
   padding: 0;
 }
 
@@ -2724,16 +2735,6 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 
 .quick-settings-system-item > StBoxLayout {
   spacing: 8px;
-}
-
-.quick-settings-system-item .icon-button {
-  background-color: rgba(208, 235, 238, 0.08);
-  color: #D0EBEE;
-  border-radius: 2px;
-}
-
-.quick-settings-system-item .icon-button > StIcon {
-  -st-icon-style: symbolic;
 }
 
 .quick-settings-system-item .power-item {
