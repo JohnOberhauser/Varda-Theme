@@ -2538,7 +2538,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 
 .quick-settings {
   padding: 12px !important;
-  border-radius: 14px !important;
+  border-radius: 2px !important;
 }
 
 .quick-settings .icon-button, .quick-settings .button {
