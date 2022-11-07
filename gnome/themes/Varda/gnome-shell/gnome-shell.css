@@ -2699,6 +2699,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 
 .quick-toggle-menu .popup-menu-item {
   border-radius: 2px !important;
+  padding: 5px 0px 5px;
 }
 
 .quick-toggle-menu .popup-menu-item:focus, .quick-toggle-menu .popup-menu-item:hover, .quick-toggle-menu .popup-menu-item.selected {
@@ -2713,6 +2714,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
 
 .quick-toggle-menu .popup-menu-item > StIcon {
   -st-icon-style: symbolic;
+  margin: 0px 10px;
 }
 
 .quick-toggle-menu .header {
@@ -2725,7 +2727,7 @@ StEntry StLabel.hint-text, .popup-menu .search-entry StLabel.hint-text {
   icon-size: 27px;
   border-radius: 2px;
   padding: 6px;
-  background-color: rgba(208, 235, 238, 0.12) !important;
+  background-color: #0C0E11 !important;
 }
 
 .quick-toggle-menu .header .icon.active {
