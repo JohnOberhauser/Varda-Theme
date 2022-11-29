@@ -6,16 +6,28 @@
 
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces"],
-    "modules-center": ["clock"],
+    "modules-center": ["clock", "wlr/workspaces"],
     "modules-right": ["custom/updates", "pulseaudio", "custom/power"],
 
+    //"wlr/workspaces": {
+    //    "format": "{icon}",
+    //    "format-active": " {icon} ",
+    //    "on-click": "activate"
+    //},
     "wlr/workspaces": {
-        "format": "{icon}",
-        "format-active": " {icon} ",
-        "on-click": "activate"
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+        "disable-scroll": false,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{name}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",

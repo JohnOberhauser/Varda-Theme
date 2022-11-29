@@ -1,0 +1,66 @@
+(defpoll clock_time :interval "5s" "date +\%I")
+(defpoll clock_minute :interval "5s" "date +\%M")
+(defpoll clock_date :interval "10h" "date '+%d/%m'")
+(defvar time_rev false)
+(defvar eww "$HOME/.local/bin/eww/eww -c $HOME/.config/hypr/components/eww")
+
+(defwindow topbar
+    :monitor 0
+    :geometry (geometry
+        :x "0%"
+        :y "0px"
+        :width "100%"
+        :height "30px"
+        :anchor "top center")
+    :stacking "fg"
+    :reserve (struts :distance "40px" :side "top")
+    :windowtype "dock"
+    :wm-ignore true
+    :exclusive true
+    :focusable false
+    (bar))
+
+(defwidget bar []
+  (box :class "bar_class"
+       :orientation "h"
+  (left)
+  (center)
+  (right)
+    ))
+
+(defwidget left []
+	(box :orientation "h"
+		 :space-evenly false
+         :halign "start"
+		 :class "left_modules"
+))
+
+(defwidget center []
+	(box :orientation "h"
+		 :space-evenly false
+         :halign "center"
+		 :class "center_modules"
+(clock)
+))
+
+(defwidget right []
+	(box :orientation "h"
+		 :space-evenly false
+         :halign "end"
+		 :class "right_modules"
+))
+
+(defwidget clock []
+  (eventbox :onhover "${eww} update time_rev=true"
+			  :onhoverlost "${eww} update time_rev=false"
+    (box :class "module" :space-evenly "false" :orientation "h" :spacing "3"
+      (label :text clock_time :class "clock_time_class" )
+      (label :text ":" :class "clock_time_sep" )
+      (label :text clock_minute :class "clock_minute_class")
+	  (revealer :transition "slideleft"
+			  :reveal time_rev
+			  :duration "350ms"
+      (button :class "clock_date_class"
+             :onclick "$HOME/.config/eww/bar/scripts/pop calendar" clock_date
+        )
+  ))))
