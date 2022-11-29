@@ -4,6 +4,10 @@
 (defvar time_rev false)
 (defvar eww "$HOME/.local/bin/eww/eww -c $HOME/.config/hypr/components/eww")
 
+(defpoll volume_percent :interval "3s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defvar vol_reveal false)
+(defpoll mic_percent :interval "3s" "amixer -D pulse sget Capture | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+
 (defwindow topbar
     :monitor 0
     :geometry (geometry
@@ -23,9 +27,9 @@
 (defwidget bar []
   (box :class "bar_class"
        :orientation "h"
-  (left)
-  (center)
-  (right)
+      (left)
+      (center)
+      (right)
     ))
 
 (defwidget left []
@@ -33,6 +37,7 @@
 		 :space-evenly false
          :halign "start"
 		 :class "left_modules"
+(workspaces)
 ))
 
 (defwidget center []
@@ -48,6 +53,7 @@
 		 :space-evenly false
          :halign "end"
 		 :class "right_modules"
+(volume)
 ))
 
 (defwidget clock []
@@ -60,7 +66,80 @@
 	  (revealer :transition "slideleft"
 			  :reveal time_rev
 			  :duration "350ms"
-      (button :class "clock_date_class"
-             :onclick "$HOME/.config/eww/bar/scripts/pop calendar" clock_date
-        )
   ))))
+
+(defwidget workspaces []
+    (box :class "bar_class"
+       :orientation "h"
+        (button :class "workspace_button"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/space1.sh"
+            ""
+        )
+        (button :class "workspace_button"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/space2.sh"
+            ""
+        )
+        (button :class "workspace_button"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/space3.sh"
+            ""
+        )
+    )
+)
+
+(defwidget volume []
+  (eventbox :onhover "${eww} update vol_reveal=true"
+        :onhoverlost "${eww} update vol_reveal=false"
+        (box :class "module-2" :space-evenly "false" :orientation "h" :spacing "3"
+            (button   :onclick "scripts/pop audio"   :class "volume_icon" "墳")
+            (revealer :transition "slideleft"
+                :reveal vol_reveal
+                :duration "350ms"
+                (scale    :class "volbar"
+                    :value volume_percent
+                    :orientation "h"
+                    :tooltip "${volume_percent}%"
+                    :max 100
+                    :min 0
+                    :onchange "amixer -D pulse sset Master {}%"
+                )
+            )
+        )
+    )
+)
+
+(defwidget audio []
+	(box :class "audio-box" :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "false"
+	(box :halign "v" :space-evenly "false" :hexpand "false" :vexpand "false"
+	(box :class "speaker_icon" :orientation "v")
+	(box :orientation "v" :halign "center" :vexpand "false" :hexpand "false"
+    (label :class "speaker_text" :text "speaker" :valign "center" :halign "left" )
+	(box :class "speaker_bar" :halign "center" :vexpand "false" :hexpand "false"
+	(scale    :value volume_percent
+              :space-evenly "false"
+			  :orientation "h"
+			  :onchange "amixer -D pulse sset Master {}%"
+              :tooltip "volume on ${volume_percent}%"
+			  :max 100
+			  :min 0))))
+            (label :text "" :class "audio_sep" :halign "center")
+	(box :halign "v" :space-evenly "false" :hexpand "false" :vexpand "false"
+	(box :class "mic_icon" :orientation "v")
+	(box :orientation "v" :halign "center" :vexpand "false" :hexpand "false"
+    (label :class "mic_text" :text "mic" :valign "center" :halign "left" )
+	(box :class "mic_bar" :halign "center" :vexpand "false" :hexpand "false"
+	(scale    :value mic_percent
+              :space-evenly "false"
+			  :orientation "h"
+              :tooltip "mic on ${mic_percent}%"
+			  :onchange "amixer -D pulse sset Capture {}%"
+			  :max 100
+			  :min 0))))))
+
+(defwindow audio_ctl
+    :monitor 0
+	:geometry (geometry :x "-20px"
+						:y "7%"
+                        :anchor "top right"
+						:width "280px"
+						:height "60px")
+(audio))

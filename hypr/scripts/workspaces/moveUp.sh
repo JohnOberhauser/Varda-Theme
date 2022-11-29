@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cursorPos=$(hyprctl cursorpos)
-
 workspaces=$(hyprctl monitors | grep workspace | awk -F "(" '{print $2}' | awk -F ")" '{print $1}')
 ws1=$(echo $workspaces | awk -F " " '{print $1}')
 ws2=$(echo $workspaces | awk -F " " '{print $2}')
