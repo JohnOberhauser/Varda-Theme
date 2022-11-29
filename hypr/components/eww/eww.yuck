@@ -4,9 +4,9 @@
 (defvar time_rev false)
 (defvar eww "$HOME/.local/bin/eww/eww -c $HOME/.config/hypr/components/eww")
 
-(defpoll volume_percent :interval "3s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defpoll volume_percent :interval "3s" "wpctl get-volume @DEFAULT_AUDIO_SOURCE@")
 (defvar vol_reveal false)
-(defpoll mic_percent :interval "3s" "amixer -D pulse sget Capture | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defpoll mic_percent :interval "3s" "wpctl get-volume @DEFAULT_AUDIO_SINK@")
 
 (defwindow topbar
     :monitor 0
