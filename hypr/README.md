@@ -1,7 +1,8 @@
 required packages
 
 swaybg
-waybar
+eww
+//waybar
 
 from AUR:
 hyprland
