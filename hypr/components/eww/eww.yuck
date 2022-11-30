@@ -14,6 +14,8 @@
 (defvar ws1_icon "")
 (defvar ws2_icon "")
 (defvar ws3_icon "")
+(defvar ws4_icon "")
+(defvar ws5_icon "")
 
 (defwindow topbar
     :monitor 0
@@ -104,6 +106,14 @@
         (button :class "workspace_button"
             :onclick "$HOME/.config/hypr/scripts/workspaces/space3.sh"
             "${ws3_icon}"
+        )
+        (button :class "workspace_button"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/space4.sh"
+            "${ws4_icon}"
+        )
+        (button :class "workspace_button"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/space5.sh"
+            "${ws5_icon}"
         )
     )
 )

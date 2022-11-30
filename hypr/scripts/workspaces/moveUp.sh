@@ -8,7 +8,9 @@ diff=2
 new1=$(expr $ws1 - $diff)
 new2=$(expr $ws2 - $diff)
 
-hyprctl dispatch workspace $new1
-hyprctl dispatch workspace $new2
+if [[ $new1 -ge 1 ]]; then
+    hyprctl dispatch workspace $new1
+    hyprctl dispatch workspace $new2
+fi
 
 $HOME/.config/hypr/scripts/workspaces/updateWorkspaceIcons.sh

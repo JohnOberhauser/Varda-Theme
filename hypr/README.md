@@ -12,3 +12,6 @@ rofi
 from AUR:
 hyprland
 
+
+required cursor
+BreezeX-Black
