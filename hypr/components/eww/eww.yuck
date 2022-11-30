@@ -188,18 +188,18 @@
                 (box
                     (button
                         :class "power_option"
-                        :onclick "$HOME/.config/hypr/scripts/powerOptions/lock.sh"
+                        :onclick "hyprctl dispatch exit 0"
+                        ""
+                    )
+                    (button
+                        :class "power_option"
+                        :onclick "${eww} update power_options_reveal=false && $HOME/.config/hypr/scripts/powerOptions/lock.sh"
                         ""
                     )
                     (button
                         :class "power_option"
                         :onclick "reboot"
                         "ﰇ"
-                    )
-                    (button
-                        :class "power_option"
-                        :onclick "hyprctl dispatch exit 0"
-                        ""
                     )
                     (button
                         :class "power_option"

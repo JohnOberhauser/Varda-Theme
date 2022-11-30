@@ -1,10 +1,13 @@
+place this directory in ~/.config/
+
 required packages
 
 swaybg
 eww
 wireplumber
 playerctl
-swaylock
+gtklock
+rofi
 
 from AUR:
 hyprland
