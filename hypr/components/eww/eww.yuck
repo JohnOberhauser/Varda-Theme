@@ -198,7 +198,7 @@
                     )
                     (button
                         :class "power_option"
-                        :onclick "hyprctl dispatch exit"
+                        :onclick "hyprctl dispatch exit 0"
                         ""
                     )
                     (button
