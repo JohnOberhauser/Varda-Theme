@@ -11,3 +11,4 @@ new2=$(expr $ws2 - $diff)
 hyprctl dispatch workspace $new1
 hyprctl dispatch workspace $new2
 
+$HOME/.config/hypr/scripts/workspaces/updateWorkspaceIcons.sh

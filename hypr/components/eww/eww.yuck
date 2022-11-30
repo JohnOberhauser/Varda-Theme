@@ -11,6 +11,9 @@
 (defvar mic_vol_reveal false)
 (defvar power_options_reveal false)
 
+(defvar ws1_icon "")
+(defvar ws2_icon "")
+(defvar ws3_icon "")
 
 (defwindow topbar
     :monitor 0
@@ -92,15 +95,15 @@
        :orientation "h"
         (button :class "workspace_button"
             :onclick "$HOME/.config/hypr/scripts/workspaces/space1.sh"
-            ""
+            "${ws1_icon}"
         )
         (button :class "workspace_button"
             :onclick "$HOME/.config/hypr/scripts/workspaces/space2.sh"
-            ""
+            "${ws2_icon}"
         )
         (button :class "workspace_button"
             :onclick "$HOME/.config/hypr/scripts/workspaces/space3.sh"
-            ""
+            "${ws3_icon}"
         )
     )
 )
