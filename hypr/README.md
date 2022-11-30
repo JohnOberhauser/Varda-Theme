@@ -2,7 +2,7 @@ required packages
 
 swaybg
 eww
-//waybar
+wireplumber
 
 from AUR:
 hyprland

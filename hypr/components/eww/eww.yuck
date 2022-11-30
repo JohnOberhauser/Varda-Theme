@@ -2,11 +2,15 @@
 (defpoll clock_minute :interval "5s" "date +\%M")
 (defpoll clock_date :interval "10h" "date '+%d/%m'")
 (defvar time_rev false)
-(defvar eww "$HOME/.local/bin/eww/eww -c $HOME/.config/hypr/components/eww")
+(defvar eww "eww -c $HOME/.config/hypr/components/eww")
 
-(defpoll volume_percent :interval "3s" "wpctl get-volume @DEFAULT_AUDIO_SOURCE@")
+(defpoll volume_output_name :interval "3s" "$HOME/.config/hypr/scripts/audio/getDefaultOutputName.sh")
+(defpoll volume_percent :interval "3s" "$HOME/.config/hypr/scripts/audio/getVolumePercent.sh")
 (defvar vol_reveal false)
-(defpoll mic_percent :interval "3s" "wpctl get-volume @DEFAULT_AUDIO_SINK@")
+(defpoll mic_volume_percent :interval "3s" "$HOME/.config/hypr/scripts/audio/getMicVolumePercent.sh")
+(defvar mic_vol_reveal false)
+(defvar power_options_reveal false)
+
 
 (defwindow topbar
     :monitor 0
@@ -54,19 +58,34 @@
          :halign "end"
 		 :class "right_modules"
 (volume)
+(mic_volume)
+(power_options)
 ))
 
 (defwidget clock []
-  (eventbox :onhover "${eww} update time_rev=true"
-			  :onhoverlost "${eww} update time_rev=false"
-    (box :class "module" :space-evenly "false" :orientation "h" :spacing "3"
-      (label :text clock_time :class "clock_time_class" )
-      (label :text ":" :class "clock_time_sep" )
-      (label :text clock_minute :class "clock_minute_class")
-	  (revealer :transition "slideleft"
-			  :reveal time_rev
-			  :duration "350ms"
-  ))))
+    (eventbox
+        :onhover "${eww} update time_rev=true"
+        :onhoverlost "${eww} update time_rev=false"
+        (box
+            :class "module"
+            :space-evenly "false"
+            :orientation "h"
+            :spacing "3"
+            (label
+                :text clock_time
+                :class "clock"
+            )
+            (label
+                :text ":"
+                :class "clock"
+            )
+            (label
+                :text clock_minute
+                :class "clock"
+            )
+        )
+    )
+)
 
 (defwidget workspaces []
     (box :class "bar_class"
@@ -87,59 +106,108 @@
 )
 
 (defwidget volume []
-  (eventbox :onhover "${eww} update vol_reveal=true"
+  (eventbox
+        :onhover "${eww} update vol_reveal=true"
         :onhoverlost "${eww} update vol_reveal=false"
-        (box :class "module-2" :space-evenly "false" :orientation "h" :spacing "3"
-            (button   :onclick "scripts/pop audio"   :class "volume_icon" "墳")
-            (revealer :transition "slideleft"
+        (box
+            :class "rightSideModule"
+            :space-evenly "false"
+            :orientation "h"
+            :spacing "0"
+            (button
+                :class "rightSideIcon"
+                :onclick "$HOME/.config/hypr/scripts/audio/swapOutput.sh"
+                :tooltip "${volume_output_name}%"
+                "墳"
+            )
+            (revealer
+                :transition "slideleft"
                 :reveal vol_reveal
                 :duration "350ms"
-                (scale    :class "volbar"
+                (scale
+                    :class "volbar"
                     :value volume_percent
+                    :tooltip "${volume_output_name}%"
                     :orientation "h"
-                    :tooltip "${volume_percent}%"
                     :max 100
                     :min 0
-                    :onchange "amixer -D pulse sset Master {}%"
+                    :onchange "wpctl set-volume @DEFAULT_AUDIO_SINK@ {}%"
                 )
             )
         )
     )
 )
 
-(defwidget audio []
-	(box :class "audio-box" :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "false"
-	(box :halign "v" :space-evenly "false" :hexpand "false" :vexpand "false"
-	(box :class "speaker_icon" :orientation "v")
-	(box :orientation "v" :halign "center" :vexpand "false" :hexpand "false"
-    (label :class "speaker_text" :text "speaker" :valign "center" :halign "left" )
-	(box :class "speaker_bar" :halign "center" :vexpand "false" :hexpand "false"
-	(scale    :value volume_percent
-              :space-evenly "false"
-			  :orientation "h"
-			  :onchange "amixer -D pulse sset Master {}%"
-              :tooltip "volume on ${volume_percent}%"
-			  :max 100
-			  :min 0))))
-            (label :text "" :class "audio_sep" :halign "center")
-	(box :halign "v" :space-evenly "false" :hexpand "false" :vexpand "false"
-	(box :class "mic_icon" :orientation "v")
-	(box :orientation "v" :halign "center" :vexpand "false" :hexpand "false"
-    (label :class "mic_text" :text "mic" :valign "center" :halign "left" )
-	(box :class "mic_bar" :halign "center" :vexpand "false" :hexpand "false"
-	(scale    :value mic_percent
-              :space-evenly "false"
-			  :orientation "h"
-              :tooltip "mic on ${mic_percent}%"
-			  :onchange "amixer -D pulse sset Capture {}%"
-			  :max 100
-			  :min 0))))))
+(defwidget mic_volume []
+  (eventbox
+        :onhover "${eww} update mic_vol_reveal=true"
+        :onhoverlost "${eww} update mic_vol_reveal=false"
+        (box
+            :class "rightSideModule"
+            :space-evenly "false"
+            :orientation "h"
+            :spacing "0"
+            (button
+                :class "rightSideIcon"
+                ""
+            )
+            (revealer
+                :transition "slideleft"
+                :reveal mic_vol_reveal
+                :duration "350ms"
+                (scale
+                    :class "volbar"
+                    :value mic_volume_percent
+                    :orientation "h"
+                    :max 100
+                    :min 0
+                    :onchange "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ {}%"
+                )
+            )
+        )
+    )
+)
 
-(defwindow audio_ctl
-    :monitor 0
-	:geometry (geometry :x "-20px"
-						:y "7%"
-                        :anchor "top right"
-						:width "280px"
-						:height "60px")
-(audio))
+(defwidget power_options []
+    (eventbox
+        :onhover "${eww} update power_options_reveal=true"
+        :onhoverlost "${eww} update power_options_reveal=false"
+        (box
+            :class "rightSideModule"
+            :space-evenly "false"
+            :orientation "h"
+            :spacing "0"
+            (box
+                :class "rightSideIcon"
+                ""
+            )
+            (revealer
+                :transition "slideleft"
+                :reveal power_options_reveal
+                :duration "350ms"
+                (box
+                    (button
+                        :class "power_option"
+                        :onclick "$HOME/.config/hypr/scripts/powerOptions/lock.sh"
+                        ""
+                    )
+                    (button
+                        :class "power_option"
+                        :onclick "reboot"
+                        "ﰇ"
+                    )
+                    (button
+                        :class "power_option"
+                        :onclick "hyprctl dispatch exit"
+                        ""
+                    )
+                    (button
+                        :class "power_option"
+                        :onclick "shutdown now"
+                        "⏻"
+                    )
+                )
+            )
+        )
+    )
+)

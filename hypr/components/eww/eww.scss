@@ -1,4 +1,38 @@
+.bar_class {
+    background-color: #0C0E11;
+}
+
 .workspace_button {
     background-color: transparent;
-    color: #fffff0;
+    color: #D0EBEE;
+}
+
+.rightSideModule {
+    background: transparent;
+}
+
+.rightSideIcon {
+    background: transparent;
+    color: #D0EBEE;
+    padding: 0px 15px 0px 15px;
+}
+
+.volbar {
+    margin-right:20px;
+}
+
+.volbar trough highlight {
+    background-image: linear-gradient(to right, #afcee0 30%, #a1bdce 50%, #77a5bf 100% *50);
+    border-radius: 10px;
+    padding-left: 100px;
+}
+
+.power_option {
+    background: transparent;
+    padding: 0px 15px 0px 15px;
+    color: #D0EBEE;
+}
+
+.clock {
+    color: #D0EBEE;
 }
