@@ -21,8 +21,12 @@
     margin-right:20px;
 }
 
+.volbar slider {
+    box-shadow: 0 0 0 2px #D0EBEE inset;
+}
+
 .volbar trough highlight {
-    background-image: linear-gradient(to right, #afcee0 30%, #a1bdce 50%, #77a5bf 100% *50);
+    background: #D0EBEE;
     border-radius: 10px;
     padding-left: 100px;
 }
