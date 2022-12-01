@@ -3,7 +3,7 @@
 count=$(checkupdates | wc -l)
 
 if [[ $count == "0" ]]; then
-  echo " "
+echo 
 else
   echo $count 
 fi

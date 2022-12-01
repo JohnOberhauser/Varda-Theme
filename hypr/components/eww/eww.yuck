@@ -13,6 +13,8 @@
 
 (defpoll screen_sharing_reveal :interval "5s" "$HOME/.config/hypr/scripts/video/checkIfScreenSharing.sh")
 
+(defpoll packages_update :interval "1m" "$HOME/.config/hypr/scripts/updates/checkUpdates.sh")
+
 (defvar ws1_icon "")
 (defvar ws2_icon "")
 (defvar ws3_icon "")
@@ -65,6 +67,7 @@
          :halign "end"
 		 :class "right_modules"
 (screenSharing)
+(packageUpdates)
 (volume)
 (mic_volume)
 (power_options)
@@ -126,6 +129,13 @@
         :class "rightSideIcon"
         :visible screen_sharing_reveal
         ""
+    )
+)
+
+(defwidget packageUpdates []
+    (box
+        :class "rightSideIcon"
+        packages_update
     )
 )
 
