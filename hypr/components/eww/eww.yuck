@@ -11,6 +11,8 @@
 (defvar mic_vol_reveal false)
 (defvar power_options_reveal false)
 
+(defpoll screen_sharing_reveal :interval "5s" "$HOME/.config/hypr/scripts/video/checkIfScreenSharing.sh")
+
 (defvar ws1_icon "")
 (defvar ws2_icon "")
 (defvar ws3_icon "")
@@ -62,6 +64,7 @@
 		 :space-evenly false
          :halign "end"
 		 :class "right_modules"
+(screenSharing)
 (volume)
 (mic_volume)
 (power_options)
@@ -115,6 +118,14 @@
             :onclick "$HOME/.config/hypr/scripts/workspaces/space5.sh"
             "${ws5_icon}"
         )
+    )
+)
+
+(defwidget screenSharing []
+    (box
+        :class "rightSideIcon"
+        :visible screen_sharing_reveal
+        ""
     )
 )
 

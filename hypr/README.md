@@ -27,3 +27,9 @@ not sure if they are all necessary, but it's where I put them and I'm too lazy t
 ~/.icons/
 /usr/local/share/icons
 /usr/share/icons
+
+
+### Additional useful packages
+slurp
+grim
+xdg-desktop-portal-wlr
