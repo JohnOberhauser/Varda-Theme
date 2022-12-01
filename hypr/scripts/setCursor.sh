@@ -1,5 +1,8 @@
 #!/bin/sh
 
-hyprctl setcursor phinger-cursors 24
-gsettings set org.gnome.desktop.interface cursor-theme phinger-cursors
-gsettings set org.gnome.desktop.interface cursor-size 24
+theme="Nordzy-cursors-white"
+size=24
+
+hyprctl setcursor $theme $size
+gsettings set org.gnome.desktop.interface cursor-theme $theme
+gsettings set org.gnome.desktop.interface cursor-size $size
