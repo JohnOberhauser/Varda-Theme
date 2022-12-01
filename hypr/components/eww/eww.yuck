@@ -25,14 +25,11 @@
     :monitor 0
     :geometry (geometry
         :x "0%"
-        :y "0px"
-        :width "100%"
+        :y "10px"
+        :width "2540px"
         :height "30px"
         :anchor "top center")
     :stacking "fg"
-    :reserve (struts :distance "40px" :side "top")
-    :windowtype "dock"
-    :wm-ignore true
     :exclusive true
     :focusable false
     (bar))
@@ -99,7 +96,7 @@
 )
 
 (defwidget workspaces []
-    (box :class "bar_class"
+    (box
        :orientation "h"
         (button :class "workspace_button"
             :onclick "$HOME/.config/hypr/scripts/workspaces/space1.sh"
@@ -241,6 +238,60 @@
                         "⏻"
                     )
                 )
+            )
+        )
+    )
+)
+
+(defwidget quick_start []
+    (box
+        (button
+            :class "rightSideIcon"
+            :onclick "terminator &>/dev/null"
+            (image
+                :path "./images/terminal.svg"
+            )
+        )
+        (button
+            :class "rightSideIcon"
+            :onclick "nautilus &>/dev/null"
+            (image
+                :path "./images/nautilus.svg"
+            )
+        )
+        (button
+            :class "rightSideIcon"
+            :onclick "firefox &>/dev/null"
+            (image
+                :path "./images/firefox.svg"
+            )
+        )
+        (button
+            :class "rightSideIcon"
+            :onclick "/opt/android-studio/bin/studio.sh &>/dev/null"
+            (image
+                :path "./images/androidstudio.svg"
+            )
+        )
+        (button
+            :class "rightSideIcon"
+            :onclick "flatpak run com.slack.Slack &>/dev/null"
+            (image
+                :path "./images/slack.svg"
+            )
+        )
+        (button
+            :class "rightSideIcon"
+            :onclick "flatpak run com.spotify.Client &>/dev/null"
+            (image
+                :path "./images/spotify.svg"
+            )
+        )
+        (button
+            :class "rightSideIcon"
+            :onclick "steam &>/dev/null"
+            (image
+                :path "./images/steam.svg"
             )
         )
     )

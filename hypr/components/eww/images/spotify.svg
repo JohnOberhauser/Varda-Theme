@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="20"
+   height="20"
+   version="1.1"
+   viewBox="0 0 384 384"
+   id="svg33477"
+   sodipodi:docname="spotify.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview25"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.6230469"
+     inkscape:cx="323.15764"
+     inkscape:cy="344.41395"
+     inkscape:window-width="2518"
+     inkscape:window-height="1398"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg33477" />
+  <defs
+     id="defs33463">
+    <clipPath
+       id="f">
+      <path
+         d="m111 119h177v23h-177z"
+         id="path33435" />
+    </clipPath>
+    <clipPath
+       id="d">
+      <path
+         d="m177 130h45v89h-45z"
+         id="path33438" />
+    </clipPath>
+    <clipPath
+       id="b">
+      <path
+         d="m111 207h177v89h-177z"
+         id="path33441" />
+    </clipPath>
+    <clipPath
+       id="h">
+      <rect
+         width="384"
+         height="384"
+         id="rect33444" />
+    </clipPath>
+    <g
+       clip-path="url(#h)"
+       id="g33447" />
+    <clipPath
+       id="e">
+      <path
+         d="m111 119h177v23h-177z"
+         id="path33449" />
+    </clipPath>
+    <clipPath
+       id="c">
+      <path
+         d="m177 130h45v89h-45z"
+         id="path33452" />
+    </clipPath>
+    <clipPath
+       id="a">
+      <path
+         d="m111 207h177v89h-177z"
+         id="path33455" />
+    </clipPath>
+    <clipPath
+       id="g">
+      <rect
+         width="384"
+         height="384"
+         id="rect33458" />
+    </clipPath>
+    <g
+       clip-path="url(#g)"
+       id="g33461" />
+  </defs>
+  <g
+     transform="matrix(1.3447978,0,0,1.3447978,-68.777565,-36.922782)"
+     id="g33471">
+    <path
+       d="m 252.22,250.48 c -17.254,-8.6133 -33.82,-13.68 -54.762,-16.746 -6.6445,-0.97265 -13.551,-1.293 -27.949,-1.2969 -20.312,-0.004 -30.699,0.88281 -50.785,4.3398 -7.2383,1.2422 -11.117,1.6016 -12.648,1.1602 -9.1445,-2.6211 -11.125,-11.844 -3.8594,-17.957 4.5195,-3.7969 19.516,-6.9648 42.285,-8.9297 42.773,-3.6914 83.277,3.0586 113.96,18.996 17.359,9.0156 22.152,18.723 12.184,24.672 -1.4141,0.84766 -3.5664,1.5195 -4.7812,1.5 -1.2188,-0.0195 -7.3086,-2.5781 -13.641,-5.7383 z m 25.043,-43.203 c -23.75,-12.859 -46.996,-19.957 -78.332,-23.914 -9.4414,-1.1914 -44.324,-1.1953 -55.531,-0.008 -12.879,1.3672 -26.117,3.0312 -33.512,4.2148 -9.043,1.4453 -13.059,1.3516 -16.473,-0.39062 -5.6328,-2.8711 -7.8203,-8.5039 -5.582,-14.367 2.7969,-7.3203 11.578,-10.859 35.34,-14.25 45.102,-6.4336 86.18,-4.0977 122.98,6.9922 16.633,5.0117 34.133,13.051 43.66,20.055 11.133,8.1875 12.656,17.312 3.8164,22.914 -5.1172,3.2422 -8.5547,2.9805 -16.363,-1.2461 z m 23.418,-49.891 c -30.797,-16.648 -59.102,-25.184 -99.176,-29.914 -10.723,-1.2656 -45.266,-1.0195 -59.578,0.42187 -14.078,1.4219 -29.523,3.582 -40.309,5.6367 -13.031,2.4844 -17.781,1.6055 -23.074,-4.2656 -6.6094,-7.3242 -3.2656,-17.535 7.5195,-22.977 6.9766,-3.5195 20.918,-6.418 44.832,-9.3242 15.629,-1.8984 63.395,-1.8789 79.066,0.03516 40.531,4.9453 77.926,16.625 100.24,31.305 12.918,8.5 17.484,16.887 13.27,24.383 -2.4844,4.4141 -8.8906,8.0156 -14.258,8.0156 -1.4453,0 -4.8359,-1.3164 -8.5352,-3.3164 z"
+       style="fill:#d0ebee;fill-opacity:1"
+       id="path33469" />
+  </g>
+</svg>

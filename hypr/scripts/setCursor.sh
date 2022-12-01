@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# also set cursor size in /hypr/wrapper
 theme="Nordzy-cursors-white"
 size=24
 
