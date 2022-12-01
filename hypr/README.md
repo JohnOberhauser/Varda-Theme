@@ -3,33 +3,33 @@ place this directory in ~/.config/
 ### required packages
 
 #### from arch repo
-swaybg
 eww
 wireplumber
 playerctl
 gtklock
 rofi
+swayidle
+slurp
+grim
+xdg-desktop-portal-wlr
 
 #### from AUR:
 hyprland
+hyprpaper
 
 
 
 ### Cursor
 cursor in use
-phinger-cursors
-https://github.com/phisch/phinger-cursors
+https://github.com/alvatip/Nordzy-cursors
 
 edit the hypr/scripts/setCursor.sh file to change the cursor
 
 place cursor folders in these locations
-not sure if they are all necessary, but it's where I put them and I'm too lazy to check if I'm right
 ~/.icons/
-/usr/local/share/icons
 /usr/share/icons
 
-
-### Additional useful packages
-slurp
-grim
-xdg-desktop-portal-wlr
+edit
+/usr/share/icons/default/index.theme
+~/.icons/default/index.theme
+so that it inherits the cursor theme

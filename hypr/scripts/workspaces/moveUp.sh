@@ -8,9 +8,28 @@ diff=2
 new1=$(expr $ws1 - $diff)
 new2=$(expr $ws2 - $diff)
 
-if [[ $new1 -ge 1 ]]; then
-    hyprctl dispatch workspace $new1
-    hyprctl dispatch workspace $new2
+leftfirst() {
+    echo left
+    if [[ $new1 -ge 1 ]]; then
+        hyprctl dispatch workspace $new1
+        hyprctl dispatch workspace $new2
+    fi
+}
+
+rightfirst() {
+    echo right
+    if [[ $new1 -ge 1 ]]; then
+        hyprctl dispatch workspace $new2
+        hyprctl dispatch workspace $new1
+    fi
+}
+
+if [ "$1" = "leftfirst" ]; then
+    leftfirst
+elif [ "$1" = "rightfirst" ]; then
+    rightfirst
+else
+    rightfirst
 fi
 
 $HOME/.config/hypr/scripts/workspaces/updateWorkspaceIcons.sh
