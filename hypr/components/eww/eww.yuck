@@ -1,8 +1,7 @@
-(defpoll clock_time :interval "5s" "date +\%I")
-(defpoll clock_minute :interval "5s" "date +\%M")
-(defpoll clock_date :interval "10h" "date '+%d/%m'")
-(defvar time_rev false)
 (defvar eww "eww -c $HOME/.config/hypr/components/eww")
+
+(defpoll time :interval "5s" "$HOME/.config/hypr/scripts/clock/updateTime.sh")
+(defpoll weather :interval "10m" "$HOME/.config/hypr/scripts/weather/getWeather.sh")
 
 (defpoll volume_output_name :interval "3s" "$HOME/.config/hypr/scripts/audio/getDefaultOutputName.sh")
 (defpoll volume_percent :interval "3s" "$HOME/.config/hypr/scripts/audio/getVolumePercent.sh")
@@ -48,6 +47,7 @@
          :halign "start"
 		 :class "left_modules"
 (workspaces)
+
 ))
 
 (defwidget center []
@@ -56,6 +56,7 @@
          :halign "center"
 		 :class "center_modules"
 (clock)
+(weather)
 ))
 
 (defwidget right []
@@ -71,26 +72,19 @@
 ))
 
 (defwidget clock []
-    (eventbox
-        :onhover "${eww} update time_rev=true"
-        :onhoverlost "${eww} update time_rev=false"
-        (box
-            :class "module"
-            :space-evenly "false"
-            :orientation "h"
-            :spacing "3"
-            (label
-                :text clock_time
-                :class "clock"
-            )
-            (label
-                :text ":"
-                :class "clock"
-            )
-            (label
-                :text clock_minute
-                :class "clock"
-            )
+    (box
+        (label
+            :text time
+            :class "clock"
+        )
+    )
+)
+
+(defwidget weather []
+    (box
+        (label
+            :text weather
+            :class "weather"
         )
     )
 )
