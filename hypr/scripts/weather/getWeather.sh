@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#echo " 10宅  50 mph"
+#exit
 # SETTINGS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
 # API settings ________________________________________________________________
@@ -50,10 +52,10 @@ TEMP_FONT_CODE=1
 # Wind settings _______________________________________________________________
 
 # Display info about the wind or not. yes/no
-DISPLAY_WIND="no"
+DISPLAY_WIND="yes"
 
 # Display in knots. yes/no
-KNOTS="yes"
+KNOTS="no"
 
 # How many decimals after the floating point
 DECIMALS=0
@@ -226,20 +228,21 @@ function setIcons {
         fi
     fi
     if [ "$DISPLAY_WIND" = "yes" ] && [ `echo "$WINDFORCE >= $MIN_WIND" |bc -l` -eq 1 ]; then
+        WIND_ICON=""
         WIND=""
         if [ $DISPLAY_FORCE = "yes" ]; then
-            WIND="$WIND $WINDFORCE"
+        WIND="$WINDFORCE $WIND_ICON"
             if [ $DISPLAY_WIND_UNIT = "yes" ]; then
                 if [ $KNOTS = "yes" ]; then
-                    WIND="$WIND kn"
+                WIND="$WIND_ICON $WINDFORCE kn"
                 elif [ $UNITS = "imperial" ]; then
-                    WIND="$WIND mph"
+                WIND="$WIND_ICON $WINDFORCE mph"
                 else
-                    WIND="$WIND km/h"
+                WIND="$WIND_ICON $WINDFORCE km/h"
                 fi
             fi
         fi
-        WIND="$WIND |"
+        WIND="$WIND"
     fi
     if [ "$UNITS" = "metric" ]; then
         TEMP_ICON="糖"
@@ -255,7 +258,7 @@ function setIcons {
 }
 
 function outputCompact {
-OUTPUT="$TEMP $ICON $WIND $ERR_MSG$DESCRIPTION"
+OUTPUT="$ICON $TEMP $WIND$ERR_MSG$DESCRIPTION"
     # echo "Output: $OUTPUT" >> "$HOME/.weather.log"
     echo "$OUTPUT"
 }

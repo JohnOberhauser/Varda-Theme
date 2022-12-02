@@ -56,7 +56,6 @@
          :halign "center"
 		 :class "center_modules"
 (clock)
-(weather)
 ))
 
 (defwidget right []
@@ -73,18 +72,27 @@
 
 (defwidget clock []
     (box
-        (label
-            :text time
+        (button
             :class "clock"
+            :onclick "$HOME/.config/hypr/scripts/widgets/toggleCalendar.sh"
+            time
         )
     )
 )
 
 (defwidget weather []
     (box
+        :orientation "v"
+        :space-evenly false
+        (label
+            :text "Weather"
+            :class "weatherLabel"
+            :xalign 0.5
+        )
         (label
             :text weather
             :class "weather"
+            :xalign 0.5
         )
     )
 )
@@ -288,5 +296,27 @@
                 :path "./images/steam.svg"
             )
         )
+    )
+)
+
+(defwindow calendarWindow
+    :monitor 0
+    :geometry (geometry
+        :x "0%"
+        :y "10px"
+        :width "350px"
+        :height "310px"
+        :anchor "top center"
+    )
+    (cal)
+)
+
+(defwidget cal []
+    (box
+        :class "calendar"
+        :space-evenly false
+        :orientation "v"
+        (calendar)
+        (weather)
     )
 )

@@ -46,12 +46,31 @@ window {
 }
 
 .clock {
+    background: transparent;
     color: #D0EBEE;
     font-weight: bold;
     margin-left: 10px;
 }
 
-.weather {
+.weatherLabel {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
     margin-left: 10px;
+}
+
+.weather {
+    font-size: 14px;
+    font-weight: bold; 
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.calendar {
+    background-color: #0C0E11;
+    border-radius: 4px;
+    border-color: #52677C;
+    border-width: 2px;
+    border-style: solid;
     font-weight: bold;
 }
