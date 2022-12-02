@@ -12,6 +12,7 @@ swayidle
 slurp
 grim
 xdg-desktop-portal-wlr
+dunst
 
 #### from AUR:
 hyprland
