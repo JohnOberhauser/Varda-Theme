@@ -19,7 +19,7 @@ theme[main_fg]="#D0EBEE"
 theme[title]="#D0EBEE"
 
 # Higlight color for keyboard shortcuts
-theme[hi_fg]="#733447"
+theme[hi_fg]="#52677C"
 
 # Background color of selected item in processes box
 theme[selected_bg]="#52677C" 
@@ -31,7 +31,7 @@ theme[selected_fg]="#D0EBEE"
 theme[inactive_fg]="#D0EBEE"
 
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text
-theme[proc_misc]="#257B76"
+theme[proc_misc]="#52677C"
 
 # Cpu box outline color
 theme[cpu_box]="#52677C"
@@ -50,42 +50,42 @@ theme[div_line]="#52677C"
 
 #================= Meters ==================
 # Mem/Disk free meter
-theme[free_start]="#257B76"
-theme[free_mid]="#257B76"
-theme[free_end]="#257B76"
+theme[free_start]="#52677C"
+theme[free_mid]="#52677C"
+theme[free_end]="#52677C"
 
 # Mem/Disk cached meter
-theme[cached_start]="#733447"
-theme[cached_mid]="#733447"
-theme[cached_end]="#733447"
+theme[cached_start]="#52677C"
+theme[cached_mid]="#52677C"
+theme[cached_end]="#52677C"
 
 # Mem/Disk available meter
-theme[available_start]="#257B76"
-theme[available_mid]="#257B76"
-theme[available_end]="#257B76"
+theme[available_start]="#52677C"
+theme[available_mid]="#52677C"
+theme[available_end]="#52677C"
 
 # Mem/Disk used meter
-theme[used_start]="#733447"
-theme[used_mid]="#733447"
-theme[used_end]="#733447"
+theme[used_start]="#52677C"
+theme[used_mid]="#52677C"
+theme[used_end]="#52677C"
 
 #================== Graphs ==================
 # Temperature graph colors
-theme[temp_start]="#257B76"
+theme[temp_start]="#52677C"
 theme[temp_mid]="#52677C"
-theme[temp_end]="#733447"
+theme[temp_end]="#52677C"
 
 # CPU graph colors
-theme[cpu_start]="#257B76"
+theme[cpu_start]="#52677C"
 theme[cpu_mid]="#52677C"
-theme[cpu_end]="#733447"
+theme[cpu_end]="#52677C"
 
 # Download graph colors
-theme[download_start]="#257B76"
+theme[download_start]="#52677C"
 theme[download_mid]="#52677C"
-theme[download_end]="#733447"
+theme[download_end]="#52677C"
 
 # Upload graph colors
-theme[upload_start]="#257B76"
+theme[upload_start]="#52677C"
 theme[upload_mid]="#52677C"
-theme[upload_end]="#733447"
+theme[upload_end]="#52677C"

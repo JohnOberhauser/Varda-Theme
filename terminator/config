@@ -19,13 +19,13 @@
     palette = "#0c0e11:#733447:#257b76:#c78c56:#52677c:#604575:#134a5a:#d0ebee:#1c1e21:#733447:#257b76:#c78c56:#52677c:#604575:#134a5a:#d0ebee"
   [[nord]]
     audible_bell = True
+    background_color = "#0c0e11"
     cursor_shape = underline
     font = Cantarell 10
+    foreground_color = "#D8DEE9"
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 10000
-    background_color = "#0c0e11"
-    foreground_color = "#D8DEE9"
     palette = "#3b4252:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#88c0d0:#e5e9f0:#4c566a:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#8fbcbb:#eceff4"
 [layouts]
   [[default]]
