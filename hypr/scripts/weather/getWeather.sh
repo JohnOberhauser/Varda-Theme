@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#echo " 10宅  50 mph"
-#exit
+echo " 10宅  50 mph"
+exit
 # SETTINGS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
 # API settings ________________________________________________________________

@@ -1,0 +1,11 @@
+(defpoll time :interval "5s" "$HOME/.config/hypr/scripts/clock/updateTime.sh")
+
+(defwidget clock []
+    (box
+        (button
+            :class "clock"
+            :onclick "$HOME/.config/hypr/scripts/widgets/toggleCalendar.sh"
+            time
+        )
+    )
+)

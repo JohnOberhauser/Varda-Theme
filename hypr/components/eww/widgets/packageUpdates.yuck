@@ -1,0 +1,8 @@
+(defpoll packages_update :interval "5m" "$HOME/.config/hypr/scripts/updates/checkUpdates.sh")
+
+(defwidget packageUpdates []
+    (box
+        :class "rightSideIcon"
+        packages_update
+    )
+)

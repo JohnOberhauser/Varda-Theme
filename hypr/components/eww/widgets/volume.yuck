@@ -1,0 +1,36 @@
+(defpoll volume_output_name :interval "3s" "$HOME/.config/hypr/scripts/audio/getDefaultOutputName.sh")
+(defpoll volume_percent :interval "3s" "$HOME/.config/hypr/scripts/audio/getVolumePercent.sh")
+(defvar vol_reveal false)
+
+(defwidget volume []
+  (eventbox
+        :onhover "${eww} update vol_reveal=true"
+        :onhoverlost "${eww} update vol_reveal=false"
+        (box
+            :class "rightSideModule"
+            :space-evenly "false"
+            :orientation "h"
+            :spacing "0"
+            (button
+                :class "rightSideIcon"
+                :onclick "$HOME/.config/hypr/scripts/audio/swapOutput.sh"
+                :tooltip "${volume_output_name}%"
+                "墳"
+            )
+            (revealer
+                :transition "slideleft"
+                :reveal vol_reveal
+                :duration "350ms"
+                (scale
+                    :class "volbar"
+                    :value volume_percent
+                    :tooltip "${volume_output_name}%"
+                    :orientation "h"
+                    :max 100
+                    :min 0
+                    :onchange "wpctl set-volume @DEFAULT_AUDIO_SINK@ {}%"
+                )
+            )
+        )
+    )
+)

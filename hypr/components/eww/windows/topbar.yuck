@@ -1,0 +1,61 @@
+(include "./widgets/workspaces.yuck")
+(include "./widgets/clock.yuck")
+(include "./widgets/screenSharing.yuck")
+(include "./widgets/packageUpdates.yuck")
+(include "./widgets/volume.yuck")
+(include "./widgets/micVolume.yuck")
+(include "./widgets/powerOptions.yuck")
+
+(defwindow topbar
+    :monitor 0
+    :geometry (geometry
+        :x "0%"
+        :y "10px"
+        :width "2540px"
+        :height "30px"
+        :anchor "top center")
+    :stacking "fg"
+    :exclusive true
+    :focusable false
+    (box
+        :class "bar_class"
+        :orientation "h"
+        (left)
+        (center)
+        (right)
+    )
+)
+
+(defwidget left []
+	(box
+        :orientation "h"
+        :space-evenly false
+        :halign "start"
+        :class "left_modules"
+        (workspaces)
+    )
+)
+
+(defwidget center []
+	(box
+        :orientation "h"
+        :space-evenly false
+        :halign "center"
+        :class "center_modules"
+        (clock)
+    )
+)
+
+(defwidget right []
+	(box
+        :orientation "h"
+        :space-evenly false
+        :halign "end"
+        :class "right_modules"
+        (screenSharing)
+        (packageUpdates)
+        (volume)
+        (mic_volume)
+        (power_options)
+    )
+)
