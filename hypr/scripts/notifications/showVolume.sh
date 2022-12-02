@@ -1,12 +1,18 @@
 #!/bin/sh
 
-dec=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F "Volume: " '{print $2}')
+
+dec=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F "Volume: " '{print $2}' | awk -F "[" '{print $1}')
+
+muted=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F "Volume: " '{print $2}' | awk -F "[" '{print $2}' | awk -F "]" '{print $1}')
 
 vol=$(echo "$dec * 100" | bc | awk -F "." '{print $1}')
 
 echo $vol
+echo $muted
 
-if [[ $vol == 0 ]]; then
+if [[ $muted == "MUTED" ]]; then
+    image=$HOME/.config/hypr/assets/images/volume/mute.svg
+elif [[ $vol == 0 ]]; then
     image=$HOME/.config/hypr/assets/images/volume/mute.svg
 elif [[ $vol -le 33 ]]; then
     image=$HOME/.config/hypr/assets/images/volume/low.svg

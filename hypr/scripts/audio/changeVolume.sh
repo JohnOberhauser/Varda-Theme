@@ -22,10 +22,16 @@ decrease() {
     fi
 }
 
+mute() {
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+}
+
 if [ "$1" = "increase" ]; then
     increase
 elif [ "$1" = "decrease" ]; then
     decrease
+elif [ "$1" = "mute" ]; then
+    mute
 fi
 
 $HOME/.config/hypr/scripts/notifications/showVolume.sh

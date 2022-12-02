@@ -30,10 +30,10 @@
     height = 100
 
     # Position the notification in the top right corner
-    origin = top-center
+    origin = top-right
 
     # Offset from the origin
-    offset = 0x10
+    offset = 10x10
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -186,7 +186,7 @@
     stack_duplicates = true
 
     # Hide the count of stacked notifications with the same content
-    hide_duplicate_count = false
+    hide_duplicate_count = true
 
     # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
@@ -454,3 +454,7 @@
 #    set_stack_tag = "volume"
 #
 # vim: ft=cfg
+
+[volume]
+    appname = "volumecontrol"
+    timeout = 1
