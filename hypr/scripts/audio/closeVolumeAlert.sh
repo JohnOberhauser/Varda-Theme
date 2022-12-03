@@ -11,6 +11,10 @@ echo starting close process
 
 touch "$LOCK_FILE"
 
+timeoutInMilliseconds=1300
+
+echo "timeout $timeoutInMilliseconds"
+
 sleep 1
 
 while [ true ]
@@ -24,13 +28,10 @@ do
     echo $alertTimeStamp
     echo $currentTime
 
-    if [[ $alertTimeStamp -le $(expr $currentTime - 1000) ]]; then
+    if [[ $alertTimeStamp -le $(expr $currentTime - $timeoutInMilliseconds) ]]; then
         eww -c $HOME/.config/hypr/components/eww close volumeAlertWindow
         rm "$LOCK_FILE"
         exit
     fi
 
 done
-
-
-
