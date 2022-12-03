@@ -2,3 +2,4 @@
 
 (include "./windows/topbar.yuck")
 (include "./windows/calendar.yuck")
+(include "./windows/volumeAlert.yuck")

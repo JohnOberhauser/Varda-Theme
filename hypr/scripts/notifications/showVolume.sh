@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 decimal=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F "Volume: " '{print $2}' | awk -F "[" '{print $1}')
 
 muted=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F "Volume: " '{print $2}' | awk -F "[" '{print $2}' | awk -F "]" '{print $1}')

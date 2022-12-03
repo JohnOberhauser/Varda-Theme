@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo " 10宅  50 mph"
+echo " 10宅  50 mph - test mode enabled 1"
 exit
 # SETTINGS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 

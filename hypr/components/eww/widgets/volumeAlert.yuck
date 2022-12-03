@@ -1,0 +1,30 @@
+(defvar volumeAlertPercent 0)
+(defvar volumeAlertImagePath "../../assets/images/volume/high.svg")
+(defvar volumeAlertLastUpdateTimeStamp 0)
+
+(defwidget volumeAlert []
+    (box
+        :class "volumeAlert"
+        :space-evenly false
+        :orientation "h"
+        (image
+            :path volumeAlertImagePath
+            :image-width 50
+            :image-height 50
+        )
+        (box
+            :class "volumeAlertBox2"
+            :orientation "v"
+            :space-evenly false
+            :valign "center"
+            (label
+                :text "Volume"
+                :xalign 0
+            )
+            (progress
+                :class "volumeAlertProgress"
+                :value volumeAlertPercent
+            )
+        )
+    )
+)
