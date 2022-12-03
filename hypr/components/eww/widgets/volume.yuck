@@ -1,5 +1,5 @@
 (defpoll volume_output_name :interval "1h" :run-while false "$HOME/.config/hypr/scripts/audio/getDefaultOutputName.sh")
-(defpoll volume_percent :interval "1h" :run-while false "$HOME/.config/hypr/scripts/audio/getVolumePercent.sh")
+(defpoll volume_percent :interval "1h" :run-while false :initial "$HOME/.config/hypr/scripts/audio/getVolumePercent.sh" "$HOME/.config/hypr/scripts/audio/getVolumePercent.sh")
 (defpoll volume_icon :interval "1h" :run-while false "$HOME/.config/hypr/scripts/audio/getVolumeIcon.sh")
 (defvar vol_reveal false)
 

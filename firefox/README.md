@@ -12,3 +12,4 @@ Create a folder and name it chrome (with lowercase).
 Then paste the userChrome.css and the userContent.css files into the folder
 
 Go to firefox settings and change the font to JetBrainsMono Patched Glyphs from the fonts directory
+

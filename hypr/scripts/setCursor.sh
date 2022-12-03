@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# also set cursor size in /hypr/wrapper
+# also set cursor size in wrapper file (for me it's ~/.local/bin/hyprland-wrapper.sh)
 theme="Nordzy-cursors-white"
 size=24
 

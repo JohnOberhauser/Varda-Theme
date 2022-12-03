@@ -1,6 +1,6 @@
-/* 
+/*
 
-V A R I A B L E S 
+V A R I A B L E S
 
 Here you can change the opacity level and the main color of the browser. Also the color of the selections (When you select text)
 
@@ -12,8 +12,8 @@ Here you can change the opacity level and the main color of the browser. Also th
     --srf-color-selection: #D0EBEE;
 }
 
-/* 
-G E N E R A L 
+/*
+G E N E R A L
 */
 
 window,
@@ -34,11 +34,11 @@ window,
 ::selection {
     background-color: var(--srf-color-selection);
     /* Text color of your selection */
-    color: #141414;
+color: #141414;
 }
 
-/* 
-T A B S 
+/*
+T A B S
 */
 
 :root {
@@ -58,15 +58,15 @@ T A B S
 }
 
 .tab-background[selected="true"] {
-     -moz-appearance: none !important;
-     background-image: none !important;
-     background-color: #0C0E11 !important;
+    -moz-appearance: none !important;
+    background-image: none !important;
+    background-color: #0C0E11 !important;
 } tab[selected="true"] {
-     color: #D0EBEE !important;
-     font-weight:bold !important;
-     border-style: solid;
-     border-width: 1px;
-     border-color: #ffffff;
+    color: #D0EBEE !important;
+    font-weight:bold !important;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
 } tab:not([selected="true"]) {
     background: #191b1f !important;
     color: #D0EBEE99 !important;
@@ -95,7 +95,7 @@ T A B S
     display: none !important;
 }
 
-/* 
+/*
 SOUND - ICON
 */
 
@@ -114,31 +114,31 @@ SOUND - ICON
 .tab-icon-overlay:not([crashed]),
 .tab-icon-overlay[pinned][crashed][selected] {
     /* Position */
-    top: -3.5px !important;
-    inset-inline-end: -9px !important;
-    z-index: 1 !important;
+top: -3.5px !important;
+inset-inline-end: -9px !important;
+z-index: 1 !important;
 
-    /* Shape */
-    padding: 1.5px !important;
-    border-radius: 10px !important;
-    width:  17px !important;
-    height: 17px !important;
+/* Shape */
+padding: 1.5px !important;
+border-radius: 10px !important;
+width:  17px !important;
+height: 17px !important;
 }
 .tab-icon-overlay:not([sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
     /* Color */
-    color:  currentColor !important;
-    stroke: transparent !important;
-    background: transparent !important;
-    fill-opacity: 0.8 !important;
-    opacity: 1 !important;
+color:  currentColor !important;
+stroke: transparent !important;
+background: transparent !important;
+fill-opacity: 0.8 !important;
+opacity: 1 !important;
 }
 .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
     margin-inline-end: 9.5px !important;
 }
 
-/* 
+/*
 
-B U T T O N S 
+B U T T O N S
 
 Here you can comment if you want your buttons to be showed up!
 
@@ -167,7 +167,7 @@ Here you can comment if you want your buttons to be showed up!
 /* This one clears the tabs icon when they're not pinned  */
 .tabbrowser-tab:not([selected="true"]) .tab-icon-image {
     /*display: none !important;*/
-    filter: grayscale(70%);
+filter: grayscale(70%);
 }
 
 /* Removing the zoom button  */
@@ -180,7 +180,7 @@ Here you can comment if you want your buttons to be showed up!
     display: none !important;
 }
 
-/* 
+/*
 U R L - B A R
 */
 
@@ -189,7 +189,7 @@ U R L - B A R
     width: 100% !important;
     left: 0 !important;
     top: calc(
-        (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+            (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
     ) !important;
 }
 
@@ -203,16 +203,16 @@ U R L - B A R
 
 #urlbar[breakout]:not([open]) {
     bottom: calc(
-        (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+            (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
     ) !important;
 }
 
 #urlbar[breakout-extend] {
     top: calc(
-        (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+            (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
     ) !important;
     left: calc(
-        (var(--urlbar-toolbar-width) - var(--urlbar-width)) / 2
+            (var(--urlbar-toolbar-width) - var(--urlbar-width)) / 2
     ) !important;
     width: 100% !important;
 }
