@@ -1,4 +1,4 @@
-(defpoll mic_volume_percent :interval "3s" "$HOME/.config/hypr/scripts/audio/getMicVolumePercent.sh")
+(defpoll mic_volume_percent :interval "5s" "$HOME/.config/hypr/scripts/audio/getMicVolumePercent.sh")
 (defvar mic_vol_reveal false)
 
 (defwidget mic_volume []

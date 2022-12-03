@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# get the current volume for checks later
 decimalValue=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F "Volume: " '{print $2}')
 
 vol=$(echo "$decimalValue * 100" | bc | awk -F "." '{print $1}')
