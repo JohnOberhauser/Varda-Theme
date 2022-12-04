@@ -1,0 +1,88 @@
+
+/*
+U R L - B A R
+*/
+
+#urlbar[breakout] {
+    margin-inline-start: 0px !important;
+    width: 100% !important;
+    left: 0 !important;
+    top: calc(
+            (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+    ) !important;
+}
+
+@-moz-document url(chrome://browser/content/browser.xhtml)
+{
+    #urlbar[breakout][breakout-extend] > #urlbar-background {
+        animation-name: none !important;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) !important;
+    }
+}
+
+#urlbar[breakout]:not([open]) {
+    bottom: calc(
+            (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+    ) !important;
+}
+
+#urlbar[breakout-extend] {
+    top: calc(
+            (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+    ) !important;
+    left: calc(
+            (var(--urlbar-toolbar-width) - var(--urlbar-width)) / 2
+    ) !important;
+    width: 100% !important;
+}
+
+#urlbar[breakout-extend] #urlbar-input-container {
+    height: calc(var(--tab-min-height) - 3px) !important;
+    padding: 0px !important;
+}
+
+#urlbar-input-container {
+    padding: 0 !important;
+    height: 100% !important;
+    margin-left: 10px !important;
+}
+
+#identity-box {
+    display: none;
+}
+
+.urlbarView-row {
+    padding: 0px !important;
+}
+
+#searchbar {
+    background: var(--bf-bg) !important;
+    border: none !important;
+}
+
+.searchbar-textbox {
+    color: var(--bf-focus-fg) !important;
+    font-weight: 700 !important;
+}
+
+#urlbar-container {
+    min-width: 150px !important;
+}
+
+#urlbar {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#page-action-buttons {
+    display: none !important;
+}
+
+.urlbarView {
+    margin: 0px !important;
+    width: 100% !important;
+}
+
+#urlbar-label-box, #urlbar-search-mode-indicator {
+    display: none !important;
+}

@@ -1,0 +1,57 @@
+/*
+T A B S
+*/
+
+:root {
+    --tabs-border: transparent !important;
+    --toolbox-border-bottom-color: transparent !important;
+    --tab-min-height: 32px !important;
+}
+
+#navigator-toolbox {
+    border: 0px !important;
+}
+
+#TabsToolbar {
+    margin-top: -1px !important;
+    margin-bottom: 1px !important;
+    max-height: 32px !important;
+}
+
+.tab-background[selected="true"] {
+    -moz-appearance: none !important;
+    background-image: none !important;
+    background-color: #0C0E11 !important;
+} tab[selected="true"] {
+    color: #D0EBEE !important;
+    font-weight:bold !important;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+} tab:not([selected="true"]) {
+    background: #191b1f !important;
+    color: #D0EBEE99 !important;
+}
+
+.tabbrowser-tabs {
+    border: none !important;
+    opacity: 0 !important;
+    --tab-min-height: 32px !important;
+}
+
+.titlebar-placeholder {
+    border: none !important;
+}
+
+.tab-line {
+    display: none !important;
+}
+
+.tabbrowser-arrowscrollbox {
+    height: 32px !important;
+    min-height: 32px !important;
+}
+
+.titlebar-placeholder[type='pre-tabs'] {
+    display: none !important;
+}
