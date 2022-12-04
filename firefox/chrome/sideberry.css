@@ -35,8 +35,8 @@ See the above repository for updates as well as full license text. */
 /* The border controlling sidebar width will be removed so you'll need to modify these values to change width */
 
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-    --uc-sidebar-width: 80px !important;
-    --uc-sidebar-hover-width: 290px;
+    --uc-sidebar-width: 48px !important;
+    --uc-sidebar-hover-width: 250px;
     --uc-autohide-sidebar-delay: 200ms; /* Wait 0.3s before hiding sidebar */
     position: relative;
     min-width: var(--uc-sidebar-width) !important;
@@ -81,4 +81,8 @@ See the above repository for updates as well as full license text. */
 }
 #sidebar-box[positionend]:-moz-locale-dir(rtl) > *{
     direction: rtl
+}
+
+#sidebar-splitter{
+    display: none !important;
 }
