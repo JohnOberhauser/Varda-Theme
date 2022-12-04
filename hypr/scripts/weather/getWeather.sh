@@ -64,7 +64,7 @@ DECIMALS=0
 # measurement unit you have set: knots, m/s or mph). Set to 0 if you always
 # want to display wind info. It's ignored if DISPLAY_WIND is false.
 
-MIN_WIND=11
+MIN_WIND=0
 
 # Display the numeric wind force or not. If not, only the wind icon will
 # appear. yes/no
@@ -258,7 +258,7 @@ function setIcons {
 }
 
 function outputCompact {
-OUTPUT="$ICON $TEMP $WIND$ERR_MSG$DESCRIPTION"
+    OUTPUT="$ICON $TEMP $WIND$ERR_MSG$DESCRIPTION"
     # echo "Output: $OUTPUT" >> "$HOME/.weather.log"
     echo "$OUTPUT"
 }
@@ -283,5 +283,5 @@ if [ $ERROR -eq 0 ]; then
     setIcons
     outputCompact
 else
-echo " "
+    echo " "
 fi

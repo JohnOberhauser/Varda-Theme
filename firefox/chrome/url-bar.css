@@ -26,6 +26,7 @@ U R L - B A R
     ) !important;
 }
 
+
 #urlbar[breakout-extend] {
     top: calc(
             (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2

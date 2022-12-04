@@ -1,4 +1,4 @@
-#sidebar-box {
+#main-window[titlepreface*="🦊 "] #sidebar-box {
     --uc-sidebar-width: 48px !important;
     --uc-sidebar-hover-width: 250px;
     --uc-autohide-sidebar-delay: 200ms; /* Wait 0.3s before hiding sidebar */
@@ -9,13 +9,13 @@
     z-index:1;
 }
 
-#sidebar-box {
+#main-window[titlepreface*="🦊 "] #sidebar-box {
     transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
     min-width: var(--uc-sidebar-width) !important;
     will-change: min-width;
 }
 
-#sidebar-box:hover {
+#main-window[titlepreface*="🦊 "] #sidebar-box:hover {
     min-width: var(--uc-sidebar-hover-width) !important;
     transition-delay: 0ms !important
 }

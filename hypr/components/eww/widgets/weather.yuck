@@ -1,4 +1,4 @@
-(defpoll weather :interval "10m" "$HOME/.config/hypr/scripts/weather/getWeather.sh")
+(defpoll weather :interval "1m" "$HOME/.config/hypr/scripts/weather/readWeather.sh")
 
 (defwidget weather []
     (box

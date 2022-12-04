@@ -2,9 +2,8 @@
 @import "sound-icon.css";
 @import "hide-buttons.css";
 @import "url-bar.css";
-@import "sideberry-toggle.css";
 @import "tabs.css";
-@import "sidebar.css";
-@import "sidebar-auto-hide.css";
-@import "nighttab-text-color.css";
+@import "sideberry/sidebar.css";
+@import "sideberry/tabs-toggle.css";
+@import "sideberry/sidebar-auto-hide.css";
 @import "bitwarden-icon.css";
