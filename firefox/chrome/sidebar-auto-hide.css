@@ -1,0 +1,21 @@
+#sidebar-box {
+    --uc-sidebar-width: 48px !important;
+    --uc-sidebar-hover-width: 250px;
+    --uc-autohide-sidebar-delay: 200ms; /* Wait 0.3s before hiding sidebar */
+    position: relative;
+    min-width: var(--uc-sidebar-width) !important;
+    width: var(--uc-sidebar-width) !important;
+    max-width: var(--uc-sidebar-width) !important;
+    z-index:1;
+}
+
+#sidebar-box {
+    transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
+    min-width: var(--uc-sidebar-width) !important;
+    will-change: min-width;
+}
+
+#sidebar-box:hover {
+    min-width: var(--uc-sidebar-hover-width) !important;
+    transition-delay: 0ms !important
+}

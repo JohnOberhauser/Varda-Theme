@@ -1,0 +1,10 @@
+/* Sidebery toggle tabs when sidebar is visible */
+
+#main-window[titlepreface*="🦊 "] .tabbrowser-tab {
+    visibility: collapse !important;
+}
+
+#main-window[titlepreface*="🦊 "] #nav-bar {
+    margin-top: -28px;
+    box-shadow: none !important;
+}

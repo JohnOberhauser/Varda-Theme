@@ -1,0 +1,7 @@
+#sidebar-splitter{
+    display: none !important;
+}
+
+#sidebar-header {
+    visibility: collapse;
+}
