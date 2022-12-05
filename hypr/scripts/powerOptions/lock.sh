@@ -1,9 +1,9 @@
 #!/bin/bash
 
-swayidle timeout 20 'hyprctl dispatch dpms off' \
+nohup swayidle timeout 20 'hyprctl dispatch dpms off' \
     resume 'hyprctl dispatch dpms on' \
-    > /dev/null 2>&1 &
+    &
 
-gtklock
+swaylock -C $HOME/.config/hypr/components/swaylock/config
 
 pkill swayidle

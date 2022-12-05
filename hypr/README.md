@@ -6,7 +6,7 @@ place this directory in ~/.config/
 eww
 wireplumber
 playerctl
-gtklock
+swaylock
 rofi
 swayidle
 slurp
