@@ -19,32 +19,32 @@
 
 @media screen and (min-width: 49px) {
   .Tab .audio {
-    left: 28px;
+      left: 28px;
   }
 }
 
 /*
- * Add margins and rounding around tabs
- */
+* Add margins and rounding around tabs
+*/
 
 #root {
-  --tabs-height: 43px;
+    --tabs-height: 43px;
 }
 
 /* Background layer */
 
 .Tab {
-  margin: 0 4px;
-  width: unset;
+    margin: 0 4px;
+    width: unset;
 }
 .Tab .lvl-wrapper:after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  width: 100%;
-  height: calc(100% - 5px);
-  border-radius: 4px;
-  z-index: -1;
+    content: '';
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: calc(100% - 5px);
+    border-radius: 4px;
+    z-index: -1;
 }
 
 /* Reset default styles */
@@ -55,7 +55,7 @@
 .Tab[data-selected],
 .Tab[data-selected]:hover,
 .Tab[data-selected]:active {
-  background: transparent;
+    background: transparent;
 
 }
 
@@ -76,7 +76,7 @@
 
 
 .Tab[data-selected] .lvl-wrapper:after {
-    background-color: var(--tabs-selected-bg);,
+    background-color: var(--tabs-selected-bg);
 }
 
 /* Resize and reposition favicons */
@@ -84,6 +84,11 @@
     width: 18px;
     height: 18px;
     margin-left: 10px;
+    opacity: 0.5;
+}
+
+.Tab[data-active] .fav {
+    opacity: 1;
 }
 
 .Tab .placeholder > svg {
