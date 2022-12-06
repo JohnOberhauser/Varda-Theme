@@ -1,0 +1,17 @@
+spotify
+['__class__', '__copy__', '__deepcopy__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__gdoc__', '__ge__', '__getattribute__', '__gpointer__', '__grefcount__', '__gsignals__', '__gt__', '__gtype__', '__hash__', '__info__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_force_floating', '_ref', '_ref_sink', '_unref', '_unsupported_data_method', '_unsupported_method', 'bind_property', 'bind_property_full', 'chain', 'compat_control', 'connect', 'connect_after', 'connect_data', 'connect_object', 'connect_object_after', 'disconnect', 'disconnect_by_func', 'emit', 'emit_stop_by_name', 'find_property', 'force_floating', 'freeze_notify', 'g_type_instance', 'get_album', 'get_artist', 'get_data', 'get_position', 'get_properties', 'get_property', 'get_qdata', 'get_title', 'getv', 'handler_block', 'handler_block_by_func', 'handler_disconnect', 'handler_is_connected', 'handler_unblock', 'handler_unblock_by_func', 'install_properties', 'install_property', 'interface_find_property', 'interface_install_property', 'interface_list_properties', 'is_floating', 'list_properties', 'new', 'new_for_source', 'new_from_name', 'newv', 'next', 'notify', 'notify_by_pspec', 'on', 'open', 'override_property', 'parent_instance', 'pause', 'play', 'play_pause', 'previous', 'print_metadata_prop', 'priv', 'props', 'qdata', 'ref', 'ref_count', 'ref_sink', 'replace_data', 'replace_qdata', 'run_dispose', 'seek', 'set_data', 'set_loop_status', 'set_position', 'set_properties', 'set_property', 'set_shuffle', 'set_volume', 'steal_data', 'steal_qdata', 'stop', 'stop_emission', 'stop_emission_by_name', 'thaw_notify', 'unref', 'watch_closure', 'weak_ref']
+setting track info
+artist Kavinsky
+title Goodbye
+artist Kavinsky
+title Plasma
+Traceback (most recent call last):
+  File "/ssd/home/workspace/Varda-Theme/hypr/scripts/media/player-manager.py", line 117, in <module>
+    main.run()
+  File "/usr/lib/python3.10/site-packages/gi/overrides/GLib.py", line 495, in run
+    with register_sigint_fallback(self.quit):
+  File "/usr/lib/python3.10/contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "/usr/lib/python3.10/site-packages/gi/_ossighelper.py", line 237, in register_sigint_fallback
+    signal.default_int_handler(signal.SIGINT, None)
+KeyboardInterrupt

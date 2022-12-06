@@ -25,7 +25,7 @@
                     )
                     (button
                         :class "power_option"
-                        :onclick "${eww} update power_options_reveal=false && nohup $HOME/.config/hypr/scripts/powerOptions/lock.sh &"
+                        :onclick "${eww} update power_options_reveal=false && $HOME/.config/hypr/scripts/powerOptions/lock.sh 2>&1 /dev/null &"
                         ""
                     )
                     (button
