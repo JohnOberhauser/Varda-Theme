@@ -1,0 +1,26 @@
+(defpoll memory :interval "5s" "$HOME/.config/hypr/scripts/machineDetails/getMemoryUsagePercent.sh")
+(defpoll cpu :interval "20s" "$HOME/.config/hypr/scripts/machineDetails/getCpuUsage.sh")
+
+(defwidget machineStats []
+    (box
+        :class "machineStatsContainer"
+        :width: 200
+        :height 150
+        :space-evenly false
+        :orientation "h"
+        (circular-progress
+            :class "statsCircle"
+            :value memory
+            :thickness 50
+
+        )
+        (label :text "Mem")
+        (circular-progress
+            :class "statsCircle"
+            :value cpu
+            :thickness 50
+
+        )
+        (label :text "CPU")
+    )
+)

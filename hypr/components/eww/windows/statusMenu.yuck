@@ -1,6 +1,7 @@
 (include "./widgets/weather.yuck")
 (include "./widgets/mediaControls.yuck")
 (include "./widgets/calendar.yuck")
+(include "./widgets/machineStats.yuck")
 
 (defwindow statusMenuWindow
     :monitor 0
@@ -25,6 +26,7 @@
             :orientation "h"
             :space-evenly false
             (mediaControls)
+            (machineStats)
         )
     )
 )

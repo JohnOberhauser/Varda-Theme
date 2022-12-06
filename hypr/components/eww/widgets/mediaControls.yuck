@@ -3,8 +3,8 @@
 ;(defpoll trackArtist :interval "5s" "playerctl metadata xesam:artist")
 
 (defvar mediaVisible false)
-(defvar trackTitle "test")
-(defvar trackArtist "test")
+(defvar trackTitle "---")
+(defvar trackArtist "---")
 ;(defvar trackPosition 0)
 (defvar playIcon "契")
 (defvar shuffleIcon "劣")
@@ -27,6 +27,7 @@
 
 (defwidget info []
     (box
+        :class "mediaInfo"
         :space-evenly false
         :orientation "v"
         (label

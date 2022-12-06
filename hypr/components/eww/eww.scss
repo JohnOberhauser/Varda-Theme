@@ -118,6 +118,10 @@ window {
     border-radius: 16px;
 }
 
+.mediaInfo {
+    margin-bottom: 10px;
+}
+
 .mediaProgress {
 
 }
@@ -140,4 +144,17 @@ window {
     font-size: 20px;
     background-color: #0C0E11;
     border-radius: 45px;
+}
+
+.machineStatsContainer{
+    margin: 10px;
+    padding: 10px;
+    border-color: #52677C;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 16px;
+}
+
+.statsCircle {
+    background-color: #101215;
 }
