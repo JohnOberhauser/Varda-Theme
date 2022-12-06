@@ -1,4 +1,4 @@
-(include "./widgets/weather.yuck")
+;(include "./widgets/weather.yuck")
 
 (defwidget cal []
     (box
@@ -7,5 +7,15 @@
         :orientation "v"
         (calendar)
         (weather)
+    )
+)
+
+(defwidget calendarContainer []
+    (box
+        :class "calendarContainer"
+        :width 400
+        (calendar
+            :class "realCalendar"
+        )
     )
 )

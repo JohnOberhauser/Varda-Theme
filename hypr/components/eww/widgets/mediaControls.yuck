@@ -1,0 +1,74 @@
+(defpoll trackPosition :interval "2s" "$HOME/.config/hypr/scripts/media/getTrackPosition.sh")
+;(defpoll trackTitle :interval "5s" "playerctl metadata xesam:title")
+;(defpoll trackArtist :interval "5s" "playerctl metadata xesam:artist")
+
+(defvar mediaVisible false)
+(defvar trackTitle "test")
+(defvar trackArtist "test")
+;(defvar trackPosition 0)
+(defvar playIcon "契")
+(defvar shuffleIcon "劣")
+(defvar loopIcon "稜")
+
+(defwidget mediaControls []
+    (box
+        :class "mediaControlsContainer"
+        :width: 400
+        :space-evenly false
+        :orientation "v"
+        (info)
+        (progress
+            :class "mediaProgress"
+            :value trackPosition
+        )
+        (controls)
+    )
+)
+
+(defwidget info []
+    (box
+        :space-evenly false
+        :orientation "v"
+        (label
+            :class "trackTitle"
+            :text trackTitle
+        )
+        (label
+            :class "trackArtist"
+            :text trackArtist
+        )
+    )
+)
+
+(defwidget controls []
+    (box
+        :space-evenly true
+        :orientation "h"
+        :halign "center"
+        (button
+            :class "mediaControlsButtonMinor"
+            :onclick "playerctl shuffle toggle"
+            shuffleIcon
+        )
+        (button
+            :class "mediaControlsButton"
+            :onclick "$HOME/.config/hypr/scripts/media/goToPrevious.sh"
+            "玲"
+        )
+        (button
+            :class "mediaControlsButton"
+            :onclick "playerctl play-pause"
+            playIcon
+        )
+        (button
+            :class "mediaControlsButton"
+            :onclick "playerctl next"
+            "怜"
+        )
+        (button
+            :class "mediaControlsButtonMinor"
+            :onclick "$HOME/.config/hypr/scripts/media/setLoopStatus.sh ${loopIcon}"
+            loopIcon
+        )
+    )
+)

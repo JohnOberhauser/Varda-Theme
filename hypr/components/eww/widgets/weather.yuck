@@ -4,6 +4,8 @@
     (box
         :orientation "v"
         :space-evenly false
+        :vexpand false
+        :xexpand false
         (label
             :text "Weather"
             :class "weatherLabel"

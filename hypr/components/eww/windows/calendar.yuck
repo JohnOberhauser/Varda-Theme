@@ -1,4 +1,4 @@
-(include "./widgets/calendar.yuck")
+(include "./widgets/weather.yuck")
 
 (defwindow calendarWindow
     :monitor 0
@@ -9,5 +9,11 @@
         :height "310px"
         :anchor "top center"
     )
-    (cal)
+    (box
+        :class "calendar"
+        :space-evenly false
+        :orientation "v"
+        (calendar)
+        (weather)
+    )
 )

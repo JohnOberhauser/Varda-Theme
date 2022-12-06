@@ -4,7 +4,7 @@
     (box
         (button
             :class "clock"
-            :onclick "$HOME/.config/hypr/scripts/calendar/toggleCalendar.sh"
+            :onclick "$HOME/.config/hypr/scripts/statusMenu/toggleStatusMenu.sh"
             time
         )
     )

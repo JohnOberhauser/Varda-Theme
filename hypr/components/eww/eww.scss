@@ -75,6 +75,19 @@ window {
     font-weight: bold;
 }
 
+.calendarContainer {
+    margin: 10px;
+    border-color: #52677C;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 16px;
+}
+
+.realCalendar {
+    border-color: transparent;
+    border-radius: 16px;
+}
+
 .volumeAlert {
     background-color: #0C0E11;
     border-radius: 4px;
@@ -94,4 +107,37 @@ window {
 
 .volumeAlertProgress {
     margin-top: 10px;
+}
+
+.mediaControlsContainer {
+    margin: 10px;
+    padding: 10px;
+    border-color: #52677C;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 16px;
+}
+
+.mediaProgress {
+
+}
+
+.trackArtist {
+
+}
+
+.trackTitle {
+
+}
+
+.mediaControlsButton {
+    font-size: 40px;
+    background-color: #0C0E11;
+    border-radius: 45px;
+}
+
+.mediaControlsButtonMinor {
+    font-size: 20px;
+    background-color: #0C0E11;
+    border-radius: 45px;
 }

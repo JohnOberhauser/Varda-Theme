@@ -7,6 +7,9 @@
 # [org/gnome/desktop/interface]
 # cursor-theme='theme-name'
 
+# then run this
+# sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'theme-name'
+
 theme="Nordzy-cursors-white"
 size=24
 
