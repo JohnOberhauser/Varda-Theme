@@ -1,10 +1,6 @@
-window {
-    background-color: transparent;
-}
-
 .bar_class {
     background-color: #0C0E11;
-    border-radius: 4px;
+    border-radius: 8px;
     border-color: #52677C;
     border-width: 2px;
     border-style: solid;
@@ -52,6 +48,22 @@ window {
     margin-left: 10px;
 }
 
+.dateContainer {
+    margin: 10px;
+}
+
+.dayText {
+    font-size: 20px;
+}
+
+.dateText {
+    font-size: 26px;
+}
+
+.weatherContainer {
+    margin: 10px;
+}
+
 .weatherLabel {
     font-size: 20px;
     font-weight: bold;
@@ -66,9 +78,44 @@ window {
     margin-top: 10px;
 }
 
+.weatherIcon {
+    font-size: 32px;
+}
+
+.weatherDescription {
+
+}
+
+.weatherTemp {
+    font-size: 26px;
+}
+
+.weatherWind {
+
+}
+
+.sunsetIcon {
+    font-size: 26px;
+}
+
+.sunsetText {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .calendar {
     background-color: #0C0E11;
     border-radius: 4px;
+    border-color: #52677C;
+    border-width: 2px;
+    border-style: solid;
+    font-weight: bold;
+}
+
+.statusMenuWindow {
+    background-color: #0C0E11;
+    border-radius: 8px;
     border-color: #52677C;
     border-width: 2px;
     border-style: solid;
@@ -79,7 +126,7 @@ window {
     margin: 10px;
     border-color: #52677C;
     border-width: 1px;
-    border-style: solid;
+    border-style: none;
     border-radius: 16px;
 }
 
@@ -88,9 +135,9 @@ window {
     border-radius: 16px;
 }
 
-.volumeAlert {
+.volumeAlertWindow {
     background-color: #0C0E11;
-    border-radius: 4px;
+    border-radius: 8px;
     border-color: #52677C;
     border-width: 2px;
     border-style: solid;
@@ -114,7 +161,7 @@ window {
     padding: 10px;
     border-color: #52677C;
     border-width: 1px;
-    border-style: solid;
+    border-style: none;
     border-radius: 16px;
 }
 
@@ -124,6 +171,16 @@ window {
 
 .mediaProgress {
 
+}
+
+.mediaProgress trough {
+    min-height: 10px;
+    border-radius: 16px;
+}
+
+.mediaProgress trough progress {
+    min-height: 10px;
+    border-radius: 16px;
 }
 
 .trackArtist {
@@ -151,10 +208,42 @@ window {
     padding: 10px;
     border-color: #52677C;
     border-width: 1px;
-    border-style: solid;
+    border-style: none;
     border-radius: 16px;
 }
 
 .statsCircle {
-    background-color: #101215;
+    background-color: #141619;
+    margin-bottom: 20px;
+}
+
+.statsText {
+    font-size: 20px;
+}
+
+.statusMenuVolumeContainer {
+    margin: 10px;
+    padding: 10px;
+    border-color: #52677C;
+    border-width: 1px;
+    border-style: none;
+    border-radius: 16px;
+}
+
+.statusMenuVolumeIcon {
+    font-size: 36px;
+    margin-top: 20px
+}
+
+.statusMenuVolumeProgress trough {
+    min-width: 10px;
+    border-radius: 16px;
+}
+.statusMenuVolumeProgress trough progress {
+    min-width: 10px;
+    border-radius: 16px;
+}
+
+.statusMenuVolumeInnerContainer {
+    margin: 10px;
 }

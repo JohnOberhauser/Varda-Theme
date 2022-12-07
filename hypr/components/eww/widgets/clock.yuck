@@ -1,4 +1,4 @@
-(defpoll time :interval "5s" "$HOME/.config/hypr/scripts/clock/updateTime.sh")
+(defpoll time :interval "5s" "$HOME/.config/hypr/scripts/clock/getTime.sh time")
 
 (defwidget clock []
     (box

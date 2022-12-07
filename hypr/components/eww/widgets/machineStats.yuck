@@ -1,5 +1,7 @@
 (defpoll memory :interval "5s" "$HOME/.config/hypr/scripts/machineDetails/getMemoryUsagePercent.sh")
 (defpoll cpu :interval "20s" "$HOME/.config/hypr/scripts/machineDetails/getCpuUsage.sh")
+(defpoll disk1 :interval "5m" "$HOME/.config/hypr/scripts/machineDetails/getDiskUsage.sh /dev/sdd1")
+(defpoll disk2 :interval "5m" "$HOME/.config/hypr/scripts/machineDetails/getDiskUsage.sh /dev/sdc1")
 
 (defwidget machineStats []
     (box
@@ -8,19 +10,51 @@
         :height 150
         :space-evenly false
         :orientation "h"
-        (circular-progress
-            :class "statsCircle"
-            :value memory
-            :thickness 50
-
+        (box
+            :space-evenly false
+            :orientation "v"
+            :valign "center"
+            (circular-progress
+                :class "statsCircle"
+                :value memory
+                :thickness 100
+            )
+            (label
+                :class "statsText"
+                :text "Mem"
+            )
         )
-        (label :text "Mem")
-        (circular-progress
-            :class "statsCircle"
-            :value cpu
-            :thickness 50
-
+        (box
+            :space-evenly false
+            :orientation "v"
+            :valign "center"
+            (circular-progress
+                :class "statsCircle"
+                :value cpu
+                :thickness 30
+            )
+            (label
+                :class "statsText"
+                :text "CPU"
+            )
+            (circular-progress
+                :class "statsCircle"
+                :value disk1
+                :thickness 30
+            )
+            (label
+                :class "statsText"
+                :text "Disk 1"
+            )
+            (circular-progress
+                :class "statsCircle"
+                :value disk2
+                :thickness 30
+            )
+            (label
+                :class "statsText"
+                :text "Disk 2"
+            )
         )
-        (label :text "CPU")
     )
 )

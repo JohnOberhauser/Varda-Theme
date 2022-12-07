@@ -13,6 +13,8 @@ slurp
 grim
 xdg-desktop-portal-wlr
 dunst
+jq
+python
 
 #### from AUR:
 hyprland

@@ -2,31 +2,46 @@
 (include "./widgets/mediaControls.yuck")
 (include "./widgets/calendar.yuck")
 (include "./widgets/machineStats.yuck")
+(include "./widgets/statusMenuVolume.yuck")
+(include "./widgets/date.yuck")
 
 (defwindow statusMenuWindow
+    :class "statusMenuWindow"
     :monitor 0
     :geometry (geometry
         :x "0%"
         :y "10px"
-        :width "600px"
-        :height "500px"
         :anchor "top center"
     )
     (box
-        :class "calendar"
+        :halign "center"
+        :valign "center"
         :space-evenly false
         :orientation "v"
+        (date)
         (box
             :orientation "h"
+            :halign "center"
+            :valign "center"
             :space-evenly false
-            (calendarContainer)
+            ;(calendarContainer)
+
             (weather)
         )
         (box
-            :orientation "h"
+            :orientation "v"
             :space-evenly false
+            :halign "center"
+            :valign "center"
+            (box
+                :orientation "h"
+                :halign "center"
+                :valign "center"
+                :space-evenly false
+                (machineStats)
+                (statusMenuVolume)
+            )
             (mediaControls)
-            (machineStats)
         )
     )
 )

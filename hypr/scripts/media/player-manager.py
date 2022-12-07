@@ -33,6 +33,10 @@ def setTrackInfo(player):
 def setArtistAndTitle(artist, title):
     print("artist {}".format(artist))
     print("title {}".format(title))
+    if (len(artist)) > 26:
+        artist = ("%.24s" % artist) + "..."
+    if (len(title)) > 26:
+        title = ("%.24s" % title) + "..."
     eww('update trackArtist=\"{}\"'.format(artist if artist and artist != "" else "---"))
     eww('update trackTitle=\"{}\"'.format(title if title and title != "" else "---"))
 

@@ -13,15 +13,21 @@
 (defwidget mediaControls []
     (box
         :class "mediaControlsContainer"
-        :width: 400
         :space-evenly false
-        :orientation "v"
-        (info)
-        (progress
-            :class "mediaProgress"
-            :value trackPosition
+        :halign "center"
+        :orientation "h"
+        (box
+            :orientation "v"
+            :valign "center"
+            :space-evenly false
+            (info)
+            (progress
+                :class "mediaProgress"
+                :value trackPosition
+                :height 20
+            )
+            (controls)
         )
-        (controls)
     )
 )
 
@@ -33,6 +39,7 @@
         (label
             :class "trackTitle"
             :text trackTitle
+            :width 350
         )
         (label
             :class "trackArtist"

@@ -1,6 +1,7 @@
 (include "./widgets/volumeAlert.yuck")
 
 (defwindow volumeAlertWindow
+    :class "volumeAlertWindow"
     :monitor 0
     :geometry (geometry
         :x "0%"

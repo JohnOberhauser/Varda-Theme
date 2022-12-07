@@ -1,8 +1,10 @@
 #!/bin/bash
 
+sleep 5
+
 while [ true ]
 do
-    $HOME/.config/hypr/scripts/weather/writeWeather.sh
+    python $HOME/.config/hypr/scripts/weather/getWeather.py
 
     sleep 900 # 15 mins
 done
