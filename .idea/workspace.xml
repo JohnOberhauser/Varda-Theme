@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aea22eda-5a73-45ce-94a7-91b871fedc64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/docs/DarkSouls-theme.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/docs/default-theme.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/docs/pop!os-theme.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/LinkContainer/Accordion/Accordion.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/LinkContainer/LinkContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/Searchbar/Searchbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/Settings/Changelog/Changelog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/Settings/DesignSettings/DesignSettings.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/Settings/LinkSettings/LinkSettings.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/Settings/LinkSettings/OptionTextArea.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/Settings/SearchSettings/FastForwardSearch.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/Settings/SearchSettings/SearchSettings.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/Settings/Settings.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/Settings/SettingsWindow.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/Settings/settingsHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/Startpage/Startpage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/base/FiraCode-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/base/FiraCode-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/base/FiraCode-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/base/FuturaLTLight.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/base/animations.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/base/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/base/variables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/components/ColorPicker.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/components/Dropdown.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/components/IconButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/components/OptionSlider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/components/OptionTextInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/changelog.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/duckduckgo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/ecosia.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/google.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/pic_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/pic_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/pic_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/pic_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/pic_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/pic_6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/pic_7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/pic_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/qwant.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/data/pictures/sauce.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/fluidity-main/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/startPage/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/startPage/w3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firefox/startPage/wave.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firefox/chrome/sideberry/sidebar-auto-hide.css" beforeDir="false" afterPath="$PROJECT_DIR$/firefox/chrome/sideberry/sidebar-auto-hide.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hypr/scripts/updates/checkUpdates.sh" beforeDir="false" afterPath="$PROJECT_DIR$/hypr/scripts/updates/checkUpdates.sh" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IZCqvzhsg8niij2ABaZh83sVvT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/john/workspace/Varda-Theme/firefox"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/firefox" />
+      <recent name="$PROJECT_DIR$/firefox/startPage" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aea22eda-5a73-45ce-94a7-91b871fedc64" name="Changes" comment="" />
+      <created>1670379912392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670379912392</updated>
+    </task>
+    <servers />
+  </component>
+</project>

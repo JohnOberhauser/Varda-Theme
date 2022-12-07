@@ -1,10 +1,9 @@
 #!/bin/bash
 
-#disabled while testing
-#count=$(checkupdates | wc -l)
+count=$(checkupdates | wc -l)
 
 if [[ $count == "0" ]]; then
-echo 
+echo ""
 else
-  echo $count 
+  echo "$count "
 fi

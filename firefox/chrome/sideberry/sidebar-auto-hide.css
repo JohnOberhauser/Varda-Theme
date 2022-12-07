@@ -15,7 +15,7 @@
     will-change: min-width;
 }
 
-#main-window[titlepreface*="🦊 "] #sidebar-box:hover > #sidebar{
+#main-window[titlepreface*="🦊 "] #sidebar-box:hover > #sidebar {
     min-width: var(--uc-sidebar-hover-width) !important;
     transition-delay: 0ms !important
 }
