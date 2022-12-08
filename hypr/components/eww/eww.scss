@@ -178,7 +178,11 @@
     border-radius: 16px;
 }
 
-.mediaProgress trough progress {
+.mediaProgress trough slider {
+    all: unset;
+}
+
+.mediaProgress trough highlight {
     min-height: 10px;
     border-radius: 16px;
 }

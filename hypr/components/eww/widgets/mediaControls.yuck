@@ -20,10 +20,11 @@
             :valign "center"
             :space-evenly false
             (info)
-            (progress
+            (scale
                 :class "mediaProgress"
                 :value trackPosition
                 :height 20
+                :onchange "$HOME/.config/hypr/scripts/media/setTrackPosition.sh {}"
             )
             (controls)
         )
