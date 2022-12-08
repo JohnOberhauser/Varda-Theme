@@ -47,7 +47,36 @@ searchButton.onclick = search
  * inject bookmarks into html
  */
 
-const bookmarks = [{"id":"cXUpSmwMSV0sW93q","label":"Common","bookmarks":[{"id":"zDaM1uX7S5Jr6G55","label":"Proton","url":"https://mail.proton.me/u/0/inbox"},{"id":"DhWDbQzV8facaOW5","label":"Reddit","url":"https://www.reddit.com/"},{"id":"7pjO0yk6R8Nnyjoi","label":"Pocket","url":"https://getpocket.com/explore/?src=queue_nav"},{"id":"n76HQkjFc29zZlc8","label":"YouTube","url":"https://www.youtube.com/"}]},{"id":"njYk5XF49Zdf8g3o","label":"Dev","bookmarks":[{"id":"REzi7xXTn6hBm5Vu","label":"Github","url":"https://github.com/"},{"id":"oa5G4ZJXzwxLi4CM","label":"ArchWiki","url":"https://wiki.archlinux.org/"},{"id":"fgOAsCWGRNHCRZQR","label":"Hyprland","url":"https://wiki.hyprland.org/"},{"id":"PeIbQBjpA41kjGD6","label":"Eww","url":"https://elkowar.github.io/eww/"}]},{"id":"qjTUGL2OWFspQmm2","label":"Finance","bookmarks":[{"id":"pZDB2ilcq8t0m6eW","label":"PNC","url":"https://www.onlinebanking.pnc.com/alservlet/PNCOnlineBankingServletLogin"},{"id":"5YRKKQap76zg1ZxO","label":"Vanguard","url":"https://personal.vanguard.com/us/MyHome"},{"id":"ereuzztrzJbI0lqk","label":"Charles Schwab","url":"https://client.schwab.com/clientapps/accounts/summary/"},{"id":"R37Y4hMSIvTGhRmy","label":"Fidelity","url":"https://nb.fidelity.com/public/nb/401k/home"}]}]
+const bookmarks = [
+{"id":"cXUpSmwMSV0sW93q","label":"Proton","bookmarks":[
+{"id":"zDaM1uX7S5Jr6G55","label":"Mail","url":"https://mail.proton.me/u/0/inbox"},
+{"id":"DhWDbQzV8facaOW5","label":"Calendar","url":"https://calendar.proton.me/u/0/"},
+{"id":"7pjO0yk6R8Nnyjoi","label":"Drive","url":"https://drive.proton.me/u/0"},
+{"id":"n76HQkjFc29zZlc8","label":"Account","url":"https://account.proton.me/u/0/vpn"}
+]
+},
+{"id":"njYk5XF49Zdf8g3o","label":"Social","bookmarks":[
+{"id":"REzi7xXTn6hBm5Vu","label":"Reddit","url":"https://www.reddit.com/"},
+{"id":"oa5G4ZJXzwxLi4CM","label":"Pocket","url":"https://getpocket.com/explore/?src=queue_nav"},
+{"id":"fgOAsCWGRNHCRZQR","label":"Biz","url":"https://boards.4channel.org/biz/catalog"},
+{"id":"PeIbQBjpA41kjGD6","label":"LinkedIn","url":"https://www.linkedin.com/feed/"}
+]
+},
+{"id":"njYk5XF49Zdf8g3o","label":"Dev","bookmarks":[
+{"id":"REzi7xXTn6hBm5Vu","label":"Github","url":"https://github.com/"},
+{"id":"oa5G4ZJXzwxLi4CM","label":"ArchWiki","url":"https://wiki.archlinux.org/"},
+{"id":"fgOAsCWGRNHCRZQR","label":"Hyprland","url":"https://wiki.hyprland.org/"},
+{"id":"PeIbQBjpA41kjGD6","label":"Eww","url":"https://elkowar.github.io/eww/"}
+]
+},
+{"id":"qjTUGL2OWFspQmm2","label":"Video","bookmarks":[
+{"id":"pZDB2ilcq8t0m6eW","label":"YouTube","url":"https://www.youtube.com/"},
+{"id":"5YRKKQap76zg1ZxO","label":"Twitch","url":"https://www.twitch.tv/directory"},
+{"id":"ereuzztrzJbI0lqk","label":"Netflix","url":"https://www.netflix.com/browse"},
+{"id":"R37Y4hMSIvTGhRmy","label":"HBO","url":"https://play.hbomax.com/page/urn:hbo:page:home"}
+]
+}
+]
 
 const createGroupContainer = () => {
   const container = document.createElement("div")
