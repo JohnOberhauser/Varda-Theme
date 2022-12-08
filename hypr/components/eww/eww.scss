@@ -236,10 +236,15 @@
 }
 
 .statusMenuVolumeProgress trough {
+    background: #141619;
     min-width: 10px;
     border-radius: 16px;
 }
-.statusMenuVolumeProgress trough progress {
+.statusMenuVolumeProgress trough slider {
+    all: unset;
+}
+
+.statusMenuVolumeProgress trough highlight {
     min-width: 10px;
     border-radius: 16px;
 }

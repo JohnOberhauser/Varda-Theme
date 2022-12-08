@@ -55,7 +55,6 @@
         (screenSharing)
         (packageUpdates)
         (volume)
-        (mic_volume)
         (power_options)
     )
 )

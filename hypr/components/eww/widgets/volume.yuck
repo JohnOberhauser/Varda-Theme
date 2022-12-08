@@ -1,37 +1,15 @@
-(defpoll volume_output_name :interval "1h" :run-while false "$HOME/.config/hypr/scripts/audio/getDefaultOutputName.sh")
-(defpoll volume_percent :interval "1h" :run-while false :initial "$HOME/.config/hypr/scripts/audio/getVolumePercent.sh" "$HOME/.config/hypr/scripts/audio/getVolumePercent.sh")
 (defpoll volume_icon :interval "1h" :run-while false "$HOME/.config/hypr/scripts/audio/getVolumeIcon.sh")
-(defvar vol_reveal false)
 
 (defwidget volume []
-  (eventbox
-        :onhover "${eww} update vol_reveal=true"
-        :onhoverlost "${eww} update vol_reveal=false"
-        (box
-            :class "rightSideModule"
-            :space-evenly "false"
-            :orientation "h"
-            :spacing "0"
-            (button
-                :class "rightSideIcon"
-                :onclick "$HOME/.config/hypr/scripts/audio/swapOutput.sh"
-                :tooltip "${volume_output_name}%"
-                volume_icon
-            )
-            (revealer
-                :transition "slideleft"
-                :reveal vol_reveal
-                :duration "350ms"
-                (scale
-                    :class "volbar"
-                    :value volume_percent
-                    :tooltip "${volume_output_name}%"
-                    :orientation "h"
-                    :max 100
-                    :min 0
-                    :onchange "$HOME/.config/hypr/scripts/audio/changeVolume.sh value {}%"
-                )
-            )
+    (box
+        :class "rightSideModule"
+        :space-evenly "false"
+        :orientation "h"
+        :spacing "0"
+        (button
+            :class "rightSideIcon"
+            :onclick "$HOME/.config/hypr/scripts/audio/swapOutput.sh"
+            volume_icon
         )
     )
 )

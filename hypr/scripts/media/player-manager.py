@@ -102,13 +102,13 @@ def on_name_appeared(manager, name):
     print("player appeared: {}".format(name.name))
     time.sleep(3) # race condition during initialization
     init_player(name)
-    eww("update mediaVisible=true")
+    eww("update mediaControlsRevealed=true")
 
 
 def on_player_vanished(manager, player):
     print('player has exited: {}'.format(player.props.player_name))
     # playerConnected = False
-    eww("update mediaVisible=false")
+    eww("update mediaControlsRevealed=false")
 
 manager.connect('name-appeared', on_name_appeared)
 manager.connect('player-vanished', on_player_vanished)

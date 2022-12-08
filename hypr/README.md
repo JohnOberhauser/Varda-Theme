@@ -15,6 +15,8 @@ xdg-desktop-portal-wlr
 dunst
 jq
 python
+pacman-contrib
+polkit-gnome
 
 #### from AUR:
 hyprland

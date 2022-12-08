@@ -2,7 +2,6 @@
 ;(defpoll trackTitle :interval "5s" "playerctl metadata xesam:title")
 ;(defpoll trackArtist :interval "5s" "playerctl metadata xesam:artist")
 
-(defvar mediaVisible false)
 (defvar trackTitle "---")
 (defvar trackArtist "---")
 ;(defvar trackPosition 0)

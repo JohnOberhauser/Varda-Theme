@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aea22eda-5a73-45ce-94a7-91b871fedc64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/firefox/mini-yags/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firefox/mini-yags/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/firefox/mini-yags/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firefox/mini-yags/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/firefox/mini-yags/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firefox/sideberry/sidebery-data-2022.12.04-19.11.00.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

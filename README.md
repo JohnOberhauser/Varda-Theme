@@ -20,7 +20,8 @@ blue: [82, 103, 124]
 grey: [46, 52, 54]
 
 # Secondary
-dark_grey: 2E3436
+derk_grey: 141619
+dark_grey2: 2E3436
 light_white: E5FFFF # white
 neon: 80BB00
 

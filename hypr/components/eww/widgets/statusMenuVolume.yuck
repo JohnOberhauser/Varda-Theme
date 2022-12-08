@@ -13,7 +13,7 @@
             :class "statusMenuVolumeInnerContainer"
             :orientation "v"
             :space-evenly false
-            (progress
+            (scale
                 :class "statusMenuVolumeProgress"
                 :orientation "v"
                 :valign "center"
@@ -21,6 +21,7 @@
                 :value volume_percent2
                 :flipped true
                 :height 150
+                :onchange "$HOME/.config/hypr/scripts/audio/changeVolume.sh value {}%"
             )
             (label
                 :class "statusMenuVolumeIcon"
@@ -33,7 +34,7 @@
             :class "statusMenuVolumeInnerContainer"
             :orientation "v"
             :space-evenly false
-            (progress
+            (scale
                 :class "statusMenuVolumeProgress"
                 :orientation "v"
                 :valign "center"
@@ -41,6 +42,7 @@
                 :value mic_volume_percent2
                 :flipped true
                 :height 150
+                :onchange "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ {}%"
             )
             (label
                 :class "statusMenuVolumeIcon"

@@ -8,16 +8,8 @@
 const searchInput = document.querySelector("#searchbar > input")
 const searchButton = document.querySelector("#searchbar > button")
 
-const lookup = {"/":"/","deepl":"https://deepl.com/","reddit":"https://reddit.com/","maps":"https://maps.google.com/"}
-const engine = "duckduckgo"
-const engineUrls = {
-  deepl: "https://www.deepl.com/translator#-/-/",
-  duckduckgo: "https://duckduckgo.com/?q=",
-  ecosia: "https://www.ecosia.org/search?q=",
-  google: "https://www.google.com/search?q=",
-  startpage: "https://www.startpage.com/search?q=",
-  youtube: "https://www.youtube.com/results?q=",
-}
+const lookup = {}
+const engine = "https://duckduckgo.com/?q="
 
 const isWebUrl = value => {
   try {
@@ -29,15 +21,16 @@ const isWebUrl = value => {
 }
 
 const getTargetUrl = value => {
-  if (isWebUrl(value)) return value
-  if (lookup[value]) return lookup[value]
-  return engineUrls[engine] + value
+    if (isWebUrl(value)) return value
+    if (lookup[value]) return lookup[value]
+    return engine + value
 }
 
 const search = () => {
-  const value = searchInput.value
-  const targetUrl = getTargetUrl(value)
-  window.open(targetUrl, "_self")
+    const value = searchInput.value
+    const targetUrl = getTargetUrl(value)
+    if (targetUrl == engine) return
+    window.open(targetUrl, "_self")
 }
 
 searchInput.onkeyup = event => event.key === "Enter" && search()

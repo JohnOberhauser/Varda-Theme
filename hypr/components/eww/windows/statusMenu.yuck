@@ -5,6 +5,8 @@
 (include "./widgets/statusMenuVolume.yuck")
 (include "./widgets/date.yuck")
 
+(defvar mediaControlsRevealed false)
+
 (defwindow statusMenuWindow
     :class "statusMenuWindow"
     :monitor 0
@@ -41,7 +43,12 @@
                 (machineStats)
                 (statusMenuVolume)
             )
-            (mediaControls)
+            (revealer
+                :transition "slidedown"
+                :reveal mediaControlsRevealed
+                :duration "350ms"
+                (mediaControls)
+            )
         )
     )
 )
