@@ -7,12 +7,12 @@
     overflow: hidden;
   }
   .Tab .audio {
-    left: 10px;
-    transform: scale(.80);
-    transform: translateY(4px);
-    z-index: 99 !important;
+    display: none;
   }
   .Tab .title {
+    visibility: collapse;
+  }
+  .PinnedTab .title {
     visibility: collapse;
   }
 }
@@ -29,11 +29,17 @@
 
 #root {
     --tabs-height: 43px;
+    --nav-btn-width: 48px;
+    --nav-btn-activated-bg: #0C0E11;
 }
 
 /* Background layer */
 
 .Tab {
+    margin: 0 4px;
+    width: unset;
+}
+.PinnedTab {
     margin: 0 4px;
     width: unset;
 }
@@ -100,4 +106,29 @@
 .Tab .placeholder,
 .Tab .t-box {
     margin-bottom: -2px;
+}
+
+.PinnedTab {
+    height: 48px;
+    border-radius: 4px;
+}
+
+.PinnedTab .fav {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+.PinnedTab[data-active] .fav {
+    opacity: 1;
+}
+
+#root[data-pinned-tabs-position="panel"][data-pinned-tabs-list] .PinnedDock .to-the-end {
+    background: #ffffff;
+    height: 1px;
+    opacity: 0.2;
+}
+.NavigationBar .panel-btn[data-active="true"] {
+    background-color: transparent;
 }
