@@ -1,12 +1,15 @@
 # Varda-Theme
-Varda theme for various programs
+A theme for various programs, largly surrounding my hyprland setup
 
-#Color Pallete
+
+
+
+# Color Pallete
 ```
 # Primary Hex
 white: D0EBEE
 black: 0C0E11
-steel_blue: 52677C
+blue: 52677C
 red: 733447
 green: 257B76
 peach: C78C56
