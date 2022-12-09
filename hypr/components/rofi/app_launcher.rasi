@@ -1,11 +1,11 @@
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,run,filebrowser,window";
+	modi:                       "drun,run";
     show-icons:                 false;
-    display-drun:               "Apps";
-    display-run:                "Run";
-    display-filebrowser:        "Files";
-    display-window:             "Window";
+    display-drun:               "";
+    display-run:                "";
+    display-filebrowser:        "";
+    display-window:             "";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
@@ -68,7 +68,6 @@ inputbar {
     spacing:                     10px;
     padding:                     15px;
     border-radius:               10px;
-    background-color:            @background-alt;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
 }
@@ -91,16 +90,16 @@ entry {
 /*****----- Mode Switcher -----*****/
 mode-switcher{
     enabled:                     true;
-    spacing:                     20px;
+    spacing:                     50px;
     background-color:            transparent;
     text-color:                  @foreground;
 }
 button {
     padding:                     15px;
     border-radius:               10px;
-    background-color:            @background-alt;
     text-color:                  inherit;
     cursor:                      pointer;
+    font:                        "JetBrainsMono Patched Glyphs 20";
 }
 button selected {
     background-color:            @selected;
