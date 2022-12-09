@@ -1,6 +1,0 @@
-for_window [title="KPower - power options"] floating enable
-#for_window [title="KPower - power options"] floating_modifier none
-for_window [title="KMenu - app launcher"] floating enable
-#for_window [title="KMenu - app launcher"] floating_modifier none
-for_window [title="KMenu - app launcher"] move window to output DP-1
-for_window [title="KPower - power options"] move window to output DP-1

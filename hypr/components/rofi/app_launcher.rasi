@@ -1,20 +1,11 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- *
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
-
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun,run,filebrowser,window";
-    show-icons:                 true;
-    display-drun:               "APPS";
-    display-run:                "RUN";
-    display-filebrowser:        "FILES";
-    display-window:             "WINDOW";
+    show-icons:                 false;
+    display-drun:               "Apps";
+    display-run:                "Run";
+    display-filebrowser:        "Files";
+    display-window:             "Window";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
@@ -31,12 +22,13 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       1000px;
+    height:                      500px;
     x-offset:                    0px;
     y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
-    border-radius:               15px;
+    border-radius:               4px;
     cursor:                      "default";
     background-color:            @background;
 }
@@ -60,7 +52,7 @@ imagebox {
 
 listbox {
     spacing:                     20px;
-    padding:                     20px;
+    padding:                     20px 20px 0px 20px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "message", "listview" ];
@@ -119,15 +111,12 @@ button selected {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       8;
-    cycle:                       true;
+    lines:                       5;
+    cycle:                       false;
     dynamic:                     true;
     scrollbar:                   false;
     layout:                      vertical;
-    reverse:                     false;
-    fixed-height:                true;
-    fixed-columns:               true;
-
+    border:                      0px solid;
     spacing:                     10px;
     background-color:            transparent;
     text-color:                  @foreground;
@@ -168,6 +157,18 @@ element selected.active {
     background-color:            @urgent;
     text-color:                  @foreground;
 }
+element alternate.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element alternate.urgent {
+    background-color:            @urgent;
+    text-color:                  @foreground;
+}
+element alternate.active {
+    background-color:            @active;
+    text-color:                  @foreground;
+}
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
@@ -185,6 +186,7 @@ element-text {
 /*****----- Message -----*****/
 message {
     background-color:            transparent;
+    border:                      0px solid;
 }
 textbox {
     padding:                     15px;

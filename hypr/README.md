@@ -3,24 +3,24 @@ place this directory in ~/.config/
 ### required packages
 
 #### from arch repo
-eww
-wireplumber
-playerctl
-swaylock
-rofi
-swayidle
-slurp
-grim
-xdg-desktop-portal-wlr
-dunst
-jq
-python
-pacman-contrib
-polkit-gnome
+eww - topbar and widgets
+wireplumber - used in varius scripts for audio
+playerctl - used in various scripts for controlling media players
+swaylock - lock screen
+rofi - app launcher
+swayidle - screen timeout
+slurp - screenshot / screencast utility
+grim - screenshot taker
+xdg-desktop-portal-wlr - portal backend for screenshots and screencasting
+xdg-desktop-portal-gtk - portal backend for everything else (also has screenshot and screencast, but wlr overrides it)
+dunst - notifications
+python - various scripts (weather and media controls)
+pacman-contrib - used in script to check how many packages are out of date
+polkit-gnome - GUI sudo permission handler
 
 #### from AUR:
-hyprland
-hyprpaper
+hyprland - duh
+hyprpaper - wallpaper
 
 
 
