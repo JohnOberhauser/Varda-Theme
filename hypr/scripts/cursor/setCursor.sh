@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# also set cursor size in wrapper file (for me it's ~/.local/bin/hyprland-wrapper.sh)
+# also set cursor size in wrapper file (for me it's /usr/local/bin/hyprland-wrapper.sh)
 
 # for GDM create a file /etc/dconf/db/gdm.d/10-cursor-settings
 # place this text in that file:

@@ -3,7 +3,6 @@
 import gi
 import os
 import time
-import threading
 gi.require_version('Playerctl', '2.0')
 from gi.repository import Playerctl, GLib
 
@@ -69,6 +68,7 @@ def on_loop_playlist(player, status, manager):
 def init_player(name):
     # choose if you want to manage the player based on the name
     if name.name in ['spotify']:
+        eww("update mediaControlsRevealed=true")
         player = Playerctl.Player.new_from_name(name)
         print(dir(player))
         player.connect('playback-status::playing', on_play, manager)
@@ -82,28 +82,13 @@ def init_player(name):
         player.set_shuffle(False)
         player.set_loop_status(Playerctl.LoopStatus.NONE)
         setTrackInfo(player)
-        # threading.Thread(target=seek_watcher, args=(player,)).start()
         manager.manage_player(player)
 
-# def seek_watcher(player):
-#     print("initializing seek watcher")
-#     playerConnected = True
-#     #isPlaying = player.get_property("playback-status") == Playerctl.PlaybackStatus.PLAYING
-#     while True:
-#         print("watching seek")
-#         os.system("$HOME/.config/hypr/scripts/media/getTrackPosition.sh")
-#         #position = int((player.get_property("position") / player.get_property("metadata")["mpris:length"]) * 100)
-#         #print(position)
-#         #eww("update trackPosition={}".format(position))
-#         time.sleep(1)
-#     print("exiting seek watcher")
 
 def on_name_appeared(manager, name):
     print("player appeared: {}".format(name.name))
     time.sleep(3) # race condition during initialization
     init_player(name)
-    eww("update mediaControlsRevealed=true")
-
 
 def on_player_vanished(manager, player):
     print('player has exited: {}'.format(player.props.player_name))
