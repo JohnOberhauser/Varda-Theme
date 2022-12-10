@@ -1,16 +1,15 @@
 (defvar volumeAlertPercent 0)
-(defvar volumeAlertImagePath "../../assets/images/volume/high.svg")
 (defvar volumeAlertLastUpdateTimeStamp 0)
+(defpoll volume_icon3 :interval "1h" :run-while false "$HOME/.config/hypr/scripts/audio/getVolumeIcon.sh")
 
 (defwidget volumeAlert []
     (box
         
         :space-evenly false
         :orientation "h"
-        (image
-            :path volumeAlertImagePath
-            :image-width 50
-            :image-height 50
+        (label
+            :class "volumeAlertIcon"
+            :text volume_icon3
         )
         (box
             :class "volumeAlertBox2"

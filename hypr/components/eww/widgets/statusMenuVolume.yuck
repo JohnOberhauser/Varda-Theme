@@ -27,6 +27,7 @@
                 :class "statusMenuVolumeIcon"
                 :valign "center"
                 :halign "center"
+                :width 30
                 :text volume_icon2
             )
         )
@@ -48,6 +49,7 @@
                 :class "statusMenuVolumeIcon"
                 :valign "center"
                 :halign "center"
+                :width 30
                 :text ""
             )
         )
