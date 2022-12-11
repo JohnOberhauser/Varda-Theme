@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# works in conjunction with showVolumeAlert.sh and the volumeAlertLastUpdateTimeStamp variable in eww
+
 echo attempting close process
 LOCK_FILE="$HOME/.cache/eww-volume-alert.lock"
 

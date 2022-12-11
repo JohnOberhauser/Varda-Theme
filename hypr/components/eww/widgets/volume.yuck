@@ -1,4 +1,4 @@
-(defpoll volume_icon :interval "1h" "$HOME/.config/hypr/scripts/audio/getVolumeIcon.sh")
+(defpoll volume_icon :interval "1h" :run-while false "$HOME/.config/hypr/scripts/audio/getVolumeIcon.sh")
 
 (defwidget volume []
     (box

@@ -25,6 +25,7 @@ grey: [46, 52, 54]
 # Secondary
 derk_grey: 141619
 dark_grey2: 2E3436
+dark_grey3: 3b4444
 light_white: E5FFFF # white
 neon: 80BB00
 
