@@ -156,6 +156,14 @@
     margin-top: 10px;
 }
 
+.volumeAlertProgress trough {
+    background: #141619;
+}
+
+.volumeAlertProgress trough progress {
+    background: #D0EBEE;
+}
+
 .volumeAlertIcon {
     margin-left: 20px;
     margin-right: 10px;
@@ -182,6 +190,7 @@
 .mediaProgress trough {
     min-height: 10px;
     border-radius: 16px;
+    background: #141619;
 }
 
 .mediaProgress trough slider {
@@ -191,6 +200,7 @@
 .mediaProgress trough highlight {
     min-height: 10px;
     border-radius: 16px;
+    background: #D0EBEE;
 }
 
 .trackArtist {
@@ -257,6 +267,7 @@
 .statusMenuVolumeProgress trough highlight {
     min-width: 10px;
     border-radius: 16px;
+    background: #D0EBEE;
 }
 
 .statusMenuVolumeInnerContainer {
