@@ -8,23 +8,23 @@
     (box
        :orientation "h"
         (button :class "workspace_button"
-            :onclick "$HOME/.config/hypr/scripts/workspaces/space1.sh"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/goToWorkspace.sh 1"
             "${ws1_icon}"
         )
         (button :class "workspace_button"
-            :onclick "$HOME/.config/hypr/scripts/workspaces/space2.sh"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/goToWorkspace.sh 2"
             "${ws2_icon}"
         )
         (button :class "workspace_button"
-            :onclick "$HOME/.config/hypr/scripts/workspaces/space3.sh"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/goToWorkspace.sh 3"
             "${ws3_icon}"
         )
         (button :class "workspace_button"
-            :onclick "$HOME/.config/hypr/scripts/workspaces/space4.sh"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/goToWorkspace.sh 4"
             "${ws4_icon}"
         )
         (button :class "workspace_button"
-            :onclick "$HOME/.config/hypr/scripts/workspaces/space5.sh"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/goToWorkspace.sh 5"
             "${ws5_icon}"
         )
     )

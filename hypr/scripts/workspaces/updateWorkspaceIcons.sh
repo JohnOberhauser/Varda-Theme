@@ -9,15 +9,15 @@ ws3_icon=""
 ws4_icon=""
 ws5_icon=""
 
-if [[ $selected_workspace == 1 ]] || [[ $selected_workspace == 2 ]]; then
+if [[ $selected_workspace == 1 ]] || [[ $selected_workspace == 11 ]]; then
     ws1_icon=""
-elif [[ $selected_workspace == 3 ]] || [[ $selected_workspace == 4 ]]; then
+elif [[ $selected_workspace == 2 ]] || [[ $selected_workspace == 12 ]]; then
     ws2_icon=""
-elif [[ $selected_workspace == 5 ]] || [[ $selected_workspace == 6 ]]; then
+elif [[ $selected_workspace == 3 ]] || [[ $selected_workspace == 13 ]]; then
     ws3_icon=""
-elif [[ $selected_workspace == 7 ]] || [[ $selected_workspace == 8 ]]; then
+elif [[ $selected_workspace == 4 ]] || [[ $selected_workspace == 14 ]]; then
     ws4_icon=""
-elif [[ $selected_workspace == 9 ]] || [[ $selected_workspace == 10 ]]; then
+elif [[ $selected_workspace == 5 ]] || [[ $selected_workspace == 15 ]]; then
     ws5_icon=""
 fi
 
