@@ -26,8 +26,6 @@
             :halign "center"
             :valign "center"
             :space-evenly false
-            ;(calendarContainer)
-
             (weather)
         )
         (box
