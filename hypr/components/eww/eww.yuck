@@ -3,3 +3,4 @@
 (include "./windows/topbar.yuck")
 (include "./windows/volumeAlert.yuck")
 (include "./windows/statusMenu.yuck")
+(include "./windows/systemMenu.yuck")

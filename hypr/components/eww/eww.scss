@@ -35,10 +35,19 @@
     padding-left: 100px;
 }
 
+.powerOptionsContainer {
+    background-color: transparent;
+    border-radius: 16px;
+    margin: 0px 10px 10px 10px;
+}
+
 .power_option {
     background: transparent;
-    padding: 0px 15px 0px 15px;
+    margin: 20px 5px 20px 5px;
+    padding: 10px 20px 10px 20px;
     color: #D0EBEE;
+    font-size: 25px;
+    border-radius: 16px;
 }
 
 .clock {
@@ -171,8 +180,8 @@
 }
 
 .mediaControlsContainer {
-    margin: 10px;
-    padding: 10px;
+    background-color: transparent;
+    padding: 20px 10px 10px 10px;
     border-color: #52677C;
     border-width: 1px;
     border-style: none;
@@ -188,7 +197,7 @@
 }
 
 .mediaProgress trough {
-    min-height: 10px;
+    min-height: 8px;
     border-radius: 16px;
     background: #141619;
 }
@@ -198,7 +207,7 @@
 }
 
 .mediaProgress trough highlight {
-    min-height: 10px;
+    min-height: 8px;
     border-radius: 16px;
     background: #D0EBEE;
 }
@@ -212,19 +221,21 @@
 }
 
 .mediaControlsButton {
-    font-size: 40px;
-    background-color: #0C0E11;
-    border-radius: 45px;
+    font-size: 30px;
+    min-width: 30px;
+    background-color: transparent;
+    border-radius: 16px;
 }
 
 .mediaControlsButtonMinor {
     font-size: 20px;
-    background-color: #0C0E11;
-    border-radius: 45px;
+    background-color: transparent;
+    border-radius: 16px;
 }
 
 .machineStatsContainer{
-    margin: 10px;
+    background-color: transparent;
+    margin: 10px 5px 10px 10px;
     padding: 10px;
     border-color: #52677C;
     border-width: 1px;
@@ -242,8 +253,9 @@
 }
 
 .statusMenuVolumeContainer {
+    background-color: transparent;
     margin: 10px;
-    padding: 10px;
+    padding: 0px 10px 0px 0px;
     border-color: #52677C;
     border-width: 1px;
     border-style: none;
@@ -251,13 +263,17 @@
 }
 
 .statusMenuVolumeIcon {
-    font-size: 36px;
-    margin-top: 20px
+    background-color: transparent;
+    min-width: 30px;
+    font-size: 25px;
+    margin: -10px 10px -10px 0px;
+    border-radius: 16px;
+    padding: 10px 15px 10px 15px;
 }
 
 .statusMenuVolumeProgress trough {
     background: #141619;
-    min-width: 10px;
+    min-height: 8px;
     border-radius: 16px;
 }
 .statusMenuVolumeProgress trough slider {
@@ -265,11 +281,20 @@
 }
 
 .statusMenuVolumeProgress trough highlight {
-    min-width: 10px;
+    min-width: 8px;
     border-radius: 16px;
     background: #D0EBEE;
 }
 
 .statusMenuVolumeInnerContainer {
     margin: 10px;
+}
+
+.systemMenuWindow {
+    background-color: #0C0E11;
+    border-radius: 8px;
+    border-color: #52677C;
+    border-width: 2px;
+    border-style: solid;
+    font-weight: bold;
 }

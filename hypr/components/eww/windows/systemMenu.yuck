@@ -1,0 +1,29 @@
+(include "./widgets/statusMenuVolume.yuck")
+(include "./widgets/mediaControls.yuck")
+(include "./widgets/powerOptions.yuck")
+(include "./widgets/machineStats.yuck")
+
+(defvar mediaControlsRevealed false)
+
+
+(defwindow systemMenuWindow
+    :class "systemMenuWindow"
+    :monitor 0
+    :geometry (geometry
+        :x "10px"
+        :y "10px"
+        :anchor "top right"
+    )
+    (box
+        :orientation "v"
+        :space-evenly false
+        (revealer
+            :transition "slidedown"
+            :reveal mediaControlsRevealed
+            :duration "350ms"
+            (mediaControls)
+        )
+        (statusMenuVolume)
+        (powerOptions)
+    )
+)

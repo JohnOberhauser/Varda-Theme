@@ -1,11 +1,6 @@
 (include "./widgets/weather.yuck")
-(include "./widgets/mediaControls.yuck")
 (include "./widgets/calendar.yuck")
-(include "./widgets/machineStats.yuck")
-(include "./widgets/statusMenuVolume.yuck")
 (include "./widgets/date.yuck")
-
-(defvar mediaControlsRevealed false)
 
 (defwindow statusMenuWindow
     :class "statusMenuWindow"
@@ -22,31 +17,12 @@
         :orientation "v"
         (date)
         (box
-            :orientation "h"
+            :orientation "v"
             :halign "center"
             :valign "center"
             :space-evenly false
             (weather)
-        )
-        (box
-            :orientation "v"
-            :space-evenly false
-            :halign "center"
-            :valign "center"
-            (box
-                :orientation "h"
-                :halign "center"
-                :valign "center"
-                :space-evenly false
-                (machineStats)
-                (statusMenuVolume)
-            )
-            (revealer
-                :transition "slidedown"
-                :reveal mediaControlsRevealed
-                :duration "350ms"
-                (mediaControls)
-            )
+            (calendarContainer)
         )
     )
 )

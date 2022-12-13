@@ -5,52 +5,52 @@
 (defwidget statusMenuVolume []
     (box
         :class "statusMenuVolumeContainer"
-        :orientation "h"
+        :orientation "v"
         :halign "center"
         :valign "center"
         :space-evenly false
         (box
             :class "statusMenuVolumeInnerContainer"
-            :orientation "v"
+            :orientation "h"
             :space-evenly false
+            (button
+                :class "statusMenuVolumeIcon"
+                :valign "center"
+                :halign "center"
+                :onclick "$HOME/.config/hypr/scripts/audio/swapOutput.sh"
+                volume_icon2
+            )
             (scale
                 :class "statusMenuVolumeProgress"
-                :orientation "v"
+                :orientation "h"
                 :valign "center"
                 :halign "center"
                 :value volume_percent2
-                :flipped true
-                :height 150
+                :flipped false
+                :width 200
                 :onchange "$HOME/.config/hypr/scripts/audio/changeVolume.sh value {}%"
             )
-            (label
-                :class "statusMenuVolumeIcon"
-                :valign "center"
-                :halign "center"
-                :width 30
-                :text volume_icon2
-            )
+
         )
         (box
             :class "statusMenuVolumeInnerContainer"
-            :orientation "v"
+            :orientation "h"
             :space-evenly false
-            (scale
-                :class "statusMenuVolumeProgress"
-                :orientation "v"
-                :valign "center"
-                :halign "center"
-                :value mic_volume_percent2
-                :flipped true
-                :height 150
-                :onchange "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ {}%"
-            )
-            (label
+            (button
                 :class "statusMenuVolumeIcon"
                 :valign "center"
                 :halign "center"
-                :width 30
-                :text ""
+                ""
+            )
+            (scale
+                :class "statusMenuVolumeProgress"
+                :orientation "h"
+                :valign "center"
+                :halign "center"
+                :value mic_volume_percent2
+                :flipped false
+                :width 200
+                :onchange "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ {}%"
             )
         )
     )

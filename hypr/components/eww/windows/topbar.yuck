@@ -4,7 +4,6 @@
 (include "./widgets/packageUpdates.yuck")
 (include "./widgets/volume.yuck")
 (include "./widgets/micVolume.yuck")
-(include "./widgets/powerOptions.yuck")
 
 (defwindow topbar
     :monitor 0
@@ -55,6 +54,10 @@
         (screenSharing)
         (packageUpdates)
         (volume)
-        (power_options)
+        (button
+            :class "rightSideIcon"
+            :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh"
+            ""
+        )
     )
 )
