@@ -13,22 +13,22 @@
             (box
                 (button
                     :class "power_option"
-                    :onclick "hyprctl dispatch exit 0"
+                    :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh && hyprctl dispatch exit 0"
                     ""
                 )
                 (button
                     :class "power_option"
-                    :onclick "${eww} update power_options_reveal=false && $HOME/.config/hypr/scripts/powerOptions/lock.sh &> /dev/null &"
+                    :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh && $HOME/.config/hypr/scripts/powerOptions/lock.sh &> /dev/null &"
                     ""
                 )
                 (button
                     :class "power_option"
-                    :onclick "reboot"
+                    :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh && reboot"
                     "ﰇ"
                 )
                 (button
                     :class "power_option"
-                    :onclick "shutdown now"
+                    :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh && shutdown now"
                     "⏻"
                 )
             )
