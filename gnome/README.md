@@ -17,7 +17,7 @@ to generate the theme, use the install script
 then copy the contents from the new theme in the ~/.theme directory to this project's varda theme
 
 
-
+Not used anymore, but leaving here in case I move back to GDM someday
 GDM shell instructions:
 
 place the hook file from the shell directory in
