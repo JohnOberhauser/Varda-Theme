@@ -68,6 +68,13 @@ const bookmarks = [
 {"id":"ereuzztrzJbI0lqk","label":"Netflix","url":"https://www.netflix.com/browse"},
 {"id":"R37Y4hMSIvTGhRmy","label":"HBO","url":"https://play.hbomax.com/page/urn:hbo:page:home"}
 ]
+},
+{"id":"qjTUGL2OWFspQm11","label":"Other","bookmarks":[
+{"id":"pZDB2ilcq8t0m611","label":"Maps","url":"https://www.google.com/maps"},
+{"id":"5YRKKQap76zg1Z11","label":"Amazon","url":"https://www.amazon.com/"},
+{"id":"ereuzztrzJbI0l11","label":"Home Depot","url":"https://www.homedepot.com/"},
+{"id":"R37Y4hMSIvTGhR11","label":"Jewel Osco","url":"https://www.jewelosco.com/"}
+]
 }
 ]
 
