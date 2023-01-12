@@ -1,6 +1,6 @@
 #!/bin/bash
 
-nohup swayidle timeout 20 'hyprctl dispatch dpms off' \
+nohup swayidle timeout 10 'hyprctl dispatch dpms off' \
     resume 'hyprctl dispatch dpms on' \
     &> /dev/null &
 

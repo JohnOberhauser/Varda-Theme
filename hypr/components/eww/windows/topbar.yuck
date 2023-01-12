@@ -4,6 +4,7 @@
 (include "./widgets/packageUpdates.yuck")
 (include "./widgets/volume.yuck")
 (include "./widgets/micVolume.yuck")
+(include "./widgets/input.yuck")
 
 (defwindow topbar
     :monitor 0
@@ -54,6 +55,7 @@
         (screenSharing)
         (packageUpdates)
         (volume)
+        (inputButton)
         (button
             :class "rightSideIcon"
             :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh"
