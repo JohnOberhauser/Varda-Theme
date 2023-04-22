@@ -73,7 +73,7 @@ const bookmarks = [
 {"id":"pZDB2ilcq8t0m611","label":"Maps","url":"https://www.google.com/maps"},
 {"id":"5YRKKQap76zg1Z11","label":"Amazon","url":"https://www.amazon.com/"},
 {"id":"ereuzztrzJbI0l11","label":"Home Depot","url":"https://www.homedepot.com/"},
-{"id":"R37Y4hMSIvTGhR11","label":"Jewel Osco","url":"https://www.jewelosco.com/"}
+{"id":"R37Y4hMSIvTGhR11","label":"Chess","url":"https://chess.com/"}
 ]
 }
 ]
