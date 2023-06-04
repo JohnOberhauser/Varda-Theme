@@ -52,7 +52,7 @@ const bookmarks = [
 {"id":"REzi7xXTn6hBm5Vu","label":"Reddit","url":"https://www.reddit.com/"},
 {"id":"oa5G4ZJXzwxLi4CM","label":"Pocket","url":"https://getpocket.com/explore/?src=queue_nav"},
 {"id":"fgOAsCWGRNHCRZQR","label":"Biz","url":"https://boards.4channel.org/biz/catalog"},
-{"id":"PeIbQBjpA41kjGD6","label":"LinkedIn","url":"https://www.linkedin.com/feed/"}
+{"id":"PeIbQBjpA41kjGD6","label":"Lemmy","url":"https://lemmy.ml/"}
 ]
 },
 {"id":"njYk5XF49Zdf8g3o","label":"Dev","bookmarks":[
@@ -66,14 +66,14 @@ const bookmarks = [
 {"id":"pZDB2ilcq8t0m6eW","label":"YouTube","url":"https://www.youtube.com/"},
 {"id":"5YRKKQap76zg1ZxO","label":"Twitch","url":"https://www.twitch.tv/directory"},
 {"id":"ereuzztrzJbI0lqk","label":"Netflix","url":"https://www.netflix.com/browse"},
-{"id":"R37Y4hMSIvTGhRmy","label":"HBO","url":"https://play.hbomax.com/page/urn:hbo:page:home"}
+{"id":"R37Y4hMSIvTGhRmy","label":"Max","url":"https://play.max.com/"}
 ]
 },
 {"id":"qjTUGL2OWFspQm11","label":"Other","bookmarks":[
 {"id":"pZDB2ilcq8t0m611","label":"Maps","url":"https://www.google.com/maps"},
 {"id":"5YRKKQap76zg1Z11","label":"Amazon","url":"https://www.amazon.com/"},
-{"id":"ereuzztrzJbI0l11","label":"Home Depot","url":"https://www.homedepot.com/"},
-{"id":"R37Y4hMSIvTGhR11","label":"Chess","url":"https://chess.com/"}
+{"id":"R37Y4hMSIvTGhR11","label":"Chess","url":"https://chess.com/"},
+{"id":"ereuzztrzJbI0l11","label":"Pi Hole","url":"http://pi.hole/admin/index.php"}
 ]
 }
 ]
