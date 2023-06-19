@@ -50,9 +50,16 @@ const bookmarks = [
 },
 {"id":"njYk5XF49Zdf8g3o","label":"Social","bookmarks":[
 {"id":"REzi7xXTn6hBm5Vu","label":"Reddit","url":"https://www.reddit.com/"},
-{"id":"oa5G4ZJXzwxLi4CM","label":"Pocket","url":"https://getpocket.com/explore/?src=queue_nav"},
 {"id":"fgOAsCWGRNHCRZQR","label":"Biz","url":"https://boards.4channel.org/biz/catalog"},
-{"id":"PeIbQBjpA41kjGD6","label":"Lemmy","url":"https://lemmy.ml/"}
+{"id":"PeIbQBjpA41kjGD6","label":"LinkedIn","url":"https://www.linkedin.com/"},
+{"id":"PeIbQBjpA41kjGD6","label":"Pocket","url":"https://getpocket.com/saves"}
+]
+},
+{"id":"njYk5XF49Zdf8g3o","label":"Federations","bookmarks":[
+{"id":"PeIbQBjpA41kjGD6","label":"LemmyMl","url":"https://lemmy.ml/"},
+{"id":"PeIbQBjpA41kjGD6","label":"Lemmy World","url":"https://lemmy.world/"},
+{"id":"PeIbQBjpA41kjGD6","label":"Kbin","url":"https://kbin.social/"},
+{"id":"PeIbQBjpA41kjGD6","label":"Mozilla","url":"https://mozilla.social/"}
 ]
 },
 {"id":"njYk5XF49Zdf8g3o","label":"Dev","bookmarks":[
