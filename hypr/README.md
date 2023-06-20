@@ -11,7 +11,7 @@ rofi - app launcher
 swayidle - screen timeout    
 slurp - screenshot / screencast utility    
 grim - screenshot taker    
-xdg-desktop-portal-wlr - portal backend for screenshots and screencasting    
+xdg-desktop-portal-hyprland - portal backend for screenshots and screencasting    
 xdg-desktop-portal-gtk - portal backend for everything else (also has screenshot and screencast, but wlr overrides it)    
 dunst - notifications    
 python - various scripts (weather and media controls)    
