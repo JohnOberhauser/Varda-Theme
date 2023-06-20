@@ -1,5 +1,14 @@
-#vpn_proton_ch-BAP[style*="unprotected"] {
-    list-style-image: url("protonvpn.svg") !important;
+#vpn_proton_ch-BAP[style*="state-unprotected"] {
+    list-style-image: url("protonvpn_unprotected.svg") !important;
+}
+#vpn_proton_ch-BAP[style*="state-not-logged-in"] {
+    list-style-image: url("protonvpn_unprotected.svg") !important;
+}
+#vpn_proton_ch-BAP[style*="state-error"] {
+    list-style-image: url("protonvpn_unprotected.svg") !important;
+}
+#vpn_proton_ch-BAP[style*="state-warning"] {
+    list-style-image: url("protonvpn_warning.svg") !important;
 }
 #vpn_proton_ch-BAP {
     list-style-image: url("protonvpn.svg") !important;
