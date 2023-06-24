@@ -33,6 +33,9 @@
         :space-evenly false
         :valign "start"
         :class "left_modules"
+        (systemMenu
+            :class "verticalIcon"
+        )
         (workspaces
             :orientation "v"
         )
@@ -68,8 +71,5 @@
             :class "verticalIcon"
         )
         (clockVertical)
-        (systemMenu
-            :class "verticalIcon"
-        )
     )
 )
