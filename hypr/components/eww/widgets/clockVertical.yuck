@@ -1,0 +1,11 @@
+(defpoll time :interval "5s" "$HOME/.config/hypr/scripts/clock/getTime.sh timeNewLine")
+
+(defwidget clockVertical []
+    (box
+        (button
+            :class "clockVertical"
+            :onclick "$HOME/.config/hypr/scripts/statusMenu/toggleStatusMenu.sh"
+            time
+        )
+    )
+)

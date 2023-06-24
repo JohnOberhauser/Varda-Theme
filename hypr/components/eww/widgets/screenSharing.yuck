@@ -1,8 +1,8 @@
 (defpoll screen_sharing_reveal :interval "5s" "$HOME/.config/hypr/scripts/video/checkIfScreenSharing.sh")
 
-(defwidget screenSharing []
+(defwidget screenSharing [?text class]
     (box
-        :class "rightSideIcon"
+        :class "${class}"
         :visible screen_sharing_reveal
         ""
     )

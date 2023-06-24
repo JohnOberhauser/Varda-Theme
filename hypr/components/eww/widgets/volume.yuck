@@ -1,13 +1,13 @@
 (defpoll volume_icon :interval "1h" :run-while false "$HOME/.config/hypr/scripts/audio/getVolumeIcon.sh")
 
-(defwidget volume []
+(defwidget volume [?text class]
     (box
-        :class "rightSideModule"
-        :space-evenly "false"
+        :class "${class}"
+        :space-evenly "true"
         :orientation "h"
         :spacing "0"
         (button
-            :class "rightSideIcon"
+            :class "${class}"
             :onclick "$HOME/.config/hypr/scripts/audio/swapOutput.sh"
             volume_icon
         )

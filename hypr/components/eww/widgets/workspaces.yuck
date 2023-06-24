@@ -4,9 +4,9 @@
 (defvar ws4_icon "")
 (defvar ws5_icon "")
 
-(defwidget workspaces []
+(defwidget workspaces [?text orientation]
     (box
-       :orientation "h"
+       :orientation "${orientation}"
         (button :class "workspace_button"
             :onclick "$HOME/.config/hypr/scripts/workspaces/goToWorkspace.sh 1"
             "${ws1_icon}"

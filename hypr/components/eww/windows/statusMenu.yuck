@@ -6,9 +6,9 @@
     :class "statusMenuWindow"
     :monitor 0
     :geometry (geometry
-        :x "0%"
-        :y "10px"
-        :anchor "top center"
+        :x "10px"
+        :y "0%"
+        :anchor "bottom left"
     )
     (box
         :halign "center"
