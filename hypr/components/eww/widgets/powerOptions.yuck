@@ -24,7 +24,7 @@
                 (button
                     :class "power_option"
                     :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh && reboot"
-                    "ﰇ"
+                    ""
                 )
                 (button
                     :class "power_option"

@@ -12,7 +12,7 @@
     :geometry (geometry
         :x "10px"
         :y "0%"
-        :width "30px"
+        :width "40px"
         :height "1420px"
         :anchor "left center")
     :stacking "fg"
@@ -34,7 +34,7 @@
         :valign "start"
         :class "left_modules"
         (systemMenu
-            :class "verticalIcon"
+            :class "verticalIconMovedLeft"
         )
         (workspaces
             :orientation "v"

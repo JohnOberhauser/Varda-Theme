@@ -1,6 +1,6 @@
 (defpoll packages_update_dummy :interval "5m" "$HOME/.config/hypr/scripts/updates/checkUpdates.sh noCount")
-(defvar packages_update_icon " ")
-(defvar packages_update_class " ")
+(defvar packages_update_icon "󰏓")
+(defvar packages_update_class "updateNormal")
 
 (defwidget packageUpdatesVertical []
     (button
