@@ -2,10 +2,23 @@
 
 count=$(checkupdates | wc -l)
 
+icon="󰏓"
+class="updateNormal"
+
 if [[ $count == "0" ]]; then
-echo ""
-elif [[ $1 == "newLine" ]]; then
-  echo "\n$count"
+  icon="󰏓"
+elif [[ $1 == "noCount" ]]; then
+  icon=""
 else
-  echo "$count "
+  icon="$count "
 fi
+
+if [[ $count -gt "100" ]]; then
+  class="updateUrgent"
+else
+  class="updateNormal"
+fi
+
+eww -c $HOME/.config/hypr/components/eww update packages_update_icon="$icon"
+eww -c $HOME/.config/hypr/components/eww update packages_update_class="$class"
+echo "dummy"

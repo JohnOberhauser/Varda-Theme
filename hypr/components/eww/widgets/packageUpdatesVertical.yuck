@@ -1,9 +1,11 @@
-(defpoll packages_update :interval "5m" "$HOME/.config/hypr/scripts/updates/checkUpdates.sh newLine")
+(defpoll packages_update_dummy :interval "5m" "$HOME/.config/hypr/scripts/updates/checkUpdates.sh noCount")
+(defvar packages_update_icon " ")
+(defvar packages_update_class " ")
 
-(defwidget packageUpdatesVertical [?text class]
+(defwidget packageUpdatesVertical []
     (button
-        :class "${class}"
+        :class "${packages_update_class}"
         :onclick "gtk-launch org.manjaro.pamac.manager &> /dev/null &"
-        packages_update
+        packages_update_icon
     )
 )

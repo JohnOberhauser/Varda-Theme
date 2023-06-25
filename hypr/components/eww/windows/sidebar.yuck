@@ -61,9 +61,7 @@
         (screenSharing
             :class "verticalIcon"
         )
-        (packageUpdatesVertical
-            :class "verticalIcon"
-        )
+        (packageUpdatesVertical)
         (volume
             :class "verticalIcon"
         )
