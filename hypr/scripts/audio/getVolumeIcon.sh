@@ -10,23 +10,23 @@ vol=$(echo "$decimal * 100" | bc | awk -F "." '{print $1}')
 
 if [[ $outputName == *"Headset"* ]]; then
     if [[ $muted == "MUTED" ]]; then
-        echo "ﳌ"
+        echo "󰋐"
     elif [[ $vol == 0 ]]; then
-        echo "ﳌ"
+        echo "󰋐"
     else
-        echo ""
+        echo "󰋎"
     fi
     exit
 fi
 
 if [[ $muted == "MUTED" ]]; then
-    echo "婢"
+    echo "󰝟"
 elif [[ $vol == 0 ]]; then
-    echo "婢"
+    echo "󰝟"
 elif [[ $vol -le 33 ]]; then
     echo ""
 elif [[ $vol -le 66 ]]; then
     echo ""
 else
-    echo "墳"
+    echo "󰕾"
 fi

@@ -14,7 +14,7 @@
                 (button
                     :class "power_option"
                     :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh && hyprctl dispatch exit 0"
-                    ""
+                    "󰍃"
                 )
                 (button
                     :class "power_option"

@@ -28,7 +28,7 @@
             :xalign 0.5
         )
         (label
-            :text "煮 ${windValue}"
+            :text " ${windValue}"
             :class "weatherWind"
             :xalign 0.5
         )
