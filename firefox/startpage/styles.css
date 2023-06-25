@@ -32,7 +32,7 @@ body {
   min-width: 600px;
   overflow: hidden;
   
-  font-family: var(--font-family), sans-serif;
+  font-family: var(--font-family), monospaced;
   font-weight: 500;
   background-color: var(--color-bg-base);
 }
