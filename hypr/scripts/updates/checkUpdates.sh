@@ -8,9 +8,9 @@ class="updateNormal"
 if [[ $count == "0" ]]; then
   icon="󰏓"
 elif [[ $1 == "noCount" ]]; then
-  icon=""
+  icon="󰏔"
 else
-  icon="$count "
+  icon="$count 󰏔"
 fi
 
 if [[ $count -gt "100" ]]; then
@@ -19,6 +19,5 @@ else
   class="updateNormal"
 fi
 
-eww -c $HOME/.config/hypr/components/eww update packages_update_icon="$icon"
 eww -c $HOME/.config/hypr/components/eww update packages_update_class="$class"
-echo "dummy"
+echo "$icon"
