@@ -59,7 +59,7 @@
         :valign "end"
         :class "right_modules"
         (screenSharing
-            :class "verticalIcon"
+            :class "verticalIconMovedLeftAndUp"
         )
         (packageUpdatesVertical)
         (volume
