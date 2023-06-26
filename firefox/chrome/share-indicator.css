@@ -1,0 +1,9 @@
+@-moz-document url("chrome://browser/content/webrtcIndicator.xhtml" ){
+  :root{
+    --indicator-background-color: #0C0E11 !important;
+    --indicator-color: #D0EBEE !important;
+    --indicator-stop-button-color: #D0EBEEC !important;
+    --indicator-stop-button-background-color: #52677C !important;
+    --indicator-stop-button-hover-background-color: #52677C !important;
+  }
+}
