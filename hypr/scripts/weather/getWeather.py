@@ -43,7 +43,7 @@ def getIcon(iconCode):
 if x["cod"] != "404":
     eww("weatherIcon", getIcon(x["weather"][0]["icon"]))
     eww("weatherDescription", x["weather"][0]["description"])
-    eww("weatherTemperature", "{}宅".format(int(x["main"]["temp"])))
+    eww("weatherTemperature", "{}".format(int(x["main"]["temp"])))
     eww("windValue", "{} mph".format(int(x["wind"]["speed"])))
     eww("sunrise", time.strftime("%l:%M %p", time.localtime(x["sys"]["sunrise"])))
     eww("sunset", time.strftime("%I:%M %p", time.localtime(x["sys"]["sunset"])))
