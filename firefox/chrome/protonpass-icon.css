@@ -1,0 +1,8 @@
+#\37 8272b6fa58f4a1abaac99321d503a20_proton_me-BAP {
+    list-style-image: url("bitwarden.svg") !important;
+}
+
+.toolbarbutton-badge {
+    background-color: #0C0E11 !important;
+    color: #D0EBEE !important;
+}
