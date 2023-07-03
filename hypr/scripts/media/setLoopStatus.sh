@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [[ $1 == "稜" ]]; then
+if [[ $1 == "󰑖" ]]; then
     playerctl loop track
-elif [[ $1 == "綾" ]]; then
+elif [[ $1 == "󰑗" ]]; then
     playerctl loop playlist
 else
     playerctl loop none

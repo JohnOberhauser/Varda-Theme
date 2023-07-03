@@ -5,9 +5,9 @@
 (defvar trackTitle "---")
 (defvar trackArtist "---")
 ;(defvar trackPosition 0)
-(defvar playIcon "契")
-(defvar shuffleIcon "劣")
-(defvar loopIcon "稜")
+(defvar playIcon "󰏤")
+(defvar shuffleIcon "󰒟")
+(defvar loopIcon "󰑖")
 
 (defwidget mediaControls []
     (box
@@ -61,7 +61,7 @@
         (button
             :class "mediaControlsButton"
             :onclick "$HOME/.config/hypr/scripts/media/goToPrevious.sh"
-            "玲"
+            "󰼨"
         )
         (button
             :class "mediaControlsButton"
@@ -71,7 +71,7 @@
         (button
             :class "mediaControlsButton"
             :onclick "playerctl next"
-            "怜"
+            "󰒭"
         )
         (button
             :class "mediaControlsButtonMinor"

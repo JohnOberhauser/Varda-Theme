@@ -15,12 +15,12 @@ def eww(command):
     os.system("{} {}".format("eww -c $HOME/.config/hypr/components/eww", command))
 
 def on_play(player, status, manager):
-    eww("update playIcon=")
+    eww("update playIcon=󰏤")
     print('play')
     setTrackInfo(player)
 
 def on_pause(player, status, manager):
-    eww("update playIcon=契")
+    eww("update playIcon=")
     print('paused')
 
 def setTrackInfo(player):
@@ -48,22 +48,22 @@ def on_metadata(player, metadata, manager):
 def on_shuffle(player, status, manager):
     if (status):
         print("shuffling")
-        eww("update shuffleIcon=列")
+        eww("update shuffleIcon=󰒟")
     else:
         print("not shuffling")
-        eww("update shuffleIcon=劣")
+        eww("update shuffleIcon=󰒞")
 
 def on_loop_none(player, status, manager):
     print("none")
-    eww("update loopIcon=稜")
+    eww("update loopIcon=󰑗")
 
 def on_loop_track(player, status, manager):
     print("track")
-    eww("update loopIcon=綾")
+    eww("update loopIcon=󰑘")
 
 def on_loop_playlist(player, status, manager):
     print("playlist")
-    eww("update loopIcon=凌")
+    eww("update loopIcon=󰑖")
 
 def init_player(name):
     # choose if you want to manage the player based on the name
