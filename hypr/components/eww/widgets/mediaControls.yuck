@@ -61,7 +61,7 @@
         (button
             :class "mediaControlsButton"
             :onclick "$HOME/.config/hypr/scripts/media/goToPrevious.sh"
-            "󰼨"
+            "󰒮"
         )
         (button
             :class "mediaControlsButton"
