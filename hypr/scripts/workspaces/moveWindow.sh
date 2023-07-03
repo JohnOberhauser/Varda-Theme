@@ -11,11 +11,11 @@ else
 fi
 
 # don't do anything if the new workspace is out of bounds
-if [[ $(echo $new | tail -c 2) < 1 ]]; then
+if [[ $(echo $new | tail -c 2) -lt 1 ]]; then
     exit
 fi
 
-if [[ $(echo $new | tail -c 2) > 5 ]]; then
+if [[ $(echo $new | tail -c 2) -gt 5 ]]; then
     exit
 fi
 
