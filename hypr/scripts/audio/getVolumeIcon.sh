@@ -19,6 +19,17 @@ if [[ $outputName == *"Headset"* ]]; then
     exit
 fi
 
+if [[ $outputName == *"Buds"* ]]; then
+    if [[ $muted == "MUTED" ]]; then
+        echo "󰋐"
+    elif [[ $vol == 0 ]]; then
+        echo "󰋐"
+    else
+        echo "󰥰"
+    fi
+    exit
+fi
+
 if [[ $muted == "MUTED" ]]; then
     echo "󰝟"
 elif [[ $vol == 0 ]]; then
