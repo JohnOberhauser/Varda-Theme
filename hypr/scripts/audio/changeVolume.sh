@@ -38,6 +38,7 @@ value() {
     else
         wpctl set-volume @DEFAULT_AUDIO_SINK@ $1
     fi
+    $HOME/.config/hypr/scripts/audio/updateVolumeIcon.sh
 }
 
 if [ "$1" = "increase" ]; then
@@ -49,5 +50,3 @@ elif [ "$1" = "mute" ]; then
 elif [ "$1" = "value" ]; then
     value $2
 fi
-
-$HOME/.config/hypr/scripts/audio/updateVolumeIcon.sh

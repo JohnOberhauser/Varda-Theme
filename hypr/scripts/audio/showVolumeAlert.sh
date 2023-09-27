@@ -9,5 +9,6 @@ if [[ -f "$LOCK_FILE" ]]; then
 fi
 
 eww -c $HOME/.config/hypr/components/eww open volumeAlertWindow
+$HOME/.config/hypr/scripts/audio/updateVolumeIcon.sh
 
 $HOME/.config/hypr/scripts/audio/closeVolumeAlert.sh
