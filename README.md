@@ -1,7 +1,7 @@
 # Varda-Theme
 A theme for various programs, largly surrounding my hyprland setup
 
-
+![screenshot](.screenshots/screen1.png)
 
 
 # Color Pallete
