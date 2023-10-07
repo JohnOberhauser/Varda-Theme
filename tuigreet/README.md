@@ -1,3 +1,15 @@
+### Installing greetd and tuigreet
+
+install the packages from the AUR
+greetd
+greetd-tuigreet
+
+enable greetd:
+sudo systemctl enable --now greetd
+
+if you have another greeter set up, you will need to disable that first.  i.e. for gdm -> sudo systemctl disable gdm
+
+
 ### Setting virtual terminal colors in the early boot process
 
 #### Step 1
@@ -72,13 +84,3 @@ SysVStartPriority=99
 WantedBy=multi-user.target
 ```
 
-### Installing greetd and tuigreet
-
-install the packages from the AUR
-greetd
-greetd-tuigreet
-
-enable greetd:
-sudo systemctl enable --now greetd
-
-if you have another greeter set up, you will need to disable that first.  i.e. for gdm -> sudo systemctl disable gdm
