@@ -26,8 +26,51 @@ run `mkinitcpio -P` to regenerate all of the initramfs images
 Reboot your computer with your new colors
 
 
+### Setting virtual terminal resolution
+Adding these docs a few months after I did this, so hopefully these steps are right...
 
+#### Step 1
+Add an fb mode in `/etc/fb.modes` like so:
 
+```
+mode "ultrawide"
+    geometry 5120 1440 5120 1440 32
+    timings 0 0 0 0 0 0 0
+endmode
+```
+
+#### Step 2
+Add this to `/etc/rc.local`
+```
+#!/bin/bash
+fbset -a "ultrawide"
+```
+
+If it doesn't already exist, create it and make it executable with
+`sudo chmod +x /etc/rc.local`
+
+#### Step 3
+Make sure `rc-local.service` is enabled
+`sudo systemctl enable rc-local.service`
+
+If the `rc-local.service` file doesn't exist, create it in `/etc/systemd/system/`
+These are the files contents
+```
+[Unit]
+Description=/etc/rc.local Compatibility
+ConditionPathExists=/etc/rc.local
+
+[Service]
+Type=forking
+ExecStart=/etc/rc.local start
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+
+[Install]
+WantedBy=multi-user.target
+```
 
 ### Installing greetd and tuigreet
 
