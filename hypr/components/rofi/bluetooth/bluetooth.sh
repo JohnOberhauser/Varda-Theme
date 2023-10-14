@@ -324,8 +324,11 @@ show_menu() {
             echo "quickDevice: $quickDevice"
             echo "chosen: $chosen"
             # Open a submenu if a device is selected
-            if [[ $quickConnectDevice ]]; then quickConnectToDevice "$quickDevice";
-            elif [[ $device ]]; then device_menu "$device"; fi
+            if [[ $device ]]; then
+                device_menu "$device";
+            elif [[ $quickConnectDevice ]]; then
+                quickConnectToDevice "$quickDevice";
+            fi
             ;;
     esac
 }
