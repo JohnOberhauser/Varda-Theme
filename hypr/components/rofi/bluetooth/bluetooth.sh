@@ -287,7 +287,7 @@ show_menu() {
         discoverable=$(discoverable_on)
 
         # Options passed to rofi
-        options="$quickConnectDevices\n$divider\n$devices\n$divider\n$power\n$scan\n$pairable\n$discoverable\nExit"
+        options="$quickConnectDevices\n$devices\n$scan\nExit"
     else
         power="Power: off"
         options="$power\nExit"

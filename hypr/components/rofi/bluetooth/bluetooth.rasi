@@ -21,10 +21,10 @@ window {
     location:                    southwest;
     anchor:                      southwest;
     fullscreen:                  false;
-    width:                       600px;
-    height:                      500px;
-    x-offset:                    60px;
-    y-offset:                    -10px;
+    width:                       500px;
+    height:                      250px;
+    x-offset:                    62px;
+    y-offset:                    -11px;
 
     /* properties for all widgets */
     enabled:                     true;
