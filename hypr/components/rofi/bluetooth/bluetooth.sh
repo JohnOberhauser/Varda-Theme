@@ -334,7 +334,7 @@ show_menu() {
 }
 
 # Rofi command to pipe into, can add any options here
-rofi_command="rofi -dmenu $* -p -config $HOME/.config/hypr/components/rofi/bluetooth/bluetooth.rasi"
+rofi_command="rofi -normal-window -dmenu $* -p -config $HOME/.config/hypr/components/rofi/bluetooth/bluetooth.rasi"
 
 case "$1" in
     --status)
