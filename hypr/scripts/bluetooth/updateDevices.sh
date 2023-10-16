@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# Checks if controller is scanning for new devices
+scan_on() {
+    if bluetoothctl show | grep -q "Discovering: yes"; then
+        echo "Scan: on"
+        return 0
+    else
+        echo "Scan: off"
+        return 1
+    fi
+}
+
 # Checks if a device is connected
 device_connected() {
     device_info=$(bluetoothctl info "$1")
@@ -29,17 +40,22 @@ update_device() {
 }
 
 devices=$(bluetoothctl devices | grep Device)
-deviceNames=$(echo $devices | grep Device | cut -d ' ' -f 3-)
 
 echo "$devices"
-echo "======"
-echo "$deviceNames"
-
-# reset all visibility variables
-eww -c $HOME/.config/hypr/components/eww update bluetoothDevice1Visible=false
 
 index=1
-echo $devices | while read -r device; do
+# IFS sets the character separator for the for loop.  Set it to a new line instead of the default space.
+IFS=$'\n'
+for device in $devices
+do
     update_device $index "$device"
-    index=$index+1
+    index=$((index+1))
 done
+
+$HOME/.config/hypr/scripts/bluetooth/hideDevices.sh $index
+
+if scan_on; then
+    eww -c $HOME/.config/hypr/components/eww update bluetoothScanButtonText="Disable scanning"
+else
+    eww -c $HOME/.config/hypr/components/eww update bluetoothScanButtonText="Enable scanning"
+fi
