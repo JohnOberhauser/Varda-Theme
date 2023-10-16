@@ -1,0 +1,15 @@
+(defwidget bluetoothDevice [visible name connected]
+    (box
+        :class "bluetoothDeviceContainer"
+        :orientation "v"
+        :space-evenly false
+        :visible visible
+        (label
+            :text name
+        )
+        (button
+            :onclick {connected ? "$HOME/.config/hypr/scripts/bluetooth/connectDevice.sh '${name}' true" : "$HOME/.config/hypr/scripts/bluetooth/connectDevice.sh '${name}' false"}
+            {connected ? "Disconnect" : "Connect"}
+        )
+    )
+)

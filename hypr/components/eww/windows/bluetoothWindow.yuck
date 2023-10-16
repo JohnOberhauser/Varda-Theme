@@ -1,3 +1,5 @@
+(include "./widgets/bluetoothDevice.yuck")
+
 (defvar bluetoothDevice1Visible false)
 (defvar bluetoothDevice1Name "")
 (defvar bluetoothDevice1Connected false)
@@ -38,18 +40,10 @@
         :space-evenly false
         :valign "start"
         :halign "center"
-        (box
-            :class "bluetoothDeviceContainer"
-            :orientation "v"
-            :space-evenly false
+        (bluetoothDevice
             :visible bluetoothDevice1Visible
-            (label
-                :text "${bluetoothDevice1Name}"
-            )
-            (button
-                :onclick {bluetoothDevice1Connected ? "$HOME/.config/hypr/scripts/bluetooth/connectDevice.sh '${bluetoothDevice1Name}' true" : "$HOME/.config/hypr/scripts/bluetooth/connectDevice.sh '${bluetoothDevice1Name}' false"}
-                {bluetoothDevice1Connected ? "Disconnect" : "Connect"}
-            )
+            :name bluetoothDevice1Name
+            :connected bluetoothDevice1Connected
         )
     )
 )

@@ -6,7 +6,7 @@
 (include "./widgets/micVolume.yuck")
 (include "./widgets/input.yuck")
 (include "./widgets/systemMenu.yuck")
-(include "./widgets/bluetooth.yuck")
+(include "./widgets/bluetoothBarButton.yuck")
 
 (defwindow sidebar
     :monitor 0
@@ -63,7 +63,7 @@
             :class "verticalIconMovedLeftAndUp"
         )
         (packageUpdatesVertical)
-        (bluetooth
+        (bluetoothBarButton
             :class "verticalIcon"
         )
         (volume
