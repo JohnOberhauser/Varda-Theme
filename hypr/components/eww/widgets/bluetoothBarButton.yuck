@@ -1,4 +1,4 @@
-(defwidget bluetooth [?text class]
+(defwidget bluetoothBarButton [?text class]
     (box
         :class "${class}"
         :space-evenly "true"
