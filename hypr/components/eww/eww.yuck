@@ -5,3 +5,4 @@
 (include "./windows/volumeAlert.yuck")
 (include "./windows/statusMenu.yuck")
 (include "./windows/systemMenu.yuck")
+(include "./windows/bluetoothWindow.yuck")

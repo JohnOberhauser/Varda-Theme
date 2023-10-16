@@ -6,7 +6,8 @@
         :spacing "0"
         (button
             :class "${class}"
-            :onclick "( $HOME/.config/hypr/components/rofi/bluetooth/bluetooth.sh & )"
+            :onclick "$HOME/.config/hypr/scripts/bluetooth/toggleBluetoothMenu.sh"
+;            :onclick "( $HOME/.config/hypr/components/rofi/bluetooth/bluetooth.sh & )"
             "󰂯"
         )
     )

@@ -258,7 +258,6 @@ quickConnectToDevice() {
     device=$1
 
     # Get device name and mac address
-    device_name=$(echo "$device" | cut -d ' ' -f 3-)
     mac=$(echo "$device" | cut -d ' ' -f 2)
 
     if device_connected "$mac"; then
