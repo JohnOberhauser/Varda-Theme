@@ -80,11 +80,13 @@
         :valign "start"
         :halign "center"
         (button
+            :class "bluetoothScanningIndicator"
             :visible {bluetoothScanInProgress ? false : true}
             :onclick "( $HOME/.config/hypr/scripts/bluetooth/toggleScan.sh & )"
             bluetoothScanButtonText
         )
         (label
+            :class "bluetoothScanningIndicator"
             :text "Scanning..."
             :visible bluetoothScanInProgress
         )
