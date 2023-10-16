@@ -1,4 +1,4 @@
-image=$HOME/.config/hypr/assets/wallpaper/absdark.png
+image=$HOME/.config/hypr/assets/wallpaper/absdark_wide.png
 font="JetBrainsMono Patched Glyphs"
 indicator-thickness=10
 indicator-radius=200
