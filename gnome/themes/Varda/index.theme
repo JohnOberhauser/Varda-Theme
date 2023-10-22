@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Varda
+Name=Varda-blue-Dark-compact
 Comment=An Flat Gtk+ theme based on Elegant Design
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Varda
-MetacityTheme=Varda
-IconTheme=Tela-circle
+GtkTheme=Varda-blue-Dark-compact
+MetacityTheme=Varda-blue-Dark-compact
+IconTheme=Tela-circle-Dark
 CursorTheme=Varda-cursors
 ButtonLayout=close,minimize,maximize:menu
