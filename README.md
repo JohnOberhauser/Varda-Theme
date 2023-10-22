@@ -21,6 +21,10 @@ black: [12, 14, 17]
 white: [208, 235, 238]
 blue: [82, 103, 124]
 grey: [46, 52, 54]
+red: [115, 52, 71]
+green: [37, 123, 118]
+peach: [199, 140, 86]
+purple: [66, 71, 90]
 
 # Secondary
 derk_grey: 141619
@@ -29,7 +33,3 @@ dark_grey3: 3b4444
 light_white: E5FFFF # white
 neon: 80BB00
 
-# Secondary RGB
-peach: [199, 140, 86]
-purple: [66, 71, 90]
-```
