@@ -4512,43 +4512,43 @@ paned.vertical > separator.wide {
 }
 
 .sidebar-pane searchbar > revealer > box, .sidebar-pane headerbar, .sidebar-pane placessidebar {
-  background-color: #D0EBEE;
-  color: rgba(12, 14, 17, 0.87);
+  background-color: #0C0E11;
+  color: #D0EBEE;
 }
 
 .sidebar-pane searchbar > revealer > box entry, .sidebar-pane headerbar entry {
-  background-color: rgba(12, 14, 17, 0.04);
-  color: rgba(12, 14, 17, 0.87);
+  background-color: rgba(208, 235, 238, 0.04);
+  color: #D0EBEE;
 }
 
 .sidebar-pane searchbar > revealer > box entry:focus-within, .sidebar-pane headerbar entry:focus-within {
-  color: rgba(12, 14, 17, 0.87);
-  box-shadow: inset 0 0 0 2px rgba(12, 14, 17, 0.87);
+  color: #D0EBEE;
+  box-shadow: inset 0 0 0 2px #D0EBEE;
 }
 
 .sidebar-pane searchbar > revealer > box entry:drop(active), .sidebar-pane headerbar entry:drop(active) {
-  color: rgba(12, 14, 17, 0.87);
+  color: #D0EBEE;
 }
 
 .sidebar-pane searchbar > revealer > box entry:disabled, .sidebar-pane headerbar entry:disabled {
-  color: rgba(12, 14, 17, 0.38);
+  color: rgba(208, 235, 238, 0.5);
 }
 
 .sidebar-pane searchbar > revealer > box entry image, .sidebar-pane headerbar entry image {
-  color: rgba(12, 14, 17, 0.6);
+  color: #d0ebee;
 }
 
 .sidebar-pane searchbar > revealer > box entry image:hover, .sidebar-pane headerbar entry image:hover, .sidebar-pane searchbar > revealer > box entry image:active, .sidebar-pane headerbar entry image:active {
-  color: rgba(12, 14, 17, 0.87);
+  color: #D0EBEE;
 }
 
 .sidebar-pane searchbar > revealer > box entry image:disabled, .sidebar-pane headerbar entry image:disabled {
-  color: rgba(12, 14, 17, 0.26);
+  color: rgba(208, 235, 238, 0.3);
 }
 
 .sidebar-pane button:not(.suggested-action):not(.destructive-action) {
-  background-color: rgba(12, 14, 17, 0.04);
-  color: rgba(12, 14, 17, 0.87);
+  background-color: rgba(208, 235, 238, 0.04);
+  color: #D0EBEE;
 }
 
 .sidebar-pane button.flat:not(.suggested-action):not(.destructive-action) {
@@ -4594,29 +4594,29 @@ paned.vertical > separator.wide {
 }
 
 .sidebar-pane button:hover:not(.suggested-action):not(.destructive-action), .sidebar-pane button:active:not(.suggested-action):not(.destructive-action), .sidebar-pane button:focus:not(.suggested-action):not(.destructive-action) {
-  color: rgba(12, 14, 17, 0.87);
-}
-
-.sidebar-pane button:checked:not(.suggested-action):not(.destructive-action) {
-  background-color: rgba(12, 14, 17, 0.87);
   color: #D0EBEE;
 }
 
+.sidebar-pane button:checked:not(.suggested-action):not(.destructive-action) {
+  background-color: #D0EBEE;
+  color: #0C0E11;
+}
+
 .sidebar-pane button:checked:disabled:not(.suggested-action):not(.destructive-action) {
-  color: rgba(208, 235, 238, 0.5);
+  color: rgba(12, 14, 17, 0.5);
 }
 
 .sidebar-pane button:disabled:not(.suggested-action):not(.destructive-action) {
-  color: rgba(12, 14, 17, 0.38);
+  color: rgba(208, 235, 238, 0.5);
 }
 
 .sidebar-pane searchbar > revealer > box button:not(.suggested-action):not(.destructive-action), .sidebar-pane headerbar button:not(.suggested-action):not(.destructive-action), .sidebar-pane placessidebar .navigation-sidebar > row button.sidebar-button, .sidebar-pane .navigation-sidebar > row button, placessidebar .navigation-sidebar > row:selected button.sidebar-button {
   background-color: transparent;
-  color: rgba(12, 14, 17, 0.87);
+  color: #D0EBEE;
 }
 
 .sidebar-pane searchbar > revealer > box button:focus:not(.suggested-action):not(.destructive-action), .sidebar-pane headerbar button:focus:not(.suggested-action):not(.destructive-action), .sidebar-pane placessidebar .navigation-sidebar > row button.sidebar-button:focus, .sidebar-pane .navigation-sidebar > row button:focus, placessidebar .navigation-sidebar > row:selected button.sidebar-button:focus, .sidebar-pane searchbar > revealer > box button:hover:not(.suggested-action):not(.destructive-action), .sidebar-pane headerbar button:hover:not(.suggested-action):not(.destructive-action), .sidebar-pane placessidebar .navigation-sidebar > row button.sidebar-button:hover, .sidebar-pane .navigation-sidebar > row button:hover, placessidebar .navigation-sidebar > row:selected button.sidebar-button:hover, .sidebar-pane searchbar > revealer > box button:active:not(.suggested-action):not(.destructive-action), .sidebar-pane headerbar button:active:not(.suggested-action):not(.destructive-action), .sidebar-pane placessidebar .navigation-sidebar > row button.sidebar-button:active, .sidebar-pane .navigation-sidebar > row button:active, placessidebar .navigation-sidebar > row:selected button.sidebar-button:active, .sidebar-pane searchbar > revealer > box button:checked:not(.suggested-action):not(.destructive-action), .sidebar-pane headerbar button:checked:not(.suggested-action):not(.destructive-action), .sidebar-pane placessidebar .navigation-sidebar > row button.sidebar-button:checked, .sidebar-pane .navigation-sidebar > row button:checked, placessidebar .navigation-sidebar > row:selected button.sidebar-button:checked {
-  color: rgba(12, 14, 17, 0.87);
+  color: #D0EBEE;
 }
 
 .sidebar-pane searchbar > revealer > box button:hover:not(.suggested-action):not(.destructive-action), .sidebar-pane headerbar button:hover:not(.suggested-action):not(.destructive-action), .sidebar-pane placessidebar .navigation-sidebar > row button.sidebar-button:hover, .sidebar-pane .navigation-sidebar > row button:hover, placessidebar .navigation-sidebar > row:selected button.sidebar-button:hover {
@@ -4632,39 +4632,39 @@ paned.vertical > separator.wide {
 }
 
 .sidebar-pane searchbar > revealer > box button:disabled:not(.suggested-action):not(.destructive-action), .sidebar-pane headerbar button:disabled:not(.suggested-action):not(.destructive-action), .sidebar-pane placessidebar .navigation-sidebar > row button.sidebar-button:disabled, .sidebar-pane .navigation-sidebar > row button:disabled, placessidebar .navigation-sidebar > row:selected button.sidebar-button:disabled {
-  color: rgba(12, 14, 17, 0.38);
+  color: rgba(208, 235, 238, 0.5);
 }
 
 .sidebar-pane .navigation-sidebar > row, .sidebar-pane .navigation-sidebar > row label, .sidebar-pane .navigation-sidebar > row image {
-  color: rgba(12, 14, 17, 0.6);
+  color: #d0ebee;
 }
 
 .sidebar-pane .navigation-sidebar > row:hover, .sidebar-pane .navigation-sidebar > row:hover label, .sidebar-pane .navigation-sidebar > row:hover image, .sidebar-pane .navigation-sidebar > row:active, .sidebar-pane .navigation-sidebar > row:active label, .sidebar-pane .navigation-sidebar > row:active image {
-  color: rgba(12, 14, 17, 0.87);
-}
-
-.sidebar-pane .navigation-sidebar > row:selected {
-  background-color: rgba(12, 14, 17, 0.6);
-}
-
-.sidebar-pane .navigation-sidebar > row:selected, .sidebar-pane .navigation-sidebar > row:selected label, .sidebar-pane .navigation-sidebar > row:selected image {
   color: #D0EBEE;
 }
 
+.sidebar-pane .navigation-sidebar > row:selected {
+  background-color: #d0ebee;
+}
+
+.sidebar-pane .navigation-sidebar > row:selected, .sidebar-pane .navigation-sidebar > row:selected label, .sidebar-pane .navigation-sidebar > row:selected image {
+  color: #0C0E11;
+}
+
 .sidebar-pane .navigation-sidebar > row:selected:hover {
-  background-color: rgba(12, 14, 17, 0.87);
+  background-color: #D0EBEE;
 }
 
 .sidebar-pane .navigation-sidebar > row:disabled, .sidebar-pane .navigation-sidebar > row:disabled label, .sidebar-pane .navigation-sidebar > row:disabled image {
-  color: rgba(12, 14, 17, 0.26);
+  color: rgba(208, 235, 238, 0.3);
 }
 
 /****************
  * Sidebar Pane *
  ****************/
 .sidebar-pane {
-  background-color: #D0EBEE;
-  color: rgba(12, 14, 17, 0.87);
+  background-color: #0C0E11;
+  color: #D0EBEE;
 }
 
 .sidebar-pane placessidebar,
@@ -4686,37 +4686,37 @@ paned.vertical > separator.wide {
 }
 
 .sidebar-pane .dim-label, .sidebar-pane row label.subtitle, row .sidebar-pane label.subtitle {
-  color: rgba(12, 14, 17, 0.38);
+  color: rgba(208, 235, 238, 0.5);
 }
 
 .sidebar-pane placessidebar .navigation-sidebar > row,
 .sidebar-pane placessidebar .navigation-sidebar > row label.sidebar-label,
 .sidebar-pane placessidebar .navigation-sidebar > row image.sidebar-icon {
-  color: rgba(12, 14, 17, 0.6);
+  color: #d0ebee;
 }
 
 .sidebar-pane placessidebar .navigation-sidebar > row:disabled,
 .sidebar-pane placessidebar .navigation-sidebar > row label.sidebar-label:disabled,
 .sidebar-pane placessidebar .navigation-sidebar > row image.sidebar-icon:disabled {
-  color: rgba(12, 14, 17, 0.26);
+  color: rgba(208, 235, 238, 0.3);
 }
 
 .sidebar-pane placessidebar .navigation-sidebar > row:selected {
-  background-color: rgba(12, 14, 17, 0.6);
+  background-color: #d0ebee;
 }
 
 .sidebar-pane placessidebar .navigation-sidebar > row:selected,
 .sidebar-pane placessidebar .navigation-sidebar > row:selected label.sidebar-label,
 .sidebar-pane placessidebar .navigation-sidebar > row:selected image.sidebar-icon {
-  color: #D0EBEE;
+  color: #0C0E11;
 }
 
 .sidebar-pane placessidebar .navigation-sidebar > row.sidebar-new-bookmark-row {
-  color: rgba(12, 14, 17, 0.6);
+  color: #d0ebee;
 }
 
 .sidebar-pane placessidebar .navigation-sidebar > row.sidebar-new-bookmark-row image.sidebar-icon {
-  color: rgba(12, 14, 17, 0.6);
+  color: #d0ebee;
 }
 
 .sidebar-pane headerbar {
@@ -4732,19 +4732,19 @@ paned.vertical > separator.wide {
 }
 
 .sidebar-pane scrollbar > range > trough > slider {
-  background-color: rgba(12, 14, 17, 0.38);
+  background-color: rgba(208, 235, 238, 0.5);
 }
 
 .sidebar-pane scrollbar > range > trough > slider:hover {
-  background-color: rgba(12, 14, 17, 0.6);
+  background-color: #d0ebee;
 }
 
 .sidebar-pane scrollbar > range > trough > slider:active {
-  background-color: rgba(12, 14, 17, 0.87);
+  background-color: #D0EBEE;
 }
 
 .sidebar-pane scrollbar > range > trough > slider:disabled {
-  background-color: rgba(12, 14, 17, 0.26);
+  background-color: rgba(208, 235, 238, 0.3);
 }
 
 .sidebar-pane scrollbar.overlay-indicator:not(.dragging):not(.hovering) > range > trough > slider {
@@ -4757,7 +4757,7 @@ paned.vertical > separator.wide {
 
 .sidebar-pane scrolledwindow > overshoot.top {
   background-size: 200% 70%;
-  background-image: radial-gradient(farthest-side at top, alpha(rgba(12, 14, 17, 0.38), 0.24) 99%, transparent 100%);
+  background-image: radial-gradient(farthest-side at top, alpha(rgba(208, 235, 238, 0.5), 0.24) 99%, transparent 100%);
   background-repeat: no-repeat;
   background-position: center top;
   background-color: transparent;
@@ -4767,7 +4767,7 @@ paned.vertical > separator.wide {
 
 .sidebar-pane scrolledwindow > overshoot.bottom {
   background-size: 200% 70%;
-  background-image: radial-gradient(farthest-side at bottom, alpha(rgba(12, 14, 17, 0.38), 0.24) 99%, transparent 100%);
+  background-image: radial-gradient(farthest-side at bottom, alpha(rgba(208, 235, 238, 0.5), 0.24) 99%, transparent 100%);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-color: transparent;
@@ -4777,7 +4777,7 @@ paned.vertical > separator.wide {
 
 .sidebar-pane scrolledwindow > overshoot.left {
   background-size: 200% 70%;
-  background-image: radial-gradient(farthest-side at left, alpha(rgba(12, 14, 17, 0.38), 0.24) 99%, transparent 100%);
+  background-image: radial-gradient(farthest-side at left, alpha(rgba(208, 235, 238, 0.5), 0.24) 99%, transparent 100%);
   background-repeat: no-repeat;
   background-position: left center;
   background-color: transparent;
@@ -4787,7 +4787,7 @@ paned.vertical > separator.wide {
 
 .sidebar-pane scrolledwindow > overshoot.right {
   background-size: 200% 70%;
-  background-image: radial-gradient(farthest-side at right, alpha(rgba(12, 14, 17, 0.38), 0.24) 99%, transparent 100%);
+  background-image: radial-gradient(farthest-side at right, alpha(rgba(208, 235, 238, 0.5), 0.24) 99%, transparent 100%);
   background-repeat: no-repeat;
   background-position: right center;
   background-color: transparent;

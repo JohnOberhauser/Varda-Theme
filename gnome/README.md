@@ -16,6 +16,10 @@ to generate the theme, use the install script
     ./install.sh -n Varda -t blue -c dark -s compact
 then copy the contents from the new theme in the ~/.theme directory to this project's varda theme
 
+Copy the contents from `./Varda/gtk-4.0/` to `~/.config/gtk-4.0`
+Set the theme in `~/.config/gtk-3.0/settings.ini` (or use lxappearance or gnome tweak tools)
+
+### GDM
 
 Not used anymore, but leaving here in case I move back to GDM someday
 GDM shell instructions:
