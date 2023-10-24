@@ -41,7 +41,7 @@
             )
             (label
                 :text sunrise
-                :class "sunsetText"
+                :class "sunriseText"
             )
             (label
                 :text sunset
