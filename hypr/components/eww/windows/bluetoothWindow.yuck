@@ -126,8 +126,7 @@
         )
         (button
             :class "bluetoothScanningIndicator"
-            :visible {bluetoothScanInProgress ? false : true}
-            :onclick "flatpak run io.github.kaii_lb.Overskride"
+            :onclick "( flatpak run io.github.kaii_lb.Overskride & ) && $HOME/.config/hypr/scripts/bluetooth/toggleBluetoothMenu.sh"
             "Settings"
         )
     )
