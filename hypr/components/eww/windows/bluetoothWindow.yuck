@@ -1,8 +1,5 @@
 (include "./widgets/bluetoothDevice.yuck")
 
-(defvar bluetoothScanButtonText "Scan Off")
-(defvar bluetoothScanInProgress false)
-
 (defvar bluetoothDevice1Visible false)
 (defvar bluetoothDevice1Name "")
 (defvar bluetoothDevice1Connected false)
@@ -48,8 +45,6 @@
     :geometry (geometry
         :x "10px"
         :y "10px"
-        :width "350px"
-        :height "310px"
         :vexpand true
         :anchor "bottom left"
     )
@@ -79,17 +74,6 @@
         :space-evenly false
         :valign "start"
         :halign "center"
-        (button
-            :class "bluetoothScanningIndicator"
-            :visible {bluetoothScanInProgress ? false : true}
-            :onclick "( $HOME/.config/hypr/scripts/bluetooth/toggleScan.sh & )"
-            bluetoothScanButtonText
-        )
-        (label
-            :class "bluetoothScanningIndicator"
-            :text "Scanning..."
-            :visible bluetoothScanInProgress
-        )
         (bluetoothDevice
             :visible bluetoothDevice1Visible
             :name bluetoothDevice1Name
@@ -139,6 +123,12 @@
             :visible bluetoothDevice10Visible
             :name bluetoothDevice10Name
             :connected bluetoothDevice10Connected
+        )
+        (button
+            :class "bluetoothScanningIndicator"
+            :visible {bluetoothScanInProgress ? false : true}
+            :onclick "flatpak run io.github.kaii_lb.Overskride"
+            "Settings"
         )
     )
 )

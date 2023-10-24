@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # Checks if controller is scanning for new devices
-scan_on() {
-    if bluetoothctl show | grep -q "Discovering: yes"; then
-        echo "Scan: on"
-        return 0
-    else
-        echo "Scan: off"
-        return 1
-    fi
-}
+#scan_on() {
+#    if bluetoothctl show | grep -q "Discovering: yes"; then
+#        echo "Scan: on"
+#        return 0
+#    else
+#        echo "Scan: off"
+#        return 1
+#    fi
+#}
 
 # Checks if a device is connected
 device_connected() {
@@ -52,10 +52,5 @@ do
     index=$((index+1))
 done
 
+# hide devices that are no longer available
 $HOME/.config/hypr/scripts/bluetooth/hideDevices.sh $index
-
-if scan_on; then
-    eww -c $HOME/.config/hypr/components/eww update bluetoothScanButtonText="Disable scanning"
-else
-    eww -c $HOME/.config/hypr/components/eww update bluetoothScanButtonText="Enable scanning"
-fi

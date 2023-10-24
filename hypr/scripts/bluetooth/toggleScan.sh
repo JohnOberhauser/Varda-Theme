@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Currently unused
+
 # Checks if controller is scanning for new devices
 scan_on() {
     if bluetoothctl show | grep -q "Discovering: yes"; then
