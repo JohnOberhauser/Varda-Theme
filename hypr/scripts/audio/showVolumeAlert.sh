@@ -5,6 +5,7 @@ eww -c $HOME/.config/hypr/components/eww update volumeAlertLastUpdateTimeStamp=$
 LOCK_FILE="$HOME/.cache/eww-volume-alert.lock"
 
 if [[ -f "$LOCK_FILE" ]]; then
+    $HOME/.config/hypr/scripts/audio/updateVolumeIcon.sh
     exit
 fi
 

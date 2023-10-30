@@ -17,7 +17,7 @@ timeoutInMilliseconds=1300
 
 echo "timeout $timeoutInMilliseconds"
 
-sleep 1
+sleep 1.2
 
 while [ true ]
 do
@@ -27,8 +27,9 @@ do
 
     currentTime=$(($(date +%s%N)/1000000))
 
-    echo $alertTimeStamp
-    echo $currentTime
+#    echo $alertTimeStamp
+#    echo $currentTime
+#    echo $(eww -c $HOME/.config/hypr/components/eww get volumeAlertPercent)
 
     if [[ $alertTimeStamp -le $(expr $currentTime - $timeoutInMilliseconds) ]]; then
         eww -c $HOME/.config/hypr/components/eww close volumeAlertWindow
