@@ -1,10 +1,9 @@
 <scheme name="Varda" version="142" parent_scheme="Darcula">
   <metaInfo>
-    <property name="created">2023-11-11T22:09:42</property>
+    <property name="created">2023-11-12T15:41:50</property>
     <property name="ide">AndroidStudio</property>
-    <property name="ideVersion">2022.3.1.18</property>
-    <property name="modified">2023-11-11T22:09:45</property>
-    <property name="originalScheme">Varda new</property>
+    <property name="ideVersion">2023.2.1.13</property>
+    <property name="modified">2023-11-12T15:41:56</property>
   </metaInfo>
   <colors>
     <option name="ADDED_LINES_COLOR" value="257b76" />
@@ -88,11 +87,6 @@
     <option name="BASH.FUNCTION_CALL">
       <value>
         <option name="FOREGROUND" value="9ba9b2" />
-      </value>
-    </option>
-    <option name="BASH.HERE_DOC">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
       </value>
     </option>
     <option name="BASH.HERE_DOC_END">
@@ -898,11 +892,7 @@
         <option name="FOREGROUND" value="3b4444" />
       </value>
     </option>
-    <option name="HTML_ATTRIBUTE_VALUE">
-      <value>
-        <option name="FOREGROUND" value="257b76" />
-      </value>
-    </option>
+    <option name="HTML_ATTRIBUTE_VALUE" baseAttributes="DEFAULT_STRING" />
     <option name="HTML_CUSTOM_TAG_NAME">
       <value>
         <option name="FOREGROUND" value="c78c56" />
@@ -1124,7 +1114,7 @@
     </option>
     <option name="LIVE_TEMPLATE_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="733447" />
+        <option name="EFFECT_COLOR" value="c78c56" />
       </value>
     </option>
     <option name="LOCALE.MSGCTXT_KEYWORD">
@@ -1274,54 +1264,14 @@
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
-    <option name="MARKDOWN_CODE_SPAN">
-      <value>
-        <option name="FOREGROUND" value="98c379" />
-      </value>
-    </option>
     <option name="MARKDOWN_CODE_SPAN_MARKER">
       <value>
         <option name="FOREGROUND" value="98c379" />
       </value>
     </option>
-    <option name="MARKDOWN_HEADER_LEVEL_1">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
-    <option name="MARKDOWN_HEADER_LEVEL_2">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
-    <option name="MARKDOWN_HEADER_LEVEL_3">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
-    <option name="MARKDOWN_HEADER_LEVEL_4">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
-    <option name="MARKDOWN_HEADER_LEVEL_5">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
-    <option name="MARKDOWN_HEADER_LEVEL_6">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
     <option name="MARKDOWN_ITALIC">
       <value>
         <option name="FONT_TYPE" value="2" />
-      </value>
-    </option>
-    <option name="MARKDOWN_LINK_TITLE">
-      <value>
-        <option name="FOREGROUND" value="98c379" />
       </value>
     </option>
     <option name="MARKDOWN_TABLE_SEPARATOR">
@@ -1483,24 +1433,14 @@
     <option name="PHP_SCRIPTING_BACKGROUND">
       <value />
     </option>
-    <option name="PROPERTIES.INVALID_STRING_ESCAPE">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-        <option name="EFFECT_COLOR" value="f44747" />
-        <option name="EFFECT_TYPE" value="2" />
-      </value>
-    </option>
+    <option name="PROPERTIES.INVALID_STRING_ESCAPE" baseAttributes="DEFAULT_INVALID_STRING_ESCAPE" />
     <option name="PROPERTIES.KEY">
       <value>
         <option name="FOREGROUND" value="c78c56" />
       </value>
     </option>
     <option name="PROPERTIES.KEY_VALUE_SEPARATOR" baseAttributes="DEFAULT_OPERATION_SIGN" />
-    <option name="PROPERTIES.VALID_STRING_ESCAPE">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
+    <option name="PROPERTIES.VALID_STRING_ESCAPE" baseAttributes="DEFAULT_VALID_STRING_ESCAPE" />
     <option name="PROTOCOL_REFERENCE">
       <value>
         <option name="FOREGROUND" value="93394a" />
@@ -1614,36 +1554,16 @@
         <option name="FOREGROUND" value="c78c56" />
       </value>
     </option>
-    <option name="REGEXP.CHAR_CLASS">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
-    <option name="REGEXP.ESC_CHARACTER">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
+    <option name="REGEXP.CHAR_CLASS" baseAttributes="DEFAULT_ENTITY" />
+    <option name="REGEXP.ESC_CHARACTER" baseAttributes="DEFAULT_VALID_STRING_ESCAPE" />
     <option name="REGEXP.META">
       <value>
         <option name="FOREGROUND" value="56566a" />
       </value>
     </option>
-    <option name="REGEXP.PARENTHS">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
-    <option name="REGEXP.QUOTE_CHARACTER">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
-    <option name="REGEXP.REDUNDANT_ESCAPE">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
+    <option name="REGEXP.PARENTHS" baseAttributes="DEFAULT_PARENTHS" />
+    <option name="REGEXP.QUOTE_CHARACTER" baseAttributes="DEFAULT_VALID_STRING_ESCAPE" />
+    <option name="REGEXP.REDUNDANT_ESCAPE" baseAttributes="DEFAULT_VALID_STRING_ESCAPE" />
     <option name="REST.EXPLICIT">
       <value>
         <option name="FOREGROUND" value="56566a" />
@@ -1864,8 +1784,7 @@
     </option>
     <option name="SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="c78c56" />
-        <option name="EFFECT_COLOR" value="1c283c" />
+        <option name="EFFECT_COLOR" value="c78c56" />
       </value>
     </option>
     <option name="SLIM_BAD_CHARACTER">
@@ -1975,8 +1894,7 @@
     </option>
     <option name="TEXT_SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="c78c56" />
-        <option name="EFFECT_COLOR" value="1c283c" />
+        <option name="EFFECT_COLOR" value="c78c56" />
         <option name="ERROR_STRIPE_COLOR" value="1c283c" />
       </value>
     </option>
@@ -2036,8 +1954,7 @@
     </option>
     <option name="WRITE_SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="c78c56" />
-        <option name="EFFECT_COLOR" value="1c283c" />
+        <option name="EFFECT_COLOR" value="c78c56" />
       </value>
     </option>
     <option name="WRONG_REFERENCES_ATTRIBUTES">
@@ -2078,16 +1995,7 @@
       </value>
     </option>
     <option name="XPATH.XPATH_VARIABLE" baseAttributes="" />
-    <option name="YAML_ANCHOR">
-      <value>
-        <option name="FOREGROUND" value="93394a" />
-      </value>
-    </option>
-    <option name="YAML_SCALAR_KEY">
-      <value>
-        <option name="FOREGROUND" value="93394a" />
-      </value>
-    </option>
+    <option name="YAML_ANCHOR" baseAttributes="DEFAULT_IDENTIFIER" />
     <option name="com.plan9.IDENTIFIER">
       <value>
         <option name="FOREGROUND" value="349f97" />
