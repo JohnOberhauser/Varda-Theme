@@ -24,13 +24,14 @@
 }
 
 /*
-* Add margins and rounding around tabs
+* Root variables
 */
 
 #root {
     --tabs-height: 43px;
     --nav-btn-width: 48px;
     --nav-btn-activated-bg: #0C0E11;
+    --tabs-inner-gap: 8px;
 }
 
 /* Background layer */
