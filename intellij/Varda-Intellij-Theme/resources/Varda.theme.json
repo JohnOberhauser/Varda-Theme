@@ -1,0 +1,141 @@
+{
+  "name": "Varda",
+  "dark": true,
+  "author": "",
+  "editorScheme": "/Varda_Scheme.xml",
+  "colors": {
+    "background": "#0C0E11",
+    "backgroundHighlight": "#181C23",
+    "backgroundInactiveHighlight": "#12171E",
+    "foreground": "#D0EBEE",
+    "green": "#257B76",
+    "greenDark": "#0b2523",
+    "red": "#733447",
+    "steelBlue": "#52677C",
+    "steelPurple": "#52677C",
+    "neon": "#80BB00"
+  },
+  "icons": {
+    "ColorPalette": {
+      "Actions.Green": "#257B76",
+      "Actions.Blue": "#52677C",
+      "Actions.Red": "#733447",
+      "Actions.Yellow": "#52677C",
+      "Actions.Grey": "#52677C",
+      "Actions.GreyInline": "#52677C",
+      "Actions.GreyInline.Dark": "#52677C",
+      "Objects.BlackText": "#0C0E11",
+      "Objects.Blue": "#52677C",
+      "Objects.Green": "#257B76",
+      "Objects.GreenAndroid": "#257B76",
+      "Objects.Grey": "#52677C",
+      "Objects.Pink": "#733447",
+      "Objects.Purple": "#52677C",
+      "Objects.Red": "#733447",
+      "Objects.RedStatus": "#733447",
+      "Objects.Yellow": "#52677C",
+      "Objects.YellowDark": "#52677C"
+    }
+  },
+  "ui": {
+    "*": {
+      "background": "background",
+      "foreground": "foreground",
+      "textText": "foreground",
+
+      "warningBackground": "background",
+      "iconBackground": "background",
+      "inactiveWarningFocusColor": "background",
+
+      "infoForeground": "foreground",
+
+      "activeBackground": "backgroundHighlight",
+      "pressedBackground": "backgroundHighlight",
+      "hoverBackground": "backgroundHighlight",
+      "selectedBackground": "backgroundHighlight",
+      "selectionBackground": "backgroundHighlight",
+      "selectionForeground": "foreground",
+      "selectionInactiveBackground": "backgroundInactiveHighlight",
+      "selectionBackgroundInactive": "#background",
+
+      "disabledBackground": "background",
+      "inactiveBackground": "background",
+
+      "disabledForeground": "steelPurple",
+      "disabledText": "steelPurple",
+      "inactiveForeground": "steelPurple",
+
+      "acceleratorForeground": "foreground",
+      "acceleratorSelectionForeground": "foreground",
+
+      "errorForeground": "red",
+
+      "borderColor": "background",
+      "disabledBorderColor": "steelPurple",
+      "focusColor": "background",
+      "focusedBorderColor": "background",
+      "hoverBorderColor": "background",
+      "pressedBorderColor": "background",
+
+      "separatorColor": "steelPurple",
+      "lineSeparatorColor": "steelPurple"
+    },
+    "Button": {
+      "startBackground": "background",
+      "endBackground": "background",
+      "startBorderColor": "steelPurple",
+      "endBorderColor": "steelPurple",
+
+      "default": {
+        "foreground": "foreground",
+        "startBackground": "red",
+        "endBackground": "red",
+        "startBorderColor": "red",
+        "endBorderColor": "red",
+        "focusedBorderColor": "background"
+      }
+    },
+
+    "Borders": {
+      "color": "background",
+      "ContrastBorderColor": "background"
+    },
+
+    "DefaultTabs": {
+      "underlineColor": "red",
+      "inactiveUnderlineColor": "steelPurple",
+      "underlineHeight": 5,
+      "hoverBackground": "steelPurple"
+    },
+
+    "DragAndDrop": {
+      "areaForeground": "foreground",
+      "areaBackground": "background",
+      "areaBorderColor": "background"
+    },
+    "Editor": {
+      "background": "background",
+      "foreground": "foreground",
+      "shortcutForeground": "foreground"
+    },
+    "EditorPane.inactiveBackground": "background",
+    "EditorTabs": {
+      "background": "background",
+      "underlinedTabForeground": "foreground",
+
+      "underlineColor": "red",
+      "underlineHeight": 4,
+
+      "underlinedTabBackground": "background",
+      "inactiveColoredFileBackground": "background"
+    },
+    "FileColor": {
+      "Yellow": "background",
+      "Green": "greenDark"
+    },
+    "SearchMatch": {
+      "startBackground": "steelBlue",
+      "endBackground": "steelBlue"
+    }
+  }
+}

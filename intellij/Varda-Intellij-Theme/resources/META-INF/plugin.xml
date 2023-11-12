@@ -1,0 +1,23 @@
+<idea-plugin>
+  <id>com.ober.varda</id>
+  <name>Varda</name>
+  <version>1.0.0</version>
+  <vendor>Varda Theme</vendor>
+
+  <description><![CDATA[
+      An intellij theme based on the Varda color scheme.
+    ]]></description>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <themeProvider id="cd7dc880-8ceb-43fd-bd9c-eef716d928ac" path="/Varda.theme.json"/>
+  </extensions>
+
+</idea-plugin>
