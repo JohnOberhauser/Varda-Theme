@@ -30,6 +30,6 @@ purple: [66, 71, 90]
 derk_grey: 141619
 dark_grey2: 2E3436
 dark_grey3: 3b4444
-light_white: E5FFFF # white
+light_white: E5FFFF
 neon: 80BB00
-
+light_blue: 8295A9
