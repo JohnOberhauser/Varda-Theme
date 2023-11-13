@@ -33,3 +33,5 @@ dark_grey3: 3b4444
 light_white: E5FFFF
 neon: 80BB00
 light_blue: 8295A9
+light_red: 93394A
+light_green: 98C379
