@@ -440,6 +440,7 @@
         <option name="FOREGROUND" value="98c379" />
       </value>
     </option>
+    <option name="ComposableCallTextAttributes" baseAttributes="DEFAULT_FUNCTION_CALL" />
     <option name="DART_ENUM_CONSTANT">
       <value>
         <option name="FOREGROUND" value="c78c56" />
