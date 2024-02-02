@@ -1,11 +1,14 @@
 (include "./widgets/workspaces.yuck")
+(include "./widgets/clockVertical.yuck")
 (include "./widgets/clock.yuck")
 (include "./widgets/screenSharing.yuck")
+(include "./widgets/packageUpdatesVertical.yuck")
 (include "./widgets/packageUpdates.yuck")
 (include "./widgets/volume.yuck")
 (include "./widgets/micVolume.yuck")
 (include "./widgets/input.yuck")
 (include "./widgets/systemMenu.yuck")
+(include "./widgets/bluetoothBarButton.yuck")
 
 (defwindow topbar
     :monitor 0
@@ -56,16 +59,17 @@
         :halign "end"
         :class "right_modules"
         (screenSharing
-            :class "rightSideIcon"
+            :class "verticalIconMovedLeftAndUp"
         )
-        (packageUpdates
-            :class "rightSideIcon"
+        (packageUpdatesVertical)
+        (bluetoothBarButton
+            :class "verticalIcon"
         )
         (volume
-            :class "rightSideIcon"
+            :class "verticalIcon"
         )
         (inputButton
-            :class "rightSideIcon"
+            :class "verticalIcon"
         )
         (systemMenu
             :class "rightSideIcon"
