@@ -12,7 +12,7 @@
     :geometry (geometry
         :x "0%"
         :y "10px"
-        :width "2540px"
+        :width "2236px"
         :height "30px"
         :anchor "top center")
     :stacking "fg"
