@@ -50,9 +50,9 @@ const bookmarks = [
 },
 {"id":"njYk5XF49Zdf8g3o","label":"Social","bookmarks":[
 {"id":"REzi7xXTn6hBm5Vu","label":"Reddit","url":"https://www.reddit.com/"},
+{"id":"PeIbQBjpA41kjGD6","label":"Sh","url":"https://sh.reddit.com/"},
 {"id":"fgOAsCWGRNHCRZQR","label":"Biz","url":"https://boards.4channel.org/biz/catalog"},
-{"id":"PeIbQBjpA41kjGD6","label":"LinkedIn","url":"https://www.linkedin.com/"},
-{"id":"PeIbQBjpA41kjGD6","label":"Pocket","url":"https://getpocket.com/saves"}
+{"id":"PeIbQBjpA41kjGD6","label":"LinkedIn","url":"https://www.linkedin.com/"}
 ]
 },
 {"id":"njYk5XF49Zdf8g3o","label":"Federations","bookmarks":[

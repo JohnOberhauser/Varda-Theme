@@ -76,7 +76,7 @@ U R L - B A R
 }
 
 #page-action-buttons {
-    display: none !important;
+    margin-right: 10px !important;
 }
 
 .urlbarView {
