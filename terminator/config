@@ -11,12 +11,13 @@
     audible_bell = True
     background_color = "#0c0e11"
     cursor_shape = underline
-    font = JetBrainsMono Nerd Font 10
+    font = JetBrainsMono Nerd Font Medium 14
     foreground_color = "#d0ebee"
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 10000
     palette = "#0c0e11:#733447:#257b76:#c78c56:#52677c:#604575:#134a5a:#d0ebee:#141619:#733447:#257b76:#c78c56:#52677c:#604575:#134a5a:#d0ebee"
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child0]]]

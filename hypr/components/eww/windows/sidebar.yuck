@@ -14,7 +14,7 @@
         :x "10px"
         :y "0%"
         :width "40px"
-        :height "1420px"
+        :height "1484px"
         :anchor "left center")
     :stacking "fg"
     :exclusive true

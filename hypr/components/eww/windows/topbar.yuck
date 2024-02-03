@@ -1,9 +1,7 @@
 (include "./widgets/workspaces.yuck")
 (include "./widgets/clockVertical.yuck")
-(include "./widgets/clock.yuck")
 (include "./widgets/screenSharing.yuck")
 (include "./widgets/packageUpdatesVertical.yuck")
-(include "./widgets/packageUpdates.yuck")
 (include "./widgets/volume.yuck")
 (include "./widgets/micVolume.yuck")
 (include "./widgets/input.yuck")
@@ -15,7 +13,7 @@
     :geometry (geometry
         :x "0%"
         :y "10px"
-        :width "2236px"
+        :width "1400px"
         :height "30px"
         :anchor "top center")
     :stacking "fg"
@@ -48,7 +46,7 @@
         :space-evenly false
         :halign "center"
         :class "center_modules"
-        (clock)
+        (clockVertical)
     )
 )
 
