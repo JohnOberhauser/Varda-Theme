@@ -58,5 +58,3 @@ hyprctl dispatch workspace $new1
 #else
 #    rightfirst
 #fi
-
-$HOME/.config/hypr/scripts/workspaces/updateWorkspaceIcons.sh
