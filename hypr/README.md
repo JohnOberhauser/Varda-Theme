@@ -3,6 +3,8 @@ place this directory in ~/.config/
 ### required packages
 
 #### from arch repo
+hyprland - duh    
+hyprpaper - wallpaper
 eww - topbar and widgets    
 wireplumber - used in varius scripts for audio    
 playerctl - used in various scripts for controlling media players    
@@ -17,11 +19,9 @@ dunst - notifications
 python - various scripts (weather and media controls)    
 pacman-contrib - used in script to check how many packages are out of date    
 polkit-gnome - GUI sudo permission handler    
-
-#### from AUR:
-hyprland - duh    
-hyprpaper - wallpaper    
-
+bc - used in scripts
+socat - listen for hyprland socket events
+brightnessctl - controlling screen brightness
 
 
 ### Cursor
