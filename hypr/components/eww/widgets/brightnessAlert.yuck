@@ -1,0 +1,28 @@
+(defvar brightnessAlertPercent 0)
+(defvar brightnessAlertLastUpdateTimeStamp 0)
+(defvar brightness_icon "󰃠")
+
+(defwidget brightnessAlert []
+    (box
+        :space-evenly false
+        :orientation "h"
+        (label
+            :class "volumeAlertIcon"
+            :text brightness_icon
+        )
+        (box
+            :class "volumeAlertBox2"
+            :orientation "v"
+            :space-evenly false
+            :valign "center"
+            (label
+                :text "Brightness"
+                :xalign 0
+            )
+            (progress
+                :class "volumeAlertProgress"
+                :value brightnessAlertPercent
+            )
+        )
+    )
+)

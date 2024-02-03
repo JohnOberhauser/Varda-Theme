@@ -6,3 +6,4 @@
 (include "./windows/statusMenu.yuck")
 (include "./windows/systemMenu.yuck")
 (include "./windows/bluetoothWindow.yuck")
+(include "./windows/brightnessAlert.yuck")
