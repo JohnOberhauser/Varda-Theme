@@ -1,8 +1,10 @@
+(defpoll battery_icon_visible :interval "1h" :run-while false "$HOME/.config/hypr/scripts/battery/isBatteryIconVisible.sh")
 (defpoll battery_icon :interval "1m" "$HOME/.config/hypr/scripts/battery/getBatteryIcon.sh")
 
 (defwidget battery [?text class]
     (box
         :class "${class}"
+        :visible battery_icon_visible
         :space-evenly "true"
         :orientation "h"
         :spacing "0"
