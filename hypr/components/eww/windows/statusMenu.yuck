@@ -6,7 +6,7 @@
     :class "statusMenuWindow"
     :monitor 0
     :geometry (geometry
-        :x "10px"
+        :x "0px"
         :y "0%"
         :anchor "bottom left"
     )
