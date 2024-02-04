@@ -8,6 +8,8 @@ configuration {
     display-window:             "";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
+	kb-element-next:            "";
+	kb-mode-next:               "Tab";
 }
 
 /*****----- Global Properties -----*****/
