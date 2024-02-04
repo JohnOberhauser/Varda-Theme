@@ -16,6 +16,10 @@ Here you can comment if you want your buttons to be showed up!
     display: none !important;
 }
 
+.titlebar-buttonbox-container {
+    display:none
+}
+
 /* This one is the spacer between tabs and border  */
 .titlebar-spacer {
     display: none !important;
