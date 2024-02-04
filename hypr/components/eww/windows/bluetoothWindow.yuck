@@ -43,8 +43,8 @@
 (defwindow bluetoothWindow
     :monitor 0
     :geometry (geometry
-        :x "10px"
-        :y "10px"
+        :x "0px"
+        :y "0px"
         :vexpand true
         :anchor "bottom left"
     )
