@@ -22,6 +22,7 @@ polkit-gnome - GUI sudo permission handler
 bc - used in scripts
 socat - listen for hyprland socket events
 brightnessctl - controlling screen brightness
+acpi - get battery info
 
 
 ### Cursor
