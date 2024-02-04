@@ -41,6 +41,8 @@ value() {
     $HOME/.config/hypr/scripts/audio/updateVolumeIcon.sh
 }
 
+play $HOME/.config/hypr/assets/sounds/audio-volume-change.oga &> /dev/null &
+
 if [ "$1" = "increase" ]; then
     increase
 elif [ "$1" = "decrease" ]; then

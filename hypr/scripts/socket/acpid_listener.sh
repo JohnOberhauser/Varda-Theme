@@ -27,10 +27,12 @@ handle() {
                 AC|ACAD|ADP0|ACPI*)
                     case "$4" in
                         00000000)
+                            play $HOME/.config/hypr/assets/sounds/power-plug.ogg
                             sh $HOME/.config/hypr/scripts/battery/updateBatteryIcon.sh
                             echo 'AC unpluged'
                             ;;
                         00000001)
+                            play $HOME/.config/hypr/assets/sounds/power-unplug.ogg
                             sh $HOME/.config/hypr/scripts/battery/updateBatteryIcon.sh
                             echo 'AC pluged'
                             ;;

@@ -24,6 +24,7 @@ socat - listen for hyprland socket events
 brightnessctl - controlling screen brightness
 acpi - get battery info
 acpid - start this with "systemctl enable acpid"
+sox - play sounds
 
 
 ### Cursor
