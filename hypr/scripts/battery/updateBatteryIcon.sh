@@ -2,8 +2,6 @@
 
 echo "Updating icon..."
 
-sleep 1
-
 icon=$($HOME/.config/hypr/scripts/battery/getBatteryIcon.sh)
 
 eww -c $HOME/.config/hypr/components/eww update battery_icon=$icon
