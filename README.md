@@ -14,7 +14,7 @@ red: 733447
 green: 257B76
 peach: C78C56
 purple: 604575
-aqua: 134A5A
+aqua: 40AFBF
 
 # Primary RGB
 black: [12, 14, 17]

@@ -16,7 +16,7 @@
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 10000
-    palette = "#0c0e11:#733447:#257b76:#c78c56:#52677c:#604575:#134a5a:#d0ebee:#141619:#733447:#257b76:#c78c56:#52677c:#604575:#134a5a:#d0ebee"
+    palette = "#0c0e11:#733447:#257b76:#c78c56:#52677c:#604575:#3fafbf:#d0ebee:#141619:#733447:#257b76:#c78c56:#52677c:#604575:#3fafbf:#d0ebee"
 [layouts]
   [[default]]
     [[[child0]]]

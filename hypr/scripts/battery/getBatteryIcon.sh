@@ -27,7 +27,10 @@ if [[ $isCharging == *"Charging"* ]]; then
         echo "󰂅"
     fi
 else
-    if [[ $battery -le 10 ]]; then
+    if [[ $battery -le 4 ]]; then
+        play $HOME/.config/hypr/assets/sounds/battery-low.ogg &> /dev/null &
+        echo "󰁺"
+    elif [[ $battery -le 10 ]]; then
         echo "󰁺"
     elif [[ $battery -le 20 ]]; then
         echo "󰁻"
