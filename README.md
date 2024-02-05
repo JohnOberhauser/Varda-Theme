@@ -1,8 +1,13 @@
 # Varda-Theme
 A theme for various programs, largly surrounding my hyprland setup
 
+### Desktop
+
 ![screenshot](.screenshots/screen1.png)
 
+### Laptop
+
+![screenshot](.screenshots/screen2.png)
 
 # Color Pallete
 ```
