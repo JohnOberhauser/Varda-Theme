@@ -1,8 +1,10 @@
 #!/bin/bash
 
 handle() {
+  echo $1
   case $1 in
     workspace*) $HOME/.config/hypr/scripts/workspaces/updateWorkspaceIcons.sh ;;
+    screencast*) $HOME/.config/hypr/scripts/video/checkIfScreenSharing.sh ;;
   esac
 }
 
