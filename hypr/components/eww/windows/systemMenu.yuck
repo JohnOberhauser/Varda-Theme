@@ -10,8 +10,8 @@
     :class "systemMenuWindow"
     :monitor 0
     :geometry (geometry
-        :x "0px"
-        :y "0px"
+        :x "5px"
+        :y "5px"
         :anchor "top left"
     )
     (box

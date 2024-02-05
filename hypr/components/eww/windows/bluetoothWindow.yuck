@@ -42,14 +42,14 @@
 
 (defwindow bluetoothWindow
     :monitor 0
+    :class "bluetoothWindow"
     :geometry (geometry
-        :x "0px"
-        :y "0px"
+        :x "5px"
+        :y "5px"
         :vexpand true
         :anchor "bottom left"
     )
     (box
-        :class "bluetoothWindow"
         :space-evenly false
         :orientation "v"
         (bluetoothDevices)
