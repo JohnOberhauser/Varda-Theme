@@ -1,8 +1,10 @@
 #!/bin/bash
 
-battery=$(acpi -b | awk -F ", " '{print $2}' | awk -F "%" '{print $1}')
+info=$(acpi -b)
 
-isCharging=$(acpi -b | grep Charging)
+battery=$(echo $info | awk -F ", " '{print $2}' | awk -F "%" '{print $1}')
+
+isCharging=$(echo $info | grep Charging)
 
 if [[ $isCharging == *"Charging"* ]]; then
     if [[ $battery -le 10 ]]; then
@@ -27,10 +29,7 @@ if [[ $isCharging == *"Charging"* ]]; then
         echo "󰂅"
     fi
 else
-    if [[ $battery -le 4 ]]; then
-        play $HOME/.config/hypr/assets/sounds/battery-low.ogg &> /dev/null &
-        echo "󰁺"
-    elif [[ $battery -le 10 ]]; then
+    if [[ $battery -le 10 ]]; then
         echo "󰁺"
     elif [[ $battery -le 20 ]]; then
         echo "󰁻"
