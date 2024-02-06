@@ -1,28 +1,19 @@
-import {Bar} from "./windows/sidebar.js";
-//
-// export default {
-//     windows: [
-//         Bar()
-//     ]
-// }
+import SideBar from "./js/bar/SideBar.js";
+import { monitorFile } from 'resource:///com/github/Aylur/ags/utils.js';
 
-function Test(monitor = 0) {
-    const myLabel = Widget.Label({
-        label: 'some example content',
-    })
+const windows = () => [
+    SideBar,
+];
 
-    return Widget.Window({
-        monitor,
-        name: `bar${monitor}`, // this name has to be unique
-        anchor: ['top', 'left', 'right'],
-        child: myLabel,
-    })
-}
+monitorFile(
+    `${App.configDir}/css/main.css`,
+    function() {
+        App.resetCss();
+        App.applyCss(`${App.configDir}/css/main.css`);
+    },
+);
 
 export default {
-    windows: [
-        Bar(),
-        // Test(0), // can be instantiated for each monitor
-        Test(0),
-    ],
-}
+    style: App.configDir + '/css/main.css',
+    windows: windows().flat(1),
+};

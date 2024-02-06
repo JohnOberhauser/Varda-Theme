@@ -1,4 +1,4 @@
-import {Workspaces} from "../widgets/barWidgets.js";
+import {Workspaces} from "./barWidgets.js";
 
 const Top = () => Widget.Box({
     spacing: 8,
@@ -8,7 +8,7 @@ const Top = () => Widget.Box({
 });
 
 const myLabel = Widget.Label({
-    label: 'some example content',
+    label: '1',
 })
 
 const Center = () => Widget.Box({
@@ -21,19 +21,21 @@ const Center = () => Widget.Box({
 const Bottom = () => Widget.Box({
     spacing: 8,
     children: [
-
+        myLabel,
     ],
 });
 
-export const Bar = (monitor = 0) => Widget.Window({
-    monitor,
+export default Widget.Window({
+    monitor: 0,
     name: `sidebar`, // name has to be unique
     anchor: ['top', 'left', 'bottom'],
-    // exclusivity: 'exclusive',
+    exclusivity: 'exclusive',
+    layer: 'top',
+    class_name: 'bar',
     child: Widget.CenterBox({
         vertical: true,
         start_widget: Top(),
-        center_widget: Center(),
+        // center_widget: Center(),
         end_widget: Bottom(),
     }),
 });
