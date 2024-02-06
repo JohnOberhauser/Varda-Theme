@@ -114,6 +114,7 @@ alias fastboot="/home/john/Android/Sdk/platform-tools/fastboot"
 alias bashtop=bpytop
 alias sshpi="ssh john@192.168.50.158"
 alias ewww="eww --config $HOME/.config/hypr/components/eww"
+alias agss="ags --config $HOME/.config/hypr/components/ags/config.js"
 
 # Change folder colors
 # ========= Font ================
