@@ -3,7 +3,6 @@
 
 .systemMenuWindow {
   @extend .window;
-  padding: 20px;
 }
 
 .systemMenuIconButton {
@@ -17,6 +16,7 @@
 
 .systemMenuVolumeProgress {
   min-width: 200px;
+  margin-right: 20px;
 }
 
 .systemMenuVolumeProgress trough {
@@ -34,6 +34,6 @@
   background: #D0EBEE;
 }
 
-.audioRow {
-  margin: 0 40px 0 20px;
+.row {
+  margin: 0 20px 0 20px;
 }

@@ -1,3 +1,4 @@
+import {Window} from "../Windows.js"
 
 const hyprland = await Service.import('hyprland')
 
@@ -39,5 +40,5 @@ export const Workspaces = (vertical) => Widget.EventBox({
 export const MenuButton = Widget.Button({
     label: '',
     class_name: "menuButton",
-    onClicked: () => "",
+    onClicked: () => App.toggleWindow(Window.SystemMenu),
 })

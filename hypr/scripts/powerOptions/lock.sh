@@ -1,7 +1,6 @@
 #!/bin/bash
 
-nohup swayidle timeout 10 'hyprctl dispatch dpms off' \
-    resume 'hyprctl dispatch dpms on' \
+swayidle timeout 60 'systemctl suspend' \
     &> /dev/null &
 
 if [[ $VARDA == "laptop" ]]; then

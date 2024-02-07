@@ -14,6 +14,18 @@ const VolumeButton = Widget.Button({
     ),
 })
 
+const MicrophoneButton = Widget.Button({
+    class_name: "systemMenuIconButton",
+    onClicked: () => swapInput(audio),
+    // set icon
+    setup: self => self.hook(
+        audio,
+        () => {
+            self.label = getMicrophoneIcon(audio)
+        }
+    ),
+})
+
 /**
  * @param type either 'speaker' or 'microphone'
  */
@@ -27,28 +39,16 @@ const VolumeSlider = (type) => Widget.Slider({
 
 export const VolumeSliderRow = Widget.Box({
     vertical: false,
-    className: "audioRow",
+    className: "row",
     children: [
         VolumeButton,
         VolumeSlider("speaker"),
     ]
 })
 
-const MicrophoneButton = Widget.Button({
-    class_name: "systemMenuIconButton",
-    onClicked: () => swapInput(audio),
-    // set icon
-    setup: self => self.hook(
-        audio,
-        () => {
-            self.label = getMicrophoneIcon(audio)
-        }
-    ),
-})
-
 export const MicrophoneSliderRow = Widget.Box({
     vertical: false,
-    className: "audioRow",
+    className: "row",
     children: [
         MicrophoneButton,
         VolumeSlider("microphone"),

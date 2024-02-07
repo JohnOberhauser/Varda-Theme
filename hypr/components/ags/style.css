@@ -6,15 +6,12 @@
 .menuButton {
   margin-top: 6px; }
 
-.window, .systemMenu {
+.window, .systemMenuWindow {
   background-color: #0C0E11;
   border-radius: 8px;
   border-color: #52677C;
   border-width: 2px;
   border-style: solid; }
-
-.systemMenu {
-  padding: 20px; }
 
 .systemMenuIconButton {
   background-color: transparent;
@@ -25,7 +22,8 @@
   padding: 10px 15px 10px 15px; }
 
 .systemMenuVolumeProgress {
-  min-width: 200px; }
+  min-width: 200px;
+  margin-right: 20px; }
 
 .systemMenuVolumeProgress trough {
   background: #141619;
@@ -40,5 +38,5 @@
   border-radius: 16px;
   background: #D0EBEE; }
 
-.audioRow {
-  margin: 0 40px 0 20px; }
+.row {
+  margin: 0 20px 0 20px; }

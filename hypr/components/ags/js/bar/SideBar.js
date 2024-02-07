@@ -1,4 +1,5 @@
 import {MenuButton, Workspaces} from "./barWidgets.js";
+import {Window} from "../Windows.js"
 
 const Top = (vertical) => Widget.Box({
     vertical: vertical,
@@ -28,7 +29,7 @@ const Bottom = () => Widget.Box({
 
 export default(vertical) => Widget.Window({
     monitor: 0,
-    name: `sidebar`, // name has to be unique
+    name: Window.SideBar, // name has to be unique
     anchor: ['top', 'left', 'bottom'],
     exclusivity: 'exclusive',
     layer: 'top',
