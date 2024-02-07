@@ -1,8 +1,7 @@
 import SideBar from "./js/bar/SideBar.js";
-import { monitorFile } from 'resource:///com/github/Aylur/ags/utils.js';
 
 const windows = () => [
-    SideBar,
+    SideBar(true),
 ];
 
 // main scss file

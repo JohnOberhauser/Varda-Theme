@@ -1,9 +1,10 @@
-import {Workspaces} from "./barWidgets.js";
+import {MenuButton, Workspaces} from "./barWidgets.js";
 
-const Top = () => Widget.Box({
-    spacing: 8,
+const Top = (vertical) => Widget.Box({
+    vertical: vertical,
     children: [
-        Workspaces(true)
+        MenuButton,
+        Workspaces(vertical),
     ],
 });
 
@@ -25,7 +26,7 @@ const Bottom = () => Widget.Box({
     ],
 });
 
-export default Widget.Window({
+export default(vertical) => Widget.Window({
     monitor: 0,
     name: `sidebar`, // name has to be unique
     anchor: ['top', 'left', 'bottom'],
@@ -34,7 +35,7 @@ export default Widget.Window({
     class_name: 'bar',
     child: Widget.CenterBox({
         vertical: true,
-        start_widget: Top(),
+        start_widget: Top(vertical),
         center_widget: Center(),
         end_widget: Bottom(),
     }),

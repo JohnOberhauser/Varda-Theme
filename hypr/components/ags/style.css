@@ -1,4 +1,4 @@
-window.bar {
+.bar {
   background-color: #0C0E11;
   border-radius: 8px;
   border-color: #52677C;
@@ -6,7 +6,10 @@ window.bar {
   border-style: solid;
   margin: 5px; }
 
-.workspace_button {
+.iconButton, .menuButton {
   background-color: transparent;
   color: #D0EBEE;
-  padding: 4px 2px 4px 2px; }
+  padding: 4px 4px 4px 2px; }
+
+.menuButton {
+  margin-top: 6px; }

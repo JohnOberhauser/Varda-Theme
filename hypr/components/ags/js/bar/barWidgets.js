@@ -3,10 +3,9 @@ const hyprland = await Service.import('hyprland')
 
 const dispatchWorkspace = ws => hyprland.sendMessage(`dispatch workspace ${ws}`);
 
-export const Workspaces = (vertical = true) => Widget.EventBox({
+export const Workspaces = (vertical) => Widget.EventBox({
     onScrollDown: () => dispatchWorkspace('+1'),
     onScrollUp: () => dispatchWorkspace('-1'),
-    class_name: "workspace_button",
     child: Widget.Box({
         vertical: vertical,
         children: Array.from(
@@ -16,7 +15,7 @@ export const Workspaces = (vertical = true) => Widget.EventBox({
             Widget.Button({
                 attribute: i,
                 label: '',
-                class_name: "workspace_button",
+                class_name: "iconButton",
                 onClicked: () => dispatchWorkspace(i),
             })
         ),
@@ -35,4 +34,10 @@ export const Workspaces = (vertical = true) => Widget.EventBox({
             )
         ),
     }),
+})
+
+export const MenuButton = Widget.Button({
+    label: '',
+    class_name: "menuButton",
+    onClicked: () => "",
 })
