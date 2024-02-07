@@ -27,6 +27,9 @@ acpid - start this with "systemctl enable acpid"
 sox - play sounds
 
 
+ags
+sassc
+
 ### Cursor
 cursor in use    
 https://github.com/alvatip/Nordzy-cursors

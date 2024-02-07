@@ -5,15 +5,16 @@ const windows = () => [
     SideBar,
 ];
 
-monitorFile(
-    `${App.configDir}/css/main.css`,
-    function() {
-        App.resetCss();
-        App.applyCss(`${App.configDir}/css/main.css`);
-    },
-);
+// main scss file
+const scss = `${App.configDir}/scss/main.scss`
+
+// target css file
+const css = `${App.configDir}/style.css`
+
+// make sure sassc is installed on your system
+Utils.exec(`sassc ${scss} ${css}`)
 
 export default {
-    style: App.configDir + '/css/main.css',
+    style: App.configDir + '/style.css',
     windows: windows().flat(1),
 };

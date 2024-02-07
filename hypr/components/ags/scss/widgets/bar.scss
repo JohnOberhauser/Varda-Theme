@@ -1,7 +1,9 @@
+@import "../variables";
+
 window.bar {
-  background-color: #0C0E11;
+  background-color: $bg;
   border-radius: 8px;
-  border-color: #52677C;
+  border-color: $primary;
   border-width: 2px;
   border-style: solid;
   margin: 5px;
