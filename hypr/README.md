@@ -29,6 +29,7 @@ sox - play sounds
 
 ags
 sassc
+pipewire-pulse
 
 ### Cursor
 cursor in use    

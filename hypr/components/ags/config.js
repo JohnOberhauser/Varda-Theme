@@ -1,16 +1,13 @@
 import SideBar from "./js/bar/SideBar.js";
+import SystemMenu from "./js/systemMenu/SystemMenu.js";
 
 const windows = () => [
     SideBar(true),
+    SystemMenu,
 ];
 
-// main scss file
 const scss = `${App.configDir}/scss/main.scss`
-
-// target css file
 const css = `${App.configDir}/style.css`
-
-// make sure sassc is installed on your system
 Utils.exec(`sassc ${scss} ${css}`)
 
 export default {
