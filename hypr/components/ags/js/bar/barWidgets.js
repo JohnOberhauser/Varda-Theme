@@ -1,52 +1,38 @@
-// import {Hyprland} from "../types/service/hyprland";
-
-// export const Workspaces = () => Widget.Box({
-//     class_name: 'workspaces',
-//     children: Hyprland.bind('workspaces').transform(ws => {
-//         return ws.map(({ id }) => Widget.Button({
-//             on_clicked: () => Hyprland.sendMessage(`dispatch workspace ${id}`),
-//             child: Widget.Label(`${id}`),
-//             class_name: Hyprland.active.workspace.bind('id')
-//                 .transform(i => `${i === id ? 'focused' : ''}`),
-//         }));
-//     }),
-// });
-
-// export const Workspaces = Widget({
-//     setup: self => self
-//         .bind('prop', hyprland.workspaces, ws => {
-//             return ws.map(({ id }) => Widget.Button({
-//                 on_clicked: () => Hyprland.sendMessage(`dispatch workspace ${id}`),
-//                 child: Widget.Label(`${id}`),
-//                 class_name: Hyprland.active.workspace.bind('id')
-//                     .transform(i => `${i === id ? 'focused' : ''}`),
-//             }));
-//         })
-// })
 
 const hyprland = await Service.import('hyprland')
 
-const focusedTitle = Widget.Label({
-    label: hyprland.active.client.bind('title'),
-    visible: hyprland.active.client.bind('address')
-        .transform(addr => !!addr),
-})
+const dispatchWorkspace = ws => hyprland.sendMessage(`dispatch workspace ${ws}`);
 
-const dispatch = ws => hyprland.sendMessage(`dispatch workspace ${ws}`);
-
-export const Workspaces = () => Widget.EventBox({
-    onScrollUp: () => dispatch('+1'),
-    onScrollDown: () => dispatch('-1'),
+export const Workspaces = (vertical = true) => Widget.EventBox({
+    onScrollDown: () => dispatchWorkspace('+1'),
+    onScrollUp: () => dispatchWorkspace('-1'),
+    class_name: "workspace_button",
     child: Widget.Box({
-        children: Array.from({ length: 10 }, (_, i) => i + 1).map(i => Widget.Button({
-            attribute: i,
-            label: `${i}`,
-            onClicked: () => dispatch(i),
-        })),
+        vertical: vertical,
+        children: Array.from(
+            { length: 5 },
+            (_, i) => i + 1
+        ).map(i =>
+            Widget.Button({
+                attribute: i,
+                label: '',
+                class_name: "workspace_button",
+                onClicked: () => dispatchWorkspace(i),
+            })
+        ),
 
-        // remove this setup hook if you want fixed number of buttons
-        setup: self => self.hook(hyprland, () => self.children.forEach(btn => {
-            btn.visible = hyprland.workspaces.some(ws => ws.id === btn.attribute);
-        })),
+        // set icon
+        setup: self => self.hook(
+            hyprland,
+            () => self.children.forEach(
+                btn => {
+                    if (hyprland.monitors[0].activeWorkspace.id === btn.attribute) {
+                        btn.label = ""
+                    } else {
+                        btn.label = ""
+                    }
+                }
+            )
+        ),
     }),
 })

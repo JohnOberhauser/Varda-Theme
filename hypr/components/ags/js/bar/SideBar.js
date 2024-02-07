@@ -3,7 +3,7 @@ import {Workspaces} from "./barWidgets.js";
 const Top = () => Widget.Box({
     spacing: 8,
     children: [
-        Workspaces()
+        Workspaces(true)
     ],
 });
 
@@ -14,14 +14,14 @@ const myLabel = Widget.Label({
 const Center = () => Widget.Box({
     spacing: 8,
     children: [
-        myLabel,
+
     ],
 });
 
 const Bottom = () => Widget.Box({
     spacing: 8,
     children: [
-        myLabel,
+
     ],
 });
 
@@ -35,7 +35,7 @@ export default Widget.Window({
     child: Widget.CenterBox({
         vertical: true,
         start_widget: Top(),
-        // center_widget: Center(),
+        center_widget: Center(),
         end_widget: Bottom(),
     }),
 });

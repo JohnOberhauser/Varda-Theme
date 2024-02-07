@@ -5,3 +5,8 @@ window.bar {
   border-width: 2px;
   border-style: solid;
   margin: 5px; }
+
+.workspace_button {
+  background-color: transparent;
+  color: #D0EBEE;
+  padding: 4px 2px 4px 2px; }
