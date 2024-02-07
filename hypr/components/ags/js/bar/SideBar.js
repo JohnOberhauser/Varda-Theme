@@ -1,29 +1,31 @@
-import {MenuButton, Workspaces} from "./barWidgets.js";
+import {MenuButton, Workspaces, VolumeButton, MicrophoneButton} from "./barWidgets.js";
 import {Window} from "../Windows.js"
 
 const Top = (vertical) => Widget.Box({
     vertical: vertical,
     children: [
+        Widget.Box({ css: "margin-top: 6px;" }),
         MenuButton,
         Workspaces(vertical),
     ],
 });
 
-const myLabel = Widget.Label({
-    label: '1',
-})
-
-const Center = () => Widget.Box({
-    spacing: 8,
+const Center = (vertical) => Widget.Box({
+    vertical: vertical,
     children: [
 
     ],
 });
 
-const Bottom = () => Widget.Box({
-    spacing: 8,
+const Bottom = (vertical) => Widget.Box({
+    vertical: vertical,
+    vpack: "fill",
+    vexpand: true,
     children: [
-
+        Widget.Box({ vexpand: true}),
+        VolumeButton,
+        MicrophoneButton,
+        Widget.Box({ css: "margin-top: 6px;" }),
     ],
 });
 
@@ -38,7 +40,7 @@ export default(vertical) => Widget.Window({
     child: Widget.CenterBox({
         vertical: true,
         start_widget: Top(vertical),
-        center_widget: Center(),
-        end_widget: Bottom(),
+        center_widget: Center(vertical),
+        end_widget: Bottom(vertical),
     }),
 });

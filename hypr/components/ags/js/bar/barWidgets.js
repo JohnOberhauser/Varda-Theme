@@ -1,5 +1,7 @@
 import {Window} from "../Windows.js"
+import {getMicrophoneIcon, getVolumeIcon, swapInput, swapOutput} from "../utils/audio.js";
 
+const audio = await Service.import('audio')
 const hyprland = await Service.import('hyprland')
 
 const dispatchWorkspace = ws => hyprland.sendMessage(`dispatch workspace ${ws}`);
@@ -39,6 +41,30 @@ export const Workspaces = (vertical) => Widget.EventBox({
 
 export const MenuButton = Widget.Button({
     label: '',
-    class_name: "menuButton",
+    class_name: "iconButton",
     onClicked: () => App.toggleWindow(Window.SystemMenu),
+})
+
+export const MicrophoneButton = Widget.Button({
+    class_name: "iconButton",
+    onClicked: () => swapInput(audio),
+    // set icon
+    setup: self => self.hook(
+        audio,
+        () => {
+            self.label = getMicrophoneIcon(audio)
+        }
+    ),
+})
+
+export const VolumeButton = Widget.Button({
+    class_name: "iconButton",
+    onClicked: () => swapOutput(audio),
+    // set icon
+    setup: self => self.hook(
+        audio,
+        () => {
+            self.label = getVolumeIcon(audio)
+        }
+    ),
 })
