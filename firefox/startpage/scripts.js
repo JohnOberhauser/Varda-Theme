@@ -66,7 +66,7 @@ const bookmarks = [
 {"id":"REzi7xXTn6hBm5Vu","label":"Github","url":"https://github.com/"},
 {"id":"oa5G4ZJXzwxLi4CM","label":"ArchWiki","url":"https://wiki.archlinux.org/"},
 {"id":"fgOAsCWGRNHCRZQR","label":"Hyprland","url":"https://wiki.hyprland.org/"},
-{"id":"PeIbQBjpA41kjGD6","label":"Eww","url":"https://elkowar.github.io/eww/"}
+{"id":"PeIbQBjpA41kjGD6","label":"Ags","url":"https://aylur.github.io/ags-docs/"}
 ]
 },
 {"id":"qjTUGL2OWFspQmm2","label":"Video","bookmarks":[

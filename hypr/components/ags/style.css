@@ -1,11 +1,3 @@
-.bar {
-  background-color: #0C0E11;
-  border-radius: 8px;
-  border-color: #52677C;
-  border-width: 2px;
-  border-style: solid;
-  margin: 5px; }
-
 .iconButton, .menuButton {
   background-color: transparent;
   color: #D0EBEE;
@@ -13,3 +5,40 @@
 
 .menuButton {
   margin-top: 6px; }
+
+.window, .systemMenu {
+  background-color: #0C0E11;
+  border-radius: 8px;
+  border-color: #52677C;
+  border-width: 2px;
+  border-style: solid; }
+
+.systemMenu {
+  padding: 20px; }
+
+.systemMenuIconButton {
+  background-color: transparent;
+  min-width: 30px;
+  font-size: 25px;
+  margin: 0 10px 0 0;
+  border-radius: 16px;
+  padding: 10px 15px 10px 15px; }
+
+.systemMenuVolumeProgress {
+  min-width: 200px; }
+
+.systemMenuVolumeProgress trough {
+  background: #141619;
+  min-height: 8px;
+  border-radius: 16px; }
+
+.systemMenuVolumeProgress trough slider {
+  all: unset; }
+
+.systemMenuVolumeProgress trough highlight {
+  min-width: 8px;
+  border-radius: 16px;
+  background: #D0EBEE; }
+
+.audioRow {
+  margin: 0 40px 0 20px; }

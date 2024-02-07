@@ -1,4 +1,4 @@
-import {VolumeSlider} from "./VolumeSlider.js";
+import {MicrophoneSliderRow, VolumeSliderRow} from "./VolumeSliderRow.js";
 
 export default Widget.Window({
     monitor: 0,
@@ -6,12 +6,14 @@ export default Widget.Window({
     anchor: ['top', 'left'],
     exclusivity: 'normal',
     layer: 'overlay',
-    class_name: 'bar',
+    class_name: 'systemMenuWindow',
     popup: true,
+    margins: [5, 5],
     child: Widget.Box({
         vertical: true,
         children: [
-            VolumeSlider,
+            VolumeSliderRow,
+            MicrophoneSliderRow,
         ]
     }),
 });

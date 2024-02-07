@@ -26,3 +26,57 @@ export function getVolumeIcon(audio) {
         }
     }
 }
+
+export function getMicrophoneIcon(audio) {
+    const source = audio.control.get_default_source()
+    let input
+    if (source != null) {
+        input = source.description
+    } else {
+        input = ""
+    }
+
+    if (input != null && input.indexOf("Yeti") !== -1) {
+        return ""
+    } else if (input != null && input.indexOf("Buds") !== -1) {
+        return "󰥰"
+    } else {
+        return "󰋎"
+    }
+}
+
+export function swapOutput(audio) {
+    const currentSink = audio.control.get_default_sink()
+    const sinks = audio.control.get_sinks().filter((sink) => {
+        return sink.description.indexOf("Yeti") === -1 || sink.description.indexOf("Navi") === -1
+    })
+
+    let set = false
+    sinks.forEach((sink) => {
+        if (sink.id < currentSink.id && !set) {
+            audio.control.set_default_sink(sink)
+            set = true
+        }
+    })
+
+    if (!set) {
+        audio.control.set_default_sink(sinks[0])
+    }
+}
+
+export function swapInput(audio) {
+    const currentSource = audio.control.get_default_source()
+    const sources = audio.control.get_sources()
+
+    let set = false
+    sources.forEach((source) => {
+        if (source.id < currentSource.id && !set) {
+            audio.control.set_default_source(source)
+            set = true
+        }
+    })
+
+    if (!set) {
+        audio.control.set_default_source(sources[0])
+    }
+}

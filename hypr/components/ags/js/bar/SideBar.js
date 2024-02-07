@@ -32,7 +32,8 @@ export default(vertical) => Widget.Window({
     anchor: ['top', 'left', 'bottom'],
     exclusivity: 'exclusive',
     layer: 'top',
-    class_name: 'bar',
+    class_name: 'window',
+    margins: [5, 0],
     child: Widget.CenterBox({
         vertical: true,
         start_widget: Top(vertical),
