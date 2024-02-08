@@ -88,13 +88,21 @@ export const BatteryButton = (css) => Widget.Label({
             () => {
                 self.visible = battery.available
                 self.label = getBatteryIcon(battery)
-                if (battery.available && battery.percent < 4 && batteryWarningInterval == null) {
+                if (battery.available
+                    && !battery.charging
+                    && battery.percent < 4
+                    && batteryWarningInterval == null
+                ) {
+                    self.css = css + " color: #733447;"
                     batteryWarningInterval = setInterval(() => {
                         Utils.execAsync('bash -c "play $HOME/.config/hypr/assets/sounds/battery-low.ogg"')
                     }, 120_000)
-                } else if (battery.percent >= 4 && batteryWarningInterval != null) {
+                } else if ((battery.percent >= 4 || battery.charging)
+                    && batteryWarningInterval != null
+                ) {
                     batteryWarningInterval.destroy()
                     batteryWarningInterval = null
+                    self.css = css
                 }
             }
         )
