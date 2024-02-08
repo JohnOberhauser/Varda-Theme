@@ -1,4 +1,12 @@
-import {MenuButton, Workspaces, VolumeButton, MicrophoneButton, BatteryButton, BluetoothButton} from "./barWidgets.js";
+import {
+    MenuButton,
+    Workspaces,
+    VolumeButton,
+    MicrophoneButton,
+    BatteryButton,
+    BluetoothButton,
+    ClockButton
+} from "./barWidgets.js";
 import {Window} from "../Windows.js"
 
 const battery = await Service.import('battery')
@@ -33,6 +41,7 @@ const Bottom = (vertical) => {
     }
 
     children.push(
+        ClockButton,
         Widget.Box({ css: "margin-top: 6px;" }),
     )
 

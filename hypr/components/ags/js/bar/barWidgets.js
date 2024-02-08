@@ -1,6 +1,7 @@
 import {Window} from "../Windows.js"
 import {getMicrophoneIcon, getVolumeIcon, swapInput, swapOutput} from "../utils/audio.js";
 import {getBatteryIcon} from "../utils/battery.js";
+import { clock } from '../variables.js';
 
 const audio = await Service.import('audio')
 const battery = await Service.import('battery')
@@ -87,4 +88,13 @@ export const BluetoothButton = Widget.Button({
     //TODO create a new window for bluetooth settings in ags
     onClicked: () => Utils.exec('bash -c "$HOME/.config/hypr/scripts/bluetooth/toggleBluetoothMenu.sh"'),
     label: "󰂯",
+})
+
+export const ClockButton = Widget.Button({
+    class_name: "iconButton",
+    //TODO create a new window for calendar in ags
+    onClicked: () => {},
+    label: clock.bind('value').transform(time => {
+        return time.format("%I\n%M") || ""
+    }),
 })
