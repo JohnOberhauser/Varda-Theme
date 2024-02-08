@@ -5,7 +5,8 @@ import {
     MicrophoneButton,
     BatteryButton,
     BluetoothButton,
-    ClockButton
+    ClockButton,
+    ScreenRecordingButton,
 } from "./barWidgets.js";
 import {Window} from "../Windows.js"
 
@@ -25,20 +26,19 @@ const Center = (vertical) => Widget.Box({
 });
 
 const Bottom = (vertical) => {
-    const children = [
-        Widget.Box({ vexpand: true}), // push everything to the bottom
-        BluetoothButton("margin-top: 10px;"),
-        VolumeButton("margin-top: 10px;"),
-        MicrophoneButton("margin-top: 10px;"),
-        BatteryButton("margin-top: 10px;"),
-        ClockButton("margin-top: 10px; padding-bottom: 6px;"),
-    ]
-
     return Widget.Box({
         vertical: vertical,
         vpack: "fill",
         vexpand: true,
-        children: children,
+        children: [
+            Widget.Box({ vexpand: true}), // push everything to the bottom
+            ScreenRecordingButton("margin-top: 10px;"),
+            BluetoothButton("margin-top: 10px;"),
+            VolumeButton("margin-top: 10px;"),
+            MicrophoneButton("margin-top: 10px;"),
+            BatteryButton("margin-top: 10px;"),
+            ClockButton("margin-top: 10px; padding-bottom: 6px;"),
+        ],
     });
 }
 

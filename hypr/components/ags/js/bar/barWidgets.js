@@ -37,7 +37,7 @@ export const Workspaces = (vertical) => Widget.EventBox({
                         btn.label = ""
                     }
                 }
-            )
+            ),
         ),
     }),
 })
@@ -77,16 +77,19 @@ export const VolumeButton = (css) => Widget.Button({
 
 export const BatteryButton = (css) => Widget.Label({
     class_name: "iconButton",
-    visible: false,
     css: css,
     // set icon
-    setup: self => self.hook(
-        battery,
-        () => {
-            self.visible = battery.available
-            self.label = getBatteryIcon(battery)
-        }
-    ),
+    setup: self => {
+        // the parent likes to set default visibility, override
+        setTimeout(() => {self.visible = false}, 0)
+        self.hook(
+            battery,
+            () => {
+                self.visible = battery.available
+                self.label = getBatteryIcon(battery)
+            }
+        )
+    },
 })
 
 export const BluetoothButton = (css) => Widget.Button({
@@ -105,4 +108,24 @@ export const ClockButton = (css) => Widget.Button({
     label: clock.bind('value').transform(time => {
         return time.format("%I\n%M") || ""
     }),
+})
+
+export const ScreenRecordingButton = (css) => Widget.Label({
+    class_name: "iconButton",
+    css: css,
+    label: "󰹑",
+    // set icon
+    setup: self => {
+        // the parent likes to set default visibility, override
+        setTimeout(() => {self.visible = false}, 0)
+        self.hook(
+            hyprland,
+            (_, name, data) => {
+                if (name === "screencast") {
+                    self.visible = data[0] === "1"
+                }
+            },
+            "event"
+        )
+    },
 })
