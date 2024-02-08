@@ -10,7 +10,7 @@ increase() {
     else
         brightnessctl s 100%
     fi
-    $HOME/.config/hypr/scripts/brightness/showBrightnessAlert.sh
+#    $HOME/.config/hypr/scripts/brightness/showBrightnessAlert.sh
 }
 
 decrease() {
@@ -19,7 +19,7 @@ decrease() {
     else
         brightnessctl s 0%
     fi
-    $HOME/.config/hypr/scripts/brightness/showBrightnessAlert.sh
+#    $HOME/.config/hypr/scripts/brightness/showBrightnessAlert.sh
 }
 
 if [ "$1" = "increase" ]; then
