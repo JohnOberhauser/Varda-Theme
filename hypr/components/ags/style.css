@@ -6,7 +6,7 @@
 .menuButton {
   margin-top: 6px; }
 
-.window, .systemMenuWindow {
+.window {
   background-color: #0C0E11;
   border-radius: 8px;
   border-color: #52677C;
@@ -67,7 +67,7 @@
   border-radius: 16px;
   background: #D0EBEE; }
 
-.window, .systemMenuWindow {
+.window {
   background-color: #0C0E11;
   border-radius: 8px;
   border-color: #52677C;

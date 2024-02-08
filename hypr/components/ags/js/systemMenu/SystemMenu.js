@@ -8,7 +8,7 @@ export default Widget.Window({
     anchor: ['top', 'left'],
     exclusivity: 'normal',
     layer: 'overlay',
-    className: 'systemMenuWindow',
+    className: 'window',
     popup: true,
     margins: [5, 5],
     visible: false,

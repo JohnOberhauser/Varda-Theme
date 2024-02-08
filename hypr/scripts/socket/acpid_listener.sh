@@ -29,13 +29,11 @@ handle() {
                         00000000)
                             sleep 1
                             play $HOME/.config/hypr/assets/sounds/power-unplug.ogg &> /dev/null &
-                            sh $HOME/.config/hypr/scripts/battery/updateBatteryIcon.sh
                             echo 'AC unpluged'
                             ;;
                         00000001)
                             sleep 1
                             play $HOME/.config/hypr/assets/sounds/power-plug.ogg &> /dev/null &
-                            sh $HOME/.config/hypr/scripts/battery/updateBatteryIcon.sh
                             echo 'AC pluged'
                             ;;
                     esac

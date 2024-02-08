@@ -1,10 +1,6 @@
 @import "../variables";
 @import "window";
 
-.systemMenuWindow {
-  @extend .window;
-}
-
 .systemMenuIconButton {
   background-color: transparent;
   min-width: 30px;

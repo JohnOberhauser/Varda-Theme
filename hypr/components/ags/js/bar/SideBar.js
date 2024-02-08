@@ -57,8 +57,9 @@ export default(vertical) => Widget.Window({
     exclusivity: 'exclusive',
     layer: 'top',
     class_name: 'window',
-    margins: [5, 0],
+    margins: [5, 5],
     child: Widget.CenterBox({
+        css: "padding: 2px;",
         vertical: true,
         start_widget: Top(vertical),
         center_widget: Center(vertical),
