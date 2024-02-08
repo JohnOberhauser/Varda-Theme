@@ -1,4 +1,4 @@
-import {MenuButton, Workspaces, VolumeButton, MicrophoneButton} from "./barWidgets.js";
+import {MenuButton, Workspaces, VolumeButton, MicrophoneButton, BatteryButton, BatteryIcon} from "./barWidgets.js";
 import {Window} from "../Windows.js"
 
 const Top = (vertical) => Widget.Box({
@@ -25,6 +25,8 @@ const Bottom = (vertical) => Widget.Box({
         Widget.Box({ vexpand: true}),
         VolumeButton,
         MicrophoneButton,
+        BatteryButton,
+        BatteryIcon,
         Widget.Box({ css: "margin-top: 6px;" }),
     ],
 });

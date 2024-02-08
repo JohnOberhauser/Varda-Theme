@@ -1,7 +1,9 @@
 import {Window} from "../Windows.js"
 import {getMicrophoneIcon, getVolumeIcon, swapInput, swapOutput} from "../utils/audio.js";
+import {getBatteryIcon} from "../utils/battery.js";
 
 const audio = await Service.import('audio')
+const battery = await Service.import('battery')
 const hyprland = await Service.import('hyprland')
 
 const dispatchWorkspace = ws => hyprland.sendMessage(`dispatch workspace ${ws}`);
@@ -67,4 +69,23 @@ export const VolumeButton = Widget.Button({
             self.label = getVolumeIcon(audio)
         }
     ),
+})
+
+export const BatteryButton = Widget.Button({
+    class_name: "iconButton",
+    visible: battery.available,
+    onClicked: () => {},
+    // set icon
+    setup: self => self.hook(
+        battery,
+        () => {
+            self.label = getBatteryIcon(battery)
+        }
+    ),
+})
+
+export const BatteryIcon = Widget.Icon({
+    class_name: "iconButton",
+    visible: battery.available,
+    icon: battery.bind('icon_name')
 })
