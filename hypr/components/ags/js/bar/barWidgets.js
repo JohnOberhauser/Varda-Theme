@@ -71,10 +71,8 @@ export const VolumeButton = Widget.Button({
     ),
 })
 
-export const BatteryButton = Widget.Button({
+export const BatteryButton = Widget.Label({
     class_name: "iconButton",
-    visible: battery.available,
-    onClicked: () => {},
     // set icon
     setup: self => self.hook(
         battery,
@@ -84,8 +82,9 @@ export const BatteryButton = Widget.Button({
     ),
 })
 
-export const BatteryIcon = Widget.Icon({
+export const BluetoothButton = Widget.Button({
     class_name: "iconButton",
-    visible: battery.available,
-    icon: battery.bind('icon_name')
+    //TODO create a new window for bluetooth settings in ags
+    onClicked: () => Utils.exec('bash -c "$HOME/.config/hypr/scripts/bluetooth/toggleBluetoothMenu.sh"'),
+    label: "󰂯",
 })

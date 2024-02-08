@@ -8,11 +8,19 @@ export function getVolumeIcon(audio) {
     }
     const vol = audio.speaker.volume * 100
 
-    if (output != null && (output.indexOf("Headset") !== -1 || output.indexOf("Buds") !== -1)) {
+    // console.log("================= icon ===================")
+    // console.log(output)
+    if (output != null && (output.indexOf("Headset") !== -1)) {
         if (vol === 0) {
             return "󰋐"
         } else {
             return "󰋎"
+        }
+    } else if (output.indexOf("Buds") !== -1) {
+        if (vol === 0) {
+            return "󰋐"
+        } else {
+            return "󰥰"
         }
     } else {
         if (vol === 0) {
@@ -48,11 +56,16 @@ export function getMicrophoneIcon(audio) {
 export function swapOutput(audio) {
     const currentSink = audio.control.get_default_sink()
     const sinks = audio.control.get_sinks().filter((sink) => {
-        return sink.description.indexOf("Yeti") === -1 || sink.description.indexOf("Navi") === -1
+        return sink.description.indexOf("Yeti") === -1 && sink.description.indexOf("Navi") === -1
     })
 
     let set = false
-    sinks.forEach((sink) => {
+    sinks.sort(
+        function (a, b) {
+            return a.id < b.id
+        }
+    ).forEach((sink) => {
+        console.log(sink.id)
         if (sink.id < currentSink.id && !set) {
             audio.control.set_default_sink(sink)
             set = true
@@ -69,7 +82,11 @@ export function swapInput(audio) {
     const sources = audio.control.get_sources()
 
     let set = false
-    sources.forEach((source) => {
+    sources.sort(
+        function (a, b) {
+            return a.id < b.id
+        }
+    ).forEach((source) => {
         if (source.id < currentSource.id && !set) {
             audio.control.set_default_source(source)
             set = true
