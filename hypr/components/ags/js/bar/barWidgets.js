@@ -28,7 +28,7 @@ export const Workspaces = (vertical) => Widget.EventBox({
 
         // set icon
         setup: self => self.hook(
-            hyprland,
+            hyprland.active.workspace,
             () => self.children.forEach(
                 btn => {
                     if (hyprland.monitors[0].activeWorkspace.id === btn.attribute) {

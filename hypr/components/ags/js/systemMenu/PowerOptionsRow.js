@@ -9,7 +9,7 @@ const LogoutButton = Widget.Button({
     label: "󰍃",
     onClicked: () => {
         App.toggleWindow(Window.SystemMenu)
-        dispatch("exit 0")
+        Utils.exec("pkill Hyprland")
     },
 })
 
@@ -18,7 +18,7 @@ const LockButton = Widget.Button({
     label: "",
     onClicked: () => {
         App.toggleWindow(Window.SystemMenu)
-        Utils.exec('bash -c "$HOME/.config/hypr/scripts/powerOptions/lock.sh &> /dev/null &"')
+        Utils.execAsync('bash -c "$HOME/.config/hypr/scripts/powerOptions/lock.sh &> /dev/null &"')
     },
 })
 
@@ -27,7 +27,7 @@ const RebootButton = Widget.Button({
     label: "",
     onClicked: () => {
         App.toggleWindow(Window.SystemMenu)
-        Utils.exec('bash -c "reboot"')
+        Utils.execAsync('bash -c "reboot"')
     },
 })
 
@@ -36,7 +36,7 @@ const ShutdownButton = Widget.Button({
     label: "⏻",
     onClicked: () => {
         App.toggleWindow(Window.SystemMenu)
-        Utils.exec('bash -c "shutdown now"')
+        Utils.execAsync('bash -c "shutdown now"')
     },
 })
 
