@@ -82,11 +82,20 @@ export const BatteryButton = (css) => Widget.Label({
     setup: self => {
         // the parent likes to set default visibility, override
         setTimeout(() => {self.visible = false}, 0)
+        let batteryWarningInterval
         self.hook(
             battery,
             () => {
                 self.visible = battery.available
                 self.label = getBatteryIcon(battery)
+                if (battery.available && battery.percent < 4 && batteryWarningInterval == null) {
+                    batteryWarningInterval = setInterval(() => {
+                        Utils.execAsync('bash -c "play $HOME/.config/hypr/assets/sounds/battery-low.ogg"')
+                    }, 120_000)
+                } else if (battery.percent >= 4 && batteryWarningInterval != null) {
+                    batteryWarningInterval.destroy()
+                    batteryWarningInterval = null
+                }
             }
         )
     },
