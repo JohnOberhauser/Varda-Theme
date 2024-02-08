@@ -41,28 +41,28 @@
 .row {
   margin: 0 20px 0 20px; }
 
-.volumeAlertIcon {
+.alertIcon {
   margin-left: 20px;
   margin-right: 10px;
   font-size: 50px;
   color: #D0EBEE; }
 
-.volumeAlertText {
+.alertText {
   color: #D0EBEE; }
 
-.volumeAlertProgress {
+.alertProgress {
   min-width: 150px;
   margin-right: 20px; }
 
-.volumeAlertProgress trough {
+.alertProgress trough {
   background: #141619;
   min-height: 8px;
   border-radius: 16px; }
 
-.volumeAlertProgress trough slider {
+.alertProgress trough slider {
   all: unset; }
 
-.volumeAlertProgress trough highlight {
+.alertProgress trough highlight {
   min-width: 8px;
   border-radius: 16px;
   background: #D0EBEE; }

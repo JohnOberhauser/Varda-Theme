@@ -1,11 +1,13 @@
 import SideBar from "./js/bar/SideBar.js";
 import SystemMenu from "./js/systemMenu/SystemMenu.js";
-import VolumeAlert from "./js/volumeAlert/VolumeAlert.js";
+import VolumeAlert from "./js/alerts/VolumeAlert.js";
+import BrightnessAlert from "./js/alerts/BrightnessAlert.js";
 
 const windows = () => [
     SideBar(true),
     SystemMenu,
     VolumeAlert,
+    BrightnessAlert
 ];
 
 const scss = `${App.configDir}/scss/main.scss`
