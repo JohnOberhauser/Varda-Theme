@@ -37,14 +37,16 @@ const VolumeSlider = (type) => Widget.Slider({
     onChange: ({ value }) => audio[type].volume = value,
 })
 
-export const VolumeSliderRow = Widget.Box({
-    vertical: false,
-    className: "row",
-    children: [
-        VolumeButton,
-        VolumeSlider("speaker"),
-    ]
-})
+export function VolumeSliderRow() {
+    return Widget.Box({
+        vertical: false,
+        className: "row",
+        children: [
+            VolumeButton,
+            VolumeSlider("speaker"),
+        ]
+    })
+}
 
 export const MicrophoneSliderRow = Widget.Box({
     vertical: false,

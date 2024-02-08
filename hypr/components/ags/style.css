@@ -40,3 +40,36 @@
 
 .row {
   margin: 0 20px 0 20px; }
+
+.volumeAlertIcon {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-size: 50px;
+  color: #D0EBEE; }
+
+.volumeAlertText {
+  color: #D0EBEE; }
+
+.volumeAlertProgress {
+  min-width: 150px;
+  margin-right: 20px; }
+
+.volumeAlertProgress trough {
+  background: #141619;
+  min-height: 8px;
+  border-radius: 16px; }
+
+.volumeAlertProgress trough slider {
+  all: unset; }
+
+.volumeAlertProgress trough highlight {
+  min-width: 8px;
+  border-radius: 16px;
+  background: #D0EBEE; }
+
+.window, .systemMenuWindow {
+  background-color: #0C0E11;
+  border-radius: 8px;
+  border-color: #52677C;
+  border-width: 2px;
+  border-style: solid; }

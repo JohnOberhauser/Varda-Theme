@@ -1,4 +1,5 @@
 export const Window = {
     SideBar: "sidebar",
-    SystemMenu: "systemMenu"
+    SystemMenu: "systemMenu",
+    VolumeAlert: "volumeAlert",
 }

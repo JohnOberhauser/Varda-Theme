@@ -8,8 +8,6 @@ export function getVolumeIcon(audio) {
     }
     const vol = audio.speaker.volume * 100
 
-    // console.log("================= icon ===================")
-    // console.log(output)
     if (output != null && (output.indexOf("Headset") !== -1)) {
         if (vol === 0) {
             return "󰋐"
@@ -65,7 +63,6 @@ export function swapOutput(audio) {
             return a.id < b.id
         }
     ).forEach((sink) => {
-        console.log(sink.id)
         if (sink.id < currentSink.id && !set) {
             audio.control.set_default_sink(sink)
             set = true

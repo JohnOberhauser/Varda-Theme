@@ -16,7 +16,7 @@ export default Widget.Window({
         vertical: true,
         children: [
             Widget.Box({ css: "margin-top: 20px;" }),
-            VolumeSliderRow,
+            VolumeSliderRow(),
             MicrophoneSliderRow,
             Widget.Box({ css: "margin-top: 20px;" }),
             PowerOptionsRow,
