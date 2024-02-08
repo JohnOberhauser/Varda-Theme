@@ -74,10 +74,12 @@ export const VolumeButton = Widget.Button({
 
 export const BatteryButton = Widget.Label({
     class_name: "iconButton",
+    visible: false,
     // set icon
     setup: self => self.hook(
         battery,
         () => {
+            self.visible = battery.available
             self.label = getBatteryIcon(battery)
         }
     ),

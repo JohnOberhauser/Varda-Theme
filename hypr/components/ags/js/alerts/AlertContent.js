@@ -1,4 +1,4 @@
-import {getVolumeIcon, swapOutput} from "../utils/audio.js";
+import {getVolumeIcon} from "../utils/audio.js";
 import BrightnessService from "../BrightnessService.js";
 import {getBrightnessIcon} from "../utils/brightness.js";
 

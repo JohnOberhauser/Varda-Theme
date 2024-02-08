@@ -31,19 +31,16 @@ const Bottom = (vertical) => {
     const children = [
         Widget.Box({ vexpand: true}), // push everything to the bottom
         BluetoothButton,
+        Widget.Box({ css: "margin-top: 10px;" }),
         VolumeButton,
+        Widget.Box({ css: "margin-top: 10px;" }),
         MicrophoneButton,
-    ]
-
-    if (battery.available) {
-        // @ts-ignore
-        children.push(BatteryButton)
-    }
-
-    children.push(
+        Widget.Box({ css: "margin-top: 10px;" }),
+        BatteryButton,
+        Widget.Box({ css: "margin-top: 10px;" }),
         ClockButton,
         Widget.Box({ css: "margin-top: 6px;" }),
-    )
+    ]
 
     return Widget.Box({
         vertical: vertical,

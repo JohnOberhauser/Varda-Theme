@@ -30,6 +30,7 @@ sox - play sounds
 ags
 sassc
 pipewire-pulse
+upower
 
 ### Cursor
 cursor in use    
