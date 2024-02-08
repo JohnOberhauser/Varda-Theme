@@ -42,14 +42,16 @@ export const Workspaces = (vertical) => Widget.EventBox({
     }),
 })
 
-export const MenuButton = Widget.Button({
+export const MenuButton = (css) => Widget.Button({
     label: '',
     class_name: "iconButton",
+    css: css,
     onClicked: () => App.toggleWindow(Window.SystemMenu),
 })
 
-export const MicrophoneButton = Widget.Button({
+export const MicrophoneButton = (css) => Widget.Button({
     class_name: "iconButton",
+    css: css,
     onClicked: () => swapInput(audio),
     // set icon
     setup: self => self.hook(
@@ -60,8 +62,9 @@ export const MicrophoneButton = Widget.Button({
     ),
 })
 
-export const VolumeButton = Widget.Button({
+export const VolumeButton = (css) => Widget.Button({
     class_name: "iconButton",
+    css: css,
     onClicked: () => swapOutput(audio),
     // set icon
     setup: self => self.hook(
@@ -72,9 +75,10 @@ export const VolumeButton = Widget.Button({
     ),
 })
 
-export const BatteryButton = Widget.Label({
+export const BatteryButton = (css) => Widget.Label({
     class_name: "iconButton",
     visible: false,
+    css: css,
     // set icon
     setup: self => self.hook(
         battery,
@@ -85,15 +89,17 @@ export const BatteryButton = Widget.Label({
     ),
 })
 
-export const BluetoothButton = Widget.Button({
+export const BluetoothButton = (css) => Widget.Button({
     class_name: "iconButton",
+    css: css,
     //TODO create a new window for bluetooth settings in ags
     onClicked: () => Utils.execAsync('bash -c "$HOME/.config/hypr/scripts/bluetooth/toggleBluetoothMenu.sh &> /dev/null &"'),
     label: "󰂯",
 })
 
-export const ClockButton = Widget.Button({
+export const ClockButton = (css) => Widget.Button({
     class_name: "iconButton",
+    css: css,
     //TODO create a new window for calendar in ags
     onClicked: () => {},
     label: clock.bind('value').transform(time => {

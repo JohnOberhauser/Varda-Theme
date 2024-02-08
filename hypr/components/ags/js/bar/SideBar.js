@@ -9,13 +9,10 @@ import {
 } from "./barWidgets.js";
 import {Window} from "../Windows.js"
 
-const battery = await Service.import('battery')
-
 const Top = (vertical) => Widget.Box({
     vertical: vertical,
     children: [
-        Widget.Box({ css: "margin-top: 6px;" }),
-        MenuButton,
+        MenuButton("padding-top: 6px;"),
         Workspaces(vertical),
     ],
 });
@@ -30,16 +27,11 @@ const Center = (vertical) => Widget.Box({
 const Bottom = (vertical) => {
     const children = [
         Widget.Box({ vexpand: true}), // push everything to the bottom
-        BluetoothButton,
-        Widget.Box({ css: "margin-top: 10px;" }),
-        VolumeButton,
-        Widget.Box({ css: "margin-top: 10px;" }),
-        MicrophoneButton,
-        Widget.Box({ css: "margin-top: 10px;" }),
-        BatteryButton,
-        Widget.Box({ css: "margin-top: 10px;" }),
-        ClockButton,
-        Widget.Box({ css: "margin-top: 6px;" }),
+        BluetoothButton("margin-top: 10px;"),
+        VolumeButton("margin-top: 10px;"),
+        MicrophoneButton("margin-top: 10px;"),
+        BatteryButton("margin-top: 10px;"),
+        ClockButton("margin-top: 10px; padding-bottom: 6px;"),
     ]
 
     return Widget.Box({
