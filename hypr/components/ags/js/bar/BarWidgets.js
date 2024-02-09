@@ -112,9 +112,7 @@ export const BatteryButton = (css) => Widget.Label({
 export const BluetoothButton = (css) => Widget.Button({
     class_name: "iconButton",
     css: css,
-    //TODO create a new window for bluetooth settings in ags
     onClicked: () => App.toggleWindow(Window.Bluetooth),
-    // onClicked: () => Utils.execAsync('bash -c "$HOME/.config/hypr/scripts/bluetooth/toggleBluetoothMenu.sh &> /dev/null &"'),
     label: "󰂯",
 })
 
