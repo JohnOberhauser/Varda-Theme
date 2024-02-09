@@ -116,13 +116,17 @@ export const BluetoothButton = (css) => Widget.Button({
     label: "󰂯",
 })
 
-export const ClockButton = (css) => Widget.Button({
+export const ClockButton = (css, singleLine) => Widget.Button({
     class_name: "iconButton",
     css: css,
     //TODO create a new window for calendar in ags
     onClicked: () => {},
     label: clock.bind('value').transform(time => {
-        return time.format("%I\n%M") || ""
+        if (singleLine) {
+            return time.format("%I:%M") || ""
+        } else {
+            return time.format("%I\n%M") || ""
+        }
     }),
 })
 

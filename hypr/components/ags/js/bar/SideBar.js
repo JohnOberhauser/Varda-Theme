@@ -10,24 +10,24 @@ import {
 } from "./BarWidgets.js";
 import {Window} from "../Windows.js"
 
-const Top = (vertical) => Widget.Box({
-    vertical: vertical,
+const Top = () => Widget.Box({
+    vertical: true,
     children: [
         MenuButton("padding-top: 6px;"),
-        Workspaces(vertical),
+        Workspaces(true),
     ],
 });
 
-const Center = (vertical) => Widget.Box({
-    vertical: vertical,
+const Center = () => Widget.Box({
+    vertical: true,
     children: [
 
     ],
 });
 
-const Bottom = (vertical) => {
+const Bottom = () => {
     return Widget.Box({
-        vertical: vertical,
+        vertical: true,
         vpack: "fill",
         vexpand: true,
         children: [
@@ -37,12 +37,12 @@ const Bottom = (vertical) => {
             VolumeButton("margin-top: 10px;"),
             MicrophoneButton("margin-top: 10px;"),
             BatteryButton("margin-top: 10px;"),
-            ClockButton("margin-top: 10px; padding-bottom: 6px;"),
+            ClockButton("margin-top: 10px; padding-bottom: 6px;", false),
         ],
     });
 }
 
-export default(vertical) => Widget.Window({
+export default Widget.Window({
     monitor: 0,
     name: Window.SideBar, // name has to be unique
     anchor: ['top', 'left', 'bottom'],
@@ -53,8 +53,8 @@ export default(vertical) => Widget.Window({
     child: Widget.CenterBox({
         css: "padding: 2px;",
         vertical: true,
-        start_widget: Top(vertical),
-        center_widget: Center(vertical),
-        end_widget: Bottom(vertical),
+        start_widget: Top(),
+        center_widget: Center(),
+        end_widget: Bottom(),
     }),
 });

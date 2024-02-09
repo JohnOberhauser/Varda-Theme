@@ -2,10 +2,10 @@ import {MicrophoneSliderRow, VolumeSliderRow} from "./VolumeSliderRow.js";
 import {PowerOptionsRow} from "./PowerOptionsRow.js";
 import {Window} from "../Windows.js"
 
-export default Widget.Window({
+export default (anchor) => Widget.Window({
     monitor: 0,
     name: Window.SystemMenu, // name has to be unique
-    anchor: ['top', 'left'],
+    anchor: anchor,
     exclusivity: 'normal',
     layer: 'overlay',
     className: 'window',

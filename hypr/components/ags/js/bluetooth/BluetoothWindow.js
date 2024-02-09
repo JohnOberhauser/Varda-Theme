@@ -1,10 +1,10 @@
 import {Window} from "../Windows.js";
 import {BluetoothSettingsButton, ConnectedDevices} from "./BluetoothWidgets.js";
 
-export default Widget.Window({
+export default (anchor) => Widget.Window({
     monitor: 0,
     name: Window.Bluetooth, // name has to be unique
-    anchor: ['bottom', 'left'],
+    anchor: anchor,
     exclusivity: 'normal',
     layer: 'overlay',
     className: 'window',
