@@ -13,8 +13,6 @@ export const BluetoothSettingsButton = (css) => Widget.Button({
 })
 
 const ConnectButton = (device) => {
-    console.log(device.name)
-    console.log(device.connected)
     let label
     if (device.connected) {
         label = "Disconnect"

@@ -5,4 +5,5 @@ export const Window = {
     BrightnessAlert: "brightnessAlert",
     Bluetooth: "bluetooth",
     Overview: "overview",
+    Notification: "notification",
 }

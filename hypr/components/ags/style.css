@@ -94,3 +94,7 @@
 .calendar {
   border-color: transparent;
   border-radius: 16px; }
+
+.notification {
+  min-width: 350px;
+  margin: 10px; }

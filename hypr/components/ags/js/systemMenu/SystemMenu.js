@@ -7,7 +7,7 @@ export default (anchor) => Widget.Window({
     name: Window.SystemMenu, // name has to be unique
     anchor: anchor,
     exclusivity: 'normal',
-    layer: 'overlay',
+    layer: 'top',
     className: 'window',
     popup: true,
     margins: [5, 5],
