@@ -136,6 +136,7 @@
     "SearchMatch": {
       "startBackground": "steelBlue",
       "endBackground": "steelBlue"
-    }
+    },
+    "ToolWindow.Button.selectedBackground": "steelBlue"
   }
 }
