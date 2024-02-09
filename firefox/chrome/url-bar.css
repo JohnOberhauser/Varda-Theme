@@ -79,6 +79,10 @@ U R L - B A R
     margin-right: 10px !important;
 }
 
+#pageAction-urlbar-_testpilot-containers {
+    display: none;
+}
+
 .urlbarView {
     margin: 0px !important;
     width: 100% !important;
