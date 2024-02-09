@@ -26,7 +26,7 @@ fi
 echo "new1=$new1"
 #echo "new2=$new2"
 
-if [[ $new1 -lt 1 ]] || [[ $new1 -gt 5 ]]; then
+if [[ $new1 -lt 1 ]]; then
     exit
 fi
 

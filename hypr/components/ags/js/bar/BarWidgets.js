@@ -15,7 +15,7 @@ export const Workspaces = (vertical) => Widget.EventBox({
     child: Widget.Box({
         vertical: vertical,
         children: Array.from(
-            { length: 5 },
+            { length: 6 },
             (_, i) => i + 1
         ).map(i =>
             Widget.Button({

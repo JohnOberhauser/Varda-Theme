@@ -15,10 +15,6 @@ if [[ $(echo $new | tail -c 2) -lt 1 ]]; then
     exit
 fi
 
-if [[ $(echo $new | tail -c 2) -gt 5 ]]; then
-    exit
-fi
-
 hyprctl dispatch movetoworkspacesilent $new
 
 # right or left first to retain focus of window
