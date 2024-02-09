@@ -1,10 +1,14 @@
-.iconButton, .menuButton {
+.iconButton {
   background-color: transparent;
   color: #D0EBEE;
   padding: 4px 4px 4px 2px; }
 
-.menuButton {
-  margin-top: 6px; }
+.primaryButton {
+  background-color: #141619;
+  color: #D0EBEE;
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 200px; }
 
 .window {
   background-color: #0C0E11;
@@ -19,7 +23,8 @@
   font-size: 25px;
   margin: 0 10px 0 0;
   border-radius: 16px;
-  padding: 10px 15px 10px 15px; }
+  padding: 10px 15px 10px 15px;
+  color: #D0EBEE; }
 
 .systemMenuVolumeProgress {
   min-width: 200px;
@@ -73,3 +78,15 @@
   border-color: #52677C;
   border-width: 2px;
   border-style: solid; }
+
+.labelSmall {
+  color: #D0EBEE;
+  font-size: 12px; }
+
+.labelMedium {
+  color: #D0EBEE;
+  font-size: 16px; }
+
+.labelLarge {
+  color: #D0EBEE;
+  font-size: 20px; }

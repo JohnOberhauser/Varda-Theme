@@ -1,0 +1,15 @@
+@import "../variables";
+
+.iconButton {
+  background-color: transparent;
+  color: $fg;
+  padding: 4px 4px 4px 2px;
+}
+
+.primaryButton {
+  background-color: $buttonPrimary;
+  color: $fg;
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 200px;
+}

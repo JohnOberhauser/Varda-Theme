@@ -7,7 +7,7 @@ import {
     BluetoothButton,
     ClockButton,
     ScreenRecordingButton,
-} from "./barWidgets.js";
+} from "./BarWidgets.js";
 import {Window} from "../Windows.js"
 
 const Top = (vertical) => Widget.Box({

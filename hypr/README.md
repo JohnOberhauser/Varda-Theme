@@ -4,8 +4,7 @@ place this directory in ~/.config/
 
 #### from arch repo
 hyprland - duh    
-hyprpaper - wallpaper
-eww - topbar and widgets    
+hyprpaper - wallpaper   
 wireplumber - used in varius scripts for audio    
 playerctl - used in various scripts for controlling media players    
 swaylock - lock screen    
@@ -25,12 +24,16 @@ brightnessctl - controlling screen brightness
 acpi - get battery info
 acpid - start this with "systemctl enable acpid"
 sox - play sounds
+sassc - used in ags
+pipewire-pulse - used in ags
+upower - used in ags
+gnome-bluetooth-3.0 - used in ags
 
+#### Aur
+aylur's gtk shell
 
-ags
-sassc
-pipewire-pulse
-upower
+#### Flatpaks
+overskride
 
 ### Cursor
 cursor in use    

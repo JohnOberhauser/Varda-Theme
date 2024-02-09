@@ -3,4 +3,5 @@ export const Window = {
     SystemMenu: "systemMenu",
     VolumeAlert: "volumeAlert",
     BrightnessAlert: "brightnessAlert",
+    Bluetooth: "bluetooth",
 }

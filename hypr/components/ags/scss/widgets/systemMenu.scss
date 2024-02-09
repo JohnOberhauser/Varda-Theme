@@ -8,6 +8,7 @@
   margin: 0 10px 0 0;
   border-radius: 16px;
   padding: 10px 15px 10px 15px;
+  color: $fg;
 }
 
 .systemMenuVolumeProgress {
@@ -16,7 +17,7 @@
 }
 
 .systemMenuVolumeProgress trough {
-  background: #141619;
+  background: $sliderTrough;
   min-height: 8px;
   border-radius: 16px;
 }
@@ -27,7 +28,7 @@
 .systemMenuVolumeProgress trough highlight {
   min-width: 8px;
   border-radius: 16px;
-  background: #D0EBEE;
+  background: $fg;
 }
 
 .row {
