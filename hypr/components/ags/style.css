@@ -90,3 +90,7 @@
 .labelLarge {
   color: #D0EBEE;
   font-size: 20px; }
+
+.calendar {
+  border-color: transparent;
+  border-radius: 16px; }

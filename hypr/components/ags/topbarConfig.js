@@ -3,6 +3,7 @@ import VolumeAlert from "./js/alerts/VolumeAlert.js";
 import BrightnessAlert from "./js/alerts/BrightnessAlert.js";
 import BluetoothWindow from "./js/bluetooth/BluetoothWindow.js";
 import TopBar from "./js/bar/TopBar.js";
+import OverviewWindow from "./js/overview/OverviewWindow.js";
 
 const scss = `${App.configDir}/scss/main.scss`
 const css = `${App.configDir}/style.css`
@@ -20,5 +21,8 @@ export default {
         BluetoothWindow(
             ['top', 'right']
         ),
+        OverviewWindow(
+            ['top']
+        )
     ],
 };

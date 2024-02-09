@@ -4,4 +4,5 @@ export const Window = {
     VolumeAlert: "volumeAlert",
     BrightnessAlert: "brightnessAlert",
     Bluetooth: "bluetooth",
+    Overview: "overview",
 }
