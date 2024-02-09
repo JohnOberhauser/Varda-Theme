@@ -15,7 +15,4 @@ if [[ $connected = true ]]; then
 else
     echo "connecting..."
     bluetoothctl connect "$mac"
-    ( $HOME/.config/hypr/scripts/audio/swapOutputToBluetooth.sh & )
 fi
-
-$HOME/.config/hypr/scripts/bluetooth/updateDevices.sh

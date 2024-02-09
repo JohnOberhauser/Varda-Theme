@@ -1,6 +1,6 @@
 #!/bin/sh
 
-brightness=$($HOME/.config/hypr/scripts/brightness/getBrightnessPercent.sh)
+brightness=$(brightnessctl i | grep Current | awk -F "(" '{print $2}' | awk -F "%" '{print $1}')
 
 echo "current brightness: $brightness"
 
@@ -10,7 +10,6 @@ increase() {
     else
         brightnessctl s 100%
     fi
-#    $HOME/.config/hypr/scripts/brightness/showBrightnessAlert.sh
 }
 
 decrease() {
@@ -19,7 +18,6 @@ decrease() {
     else
         brightnessctl s 0%
     fi
-#    $HOME/.config/hypr/scripts/brightness/showBrightnessAlert.sh
 }
 
 if [ "$1" = "increase" ]; then

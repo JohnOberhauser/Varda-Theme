@@ -12,7 +12,6 @@ increase() {
     else
         wpctl set-volume @DEFAULT_AUDIO_SINK@ 1
     fi
-#    $HOME/.config/hypr/scripts/audio/showVolumeAlert.sh
 }
 
 decrease() {
@@ -21,12 +20,10 @@ decrease() {
     else
         wpctl set-volume @DEFAULT_AUDIO_SINK@ 0
     fi
-#    $HOME/.config/hypr/scripts/audio/showVolumeAlert.sh
 }
 
 mute() {
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-#    $HOME/.config/hypr/scripts/audio/showVolumeAlert.sh
 }
 
 value() {
@@ -38,7 +35,6 @@ value() {
     else
         wpctl set-volume @DEFAULT_AUDIO_SINK@ $1
     fi
-#    $HOME/.config/hypr/scripts/audio/updateVolumeIcon.sh
 }
 
 play $HOME/.config/hypr/assets/sounds/audio-volume-change.oga &> /dev/null &
