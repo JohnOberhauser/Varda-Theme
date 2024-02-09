@@ -2,8 +2,8 @@
   <metaInfo>
     <property name="created">2023-11-13T15:30:57</property>
     <property name="ide">Idea</property>
-    <property name="ideVersion">2023.2.5.0.0</property>
-    <property name="modified">2023-11-13T15:31:03</property>
+    <property name="ideVersion">2023.3.3.0.0</property>
+    <property name="modified">2024-02-09T11:36:14</property>
   </metaInfo>
   <colors>
     <option name="ADDED_LINES_COLOR" value="257b76" />
@@ -323,24 +323,10 @@
         <option name="FOREGROUND" value="464c55" />
       </value>
     </option>
-    <option name="CSS.COLOR">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
+    <option name="CSS.COLOR" baseAttributes="CSS.IDENT" />
     <option name="CSS.FUNCTION">
       <value>
         <option name="FOREGROUND" value="9ba9b2" />
-      </value>
-    </option>
-    <option name="CSS.HASH">
-      <value>
-        <option name="FOREGROUND" value="9ba9b2" />
-      </value>
-    </option>
-    <option name="CSS.IDENT">
-      <value>
-        <option name="FOREGROUND" value="d39a63" />
       </value>
     </option>
     <option name="CSS.IMPORTANT">
@@ -356,28 +342,7 @@
     <option name="CSS.PROPERTY_NAME">
       <value />
     </option>
-    <option name="CSS.PROPERTY_VALUE">
-      <value>
-        <option name="FOREGROUND" value="c78c56" />
-      </value>
-    </option>
-    <option name="CSS.PSEUDO">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
-    <option name="CSS.TAG_NAME">
-      <value>
-        <option name="FOREGROUND" value="dd8e91" />
-      </value>
-    </option>
-    <option name="CSS.URL">
-      <value>
-        <option name="FOREGROUND" value="c78c56" />
-        <option name="EFFECT_COLOR" value="c78c56" />
-        <option name="EFFECT_TYPE" value="1" />
-      </value>
-    </option>
+    <option name="CSS.URL" baseAttributes="HTML_ATTRIBUTE_VALUE" />
     <option name="CTRL_CLICKABLE">
       <value>
         <option name="FOREGROUND" value="d0ebee" />
@@ -887,7 +852,7 @@
     <option name="HTML_ATTRIBUTE_VALUE" baseAttributes="DEFAULT_STRING" />
     <option name="HTML_CUSTOM_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="c78c56" />
+        <option name="FOREGROUND" value="52677c" />
       </value>
     </option>
     <option name="HTML_ENTITY_REFERENCE" baseAttributes="DEFAULT_ENTITY" />
@@ -991,6 +956,8 @@
         <option name="FOREGROUND" value="9ba9b2" />
       </value>
     </option>
+    <option name="JS.GLOBAL_VARIABLE" baseAttributes="DEFAULT_GLOBAL_VARIABLE" />
+    <option name="JS.INSTANCE_MEMBER_FUNCTION" baseAttributes="DEFAULT_INSTANCE_METHOD" />
     <option name="JS.MODULE_NAME">
       <value>
         <option name="FOREGROUND" value="93394a" />
@@ -1761,7 +1728,7 @@
         <option name="FOREGROUND" value="349f97" />
       </value>
     </option>
-    <option name="SASS_COMMENT" baseAttributes="" />
+    <option name="SASS_COMMENT" baseAttributes="CSS.COMMENT" />
     <option name="SASS_MIXIN">
       <value>
         <option name="FOREGROUND" value="c78c56" />
