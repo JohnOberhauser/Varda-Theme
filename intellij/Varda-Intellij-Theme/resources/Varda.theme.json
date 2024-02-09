@@ -34,7 +34,8 @@
       "Objects.Red": "#733447",
       "Objects.RedStatus": "#733447",
       "Objects.Yellow": "#52677C",
-      "Objects.YellowDark": "#52677C"
+      "Objects.YellowDark": "#52677C",
+      "Tree.iconColor": "#52677C"
     }
   },
   "ui": {
@@ -78,7 +79,14 @@
       "pressedBorderColor": "background",
 
       "separatorColor": "steelPurple",
-      "lineSeparatorColor": "steelPurple"
+      "lineSeparatorColor": "steelPurple",
+      "matchForeground": "steelBlue",
+      "linkColor": "steelBlue",
+      "activeForeground": "steelBlue",
+      "hoverForeground": "steelBlue",
+      "visitedForeground": "steelBlue",
+      "spanBackground": "steelBlue",
+      "stepNumberForeground": "steelBlue"
     },
     "Button": {
       "startBackground": "background",
