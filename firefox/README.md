@@ -7,4 +7,6 @@ Search for toolkit.legacyUserProfileCustomizations.stylesheets, layers.accelerat
 
 Copy the chrome directory to $HOME/.mozilla/firefox/XXXXXXX.default-release/
 
+If the theme isn't working, make sure you setup to multi-account containers addon, or disable `pageAction-urlbar-_testpilot-containers` in `url-bar.css`
+
 Go to firefox settings and change the font to JetBrainsMono Patched Glyphs from the fonts directory
