@@ -33,10 +33,13 @@ export default Widget.Window({
         self.hook(
             audio,
             () => {
-                if (audio.speaker.volume === volume || !canShow) {
+                if (audio.speaker.volume === volume) {
                     return
                 }
                 volume = audio.speaker.volume
+                if (!canShow) {
+                    return
+                }
                 if (windowVisibilityTimeout != null) {
                     windowVisibilityTimeout.destroy()
                 }

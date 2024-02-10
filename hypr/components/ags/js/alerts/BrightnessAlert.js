@@ -34,10 +34,13 @@ export default Widget.Window({
         self.hook(
             brightnessService,
             () => {
-                if (brightnessService.screen_value === brightness || !canShow) {
+                if (brightnessService.screen_value === brightness) {
                     return
                 }
                 brightness = brightnessService.screen_value
+                if (!canShow) {
+                    return
+                }
                 if (windowVisibilityTimeout != null) {
                     windowVisibilityTimeout.destroy()
                 }
