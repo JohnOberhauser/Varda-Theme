@@ -2,11 +2,7 @@ import {Window} from "../Windows.js";
 import {AlertContent, AlertType} from "./AlertContent.js";
 import BrightnessService from "../BrightnessService.js";
 
-const brightnessService = await BrightnessService
-
-let timeout
-let brightness = 0.0
-let firstSkipped = false
+const brightnessService = BrightnessService
 
 export default Widget.Window({
     monitor: 0,
@@ -26,26 +22,32 @@ export default Widget.Window({
             Widget.Box({ css: "margin-top: 18px;" }),
         ]
     }),
-    setup: self => self.hook(
-        brightnessService,
-        () => {
-            if (brightnessService.screen_value === brightness) {
-                return
-            }
-            brightness = brightnessService.screen_value
-            if (!firstSkipped) {
-                firstSkipped = true
-                return
-            }
-            if (timeout != null) {
-                timeout.destroy()
-            }
-            self.visible = true
-            timeout = setTimeout(() => {
-                self.visible = false
-            }, 1000)
+    setup: self => {
+        let windowVisibilityTimeout
+        let brightness = 0.0
+        let canShow = false
 
-        },
-        "screen-changed"
-    )
+        setTimeout(() => {
+            canShow = true
+        }, 1000)
+
+        self.hook(
+            brightnessService,
+            () => {
+                if (brightnessService.screen_value === brightness || !canShow) {
+                    return
+                }
+                brightness = brightnessService.screen_value
+                if (windowVisibilityTimeout != null) {
+                    windowVisibilityTimeout.destroy()
+                }
+                self.visible = true
+                windowVisibilityTimeout = setTimeout(() => {
+                    self.visible = false
+                }, 1000)
+
+            },
+            "screen-changed"
+        )
+    }
 });

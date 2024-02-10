@@ -3,10 +3,6 @@ import {AlertContent, AlertType} from "./AlertContent.js";
 
 const audio = await Service.import('audio')
 
-let timeout
-let volume = 0.0
-let firstSkipped = false
-
 export default Widget.Window({
     monitor: 0,
     name: Window.VolumeAlert, // name has to be unique
@@ -25,26 +21,32 @@ export default Widget.Window({
             Widget.Box({ css: "margin-top: 18px;" }),
         ]
     }),
-    setup: self => self.hook(
-        audio,
-        () => {
-            if (audio.speaker.volume === volume) {
-                return
-            }
-            volume = audio.speaker.volume
-            if (!firstSkipped) {
-                firstSkipped = true
-                return
-            }
-            if (timeout != null) {
-                timeout.destroy()
-            }
-            self.visible = true
-            timeout = setTimeout(() => {
-                self.visible = false
-            }, 1000)
+    setup: self => {
+        let windowVisibilityTimeout
+        let volume = 0.0
+        let canShow = false
 
-        },
-        "speaker-changed"
-    )
+        setTimeout(() => {
+            canShow = true
+        }, 1000)
+
+        self.hook(
+            audio,
+            () => {
+                if (audio.speaker.volume === volume || !canShow) {
+                    return
+                }
+                volume = audio.speaker.volume
+                if (windowVisibilityTimeout != null) {
+                    windowVisibilityTimeout.destroy()
+                }
+                self.visible = true
+                windowVisibilityTimeout = setTimeout(() => {
+                    self.visible = false
+                }, 1000)
+
+            },
+            "speaker-changed"
+        )
+    }
 });

@@ -14,8 +14,7 @@ slurp - screenshot / screencast utility
 grim - screenshot taker    
 xdg-desktop-portal-hyprland - portal backend for screenshots and screencasting    
 xdg-desktop-portal-gtk - portal backend for everything else (also has screenshot and screencast, but wlr overrides it)    
-dunst - notifications    
-python - various scripts (weather and media controls)    
+dunst - notifications   
 pacman-contrib - used in script to check how many packages are out of date    
 polkit-gnome - GUI sudo permission handler    
 bc - used in scripts
