@@ -30,10 +30,10 @@
     height = 100
 
     # Position the notification in the top right corner
-    origin = bottom-right
+    origin = top-right
 
     # Offset from the origin
-    offset = 10x10
+    offset = 5x5
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -247,7 +247,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 4
+    corner_radius = 8
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
