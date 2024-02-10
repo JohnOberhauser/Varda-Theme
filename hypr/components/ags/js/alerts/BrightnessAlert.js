@@ -29,7 +29,7 @@ export default Widget.Window({
 
         setTimeout(() => {
             canShow = true
-        }, 1000)
+        }, 5_000)
 
         self.hook(
             brightnessService,
