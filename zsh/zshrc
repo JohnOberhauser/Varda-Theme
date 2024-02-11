@@ -184,4 +184,14 @@ LS_COLORS=$LS_COLORS:'ow=1;37;41:'
 LS_COLORS=$LS_COLORS:'*.bak=00;31:'
 export LS_COLORS
 
+# start yazi.  Makes it so when you quit yazi, you are in the same directory that you were in last
+function ya() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 fastfetch
