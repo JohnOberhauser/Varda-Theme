@@ -1,8 +1,11 @@
 ### Installing greetd and tuigreet
 
-install the packages from the AUR
+install the packages
 greetd
 greetd-tuigreet
+
+edit /usr/greetd/config.toml
+so that it uses tuigreet
 
 enable greetd:
 sudo systemctl enable --now greetd
