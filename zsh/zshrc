@@ -82,17 +82,6 @@ alias ewww="eww --config $HOME/.config/hypr/components/eww"
 alias agss="ags --config $HOME/.config/hypr/components/ags/sidebarConfig.js"
 alias agst="ags --config $HOME/.config/hypr/components/ags/topbarConfig.js"
 
-alias ga="git add ."
-alias gs="git status"
-alias gd="git diff"
-alias gl="git log"
-alias gc="git commit"
-alias gcm="git commit -m"
-alias gck="git checkout"
-alias gl="git pull"
-alias gp="git push"
-alias gb="git branch"
-
 # Change folder colors
 # ========= Font ================
 # 0 default color
