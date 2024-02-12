@@ -83,12 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -99,8 +94,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -112,6 +105,7 @@ alias uninstall="sudo pacman -Rcns"
 alias adb="/home/john/Android/Sdk/platform-tools/adb"
 alias fastboot="/home/john/Android/Sdk/platform-tools/fastboot"
 alias bashtop=bpytop
+alias bt=bpytop
 alias sshpi="ssh john@192.168.50.158"
 alias ewww="eww --config $HOME/.config/hypr/components/eww"
 alias agss="ags --config $HOME/.config/hypr/components/ags/sidebarConfig.js"
