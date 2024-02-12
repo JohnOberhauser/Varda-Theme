@@ -8,12 +8,15 @@
 ./scripts/foldersAndSymLinks.sh
 ./scripts/zshSetup.sh
 ./scripts/waylandSession.sh
+./scripts/startServices.sh
 
 
 # things left to do
 
+# set theme in gnome tweaks
+# Need to set fonts in gnome tweaks, firefox, intellij
+#
 # setup ufw
-# setup acpid (for laptops)
 #
 # config tuigreet
 # hyprland wrapper setup in tuigreet

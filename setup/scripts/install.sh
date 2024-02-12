@@ -63,4 +63,5 @@ zoxide \
 ttf-jetbrains-mono-nerd \
 ttf-nerd-fonts-symbols \
 ttf-hannom \
-ttf-hanazono
+ttf-hanazono \
+blueman

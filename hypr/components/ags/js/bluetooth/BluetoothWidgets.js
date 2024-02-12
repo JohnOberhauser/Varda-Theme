@@ -8,7 +8,7 @@ export const BluetoothSettingsButton = (css) => Widget.Button({
     css: css,
     onClicked: () => {
         App.toggleWindow(Window.Bluetooth)
-        Utils.execAsync('bash -c "flatpak run io.github.kaii_lb.Overskride &> /dev/null &"')
+        Utils.execAsync('bash -c "blueman-manager &> /dev/null &"')
     },
 })
 
