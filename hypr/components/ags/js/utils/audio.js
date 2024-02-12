@@ -76,14 +76,19 @@ export function swapOutput(audio) {
 
 export function swapInput(audio) {
     const currentSource = audio.control.get_default_source()
-    const sources = audio.control.get_sources()
-
-    let set = false
-    sources.sort(
+    const sources = audio.control.get_sources().sort(
         function (a, b) {
             return a.id < b.id
         }
-    ).forEach((source) => {
+    ).filter(
+        (source) => {
+            return source.form_factor != null
+        }
+    )
+
+    let set = false
+    sources.forEach((source) => {
+        console.log(source.id)
         if (source.id < currentSource.id && !set) {
             audio.control.set_default_source(source)
             set = true
