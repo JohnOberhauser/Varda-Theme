@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -Syu \
+sudo pacman -Syu --needed \
 git \
 vim \
 firefox \
