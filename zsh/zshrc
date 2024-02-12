@@ -82,6 +82,7 @@ alias ewww="eww --config $HOME/.config/hypr/components/eww"
 alias agss="ags --config $HOME/.config/hypr/components/ags/sidebarConfig.js"
 alias agst="ags --config $HOME/.config/hypr/components/ags/topbarConfig.js"
 alias vim=nvim
+alias gpm=git pull origin main
 
 # Change folder colors
 # ========= Font ================
