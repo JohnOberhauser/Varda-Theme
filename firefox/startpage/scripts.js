@@ -26,15 +26,15 @@ const getTargetUrl = value => {
     return engine + value
 }
 
-const search = () => {
-    const value = searchInput.value
-    const targetUrl = getTargetUrl(value)
-    if (targetUrl == engine) return
-    window.open(targetUrl, "_self")
-}
-
-searchInput.onkeyup = event => event.key === "Enter" && search()
-searchButton.onclick = search
+// const search = () => {
+//     const value = searchInput.value
+//     const targetUrl = getTargetUrl(value)
+//     if (targetUrl == engine) return
+//     window.open(targetUrl, "_self")
+// }
+//
+// searchInput.onkeyup = event => event.key === "Enter" && search()
+// searchButton.onclick = search
 
 /**
  * inject bookmarks into html
@@ -51,7 +51,7 @@ const bookmarks = [
 {"id":"njYk5XF49Zdf8g3o","label":"Social","bookmarks":[
 {"id":"REzi7xXTn6hBm5Vu","label":"Reddit","url":"https://www.reddit.com/"},
 {"id":"PeIbQBjpA41kjGD6","label":"Sh","url":"https://sh.reddit.com/"},
-{"id":"fgOAsCWGRNHCRZQR","label":"Biz","url":"https://boards.4channel.org/biz/catalog"},
+{"id":"fgOAsCWGRNHCRZQR","label":"G","url":"https://boards.4channel.org/g/catalog"},
 {"id":"PeIbQBjpA41kjGD6","label":"LinkedIn","url":"https://www.linkedin.com/"}
 ]
 },

@@ -69,7 +69,7 @@ body {
   background-color: var(--color-bg-surface);
   border-radius: var(--surface-borderRadius);
   overflow: hidden;
-  border: var(--space-smallest) solid var(--color-primary-base);
+  /*border: var(--space-smallest) solid var(--color-primary-base);*/
   box-shadow: var(--surface-shadow);
 }
 
@@ -93,69 +93,69 @@ body {
  * Title
  **/
 
-.surface > main > h1 {
-  color: var(--color-primary-fg);
-  font-size: var(--space-large);
-  font-weight: 500;
-  margin: 0 0 var(--space-large) 0;
+/*.surface > main > h1 {*/
+/*  color: var(--color-primary-fg);*/
+/*  font-size: var(--space-large);*/
+/*  font-weight: 500;*/
+/*  margin: 0 0 var(--space-large) 0;*/
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow-x: hidden;
-}
+/*  white-space: nowrap;*/
+/*  text-overflow: ellipsis;*/
+/*  overflow-x: hidden;*/
+/*}*/
 
 /**
  * Searchbar
  **/
 
-#searchbar {
-  display: flex;
-  align-items: center;
-}
+/*#searchbar {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*}*/
 
-#searchbar > button {
-  width: calc(var(--space-medium) * 2);
-  height: calc(var(--space-medium) * 2);
-  color: var(--color-primary-fg);
+/*#searchbar > button {*/
+/*  width: calc(var(--space-medium) * 2);*/
+/*  height: calc(var(--space-medium) * 2);*/
+/*  color: var(--color-primary-fg);*/
 
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  outline: none;
+/*  cursor: pointer;*/
+/*  background-color: transparent;*/
+/*  border: none;*/
+/*  outline: none;*/
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
+/*  display: inline-flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*}*/
 
-#searchbar > button > .feather-search {
-  width: 1.2rem;
-  height: 1.2rem;
-}
+/*#searchbar > button > .feather-search {*/
+/*  width: 1.2rem;*/
+/*  height: 1.2rem;*/
+/*}*/
 
-#searchbar > button:hover {
-  color: var(--color-primary-base);
-}
+/*#searchbar > button:hover {*/
+/*  color: var(--color-primary-base);*/
+/*}*/
 
-#searchbar > button:focus-visible {
-  color: var(--color-primary-base);
-  background: var(--color-bg-highlight);
-  outline: var(--space-smallest) solid var(--color-fg-shade);
-}
+/*#searchbar > button:focus-visible {*/
+/*  color: var(--color-primary-base);*/
+/*  background: var(--color-bg-highlight);*/
+/*  outline: var(--space-smallest) solid var(--color-fg-shade);*/
+/*}*/
 
-#searchbar > input {
-  height: calc(var(--space-medium) * 2);
-  flex: 1;
+/*#searchbar > input {*/
+/*  height: calc(var(--space-medium) * 2);*/
+/*  flex: 1;*/
 
-  background-color: transparent;
-  border: none;
-  outline: none;
-  border-bottom: var(--space-smallest) solid var(--color-fg-base);
-}
+/*  background-color: transparent;*/
+/*  border: none;*/
+/*  outline: none;*/
+/*  border-bottom: var(--space-smallest) solid var(--color-fg-base);*/
+/*}*/
 
-#searchbar > input:focus-visible {
-  border-color: var(--color-primary-base);
-}
+/*#searchbar > input:focus-visible {*/
+/*  border-color: var(--color-primary-base);*/
+/*}*/
 
 /**
  * Bookmarks
@@ -165,7 +165,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-top: auto;
+  margin-top: 50px;
 }
 
 .bookmark-group {
@@ -176,7 +176,7 @@ body {
   color: var(--color-secondary-fg);
   font-size: var(--space-medium);
   font-weight: 500;
-  margin: 0;
+  margin-right: 0;
 }
 
 .bookmark-group > ul {
