@@ -64,4 +64,5 @@ ttf-jetbrains-mono-nerd \
 ttf-nerd-fonts-symbols \
 ttf-hannom \
 ttf-hanazono \
-blueman
+blueman \
+python
