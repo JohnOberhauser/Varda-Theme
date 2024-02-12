@@ -57,7 +57,7 @@ ZSH_THEME="varda"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cp)
+plugins=(git cp ufw sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -81,6 +81,7 @@ alias sshpi="ssh john@192.168.50.158"
 alias ewww="eww --config $HOME/.config/hypr/components/eww"
 alias agss="ags --config $HOME/.config/hypr/components/ags/sidebarConfig.js"
 alias agst="ags --config $HOME/.config/hypr/components/ags/topbarConfig.js"
+alias vim=nvim
 
 # Change folder colors
 # ========= Font ================
