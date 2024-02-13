@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -Syu --needed \
+sudo pacman -Syu \
 git \
 vim \
 firefox \
@@ -8,7 +8,7 @@ amd-ucode \
 ufw \
 hyprland \
 pipewire \
-network-manager \
+networkmanager \
 greetd \
 flatpak \
 base-devel \
