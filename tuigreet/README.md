@@ -68,22 +68,4 @@ If it doesn't already exist, create it and make it executable with
 Make sure `rc-local.service` is enabled
 `sudo systemctl enable rc-local.service`
 
-If the `rc-local.service` file doesn't exist, create it in `/etc/systemd/system/`
-These are the files contents
-```
-[Unit]
-Description=/etc/rc.local Compatibility
-ConditionPathExists=/etc/rc.local
-
-[Service]
-Type=forking
-ExecStart=/etc/rc.local start
-TimeoutSec=0
-StandardOutput=tty
-RemainAfterExit=yes
-SysVStartPriority=99
-
-[Install]
-WantedBy=multi-user.target
-```
-
+If the `rc-local.service` file doesn't exist, copy it to `/etc/systemd/system/`
