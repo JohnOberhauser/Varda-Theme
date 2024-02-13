@@ -84,6 +84,7 @@ alias agst="ags --config $HOME/.config/hypr/components/ags/topbarConfig.js"
 alias v=nvim
 alias sv="sudo nvim"
 alias glm="git pull origin main"
+alias cdv="cd ~/workspace/Varda-Theme"
 
 # Change folder colors
 # ========= Font ================
