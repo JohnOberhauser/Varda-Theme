@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Didn't test this, just tracked what I did as I setup my system, so might not work
-
 ./scripts/install.sh
 ./scripts/setupYay.sh
 ./scripts/installFromAur.sh
