@@ -4,7 +4,7 @@ install the packages
 greetd
 greetd-tuigreet
 
-edit /usr/greetd/config.toml
+edit /etc/greetd/config.toml
 so that it uses tuigreet
 
 enable greetd:
