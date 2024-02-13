@@ -65,4 +65,5 @@ ttf-nerd-fonts-symbols \
 ttf-hannom \
 ttf-hanazono \
 blueman \
-python
+python \
+nautilus
