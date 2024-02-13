@@ -66,4 +66,5 @@ ttf-hannom \
 ttf-hanazono \
 blueman \
 python \
-nautilus
+nautilus \
+neovim

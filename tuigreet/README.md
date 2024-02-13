@@ -4,7 +4,7 @@ install the packages
 greetd
 greetd-tuigreet
 
-edit /usr/greetd/config.toml
+edit /etc/greetd/config.toml
 so that it uses tuigreet
 
 enable greetd:
@@ -55,35 +55,10 @@ endmode
 ```
 
 #### Step 2
-Add this to `/etc/rc.local`
-```
-#!/bin/bash
-fbset -a "ultrawide"
-```
-
-If it doesn't already exist, create it and make it executable with
-`sudo chmod +x /etc/rc.local`
+Copy rc.local to `/etc/`
 
 #### Step 3
 Make sure `rc-local.service` is enabled
 `sudo systemctl enable rc-local.service`
 
-If the `rc-local.service` file doesn't exist, create it in `/etc/systemd/system/`
-These are the files contents
-```
-[Unit]
-Description=/etc/rc.local Compatibility
-ConditionPathExists=/etc/rc.local
-
-[Service]
-Type=forking
-ExecStart=/etc/rc.local start
-TimeoutSec=0
-StandardOutput=tty
-RemainAfterExit=yes
-SysVStartPriority=99
-
-[Install]
-WantedBy=multi-user.target
-```
-
+If the `rc-local.service` file doesn't exist, copy it to `/etc/systemd/system/`
