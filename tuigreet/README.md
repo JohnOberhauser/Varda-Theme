@@ -55,14 +55,7 @@ endmode
 ```
 
 #### Step 2
-Add this to `/etc/rc.local`
-```
-#!/bin/bash
-fbset -a "ultrawide"
-```
-
-If it doesn't already exist, create it and make it executable with
-`sudo chmod +x /etc/rc.local`
+Copy rc.local to `/etc/`
 
 #### Step 3
 Make sure `rc-local.service` is enabled
