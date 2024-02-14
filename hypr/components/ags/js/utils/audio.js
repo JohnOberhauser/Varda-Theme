@@ -53,16 +53,18 @@ export function getMicrophoneIcon(audio) {
 
 export function swapOutput(audio) {
     const currentSink = audio.control.get_default_sink()
-    const sinks = audio.control.get_sinks().filter((sink) => {
-        return sink.description.indexOf("Yeti") === -1 && sink.description.indexOf("Navi") === -1
-    })
-
-    let set = false
-    sinks.sort(
+    const sinks = audio.control.get_sinks().sort(
         function (a, b) {
             return a.id < b.id
         }
-    ).forEach((sink) => {
+    ).filter(
+        (sink) => {
+            return sink.description.indexOf("Yeti") === -1 && sink.description.indexOf("Navi") === -1
+        }
+    )
+
+    let set = false
+    sinks.forEach((sink) => {
         if (sink.id < currentSink.id && !set) {
             audio.control.set_default_sink(sink)
             set = true
@@ -82,13 +84,12 @@ export function swapInput(audio) {
         }
     ).filter(
         (source) => {
-            return source.form_factor != null
+            return true
         }
     )
 
     let set = false
     sources.forEach((source) => {
-        console.log(source.id)
         if (source.id < currentSource.id && !set) {
             audio.control.set_default_source(source)
             set = true
