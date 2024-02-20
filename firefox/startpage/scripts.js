@@ -59,7 +59,7 @@ const bookmarks = [
 {"id":"PeIbQBjpA41kjGD6","label":"LemmyMl","url":"https://lemmy.ml/"},
 {"id":"PeIbQBjpA41kjGD6","label":"Lemmy World","url":"https://lemmy.world/"},
 {"id":"PeIbQBjpA41kjGD6","label":"Kbin","url":"https://kbin.social/"},
-{"id":"PeIbQBjpA41kjGD6","label":"Mozilla","url":"https://mozilla.social/"}
+{"id":"PeIbQBjpA41kjGD6","label":"Fosstodon","url":"https://fosstodon.org/home"}
 ]
 },
 {"id":"njYk5XF49Zdf8g3o","label":"Dev","bookmarks":[
