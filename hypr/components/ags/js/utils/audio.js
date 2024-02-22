@@ -84,7 +84,7 @@ export function swapInput(audio) {
         }
     ).filter(
         (source) => {
-            return true
+            return source.description.indexOf("Depstech") === -1 && source.description.indexOf("Starship") === -1
         }
     )
 
