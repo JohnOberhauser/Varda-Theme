@@ -1,26 +1,35 @@
+#root.root {--frame-el-overlay-selected-border: #52677Cff;}
+#root.root {--nav-btn-accent: #52677Cff;}
+#root.root {--status-ok: #257B76ff;}
+#root.root {--status-err: #733447ff;}
+#root.root {--accent: #52677Cff;}
+#root.root {--status-active: #52677Cff;}
+#root.root {--status-notice: #52677Cff;}
+#root.root {--scroll-progress-bg: #52677Cff;}
+#root.root {--toolbar-el-overlay-selected-border: #52677Cff;}
 /* Adjust styles according to sidebar width */
 @media screen and (max-width: 49px) {
-  #root {
-    --tabs-indent: unset;
-  }
-  .ScrollBox > .scroll-container {
-    overflow: hidden;
-  }
-  .Tab .audio {
-    display: none;
-  }
-  .Tab .title {
-    visibility: collapse;
-  }
-  .PinnedTab .title {
-    visibility: collapse;
-  }
+    #root {
+        --tabs-indent: unset;
+    }
+    .ScrollBox > .scroll-container {
+        overflow: hidden;
+    }
+    .Tab .audio {
+        display: none;
+    }
+    .Tab .title {
+        visibility: collapse;
+    }
+    .PinnedTab .title {
+        visibility: collapse;
+    }
 }
 
 @media screen and (min-width: 49px) {
-  .Tab .audio {
-      left: 28px;
-  }
+    .Tab .audio {
+        left: 28px;
+    }
 }
 
 /*
