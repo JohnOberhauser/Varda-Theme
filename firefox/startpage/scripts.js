@@ -41,48 +41,48 @@ const getTargetUrl = value => {
  */
 
 const bookmarks = [
-{"id":"cXUpSmwMSV0sW93q","label":"Proton","bookmarks":[
-{"id":"zDaM1uX7S5Jr6G55","label":"Mail","url":"https://mail.proton.me/u/0/inbox"},
-{"id":"DhWDbQzV8facaOW5","label":"Calendar","url":"https://calendar.proton.me/u/0/"},
-{"id":"7pjO0yk6R8Nnyjoi","label":"Drive","url":"https://drive.proton.me/u/0"},
-{"id":"n76HQkjFc29zZlc8","label":"Account","url":"https://account.proton.me/u/0/vpn"}
-]
-},
-{"id":"njYk5XF49Zdf8g3o","label":"Social","bookmarks":[
-{"id":"REzi7xXTn6hBm5Vu","label":"Reddit","url":"https://www.reddit.com/"},
-{"id":"PeIbQBjpA41kjGD6","label":"Sh","url":"https://sh.reddit.com/"},
-{"id":"fgOAsCWGRNHCRZQR","label":"G","url":"https://boards.4channel.org/g/catalog"},
-{"id":"PeIbQBjpA41kjGD6","label":"LinkedIn","url":"https://www.linkedin.com/"}
-]
-},
-{"id":"njYk5XF49Zdf8g3o","label":"Federations","bookmarks":[
-{"id":"PeIbQBjpA41kjGD6","label":"LemmyMl","url":"https://lemmy.ml/"},
-{"id":"PeIbQBjpA41kjGD6","label":"Lemmy World","url":"https://lemmy.world/"},
-{"id":"PeIbQBjpA41kjGD6","label":"Kbin","url":"https://kbin.social/"},
-{"id":"PeIbQBjpA41kjGD6","label":"Fosstodon","url":"https://fosstodon.org/home"}
-]
-},
-{"id":"njYk5XF49Zdf8g3o","label":"Dev","bookmarks":[
-{"id":"REzi7xXTn6hBm5Vu","label":"Github","url":"https://github.com/"},
-{"id":"oa5G4ZJXzwxLi4CM","label":"ArchWiki","url":"https://wiki.archlinux.org/"},
-{"id":"fgOAsCWGRNHCRZQR","label":"Hyprland","url":"https://wiki.hyprland.org/"},
-{"id":"PeIbQBjpA41kjGD6","label":"Ags","url":"https://aylur.github.io/ags-docs/"}
-]
-},
-{"id":"qjTUGL2OWFspQmm2","label":"Video","bookmarks":[
-{"id":"pZDB2ilcq8t0m6eW","label":"YouTube","url":"https://www.youtube.com/"},
-{"id":"5YRKKQap76zg1ZxO","label":"Twitch","url":"https://www.twitch.tv/directory"},
-{"id":"ereuzztrzJbI0lqk","label":"Netflix","url":"https://www.netflix.com/browse"},
-{"id":"R37Y4hMSIvTGhRmy","label":"Max","url":"https://play.max.com/"}
-]
-},
-{"id":"qjTUGL2OWFspQm11","label":"Other","bookmarks":[
-{"id":"pZDB2ilcq8t0m611","label":"Maps","url":"https://www.google.com/maps"},
-{"id":"5YRKKQap76zg1Z11","label":"Amazon","url":"https://www.amazon.com/"},
-{"id":"R37Y4hMSIvTGhR11","label":"Chess","url":"https://chess.com/"},
-{"id":"ereuzztrzJbI0l11","label":"Pi Hole","url":"http://pi.hole/admin/index.php"}
-]
-}
+  {"id":"cXUpSmwMSV0sW93q","label":"Proton","bookmarks":[
+      {"id":"zDaM1uX7S5Jr6G55","label":"Mail","url":"https://mail.proton.me/u/0/inbox"},
+      {"id":"DhWDbQzV8facaOW5","label":"Calendar","url":"https://calendar.proton.me/u/0/"},
+      {"id":"7pjO0yk6R8Nnyjoi","label":"Drive","url":"https://drive.proton.me/u/0"},
+      {"id":"n76HQkjFc29zZlc8","label":"Account","url":"https://account.proton.me/u/0/vpn"}
+    ]
+  },
+  {"id":"njYk5XF49Zdf8g3o","label":"Social","bookmarks":[
+      {"id":"PeIbQBjpA41kjGD6","label":"Kbin","url":"https://kbin.social/"},
+      {"id":"PeIbQBjpA41kjGD6","label":"Sh","url":"https://sh.reddit.com/"},
+      {"id":"fgOAsCWGRNHCRZQR","label":"G","url":"https://boards.4channel.org/g/catalog"},
+      {"id":"PeIbQBjpA41kjGD6","label":"Foss","url":"https://fosstodon.org/home"}
+    ]
+  },
+  {"id":"qjTUGL2OWFspQdfe","label":"Finance","bookmarks":[
+      {"id":"pZDB2ilcq8t0m6eW","label":"Schwab","url":"https://client.schwab.com/clientapps/accounts/summary/"},
+      {"id":"5YRKKQap76zg1ZxO","label":"Capital One","url":"https://myaccounts.capitalone.com/accountSummary"},
+      {"id":"ereuzztrzJbI0lqk","label":"Vanguard","url":"https://personal.vanguard.com/us/MyHome"},
+      {"id":"R37Y4hMSIvTGhRmy","label":"PNC","url":"https://www.onlinebanking.pnc.com/alservlet/PNCOnlineBankingServletLogin"}
+    ]
+  },
+  {"id":"njYk5XF49Zdf8g3o","label":"Dev","bookmarks":[
+      {"id":"REzi7xXTn6hBm5Vu","label":"Github","url":"https://github.com/"},
+      {"id":"oa5G4ZJXzwxLi4CM","label":"ArchWiki","url":"https://wiki.archlinux.org/"},
+      {"id":"fgOAsCWGRNHCRZQR","label":"Hyprland","url":"https://wiki.hyprland.org/"},
+      {"id":"PeIbQBjpA41kjGD6","label":"Ags","url":"https://aylur.github.io/ags-docs/"}
+    ]
+  },
+  {"id":"qjTUGL2OWFspQmm2","label":"Video","bookmarks":[
+      {"id":"pZDB2ilcq8t0m6eW","label":"YouTube","url":"https://www.youtube.com/"},
+      {"id":"5YRKKQap76zg1ZxO","label":"Twitch","url":"https://www.twitch.tv/directory"},
+      {"id":"ereuzztrzJbI0lqk","label":"Netflix","url":"https://www.netflix.com/browse"},
+      {"id":"R37Y4hMSIvTGhRmy","label":"Max","url":"https://play.max.com/"}
+    ]
+  },
+  {"id":"qjTUGL2OWFspQm11","label":"Other","bookmarks":[
+      {"id":"pZDB2ilcq8t0m611","label":"Maps","url":"https://www.google.com/maps"},
+      {"id":"5YRKKQap76zg1Z11","label":"Amazon","url":"https://www.amazon.com/"},
+      {"id":"R37Y4hMSIvTGhR11","label":"Chess","url":"https://chess.com/"},
+      {"id":"ereuzztrzJbI0l11","label":"Pi Hole","url":"http://pi.hole/admin/index.php"}
+    ]
+  }
 ]
 
 const createGroupContainer = () => {
