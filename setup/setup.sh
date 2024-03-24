@@ -10,6 +10,9 @@
 ./scripts/setupCursor.sh
 
 
+xdg-mime default firefox.desktop x-scheme-handler/http
+xdg-mime default firefox.desktop x-scheme-handler/https
+
 # things left to do
 
 # set theme and cursor in gnome tweaks
