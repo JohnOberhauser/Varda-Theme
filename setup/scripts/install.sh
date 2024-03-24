@@ -20,7 +20,6 @@ hyprpaper \
 wireplumber \
 playerctl \
 swaylock \
-rofi \
 swayidle \
 slurp \
 grim \
