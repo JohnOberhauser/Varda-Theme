@@ -7,6 +7,9 @@ firefox \
 amd-ucode \
 ufw \
 hyprland \
+hyprlock \
+hypridle \
+hyprpaper \
 pipewire \
 networkmanager \
 greetd \
@@ -15,12 +18,8 @@ base-devel \
 bluez \
 bluez-utils \
 bpytop \
-hyprland \
-hyprpaper \
 wireplumber \
 playerctl \
-swaylock \
-swayidle \
 slurp \
 grim \
 xdg-desktop-portal-hyprland \

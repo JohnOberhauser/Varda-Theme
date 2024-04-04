@@ -18,7 +18,7 @@ const LockButton = Widget.Button({
     label: "",
     onClicked: () => {
         App.toggleWindow(Window.SystemMenu)
-        Utils.execAsync('bash -c "$HOME/.config/hypr/scripts/powerOptions/lock.sh &> /dev/null &"')
+        Utils.execAsync('bash -c "loginctl lock-session"')
     },
 })
 
