@@ -50,7 +50,7 @@ const bookmarks = [
   },
   {"id":"njYk5XF49Zdf8g3o","label":"Social","bookmarks":[
       {"id":"PeIbQBjpA41kjGD6","label":"Kbin","url":"https://kbin.social/"},
-      {"id":"PeIbQBjpA41kjGD6","label":"Sh","url":"https://sh.reddit.com/"},
+      {"id":"PeIbQBjpA41kjGD6","label":"Sh","url":"https://reddit.com/"},
       {"id":"fgOAsCWGRNHCRZQR","label":"G","url":"https://boards.4channel.org/g/catalog"},
       {"id":"PeIbQBjpA41kjGD6","label":"Foss","url":"https://fosstodon.org/home"}
     ]
