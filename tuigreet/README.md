@@ -42,7 +42,20 @@ Reboot your computer with your new colors
 
 
 ### Setting virtual terminal resolution
-Adding these docs a few months after I did this, so hopefully these steps are right...
+
+#### Step 1
+edit /etc/mkinitcpio.conf
+add `amdgpu` to the `MODULES` list.
+add `kms` to the `HOOKS` list.  Place it first in the list.
+
+
+
+
+
+
+#### OLD - wrong way to set resolution
+You should use the above steps, enabling kms for ensuring the native resolution is used.
+Keeping this documentation in just in case I want to reference it for something else in the future.
 
 #### Step 1
 Add an fb mode in `/etc/fb.modes` like so:

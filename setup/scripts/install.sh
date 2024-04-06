@@ -68,4 +68,5 @@ nautilus \
 neovim \
 cpio \
 meson \
-cmake
+cmake \
+plymouth
