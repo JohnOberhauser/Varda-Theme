@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ./scripts/install.sh
+./scripts/hyprpm.sh
 ./scripts/setupYay.sh
 ./scripts/installFromAur.sh
 ./scripts/foldersAndSymLinks.sh

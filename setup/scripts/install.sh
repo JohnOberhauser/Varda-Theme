@@ -65,4 +65,7 @@ ttf-hanazono \
 blueman \
 python \
 nautilus \
-neovim
+neovim \
+cpio \
+meson \
+cmake
