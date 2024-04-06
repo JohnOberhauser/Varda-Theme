@@ -49,8 +49,14 @@ add `amdgpu` to the `MODULES` list.
 add `kms` to the `HOOKS` list.  Place it first in the list.
 
 
+### Showing asterisks when asking for LUKS password
 
+#### Step 1
+Make sure `plymouth` is installed
 
+#### Step 2
+edit /etc/mkinitcpio.conf
+add `plymouth` to the `HOOKS` list.  Place it right before `encrypt`.
 
 
 #### OLD - wrong way to set resolution
