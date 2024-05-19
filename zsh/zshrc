@@ -85,6 +85,7 @@ alias v=nvim
 alias sv="sudo nvim"
 alias glm="git pull origin main"
 alias cdv="cd ~/workspace/Varda-Theme"
+alias bird="rsync -a --info=progress2 /home/john/Pictures/camera /mnt/ssd/"
 
 # Change folder colors
 # ========= Font ================
