@@ -8,7 +8,7 @@ U R L - B A R
     width: 100% !important;
     left: 0 !important;
     top: calc(
-            (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+            (var(--urlbar-container-height) - var(--urlbar-height)) / 2
     ) !important;
 }
 
@@ -22,14 +22,14 @@ U R L - B A R
 
 #urlbar[breakout]:not([open]) {
     bottom: calc(
-            (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+            (var(--urlbar-container-height) - var(--urlbar-height)) / 2
     ) !important;
 }
 
 
 #urlbar[breakout-extend] {
     top: calc(
-            (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+            (var(--urlbar-container-height) - var(--urlbar-height)) / 2
     ) !important;
     left: calc(
             (var(--urlbar-toolbar-width) - var(--urlbar-width)) / 2
@@ -39,7 +39,7 @@ U R L - B A R
 
 #urlbar[breakout-extend] #urlbar-input-container {
     height: calc(var(--tab-min-height) - 3px) !important;
-    padding: 0px !important;
+    padding: 0 !important;
 }
 
 #urlbar-input-container {
