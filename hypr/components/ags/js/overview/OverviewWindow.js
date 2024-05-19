@@ -7,7 +7,6 @@ export default (anchor) => Widget.Window({
     exclusivity: 'normal',
     layer: 'overlay',
     className: 'window',
-    popup: true,
     margins: [5, 5],
     visible: false,
     child: Widget.Box({

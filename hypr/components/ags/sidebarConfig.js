@@ -9,7 +9,7 @@ const scss = `${App.configDir}/scss/main.scss`
 const css = `${App.configDir}/style.css`
 Utils.exec(`sassc ${scss} ${css}`)
 
-export default {
+App.config({
     style: App.configDir + '/style.css',
     windows: [
         SideBar,
@@ -25,4 +25,4 @@ export default {
             ['bottom', 'left']
         ),
     ],
-};
+});
