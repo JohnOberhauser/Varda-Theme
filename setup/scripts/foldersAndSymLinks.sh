@@ -5,6 +5,7 @@ mkdir -p $HOME/Pictures/Screenshots
 
 rm -rf ~/.config/hypr
 ln -s $HOME/workspace/Varda-Theme/hypr $HOME/.config/
+touch $HOME/.config/hypr/conf/monitors.conf
 
 ln -s $HOME/workspace/Varda-Theme/dunst $HOME/.config/
 
