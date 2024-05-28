@@ -69,4 +69,5 @@ neovim \
 cpio \
 meson \
 cmake \
-plymouth
+plymouth \
+rofi-wayland
