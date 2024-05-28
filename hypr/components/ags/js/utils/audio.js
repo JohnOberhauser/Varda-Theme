@@ -14,7 +14,7 @@ export function getVolumeIcon(audio) {
         } else {
             return "󰋎"
         }
-    } else if (output.indexOf("Buds") !== -1) {
+    } else if (output.indexOf("Buds") !== -1 || output.indexOf("Jabra") !== -1) {
         if (vol === 0) {
             return "󰋐"
         } else {
@@ -44,7 +44,7 @@ export function getMicrophoneIcon(audio) {
 
     if (input != null && input.indexOf("Yeti") !== -1) {
         return ""
-    } else if (input != null && input.indexOf("Buds") !== -1) {
+    } else if (input != null && (input.indexOf("Buds") !== -1 || input.indexOf("Jabra") !== -1)) {
         return "󰥰"
     } else {
         return "󰋎"
