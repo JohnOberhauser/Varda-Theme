@@ -64,6 +64,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export EDITOR='nvim'
+export PATH="/home/john/.mozbuild/git-cinnabar:$PATH"
 
 alias ll='ls -alF'
 alias la='ls -A'
