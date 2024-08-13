@@ -57,10 +57,6 @@ export function swapOutput(audio) {
         function (a, b) {
             return a.id < b.id
         }
-    ).filter(
-        (sink) => {
-            return sink.description.indexOf("Yeti") === -1 && sink.description.indexOf("Navi") === -1
-        }
     )
 
     let set = false
@@ -81,10 +77,6 @@ export function swapInput(audio) {
     const sources = audio.control.get_sources().sort(
         function (a, b) {
             return a.id < b.id
-        }
-    ).filter(
-        (source) => {
-            return source.description.indexOf("Depstech") === -1 && source.description.indexOf("Starship") === -1
         }
     )
 
