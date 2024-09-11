@@ -7,6 +7,8 @@ rm -rf ~/.config/hypr
 ln -s $HOME/workspace/Varda-Theme/hypr $HOME/.config/
 touch $HOME/.config/hypr/conf/monitors.conf
 
+ln -s $HOME/workspace/Varda-Theme/ags $HOME/.config/
+
 ln -s $HOME/workspace/Varda-Theme/dunst $HOME/.config/
 
 mkdir -p $HOME/.config/bpytop/themes
