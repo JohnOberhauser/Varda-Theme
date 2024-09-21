@@ -89,6 +89,7 @@ alias glm="git pull origin main"
 alias cdv="cd ~/workspace/Varda-Theme"
 alias bird="rsync -a --info=progress2 /home/john/Pictures/camera /mnt/ssd/"
 alias timezone='timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"'
+alias nmtui="~/.config/kitty/nmtui.sh"
 
 # Change folder colors
 # ========= Font ================

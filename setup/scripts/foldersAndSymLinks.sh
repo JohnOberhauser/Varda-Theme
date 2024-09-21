@@ -26,8 +26,7 @@ ln -s $HOME/workspace/Varda-Theme/gnome/themes/Varda/gtk-4.0/* $HOME/.config/gtk
 mkdir -p $HOME/.config/Kvantum  # must be capital K
 ln -s $HOME/workspace/Varda-Theme/kvantum/Varda $HOME/.config/Kvantum/
 
-mkdir -p $HOME/.config/kitty
-ln -s $HOME/workspace/Varda-Theme/kitty/kitty.conf $HOME/.config/kitty/
+ln -s $HOME/workspace/Varda-Theme/kitty $HOME/.config/
 
 ln -s $HOME/workspace/Varda-Theme/fastfetch $HOME/.config/
 
