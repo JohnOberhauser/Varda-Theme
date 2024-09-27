@@ -157,8 +157,8 @@
     "popup.listItem.border.focused": "Transparent",
     "popup.listItem.background.default": "black",
     "popup.listItem.background.hovered": "dark_grey",
-    "popup.listItem.background.selected": "dark_grey3",
-    "popup.listItem.background.focused": "purple",
+    "popup.listItem.background.selected": "dark_grey1",
+    "popup.listItem.background.focused": "dark_grey1",
     "popup.listItem.text.secondary": "light_blue",
     "popup.listItem.text.hovered": "white",
     "popup.listItem.text.selected": "white",
@@ -203,8 +203,8 @@
     "editor.interline.listItem.border.focused": "Transparent",
     "editor.interline.listItem.background.default": "black",
     "editor.interline.listItem.background.hovered": "dark_grey",
-    "editor.interline.listItem.background.selected": "dark_grey3",
-    "editor.interline.listItem.background.focused": "purple",
+    "editor.interline.listItem.background.selected": "dark_grey1",
+    "editor.interline.listItem.background.focused": "dark_grey1",
     "editor.interline.listItem.text.secondary": "light_blue",
     "editor.interline.listItem.text.hovered": "white",
     "editor.interline.listItem.text.selected": "white",
@@ -215,8 +215,8 @@
     "listItem.border.focused": "Transparent",
     "listItem.background.default": "black",
     "listItem.background.hovered": "dark_grey",
-    "listItem.background.selected": "dark_grey3",
-    "listItem.background.focused": "purple",
+    "listItem.background.selected": "dark_grey1",
+    "listItem.background.focused": "dark_grey1",
     "listItem.focusBorder": "blue",
     "listItem.text.secondary": "light_blue",
     "listItem.text.hovered": "white",
@@ -230,8 +230,8 @@
     "switch.off.thumb": "white",
     "switch.off.track.hovered": "dark_grey3",
     "switch.off.track.default": "dark_grey3",
-    "search.match.background": "peach",
-    "search.match.text": "Black",
+    "search.match.background": "dark_grey1",
+    "search.match.text": "white",
     "search.counter.background": "white26",
     "completion.match.background": "Transparent",
     "completion.match.text": "purple",
@@ -460,10 +460,10 @@
       "foregroundColor": "peach"
     },
     "string": {
-      "foregroundColor": "green"
+      "foregroundColor": "blue"
     },
     "string.binary": {
-      "foregroundColor": "light_green"
+      "foregroundColor": "light_blue"
     },
     "string.escape": {
       "foregroundColor": "peach"
@@ -632,7 +632,7 @@
       "foregroundColor": "white"
     },
     "key.json": {
-      "foregroundColor": "purple"
+      "foregroundColor": "light_red"
     },
     "keyword.css": {
       "foregroundColor": "purple"
