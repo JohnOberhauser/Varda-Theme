@@ -5,7 +5,7 @@
     "theme.version": 1
   },
   "colors": {
-    "border": "dark_grey3",
+    "border": "blue",
     "background.primary": "black",
     "focusOutline": "blue",
     "shadow.border": "Black",
@@ -74,8 +74,8 @@
     "editor.gitDiff.text.modified": "blue",
     "editor.gitDiff.text.conflict": "light_red",
     "dragAndDrop.background": "#FFFFFF33",
-    "problemsWidget.checkmark.background": "green",
-    "problemsWidget.checkmark.foreground": "light_green",
+    "problemsWidget.checkmark.background": "blue",
+    "problemsWidget.checkmark.foreground": "white",
     "problemsWidget.status.expanded.background.error": "red",
     "problemsWidget.status.expanded.background.warning": "peach",
     "problemsWidget.status.expanded.background.weakWarning": "peach",
@@ -106,7 +106,7 @@
     "editor.selectableFolded.text.default": "white",
     "editor.selectableFolded.text.focused": "white",
     "mainToolbar.background": "black",
-    "smartMode.background.enabled": "purple",
+    "smartMode.background.enabled": "blue",
     "smartMode.border.loading": "blue",
     "smartMode.background.error": "red",
     "icon.background.blue": "blue",
@@ -222,7 +222,7 @@
     "listItem.text.hovered": "white",
     "listItem.text.selected": "white",
     "listItem.text.focused": "white",
-    "separator.default": "dark_grey3",
+    "separator.default": "black",
     "separator.hovered": "blue",
     "switch.on.thumb": "white",
     "switch.on.track.default": "blue",
@@ -414,7 +414,7 @@
       }
     },
     "editor.brace.match": {
-      "backgroundColor": "#2E5246"
+      "backgroundColor": "green"
     },
     "comment": {
       "foregroundColor": "dark_grey3"
@@ -493,7 +493,7 @@
       }
     },
     "identifier.underCaret": {
-      "backgroundColor": "green1A",
+      "backgroundColor": "green",
       "statusColor": "green"
     },
     "identifier.constant": {
@@ -632,7 +632,7 @@
       "foregroundColor": "white"
     },
     "key.json": {
-      "foregroundColor": "light_red"
+      "foregroundColor": "white"
     },
     "keyword.css": {
       "foregroundColor": "purple"
@@ -939,8 +939,6 @@
     "dark_grey3": "#3b4444",
 
     "light_white": "#E5FFFF",
-
-    "neon": "#80BB00",
     "light_blue": "#8295A9",
     "light_red": "#93394A",
     "light_green": "#98C379"
