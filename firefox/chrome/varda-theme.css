@@ -23,7 +23,8 @@ window,
 #PersonalToolbar,
 #navigator-toolbox,
 #sidebar-box,
-#nav-bar {
+#nav-bar,
+#sidebar-main {
     background-color: var(--srf-color-primary) !important;
     -moz-appearance: none !important;
     background-image: none !important;
@@ -35,4 +36,29 @@ window,
     background-color: var(--srf-color-selection);
     /* Text color of your selection */
     color: #141414;
+}
+
+/*
+Sidebar
+ */
+#sidebar-main {
+    background-color: var(--srf-color-primary) !important;
+    -moz-appearance: none !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#tabbrowser-tabbox {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.tab-stack {
+    background: var(--srf-color-primary) !important;
+    color: var(--srf-color-selection) !important;
+}
+
+.tab-icon-overlay {
+    display: none !important;
 }

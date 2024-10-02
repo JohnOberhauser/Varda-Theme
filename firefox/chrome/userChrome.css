@@ -3,9 +3,6 @@
 @import "hide-buttons.css";
 @import "url-bar.css";
 @import "tabs.css";
-@import "sideberry/sidebar.css";
-@import "sideberry/tabs-toggle.css";
-@import "sideberry/sidebar-auto-hide.css";
 @import "bitwarden-icon.css";
 @import "protonvpn-icon.css";
 @import "protonpass-icon.css";

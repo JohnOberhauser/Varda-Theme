@@ -45,3 +45,7 @@ filter: grayscale(70%);
 #pageActionButton {
     display: none !important;
 }
+
+#alltabs-button {
+    display: none !important;
+}

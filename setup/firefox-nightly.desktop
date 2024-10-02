@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Firefox Nightly
+Exec=sh -c "$HOME/.local/share/firefox-nightly/firefox"
+Type=Application
