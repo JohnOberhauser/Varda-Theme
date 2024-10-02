@@ -13,8 +13,8 @@ ln -s $HOME/workspace/Varda-Theme/dunst $HOME/.config/
 
 ln -s $HOME/workspace/Varda-Theme/rofi $HOME/.config/
 
-mkdir -p $HOME/.config/bpytop/themes
-ln -s $HOME/workspace/Varda-Theme/bpytop/varda.theme $HOME/.config/bpytop/themes/
+mkdir -p $HOME/.config/btop/themes
+ln -s $HOME/workspace/Varda-Theme/btop/varda.theme $HOME/.config/btop/themes/
 
 mkdir -p $HOME/.themes
 mkdir -p $HOME/.icons

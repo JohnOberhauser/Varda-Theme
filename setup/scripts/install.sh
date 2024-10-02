@@ -17,7 +17,7 @@ flatpak \
 base-devel \
 bluez \
 bluez-utils \
-bpytop \
+btop \
 wireplumber \
 playerctl \
 slurp \
