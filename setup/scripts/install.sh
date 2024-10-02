@@ -3,7 +3,6 @@
 sudo pacman -Syu \
 git \
 vim \
-firefox \
 amd-ucode \
 ufw \
 hyprland \
