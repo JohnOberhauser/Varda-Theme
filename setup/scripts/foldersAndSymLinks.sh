@@ -28,6 +28,8 @@ ln -s $HOME/workspace/Varda-Theme/kvantum/Varda $HOME/.config/Kvantum/
 
 ln -s $HOME/workspace/Varda-Theme/kitty $HOME/.config/
 
+ln -s $HOME/workspace/Varda-Theme/nvim $HOME/.config/
+
 ln -s $HOME/workspace/Varda-Theme/fastfetch $HOME/.config/
 
 ln -s $HOME/workspace/Varda-Theme/yazi $HOME/.config/
