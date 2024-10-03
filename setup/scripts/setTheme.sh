@@ -92,6 +92,7 @@ android_studio() {
 
 ags_theme $1
 kitty_theme $1
+fastfetch_theme $1
 firefox_theme $1
 gtk $1
 hypr $1
