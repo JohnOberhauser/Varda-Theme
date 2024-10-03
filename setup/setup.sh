@@ -11,6 +11,7 @@
 ./scripts/waylandSession.sh
 ./scripts/startServices.sh
 ./scripts/setupCursor.sh
+./scripts/setTheme.sh varda
 
 
 xdg-mime default firefox.desktop x-scheme-handler/http

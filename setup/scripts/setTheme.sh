@@ -9,8 +9,8 @@ ags_theme() {
 }
 
 kitty_theme() {
-  kitten themes --reload-in=all $1
   cp ./setup/themes/$1/kitty/nmtui_colors.conf ./kitty/
+  cp ./setup/themes/$1/kitty/current-theme.conf ./kitty/
   kitty @ set-colors ~/.config/kitty/current-theme.conf
 }
 
@@ -34,7 +34,7 @@ gtk() {
           dconf write /org/gnome/desktop/interface/icon-theme "'Everforest-Dark'"
         ;;
       *)
-        echo "bad theme"
+        echo "no gtk theme"
         ;;
     esac
 }

@@ -88,7 +88,7 @@ alias cdv="cd ~/workspace/Varda-Theme"
 alias bird="rsync -a --info=progress2 /home/john/Pictures/camera /mnt/ssd/"
 alias timezone='timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"'
 alias nmtui="~/.config/kitty/nmtui.sh"
-alias swaptheme="~/workspace/Varda-Theme/setup/themes/swapTheme.sh"
+alias settheme="~/workspace/Varda-Theme/setup/scripts/swapTheme.sh"
 
 # Change folder colors
 # ========= Font ================
