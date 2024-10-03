@@ -14,6 +14,10 @@ kitty_theme() {
   kitty @ set-colors ~/.config/kitty/current-theme.conf
 }
 
+fastfetch_theme() {
+  cp ./setup/themes/$1/fastfetch/ring.png ./fastfetch/
+}
+
 firefox_theme() {
   cp ./setup/themes/$1/firefox/chrome/* ./firefox/chrome/
   cp ./setup/themes/$1/firefox/startpage/* ./firefox/startpage/
