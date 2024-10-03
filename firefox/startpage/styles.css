@@ -1,4 +1,5 @@
 @import url("./variables.css");
+@import url("start_page_colors.css");
 
 *,
 *::before,
@@ -31,10 +32,8 @@ body {
   min-height: 100%;
   min-width: 600px;
   overflow: hidden;
-  
-  font-family: var(--font-family), monospaced;
   font-weight: 500;
-  background-color: var(--color-bg-base);
+  background-color: var(--color-bg);
 }
 
 .visually-hidden {
@@ -65,12 +64,10 @@ body {
 
   display: flex;
 
-  color: var(--color-fg-surface);
-  background-color: var(--color-bg-surface);
+  color: var(--color-fg);
+  background-color: var(--color-bg);
   border-radius: var(--surface-borderRadius);
   overflow: hidden;
-  /*border: var(--space-smallest) solid var(--color-primary-base);*/
-  box-shadow: var(--surface-shadow);
 }
 
 .surface > img {
@@ -173,7 +170,7 @@ body {
 }
 
 .bookmark-group > h2 {
-  color: var(--color-secondary-fg);
+  color: var(--color-primary);
   font-size: var(--space-medium);
   font-weight: 500;
   margin-right: 0;
@@ -211,7 +208,7 @@ body {
  * YAGS link
  **/
 a#yags-link {
-  color: var(--color-primary-fg);
+  color: var(--color-primary);
   position: fixed;
   bottom: var(--space-small);
   right: var(--space-small);
@@ -219,6 +216,6 @@ a#yags-link {
 
 a#yags-link:hover,
 a#yags-link:focus-visible {
-  color: var(--color-fg-base);
+  color: var(--color-fg);
   text-decoration: underline;
 }

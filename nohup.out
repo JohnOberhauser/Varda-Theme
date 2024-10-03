@@ -1518,3 +1518,71 @@ java.lang.IllegalStateException: read job must've been cancelled
 (com.github.Aylur.ags:49144): Gtk-WARNING **: 23:05:50.243: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
 
 (com.github.Aylur.ags:49144): Gtk-WARNING **: 23:05:50.243: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 23:06:10,288 [5469743]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:49549): Gtk-WARNING **: 23:06:16.128: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:49549): Gtk-WARNING **: 23:06:16.128: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:49549): Gtk-WARNING **: 23:06:16.128: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 23:08:12,751 [5592206]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,752 [5592207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,753 [5592208]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,753 [5592208]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,753 [5592208]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,753 [5592208]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,753 [5592208]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,753 [5592208]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:12,753 [5592208]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:15,375 [5594830]   WARN - #c.i.u.x.Binding - No accessors for org.jetbrains.security.package.Package. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 23:08:22,751 [5602206]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:32,752 [5612207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:42,752 [5622207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:08:52,752 [5632207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:09:02,752 [5642207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:09:12,752 [5652207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:10:46,511 [5745966]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:10:52,752 [5752207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:11:31,913 [5791368]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:11:59,049 [5818504]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:12:32,752 [5852207]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:12:39,072 [5858527]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:50219): Gtk-WARNING **: 23:12:56.702: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:50219): Gtk-WARNING **: 23:12:56.702: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:50219): Gtk-WARNING **: 23:12:56.702: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 23:13:48,545 [5928000]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:13:56,780 [5936235]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:13:59,981 [5939436]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:14:02,562 [5942017]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:14:12,753 [5952208]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:14:26,761 [5966216]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:14:50,654 [5990109]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:50905): Gtk-WARNING **: 23:14:53.345: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:50905): Gtk-WARNING **: 23:14:53.345: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:50905): Gtk-WARNING **: 23:14:53.345: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 23:15:52,753 [6052208]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 23:15:57,194 [6056649]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:51245): Gtk-WARNING **: 23:15:59.065: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:51245): Gtk-WARNING **: 23:15:59.065: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:51245): Gtk-WARNING **: 23:15:59.065: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
