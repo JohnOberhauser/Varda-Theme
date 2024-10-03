@@ -4,6 +4,7 @@ import VolumeAlert from "./js/alerts/VolumeAlert.js";
 import BrightnessAlert from "./js/alerts/BrightnessAlert.js";
 import BluetoothWindow from "./js/bluetooth/BluetoothWindow.js";
 import OverviewWindow from "./js/overview/OverviewWindow.js";
+import NotificationPopups from "./js/notification/NotificationPopups.js";
 
 const scss = `${App.configDir}/scss/main.scss`
 const css = `${App.configDir}/style.css`
@@ -23,6 +24,9 @@ App.config({
         ),
         OverviewWindow(
             ['bottom', 'left']
+        ),
+        NotificationPopups(
+            ['top', 'right']
         ),
     ],
 });

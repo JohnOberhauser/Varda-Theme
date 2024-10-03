@@ -23,7 +23,6 @@ slurp \
 grim \
 xdg-desktop-portal-hyprland \
 xdg-desktop-portal-gtk \
-dunst \
 pacman-contrib \
 polkit-gnome \
 bc \
