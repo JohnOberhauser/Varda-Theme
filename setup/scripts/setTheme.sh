@@ -16,7 +16,7 @@ kitty_theme() {
 
 firefox_theme() {
   cp ./setup/themes/$1/firefox/chrome/* ./firefox/chrome/
-  cp ./setup/themes/$1/firefox/start_page_colors.css ./firefox/startpage/
+  cp ./setup/themes/$1/firefox/startpage/* ./firefox/startpage/
 }
 
 gtk() {
