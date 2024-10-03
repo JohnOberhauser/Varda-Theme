@@ -39,6 +39,13 @@ gtk() {
     esac
 }
 
+hypr() {
+  cp ./setup/themes/$1/hypr/theme.conf ./hypr/conf/
+  cp ./setup/themes/$1/hypr/hyprpaper.conf ./hypr/
+  pkill hyprpaper
+  nohup hyprpaper > /dev/null 2>&1 &
+}
+
 intellij_idea() {
   # must have themes already installed
   BASE_DIR="$HOME/.config/JetBrains/"
@@ -83,5 +90,6 @@ ags_theme $1
 kitty_theme $1
 firefox_theme $1
 gtk $1
+hypr $1
 intellij_idea $1
 android_studio $1
