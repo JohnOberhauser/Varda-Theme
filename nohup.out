@@ -1396,3 +1396,125 @@ Warning: Not allowed as a service: com.jetbrains.RoundedCornersManager
 
 (com.github.Aylur.ags:39773): Gtk-WARNING **: 22:25:27.711: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
 2024-10-02 22:25:34,209 [3033664]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:26:07,351 [3066806]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:26:24,323 [3083778]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:40573): Gtk-WARNING **: 22:26:44.532: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:40573): Gtk-WARNING **: 22:26:44.532: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:40573): Gtk-WARNING **: 22:26:44.532: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:26:53,122 [3112577]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:27:38,025 [3157480]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:28:09,177 [3188632]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:35:22,952 [3622407]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:41262): Gtk-WARNING **: 22:35:32.221: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:41262): Gtk-WARNING **: 22:35:32.221: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:41262): Gtk-WARNING **: 22:35:32.221: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:36:30,495 [3689950]   WARN - #o.j.p.t.l.s.SyntaxNodeDescriptor - Can't find repository 856
+2024-10-02 22:38:11,217 [3790672]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:38:30,104 [3809559]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:38:30,396 [3809851]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:38:41,876 [3821331]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:38:42,128 [3821583]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:40:26,134 [3925589]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:41:23,112 [3982567]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:41:54,880 [4014335]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:42:28,436 [4047891]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:46:03,648 [4263103]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:47:18,438 [4337893]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:47:22,403 [4341858]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:47:40,225 [4359680]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:47:43,180 [4362635]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:48:44,207 [4423662]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:48:49,494 [4428949]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:48:50,642 [4430097]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:49:03,949 [4443404]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:50:36,055 [4535510]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:44256): Gtk-WARNING **: 22:50:38.261: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:44256): Gtk-WARNING **: 22:50:38.261: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:44256): Gtk-WARNING **: 22:50:38.261: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:50:41,698 [4541153]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:57:30,482 [4949937]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:57:33,002 [4952457]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:57:35,899 [4955354]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:57:42,703 [4962158]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:57:45,208 [4964663]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:59:03,804 [5043259]   WARN - org.apache.velocity.deprecation - configuration key 'resource.loader' has been deprecated in favor of 'resource.loaders'
+2024-10-02 22:59:03,804 [5043259]   WARN - org.apache.velocity.deprecation - configuration key 'includes.resource.loader.instance' has been deprecated in favor of 'resource.loader.includes.instance'
+2024-10-02 22:59:03,840 [5043295] SEVERE - #c.i.o.a.i.ActionUpdater - ToggleUseSoftWrapsInPreviewAction#presentation@ContextToolbar (com.intellij.openapi.editor.actions.ToggleUseSoftWrapsInPreviewAction), actionId=EditorToggleUseSoftWrapsInPreview, text='Soft-Wrap Preview Editor'
+java.lang.IllegalStateException: read job must've been cancelled
+	at com.intellij.openapi.application.rw.CancellableReadActionKt.cancellableReadActionInternal(cancellableReadAction.kt:37)
+	at com.intellij.openapi.application.rw.InternalReadAction.tryReadCancellable(InternalReadAction.kt:93)
+	at com.intellij.openapi.application.rw.InternalReadAction.tryReadAction(InternalReadAction.kt:77)
+	at com.intellij.openapi.application.rw.InternalReadAction.readLoop(InternalReadAction.kt:64)
+	at com.intellij.openapi.application.rw.InternalReadAction.access$readLoop(InternalReadAction.kt:15)
+	at com.intellij.openapi.application.rw.InternalReadAction$runReadAction$3.invokeSuspend(InternalReadAction.kt:35)
+	at com.intellij.openapi.application.rw.InternalReadAction$runReadAction$3.invoke(InternalReadAction.kt)
+	at com.intellij.openapi.application.rw.InternalReadAction$runReadAction$3.invoke(InternalReadAction.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:62)
+	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:261)
+	at com.intellij.openapi.application.rw.InternalReadAction.runReadAction(InternalReadAction.kt:34)
+	at com.intellij.openapi.application.rw.PlatformReadWriteActionSupport.executeReadAction(PlatformReadWriteActionSupport.kt:38)
+	at com.intellij.openapi.application.ReadWriteActionSupport.executeReadAction$default(ReadWriteActionSupport.kt:15)
+	at com.intellij.openapi.application.CoroutinesKt.constrainedReadActionUndispatched(coroutines.kt:82)
+	at com.intellij.openapi.application.CoroutinesKt.readActionUndispatched(coroutines.kt:69)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater$callAction$$inlined$useWithScope$1.invokeSuspend(trace.kt:163)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater$callAction$$inlined$useWithScope$1.invoke(trace.kt)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater$callAction$$inlined$useWithScope$1.invoke(trace.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:62)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:163)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater.callAction(ActionUpdater.kt:939)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater.access$callAction(ActionUpdater.kt:85)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater$updateAction$success$1$1.invokeSuspend(ActionUpdater.kt:560)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater$updateAction$success$1$1.invoke(ActionUpdater.kt)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater$updateAction$success$1$1.invoke(ActionUpdater.kt)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater$updateAction$$inlined$retryOnAwaitSharedData$1.invokeSuspend(ActionUpdater.kt:939)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater$updateAction$$inlined$retryOnAwaitSharedData$1.invoke(ActionUpdater.kt)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater$updateAction$$inlined$retryOnAwaitSharedData$1.invoke(ActionUpdater.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:62)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:163)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater.updateAction(ActionUpdater.kt:979)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater.expandGroupChild(ActionUpdater.kt:407)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater.access$expandGroupChild(ActionUpdater.kt:85)
+	at com.intellij.openapi.actionSystem.impl.ActionUpdater$doExpandActionGroup$2$expandResult$1$1.invokeSuspend(ActionUpdater.kt:334)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:111)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 22:59:03,846 [5043301] SEVERE - #c.i.o.a.i.ActionUpdater - IntelliJ IDEA 2024.2.3  Build #IU-242.23339.11
+2024-10-02 22:59:03,846 [5043301] SEVERE - #c.i.o.a.i.ActionUpdater - JDK: 21.0.4; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o.
+2024-10-02 22:59:03,846 [5043301] SEVERE - #c.i.o.a.i.ActionUpdater - OS: Linux
+2024-10-02 22:59:03,846 [5043301] SEVERE - #c.i.o.a.i.ActionUpdater - Last Action: NewStylesheetFile
+2024-10-02 22:59:03,846 [5043301] SEVERE - #c.i.o.a.i.ActionUpdater - Current Command: Reformat
+2024-10-02 22:59:05,615 [5045070]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:59:57,273 [5096728]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:00:26,175 [5125630]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:00:55,623 [5155078]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:02:19,963 [5239418]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:02:23,455 [5242910]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:02:34,266 [5253721]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:03:14,856 [5294311]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:03:19,299 [5298754]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:04:04,289 [5343744]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:04:14,260 [5353715]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:05:19,823 [5419278]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 23:05:40,361 [5439816]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:49144): Gtk-WARNING **: 23:05:50.243: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:49144): Gtk-WARNING **: 23:05:50.243: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:49144): Gtk-WARNING **: 23:05:50.243: Theme parsing error: gtk.css:7149:19: negative values are not allowed.

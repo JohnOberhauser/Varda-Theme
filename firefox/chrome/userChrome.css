@@ -1,8 +1,8 @@
-@import "varda-theme.css";
+@import "general.css";
 @import "sound-icon.css";
 @import "hide-buttons.css";
 @import "url-bar.css";
-@import "tabs.css";
+@import "sidebar.css";
 @import "bitwarden-icon.css";
 @import "protonvpn-icon.css";
 @import "protonpass-icon.css";

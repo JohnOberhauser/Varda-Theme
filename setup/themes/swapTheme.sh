@@ -3,7 +3,7 @@
 cd "$(dirname "$0")"
 cd ../..
 
-ags() {
+ags_theme() {
   cp ./setup/themes/$1/ags/variables.scss ./ags/scss/
   nohup ./hypr/scripts/launchers/ags.sh &
 }
@@ -12,6 +12,10 @@ kitty_theme() {
   kitten themes --reload-in=all $1
   cp ./setup/themes/$1/kitty/nmtui_colors.conf ./kitty/
   kitty @ set-colors ~/.config/kitty/current-theme.conf
+}
+
+firefox_theme() {
+  cp ./setup/themes/$1/firefox/colors.css ./firefox/chrome/
 }
 
 intellij_idea() {
@@ -54,7 +58,8 @@ android_studio() {
   esac
 }
 
-ags $1
+ags_theme $1
 kitty_theme $1
+firefox_theme $1
 intellij_idea $1
 android_studio $1

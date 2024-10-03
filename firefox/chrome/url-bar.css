@@ -1,4 +1,4 @@
-
+@import "colors.css";
 /*
 U R L - B A R
 */
@@ -65,7 +65,7 @@ U R L - B A R
 }
 
 #urlbar-background {
-    background: #0C0E11 !important;
+    background: var(--bg-color) !important;
 }
 
 #urlbar-container {
