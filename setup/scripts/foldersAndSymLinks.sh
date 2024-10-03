@@ -16,12 +16,8 @@ ln -s $HOME/workspace/Varda-Theme/rofi $HOME/.config/
 mkdir -p $HOME/.config/btop/themes
 ln -s $HOME/workspace/Varda-Theme/btop/varda.theme $HOME/.config/btop/themes/
 
-mkdir -p $HOME/.themes
-mkdir -p $HOME/.icons
-cp -r $HOME/workspace/Varda-Theme/gnome/themes/Varda $HOME/.themes/
-cp -r $HOME/workspace/Varda-Theme/gnome/icons/Varda $HOME/.icons/
 mkdir -p $HOME/.config/gtk-4.0
-ln -s $HOME/workspace/Varda-Theme/gnome/themes/Varda/gtk-4.0/* $HOME/.config/gtk-4.0/
+ln -s $HOME/workspace/Varda-Theme/gnome/themes/Varda/gtk-4.0 $HOME/.config/
 
 mkdir -p $HOME/.config/Kvantum  # must be capital K
 ln -s $HOME/workspace/Varda-Theme/kvantum/Varda $HOME/.config/Kvantum/

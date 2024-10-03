@@ -19,6 +19,22 @@ firefox_theme() {
   cp ./setup/themes/$1/firefox/start_page_colors.css ./firefox/startpage/
 }
 
+gtk() {
+  case $1 in
+      "varda")
+          rm $HOME/.config/gtk-4.0
+          ln -sf $HOME/workspace/Varda-Theme/gnome/themes/Varda/gtk-4.0 $HOME/.config/
+        ;;
+      "everforest")
+          rm $HOME/.config/gtk-4.0
+          ln -sf $HOME/workspace/Varda-Theme/gnome/themes/Everforest-Dark/gtk-4.0 $HOME/.config/
+        ;;
+      *)
+        echo "bad theme"
+        ;;
+    esac
+}
+
 intellij_idea() {
   # must have themes already installed
   BASE_DIR="$HOME/.config/JetBrains/"
@@ -62,5 +78,6 @@ android_studio() {
 ags_theme $1
 kitty_theme $1
 firefox_theme $1
+gtk $1
 intellij_idea $1
 android_studio $1
