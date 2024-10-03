@@ -17,7 +17,7 @@
 }
 
 .alertProgress trough {
-  background: #141619;
+  background: $sliderTrough;
   min-height: 8px;
   border-radius: 16px;
 }
@@ -29,5 +29,5 @@
 .alertProgress trough highlight {
   min-width: 8px;
   border-radius: 16px;
-  background: #D0EBEE;
+  background: $fg;
 }

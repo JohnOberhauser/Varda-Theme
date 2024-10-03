@@ -6,4 +6,4 @@ kitty @ set-colors ~/.config/kitty/nmtui_colors.conf
 # Run nmtui
 nmtui
 
-kitty @ set-colors ~/.config/kitty/kitty.conf
+kitty @ set-colors ~/.config/kitty/current-theme.conf

@@ -1,0 +1,1398 @@
+
+(com.github.Aylur.ags:10885): Gtk-WARNING **: 21:00:21.708: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:10885): Gtk-WARNING **: 21:00:21.708: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:10885): Gtk-WARNING **: 21:00:21.708: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+
+(com.github.Aylur.ags:11089): Gtk-WARNING **: 21:00:28.449: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:11089): Gtk-WARNING **: 21:00:28.449: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:11089): Gtk-WARNING **: 21:00:28.449: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+
+(com.github.Aylur.ags:13438): Gtk-WARNING **: 21:16:47.171: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:13438): Gtk-WARNING **: 21:16:47.171: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:13438): Gtk-WARNING **: 21:16:47.171: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+
+(com.github.Aylur.ags:14244): Gtk-WARNING **: 21:18:27.254: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:14244): Gtk-WARNING **: 21:18:27.255: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:14244): Gtk-WARNING **: 21:18:27.255: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+
+(com.github.Aylur.ags:14483): Gtk-WARNING **: 21:18:41.188: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:14483): Gtk-WARNING **: 21:18:41.188: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:14483): Gtk-WARNING **: 21:18:41.188: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+
+(com.github.Aylur.ags:14744): Gtk-WARNING **: 21:19:47.731: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:14744): Gtk-WARNING **: 21:19:47.731: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:14744): Gtk-WARNING **: 21:19:47.731: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+
+(com.github.Aylur.ags:15020): Gtk-WARNING **: 21:21:09.822: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:15020): Gtk-WARNING **: 21:21:09.822: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:15020): Gtk-WARNING **: 21:21:09.822: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+
+(com.github.Aylur.ags:15981): Gtk-WARNING **: 21:24:09.476: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:15981): Gtk-WARNING **: 21:24:09.476: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:15981): Gtk-WARNING **: 21:24:09.476: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+
+(com.github.Aylur.ags:16686): Gtk-WARNING **: 21:27:28.733: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:16686): Gtk-WARNING **: 21:27:28.733: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:16686): Gtk-WARNING **: 21:27:28.733: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+
+(com.github.Aylur.ags:16904): Gtk-WARNING **: 21:27:43.043: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:16904): Gtk-WARNING **: 21:27:43.043: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:16904): Gtk-WARNING **: 21:27:43.043: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:27:43,213 [     29]   WARN - #kotlinx.coroutines.CoroutineScope - Store will be recreated (db=/home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db)
+org.h2.mvstore.MVStoreException: The file is locked: /home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:27:43,221 [     37]   WARN - #kotlinx.coroutines.CoroutineScope - Store will be recreated (db=/home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db)
+java.lang.NullPointerException: Cannot invoke "org.h2.mvstore.MVMap.close()" because "this.layout" is null
+	at org.h2.mvstore.FileStore.close(FileStore.java:282)
+	at org.h2.mvstore.SingleFileStore.close(SingleFileStore.java:168)
+	at org.h2.mvstore.MVStore.closeStore(MVStore.java:705)
+	at org.h2.mvstore.MVStore.closeImmediately(MVStore.java:664)
+	at org.h2.mvstore.MVStore.unlockAndCheckPanicCondition(MVStore.java:364)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:296)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:27:43,222 [     38]   WARN - #kotlinx.coroutines.CoroutineScope - Cannot open cache state storage, will be recreated
+org.h2.mvstore.MVStoreException: The file is locked: /home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:27:43,442 [    258]   WARN - #c.i.u.x.Binding - No accessors for com.intellij.platform.experiment.ab.impl.experiment.ABExperimentGroupStorage. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 21:27:43,625 [    441]   WARN - c.i.o.u.r.overrides - Conflicting registry key definition for key kotlin.mpp.tests.force.gradle: it was defined by plugin org.jetbrains.kotlin but redefined by plugin org.jetbrains.kotlin. Consider adding overrides="true" for one of the plugins, see the documentation for com.intellij.openapi.util.registry.RegistryKeyBean.overrides for more details.
+Warning: Not allowed as a service: java.awt.Window.CustomTitleBarPeer
+	at com.jetbrains.JBR$WindowDecorations__Holder.<clinit>(JBR.java:642)
+	at com.jetbrains.JBR.getWindowDecorations(JBR.java:662)
+	at com.intellij.platform.ide.bootstrap.StartupUtil$startApplication$3.invokeSuspend(startup.kt:171)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+Warning: Service not supported: com.jetbrains.WindowDecorations
+	at com.jetbrains.JBR$WindowDecorations__Holder.<clinit>(JBR.java:642)
+	at com.jetbrains.JBR.getWindowDecorations(JBR.java:662)
+	at com.intellij.platform.ide.bootstrap.StartupUtil$startApplication$3.invokeSuspend(startup.kt:171)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:27:43,898 [    714]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:27:43,960 [    776]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.VcsAware' template presentation. Showing its action-id instead
+2024-10-02 21:27:43,960 [    776]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.VcsNameSeparator' template presentation. Showing its action-id instead
+2024-10-02 21:27:43,961 [    777]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.Vcs.Providers' template presentation. Showing its action-id instead
+2024-10-02 21:27:43,961 [    777]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.NonVcsAware' template presentation. Showing its action-id instead
+2024-10-02 21:27:43,965 [    781]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Log.HighlightersActionGroup' template presentation. Showing its action-id instead
+2024-10-02 21:27:43,967 [    783]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'com.intellij.flyway.structure.new' template presentation. Showing its action-id instead
+2024-10-02 21:27:43,968 [    784]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'FileTemplateSeparatorGroup' template presentation. Showing its action-id instead
+2024-10-02 21:27:43,969 [    785]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.NewGroup' template presentation. Showing its action-id instead
+2024-10-02 21:27:43,971 [    787]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.Ddl.AddObject' template presentation. Showing its action-id instead
+2024-10-02 21:27:43,975 [    791]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MigrationMenu1' template presentation. Showing its action-id instead
+2024-10-02 21:27:43,998 [    814]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'XDebugger.Code.Toolbar' template presentation. Showing its action-id instead
+2024-10-02 21:27:43,999 [    815]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CWMTelephonyGroup' template presentation. Showing its action-id instead
+2024-10-02 21:27:44,019 [    835]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MarkSourceRootGroup' template presentation. Showing its action-id instead
+2024-10-02 21:27:44,025 [    841]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'InspectCodeActionInPopupMenus' template presentation. Showing its action-id instead
+2024-10-02 21:27:44,050 [    866]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EditorPopupMenuAnalyze' template presentation. Showing its action-id instead
+2024-10-02 21:27:44,057 [    873]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ViewToolbarActionsGroup' template presentation. Showing its action-id instead
+2024-10-02 21:27:44,064 [    880]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'RemoteExternalToolsGroup' template presentation. Showing its action-id instead
+2024-10-02 21:27:44,067 [    883]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.MainMenu' template presentation. Showing its action-id instead
+2024-10-02 21:27:44,067 [    883]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Specific' template presentation. Showing its action-id instead
+2024-10-02 21:27:44,072 [    888]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu' template presentation. Showing its action-id instead
+2024-10-02 21:27:44,073 [    889]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu.FileActions' template presentation. Showing its action-id instead
+2024-10-02 21:27:44,202 [   1018]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:27:44,208 [   1024]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:27:44,209 [   1025]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:27:44,209 [   1025]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:27:44,210 [   1026]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:27:44,423 [   1239]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=org.jetbrains.kotlin.idea.search.refIndex.KotlinCompilerReferenceIndexService, plugin=org.jetbrains.kotlin)
+2024-10-02 21:27:44,424 [   1240]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.project.MavenProjectsManagerEx, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:27:44,424 [   1240]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.navigator.MavenProjectsNavigator, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:27:44,424 [   1240]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.tasks.MavenShortcutsManager, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:27:44,424 [   1240]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:27:44,424 [   1240]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendUserManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:27:44,424 [   1240]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.ports.CwmPortForwardingToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:27:44,424 [   1240]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendCWMUserFocusHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:27:44,424 [   1240]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeManagerService, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:27:44,424 [   1240]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendProjectViewSync, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:27:44,424 [   1240]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeEditorsHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:27:44,424 [   1240]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeDebuggerHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:27:44,424 [   1240]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeLookupSynchronizer, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:27:44,442 [   1258]   WARN - #com.github.shubham076.themes.toolWindow.MyToolWindowFactory - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+Project service: Varda-Theme
+2024-10-02 21:27:45,539 [   2355]   WARN - #c.i.u.t.AbstractTreeNodeVisitor - unexpected component class com.intellij.ide.util.treeView.CachedTreePresentationNode
+2024-10-02 21:27:45,910 [   2726]   WARN - #o.j.p.t.TextMateService - Cannot find referenced file `./syntaxes/asp-vb-net.tmLanguage.json` in bundle `/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/plugins/textmate/lib/bundles/vb`
+2024-10-02 21:27:46,556 [   3372]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:27:57,291 [  14107]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+Warning: Not allowed as a service: com.jetbrains.RoundedCornersManager
+	at com.jetbrains.JBR$RoundedCornersManager__Holder.<clinit>(JBR.java:514)
+	at com.jetbrains.JBR.isRoundedCornersManagerSupported(JBR.java:524)
+	at com.intellij.ui.WindowRoundedCornersManager.isAvailable(WindowRoundedCornersManager.java:36)
+	at com.intellij.ui.popup.AbstractPopup.show(AbstractPopup.java:1033)
+	at com.intellij.ui.popup.AbstractPopup.show(AbstractPopup.java:654)
+	at com.intellij.ide.HelpTooltip.lambda$scheduleShow$2(HelpTooltip.java:621)
+	at com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:255)
+	at com.intellij.util.Alarm$Request.runSafely(Alarm.java:377)
+	at com.intellij.util.Alarm$Request.run(Alarm.java:356)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at com.intellij.util.concurrency.SchedulingWrapper$MyScheduledFutureTask.run(SchedulingWrapper.java:272)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:229)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$100(TransactionGuardImpl.java:22)
+	at com.intellij.openapi.application.TransactionGuardImpl$1.run(TransactionGuardImpl.java:191)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runIntendedWriteActionOnCurrentThread$lambda$1(AnyThreadWriteThreadingSupport.kt:184)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWriteIntentReadAction(AnyThreadWriteThreadingSupport.kt:84)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runIntendedWriteActionOnCurrentThread(AnyThreadWriteThreadingSupport.kt:183)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:836)
+	at com.intellij.openapi.application.impl.ApplicationImpl$2.run(ApplicationImpl.java:424)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWithImplicitRead(AnyThreadWriteThreadingSupport.kt:122)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWithImplicitRead(ApplicationImpl.java:1162)
+	at com.intellij.openapi.application.impl.FlushQueue.doRun(FlushQueue.java:78)
+	at com.intellij.openapi.application.impl.FlushQueue.runNextEvent(FlushQueue.java:119)
+	at com.intellij.openapi.application.impl.FlushQueue.flushNow(FlushQueue.java:41)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:781)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:728)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:722)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:750)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:696)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent$lambda$16(IdeEventQueue.kt:590)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWithoutImplicitRead(AnyThreadWriteThreadingSupport.kt:117)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:590)
+	at com.intellij.ide.IdeEventQueue.access$_dispatchEvent(IdeEventQueue.kt:73)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1$1.compute(IdeEventQueue.kt:357)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1$1.compute(IdeEventQueue.kt:356)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:843)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.invoke(IdeEventQueue.kt:356)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.invoke(IdeEventQueue.kt:351)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke$lambda$0(IdeEventQueue.kt:1035)
+	at com.intellij.openapi.application.WriteIntentReadAction.lambda$run$0(WriteIntentReadAction.java:24)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWriteIntentReadAction(AnyThreadWriteThreadingSupport.kt:84)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWriteIntentReadAction(ApplicationImpl.java:910)
+	at com.intellij.openapi.application.WriteIntentReadAction.compute(WriteIntentReadAction.java:55)
+	at com.intellij.openapi.application.WriteIntentReadAction.run(WriteIntentReadAction.java:23)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke(IdeEventQueue.kt:1035)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke(IdeEventQueue.kt:1035)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$1(IdeEventQueue.kt:1036)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:106)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:1036)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$10(IdeEventQueue.kt:351)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:397)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:117)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+2024-10-02 21:28:00,674 [  17490]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:28:01,028 [  17844]   WARN - #c.i.u.x.Binding - No accessors for org.jetbrains.kotlin.cli.common.arguments.InternalArgument. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 21:28:50,275 [  67091]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:28:52,131 [  68947]   WARN - #c.i.o.v.i.l.NativeFileWatcherImpl - Watcher terminated with exit code 143
+
+(com.github.Aylur.ags:17592): Gtk-WARNING **: 21:28:52.206: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:17592): Gtk-WARNING **: 21:28:52.206: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:17592): Gtk-WARNING **: 21:28:52.206: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:28:52,386 [      9]   WARN - #kotlinx.coroutines.CoroutineScope - Store will be recreated (db=/home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db)
+org.h2.mvstore.MVStoreException: The file is locked: /home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:28:52,401 [     24]   WARN - #kotlinx.coroutines.CoroutineScope - Store will be recreated (db=/home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db)
+java.lang.NullPointerException: Cannot invoke "org.h2.mvstore.MVMap.close()" because "this.layout" is null
+	at org.h2.mvstore.FileStore.close(FileStore.java:282)
+	at org.h2.mvstore.SingleFileStore.close(SingleFileStore.java:168)
+	at org.h2.mvstore.MVStore.closeStore(MVStore.java:705)
+	at org.h2.mvstore.MVStore.closeImmediately(MVStore.java:664)
+	at org.h2.mvstore.MVStore.unlockAndCheckPanicCondition(MVStore.java:364)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:296)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:28:52,403 [     26]   WARN - #kotlinx.coroutines.CoroutineScope - Cannot open cache state storage, will be recreated
+org.h2.mvstore.MVStoreException: The file is locked: /home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:28:52,622 [    245]   WARN - #c.i.u.x.Binding - No accessors for com.intellij.platform.experiment.ab.impl.experiment.ABExperimentGroupStorage. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 21:28:52,800 [    423]   WARN - c.i.o.u.r.overrides - Conflicting registry key definition for key kotlin.mpp.tests.force.gradle: it was defined by plugin org.jetbrains.kotlin but redefined by plugin org.jetbrains.kotlin. Consider adding overrides="true" for one of the plugins, see the documentation for com.intellij.openapi.util.registry.RegistryKeyBean.overrides for more details.
+Warning: Not allowed as a service: java.awt.Window.CustomTitleBarPeer
+	at com.jetbrains.JBR$WindowDecorations__Holder.<clinit>(JBR.java:642)
+	at com.jetbrains.JBR.getWindowDecorations(JBR.java:662)
+	at com.intellij.platform.ide.bootstrap.StartupUtil$startApplication$3.invokeSuspend(startup.kt:171)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+Warning: Service not supported: com.jetbrains.WindowDecorations
+	at com.jetbrains.JBR$WindowDecorations__Holder.<clinit>(JBR.java:642)
+	at com.jetbrains.JBR.getWindowDecorations(JBR.java:662)
+	at com.intellij.platform.ide.bootstrap.StartupUtil$startApplication$3.invokeSuspend(startup.kt:171)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:28:53,128 [    751]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:28:53,169 [    792]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:28:53,196 [    819]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.VcsAware' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,197 [    820]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.VcsNameSeparator' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,197 [    820]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.Vcs.Providers' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,197 [    820]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.NonVcsAware' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,203 [    826]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Log.HighlightersActionGroup' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,205 [    828]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'com.intellij.flyway.structure.new' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,205 [    828]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'FileTemplateSeparatorGroup' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,206 [    829]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.NewGroup' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,209 [    832]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.Ddl.AddObject' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,213 [    836]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MigrationMenu1' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,245 [    868]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'XDebugger.Code.Toolbar' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,246 [    869]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CWMTelephonyGroup' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,275 [    898]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MarkSourceRootGroup' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,280 [    903]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'InspectCodeActionInPopupMenus' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,300 [    923]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EditorPopupMenuAnalyze' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,308 [    931]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ViewToolbarActionsGroup' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,312 [    935]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'RemoteExternalToolsGroup' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,313 [    936]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.MainMenu' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,313 [    936]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Specific' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,317 [    940]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,317 [    940]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu.FileActions' template presentation. Showing its action-id instead
+2024-10-02 21:28:53,462 [   1085]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:28:53,466 [   1089]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:28:53,467 [   1090]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:28:53,468 [   1091]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:28:53,468 [   1091]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:28:53,648 [   1271]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=org.jetbrains.kotlin.idea.search.refIndex.KotlinCompilerReferenceIndexService, plugin=org.jetbrains.kotlin)
+2024-10-02 21:28:53,648 [   1271]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.project.MavenProjectsManagerEx, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:28:53,648 [   1271]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.navigator.MavenProjectsNavigator, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:28:53,648 [   1271]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.tasks.MavenShortcutsManager, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:28:53,648 [   1271]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:28:53,648 [   1271]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendUserManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:28:53,648 [   1271]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.ports.CwmPortForwardingToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:28:53,649 [   1272]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendCWMUserFocusHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:28:53,649 [   1272]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeManagerService, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:28:53,649 [   1272]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendProjectViewSync, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:28:53,649 [   1272]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeEditorsHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:28:53,649 [   1272]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeDebuggerHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:28:53,649 [   1272]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeLookupSynchronizer, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:28:53,664 [   1287]   WARN - #com.github.shubham076.themes.toolWindow.MyToolWindowFactory - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+Project service: Varda-Theme
+2024-10-02 21:28:54,777 [   2400]   WARN - #c.i.u.t.AbstractTreeNodeVisitor - unexpected component class com.intellij.ide.util.treeView.CachedTreePresentationNode
+2024-10-02 21:28:54,917 [   2540]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:28:55,198 [   2821]   WARN - #o.j.p.t.TextMateService - Cannot find referenced file `./syntaxes/asp-vb-net.tmLanguage.json` in bundle `/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/plugins/textmate/lib/bundles/vb`
+2024-10-02 21:28:55,520 [   3143]   WARN - #o.j.p.t.TextMateService - Cannot find referenced file `./syntaxes/asp-vb-net.tmLanguage.json` in bundle `/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/plugins/textmate/lib/bundles/vb`
+2024-10-02 21:29:36,446 [  44069]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:29:36,802 [  44425]   WARN - #c.i.u.x.Binding - No accessors for org.jetbrains.kotlin.cli.common.arguments.InternalArgument. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+Warning: Not allowed as a service: com.jetbrains.RoundedCornersManager
+	at com.jetbrains.JBR$RoundedCornersManager__Holder.<clinit>(JBR.java:514)
+	at com.jetbrains.JBR.isRoundedCornersManagerSupported(JBR.java:524)
+	at com.intellij.ui.WindowRoundedCornersManager.isAvailable(WindowRoundedCornersManager.java:36)
+	at com.intellij.ui.popup.AbstractPopup.show(AbstractPopup.java:1033)
+	at com.intellij.ui.popup.AbstractPopup.show(AbstractPopup.java:654)
+	at com.intellij.ui.LightweightHint.showRealPopup(LightweightHint.java:269)
+	at com.intellij.ui.LightweightHint.show(LightweightHint.java:149)
+	at com.intellij.codeInsight.hint.HintManagerImpl.doShowInGivenLocation(HintManagerImpl.java:233)
+	at com.intellij.codeInsight.hint.LocalHintManager.showEditorHint(LocalHintManager.java:246)
+	at com.intellij.codeInsight.hint.HintManagerImpl.showEditorHint(HintManagerImpl.java:202)
+	at com.intellij.codeInsight.lookup.impl.LookupImpl.doShowLookup(LookupImpl.java:783)
+	at com.intellij.codeInsight.lookup.impl.LookupImpl.showLookup(LookupImpl.java:733)
+	at com.intellij.codeInsight.completion.CompletionProgressIndicator.updateLookup(CompletionProgressIndicator.java:460)
+	at com.intellij.codeInsight.completion.CompletionProgressIndicator.lambda$stop$6(CompletionProgressIndicator.java:719)
+	at com.intellij.util.concurrency.ContextRunnable.run(ContextRunnable.java:27)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:229)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$100(TransactionGuardImpl.java:22)
+	at com.intellij.openapi.application.TransactionGuardImpl$1.run(TransactionGuardImpl.java:191)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runIntendedWriteActionOnCurrentThread$lambda$1(AnyThreadWriteThreadingSupport.kt:184)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWriteIntentReadAction(AnyThreadWriteThreadingSupport.kt:84)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runIntendedWriteActionOnCurrentThread(AnyThreadWriteThreadingSupport.kt:183)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:836)
+	at com.intellij.openapi.application.impl.ApplicationImpl$2.run(ApplicationImpl.java:424)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWithImplicitRead(AnyThreadWriteThreadingSupport.kt:122)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWithImplicitRead(ApplicationImpl.java:1162)
+	at com.intellij.openapi.application.impl.FlushQueue.doRun(FlushQueue.java:78)
+	at com.intellij.openapi.application.impl.FlushQueue.runNextEvent(FlushQueue.java:119)
+	at com.intellij.openapi.application.impl.FlushQueue.flushNow(FlushQueue.java:41)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:781)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:728)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:722)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:750)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:696)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent$lambda$16(IdeEventQueue.kt:590)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWithoutImplicitRead(AnyThreadWriteThreadingSupport.kt:117)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:590)
+	at com.intellij.ide.IdeEventQueue.access$_dispatchEvent(IdeEventQueue.kt:73)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1$1.compute(IdeEventQueue.kt:357)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1$1.compute(IdeEventQueue.kt:356)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:843)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.invoke(IdeEventQueue.kt:356)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.invoke(IdeEventQueue.kt:351)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke$lambda$0(IdeEventQueue.kt:1035)
+	at com.intellij.openapi.application.WriteIntentReadAction.lambda$run$0(WriteIntentReadAction.java:24)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWriteIntentReadAction(AnyThreadWriteThreadingSupport.kt:84)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWriteIntentReadAction(ApplicationImpl.java:910)
+	at com.intellij.openapi.application.WriteIntentReadAction.compute(WriteIntentReadAction.java:55)
+	at com.intellij.openapi.application.WriteIntentReadAction.run(WriteIntentReadAction.java:23)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke(IdeEventQueue.kt:1035)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke(IdeEventQueue.kt:1035)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$1(IdeEventQueue.kt:1036)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:106)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:1036)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$10(IdeEventQueue.kt:351)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:397)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:117)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+2024-10-02 21:31:01,203 [ 128826]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:31:06,608 [ 134231]   WARN - #c.i.o.v.i.l.NativeFileWatcherImpl - Watcher terminated with exit code 143
+
+(com.github.Aylur.ags:18270): Gtk-WARNING **: 21:31:06.696: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:18270): Gtk-WARNING **: 21:31:06.697: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:18270): Gtk-WARNING **: 21:31:06.697: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:31:06,880 [     29]   WARN - #kotlinx.coroutines.CoroutineScope - Store will be recreated (db=/home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db)
+org.h2.mvstore.MVStoreException: The file is locked: /home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:31:06,896 [     45]   WARN - #kotlinx.coroutines.CoroutineScope - Store will be recreated (db=/home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db)
+java.lang.NullPointerException: Cannot invoke "org.h2.mvstore.MVMap.close()" because "this.layout" is null
+	at org.h2.mvstore.FileStore.close(FileStore.java:282)
+	at org.h2.mvstore.SingleFileStore.close(SingleFileStore.java:168)
+	at org.h2.mvstore.MVStore.closeStore(MVStore.java:705)
+	at org.h2.mvstore.MVStore.closeImmediately(MVStore.java:664)
+	at org.h2.mvstore.MVStore.unlockAndCheckPanicCondition(MVStore.java:364)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:296)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:31:06,898 [     47]   WARN - #kotlinx.coroutines.CoroutineScope - Cannot open cache state storage, will be recreated
+org.h2.mvstore.MVStoreException: The file is locked: /home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:31:07,105 [    254]   WARN - #c.i.u.x.Binding - No accessors for com.intellij.platform.experiment.ab.impl.experiment.ABExperimentGroupStorage. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 21:31:07,304 [    453]   WARN - c.i.o.u.r.overrides - Conflicting registry key definition for key kotlin.mpp.tests.force.gradle: it was defined by plugin org.jetbrains.kotlin but redefined by plugin org.jetbrains.kotlin. Consider adding overrides="true" for one of the plugins, see the documentation for com.intellij.openapi.util.registry.RegistryKeyBean.overrides for more details.
+Warning: Not allowed as a service: java.awt.Window.CustomTitleBarPeer
+	at com.jetbrains.JBR$WindowDecorations__Holder.<clinit>(JBR.java:642)
+	at com.jetbrains.JBR.getWindowDecorations(JBR.java:662)
+	at com.intellij.platform.ide.bootstrap.StartupUtil$startApplication$3.invokeSuspend(startup.kt:171)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+Warning: Service not supported: com.jetbrains.WindowDecorations
+	at com.jetbrains.JBR$WindowDecorations__Holder.<clinit>(JBR.java:642)
+	at com.jetbrains.JBR.getWindowDecorations(JBR.java:662)
+	at com.intellij.platform.ide.bootstrap.StartupUtil$startApplication$3.invokeSuspend(startup.kt:171)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:31:07,621 [    770]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:31:07,657 [    806]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:31:07,681 [    830]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.VcsAware' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,681 [    830]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.VcsNameSeparator' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,682 [    831]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.Vcs.Providers' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,682 [    831]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.NonVcsAware' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,687 [    836]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Log.HighlightersActionGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,689 [    838]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'com.intellij.flyway.structure.new' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,689 [    838]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'FileTemplateSeparatorGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,690 [    839]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.NewGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,692 [    841]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.Ddl.AddObject' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,696 [    845]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MigrationMenu1' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,730 [    879]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'XDebugger.Code.Toolbar' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,732 [    881]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CWMTelephonyGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,753 [    902]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MarkSourceRootGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,762 [    911]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'InspectCodeActionInPopupMenus' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,778 [    927]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EditorPopupMenuAnalyze' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,785 [    934]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ViewToolbarActionsGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,788 [    937]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'RemoteExternalToolsGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,789 [    938]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.MainMenu' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,789 [    938]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Specific' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,792 [    941]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,792 [    941]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu.FileActions' template presentation. Showing its action-id instead
+2024-10-02 21:31:07,931 [   1080]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:31:07,936 [   1085]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:31:07,937 [   1086]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:31:07,938 [   1087]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:31:07,938 [   1087]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:31:08,119 [   1268]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=org.jetbrains.kotlin.idea.search.refIndex.KotlinCompilerReferenceIndexService, plugin=org.jetbrains.kotlin)
+2024-10-02 21:31:08,119 [   1268]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.project.MavenProjectsManagerEx, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:31:08,119 [   1268]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.navigator.MavenProjectsNavigator, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:31:08,120 [   1269]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.tasks.MavenShortcutsManager, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:31:08,120 [   1269]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:08,120 [   1269]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendUserManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:08,120 [   1269]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.ports.CwmPortForwardingToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:08,120 [   1269]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendCWMUserFocusHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:08,120 [   1269]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeManagerService, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:08,120 [   1269]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendProjectViewSync, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:08,120 [   1269]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeEditorsHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:08,120 [   1269]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeDebuggerHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:08,120 [   1269]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeLookupSynchronizer, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:08,137 [   1286]   WARN - #com.github.shubham076.themes.toolWindow.MyToolWindowFactory - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+Project service: Varda-Theme
+2024-10-02 21:31:09,188 [   2337]   WARN - #c.i.u.t.AbstractTreeNodeVisitor - unexpected component class com.intellij.ide.util.treeView.CachedTreePresentationNode
+2024-10-02 21:31:09,444 [   2593]   WARN - #o.j.p.t.TextMateService - Cannot find referenced file `./syntaxes/asp-vb-net.tmLanguage.json` in bundle `/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/plugins/textmate/lib/bundles/vb`
+2024-10-02 21:31:09,468 [   2617]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+Warning: Not allowed as a service: com.jetbrains.RoundedCornersManager
+	at com.jetbrains.JBR$RoundedCornersManager__Holder.<clinit>(JBR.java:514)
+	at com.jetbrains.JBR.isRoundedCornersManagerSupported(JBR.java:524)
+	at com.intellij.ui.WindowRoundedCornersManager.isAvailable(WindowRoundedCornersManager.java:36)
+	at com.intellij.ui.popup.AbstractPopup.show(AbstractPopup.java:1033)
+	at com.intellij.ui.popup.AbstractPopup.show(AbstractPopup.java:654)
+	at com.intellij.ui.popup.AbstractPopup.showInBestPositionFor(AbstractPopup.java:761)
+	at com.intellij.openapi.editor.EditorMouseHoverPopupManager.showHintInEditor(EditorMouseHoverPopupManager.java:263)
+	at com.intellij.openapi.editor.EditorMouseHoverPopupManager.lambda$scheduleProcessing$3(EditorMouseHoverPopupManager.java:197)
+	at com.intellij.util.concurrency.ContextRunnable.run(ContextRunnable.java:27)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:229)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$100(TransactionGuardImpl.java:22)
+	at com.intellij.openapi.application.TransactionGuardImpl$1.run(TransactionGuardImpl.java:191)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runIntendedWriteActionOnCurrentThread$lambda$1(AnyThreadWriteThreadingSupport.kt:184)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWriteIntentReadAction(AnyThreadWriteThreadingSupport.kt:84)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runIntendedWriteActionOnCurrentThread(AnyThreadWriteThreadingSupport.kt:183)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:836)
+	at com.intellij.openapi.application.impl.ApplicationImpl$2.run(ApplicationImpl.java:424)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWithImplicitRead(AnyThreadWriteThreadingSupport.kt:122)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWithImplicitRead(ApplicationImpl.java:1162)
+	at com.intellij.openapi.application.impl.FlushQueue.doRun(FlushQueue.java:78)
+	at com.intellij.openapi.application.impl.FlushQueue.runNextEvent(FlushQueue.java:119)
+	at com.intellij.openapi.application.impl.FlushQueue.flushNow(FlushQueue.java:41)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:781)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:728)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:722)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:750)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:696)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent$lambda$16(IdeEventQueue.kt:590)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWithoutImplicitRead(AnyThreadWriteThreadingSupport.kt:117)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:590)
+	at com.intellij.ide.IdeEventQueue.access$_dispatchEvent(IdeEventQueue.kt:73)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1$1.compute(IdeEventQueue.kt:357)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1$1.compute(IdeEventQueue.kt:356)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:843)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.invoke(IdeEventQueue.kt:356)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.invoke(IdeEventQueue.kt:351)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke$lambda$0(IdeEventQueue.kt:1035)
+	at com.intellij.openapi.application.WriteIntentReadAction.lambda$run$0(WriteIntentReadAction.java:24)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWriteIntentReadAction(AnyThreadWriteThreadingSupport.kt:84)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWriteIntentReadAction(ApplicationImpl.java:910)
+	at com.intellij.openapi.application.WriteIntentReadAction.compute(WriteIntentReadAction.java:55)
+	at com.intellij.openapi.application.WriteIntentReadAction.run(WriteIntentReadAction.java:23)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke(IdeEventQueue.kt:1035)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke(IdeEventQueue.kt:1035)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$1(IdeEventQueue.kt:1036)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:106)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:1036)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$10(IdeEventQueue.kt:351)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:397)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:117)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+2024-10-02 21:31:52,889 [  46038]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:31:53,242 [  46391]   WARN - #c.i.u.x.Binding - No accessors for org.jetbrains.kotlin.cli.common.arguments.InternalArgument. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 21:31:54,625 [  47774]   WARN - #c.i.o.v.i.l.NativeFileWatcherImpl - Watcher terminated with exit code 143
+
+(com.github.Aylur.ags:18928): Gtk-WARNING **: 21:31:54.706: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:18928): Gtk-WARNING **: 21:31:54.706: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:18928): Gtk-WARNING **: 21:31:54.706: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:31:54,892 [     19]   WARN - #kotlinx.coroutines.CoroutineScope - Store will be recreated (db=/home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db)
+org.h2.mvstore.MVStoreException: The file is locked: /home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:31:54,901 [     28]   WARN - #kotlinx.coroutines.CoroutineScope - Store will be recreated (db=/home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db)
+java.lang.NullPointerException: Cannot invoke "org.h2.mvstore.MVMap.close()" because "this.layout" is null
+	at org.h2.mvstore.FileStore.close(FileStore.java:282)
+	at org.h2.mvstore.SingleFileStore.close(SingleFileStore.java:168)
+	at org.h2.mvstore.MVStore.closeStore(MVStore.java:705)
+	at org.h2.mvstore.MVStore.closeImmediately(MVStore.java:664)
+	at org.h2.mvstore.MVStore.unlockAndCheckPanicCondition(MVStore.java:364)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:296)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:31:54,904 [     31]   WARN - #kotlinx.coroutines.CoroutineScope - Cannot open cache state storage, will be recreated
+org.h2.mvstore.MVStoreException: The file is locked: /home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:31:55,136 [    263]   WARN - #c.i.u.x.Binding - No accessors for com.intellij.platform.experiment.ab.impl.experiment.ABExperimentGroupStorage. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 21:31:55,323 [    450]   WARN - c.i.o.u.r.overrides - Conflicting registry key definition for key kotlin.mpp.tests.force.gradle: it was defined by plugin org.jetbrains.kotlin but redefined by plugin org.jetbrains.kotlin. Consider adding overrides="true" for one of the plugins, see the documentation for com.intellij.openapi.util.registry.RegistryKeyBean.overrides for more details.
+Warning: Not allowed as a service: java.awt.Window.CustomTitleBarPeer
+	at com.jetbrains.JBR$WindowDecorations__Holder.<clinit>(JBR.java:642)
+	at com.jetbrains.JBR.getWindowDecorations(JBR.java:662)
+	at com.intellij.platform.ide.bootstrap.StartupUtil$startApplication$3.invokeSuspend(startup.kt:171)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+Warning: Service not supported: com.jetbrains.WindowDecorations
+	at com.jetbrains.JBR$WindowDecorations__Holder.<clinit>(JBR.java:642)
+	at com.jetbrains.JBR.getWindowDecorations(JBR.java:662)
+	at com.intellij.platform.ide.bootstrap.StartupUtil$startApplication$3.invokeSuspend(startup.kt:171)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:31:55,649 [    776]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:31:55,679 [    806]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:31:55,704 [    831]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.VcsAware' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,704 [    831]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.VcsNameSeparator' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,704 [    831]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.Vcs.Providers' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,705 [    832]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.NonVcsAware' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,709 [    836]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Log.HighlightersActionGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,711 [    838]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'com.intellij.flyway.structure.new' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,711 [    838]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'FileTemplateSeparatorGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,712 [    839]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.NewGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,714 [    841]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.Ddl.AddObject' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,718 [    845]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MigrationMenu1' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,749 [    876]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'XDebugger.Code.Toolbar' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,749 [    876]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'XDebugger.Code.Toolbar' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,750 [    877]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CWMTelephonyGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,769 [    896]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MarkSourceRootGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,777 [    904]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'InspectCodeActionInPopupMenus' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,798 [    925]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EditorPopupMenuAnalyze' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,804 [    931]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ViewToolbarActionsGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,807 [    934]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'RemoteExternalToolsGroup' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,808 [    935]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.MainMenu' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,808 [    935]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Specific' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,812 [    939]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,812 [    939]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu.FileActions' template presentation. Showing its action-id instead
+2024-10-02 21:31:55,953 [   1080]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:31:55,957 [   1084]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:31:55,958 [   1085]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:31:55,958 [   1085]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:31:55,959 [   1086]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:31:56,137 [   1264]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=org.jetbrains.kotlin.idea.search.refIndex.KotlinCompilerReferenceIndexService, plugin=org.jetbrains.kotlin)
+2024-10-02 21:31:56,137 [   1264]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.project.MavenProjectsManagerEx, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:31:56,137 [   1264]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.navigator.MavenProjectsNavigator, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:31:56,137 [   1264]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.tasks.MavenShortcutsManager, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:31:56,137 [   1264]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:56,138 [   1265]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendUserManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:56,138 [   1265]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.ports.CwmPortForwardingToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:56,138 [   1265]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendCWMUserFocusHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:56,138 [   1265]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeManagerService, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:56,138 [   1265]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendProjectViewSync, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:56,138 [   1265]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeEditorsHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:56,138 [   1265]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeDebuggerHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:56,138 [   1265]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeLookupSynchronizer, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:31:56,155 [   1282]   WARN - #com.github.shubham076.themes.toolWindow.MyToolWindowFactory - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+Project service: Varda-Theme
+2024-10-02 21:31:56,932 [   2059]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:31:57,349 [   2476]   WARN - #c.i.u.t.AbstractTreeNodeVisitor - unexpected component class com.intellij.ide.util.treeView.CachedTreePresentationNode
+2024-10-02 21:31:57,785 [   2912]   WARN - #o.j.p.t.TextMateService - Cannot find referenced file `./syntaxes/asp-vb-net.tmLanguage.json` in bundle `/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/plugins/textmate/lib/bundles/vb`
+2024-10-02 21:31:58,046 [   3173]   WARN - #o.j.p.t.TextMateService - Cannot find referenced file `./syntaxes/asp-vb-net.tmLanguage.json` in bundle `/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/plugins/textmate/lib/bundles/vb`
+2024-10-02 21:32:23,160 [  28287]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:32:23,513 [  28640]   WARN - #c.i.u.x.Binding - No accessors for org.jetbrains.kotlin.cli.common.arguments.InternalArgument. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 21:32:25,274 [  30401]   WARN - #c.i.o.v.i.l.NativeFileWatcherImpl - Watcher terminated with exit code 143
+
+(com.github.Aylur.ags:19569): Gtk-WARNING **: 21:32:25.356: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:19569): Gtk-WARNING **: 21:32:25.356: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:19569): Gtk-WARNING **: 21:32:25.356: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:32:25,541 [     29]   WARN - #kotlinx.coroutines.CoroutineScope - Store will be recreated (db=/home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db)
+org.h2.mvstore.MVStoreException: The file is locked: /home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:32:25,548 [     36]   WARN - #kotlinx.coroutines.CoroutineScope - Store will be recreated (db=/home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db)
+java.lang.NullPointerException: Cannot invoke "org.h2.mvstore.MVMap.close()" because "this.layout" is null
+	at org.h2.mvstore.FileStore.close(FileStore.java:282)
+	at org.h2.mvstore.SingleFileStore.close(SingleFileStore.java:168)
+	at org.h2.mvstore.MVStore.closeStore(MVStore.java:705)
+	at org.h2.mvstore.MVStore.closeImmediately(MVStore.java:664)
+	at org.h2.mvstore.MVStore.unlockAndCheckPanicCondition(MVStore.java:364)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:296)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:32:25,551 [     39]   WARN - #kotlinx.coroutines.CoroutineScope - Cannot open cache state storage, will be recreated
+org.h2.mvstore.MVStoreException: The file is locked: /home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:32:25,785 [    273]   WARN - #c.i.u.x.Binding - No accessors for com.intellij.platform.experiment.ab.impl.experiment.ABExperimentGroupStorage. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 21:32:26,001 [    489]   WARN - c.i.o.u.r.overrides - Conflicting registry key definition for key kotlin.mpp.tests.force.gradle: it was defined by plugin org.jetbrains.kotlin but redefined by plugin org.jetbrains.kotlin. Consider adding overrides="true" for one of the plugins, see the documentation for com.intellij.openapi.util.registry.RegistryKeyBean.overrides for more details.
+Warning: Not allowed as a service: java.awt.Window.CustomTitleBarPeer
+	at com.jetbrains.JBR$WindowDecorations__Holder.<clinit>(JBR.java:642)
+	at com.jetbrains.JBR.getWindowDecorations(JBR.java:662)
+	at com.intellij.platform.ide.bootstrap.StartupUtil$startApplication$3.invokeSuspend(startup.kt:171)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+Warning: Service not supported: com.jetbrains.WindowDecorations
+	at com.jetbrains.JBR$WindowDecorations__Holder.<clinit>(JBR.java:642)
+	at com.jetbrains.JBR.getWindowDecorations(JBR.java:662)
+	at com.intellij.platform.ide.bootstrap.StartupUtil$startApplication$3.invokeSuspend(startup.kt:171)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:32:26,326 [    814]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:32:26,356 [    844]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:32:26,383 [    871]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.VcsAware' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,383 [    871]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.VcsNameSeparator' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,384 [    872]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.Vcs.Providers' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,384 [    872]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.NonVcsAware' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,388 [    876]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Log.HighlightersActionGroup' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,390 [    878]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'com.intellij.flyway.structure.new' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,391 [    879]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'FileTemplateSeparatorGroup' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,392 [    880]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.NewGroup' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,394 [    882]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.Ddl.AddObject' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,398 [    886]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MigrationMenu1' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,429 [    917]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'XDebugger.Code.Toolbar' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,430 [    918]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CWMTelephonyGroup' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,457 [    945]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MarkSourceRootGroup' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,462 [    950]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'InspectCodeActionInPopupMenus' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,479 [    967]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EditorPopupMenuAnalyze' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,479 [    967]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EditorPopupMenuAnalyze' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,486 [    974]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ViewToolbarActionsGroup' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,489 [    977]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'RemoteExternalToolsGroup' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,490 [    978]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.MainMenu' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,490 [    978]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Specific' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,493 [    981]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,493 [    981]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu.FileActions' template presentation. Showing its action-id instead
+2024-10-02 21:32:26,641 [   1129]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:32:26,646 [   1134]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:32:26,647 [   1135]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:32:26,647 [   1135]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:32:26,648 [   1136]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:32:26,845 [   1333]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=org.jetbrains.kotlin.idea.search.refIndex.KotlinCompilerReferenceIndexService, plugin=org.jetbrains.kotlin)
+2024-10-02 21:32:26,846 [   1334]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.project.MavenProjectsManagerEx, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:32:26,846 [   1334]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.navigator.MavenProjectsNavigator, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:32:26,846 [   1334]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.tasks.MavenShortcutsManager, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:32:26,846 [   1334]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:32:26,846 [   1334]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendUserManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:32:26,846 [   1334]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.ports.CwmPortForwardingToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:32:26,846 [   1334]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendCWMUserFocusHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:32:26,846 [   1334]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeManagerService, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:32:26,846 [   1334]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendProjectViewSync, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:32:26,846 [   1334]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeEditorsHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:32:26,846 [   1334]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeDebuggerHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:32:26,846 [   1334]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeLookupSynchronizer, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:32:26,868 [   1356]   WARN - #com.github.shubham076.themes.toolWindow.MyToolWindowFactory - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+Project service: Varda-Theme
+2024-10-02 21:32:27,709 [   2197]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:32:27,975 [   2463]   WARN - #c.i.u.t.AbstractTreeNodeVisitor - unexpected component class com.intellij.ide.util.treeView.CachedTreePresentationNode
+2024-10-02 21:32:28,353 [   2841]   WARN - #o.j.p.t.TextMateService - Cannot find referenced file `./syntaxes/asp-vb-net.tmLanguage.json` in bundle `/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/plugins/textmate/lib/bundles/vb`
+2024-10-02 21:33:04,156 [  38644]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 21:33:04,463 [  38951]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 21:33:07,498 [  41986]   WARN - #c.i.u.x.Binding - No accessors for org.jetbrains.security.package.Package. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 21:33:13,951 [  48439]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+Warning: Not allowed as a service: com.jetbrains.RoundedCornersManager
+	at com.jetbrains.JBR$RoundedCornersManager__Holder.<clinit>(JBR.java:514)
+	at com.jetbrains.JBR.isRoundedCornersManagerSupported(JBR.java:524)
+	at com.intellij.ui.WindowRoundedCornersManager.isAvailable(WindowRoundedCornersManager.java:36)
+	at com.intellij.ui.popup.AbstractPopup.show(AbstractPopup.java:1033)
+	at com.intellij.ui.popup.AbstractPopup.show(AbstractPopup.java:654)
+	at com.intellij.ide.HelpTooltip.lambda$scheduleShow$2(HelpTooltip.java:621)
+	at com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:255)
+	at com.intellij.util.Alarm$Request.runSafely(Alarm.java:377)
+	at com.intellij.util.Alarm$Request.run(Alarm.java:356)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at com.intellij.util.concurrency.SchedulingWrapper$MyScheduledFutureTask.run(SchedulingWrapper.java:272)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:229)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$100(TransactionGuardImpl.java:22)
+	at com.intellij.openapi.application.TransactionGuardImpl$1.run(TransactionGuardImpl.java:191)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runIntendedWriteActionOnCurrentThread$lambda$1(AnyThreadWriteThreadingSupport.kt:184)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWriteIntentReadAction(AnyThreadWriteThreadingSupport.kt:84)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runIntendedWriteActionOnCurrentThread(AnyThreadWriteThreadingSupport.kt:183)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:836)
+	at com.intellij.openapi.application.impl.ApplicationImpl$2.run(ApplicationImpl.java:424)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWithImplicitRead(AnyThreadWriteThreadingSupport.kt:122)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWithImplicitRead(ApplicationImpl.java:1162)
+	at com.intellij.openapi.application.impl.FlushQueue.doRun(FlushQueue.java:78)
+	at com.intellij.openapi.application.impl.FlushQueue.runNextEvent(FlushQueue.java:119)
+	at com.intellij.openapi.application.impl.FlushQueue.flushNow(FlushQueue.java:41)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:781)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:728)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:722)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:750)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:696)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent$lambda$16(IdeEventQueue.kt:590)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWithoutImplicitRead(AnyThreadWriteThreadingSupport.kt:117)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:590)
+	at com.intellij.ide.IdeEventQueue.access$_dispatchEvent(IdeEventQueue.kt:73)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1$1.compute(IdeEventQueue.kt:357)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1$1.compute(IdeEventQueue.kt:356)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:843)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.invoke(IdeEventQueue.kt:356)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.invoke(IdeEventQueue.kt:351)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke$lambda$0(IdeEventQueue.kt:1035)
+	at com.intellij.openapi.application.WriteIntentReadAction.lambda$run$0(WriteIntentReadAction.java:24)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWriteIntentReadAction(AnyThreadWriteThreadingSupport.kt:84)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWriteIntentReadAction(ApplicationImpl.java:910)
+	at com.intellij.openapi.application.WriteIntentReadAction.compute(WriteIntentReadAction.java:55)
+	at com.intellij.openapi.application.WriteIntentReadAction.run(WriteIntentReadAction.java:23)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke(IdeEventQueue.kt:1035)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke(IdeEventQueue.kt:1035)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$1(IdeEventQueue.kt:1036)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:106)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:1036)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$10(IdeEventQueue.kt:351)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:397)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:117)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+2024-10-02 21:33:23,951 [  58439]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 21:33:33,951 [  68439]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 21:33:43,952 [  78440]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 21:33:53,952 [  88440]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 21:34:03,952 [  98440]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - No interpreter found - cannot create language service queue.
+2024-10-02 21:34:52,213 [ 146701]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:34:52,577 [ 147065]   WARN - #c.i.u.x.Binding - No accessors for org.jetbrains.kotlin.cli.common.arguments.InternalArgument. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 21:34:58,901 [ 153389]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:35:00,274 [ 154762]   WARN - #c.i.o.v.i.l.NativeFileWatcherImpl - Watcher terminated with exit code 143
+
+(com.github.Aylur.ags:20559): Gtk-WARNING **: 21:35:00.387: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:20559): Gtk-WARNING **: 21:35:00.388: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:20559): Gtk-WARNING **: 21:35:00.388: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:35:00,566 [     21]   WARN - #kotlinx.coroutines.CoroutineScope - Store will be recreated (db=/home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db)
+org.h2.mvstore.MVStoreException: The file is locked: /home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:35:00,583 [     38]   WARN - #kotlinx.coroutines.CoroutineScope - Store will be recreated (db=/home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db)
+java.lang.NullPointerException: Cannot invoke "org.h2.mvstore.MVMap.close()" because "this.layout" is null
+	at org.h2.mvstore.FileStore.close(FileStore.java:282)
+	at org.h2.mvstore.SingleFileStore.close(SingleFileStore.java:168)
+	at org.h2.mvstore.MVStore.closeStore(MVStore.java:705)
+	at org.h2.mvstore.MVStore.closeImmediately(MVStore.java:664)
+	at org.h2.mvstore.MVStore.unlockAndCheckPanicCondition(MVStore.java:364)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:296)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:35:00,585 [     40]   WARN - #kotlinx.coroutines.CoroutineScope - Cannot open cache state storage, will be recreated
+org.h2.mvstore.MVStoreException: The file is locked: /home/john/.cache/JetBrains/IntelliJIdea2024.2/icon-cache-v1.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.tryOpenMvStore(MvStoreHelper.kt:84)
+	at com.intellij.util.io.mvstore.MvStoreHelperKt.createOrResetMvStore(MvStoreHelper.kt:60)
+	at com.intellij.ui.svg.SvgCacheManager$Companion$createSvgCacheManager$2$1.invokeSuspend(SvgCacheManager.kt:125)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.internal.SoftLimitedDispatcher$Worker.run(SoftLimitedDispatcher.kt:125)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:99)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:35:00,806 [    261]   WARN - #c.i.u.x.Binding - No accessors for com.intellij.platform.experiment.ab.impl.experiment.ABExperimentGroupStorage. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 21:35:01,016 [    471]   WARN - c.i.o.u.r.overrides - Conflicting registry key definition for key kotlin.mpp.tests.force.gradle: it was defined by plugin org.jetbrains.kotlin but redefined by plugin org.jetbrains.kotlin. Consider adding overrides="true" for one of the plugins, see the documentation for com.intellij.openapi.util.registry.RegistryKeyBean.overrides for more details.
+Warning: Not allowed as a service: java.awt.Window.CustomTitleBarPeer
+	at com.jetbrains.JBR$WindowDecorations__Holder.<clinit>(JBR.java:642)
+	at com.jetbrains.JBR.getWindowDecorations(JBR.java:662)
+	at com.intellij.platform.ide.bootstrap.StartupUtil$startApplication$3.invokeSuspend(startup.kt:171)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+Warning: Service not supported: com.jetbrains.WindowDecorations
+	at com.jetbrains.JBR$WindowDecorations__Holder.<clinit>(JBR.java:642)
+	at com.jetbrains.JBR.getWindowDecorations(JBR.java:662)
+	at com.intellij.platform.ide.bootstrap.StartupUtil$startApplication$3.invokeSuspend(startup.kt:171)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+2024-10-02 21:35:01,316 [    771]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:35:01,350 [    805]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:35:01,376 [    831]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.VcsAware' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,376 [    831]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.VcsNameSeparator' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,376 [    831]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.Vcs.Providers' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,377 [    832]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Operations.Popup.NonVcsAware' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,380 [    835]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Log.HighlightersActionGroup' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,382 [    837]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'com.intellij.flyway.structure.new' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,382 [    837]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'FileTemplateSeparatorGroup' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,383 [    838]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.NewGroup' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,385 [    840]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'DatabaseView.Ddl.AddObject' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,389 [    844]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MigrationMenu1' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,418 [    873]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'XDebugger.Code.Toolbar' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,419 [    874]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'CWMTelephonyGroup' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,442 [    897]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'MarkSourceRootGroup' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,451 [    906]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'InspectCodeActionInPopupMenus' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,470 [    925]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'EditorPopupMenuAnalyze' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,476 [    931]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'ViewToolbarActionsGroup' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,479 [    934]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'RemoteExternalToolsGroup' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,480 [    935]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.MainMenu' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,480 [    935]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Vcs.Specific' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,483 [    938]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,483 [    938]   WARN - #c.i.o.k.i.u.ActionsTreeUtil - No text in 'Git.MainMenu.FileActions' template presentation. Showing its action-id instead
+2024-10-02 21:35:01,617 [   1072]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:35:01,621 [   1076]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:35:01,622 [   1077]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:35:01,623 [   1078]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:35:01,623 [   1078]   WARN - #c.i.e.t.TargetBasedSdks - SDK target configuration data is absent
+2024-10-02 21:35:01,807 [   1262]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=org.jetbrains.kotlin.idea.search.refIndex.KotlinCompilerReferenceIndexService, plugin=org.jetbrains.kotlin)
+2024-10-02 21:35:01,808 [   1263]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.project.MavenProjectsManagerEx, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:35:01,808 [   1263]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.navigator.MavenProjectsNavigator, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:35:01,808 [   1263]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.tasks.MavenShortcutsManager, plugin=org.jetbrains.idea.maven)
+2024-10-02 21:35:01,808 [   1263]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:35:01,808 [   1263]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendUserManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:35:01,808 [   1263]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.ports.CwmPortForwardingToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:35:01,808 [   1263]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendCWMUserFocusHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:35:01,808 [   1263]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeManagerService, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:35:01,808 [   1263]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendProjectViewSync, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:35:01,808 [   1263]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeEditorsHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:35:01,808 [   1263]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeDebuggerHost, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:35:01,808 [   1263]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeLookupSynchronizer, plugin=com.jetbrains.codeWithMe)
+2024-10-02 21:35:01,826 [   1281]   WARN - #com.github.shubham076.themes.toolWindow.MyToolWindowFactory - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+Project service: Varda-Theme
+2024-10-02 21:35:02,581 [   2036]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:35:02,977 [   2432]   WARN - #c.i.u.t.AbstractTreeNodeVisitor - unexpected component class com.intellij.ide.util.treeView.CachedTreePresentationNode
+2024-10-02 21:35:03,564 [   3019]   WARN - #o.j.p.t.TextMateService - Cannot find referenced file `./syntaxes/asp-vb-net.tmLanguage.json` in bundle `/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/plugins/textmate/lib/bundles/vb`
+2024-10-02 21:35:03,982 [   3437]   WARN - #o.j.p.t.TextMateService - Cannot find referenced file `./syntaxes/asp-vb-net.tmLanguage.json` in bundle `/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/plugins/textmate/lib/bundles/vb`
+2024-10-02 21:35:12,529 [  11984]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:35:38,408 [  37863]   WARN - #c.i.u.x.Binding - No accessors for org.jetbrains.kotlin.cli.common.arguments.InternalArgument. This means that state class cannot be serialized properly. Please see https://jb.gg/ij-psoc
+2024-10-02 21:36:38,777 [  98232]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:36:41,373 [ 100828]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:36:43,142 [ 102597]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:36:59,628 [ 119083]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:40:03,936 [ 303391]   WARN - org.apache.http.client.protocol.ResponseProcessCookies - Invalid cookie header: "Set-Cookie: _octo=GH1.1.2045939700.1727923203; Path=/; Domain=github.com; Expires=Fri, 03 Oct 2025 02:40:03 GMT; Secure; SameSite=Lax". Invalid 'expires' attribute: Fri, 03 Oct 2025 02:40:03 GMT
+2024-10-02 21:40:03,937 [ 303392]   WARN - org.apache.http.client.protocol.ResponseProcessCookies - Invalid cookie header: "Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 03 Oct 2025 02:40:03 GMT; HttpOnly; Secure; SameSite=Lax". Invalid 'expires' attribute: Fri, 03 Oct 2025 02:40:03 GMT
+2024-10-02 21:40:04,261 [ 303716]   WARN - org.apache.http.client.protocol.ResponseProcessCookies - Invalid cookie header: "Set-Cookie: _octo=GH1.1.1841258495.1727923203; Path=/; Domain=github.com; Expires=Fri, 03 Oct 2025 02:40:03 GMT; Secure; SameSite=Lax". Invalid 'expires' attribute: Fri, 03 Oct 2025 02:40:03 GMT
+2024-10-02 21:40:04,261 [ 303716]   WARN - org.apache.http.client.protocol.ResponseProcessCookies - Invalid cookie header: "Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 03 Oct 2025 02:40:03 GMT; HttpOnly; Secure; SameSite=Lax". Invalid 'expires' attribute: Fri, 03 Oct 2025 02:40:03 GMT
+2024-10-02 21:41:43,224 [ 402679]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+Warning: Not allowed as a service: com.jetbrains.RoundedCornersManager
+	at com.jetbrains.JBR$RoundedCornersManager__Holder.<clinit>(JBR.java:514)
+	at com.jetbrains.JBR.isRoundedCornersManagerSupported(JBR.java:524)
+	at com.intellij.ui.WindowRoundedCornersManager.isAvailable(WindowRoundedCornersManager.java:36)
+	at com.intellij.ui.popup.AbstractPopup.show(AbstractPopup.java:1033)
+	at com.intellij.ui.popup.AbstractPopup.show(AbstractPopup.java:654)
+	at com.intellij.ui.LightweightHint.showRealPopup(LightweightHint.java:269)
+	at com.intellij.ui.LightweightHint.show(LightweightHint.java:149)
+	at com.intellij.codeInsight.hint.HintManagerImpl.doShowInGivenLocation(HintManagerImpl.java:233)
+	at com.intellij.codeInsight.hint.LocalHintManager.showEditorHint(LocalHintManager.java:246)
+	at com.intellij.codeInsight.hint.HintManagerImpl.showEditorHint(HintManagerImpl.java:202)
+	at com.intellij.codeInsight.lookup.impl.LookupImpl.doShowLookup(LookupImpl.java:783)
+	at com.intellij.codeInsight.lookup.impl.LookupImpl.showLookup(LookupImpl.java:733)
+	at com.intellij.codeInsight.completion.CompletionProgressIndicator.updateLookup(CompletionProgressIndicator.java:460)
+	at com.intellij.codeInsight.completion.CompletionProgressIndicator.lambda$stop$6(CompletionProgressIndicator.java:719)
+	at com.intellij.util.concurrency.ContextRunnable.run(ContextRunnable.java:27)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:229)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$100(TransactionGuardImpl.java:22)
+	at com.intellij.openapi.application.TransactionGuardImpl$1.run(TransactionGuardImpl.java:191)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runIntendedWriteActionOnCurrentThread$lambda$1(AnyThreadWriteThreadingSupport.kt:184)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWriteIntentReadAction(AnyThreadWriteThreadingSupport.kt:84)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runIntendedWriteActionOnCurrentThread(AnyThreadWriteThreadingSupport.kt:183)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:836)
+	at com.intellij.openapi.application.impl.ApplicationImpl$2.run(ApplicationImpl.java:424)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWithImplicitRead(AnyThreadWriteThreadingSupport.kt:122)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWithImplicitRead(ApplicationImpl.java:1162)
+	at com.intellij.openapi.application.impl.FlushQueue.doRun(FlushQueue.java:78)
+	at com.intellij.openapi.application.impl.FlushQueue.runNextEvent(FlushQueue.java:119)
+	at com.intellij.openapi.application.impl.FlushQueue.flushNow(FlushQueue.java:41)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:781)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:728)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:722)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:750)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:696)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent$lambda$16(IdeEventQueue.kt:590)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWithoutImplicitRead(AnyThreadWriteThreadingSupport.kt:117)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:590)
+	at com.intellij.ide.IdeEventQueue.access$_dispatchEvent(IdeEventQueue.kt:73)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1$1.compute(IdeEventQueue.kt:357)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1$1.compute(IdeEventQueue.kt:356)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:843)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.invoke(IdeEventQueue.kt:356)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.invoke(IdeEventQueue.kt:351)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke$lambda$0(IdeEventQueue.kt:1035)
+	at com.intellij.openapi.application.WriteIntentReadAction.lambda$run$0(WriteIntentReadAction.java:24)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWriteIntentReadAction(AnyThreadWriteThreadingSupport.kt:84)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWriteIntentReadAction(ApplicationImpl.java:910)
+	at com.intellij.openapi.application.WriteIntentReadAction.compute(WriteIntentReadAction.java:55)
+	at com.intellij.openapi.application.WriteIntentReadAction.run(WriteIntentReadAction.java:23)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke(IdeEventQueue.kt:1035)
+	at com.intellij.ide.IdeEventQueueKt$performActivity$runnableWithWIL$1.invoke(IdeEventQueue.kt:1035)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$1(IdeEventQueue.kt:1036)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:106)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:1036)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$10(IdeEventQueue.kt:351)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:397)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:117)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+2024-10-02 21:42:21,083 [ 440538]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:44:05,727 [ 545182]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:24462): Gtk-WARNING **: 21:44:11.677: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:24462): Gtk-WARNING **: 21:44:11.677: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:24462): Gtk-WARNING **: 21:44:11.677: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:44:30,893 [ 570348]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:44:39,065 [ 578520]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:25270): Gtk-WARNING **: 21:44:40.833: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:25270): Gtk-WARNING **: 21:44:40.833: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:25270): Gtk-WARNING **: 21:44:40.833: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:45:25,948 [ 625403]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:25554): Gtk-WARNING **: 21:45:28.525: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:25554): Gtk-WARNING **: 21:45:28.525: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:25554): Gtk-WARNING **: 21:45:28.525: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:46:41,129 [ 700584]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:47:12,135 [ 731590]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:48:38,247 [ 817702]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:48:40,494 [ 819949]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:48:42,417 [ 821872]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:48:43,672 [ 823127]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:48:55,948 [ 835403]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:51:37,100 [ 996555]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 21:55:46,656 [1246111]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:27216): Gtk-WARNING **: 21:55:51.530: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:27216): Gtk-WARNING **: 21:55:51.530: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:27216): Gtk-WARNING **: 21:55:51.530: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:56:42,304 [1301759]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:27559): Gtk-WARNING **: 21:56:43.900: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:27559): Gtk-WARNING **: 21:56:43.900: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:27559): Gtk-WARNING **: 21:56:43.900: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:56:59,935 [1319390]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:27825): Gtk-WARNING **: 21:57:01.526: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:27825): Gtk-WARNING **: 21:57:01.526: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:27825): Gtk-WARNING **: 21:57:01.526: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:57:27,393 [1346848]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:29776): Gtk-WARNING **: 21:57:28.868: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:29776): Gtk-WARNING **: 21:57:28.868: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:29776): Gtk-WARNING **: 21:57:28.868: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:57:48,571 [1368026]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:31523): Gtk-WARNING **: 21:57:51.195: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:31523): Gtk-WARNING **: 21:57:51.195: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:31523): Gtk-WARNING **: 21:57:51.195: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 21:59:31,978 [1471433]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:00:20,492 [1519947]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:00:59,634 [1559089]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:32698): Gtk-WARNING **: 22:01:01.819: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:32698): Gtk-WARNING **: 22:01:01.819: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:32698): Gtk-WARNING **: 22:01:01.819: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:01:37,632 [1597087]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:33018): Gtk-WARNING **: 22:01:39.152: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:33018): Gtk-WARNING **: 22:01:39.152: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:33018): Gtk-WARNING **: 22:01:39.152: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:01:48,242 [1607697]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:02:51,591 [1671046]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:33315): Gtk-WARNING **: 22:02:54.073: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:33315): Gtk-WARNING **: 22:02:54.073: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:33315): Gtk-WARNING **: 22:02:54.073: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:03:06,817 [1686272]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:03:48,516 [1727971]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:33629): Gtk-WARNING **: 22:03:50.373: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:33629): Gtk-WARNING **: 22:03:50.373: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:33629): Gtk-WARNING **: 22:03:50.373: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:04:45,009 [1784464]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:33933): Gtk-WARNING **: 22:04:46.627: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:33933): Gtk-WARNING **: 22:04:46.627: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:33933): Gtk-WARNING **: 22:04:46.627: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:04:58,709 [1798164]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:07:00,658 [1920113]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:34408): Gtk-WARNING **: 22:07:02.094: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:34408): Gtk-WARNING **: 22:07:02.094: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:34408): Gtk-WARNING **: 22:07:02.094: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:07:07,978 [1927433]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:07:46,279 [1965734]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:08:57,663 [2037118]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:10:57,233 [2156688]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:11:01,205 [2160660]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:11:02,372 [2161827]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:11:13,235 [2172690]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:11:14,627 [2174082]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:11:52,881 [2212336]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:12:08,969 [2228424]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:12:42,273 [2261728]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:14:28,266 [2367721]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:14:31,017 [2370472]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:15:33,564 [2433019]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:15:35,476 [2434931]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:15:38,759 [2438214]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:15:43,795 [2443250]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:15:54,180 [2453635]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:36464): Gtk-WARNING **: 22:16:02.709: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:36464): Gtk-WARNING **: 22:16:02.709: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:36464): Gtk-WARNING **: 22:16:02.709: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:16:20,038 [2479493]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:16:37,268 [2496723]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:37026): Gtk-WARNING **: 22:16:54.535: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:37026): Gtk-WARNING **: 22:16:54.535: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:37026): Gtk-WARNING **: 22:16:54.535: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+
+(com.github.Aylur.ags:37245): Gtk-WARNING **: 22:16:59.093: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:37245): Gtk-WARNING **: 22:16:59.093: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:37245): Gtk-WARNING **: 22:16:59.093: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:17:04,666 [2524121]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:37521): Gtk-WARNING **: 22:17:06.675: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:37521): Gtk-WARNING **: 22:17:06.675: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:37521): Gtk-WARNING **: 22:17:06.675: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:18:24,872 [2604327]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:18:45,821 [2625276]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:19:49,246 [2688701]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:19:50,228 [2689683]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:19:56,623 [2696078]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:19:58,527 [2697982]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:20:03,138 [2702593]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:21:09,014 [2768469]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:38455): Gtk-WARNING **: 22:21:13.880: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:38455): Gtk-WARNING **: 22:21:13.880: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:38455): Gtk-WARNING **: 22:21:13.880: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:21:16,323 [2775778]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:21:19,085 [2778540]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:21:32,247 [2791702]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:22:12,643 [2832098]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:22:20,768 [2840223]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:23:29,276 [2908731]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:23:49,648 [2929103]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:24:05,527 [2944982]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:24:30,778 [2970233]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+2024-10-02 22:24:36,747 [2976202]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:39452): Gtk-WARNING **: 22:24:45.945: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:39452): Gtk-WARNING **: 22:24:45.945: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:39452): Gtk-WARNING **: 22:24:45.945: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:25:25,893 [3025348]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
+
+(com.github.Aylur.ags:39773): Gtk-WARNING **: 22:25:27.711: Theme parsing error: gtk.css:7108:19: negative values are not allowed.
+
+(com.github.Aylur.ags:39773): Gtk-WARNING **: 22:25:27.711: Theme parsing error: gtk.css:7141:19: negative values are not allowed.
+
+(com.github.Aylur.ags:39773): Gtk-WARNING **: 22:25:27.711: Theme parsing error: gtk.css:7149:19: negative values are not allowed.
+2024-10-02 22:25:34,209 [3033664]   WARN - #com.github.shubham076.themes.listeners.MyApplicationActivationListener - Don't forget to remove all non-needed sample code files with their corresponding registration entries in `plugin.xml`.
