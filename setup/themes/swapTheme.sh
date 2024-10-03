@@ -5,7 +5,7 @@ cd ../..
 
 ags_theme() {
   cp ./setup/themes/$1/ags/variables.scss ./ags/scss/
-  nohup ./hypr/scripts/launchers/ags.sh &
+  nohup ./hypr/scripts/launchers/ags.sh > /dev/null 2>&1 &
 }
 
 kitty_theme() {
