@@ -24,3 +24,7 @@ Sidebar
 .tab-icon-overlay {
     display: none !important;
 }
+
+button {
+    color: var(--fg-color) !important;
+}
