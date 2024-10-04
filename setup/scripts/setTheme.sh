@@ -30,12 +30,14 @@ gtk() {
           ln -sf $HOME/workspace/Varda-Theme/gnome/themes/Varda/gtk-4.0 $HOME/.config/
           dconf write /org/gnome/desktop/interface/gtk-theme "'Varda'"
           dconf write /org/gnome/desktop/interface/icon-theme "'Varda'"
+          flatpak override --user --env=GTK_THEME=Varda
         ;;
       "everforest")
           rm $HOME/.config/gtk-4.0
           ln -sf $HOME/workspace/Varda-Theme/gnome/themes/Everforest-Dark/gtk-4.0 $HOME/.config/
           dconf write /org/gnome/desktop/interface/gtk-theme "'Everforest-Dark'"
           dconf write /org/gnome/desktop/interface/icon-theme "'Everforest-Dark'"
+          flatpak override --user --env=GTK_THEME=Everforest-Dark
         ;;
       *)
         echo "no gtk theme"
