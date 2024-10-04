@@ -68,4 +68,5 @@ cpio \
 meson \
 cmake \
 plymouth \
-rofi-wayland
+rofi-wayland \
+wl-clipboard
