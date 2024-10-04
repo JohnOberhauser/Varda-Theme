@@ -69,4 +69,5 @@ meson \
 cmake \
 plymouth \
 rofi-wayland \
-wl-clipboard
+wl-clipboard \
+atool
