@@ -1,1 +1,0 @@
-Copy paste in the theme settings in slack
