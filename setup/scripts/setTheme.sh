@@ -45,6 +45,7 @@ gtk() {
 
 hypr() {
   cp ./setup/themes/$1/hypr/theme.conf ./hypr/conf/
+  cp ./setup/themes/$1/hypr/hyprlock.conf ./hypr/
   cp ./setup/themes/$1/hypr/hyprpaper.conf ./hypr/
   pkill hyprpaper
   nohup hyprpaper > /dev/null 2>&1 &
