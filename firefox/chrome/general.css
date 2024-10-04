@@ -36,3 +36,7 @@ window,
     /* Text color of your selection */
     color: #141414;
 }
+
+.toolbarbutton-1 {
+    fill: var(--fg-color) !important;
+}

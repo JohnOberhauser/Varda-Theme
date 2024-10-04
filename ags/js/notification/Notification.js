@@ -17,6 +17,7 @@ const NotificationIcon = ({ app_entry, app_icon, image }) => {
                 background-position: center;
                 min-width: 78px;
                 min-height: 78px;
+                margin: 4px;
             `,
         })
     }
@@ -57,7 +58,7 @@ export default (notification) => {
                     Widget.Box({
                         children: [
                             Widget.Label({
-                                class_name: "title",
+                                class_name: "notification-title",
                                 xalign: 0,
                                 justification: "left",
                                 hexpand: true,
@@ -76,7 +77,7 @@ export default (notification) => {
                         ],
                     }),
                     Widget.Label({
-                        class_name: "description",
+                        class_name: "notification-description",
                         hexpand: true,
                         use_markup: true,
                         xalign: 0,
