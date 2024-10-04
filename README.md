@@ -1,5 +1,10 @@
 # Varda-Theme
-A theme for various programs, largly surrounding my hyprland setup
+Dot files and a theme for various programs, surrounding my hyprland setup.
+Some programs will have files missing related to color scheme.  The missing files 
+are located in `./setup/themes`.  I use a script to easily swap out themes.
+The script is `./setup/scripts/setTheme.sh`
+
+## Varda
 
 ### Desktop
 
@@ -9,7 +14,7 @@ A theme for various programs, largly surrounding my hyprland setup
 
 ![screenshot](.screenshots/screen2.png)
 
-# Color Pallete
+### Color Pallete
 ```
 # Primary Hex
 white: D0EBEE
@@ -18,25 +23,19 @@ blue: 52677C
 red: 733447
 green: 257B76
 peach: C78C56
-purple: 604575
-aqua: 40AFBF
+violet: 665276
+blue_grey: 8295A9
 
-# Primary RGB
-black: [12, 14, 17]
-white: [208, 235, 238]
-blue: [82, 103, 124]
-grey: [46, 52, 54]
-red: [115, 52, 71]
-green: [37, 123, 118]
-peach: [199, 140, 86]
-purple: [66, 71, 90]
-
-# Secondary
+# Secondary variants
 derk_grey: 141619
 dark_grey2: 2E3436
 dark_grey3: 3b4444
 light_white: E5FFFF
-neon: 80BB00
-light_blue: 8295A9
 light_red: 93394A
 light_green: 98C379
+```
+
+## Everforest
+
+![screenshot](.screenshots/everforest1.png)
+

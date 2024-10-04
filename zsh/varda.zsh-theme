@@ -1,6 +1,8 @@
 # This theme requires nerd fonts
 # https://github.com/ryanoasis/nerd-fonts
 
+source "$(dirname $0)/theme.zsh"
+
 # edit these to change behavior
 # possible values are defined in the function "define_chars" below
 set_settings() {
@@ -134,7 +136,7 @@ prompt_git() {
     if [[ -n $dirty ]]; then
       prompt_segment yellow black
     else
-      prompt_segment blue white
+      prompt_segment $GIT_UNCHANGED_FG $GIT_UNCHANGED_BG
     fi
 
     if [[ -e "${repo_path}/BISECT_LOG" ]]; then

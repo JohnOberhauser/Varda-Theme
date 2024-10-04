@@ -1,5 +1,25 @@
 #!/bin/bash
 
+# Define an array of valid arguments
+valid_args=("varda" "everforest")
+
+# Check if an argument is provided
+if [ $# -eq 0 ]; then
+    echo "Error: No argument provided."
+    echo "Usage: $0 <${valid_args[*]}>"
+    exit 1
+fi
+
+# Get the first argument
+arg="$1"
+
+# Check if the argument is valid
+if [[ ! " ${valid_args[@]} " =~ " $arg " ]]; then
+    echo "Error: Invalid argument '$arg'."
+    echo "Expected: '${valid_args[*]}'."
+    exit 1
+fi
+
 cd "$(dirname "$0")"
 cd ../..
 
@@ -55,6 +75,10 @@ hypr() {
 
 rofi_theme() {
   cp ./setup/themes/$1/rofi/* ./rofi/shared/
+}
+
+zsh_theme() {
+  cp ./setup/themes/$1/zsh/* ./zsh/
 }
 
 intellij_idea() {
@@ -118,6 +142,7 @@ firefox_theme $1
 gtk $1
 hypr $1
 rofi_theme $1
+zsh_theme $1
 intellij_idea $1
 android_studio $1
 btop_theme $1
