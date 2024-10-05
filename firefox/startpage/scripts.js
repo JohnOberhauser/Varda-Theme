@@ -45,11 +45,11 @@ const bookmarks = [
       {"id":"zDaM1uX7S5Jr6G55","label":"Mail","url":"https://mail.proton.me/u/0/inbox"},
       {"id":"DhWDbQzV8facaOW5","label":"Calendar","url":"https://calendar.proton.me/u/0/"},
       {"id":"7pjO0yk6R8Nnyjoi","label":"Drive","url":"https://drive.proton.me/u/0"},
-      {"id":"n76HQkjFc29zZlc8","label":"Account","url":"https://account.proton.me/u/0/vpn"}
+      {"id":"n76HQkjFc29zZlc8","label":"Notes","url":"https://app.standardnotes.com/"}
     ]
   },
   {"id":"njYk5XF49Zdf8g3o","label":"Social","bookmarks":[
-      {"id":"PeIbQBjpA41kjGD6","label":"Kbin","url":"https://kbin.social/"},
+      {"id":"PeIbQBjpA41kjGD6","label":"LinkedIn","url":"https://www.linkedin.com"},
       {"id":"PeIbQBjpA41kjGD6","label":"Sh","url":"https://reddit.com/"},
       {"id":"fgOAsCWGRNHCRZQR","label":"G","url":"https://boards.4channel.org/g/catalog"},
       {"id":"PeIbQBjpA41kjGD6","label":"Foss","url":"https://fosstodon.org/home"}
