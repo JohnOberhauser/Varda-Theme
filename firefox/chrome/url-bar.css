@@ -75,6 +75,7 @@ U R L - B A R
 #urlbar {
     border: none !important;
     box-shadow: none !important;
+    color: var(--fg-color) !important;
 }
 
 #page-action-buttons {
@@ -92,4 +93,8 @@ U R L - B A R
 
 #urlbar-label-box, #urlbar-search-mode-indicator {
     display: none !important;
+}
+
+.urlbar-icon {
+    fill: var(--fg-color) !important;
 }
