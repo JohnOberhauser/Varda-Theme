@@ -59,7 +59,7 @@ const bookmarks = [
       {"id":"pZDB2ilcq8t0m6eW","label":"Schwab","url":"https://client.schwab.com/clientapps/accounts/summary/"},
       {"id":"5YRKKQap76zg1ZxO","label":"Capital One","url":"https://myaccounts.capitalone.com/accountSummary"},
       {"id":"ereuzztrzJbI0lqk","label":"Vanguard","url":"https://personal.vanguard.com/us/MyHome"},
-      {"id":"R37Y4hMSIvTGhRmy","label":"PNC","url":"https://www.onlinebanking.pnc.com/alservlet/PNCOnlineBankingServletLogin"}
+      {"id":"R37Y4hMSIvTGhRmy","label":"Fidelity","url":"https://nb.fidelity.com/public/nb/401k/home"}
     ]
   },
   {"id":"njYk5XF49Zdf8g3o","label":"Dev","bookmarks":[
