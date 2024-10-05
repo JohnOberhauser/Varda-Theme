@@ -89,6 +89,20 @@ zsh_theme() {
   cp ./setup/themes/$1/zsh/* ./zsh/
 }
 
+btop_theme() {
+  case $1 in
+      "varda")
+        sed -i "s|color_theme = \".*\"|color_theme = \"$HOME/.config/btop/themes/varda.theme\"|" $HOME/.config/btop/btop.conf
+        ;;
+      "everforest")
+        sed -i "s|color_theme = \".*\"|color_theme = \"/usr/share/btop/themes/everforest-dark-hard.theme\"|" $HOME/.config/btop/btop.conf
+        ;;
+      *)
+        echo "no btop theme"
+        ;;
+    esac
+}
+
 intellij_idea() {
   # must have themes already installed
   BASE_DIR="$HOME/.config/JetBrains/"
@@ -129,20 +143,6 @@ android_studio() {
   esac
 }
 
-btop_theme() {
-  case $1 in
-      "varda")
-        sed -i "s|color_theme = \".*\"|color_theme = \"$HOME/.config/btop/themes/varda.theme\"|" $HOME/.config/btop/btop.conf
-        ;;
-      "everforest")
-        sed -i "s|color_theme = \".*\"|color_theme = \"/usr/share/btop/themes/everforest-dark-hard.theme\"|" $HOME/.config/btop/btop.conf
-        ;;
-      *)
-        echo "no btop theme"
-        ;;
-    esac
-}
-
 ags_theme $1
 kitty_theme $1
 fastfetch_theme $1
@@ -151,6 +151,6 @@ gtk $1
 hypr $1
 rofi_theme $1
 zsh_theme $1
+btop_theme $1
 intellij_idea $1
 android_studio $1
-btop_theme $1
