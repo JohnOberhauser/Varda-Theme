@@ -50,6 +50,10 @@ gtk() {
           ln -sf $HOME/workspace/Varda-Theme/gnome/themes/Varda/gtk-4.0 $HOME/.config/
           dconf write /org/gnome/desktop/interface/gtk-theme "'Varda'"
           dconf write /org/gnome/desktop/interface/icon-theme "'Varda'"
+          dconf write /org/gnome/desktop/interface/cursor-theme "'Nordzy-cursors-white'"
+          dconf write /org/gnome/desktop/interface/font-name "'JetBrainsMono Nerd Font Medium 11'"
+          dconf write /org/gnome/desktop/interface/monospace-font-name "'JetBrainsMono Nerd Font Medium 10'"
+          dconf write /org/gnome/desktop/interface/document-font-name "'JetBrainsMono Nerd Font Medium 11'"
           flatpak override --user --env=GTK_THEME=Varda
         ;;
       "everforest")
@@ -57,6 +61,10 @@ gtk() {
           ln -sf $HOME/workspace/Varda-Theme/gnome/themes/Everforest-Dark/gtk-4.0 $HOME/.config/
           dconf write /org/gnome/desktop/interface/gtk-theme "'Everforest-Dark'"
           dconf write /org/gnome/desktop/interface/icon-theme "'Everforest-Dark'"
+          dconf write /org/gnome/desktop/interface/cursor-theme "'Nordzy-cursors-white'"
+          dconf write /org/gnome/desktop/interface/font-name "'JetBrainsMono Nerd Font Medium 11'"
+          dconf write /org/gnome/desktop/interface/monospace-font-name "'JetBrainsMono Nerd Font Medium 10'"
+          dconf write /org/gnome/desktop/interface/document-font-name "'JetBrainsMono Nerd Font Medium 11'"
           flatpak override --user --env=GTK_THEME=Everforest-Dark
         ;;
       *)

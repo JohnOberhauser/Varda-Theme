@@ -14,13 +14,12 @@
 ./scripts/setTheme.sh varda
 
 
-xdg-mime default firefox.desktop x-scheme-handler/http
-xdg-mime default firefox.desktop x-scheme-handler/https
+xdg-mime default firefox-nightly.desktop x-scheme-handler/http
+xdg-mime default firefox-nightly.desktop x-scheme-handler/https
 
 # things left to do
 
-# set theme and cursor in gnome tweaks
-# Need to set fonts in gnome tweaks, firefox, intellij
+# Need to set fonts in firefox, intellij
 #
 # setup ufw
 #
