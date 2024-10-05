@@ -84,13 +84,12 @@ alias agst="ags --config $HOME/.config/ags/topbarConfig.js"
 alias v=nvim
 alias sv="sudo nvim"
 alias glm="git pull origin main"
-alias cdv="cd ~/workspace/Varda-Theme"
 alias bird="rsync -a --info=progress2 /home/john/Pictures/camera /mnt/ssd/"
 alias timezone='timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"'
 alias nmtui="~/.config/kitty/nmtui.sh"
 alias settheme="~/workspace/Varda-Theme/setup/scripts/setTheme.sh"
 alias theme="~/workspace/Varda-Theme/setup/scripts/setTheme.sh"
-
+alias cd=z
 
 # Change folder colors
 # ========= Font ================
