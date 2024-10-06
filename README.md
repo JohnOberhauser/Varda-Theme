@@ -34,10 +34,11 @@ The script is `./setup/scripts/setTheme.sh`
 
 ![screenshot](.screenshots/nord3.png)
 
-# Varda Color Palette
+# Color Palettes
 
+## Varda
 ```
-# Primary Hex
+# Primary
 white: D0EBEE
 black: 0C0E11
 blue: 52677C
