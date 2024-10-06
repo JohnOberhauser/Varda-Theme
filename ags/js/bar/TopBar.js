@@ -25,7 +25,7 @@ const Center = () => Widget.Box({
 });
 
 const Right = () => {
-    let iconCss = "margin-left: 10px; padding-left: 10px; padding-right: 10px;"
+    let iconCss = "margin-left: 10px;"
     return Widget.Box({
         vertical: false,
         children: [
@@ -35,7 +35,7 @@ const Right = () => {
             VolumeButton(iconCss),
             MicrophoneButton(iconCss),
             BatteryButton(iconCss),
-            MenuButton("margin-left: 10px; padding-left: 10px; padding-right: 20px;"),
+            MenuButton("margin-right: 10px;"),
         ],
     });
 }
