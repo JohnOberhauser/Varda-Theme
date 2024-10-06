@@ -51,7 +51,10 @@ export default Widget.Window({
     class_name: 'window',
     margins: [5, 5],
     child: Widget.CenterBox({
-        css: "padding: 2px;",
+        css: `
+            padding: 2px;
+            min-width: 40px;
+        `,
         vertical: true,
         start_widget: Top(),
         center_widget: Center(),
