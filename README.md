@@ -37,22 +37,21 @@ The script is `./setup/scripts/setTheme.sh`
 # Color Palettes
 
 ## Varda
-```
-# Primary
-white: D0EBEE
-black: 0C0E11
-blue: 52677C
-red: 733447
-green: 257B76
-peach: C78C56
-violet: 665276
-blue_grey: 8295A9
 
-# Secondary variants
-derk_grey: 141619
-dark_grey2: 2E3436
-dark_grey3: 3b4444
-light_white: E5FFFF
-light_red: 93394A
-light_green: 98C379
-```
+### Primary
+white: `#D0EBEE`  
+black: `#0C0E11`  
+blue: `#52677C`  
+red: `#733447`  
+green: `#257B76`  
+peach: `#C78C56`  
+violet: `#665276`  
+blue_grey: `#8295A9`  
+
+### Secondary variants
+derk_grey: `#141619`  
+dark_grey2: `#2E3436`  
+dark_grey3: `#3b4444`  
+light_white: `#E5FFFF`  
+light_red: `#93394A`  
+light_green: `#98C379`  
