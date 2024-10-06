@@ -28,7 +28,7 @@ The script is `./setup/scripts/setTheme.sh`
 
 ![screenshot](.screenshots/nord3.png)
 
-# Color Pallets
+# Color Palettes
 
 ### Varda
 ```
