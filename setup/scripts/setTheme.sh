@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define an array of valid arguments
-valid_args=("varda" "everforest")
+valid_args=("varda" "everforest" "nord")
 
 # Check if an argument is provided
 if [ $# -eq 0 ]; then
@@ -67,6 +67,17 @@ gtk() {
           dconf write /org/gnome/desktop/interface/document-font-name "'JetBrainsMono Nerd Font Medium 11'"
           flatpak override --user --env=GTK_THEME=Everforest-Dark
         ;;
+      "nord")
+          rm $HOME/.config/gtk-4.0
+          ln -sf $HOME/workspace/Varda-Theme/gnome/themes/Nordic/gtk-4.0 $HOME/.config/
+          dconf write /org/gnome/desktop/interface/gtk-theme "'Nordic'"
+          dconf write /org/gnome/desktop/interface/icon-theme "'Nordzy'"
+          dconf write /org/gnome/desktop/interface/cursor-theme "'Nordzy-cursors-white'"
+          dconf write /org/gnome/desktop/interface/font-name "'JetBrainsMono Nerd Font Medium 11'"
+          dconf write /org/gnome/desktop/interface/monospace-font-name "'JetBrainsMono Nerd Font Medium 10'"
+          dconf write /org/gnome/desktop/interface/document-font-name "'JetBrainsMono Nerd Font Medium 11'"
+          flatpak override --user --env=GTK_THEME=Nordic
+        ;;
       *)
         echo "no gtk theme"
         ;;
@@ -97,6 +108,9 @@ btop_theme() {
       "everforest")
         sed -i "s|color_theme = \".*\"|color_theme = \"/usr/share/btop/themes/everforest-dark-hard.theme\"|" $HOME/.config/btop/btop.conf
         ;;
+      "nord")
+        sed -i "s|color_theme = \".*\"|color_theme = \"/usr/share/btop/themes/nord.theme\"|" $HOME/.config/btop/btop.conf
+        ;;
       *)
         echo "no btop theme"
         ;;
@@ -117,6 +131,10 @@ intellij_idea() {
       sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="_@user_Everforest" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
       sed -i 's/<laf themeId=".*" \/>/<laf themeId="com.github.shubham076.everforest" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
       ;;
+    "nord")
+      sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="Nord" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
+      sed -i 's/<laf themeId=".*" \/>/<laf themeId="1324eea6-b737-4305-8a73-14af69073eae" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
+      ;;
     *)
       echo "no jetbrains theme"
       ;;
@@ -136,6 +154,10 @@ android_studio() {
     "everforest")
       sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="Everforest" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
       sed -i 's/<laf themeId=".*" \/>/<laf themeId="com.github.shubham076.everforest" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
+      ;;
+    "nord")
+      sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="Nord" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
+      sed -i 's/<laf themeId=".*" \/>/<laf themeId="1324eea6-b737-4305-8a73-14af69073eae" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
       ;;
     *)
       echo "no studio theme"
