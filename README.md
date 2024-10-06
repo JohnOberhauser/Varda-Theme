@@ -1,8 +1,14 @@
-# Varda-Theme
-Dot files and a theme for various programs, surrounding my hyprland setup.
-Some programs will have files missing and gitignored related to color scheme.  The missing files 
+# What this is
+This repository contains:
+- My dot files for my hyprland setup
+- Scripts to set up everything from a fresh arch install
+- Theme implementations for various programs for the Varda theme
+
+Some configs will have files ignored by git related to the color scheme / theme.  The missing files 
 are located in `./setup/themes`.  I use a script to easily swap out themes.
 The script is `./setup/scripts/setTheme.sh`
+
+# Theme Showcase
 
 ## Varda
 
@@ -28,9 +34,8 @@ The script is `./setup/scripts/setTheme.sh`
 
 ![screenshot](.screenshots/nord3.png)
 
-# Color Palettes
+# Varda Color Palette
 
-### Varda
 ```
 # Primary Hex
 white: D0EBEE
