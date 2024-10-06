@@ -85,6 +85,10 @@ keymap = [
 	{ on = [ "z" ],         run = "jump zoxide",                                          desc = "Jump to a directory using zoxide" },
 	{ on = [ "Z" ],         run = "jump fzf",                                             desc = "Jump to a directory, or reveal a file using fzf" },
 
+	# Files
+	{ on = [ "n", "f" ],	run = "create",        		desc = "Create a new file" },
+	{ on = [ "n", "d" ], 	run = "create --dir",       desc = "Create a new directory" },
+
 	# Linemode
 	{ on = [ "m", "s" ], run = "linemode size",        desc = "Set linemode to size" },
 	{ on = [ "m", "p" ], run = "linemode permissions", desc = "Set linemode to permissions" },
@@ -103,8 +107,6 @@ keymap = [
 	# Find
 	{ on = [ "/" ], run = "find --smart",            desc = "Find next file" },
 	{ on = [ "?" ], run = "find --previous --smart", desc = "Find previous file" },
-	{ on = [ "n" ], run = "find_arrow",              desc = "Go to next found file" },
-	{ on = [ "N" ], run = "find_arrow --previous",   desc = "Go to previous found file" },
 
 	# Sorting
 	{ on = [ ",", "m" ], run = "sort modified --dir-first",               desc = "Sort by modified time" },
