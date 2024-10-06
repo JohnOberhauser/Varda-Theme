@@ -1,17 +1,16 @@
-# Define the socket path
-SOCKET_PATH="/tmp/kitty_socket"
+#!/bin/bash
 
-# Remove any existing socket file
-rm -f "$SOCKET_PATH"
-
-# Start Kitty in detached mode with remote control socket
-kitty --detach --listen-on "unix:$SOCKET_PATH"
-
-# Wait until the socket file exists (Kitty is ready)
-#while [ ! -S "$SOCKET_PATH" ]; do
-#    sleep 0.1
-#done
-sleep 0.2
-
-# Use Kitty remote control to send the 'yazi' command
-kitty @ --to "unix:$SOCKET_PATH" send-text "ya\n"
+# Starts a new kitty window with yazi running
+# Must first set the edit
+# Then we do the same thing we do at the bottom of zshrc for launching yazi
+kitty zsh -c '
+  export EDITOR="nvim";
+  tmp="$(mktemp -t yazi-cwd.XXXXX)";
+  yazi "$@" --cwd-file="$tmp";
+  cwd="$(cat "$tmp")";
+  if [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    cd "$cwd";
+  fi;
+  rm -f "$tmp";
+  zsh;
+'
