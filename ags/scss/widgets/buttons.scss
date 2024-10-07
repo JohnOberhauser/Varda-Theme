@@ -7,6 +7,11 @@
   border: none;
   min-height: 25px;
   min-width: 30px;
+  border-radius: 8px;
+}
+
+.iconButton:hover {
+  background-color: $bgHover;
 }
 
 .primaryButton {

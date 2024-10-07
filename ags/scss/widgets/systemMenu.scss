@@ -12,6 +12,10 @@
   border: 0;
 }
 
+.systemMenuIconButton:hover {
+  background-color: $bgHover;
+}
+
 .systemMenuVolumeProgress {
   min-width: 200px;
   margin-right: 20px;
