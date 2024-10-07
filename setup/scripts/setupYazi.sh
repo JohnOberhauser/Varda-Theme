@@ -25,3 +25,5 @@ mkdir -p $HOME/.local/share/applications
 cp $HOME/workspace/Varda-Theme/setup/yazi.desktop $HOME/.local/share/applications/
 
 xdg-mime default yazi.desktop inode/directory
+
+rm -rf $HOME/Downloads/xdg-desktop-portal-termfilechooser
