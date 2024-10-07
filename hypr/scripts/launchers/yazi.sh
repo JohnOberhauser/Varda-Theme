@@ -6,11 +6,19 @@
 kitty zsh -c '
   export EDITOR="nvim";
   tmp="$(mktemp -t yazi-cwd.XXXXX)";
-  yazi "$@" --cwd-file="$tmp";
+
+  # Function to manually handle argument passing
+  run_yazi() {
+    yazi "$@" --cwd-file="$tmp";
+  }
+
+  run_yazi "$@"; # Pass arguments to the function
+
   cwd="$(cat "$tmp")";
   if [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
     cd "$cwd";
   fi;
+
   rm -f "$tmp";
   zsh;
-'
+' dummy "$@"

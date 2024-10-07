@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Yazi
+Exec=sh -c "$HOME/workspace/Varda-Theme/hypr/scripts/launchers/yazi.sh %u"
+Type=Application
