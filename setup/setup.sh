@@ -12,6 +12,7 @@
 ./scripts/startServices.sh
 ./scripts/setupCursor.sh
 ./scripts/setupYazi.sh
+./scripts/setupLoupe.sh
 ./scripts/setTheme.sh varda
 
 

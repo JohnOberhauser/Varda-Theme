@@ -69,4 +69,5 @@ cmake \
 plymouth \
 rofi-wayland \
 wl-clipboard \
-atool
+atool \
+loupe
