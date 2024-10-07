@@ -25,4 +25,3 @@ mkdir -p $HOME/.local/share/applications
 cp $HOME/workspace/Varda-Theme/setup/yazi.desktop $HOME/.local/share/applications/
 
 xdg-mime default yazi.desktop inode/directory
-xdg-mime default yazi.desktop x-content/unix-software

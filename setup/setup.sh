@@ -11,7 +11,7 @@
 ./scripts/waylandSession.sh
 ./scripts/startServices.sh
 ./scripts/setupCursor.sh
-./scripts/installXdgDesktopPortalTerminalFileChooser.sh
+./scripts/setupYazi.sh
 ./scripts/setTheme.sh varda
 
 
