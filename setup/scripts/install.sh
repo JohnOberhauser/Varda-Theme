@@ -62,7 +62,6 @@ ttf-hannom \
 ttf-hanazono \
 blueman \
 python \
-nautilus \
 neovim \
 cpio \
 meson \
