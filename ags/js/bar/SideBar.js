@@ -7,6 +7,7 @@ import {
     BluetoothButton,
     ClockButton,
     ScreenRecordingButton,
+    NetworkButton,
 } from "./BarWidgets.js";
 import {Window} from "../Windows.js"
 
@@ -36,6 +37,7 @@ const Bottom = () => {
             BluetoothButton("margin-top: 10px;"),
             VolumeButton("margin-top: 10px;"),
             MicrophoneButton("margin-top: 10px;"),
+            NetworkButton("margin-top: 10px;"),
             BatteryButton("margin-top: 10px;"),
             ClockButton("margin-top: 10px; padding-bottom: 6px;", false),
         ],

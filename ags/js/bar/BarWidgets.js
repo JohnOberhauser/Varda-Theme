@@ -1,11 +1,13 @@
 import {Window} from "../Windows.js"
 import {getMicrophoneIcon, getVolumeIcon, swapInput, swapOutput} from "../utils/audio.js";
 import {getBatteryIcon} from "../utils/battery.js";
+import {getNetworkIcon} from "../utils/network.js";
 import { clock } from '../variables.js';
 
 const audio = await Service.import('audio')
 const battery = await Service.import('battery')
 const hyprland = await Service.import('hyprland')
+const network = await Service.import('network')
 
 const dispatchWorkspace = ws => hyprland.sendMessage(`dispatch workspace ${ws}`);
 
@@ -71,6 +73,19 @@ export const VolumeButton = (css) => Widget.Button({
         audio,
         () => {
             self.label = getVolumeIcon(audio)
+        }
+    ),
+})
+
+export const NetworkButton = (css) => Widget.Button({
+    class_name: "iconButton",
+    css: css,
+    onClicked: () => { Utils.execAsync('bash -c "kitty -e $HOME/.config/kitty/nmtui.sh"') },
+    // set icon
+    setup: self => self.hook(
+        network,
+        () => {
+            self.label = getNetworkIcon(network)
         }
     ),
 })
