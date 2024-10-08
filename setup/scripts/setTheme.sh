@@ -43,6 +43,12 @@ firefox_theme() {
   cp ./setup/themes/$1/firefox/startpage/* ./firefox/startpage/
 }
 
+cursor_theme() {
+  cp ./setup/themes/$1/cursor/theme ./cursor/
+  cp ./setup/themes/$1/cursor/index.theme $HOME/.icons/default/
+  ./cursor/setCursor.sh
+}
+
 gtk() {
   case $1 in
       "varda")
@@ -170,6 +176,7 @@ kitty_theme $1
 fastfetch_theme $1
 firefox_theme $1
 gtk $1
+cursor_theme $1
 hypr $1
 rofi_theme $1
 zsh_theme $1

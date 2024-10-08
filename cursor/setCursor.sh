@@ -10,7 +10,7 @@
 # then run this
 # sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'theme-name'
 
-theme="Nordzy-cursors-white"
+theme=$(cat $HOME/workspace/Varda-Theme/cursor/theme)
 size=24
 
 hyprctl setcursor $theme $size
