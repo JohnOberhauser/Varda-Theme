@@ -32,9 +32,9 @@ const Right = () => {
         children: [
             Widget.Box({ hexpand: true}), // push everything to the bottom
             ScreenRecordingButton(iconCss),
-            BluetoothButton(iconCss),
             VolumeButton(iconCss),
             MicrophoneButton(iconCss),
+            BluetoothButton(iconCss),
             NetworkButton(iconCss),
             BatteryButton(iconCss),
             MenuButton("margin-right: 10px;"),

@@ -34,9 +34,9 @@ const Bottom = () => {
         children: [
             Widget.Box({ vexpand: true}), // push everything to the bottom
             ScreenRecordingButton("margin-top: 10px;"),
-            BluetoothButton("margin-top: 10px;"),
             VolumeButton("margin-top: 10px;"),
             MicrophoneButton("margin-top: 10px;"),
+            BluetoothButton("margin-top: 10px;"),
             NetworkButton("margin-top: 10px;"),
             BatteryButton("margin-top: 10px;"),
             ClockButton("margin-top: 10px; padding-bottom: 6px;", false),
