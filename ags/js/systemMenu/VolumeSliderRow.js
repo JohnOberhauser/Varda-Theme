@@ -1,5 +1,6 @@
 import {getMicrophoneIcon, getVolumeIcon, swapInput, swapOutput, setSpeaker, setMic} from "../utils/audio.js";
 import {truncateString} from "../utils/strings.js";
+import {Window} from "../Windows.js";
 
 const audio = await Service.import('audio')
 const speakersRevealed = Variable(false)
@@ -95,9 +96,16 @@ export const SpeakerRevealer = Widget.Revealer({
     transitionDuration: 200,
     transition: 'slide_down',
     child: Speakers,
-    setup: self => self.hook(speakersRevealed, () => {
-        self.revealChild = speakersRevealed.value
-    })
+    setup: self => {
+        self.hook(speakersRevealed, () => {
+            self.revealChild = speakersRevealed.value
+        })
+        self.hook(App, (self, windowName) => {
+            if (windowName === Window.SystemMenu) {
+                speakersRevealed.value = false
+            }
+        }, 'window-toggled')
+    }
 })
 
 export const MicRevealer = Widget.Revealer({
@@ -106,9 +114,16 @@ export const MicRevealer = Widget.Revealer({
     transitionDuration: 200,
     transition: 'slide_down',
     child: Mics,
-    setup: self => self.hook(micsRevealed, () => {
-        self.revealChild = micsRevealed.value
-    })
+    setup: self => {
+        self.hook(micsRevealed, () => {
+            self.revealChild = micsRevealed.value
+        })
+        self.hook(App, (self, windowName) => {
+            if (windowName === Window.SystemMenu) {
+                micsRevealed.value = false
+            }
+        }, 'window-toggled')
+    }
 })
 
 /**
