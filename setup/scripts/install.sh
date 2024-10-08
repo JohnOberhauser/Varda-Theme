@@ -37,7 +37,6 @@ upower \
 gnome-bluetooth-3.0 \
 kvantum \
 zsh \
-gnome-tweaks \
 fuse2 \
 greetd-tuigreet \
 fbset \
@@ -49,13 +48,14 @@ kitty \
 fastfetch \
 yazi \
 ffmpegthumbnailer \
-unarchiver \
+p7zip \
 jq \
 poppler \
 fd \
 ripgrep \
 fzf \
 zoxide \
+imagemagick \
 ttf-jetbrains-mono-nerd \
 ttf-nerd-fonts-symbols \
 ttf-hannom \
