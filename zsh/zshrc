@@ -46,6 +46,11 @@ alias settheme="~/workspace/Varda-Theme/setup/scripts/setTheme.sh"
 alias theme='function _theme() { ~/workspace/Varda-Theme/setup/scripts/setTheme.sh "$1"; clear; fastfetch; }; _theme'
 alias cd=z
 
+# firefox alias
+alias tryf='./mach try --preset fenix'
+alias tryff='./mach try --preset firefox-android'
+alias tryg='./mach try --preset android-geckoview'
+
 # Change folder colors
 # ========= Font ================
 # 0 default color
