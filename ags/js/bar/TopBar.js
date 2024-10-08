@@ -7,6 +7,7 @@ import {
     BluetoothButton,
     ClockButton,
     ScreenRecordingButton,
+    NetworkButton,
 } from "./BarWidgets.js";
 import {Window} from "../Windows.js"
 
@@ -34,6 +35,7 @@ const Right = () => {
             BluetoothButton(iconCss),
             VolumeButton(iconCss),
             MicrophoneButton(iconCss),
+            NetworkButton(iconCss),
             BatteryButton(iconCss),
             MenuButton("margin-right: 10px;"),
         ],
