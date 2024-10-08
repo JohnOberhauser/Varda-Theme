@@ -1,4 +1,4 @@
-import {MicrophoneSliderRow, VolumeSliderRow} from "./VolumeSliderRow.js";
+import {SpeakerRevealer, MicRevealer, MicrophoneSliderRow, VolumeSliderRow} from "./VolumeSliderRow.js";
 import {PowerOptionsRow} from "./PowerOptionsRow.js";
 import {Window} from "../Windows.js"
 
@@ -16,7 +16,9 @@ export default (anchor) => Widget.Window({
         children: [
             Widget.Box({ css: "margin-top: 20px;" }),
             VolumeSliderRow(),
+            SpeakerRevealer,
             MicrophoneSliderRow,
+            MicRevealer,
             Widget.Box({ css: "margin-top: 20px;" }),
             PowerOptionsRow,
             Widget.Box({ css: "margin-top: 20px;" }),

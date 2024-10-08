@@ -1,6 +1,9 @@
-import {getMicrophoneIcon, getVolumeIcon, swapInput, swapOutput} from "../utils/audio.js";
+import {getMicrophoneIcon, getVolumeIcon, swapInput, swapOutput, setSpeaker, setMic} from "../utils/audio.js";
+import {truncateString} from "../utils/strings.js";
 
 const audio = await Service.import('audio')
+const speakersRevealed = Variable(false)
+const micsRevealed = Variable(false)
 
 const VolumeButton = Widget.Button({
     class_name: "systemMenuIconButton",
@@ -26,6 +29,88 @@ const MicrophoneButton = Widget.Button({
     ),
 })
 
+const SpeakersExpandButton = Widget.Button({
+    class_name: "iconButton",
+    onClicked: () => { speakersRevealed.value = !speakersRevealed.value },
+    label: "",
+})
+
+const MicrophoneExpandButton = Widget.Button({
+    class_name: "iconButton",
+    onClicked: () => { micsRevealed.value = !micsRevealed.value },
+    label: "",
+})
+
+export const Speakers = Widget.Box({
+    vertical: true,
+    setup: self => self.hook(audio,self => {
+        self.children = audio.speakers.map((speaker) => {
+            let label = ""
+            if (audio.control.get_default_sink() != null && audio.control.get_default_sink().id === speaker.id) {
+                label = ""
+            }
+            let speakerName = truncateString(speaker.description, 25)
+            return Widget.Box([
+                Widget.Label({
+                    class_name: "audioSelectionLabel",
+                    label: label
+                }),
+                Widget.Button({
+                    class_name: "audioSelectionButton",
+                    label: speakerName,
+                    onClicked: () => { setSpeaker(audio, speaker.stream) }
+                })
+            ])
+        })
+    })
+})
+
+export const Mics = Widget.Box({
+    vertical: true,
+    setup: self => self.hook(audio,self => {
+        self.children = audio.microphones.map((microphone) => {
+            let label = ""
+            if (audio.control.get_default_source() != null && audio.control.get_default_source().id === microphone.id) {
+                label = ""
+            }
+            let speakerName = truncateString(microphone.description, 25)
+            return Widget.Box([
+                Widget.Label({
+                    class_name: "audioSelectionLabel",
+                    label: label
+                }),
+                Widget.Button({
+                    class_name: "audioSelectionButton",
+                    label: speakerName,
+                    onClicked: () => { setMic(audio, microphone.stream) }
+                })
+            ])
+        })
+    })
+})
+
+export const SpeakerRevealer = Widget.Revealer({
+    class_name: "audioRevealer",
+    revealChild: false,
+    transitionDuration: 200,
+    transition: 'slide_down',
+    child: Speakers,
+    setup: self => self.hook(speakersRevealed, () => {
+        self.revealChild = speakersRevealed.value
+    })
+})
+
+export const MicRevealer = Widget.Revealer({
+    class_name: "audioRevealer",
+    revealChild: false,
+    transitionDuration: 200,
+    transition: 'slide_down',
+    child: Mics,
+    setup: self => self.hook(micsRevealed, () => {
+        self.revealChild = micsRevealed.value
+    })
+})
+
 /**
  * @param type either 'speaker' or 'microphone'
  */
@@ -44,6 +129,7 @@ export function VolumeSliderRow() {
         children: [
             VolumeButton,
             VolumeSlider("speaker"),
+            SpeakersExpandButton,
         ]
     })
 }
@@ -54,5 +140,6 @@ export const MicrophoneSliderRow = Widget.Box({
     children: [
         MicrophoneButton,
         VolumeSlider("microphone"),
+        MicrophoneExpandButton,
     ]
 })

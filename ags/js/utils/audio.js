@@ -92,3 +92,19 @@ export function swapInput(audio) {
         audio.control.set_default_source(sources[0])
     }
 }
+
+export function setSpeaker(audio, stream) {
+    audio.control.get_sinks().forEach((sink) => {
+        if (sink.id === stream.id) {
+            audio.control.set_default_sink(sink)
+        }
+    })
+}
+
+export function setMic(audio, stream) {
+    audio.control.get_sources().forEach((source) => {
+        if (source.id === stream.id) {
+            audio.control.set_default_source(source)
+        }
+    })
+}
