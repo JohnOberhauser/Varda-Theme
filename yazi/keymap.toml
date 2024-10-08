@@ -200,6 +200,11 @@ keymap = [
 	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
+[[input.prepend_keymap]]
+on   = "<Esc>"
+run  = "close"
+desc = "Cancel input"
+
 [input]
 
 keymap = [
