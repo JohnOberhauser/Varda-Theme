@@ -41,13 +41,22 @@
 }
 
 .audioSelectionLabel {
+  padding: 6px;
   min-width: 24px;
+  color: $fg;
 }
 
 .audioSelectionButton {
+  color: $fg;
+  background-color: $bg;
   min-width: 250px;
   min-height: 30px;
   margin: 6px;
+  border: 0;
+}
+
+.audioSelectionButton:hover {
+  background-color: $bgHover;
 }
 
 .audioRevealer {
