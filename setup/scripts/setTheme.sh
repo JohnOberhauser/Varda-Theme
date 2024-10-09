@@ -44,9 +44,22 @@ firefox_theme() {
 }
 
 cursor_theme() {
-  cp ./setup/themes/$1/cursor/index.theme $HOME/.icons/default/
-  cp ./setup/themes/$1/cursor/theme ./cursor/
-  ./cursor/setCursor.sh
+  rm -rf $HOME/.icons/systemCursor/cursors
+  case $1 in
+    "varda")
+        cp -r $HOME/.icons/Nordzy-cursors-white/cursors $HOME/.icons/systemCursor/
+      ;;
+    "everforest")
+        cp -r $HOME/.icons/everforest-cursors/cursors $HOME/.icons/systemCursor/
+      ;;
+    "nord")
+        cp -r $HOME/.icons/Nordzy-cursors-white/cursors $HOME/.icons/systemCursor/
+      ;;
+    *)
+      echo "no cursor theme"
+      ;;
+  esac
+  ./setup/scripts/setCursor.sh
 }
 
 gtk() {
