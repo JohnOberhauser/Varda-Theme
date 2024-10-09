@@ -13,5 +13,5 @@ rm everforest-cursor.tar.bz2
 
 mkdir -p $HOME/.icons/default
 
-mv -r Nordzy-cursors-white $HOME/.icons
-mv -r everforest-cursor/everforest-cursors $HOME/.icons
+mv Nordzy-cursors-white $HOME/.icons
+mv everforest-cursor/everforest-cursors $HOME/.icons
