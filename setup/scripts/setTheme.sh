@@ -44,8 +44,8 @@ firefox_theme() {
 }
 
 cursor_theme() {
-  cp ./setup/themes/$1/cursor/theme ./cursor/
   cp ./setup/themes/$1/cursor/index.theme $HOME/.icons/default/
+  cp ./setup/themes/$1/cursor/theme ./cursor/
   ./cursor/setCursor.sh
 }
 
