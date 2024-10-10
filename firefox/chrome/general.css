@@ -40,3 +40,10 @@ window,
 .toolbarbutton-1 {
     fill: var(--fg-color) !important;
 }
+
+/*
+hide update badge (little circle that indicates there is an update)
+*/
+.toolbarbutton-badge {
+    display: none !important;
+}
