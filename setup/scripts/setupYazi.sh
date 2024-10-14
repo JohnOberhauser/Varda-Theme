@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Install the xdg desktop portal for terminal file choosers.  Using my fork that fixes some bugs.
 mkdir -p $HOME/Downloads
 cd $HOME/Downloads
 
@@ -11,6 +12,7 @@ meson build && ninja -C build && ninja -C build install
 mkdir -p $HOME/.config/xdg-desktop-portal
 cp $HOME/workspace/Varda-Theme/setup/portals.conf $HOME/.config/xdg-desktop-portal/
 
+# Move some installed files to the correct location
 sudo mv /usr/local/share/xdg-desktop-portal/portals/termfilechooser.portal /usr/share/xdg-desktop-portal/portals/
 sudo mv /usr/local/lib/systemd/user/xdg-desktop-portal-termfilechooser.service /usr/lib/systemd/user/
 sudo mv /usr/local/share/dbus-1/services/org.freedesktop.impl.portal.desktop.termfilechooser.service /usr/share/dbus-1/services/

@@ -30,5 +30,3 @@ ln -s $HOME/workspace/Varda-Theme/fastfetch $HOME/.config/
 
 ln -s $HOME/workspace/Varda-Theme/yazi $HOME/.config/
 
-#mkdir -p $HOME/.config/JetBrains/Fleet/themes
-#ln -s $HOME/workspace/Varda-Theme/fleet/varda.json $HOME/.config/JetBrains/Fleet/themes/

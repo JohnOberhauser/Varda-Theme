@@ -45,20 +45,7 @@ firefox_theme() {
 
 cursor_theme() {
   rm -rf $HOME/.icons/systemCursor/cursors
-  case $1 in
-    "varda")
-        cp -r $HOME/.icons/Nordzy-cursors-white/cursors $HOME/.icons/systemCursor/
-      ;;
-    "everforest")
-        cp -r $HOME/.icons/everforest-cursors/cursors $HOME/.icons/systemCursor/
-      ;;
-    "nord")
-        cp -r $HOME/.icons/Nordzy-cursors-white/cursors $HOME/.icons/systemCursor/
-      ;;
-    *)
-      echo "no cursor theme"
-      ;;
-  esac
+  cp -r $HOME/workspace/Varda-Theme/setup/themes/$1/cursor/cursors $HOME/.icons/systemCursor/
   ./setup/scripts/setCursor.sh
 }
 
