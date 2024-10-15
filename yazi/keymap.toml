@@ -130,7 +130,8 @@ keymap = [
 	{ on = [ "g", "/" ],       run = "cd /",          					desc = "Go to the root directory" },
 	{ on = [ "g", "e" ],       run = "cd /etc",          				desc = "Go to the etc directory" },
 	{ on = [ "g", "t" ],       run = "cd ~/.local/share/Trash/files",   desc = "Go to the Trash directory" },
-	{ on = [ "g", "<Space>" ], run = "cd --interactive", 					desc = "Go to a directory interactively" },
+	{ on = [ "g", "m" ],	   run = "cd /run/media/john",				desc = "Go to mounted external media" },
+	{ on = [ "g", "<Space>" ], run = "cd --interactive", 				desc = "Go to a directory interactively" },
 
 	# Tabs
 	{ on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },

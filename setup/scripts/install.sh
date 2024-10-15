@@ -70,4 +70,5 @@ plymouth \
 rofi-wayland \
 wl-clipboard \
 atool \
-loupe
+loupe \
+udiskie
