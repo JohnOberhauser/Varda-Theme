@@ -94,10 +94,10 @@
 
       "default": {
         "foreground": "foreground",
-        "startBackground": "violet",
-        "endBackground": "violet",
-        "startBorderColor": "violet",
-        "endBorderColor": "violet",
+        "startBackground": "blue",
+        "endBackground": "blue",
+        "startBorderColor": "blue",
+        "endBorderColor": "blue",
         "focusedBorderColor": "background"
       }
     },
