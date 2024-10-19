@@ -34,8 +34,10 @@ This color palette is home-grown
 
 #### Secondary variants
 `#141619` <img src=".colors/varda/141619.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey  
-`#2E3436` <img src=".colors/varda/2E3436.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 2  
-`#3b4444` <img src=".colors/varda/3B4444.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 3  
+`#12171E` <img src=".colors/varda/12171E.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 2   
+`#181C23` <img src=".colors/varda/181C23.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 3    
+`#2E3436` <img src=".colors/varda/2E3436.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 4  
+`#3b4444` <img src=".colors/varda/3B4444.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 5  
 `#E5FFFF` <img src=".colors/varda/E5FFFF.svg" width="20" height="20" style="vertical-align: middle;"/> light white  
 `#93394A` <img src=".colors/varda/93394A.svg" width="20" height="20" style="vertical-align: middle;"/> light red  
 `#98C379` <img src=".colors/varda/98C379.svg" width="20" height="20" style="vertical-align: middle;"/> light green
