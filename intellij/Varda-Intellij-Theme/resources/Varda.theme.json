@@ -9,11 +9,9 @@
     "backgroundInactiveHighlight": "#12171E",
     "foreground": "#D0EBEE",
     "green": "#257B76",
-    "greenDark": "#0b2523",
     "red": "#733447",
-    "steelBlue": "#52677C",
-    "steelPurple": "#52677C",
-    "neon": "#80BB00"
+    "blue": "#52677C",
+    "violet": "#665276"
   },
   "icons": {
     "ColorPalette": {
@@ -30,7 +28,7 @@
       "Objects.GreenAndroid": "#257B76",
       "Objects.Grey": "#52677C",
       "Objects.Pink": "#733447",
-      "Objects.Purple": "#52677C",
+      "Objects.Purple": "#665276",
       "Objects.Red": "#733447",
       "Objects.RedStatus": "#733447",
       "Objects.Yellow": "#52677C",
@@ -62,9 +60,9 @@
       "disabledBackground": "background",
       "inactiveBackground": "background",
 
-      "disabledForeground": "steelPurple",
-      "disabledText": "steelPurple",
-      "inactiveForeground": "steelPurple",
+      "disabledForeground": "blue",
+      "disabledText": "blue",
+      "inactiveForeground": "blue",
 
       "acceleratorForeground": "foreground",
       "acceleratorSelectionForeground": "foreground",
@@ -72,34 +70,34 @@
       "errorForeground": "red",
 
       "borderColor": "background",
-      "disabledBorderColor": "steelPurple",
+      "disabledBorderColor": "blue",
       "focusColor": "background",
       "focusedBorderColor": "background",
       "hoverBorderColor": "background",
       "pressedBorderColor": "background",
 
-      "separatorColor": "steelPurple",
-      "lineSeparatorColor": "steelPurple",
-      "matchForeground": "steelBlue",
-      "linkColor": "steelBlue",
-      "activeForeground": "steelBlue",
-      "hoverForeground": "steelBlue",
-      "visitedForeground": "steelBlue",
-      "spanBackground": "steelBlue",
-      "stepNumberForeground": "steelBlue"
+      "separatorColor": "blue",
+      "lineSeparatorColor": "blue",
+      "matchForeground": "blue",
+      "linkColor": "blue",
+      "activeForeground": "blue",
+      "hoverForeground": "blue",
+      "visitedForeground": "blue",
+      "spanBackground": "blue",
+      "stepNumberForeground": "blue"
     },
     "Button": {
       "startBackground": "background",
       "endBackground": "background",
-      "startBorderColor": "steelPurple",
-      "endBorderColor": "steelPurple",
+      "startBorderColor": "blue",
+      "endBorderColor": "blue",
 
       "default": {
         "foreground": "foreground",
-        "startBackground": "red",
-        "endBackground": "red",
-        "startBorderColor": "red",
-        "endBorderColor": "red",
+        "startBackground": "violet",
+        "endBackground": "violet",
+        "startBorderColor": "violet",
+        "endBorderColor": "violet",
         "focusedBorderColor": "background"
       }
     },
@@ -110,16 +108,15 @@
     },
 
     "DefaultTabs": {
-      "underlineColor": "red",
-      "inactiveUnderlineColor": "steelPurple",
+      "underlineColor": "violet",
+      "inactiveUnderlineColor": "blue",
       "underlineHeight": 5,
-      "hoverBackground": "steelPurple"
+      "hoverBackground": "blue"
     },
 
     "DragAndDrop": {
       "areaForeground": "foreground",
-      "areaBackground": "background",
-      "areaBorderColor": "background"
+      "areaBackground": "background"
     },
     "Editor": {
       "background": "background",
@@ -131,7 +128,7 @@
       "background": "background",
       "underlinedTabForeground": "foreground",
 
-      "underlineColor": "red",
+      "underlineColor": "violet",
       "underlineHeight": 4,
 
       "underlinedTabBackground": "background",
@@ -139,12 +136,12 @@
     },
     "FileColor": {
       "Yellow": "background",
-      "Green": "greenDark"
+      "Green": "green"
     },
     "SearchMatch": {
-      "startBackground": "steelBlue",
-      "endBackground": "steelBlue"
+      "startBackground": "blue",
+      "endBackground": "blue"
     },
-    "ToolWindow.Button.selectedBackground": "steelBlue"
+    "ToolWindow.Button.selectedBackground": "blue"
   }
 }
