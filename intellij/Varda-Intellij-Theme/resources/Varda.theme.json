@@ -5,8 +5,8 @@
   "editorScheme": "/Varda_Scheme.xml",
   "colors": {
     "background": "#0C0E11",
-    "backgroundHighlight": "#181C23",
-    "backgroundInactiveHighlight": "#12171E",
+    "backgroundHighlight": "#171B21",
+    "backgroundInactiveHighlight": "#1C2128",
     "foreground": "#D0EBEE",
     "green": "#257B76",
     "red": "#733447",

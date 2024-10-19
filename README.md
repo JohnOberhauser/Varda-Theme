@@ -32,12 +32,12 @@ This color palette is home-grown
 `#665276` <img src=".colors/varda/665276.svg" width="20" height="20" style="vertical-align: middle;"/> violet  
 `#8295A9` <img src=".colors/varda/8295A9.svg" width="20" height="20" style="vertical-align: middle;"/> blue grey
 
-#### Background variants
-`#141619` <img src=".colors/varda/141619.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey  
-`#12171E` <img src=".colors/varda/12171E.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 2   
-`#181C23` <img src=".colors/varda/181C23.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 3    
-`#2E3436` <img src=".colors/varda/2E3436.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 4  
-`#3b4444` <img src=".colors/varda/3B4444.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 5  
+#### Background variants 
+`#121519` <img src=".colors/varda/121519.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey  
+`#171B21` <img src=".colors/varda/171B21.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 2   
+`#1C2128` <img src=".colors/varda/1C2128.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 3    
+`#222830` <img src=".colors/varda/222830.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 4  
+`#272E38` <img src=".colors/varda/272E38.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 5
 
 ## Everforest
 
