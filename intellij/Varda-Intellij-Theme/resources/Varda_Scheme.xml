@@ -54,7 +54,7 @@
     <option name="HTML_TAG_TREE_LEVEL2" value="98c379" />
     <option name="HTML_TAG_TREE_LEVEL3" value="349f97" />
     <option name="HTML_TAG_TREE_LEVEL4" value="9ba9b2" />
-    <option name="HTML_TAG_TREE_LEVEL5" value="56566a" />
+    <option name="HTML_TAG_TREE_LEVEL5" value="665276" />
     <option name="IGNORED_ADDED_LINES_BORDER_COLOR" value="257b76" />
     <option name="IGNORED_MODIFIED_LINES_BORDER_COLOR" value="52677c" />
     <option name="INDENT_GUIDE" value="3b4048" />
@@ -112,12 +112,12 @@
     </option>
     <option name="BASH.HERE_DOC_END">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="BASH.HERE_DOC_START">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="BASH.SHEBANG">
@@ -128,7 +128,7 @@
     </option>
     <option name="BLADE_DIRECTIVE">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="BOOKMARKS_ATTRIBUTES">
@@ -163,7 +163,7 @@
     </option>
     <option name="BUILDOUT.KEY">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="CLASS_REFERENCE">
@@ -188,12 +188,12 @@
     </option>
     <option name="COFFEESCRIPT.FUNCTION">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="COFFEESCRIPT.FUNCTION_BINDING">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="COFFEESCRIPT.GLOBAL_VARIABLE" baseAttributes="" />
@@ -283,13 +283,13 @@
     </option>
     <option name="CONSOLE_MAGENTA_BRIGHT_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="CONSOLE_MAGENTA_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="CONSOLE_NORMAL_OUTPUT">
@@ -352,12 +352,12 @@
     </option>
     <option name="CSS.IMPORTANT">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="CSS.KEYWORD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="CSS.PROPERTY_NAME">
@@ -392,7 +392,7 @@
     <option name="Class" baseAttributes="CLASS_NAME_ATTRIBUTES" />
     <option name="Clojure Atom">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="Clojure Character">
@@ -653,7 +653,7 @@
     </option>
     <option name="DJANGO_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="DJANGO_TAG_START_END">
@@ -676,7 +676,7 @@
     </option>
     <option name="EL.BOUNDS">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="ENUM_CONST">
@@ -755,7 +755,7 @@
     </option>
     <option name="GO_BUILTIN_TYPE">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="GO_BUILTIN_TYPE_REFERENCE">
@@ -780,7 +780,7 @@
     </option>
     <option name="GO_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="GO_LINE_COMMENT">
@@ -912,7 +912,7 @@
     </option>
     <option name="INI.SECTION">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="INJECTED_LANGUAGE_FRAGMENT">
@@ -953,7 +953,7 @@
     </option>
     <option name="JADE_STATEMENTS">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="JADE_TAG_CLASS">
@@ -990,7 +990,7 @@
     </option>
     <option name="JSP_DIRECTIVE_NAME">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="JUPYTER_SELECTED_CELL">
@@ -1066,7 +1066,7 @@
     </option>
     <option name="LABEL">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="LESS_VARIABLE">
@@ -1094,27 +1094,27 @@
     </option>
     <option name="LOCALE.MSGCTXT_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="LOCALE.MSGID_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="LOCALE.MSGID_PLURAL_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="LOCALE.MSGSTR_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="LOCALE.MSGSTR_PLURAL_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="LOGCAT_FILTER_KEY">
@@ -1307,12 +1307,12 @@
     </option>
     <option name="OC.CPP_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="OC.DIRECTIVE">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="OC.LABEL">
@@ -1397,7 +1397,7 @@
     </option>
     <option name="PHP_HEREDOC_ID">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="PHP_PARAMETER">
@@ -1456,7 +1456,7 @@
     </option>
     <option name="PY.KEYWORD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="PY.KEYWORD_ARGUMENT">
@@ -1476,7 +1476,7 @@
     </option>
     <option name="PY.SELF_PARAMETER">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="PY.STRING">
@@ -1496,7 +1496,7 @@
     </option>
     <option name="RDOC_EMAIL">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="RDOC_HEADINGS">
@@ -1511,7 +1511,7 @@
     </option>
     <option name="RDOC_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="RDOC_URL">
@@ -1533,7 +1533,7 @@
     <option name="REGEXP.ESC_CHARACTER" baseAttributes="DEFAULT_VALID_STRING_ESCAPE" />
     <option name="REGEXP.META">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="REGEXP.PARENTHS" baseAttributes="DEFAULT_PARENTHS" />
@@ -1541,12 +1541,12 @@
     <option name="REGEXP.REDUNDANT_ESCAPE" baseAttributes="DEFAULT_VALID_STRING_ESCAPE" />
     <option name="REST.EXPLICIT">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="REST.FIELD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="REST.FIXED">
@@ -1629,7 +1629,7 @@
     </option>
     <option name="RUBY_HEREDOC_ID">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="RUBY_INVALID_ESCAPE_SEQUENCE">
@@ -1896,7 +1896,7 @@
     </option>
     <option name="TYPEDEF">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="TYPE_PARAMETER_NAME_ATTRIBUTES">
@@ -1969,7 +1969,7 @@
     <option name="XML_TAG_NAME" baseAttributes="DEFAULT_KEYWORD" />
     <option name="XPATH.KEYWORD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="XPATH.XPATH_NAME">
@@ -1991,7 +1991,7 @@
     </option>
     <option name="com.plan9.KEYWORD">
       <value>
-        <option name="FOREGROUND" value="56566a" />
+        <option name="FOREGROUND" value="665276" />
       </value>
     </option>
     <option name="com.plan9.LABEL">
