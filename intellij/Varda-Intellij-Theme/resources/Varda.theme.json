@@ -108,7 +108,7 @@
     },
 
     "DefaultTabs": {
-      "underlineColor": "violet",
+      "underlineColor": "blue",
       "inactiveUnderlineColor": "blue",
       "underlineHeight": 5,
       "hoverBackground": "blue"
@@ -128,7 +128,7 @@
       "background": "background",
       "underlinedTabForeground": "foreground",
 
-      "underlineColor": "violet",
+      "underlineColor": "blue",
       "underlineHeight": 4,
 
       "underlinedTabBackground": "background",
