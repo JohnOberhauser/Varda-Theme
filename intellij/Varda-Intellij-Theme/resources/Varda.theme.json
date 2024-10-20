@@ -85,7 +85,8 @@
       "hoverForeground": "blue",
       "visitedForeground": "blue",
       "spanBackground": "blue",
-      "stepNumberForeground": "blue"
+      "dropLineColor": "blue",
+      "underlineColor": "blue"
     },
     "Button": {
       "startBackground": "background",
