@@ -7,7 +7,4 @@ Then open `./Varda-Intellij-Theme` as it's own project.  File -> build -> prepar
 If the option isn't there, make sure ./.idea/modules.xml is pointing to the iml file in the root directory, and
 not the one in the .idea folder
 
-
-To install the scope:
-
-copy the contents of scope to a new scope created in file -> settings -> appearance and behavior -> scopes
+When editing the schema, only edit Varda.  Then apply the changes to the other themes using schemaCopier.py
