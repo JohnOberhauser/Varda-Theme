@@ -33,8 +33,12 @@ def replace_text_in_file(input_file, output_file):
         # success / green
         file_data = re.sub(r"257B76", "83C092", file_data, flags=re.IGNORECASE)
         # VCS modified
-        file_data = re.sub(r'("FILESTATUS_MODIFIED" value=")(52677c)', r'\1 7FBBB3', file_data, flags=re.IGNORECASE)
-
+        file_data = re.sub(
+            r'<option name="FILESTATUS_MODIFIED" value="A7C080" />',
+            '<option name="FILESTATUS_MODIFIED" value="7FBBB3" />',
+            file_data,
+            flags=re.IGNORECASE
+        )
 
         # Write the new content to the output file
         with open(output_file, 'w') as file:
