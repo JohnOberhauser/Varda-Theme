@@ -139,7 +139,7 @@ intellij_idea() {
       ;;
     "nord")
       sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="Nord" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
-      sed -i 's/<laf themeId=".*" \/>/<laf themeId="1324eea6-b737-4305-8a73-14af69073eae" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
+      sed -i 's/<laf themeId=".*" \/>/<laf themeId="io.obez.themes.nord" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
       ;;
     *)
       echo "no jetbrains theme"
@@ -163,7 +163,7 @@ android_studio() {
       ;;
     "nord")
       sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="Nord" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
-      sed -i 's/<laf themeId=".*" \/>/<laf themeId="1324eea6-b737-4305-8a73-14af69073eae" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
+      sed -i 's/<laf themeId=".*" \/>/<laf themeId="io.obez.themes.nord" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
       ;;
     *)
       echo "no studio theme"
