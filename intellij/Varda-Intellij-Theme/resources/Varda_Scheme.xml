@@ -1253,7 +1253,7 @@
     </option>
     <option name="MATCHED_BRACE_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="1f2437" />
+        <option name="BACKGROUND" value="222830" />
       </value>
     </option>
     <option name="MESSAGE_ARGUMENT">
@@ -1436,11 +1436,7 @@
         <option name="FOREGROUND" value="93394a" />
       </value>
     </option>
-    <option name="PY.BUILTIN_NAME">
-      <value>
-        <option name="FOREGROUND" value="349f97" />
-      </value>
-    </option>
+    <option name="PY.BUILTIN_NAME" baseAttributes="DEFAULT_PREDEFINED_SYMBOL" />
     <option name="PY.DECORATOR">
       <value>
         <option name="FOREGROUND" value="93394a" />
