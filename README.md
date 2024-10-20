@@ -51,9 +51,9 @@ This color palette is home-grown
 ### Color Palette
 
 This color palette is from [sainnhe](https://github.com/sainnhe/everforest?tab=readme-ov-file)
-
 `#D3C6AA` <img src=".colors/everforest/D3C6AA.svg" width="20" height="20" style="vertical-align: middle;"/> fg  
 `#E67E80` <img src=".colors/everforest/E67E80.svg" width="20" height="20" style="vertical-align: middle;"/> red  
+`#E69875` <img src=".colors/everforest/E69875.svg" width="20" height="20" style="vertical-align: middle;"/> orange  
 `#A7C080` <img src=".colors/everforest/A7C080.svg" width="20" height="20" style="vertical-align: middle;"/> green  
 `#DBBC7F` <img src=".colors/everforest/DBBC7F.svg" width="20" height="20" style="vertical-align: middle;"/> yellow  
 `#7A8478` <img src=".colors/everforest/7A8478.svg" width="20" height="20" style="vertical-align: middle;"/> gray0  

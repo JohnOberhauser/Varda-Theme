@@ -25,7 +25,7 @@ def replace_text_in_file(input_file, output_file):
         # primary alt
         file_data = re.sub(r"8295A9", "7A8478", file_data, flags=re.IGNORECASE)
         # secondary
-        file_data = re.sub(r"665276", "D699B6", file_data, flags=re.IGNORECASE)
+        file_data = re.sub(r"665276", "E69875", file_data, flags=re.IGNORECASE)
         # tertiary / warning / yellow
         file_data = re.sub(r"C78C56", "DBBC7F", file_data, flags=re.IGNORECASE)
         # error / red

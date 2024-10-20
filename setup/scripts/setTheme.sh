@@ -134,8 +134,8 @@ intellij_idea() {
       sed -i 's/<laf themeId=".*" \/>/<laf themeId="io.obez.themes.varda" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
       ;;
     "everforest")
-      sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="_@user_Everforest" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
-      sed -i 's/<laf themeId=".*" \/>/<laf themeId="com.github.shubham076.everforest" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
+      sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="Everforest" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
+      sed -i 's/<laf themeId=".*" \/>/<laf themeId="io.obez.themes.everforest" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
       ;;
     "nord")
       sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="Nord" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
