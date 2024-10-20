@@ -8,6 +8,7 @@
     "darkGrey": "#272E33",
     "darkGrey2": "#2E383C",
     "darkGrey3": "#374145",
+    "bg5": "#4F5B58",
     "foreground": "#D3C6AA",
     "red": "#E67E80",
     "primary": "#A7C080",
@@ -72,8 +73,8 @@
 
       "default": {
         "foreground": "foreground",
-        "startBackground": "primary",
-        "endBackground": "primary",
+        "startBackground": "bg5",
+        "endBackground": "bg5",
         "startBorderColor": "primary",
         "endBorderColor": "primary",
         "focusedBorderColor": "background"
