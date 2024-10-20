@@ -131,7 +131,7 @@ intellij_idea() {
   case $1 in
     "varda")
       sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="Varda" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
-      sed -i 's/<laf themeId=".*" \/>/<laf themeId="cd7dc880-8ceb-43fd-bd9c-eef716d928ac" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
+      sed -i 's/<laf themeId=".*" \/>/<laf themeId="io.obez.themes.varda" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
       ;;
     "everforest")
       sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="_@user_Everforest" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml

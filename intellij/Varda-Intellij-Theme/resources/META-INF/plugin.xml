@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>com.ober.varda</id>
+  <id>io.obez.themes</id>
   <name>Varda</name>
   <version>1.0.0</version>
   <vendor>Varda Theme</vendor>
@@ -17,7 +17,7 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
-    <themeProvider id="cd7dc880-8ceb-43fd-bd9c-eef716d928ac" path="/Varda.theme.json"/>
+    <themeProvider id="io.obez.themes.varda" path="/Varda.theme.json"/>
   </extensions>
 
 </idea-plugin>
