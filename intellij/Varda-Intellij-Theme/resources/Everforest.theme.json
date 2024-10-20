@@ -1,0 +1,125 @@
+{
+  "name": "Everforest",
+  "dark": true,
+  "author": "",
+  "editorScheme": "/Everforest_Scheme.xml",
+  "colors": {
+    "background": "#1E2326",
+    "darkGrey": "#272E33",
+    "darkGrey2": "#2E383C",
+    "darkGrey3": "#374145",
+    "foreground": "#D3C6AA",
+    "red": "#E67E80",
+    "primary": "#A7C080",
+    "testFolder": "#83C092"
+  },
+  "ui": {
+    "*": {
+      "background": "background",
+      "foreground": "foreground",
+      "textText": "foreground",
+
+      "warningBackground": "background",
+      "iconBackground": "background",
+      "inactiveWarningFocusColor": "background",
+
+      "infoForeground": "foreground",
+
+      "activeBackground": "darkGrey2",
+      "pressedBackground": "darkGrey2",
+      "hoverBackground": "darkGrey2",
+      "selectedBackground": "darkGrey2",
+      "selectionBackground": "darkGrey2",
+      "selectionForeground": "foreground",
+      "selectionInactiveBackground": "darkGrey3",
+      "selectionBackgroundInactive": "#background",
+
+      "disabledBackground": "background",
+      "inactiveBackground": "background",
+
+      "disabledForeground": "primary",
+      "disabledText": "primary",
+      "inactiveForeground": "primary",
+
+      "acceleratorForeground": "foreground",
+      "acceleratorSelectionForeground": "foreground",
+
+      "errorForeground": "red",
+
+      "borderColor": "background",
+      "disabledBorderColor": "primary",
+      "focusColor": "background",
+      "focusedBorderColor": "background",
+      "hoverBorderColor": "background",
+      "pressedBorderColor": "background",
+
+      "separatorColor": "primary",
+      "lineSeparatorColor": "primary",
+      "matchForeground": "primary",
+      "linkColor": "primary",
+      "activeForeground": "primary",
+      "hoverForeground": "primary",
+      "visitedForeground": "primary",
+      "spanBackground": "primary",
+      "dropLineColor": "primary",
+      "underlineColor": "primary"
+    },
+    "Button": {
+      "startBackground": "background",
+      "endBackground": "background",
+      "startBorderColor": "primary",
+      "endBorderColor": "primary",
+
+      "default": {
+        "foreground": "foreground",
+        "startBackground": "primary",
+        "endBackground": "primary",
+        "startBorderColor": "primary",
+        "endBorderColor": "primary",
+        "focusedBorderColor": "background"
+      }
+    },
+
+    "Borders": {
+      "color": "darkGrey2",
+      "ContrastBorderColor": "background"
+    },
+
+    "DefaultTabs": {
+      "underlineColor": "primary",
+      "inactiveUnderlineColor": "primary",
+      "underlineHeight": 5,
+      "hoverBackground": "primary"
+    },
+
+    "DragAndDrop": {
+      "areaForeground": "foreground",
+      "areaBackground": "background"
+    },
+    "Editor": {
+      "background": "background",
+      "foreground": "foreground",
+      "shortcutForeground": "foreground"
+    },
+    "EditorPane.inactiveBackground": "background",
+    "EditorTabs": {
+      "background": "background",
+      "underlinedTabForeground": "foreground",
+
+      "underlineColor": "primary",
+      "underlineHeight": 4,
+
+      "underlinedTabBackground": "background",
+      "inactiveColoredFileBackground": "background"
+    },
+    "FileColor": {
+      "Yellow": "background",
+      "Green": "testFolder"
+    },
+    "SearchMatch": {
+      "startBackground": "primary",
+      "endBackground": "primary"
+    },
+    "ToolWindow.Button.selectedBackground": "primary"
+  }
+}

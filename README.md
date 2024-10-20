@@ -52,8 +52,6 @@ This color palette is home-grown
 
 This color palette is from [sainnhe](https://github.com/sainnhe/everforest?tab=readme-ov-file)
 
-`#272E33` <img src=".colors/everforest/272E33.svg" width="20" height="20" style="vertical-align: middle;"/> bg0  
-`#2E383C` <img src=".colors/everforest/2E383C.svg" width="20" height="20" style="vertical-align: middle;"/> bg1  
 `#D3C6AA` <img src=".colors/everforest/D3C6AA.svg" width="20" height="20" style="vertical-align: middle;"/> fg  
 `#E67E80` <img src=".colors/everforest/E67E80.svg" width="20" height="20" style="vertical-align: middle;"/> red  
 `#A7C080` <img src=".colors/everforest/A7C080.svg" width="20" height="20" style="vertical-align: middle;"/> green  
@@ -62,6 +60,14 @@ This color palette is from [sainnhe](https://github.com/sainnhe/everforest?tab=r
 `#D699B6` <img src=".colors/everforest/D699B6.svg" width="20" height="20" style="vertical-align: middle;"/> purple  
 `#83C092` <img src=".colors/everforest/83C092.svg" width="20" height="20" style="vertical-align: middle;"/> aqua  
 `#7FBBB3` <img src=".colors/everforest/7FBBB3.svg" width="20" height="20" style="vertical-align: middle;"/> blue  
+
+`#1E2326` <img src=".colors/everforest/1E2326.svg" width="20" height="20" style="vertical-align: middle;"/> bg_dim  
+`#272E33` <img src=".colors/everforest/272E33.svg" width="20" height="20" style="vertical-align: middle;"/> bg0  
+`#2E383C` <img src=".colors/everforest/2E383C.svg" width="20" height="20" style="vertical-align: middle;"/> bg1  
+`#374145` <img src=".colors/everforest/374145.svg" width="20" height="20" style="vertical-align: middle;"/> bg2  
+`#414B50` <img src=".colors/everforest/414B50.svg" width="20" height="20" style="vertical-align: middle;"/> bg3  
+`#495156` <img src=".colors/everforest/495156.svg" width="20" height="20" style="vertical-align: middle;"/> bg4  
+`#4F5B58` <img src=".colors/everforest/4F5B58.svg" width="20" height="20" style="vertical-align: middle;"/> bg5  
 
 ## Nord
 
