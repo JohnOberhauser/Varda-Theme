@@ -6,7 +6,7 @@
   <colors>
     <option name="ADDED_LINES_COLOR" value="83C092" />
     <option name="ANNOTATIONS_COLOR" value="a0a7b4" />
-    <option name="CARET_COLOR" value="A7C080" />
+    <option name="CARET_COLOR" value="7A8478" />
     <option name="CARET_ROW_COLOR" value="272E33" />
     <option name="CONSOLE_BACKGROUND_KEY" value="" />
     <option name="DELETED_LINES_COLOR" value="E67E80" />
@@ -21,7 +21,7 @@
     <option name="DIAGRAM_REALIZATION_EDGE" value="98c379" />
     <option name="DIFF_SEPARATORS_BACKGROUND" value="21252b" />
     <option name="DOCUMENTATION_COLOR" value="414B50" />
-    <option name="DOC_COMMENT_LINK" value="A7C080" />
+    <option name="DOC_COMMENT_LINK" value="7A8478" />
     <option name="ERROR_HINT" value="781732" />
     <option name="FILESTATUS_ADDED" value="83C092" />
     <option name="FILESTATUS_COPIED" value="83C092" />
@@ -36,9 +36,9 @@
     <option name="FILESTATUS_IDEA_SVN_FILESTATUS_OBSTRUCTED" value="DBBC7F" />
     <option name="FILESTATUS_IDEA_SVN_REPLACED" value="83C092" />
     <option name="FILESTATUS_MERGED" value="DBBC7F" />
-    <option name="FILESTATUS_MODIFIED" value="7FBBB3" />
-    <option name="FILESTATUS_NOT_CHANGED_IMMEDIATE" value="A7C080" />
-    <option name="FILESTATUS_NOT_CHANGED_RECURSIVE" value="A7C080" />
+    <option name="FILESTATUS_MODIFIED" value="7A8478" />
+    <option name="FILESTATUS_NOT_CHANGED_IMMEDIATE" value="7A8478" />
+    <option name="FILESTATUS_NOT_CHANGED_RECURSIVE" value="7A8478" />
     <option name="FILESTATUS_OBSOLETE" value="DBBC7F" />
     <option name="FILESTATUS_RENAMED" value="DBBC7F" />
     <option name="FILESTATUS_SUPPRESSED" value="546e7a" />
@@ -46,7 +46,7 @@
     <option name="FILESTATUS_UNKNOWN" value="E67E80" />
     <option name="FILESTATUS_addedOutside" value="83C092" />
     <option name="FILESTATUS_changelistConflict" value="E67E80" />
-    <option name="FILESTATUS_modifiedOutside" value="A7C080" />
+    <option name="FILESTATUS_modifiedOutside" value="7A8478" />
     <option name="FOLDED_TEXT_BORDER_COLOR" value="" />
     <option name="GUTTER_BACKGROUND" value="1E2326" />
     <option name="HTML_TAG_TREE_LEVEL0" value="f44747" />
@@ -56,7 +56,7 @@
     <option name="HTML_TAG_TREE_LEVEL4" value="9ba9b2" />
     <option name="HTML_TAG_TREE_LEVEL5" value="E69875" />
     <option name="IGNORED_ADDED_LINES_BORDER_COLOR" value="83C092" />
-    <option name="IGNORED_MODIFIED_LINES_BORDER_COLOR" value="A7C080" />
+    <option name="IGNORED_MODIFIED_LINES_BORDER_COLOR" value="7A8478" />
     <option name="INDENT_GUIDE" value="495156" />
     <option name="INFORMATION_HINT" value="414B50" />
     <option name="LINE_NUMBERS_COLOR" value="495162" />
@@ -235,24 +235,24 @@
     </option>
     <option name="CONSOLE_BLUE_BRIGHT_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="A7C080" />
+        <option name="FOREGROUND" value="7A8478" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="CONSOLE_BLUE_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="A7C080" />
+        <option name="FOREGROUND" value="7A8478" />
       </value>
     </option>
     <option name="CONSOLE_CYAN_BRIGHT_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="7A8478" />
+        <option name="FOREGROUND" value="A7C080" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="CONSOLE_CYAN_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="7A8478" />
+        <option name="FOREGROUND" value="A7C080" />
       </value>
     </option>
     <option name="CONSOLE_DARKGRAY_OUTPUT">
@@ -376,7 +376,7 @@
     </option>
     <option name="CUSTOM_KEYWORD4_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="7A8478" />
+        <option name="FOREGROUND" value="A7C080" />
       </value>
     </option>
     <option name="CUSTOM_STRING_ATTRIBUTES" baseAttributes="DEFAULT_STRING" />
@@ -479,7 +479,7 @@
     </option>
     <option name="DEFAULT_CLASS_NAME">
       <value>
-        <option name="FOREGROUND" value="7A8478" />
+        <option name="FOREGROUND" value="A7C080" />
       </value>
     </option>
     <option name="DEFAULT_CLASS_REFERENCE">
@@ -497,12 +497,12 @@
     </option>
     <option name="DEFAULT_DOC_COMMENT">
       <value>
-        <option name="FOREGROUND" value="A7C080" />
+        <option name="FOREGROUND" value="7A8478" />
       </value>
     </option>
     <option name="DEFAULT_DOC_COMMENT_TAG">
       <value>
-        <option name="FOREGROUND" value="7A8478" />
+        <option name="FOREGROUND" value="A7C080" />
       </value>
     </option>
     <option name="DEFAULT_DOC_COMMENT_TAG_VALUE">
@@ -522,13 +522,13 @@
     </option>
     <option name="DEFAULT_FUNCTION_CALL">
       <value>
-        <option name="FOREGROUND" value="7A8478" />
+        <option name="FOREGROUND" value="A7C080" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_DECLARATION" baseAttributes="DEFAULT_IDENTIFIER" />
     <option name="DEFAULT_HIGHLIGHTED_REFERENCE">
       <value>
-        <option name="EFFECT_COLOR" value="A7C080" />
+        <option name="EFFECT_COLOR" value="7A8478" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -545,7 +545,7 @@
     </option>
     <option name="DEFAULT_INTERFACE_NAME">
       <value>
-        <option name="FOREGROUND" value="7A8478" />
+        <option name="FOREGROUND" value="A7C080" />
       </value>
     </option>
     <option name="DEFAULT_INVALID_STRING_ESCAPE">
@@ -557,7 +557,7 @@
     </option>
     <option name="DEFAULT_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="A7C080" />
+        <option name="FOREGROUND" value="7A8478" />
       </value>
     </option>
     <option name="DEFAULT_LINE_COMMENT">
@@ -568,7 +568,7 @@
     <option name="DEFAULT_METADATA" baseAttributes="TEXT" />
     <option name="DEFAULT_NUMBER">
       <value>
-        <option name="FOREGROUND" value="7A8478" />
+        <option name="FOREGROUND" value="A7C080" />
       </value>
     </option>
     <option name="DEFAULT_REASSIGNED_LOCAL_VARIABLE" baseAttributes="DEFAULT_LOCAL_VARIABLE" />
@@ -590,7 +590,7 @@
     <option name="DEFAULT_STATIC_METHOD" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
     <option name="DEFAULT_STRING">
       <value>
-        <option name="FOREGROUND" value="7A8478" />
+        <option name="FOREGROUND" value="A7C080" />
       </value>
     </option>
     <option name="DEFAULT_TEMPLATE_LANGUAGE_COLOR">
@@ -635,7 +635,7 @@
     </option>
     <option name="DIFF_MODIFIED">
       <value>
-        <option name="BACKGROUND" value="A7C080" />
+        <option name="BACKGROUND" value="7A8478" />
         <option name="ERROR_STRIPE_COLOR" value="E67E80" />
       </value>
     </option>
@@ -656,7 +656,7 @@
     </option>
     <option name="DOCKER_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="7A8478" />
+        <option name="FOREGROUND" value="A7C080" />
       </value>
     </option>
     <option name="DUPLICATE_FROM_SERVER">
@@ -711,8 +711,8 @@
     </option>
     <option name="FOLLOWED_HYPERLINK_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="A7C080" />
-        <option name="EFFECT_COLOR" value="A7C080" />
+        <option name="FOREGROUND" value="7A8478" />
+        <option name="EFFECT_COLOR" value="7A8478" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -861,20 +861,20 @@
     <option name="HTML_ATTRIBUTE_VALUE" baseAttributes="DEFAULT_STRING" />
     <option name="HTML_CUSTOM_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="A7C080" />
+        <option name="FOREGROUND" value="7A8478" />
       </value>
     </option>
     <option name="HTML_ENTITY_REFERENCE" baseAttributes="DEFAULT_ENTITY" />
     <option name="HTML_TAG" baseAttributes="DEFAULT_TAG" />
     <option name="HTML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="A7C080" />
+        <option name="FOREGROUND" value="7A8478" />
       </value>
     </option>
     <option name="HYPERLINK_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="A7C080" />
-        <option name="EFFECT_COLOR" value="A7C080" />
+        <option name="FOREGROUND" value="7A8478" />
+        <option name="EFFECT_COLOR" value="7A8478" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -888,7 +888,7 @@
     </option>
     <option name="INACTIVE_HYPERLINK_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="A7C080" />
+        <option name="EFFECT_COLOR" value="7A8478" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -1024,7 +1024,7 @@
     <option name="KOTLIN_PACKAGE_FUNCTION_CALL" baseAttributes="DEFAULT_STATIC_METHOD" />
     <option name="KOTLIN_SMART_CAST_RECEIVER">
       <value>
-        <option name="FOREGROUND" value="A7C080" />
+        <option name="FOREGROUND" value="7A8478" />
       </value>
     </option>
     <option name="KOTLIN_SMART_CAST_VALUE">
@@ -1032,7 +1032,7 @@
     </option>
     <option name="KOTLIN_SMART_CONSTANT">
       <value>
-        <option name="FOREGROUND" value="A7C080" />
+        <option name="FOREGROUND" value="7A8478" />
       </value>
     </option>
     <option name="KOTLIN_TYPE_PARAMETER">
@@ -1106,7 +1106,7 @@
     <option name="LOGCAT_FILTER_KEY">
       <value>
         <option name="FOREGROUND" value="fefefe" />
-        <option name="BACKGROUND" value="A7C080" />
+        <option name="BACKGROUND" value="7A8478" />
       </value>
     </option>
     <option name="LOGCAT_V2_LEVEL_ASSERT">
@@ -1118,7 +1118,7 @@
     <option name="LOGCAT_V2_LEVEL_DEBUG">
       <value>
         <option name="FOREGROUND" value="bbbbbb" />
-        <option name="BACKGROUND" value="A7C080" />
+        <option name="BACKGROUND" value="7A8478" />
       </value>
     </option>
     <option name="LOGCAT_V2_LEVEL_ERROR">
@@ -1152,7 +1152,7 @@
     </option>
     <option name="LOGCAT_V2_MESSAGE_DEBUG">
       <value>
-        <option name="FOREGROUND" value="A7C080" />
+        <option name="FOREGROUND" value="7A8478" />
       </value>
     </option>
     <option name="LOGCAT_V2_MESSAGE_ERROR">
@@ -1858,7 +1858,7 @@
     </option>
     <option name="TEXT">
       <value>
-        <option name="FOREGROUND" value="A7C080" />
+        <option name="FOREGROUND" value="7A8478" />
         <option name="BACKGROUND" value="1E2326" />
       </value>
     </option>
