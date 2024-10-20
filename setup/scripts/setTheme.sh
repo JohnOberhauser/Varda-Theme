@@ -109,7 +109,7 @@ btop_theme() {
         sed -i "s|color_theme = \".*\"|color_theme = \"$HOME/.config/btop/themes/varda.theme\"|" $HOME/.config/btop/btop.conf
         ;;
       "everforest")
-        sed -i "s|color_theme = \".*\"|color_theme = \"/usr/share/btop/themes/everforest-dark-hard.theme\"|" $HOME/.config/btop/btop.conf
+        sed -i "s|color_theme = \".*\"|color_theme = \"$HOME/.config/btop/themes/everforest.theme\"|" $HOME/.config/btop/btop.conf
         ;;
       "nord")
         sed -i "s|color_theme = \".*\"|color_theme = \"/usr/share/btop/themes/nord.theme\"|" $HOME/.config/btop/btop.conf
