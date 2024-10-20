@@ -23,10 +23,10 @@
     <option name="DOCUMENTATION_COLOR" value="222830" />
     <option name="DOC_COMMENT_LINK" value="52677c" />
     <option name="ERROR_HINT" value="781732" />
-    <option name="FILESTATUS_ADDED" value="c3e887" />
+    <option name="FILESTATUS_ADDED" value="257b76" />
     <option name="FILESTATUS_COPIED" value="257b76" />
-    <option name="FILESTATUS_DELETED" value="f77669" />
-    <option name="FILESTATUS_HIJACKED" value="ffcb6b" />
+    <option name="FILESTATUS_DELETED" value="733447" />
+    <option name="FILESTATUS_HIJACKED" value="c78c56" />
     <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="272e38" />
     <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="272e38" />
     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_BOTH_CONFLICTS" value="733447" />
@@ -36,14 +36,14 @@
     <option name="FILESTATUS_IDEA_SVN_FILESTATUS_OBSTRUCTED" value="c78c56" />
     <option name="FILESTATUS_IDEA_SVN_REPLACED" value="257b76" />
     <option name="FILESTATUS_MERGED" value="c78c56" />
-    <option name="FILESTATUS_MODIFIED" value="80cbc4" />
-    <option name="FILESTATUS_NOT_CHANGED_IMMEDIATE" value="80cbc4" />
-    <option name="FILESTATUS_NOT_CHANGED_RECURSIVE" value="80cbc4" />
-    <option name="FILESTATUS_OBSOLETE" value="ffcb6b" />
+    <option name="FILESTATUS_MODIFIED" value="52677c" />
+    <option name="FILESTATUS_NOT_CHANGED_IMMEDIATE" value="52677c" />
+    <option name="FILESTATUS_NOT_CHANGED_RECURSIVE" value="52677c" />
+    <option name="FILESTATUS_OBSOLETE" value="c78c56" />
     <option name="FILESTATUS_RENAMED" value="c78c56" />
     <option name="FILESTATUS_SUPPRESSED" value="546e7a" />
-    <option name="FILESTATUS_SWITCHED" value="f77669" />
-    <option name="FILESTATUS_UNKNOWN" value="f77669" />
+    <option name="FILESTATUS_SWITCHED" value="733447" />
+    <option name="FILESTATUS_UNKNOWN" value="733447" />
     <option name="FILESTATUS_addedOutside" value="257b76" />
     <option name="FILESTATUS_changelistConflict" value="733447" />
     <option name="FILESTATUS_modifiedOutside" value="52677c" />
