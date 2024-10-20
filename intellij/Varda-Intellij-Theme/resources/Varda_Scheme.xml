@@ -57,7 +57,7 @@
     <option name="HTML_TAG_TREE_LEVEL5" value="665276" />
     <option name="IGNORED_ADDED_LINES_BORDER_COLOR" value="257b76" />
     <option name="IGNORED_MODIFIED_LINES_BORDER_COLOR" value="52677c" />
-    <option name="INDENT_GUIDE" value="3b4048" />
+    <option name="INDENT_GUIDE" value="272e38" />
     <option name="INFORMATION_HINT" value="222830" />
     <option name="LINE_NUMBERS_COLOR" value="495162" />
     <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="737984" />
@@ -65,15 +65,15 @@
     <option name="MODIFIED_LINES_COLOR" value="c78c56" />
     <option name="QUESTION_HINT" value="2e4280" />
     <option name="RECENT_LOCATIONS_SELECTION" value="222830" />
-    <option name="RIGHT_MARGIN_COLOR" value="606368" />
-    <option name="SELECTED_INDENT_GUIDE" value="606368" />
+    <option name="RIGHT_MARGIN_COLOR" value="272e38" />
+    <option name="SELECTED_INDENT_GUIDE" value="272e38" />
     <option name="SELECTED_TEARLINE_COLOR" value="6b6e73" />
     <option name="SELECTION_BACKGROUND" value="1c2128" />
     <option name="TEARLINE_COLOR" value="4f575f" />
     <option name="VCS_ANNOTATIONS_COLOR_1" value="335027" />
     <option name="VCS_ANNOTATIONS_COLOR_2" value="3e443c" />
     <option name="VCS_ANNOTATIONS_COLOR_5" value="46333c" />
-    <option name="VISUAL_INDENT_GUIDE" value="3b4048" />
+    <option name="VISUAL_INDENT_GUIDE" value="272e38" />
     <option name="WHITESPACES" value="4b575f" />
     <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="222830" />
   </colors>

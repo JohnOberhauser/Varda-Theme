@@ -5,8 +5,9 @@
   "editorScheme": "/Varda_Scheme.xml",
   "colors": {
     "background": "#0C0E11",
-    "backgroundHighlight": "#171B21",
-    "backgroundInactiveHighlight": "#1C2128",
+    "darkGrey": "#121519",
+    "darkGrey2": "#171B21",
+    "darkGrey3": "#1C2128",
     "foreground": "#D0EBEE",
     "green": "#257B76",
     "red": "#733447",
@@ -48,13 +49,13 @@
 
       "infoForeground": "foreground",
 
-      "activeBackground": "backgroundHighlight",
-      "pressedBackground": "backgroundHighlight",
-      "hoverBackground": "backgroundHighlight",
-      "selectedBackground": "backgroundHighlight",
-      "selectionBackground": "backgroundHighlight",
+      "activeBackground": "darkGrey2",
+      "pressedBackground": "darkGrey2",
+      "hoverBackground": "darkGrey2",
+      "selectedBackground": "darkGrey2",
+      "selectionBackground": "darkGrey2",
       "selectionForeground": "foreground",
-      "selectionInactiveBackground": "backgroundInactiveHighlight",
+      "selectionInactiveBackground": "darkGrey3",
       "selectionBackgroundInactive": "#background",
 
       "disabledBackground": "background",
@@ -103,7 +104,7 @@
     },
 
     "Borders": {
-      "color": "background",
+      "color": "darkGrey2",
       "ContrastBorderColor": "background"
     },
 
