@@ -6,7 +6,7 @@
   <colors>
     <option name="ADDED_LINES_COLOR" value="257b76" />
     <option name="ANNOTATIONS_COLOR" value="a0a7b4" />
-    <option name="CARET_COLOR" value="52677C" />
+    <option name="CARET_COLOR" value="52677c" />
     <option name="CARET_ROW_COLOR" value="121519" />
     <option name="CONSOLE_BACKGROUND_KEY" value="" />
     <option name="DELETED_LINES_COLOR" value="733447" />
@@ -27,8 +27,8 @@
     <option name="FILESTATUS_COPIED" value="257b76" />
     <option name="FILESTATUS_DELETED" value="f77669" />
     <option name="FILESTATUS_HIJACKED" value="ffcb6b" />
-    <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="272E38" />
-    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="272E38" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="272e38" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="272e38" />
     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_BOTH_CONFLICTS" value="733447" />
     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_CONFLICTS" value="733447" />
     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_PROPERTY_CONFLICTS" value="733447" />
@@ -68,7 +68,7 @@
     <option name="RIGHT_MARGIN_COLOR" value="606368" />
     <option name="SELECTED_INDENT_GUIDE" value="606368" />
     <option name="SELECTED_TEARLINE_COLOR" value="6b6e73" />
-    <option name="SELECTION_BACKGROUND" value="1C2128" />
+    <option name="SELECTION_BACKGROUND" value="1c2128" />
     <option name="TEARLINE_COLOR" value="4f575f" />
     <option name="VCS_ANNOTATIONS_COLOR_1" value="335027" />
     <option name="VCS_ANNOTATIONS_COLOR_2" value="3e443c" />
@@ -80,7 +80,7 @@
   <attributes>
     <option name="ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="D0EBEE" />
+        <option name="FOREGROUND" value="d0ebee" />
       </value>
     </option>
     <option name="ANNOTATION_NAME_ATTRIBUTES" baseAttributes="DEFAULT_METADATA" />
@@ -100,11 +100,7 @@
     <option name="BASH.CONDITIONAL">
       <value />
     </option>
-    <option name="BASH.EXTERNAL_COMMAND">
-      <value>
-        <option name="FOREGROUND" value="9ba9b2" />
-      </value>
-    </option>
+    <option name="BASH.EXTERNAL_COMMAND" baseAttributes="DEFAULT_IDENTIFIER" />
     <option name="BASH.FUNCTION_CALL">
       <value>
         <option name="FOREGROUND" value="9ba9b2" />
@@ -137,7 +133,7 @@
     <option name="BREADCRUMBS_CURRENT">
       <value>
         <option name="FOREGROUND" value="e3ffff" />
-        <option name="BACKGROUND" value="1C2128" />
+        <option name="BACKGROUND" value="1c2128" />
       </value>
     </option>
     <option name="BREADCRUMBS_DEFAULT">
@@ -148,7 +144,7 @@
     <option name="BREADCRUMBS_HOVERED">
       <value>
         <option name="FOREGROUND" value="e3ffff" />
-        <option name="BACKGROUND" value="1C2128" />
+        <option name="BACKGROUND" value="1c2128" />
       </value>
     </option>
     <option name="BREADCRUMBS_INACTIVE">
@@ -234,51 +230,55 @@
     </option>
     <option name="CONSOLE_BLACK_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="0" />
+        <option name="FOREGROUND" value="c0e11" />
       </value>
     </option>
     <option name="CONSOLE_BLUE_BRIGHT_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="9ba9b2" />
+        <option name="FOREGROUND" value="52677c" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="CONSOLE_BLUE_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="9ba9b2" />
+        <option name="FOREGROUND" value="52677c" />
       </value>
     </option>
     <option name="CONSOLE_CYAN_BRIGHT_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="349f97" />
+        <option name="FOREGROUND" value="8295a9" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="CONSOLE_CYAN_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="349f97" />
+        <option name="FOREGROUND" value="8295a9" />
+      </value>
+    </option>
+    <option name="CONSOLE_DARKGRAY_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="c0e11" />
       </value>
     </option>
     <option name="CONSOLE_ERROR_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="dd8e91" />
+        <option name="FOREGROUND" value="733447" />
       </value>
     </option>
     <option name="CONSOLE_GRAY_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="646a73" />
-        <option name="ERROR_STRIPE_COLOR" value="21252b" />
+        <option name="FOREGROUND" value="d0ebee" />
       </value>
     </option>
     <option name="CONSOLE_GREEN_BRIGHT_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="98c379" />
+        <option name="FOREGROUND" value="257b76" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="CONSOLE_GREEN_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="98c379" />
+        <option name="FOREGROUND" value="257b76" />
       </value>
     </option>
     <option name="CONSOLE_MAGENTA_BRIGHT_OUTPUT">
@@ -294,7 +294,7 @@
     </option>
     <option name="CONSOLE_NORMAL_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="e3ffff" />
+        <option name="FOREGROUND" value="d0ebee" />
       </value>
     </option>
     <option name="CONSOLE_RANGE_TO_EXECUTE">
@@ -304,39 +304,39 @@
     </option>
     <option name="CONSOLE_RED_BRIGHT_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="dd8e91" />
+        <option name="FOREGROUND" value="733447" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="CONSOLE_RED_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="dd8e91" />
+        <option name="FOREGROUND" value="733447" />
       </value>
     </option>
     <option name="CONSOLE_SYSTEM_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="e7f2ff" />
+        <option name="FOREGROUND" value="d0ebee" />
       </value>
     </option>
     <option name="CONSOLE_USER_INPUT">
       <value>
-        <option name="FOREGROUND" value="98c379" />
+        <option name="FOREGROUND" value="257b76" />
       </value>
     </option>
     <option name="CONSOLE_WHITE_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="e3ffff" />
+        <option name="FOREGROUND" value="d0ebee" />
       </value>
     </option>
     <option name="CONSOLE_YELLOW_BRIGHT_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="93394a" />
+        <option name="FOREGROUND" value="c78c56" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="CONSOLE_YELLOW_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="93394a" />
+        <option name="FOREGROUND" value="c78c56" />
       </value>
     </option>
     <option name="CONSOLE_palette_0GRAY_OUTPUT">
@@ -345,11 +345,6 @@
       </value>
     </option>
     <option name="CSS.COLOR" baseAttributes="CSS.IDENT" />
-    <option name="CSS.FUNCTION">
-      <value>
-        <option name="FOREGROUND" value="9ba9b2" />
-      </value>
-    </option>
     <option name="CSS.IMPORTANT">
       <value>
         <option name="FOREGROUND" value="665276" />
@@ -359,9 +354,6 @@
       <value>
         <option name="FOREGROUND" value="665276" />
       </value>
-    </option>
-    <option name="CSS.PROPERTY_NAME">
-      <value />
     </option>
     <option name="CSS.URL" baseAttributes="HTML_ATTRIBUTE_VALUE" />
     <option name="CTRL_CLICKABLE">
@@ -384,7 +376,7 @@
     </option>
     <option name="CUSTOM_KEYWORD4_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="9ba9b2" />
+        <option name="FOREGROUND" value="8295a9" />
       </value>
     </option>
     <option name="CUSTOM_STRING_ATTRIBUTES" baseAttributes="DEFAULT_STRING" />
@@ -426,6 +418,7 @@
         <option name="FOREGROUND" value="98c379" />
       </value>
     </option>
+    <option name="ComposableCallTextAttributes" baseAttributes="DEFAULT_FUNCTION_CALL" />
     <option name="DART_ENUM_CONSTANT">
       <value>
         <option name="FOREGROUND" value="c78c56" />
@@ -481,7 +474,7 @@
     </option>
     <option name="DEFAULT_BLOCK_COMMENT">
       <value>
-        <option name="FOREGROUND" value="222830" />
+        <option name="FOREGROUND" value="38414f" />
       </value>
     </option>
     <option name="DEFAULT_CLASS_NAME">
@@ -569,7 +562,7 @@
     </option>
     <option name="DEFAULT_LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="222830" />
+        <option name="FOREGROUND" value="38414f" />
       </value>
     </option>
     <option name="DEFAULT_METADATA" baseAttributes="TEXT" />
@@ -581,7 +574,7 @@
     <option name="DEFAULT_REASSIGNED_LOCAL_VARIABLE" baseAttributes="DEFAULT_LOCAL_VARIABLE" />
     <option name="DEFAULT_REASSIGNED_PARAMETER">
       <value>
-        <option name="FOREGROUND" value="D0EBEE" />
+        <option name="FOREGROUND" value="d0ebee" />
         <option name="EFFECT_COLOR" value="3c3f41" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
@@ -663,7 +656,7 @@
     </option>
     <option name="DOCKER_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="9ba9b2" />
+        <option name="FOREGROUND" value="8295a9" />
       </value>
     </option>
     <option name="DUPLICATE_FROM_SERVER">
@@ -864,11 +857,7 @@
       </value>
     </option>
     <option name="HAML_XHTML" baseAttributes="" />
-    <option name="HTML_ATTRIBUTE_NAME">
-      <value>
-        <option name="FOREGROUND" value="272E38" />
-      </value>
-    </option>
+    <option name="HTML_ATTRIBUTE_NAME" baseAttributes="DEFAULT_ATTRIBUTE" />
     <option name="HTML_ATTRIBUTE_VALUE" baseAttributes="DEFAULT_STRING" />
     <option name="HTML_CUSTOM_TAG_NAME">
       <value>
@@ -891,7 +880,7 @@
     </option>
     <option name="IDENTIFIER_UNDER_CARET_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="1C2128" />
+        <option name="BACKGROUND" value="1c2128" />
       </value>
     </option>
     <option name="IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES">
@@ -971,13 +960,10 @@
         <option name="BACKGROUND" value="423535" />
       </value>
     </option>
-    <option name="JS.GLOBAL_FUNCTION">
-      <value>
-        <option name="FOREGROUND" value="9ba9b2" />
-      </value>
-    </option>
+    <option name="JS.GLOBAL_FUNCTION" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
     <option name="JS.GLOBAL_VARIABLE" baseAttributes="DEFAULT_GLOBAL_VARIABLE" />
     <option name="JS.INSTANCE_MEMBER_FUNCTION" baseAttributes="DEFAULT_INSTANCE_METHOD" />
+    <option name="JS.LOCAL_VARIABLE" baseAttributes="DEFAULT_LOCAL_VARIABLE" />
     <option name="JS.MODULE_NAME">
       <value>
         <option name="FOREGROUND" value="93394a" />
@@ -1003,19 +989,19 @@
     </option>
     <option name="KOTLIN_CLOSURE_DEFAULT_PARAMETER">
       <value>
-        <option name="FOREGROUND" value="D0EBEE" />
+        <option name="FOREGROUND" value="d0ebee" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="KOTLIN_DYNAMIC_FUNCTION_CALL">
       <value>
-        <option name="FOREGROUND" value="D0EBEE" />
+        <option name="FOREGROUND" value="d0ebee" />
         <option name="FONT_TYPE" value="3" />
       </value>
     </option>
     <option name="KOTLIN_DYNAMIC_PROPERTY_CALL">
       <value>
-        <option name="FOREGROUND" value="D0EBEE" />
+        <option name="FOREGROUND" value="d0ebee" />
         <option name="FONT_TYPE" value="3" />
       </value>
     </option>
@@ -1125,7 +1111,7 @@
     </option>
     <option name="LOGCAT_V2_LEVEL_ASSERT">
       <value>
-        <option name="FOREGROUND" value="ffffff" />
+        <option name="FOREGROUND" value="d0ebee" />
         <option name="BACKGROUND" value="733447" />
       </value>
     </option>
@@ -1161,7 +1147,7 @@
     </option>
     <option name="LOGCAT_V2_MESSAGE_ASSERT">
       <value>
-        <option name="FOREGROUND" value="93394a" />
+        <option name="FOREGROUND" value="733447" />
       </value>
     </option>
     <option name="LOGCAT_V2_MESSAGE_DEBUG">
@@ -1171,7 +1157,7 @@
     </option>
     <option name="LOGCAT_V2_MESSAGE_ERROR">
       <value>
-        <option name="FOREGROUND" value="93394a" />
+        <option name="FOREGROUND" value="733447" />
       </value>
     </option>
     <option name="LOGCAT_V2_MESSAGE_INFO">
@@ -1196,22 +1182,27 @@
     </option>
     <option name="LOG_ERROR_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="dd8e91" />
+        <option name="FOREGROUND" value="733447" />
+      </value>
+    </option>
+    <option name="LOG_EXPIRED_ENTRY">
+      <value>
+        <option name="FOREGROUND" value="38414f" />
       </value>
     </option>
     <option name="LOG_INFO_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="98c379" />
+        <option name="FOREGROUND" value="d0ebee" />
       </value>
     </option>
     <option name="LOG_VERBOSE_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="9ba9b2" />
+        <option name="FOREGROUND" value="d0ebee" />
       </value>
     </option>
     <option name="LOG_WARNING_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="733447" />
+        <option name="FOREGROUND" value="c78c56" />
       </value>
     </option>
     <option name="List/map to object conversion">
@@ -1292,7 +1283,8 @@
     </option>
     <option name="NOT_USED_ELEMENT_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="7f8591" />
+        <option name="FOREGROUND" value="38414f" />
+        <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="OC.CLASS_REFERENCE">
@@ -1861,9 +1853,12 @@
         <option name="FOREGROUND" value="c78c56" />
       </value>
     </option>
+    <option name="TERMINAL_COMMAND_TO_RUN_USING_IDE">
+      <value />
+    </option>
     <option name="TEXT">
       <value>
-        <option name="FOREGROUND" value="d0ebee" />
+        <option name="FOREGROUND" value="52677c" />
         <option name="BACKGROUND" value="c0e11" />
       </value>
     </option>
@@ -1932,7 +1927,7 @@
     </option>
     <option name="WRITE_IDENTIFIER_UNDER_CARET_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="1C2128" />
+        <option name="BACKGROUND" value="1c2128" />
       </value>
     </option>
     <option name="WRITE_SEARCH_RESULT_ATTRIBUTES">
@@ -1979,6 +1974,26 @@
     </option>
     <option name="XPATH.XPATH_VARIABLE" baseAttributes="DEFAULT_LOCAL_VARIABLE" />
     <option name="YAML_ANCHOR" baseAttributes="DEFAULT_IDENTIFIER" />
+    <option name="YAML_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="38414f" />
+      </value>
+    </option>
+    <option name="YAML_SCALAR_LIST">
+      <value>
+        <option name="FOREGROUND" value="d0ebee" />
+      </value>
+    </option>
+    <option name="YAML_SCALAR_VALUE">
+      <value>
+        <option name="FOREGROUND" value="d0ebee" />
+      </value>
+    </option>
+    <option name="YAML_TEXT">
+      <value>
+        <option name="FOREGROUND" value="d0ebee" />
+      </value>
+    </option>
     <option name="com.plan9.IDENTIFIER">
       <value>
         <option name="FOREGROUND" value="349f97" />
@@ -2009,17 +2024,8 @@
         <option name="FOREGROUND" value="dd8e91" />
       </value>
     </option>
-    <option name="org.rust.DOC_LINK">
-      <value>
-        <option name="FOREGROUND" value="9ba9b2" />
-      </value>
-    </option>
     <option name="org.rust.LIFETIME" baseAttributes="DEFAULT_IDENTIFIER" />
-    <option name="org.rust.MACRO">
-      <value>
-        <option name="FOREGROUND" value="9ba9b2" />
-      </value>
-    </option>
+    <option name="org.rust.MACRO" baseAttributes="DEFAULT_IDENTIFIER" />
     <option name="org.rust.Q_OPERATOR">
       <value />
     </option>

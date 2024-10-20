@@ -37,7 +37,8 @@ This color palette is home-grown
 `#171B21` <img src=".colors/varda/171B21.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 2   
 `#1C2128` <img src=".colors/varda/1C2128.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 3    
 `#222830` <img src=".colors/varda/222830.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 4  
-`#272E38` <img src=".colors/varda/272E38.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 5
+`#272E38` <img src=".colors/varda/272E38.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 5  
+`#38414F` <img src=".colors/varda/38414F.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 6
 
 ## Everforest
 
