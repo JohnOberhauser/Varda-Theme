@@ -2,6 +2,7 @@
 @import "window";
 
 .systemMenuIconButton {
+  all: unset;
   background-color: transparent;
   min-width: 30px;
   font-size: 25px;
@@ -17,11 +18,13 @@
 }
 
 .systemMenuVolumeProgress {
+  all: unset;
   min-width: 200px;
   margin-right: 20px;
 }
 
 .systemMenuVolumeProgress trough {
+  all: unset;
   background: $sliderTrough;
   min-height: 8px;
   border-radius: 16px;
@@ -31,6 +34,7 @@
 }
 
 .systemMenuVolumeProgress trough highlight {
+  all: unset;
   min-width: 8px;
   border-radius: 16px;
   background: $fg;
@@ -41,12 +45,14 @@
 }
 
 .audioSelectionLabel {
+  all: unset;
   padding: 6px;
   min-width: 24px;
   color: $fg;
 }
 
 .audioSelectionButton {
+  all: unset;
   color: $fg;
   background-color: $bg;
   min-width: 250px;
