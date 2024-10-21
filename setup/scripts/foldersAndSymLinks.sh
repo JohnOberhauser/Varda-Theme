@@ -17,6 +17,7 @@ mkdir -p $HOME/.config/btop/themes
 ln -s $HOME/workspace/Varda-Theme/btop/varda.theme $HOME/.config/btop/themes/
 ln -s $HOME/workspace/Varda-Theme/btop/everforest.theme $HOME/.config/btop/themes/
 
+mkdir -p $HOME/.themes/SystemTheme
 mkdir -p $HOME/.config/gtk-4.0
 ln -s $HOME/workspace/Varda-Theme/gnome/themes/Varda/gtk-4.0 $HOME/.config/
 

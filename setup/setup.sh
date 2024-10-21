@@ -5,7 +5,6 @@
 ./scripts/hyprpm.sh
 ./scripts/setupYay.sh
 ./scripts/installFromAur.sh
-./scripts/installGtkThemes.sh
 ./scripts/foldersAndSymLinks.sh
 ./scripts/zshSetup.sh
 ./scripts/waylandSession.sh
