@@ -4,7 +4,7 @@ set -Eeo pipefail
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 SRC_DIR="${REPO_DIR}/src"
-DEST_DIR="$REPO_DIR/../gtk/themes"
+DEST_DIR="$REPO_DIR/../themes"
 
 theme=
 sizes=()

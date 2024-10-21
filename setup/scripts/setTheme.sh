@@ -57,22 +57,22 @@ gtk() {
   dconf write /org/gnome/desktop/interface/document-font-name "'JetBrainsMono Nerd Font Medium 11'"
   case $1 in
       "varda")
-          ln -sf $HOME/workspace/Varda-Theme/gtkQt/gtk/themes/Varda/gtk-4.0 $HOME/.config/
-          cp -r $HOME/workspace/Varda-Theme/gtkQt/gtk/themes/Varda/* $HOME/.themes/SystemTheme/
+          ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Varda/gtk-4.0 $HOME/.config/
+          cp -r $HOME/workspace/Varda-Theme/gtk/themes/Varda/* $HOME/.themes/SystemTheme/
           dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita'"
           dconf write /org/gnome/desktop/interface/gtk-theme "'SystemTheme'"
           flatpak override --user --env=GTK_THEME=SystemTheme
         ;;
       "everforest")
-          ln -sf $HOME/workspace/Varda-Theme/gtkQt/gtk/themes/Everforest/gtk-4.0 $HOME/.config/
-          cp -r $HOME/workspace/Varda-Theme/gtkQt/gtk/themes/Everforest/* $HOME/.themes/SystemTheme/
+          ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Everforest/gtk-4.0 $HOME/.config/
+          cp -r $HOME/workspace/Varda-Theme/gtk/themes/Everforest/* $HOME/.themes/SystemTheme/
           dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita'"
           dconf write /org/gnome/desktop/interface/gtk-theme "'SystemTheme'"
           flatpak override --user --env=GTK_THEME=SystemTheme
         ;;
       "nord")
-          ln -sf $HOME/workspace/Varda-Theme/gtkQt/gtk/themes/Nord/gtk-4.0 $HOME/.config/
-          cp -r $HOME/workspace/Varda-Theme/gtkQt/gtk/themes/Nord/* $HOME/.themes/SystemTheme/
+          ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Nord/gtk-4.0 $HOME/.config/
+          cp -r $HOME/workspace/Varda-Theme/gtk/themes/Nord/* $HOME/.themes/SystemTheme/
           dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita'"
           dconf write /org/gnome/desktop/interface/gtk-theme "'SystemTheme'"
           flatpak override --user --env=GTK_THEME=SystemTheme
