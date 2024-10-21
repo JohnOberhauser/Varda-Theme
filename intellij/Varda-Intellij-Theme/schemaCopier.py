@@ -1,4 +1,3 @@
-import sys
 import re
 
 def replace_text_in_file(
