@@ -19,10 +19,10 @@ theme[main_fg]="#E0DEF4"
 theme[title]="#E0DEF4"
 
 # Higlight color for keyboard shortcuts
-theme[hi_fg]="#C4A7E7"
+theme[hi_fg]="#EBBCBA"
 
 # Background color of selected item in processes box
-theme[selected_bg]="#C4A7E7" 
+theme[selected_bg]="#26233A"
 
 # Foreground color of selected item in processes box
 theme[selected_fg]="#E0DEF4"
@@ -31,61 +31,61 @@ theme[selected_fg]="#E0DEF4"
 theme[inactive_fg]="#E0DEF4"
 
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text
-theme[proc_misc]="#C4A7E7"
+theme[proc_misc]="#26233A"
 
 # Cpu box outline color
-theme[cpu_box]="#C4A7E7"
+theme[cpu_box]="#26233A"
 
 # Memory/disks box outline color
-theme[mem_box]="#C4A7E7"
+theme[mem_box]="#26233A"
 
 # Net up/down box outline color
-theme[net_box]="#C4A7E7"
+theme[net_box]="#26233A"
 
 # Processes box outline color
-theme[proc_box]="#C4A7E7"
+theme[proc_box]="#26233A"
 
 # Box divider line and small boxes line color
-theme[div_line]="#C4A7E7"
+theme[div_line]="#26233A"
 
 #================= Meters ==================
-# Mem/Disk free meter
-theme[free_start]="#C4A7E7"
-theme[free_mid]="#C4A7E7"
-theme[free_end]="#C4A7E7"
-
-# Mem/Disk cached meter
-theme[cached_start]="#C4A7E7"
-theme[cached_mid]="#C4A7E7"
-theme[cached_end]="#C4A7E7"
+# Mem/Disk used meter
+theme[used_start]="#31748F"
+theme[used_mid]="#F6C177"
+theme[used_end]="#EB6F92"
 
 # Mem/Disk available meter
-theme[available_start]="#C4A7E7"
-theme[available_mid]="#C4A7E7"
-theme[available_end]="#C4A7E7"
+theme[available_start]="#EB6F92"
+theme[available_mid]="#F6C177"
+theme[available_end]="#31748F"
 
-# Mem/Disk used meter
-theme[used_start]="#C4A7E7"
-theme[used_mid]="#C4A7E7"
-theme[used_end]="#C4A7E7"
+# Mem/Disk cached meter
+theme[cached_start]="#31748F"
+theme[cached_mid]="#31748F"
+theme[cached_end]="#31748F"
+
+# Mem/Disk free meter
+theme[free_start]="#EB6F92"
+theme[free_mid]="#F6C177"
+theme[free_end]="#31748F"
 
 #================== Graphs ==================
 # Temperature graph colors
-theme[temp_start]="#C4A7E7"
-theme[temp_mid]="#C4A7E7"
-theme[temp_end]="#C4A7E7"
+theme[temp_start]="#31748F"
+theme[temp_mid]="#F6C177"
+theme[temp_end]="#31748F"
 
 # CPU graph colors
-theme[cpu_start]="#C4A7E7"
-theme[cpu_mid]="#C4A7E7"
-theme[cpu_end]="#C4A7E7"
+theme[cpu_start]="#EBBCBA"
+theme[cpu_mid]="#F6C177"
+theme[cpu_end]="#31748F"
 
 # Download graph colors
-theme[download_start]="#C4A7E7"
-theme[download_mid]="#C4A7E7"
-theme[download_end]="#C4A7E7"
+theme[download_start]="#31748F"
+theme[download_mid]="#F6C177"
+theme[download_end]="#31748F"
 
 # Upload graph colors
-theme[upload_start]="#C4A7E7"
-theme[upload_mid]="#C4A7E7"
-theme[upload_end]="#C4A7E7"
+theme[upload_start]="#31748F"
+theme[upload_mid]="#F6C177"
+theme[upload_end]="#31748F"

@@ -8,10 +8,9 @@
     "darkGrey": "#1F1D2E",
     "darkGrey2": "#26233A",
     "darkGrey3": "#26233A",
-    "bg5": "#6E6A86",
     "foreground": "#E0DEF4",
     "red": "#EB6F92",
-    "primary": "#C4A7E7",
+    "primary": "#26233A",
     "testFolder": "#403D52"
   },
   "ui": {
@@ -73,8 +72,8 @@
 
       "default": {
         "foreground": "foreground",
-        "startBackground": "bg5",
-        "endBackground": "bg5",
+        "startBackground": "primary",
+        "endBackground": "primary",
         "startBorderColor": "primary",
         "endBorderColor": "primary",
         "focusedBorderColor": "background"
