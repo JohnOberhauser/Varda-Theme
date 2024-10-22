@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define an array of valid arguments
-valid_args=("varda" "everforest" "nord")
+valid_args=("varda" "everforest" "nord" "rosepine")
 
 # Check if an argument is provided
 if [ $# -eq 0 ]; then
@@ -59,28 +59,26 @@ gtk() {
       "varda")
           ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Varda/gtk-4.0 $HOME/.config/
           cp -r $HOME/workspace/Varda-Theme/gtk/themes/Varda/* $HOME/.themes/SystemTheme/
-          dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita'"
-          dconf write /org/gnome/desktop/interface/gtk-theme "'SystemTheme'"
-          flatpak override --user --env=GTK_THEME=SystemTheme
         ;;
       "everforest")
           ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Everforest/gtk-4.0 $HOME/.config/
           cp -r $HOME/workspace/Varda-Theme/gtk/themes/Everforest/* $HOME/.themes/SystemTheme/
-          dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita'"
-          dconf write /org/gnome/desktop/interface/gtk-theme "'SystemTheme'"
-          flatpak override --user --env=GTK_THEME=SystemTheme
         ;;
       "nord")
           ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Nord/gtk-4.0 $HOME/.config/
           cp -r $HOME/workspace/Varda-Theme/gtk/themes/Nord/* $HOME/.themes/SystemTheme/
-          dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita'"
-          dconf write /org/gnome/desktop/interface/gtk-theme "'SystemTheme'"
-          flatpak override --user --env=GTK_THEME=SystemTheme
         ;;
+      "rosepine")
+        ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Rosepine/gtk-4.0 $HOME/.config/
+        cp -r $HOME/workspace/Varda-Theme/gtk/themes/Rosepine/* $HOME/.themes/SystemTheme/
+      ;;
       *)
         echo "no gtk theme"
         ;;
     esac
+  dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita'"
+  dconf write /org/gnome/desktop/interface/gtk-theme "'SystemTheme'"
+  flatpak override --user --env=GTK_THEME=SystemTheme
 }
 
 hypr() {
@@ -110,6 +108,9 @@ btop_theme() {
       "nord")
         sed -i "s|color_theme = \".*\"|color_theme = \"/usr/share/btop/themes/nord.theme\"|" $HOME/.config/btop/btop.conf
         ;;
+      "rosepine")
+        sed -i "s|color_theme = \".*\"|color_theme = \"$HOME/.config/btop/themes/rosepine.theme\"|" $HOME/.config/btop/btop.conf
+        ;;
       *)
         echo "no btop theme"
         ;;
@@ -134,6 +135,10 @@ intellij_idea() {
       sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="Nord" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
       sed -i 's/<laf themeId=".*" \/>/<laf themeId="io.obez.themes.nord" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
       ;;
+    "rosepine")
+      sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="Rosepine" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
+      sed -i 's/<laf themeId=".*" \/>/<laf themeId="io.obez.themes.rosepine" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
+      ;;
     *)
       echo "no jetbrains theme"
       ;;
@@ -157,6 +162,10 @@ android_studio() {
     "nord")
       sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="Nord" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
       sed -i 's/<laf themeId=".*" \/>/<laf themeId="io.obez.themes.nord" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
+      ;;
+    "rosepine")
+      sed -i 's/<global_color_scheme name=".*" \/>/<global_color_scheme name="Rosepine" \/>/' $BASE_DIR/$RECENT_DIR/options/colors.scheme.xml
+      sed -i 's/<laf themeId=".*" \/>/<laf themeId="io.obez.themes.rosepine" \/>/' $BASE_DIR/$RECENT_DIR/options/laf.xml
       ;;
     *)
       echo "no studio theme"

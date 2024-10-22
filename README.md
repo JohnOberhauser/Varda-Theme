@@ -109,3 +109,23 @@ This color palette is from [nord theme](https://www.nordtheme.com/)
 `#EBCB8B` <img src=".colors/nord/EBCB8B.svg" width="20" height="20" style="vertical-align: middle;"/> nord13  
 `#A3BE8C` <img src=".colors/nord/A3BE8C.svg" width="20" height="20" style="vertical-align: middle;"/> nord14  
 `#B48EAD` <img src=".colors/nord/B48EAD.svg" width="20" height="20" style="vertical-align: middle;"/> nord15  
+
+## Rose Pine
+
+`#191724` <img src=".colors/rosepine/191724.svg" width="20" height="20" style="vertical-align: middle;"/> base  
+`#1F1D2E` <img src=".colors/rosepine/1F1D2E.svg" width="20" height="20" style="vertical-align: middle;"/> surface  
+`#26233A` <img src=".colors/rosepine/26233A.svg" width="20" height="20" style="vertical-align: middle;"/> overlay  
+`#6E6A86` <img src=".colors/rosepine/6E6A86.svg" width="20" height="20" style="vertical-align: middle;"/> muted  
+`#908CAA` <img src=".colors/rosepine/908CAA.svg" width="20" height="20" style="vertical-align: middle;"/> subtle  
+
+`#E0DEF4` <img src=".colors/rosepine/E0DEF4.svg" width="20" height="20" style="vertical-align: middle;"/> text  
+`#EB6F92` <img src=".colors/rosepine/EB6F92.svg" width="20" height="20" style="vertical-align: middle;"/> love  
+`#F6C177` <img src=".colors/rosepine/F6C177.svg" width="20" height="20" style="vertical-align: middle;"/> gold  
+`#EBBCBA` <img src=".colors/rosepine/EBBCBA.svg" width="20" height="20" style="vertical-align: middle;"/> rose  
+`#31748F` <img src=".colors/rosepine/31748F.svg" width="20" height="20" style="vertical-align: middle;"/> pine  
+`#9CCFD8` <img src=".colors/rosepine/9CCFD8.svg" width="20" height="20" style="vertical-align: middle;"/> foam  
+`#C4A7E7` <img src=".colors/rosepine/C4A7E7.svg" width="20" height="20" style="vertical-align: middle;"/> iris  
+
+`#21202E` <img src=".colors/rosepine/21202E.svg" width="20" height="20" style="vertical-align: middle;"/> highlightLow  
+`#403D52` <img src=".colors/rosepine/403D52.svg" width="20" height="20" style="vertical-align: middle;"/> highlightMed  
+`#524F67` <img src=".colors/rosepine/524F67.svg" width="20" height="20" style="vertical-align: middle;"/> highlightHigh  

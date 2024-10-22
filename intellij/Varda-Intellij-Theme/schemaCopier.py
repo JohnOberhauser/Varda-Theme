@@ -111,3 +111,24 @@ if __name__ == "__main__":
         "A3BE8C",
         "5E81AC",
     )
+
+    replace_text_in_file(
+        "resources/Varda_Scheme.xml",
+        "resources/Rosepine_Scheme.xml",
+        "Rosepine",
+        "E0DEF4",
+        "191724",
+        "1F1D2E",
+        "1F1D2E",
+        "26233A",
+        "26233A",
+        "6E6A86",
+        "6E6A86",
+        "C4A7E7",
+        "9CCFD8",
+        "EBBCBA",
+        "F6C177",
+        "EB6F92",
+        "31748F",
+        "31748F",
+    )

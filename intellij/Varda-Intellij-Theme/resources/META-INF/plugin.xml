@@ -20,6 +20,7 @@
     <themeProvider id="io.obez.themes.varda" path="/Varda.theme.json"/>
     <themeProvider id="io.obez.themes.everforest" path="/Everforest.theme.json"/>
     <themeProvider id="io.obez.themes.nord" path="/Nord.theme.json"/>
+    <themeProvider id="io.obez.themes.rosepine" path="/Rosepine.theme.json"/>
   </extensions>
 
 </idea-plugin>
