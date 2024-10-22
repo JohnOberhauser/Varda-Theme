@@ -34,10 +34,10 @@ $success: #00FF00;
 } @else if $theme == 'rosepine' {
   $bg: #191724;
   $fg: #E0DEF4;
-  $primary: #31748F;
+  $primary: #26233A;
   $error: #EB6F92;
   $warning: #F6C177;
-  $success: #9CCFD8;
+  $success: #31748F;
 }
 
 @function gtkalpha($c, $a) {
