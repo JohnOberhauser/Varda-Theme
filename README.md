@@ -112,6 +112,16 @@ This color palette is from [nord theme](https://www.nordtheme.com/)
 
 ## Rose Pine
 
+![screenshot](.screenshots/rosepine1.png)
+
+![screenshot](.screenshots/rosepine2.png)
+
+![screenshot](.screenshots/rosepine3.png)
+
+### Color Palette
+
+This color palette is from [rose pine theme](https://rosepinetheme.com/)
+
 `#191724` <img src=".colors/rosepine/191724.svg" width="20" height="20" style="vertical-align: middle;"/> base  
 `#1F1D2E` <img src=".colors/rosepine/1F1D2E.svg" width="20" height="20" style="vertical-align: middle;"/> surface  
 `#26233A` <img src=".colors/rosepine/26233A.svg" width="20" height="20" style="vertical-align: middle;"/> overlay  
