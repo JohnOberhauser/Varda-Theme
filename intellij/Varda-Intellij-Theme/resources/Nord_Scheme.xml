@@ -633,26 +633,26 @@
     </option>
     <option name="DIFF_CONFLICT">
       <value>
-        <option name="BACKGROUND" value="EBCB8B" />
+        <option name="BACKGROUND" value="3f2307" />
         <option name="ERROR_STRIPE_COLOR" value="EBCB8B" />
       </value>
     </option>
     <option name="DIFF_DELETED">
       <value>
-        <option name="BACKGROUND" value="BF616A" />
+        <option name="BACKGROUND" value="340610" />
         <option name="ERROR_STRIPE_COLOR" value="BF616A" />
       </value>
     </option>
     <option name="DIFF_INSERTED">
       <value>
-        <option name="BACKGROUND" value="A3BE8C" />
+        <option name="BACKGROUND" value="42707" />
         <option name="ERROR_STRIPE_COLOR" value="A3BE8C" />
       </value>
     </option>
     <option name="DIFF_MODIFIED">
       <value>
-        <option name="BACKGROUND" value="5E81AC" />
-        <option name="ERROR_STRIPE_COLOR" value="BF616A" />
+        <option name="BACKGROUND" value="62336" />
+        <option name="ERROR_STRIPE_COLOR" value="5E81AC" />
       </value>
     </option>
     <option name="DJANGO_FILTER">
