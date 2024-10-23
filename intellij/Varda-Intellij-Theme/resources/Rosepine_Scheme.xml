@@ -5,7 +5,7 @@
   </metaInfo>
   <colors>
     <option name="ADDED_LINES_COLOR" value="31748F" />
-    <option name="ANNOTATIONS_COLOR" value="a0a7b4" />
+    <option name="ANNOTATIONS_COLOR" value="E0DEF4" />
     <option name="CARET_COLOR" value="C4A7E7" />
     <option name="CARET_ROW_COLOR" value="1F1D2E" />
     <option name="CONSOLE_BACKGROUND_KEY" value="" />
@@ -20,9 +20,10 @@
     <option name="DIAGRAM_NOTE_BORDER" value="403D52" />
     <option name="DIAGRAM_REALIZATION_EDGE" value="98c379" />
     <option name="DIFF_SEPARATORS_BACKGROUND" value="21252b" />
+    <option name="DIFF_SEPARATOR_WAVE" value="6E6A86" />
     <option name="DOCUMENTATION_COLOR" value="403D52" />
     <option name="DOC_COMMENT_LINK" value="C4A7E7" />
-    <option name="ERROR_HINT" value="781732" />
+    <option name="ERROR_HINT" value="EB6F92" />
     <option name="FILESTATUS_ADDED" value="31748F" />
     <option name="FILESTATUS_COPIED" value="31748F" />
     <option name="FILESTATUS_DELETED" value="EB6F92" />
@@ -49,6 +50,7 @@
     <option name="FILESTATUS_modifiedOutside" value="C4A7E7" />
     <option name="FOLDED_TEXT_BORDER_COLOR" value="" />
     <option name="GUTTER_BACKGROUND" value="191724" />
+    <option name="HINT_BORDER" value="6E6A86" />
     <option name="HTML_TAG_TREE_LEVEL0" value="f44747" />
     <option name="HTML_TAG_TREE_LEVEL1" value="93394a" />
     <option name="HTML_TAG_TREE_LEVEL2" value="98c379" />
@@ -56,24 +58,33 @@
     <option name="HTML_TAG_TREE_LEVEL4" value="9ba9b2" />
     <option name="HTML_TAG_TREE_LEVEL5" value="EBBCBA" />
     <option name="IGNORED_ADDED_LINES_BORDER_COLOR" value="31748F" />
+    <option name="IGNORED_DELETED_LINES_BORDER_COLOR" value="6E6A86" />
     <option name="IGNORED_MODIFIED_LINES_BORDER_COLOR" value="C4A7E7" />
     <option name="INDENT_GUIDE" value="524F67" />
     <option name="INFORMATION_HINT" value="403D52" />
     <option name="LINE_NUMBERS_COLOR" value="495162" />
     <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="737984" />
+    <option name="LOOKUP_COLOR" value="6E6A86" />
     <option name="METHOD_SEPARATORS_COLOR" value="3b4048" />
     <option name="MODIFIED_LINES_COLOR" value="F6C177" />
-    <option name="QUESTION_HINT" value="2e4280" />
+    <option name="MODIFIED_TAB_ICON" value="C4A7E7" />
+    <option name="PROMOTION_PANE" value="6E6A86" />
+    <option name="QUESTION_HINT" value="C4A7E7" />
     <option name="RECENT_LOCATIONS_SELECTION" value="403D52" />
     <option name="RIGHT_MARGIN_COLOR" value="524F67" />
     <option name="SELECTED_INDENT_GUIDE" value="524F67" />
-    <option name="SELECTED_TEARLINE_COLOR" value="6b6e73" />
+    <option name="SELECTED_TEARLINE_COLOR" value="6E6A86" />
     <option name="SELECTION_BACKGROUND" value="26233A" />
-    <option name="TEARLINE_COLOR" value="4f575f" />
-    <option name="VCS_ANNOTATIONS_COLOR_1" value="335027" />
-    <option name="VCS_ANNOTATIONS_COLOR_2" value="3e443c" />
-    <option name="VCS_ANNOTATIONS_COLOR_5" value="46333c" />
+    <option name="ScrollBar.hoverThumbColor" value="C4A7E7" />
+    <option name="ScrollBar.thumbColor" value="6E6A86" />
+    <option name="TEARLINE_COLOR" value="6E6A86" />
+    <option name="VCS_ANNOTATIONS_COLOR_1" value="6E6A86" />
+    <option name="VCS_ANNOTATIONS_COLOR_2" value="524F67" />
+    <option name="VCS_ANNOTATIONS_COLOR_3" value="403D52" />
+    <option name="VCS_ANNOTATIONS_COLOR_4" value="26233A" />
+    <option name="VCS_ANNOTATIONS_COLOR_5" value="21202E" />
     <option name="VISUAL_INDENT_GUIDE" value="524F67" />
+    <option name="WARNING_HINT" value="F6C177" />
     <option name="WHITESPACES" value="4b575f" />
     <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="403D52" />
   </colors>
@@ -165,6 +176,11 @@
     <option name="CLASS_REFERENCE">
       <value>
         <option name="FOREGROUND" value="93394a" />
+      </value>
+    </option>
+    <option name="CODE_LENS_BORDER_COLOR">
+      <value>
+        <option name="EFFECT_COLOR" value="E0DEF4" />
       </value>
     </option>
     <option name="COFFEESCRIPT.BOOLEAN">
@@ -1105,8 +1121,26 @@
     </option>
     <option name="LOGCAT_FILTER_KEY">
       <value>
-        <option name="FOREGROUND" value="fefefe" />
+        <option name="FOREGROUND" value="E0DEF4" />
         <option name="BACKGROUND" value="C4A7E7" />
+      </value>
+    </option>
+    <option name="LOGCAT_FILTER_KVALUE">
+      <value>
+        <option name="FOREGROUND" value="E0DEF4" />
+        <option name="BACKGROUND" value="31748F" />
+      </value>
+    </option>
+    <option name="LOGCAT_FILTER_REGEX_KVALUE">
+      <value>
+        <option name="FOREGROUND" value="E0DEF4" />
+        <option name="BACKGROUND" value="31748F" />
+      </value>
+    </option>
+    <option name="LOGCAT_FILTER_STRING_KVALUE">
+      <value>
+        <option name="FOREGROUND" value="E0DEF4" />
+        <option name="BACKGROUND" value="31748F" />
       </value>
     </option>
     <option name="LOGCAT_V2_LEVEL_ASSERT">
