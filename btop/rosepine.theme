@@ -22,7 +22,7 @@ theme[title]="#E0DEF4"
 theme[hi_fg]="#EBBCBA"
 
 # Background color of selected item in processes box
-theme[selected_bg]="#26233A"
+theme[selected_bg]="#403D52"
 
 # Foreground color of selected item in processes box
 theme[selected_fg]="#E0DEF4"
@@ -31,22 +31,22 @@ theme[selected_fg]="#E0DEF4"
 theme[inactive_fg]="#E0DEF4"
 
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text
-theme[proc_misc]="#26233A"
+theme[proc_misc]="#403D52"
 
 # Cpu box outline color
-theme[cpu_box]="#26233A"
+theme[cpu_box]="#403D52"
 
 # Memory/disks box outline color
-theme[mem_box]="#26233A"
+theme[mem_box]="#403D52"
 
 # Net up/down box outline color
-theme[net_box]="#26233A"
+theme[net_box]="#403D52"
 
 # Processes box outline color
-theme[proc_box]="#26233A"
+theme[proc_box]="#403D52"
 
 # Box divider line and small boxes line color
-theme[div_line]="#26233A"
+theme[div_line]="#403D52"
 
 #================= Meters ==================
 # Mem/Disk used meter

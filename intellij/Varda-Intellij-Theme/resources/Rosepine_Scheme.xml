@@ -17,18 +17,18 @@
     <option name="DIAGRAM_NODE_BACKGROUND" value="323844" />
     <option name="DIAGRAM_NODE_HEADER" value="414855" />
     <option name="DIAGRAM_NOTE_BACKGROUND" value="414855" />
-    <option name="DIAGRAM_NOTE_BORDER" value="26233A" />
+    <option name="DIAGRAM_NOTE_BORDER" value="403D52" />
     <option name="DIAGRAM_REALIZATION_EDGE" value="98c379" />
     <option name="DIFF_SEPARATORS_BACKGROUND" value="21252b" />
-    <option name="DOCUMENTATION_COLOR" value="26233A" />
+    <option name="DOCUMENTATION_COLOR" value="403D52" />
     <option name="DOC_COMMENT_LINK" value="C4A7E7" />
     <option name="ERROR_HINT" value="781732" />
     <option name="FILESTATUS_ADDED" value="31748F" />
     <option name="FILESTATUS_COPIED" value="31748F" />
     <option name="FILESTATUS_DELETED" value="EB6F92" />
     <option name="FILESTATUS_HIJACKED" value="F6C177" />
-    <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="6E6A86" />
-    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="6E6A86" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="524F67" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="524F67" />
     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_BOTH_CONFLICTS" value="EB6F92" />
     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_CONFLICTS" value="EB6F92" />
     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_PROPERTY_CONFLICTS" value="EB6F92" />
@@ -57,25 +57,25 @@
     <option name="HTML_TAG_TREE_LEVEL5" value="EBBCBA" />
     <option name="IGNORED_ADDED_LINES_BORDER_COLOR" value="31748F" />
     <option name="IGNORED_MODIFIED_LINES_BORDER_COLOR" value="C4A7E7" />
-    <option name="INDENT_GUIDE" value="6E6A86" />
-    <option name="INFORMATION_HINT" value="26233A" />
+    <option name="INDENT_GUIDE" value="524F67" />
+    <option name="INFORMATION_HINT" value="403D52" />
     <option name="LINE_NUMBERS_COLOR" value="495162" />
     <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="737984" />
     <option name="METHOD_SEPARATORS_COLOR" value="3b4048" />
     <option name="MODIFIED_LINES_COLOR" value="F6C177" />
     <option name="QUESTION_HINT" value="2e4280" />
-    <option name="RECENT_LOCATIONS_SELECTION" value="26233A" />
-    <option name="RIGHT_MARGIN_COLOR" value="6E6A86" />
-    <option name="SELECTED_INDENT_GUIDE" value="6E6A86" />
+    <option name="RECENT_LOCATIONS_SELECTION" value="403D52" />
+    <option name="RIGHT_MARGIN_COLOR" value="524F67" />
+    <option name="SELECTED_INDENT_GUIDE" value="524F67" />
     <option name="SELECTED_TEARLINE_COLOR" value="6b6e73" />
     <option name="SELECTION_BACKGROUND" value="26233A" />
     <option name="TEARLINE_COLOR" value="4f575f" />
     <option name="VCS_ANNOTATIONS_COLOR_1" value="335027" />
     <option name="VCS_ANNOTATIONS_COLOR_2" value="3e443c" />
     <option name="VCS_ANNOTATIONS_COLOR_5" value="46333c" />
-    <option name="VISUAL_INDENT_GUIDE" value="6E6A86" />
+    <option name="VISUAL_INDENT_GUIDE" value="524F67" />
     <option name="WHITESPACES" value="4b575f" />
-    <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="26233A" />
+    <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="403D52" />
   </colors>
   <attributes>
     <option name="ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES">
@@ -118,7 +118,7 @@
     </option>
     <option name="BASH.SHEBANG">
       <value>
-        <option name="FOREGROUND" value="26233A" />
+        <option name="FOREGROUND" value="403D52" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -299,7 +299,7 @@
     </option>
     <option name="CONSOLE_RANGE_TO_EXECUTE">
       <value>
-        <option name="EFFECT_COLOR" value="26233A" />
+        <option name="EFFECT_COLOR" value="403D52" />
       </value>
     </option>
     <option name="CONSOLE_RED_BRIGHT_OUTPUT">
@@ -456,13 +456,13 @@
     </option>
     <option name="DEBUGGER_INLINED_VALUES">
       <value>
-        <option name="FOREGROUND" value="26233A" />
+        <option name="FOREGROUND" value="403D52" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="DEBUGGER_INLINED_VALUES_EXECUTION_LINE">
       <value>
-        <option name="FOREGROUND" value="26233A" />
+        <option name="FOREGROUND" value="403D52" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -705,7 +705,7 @@
     <option name="FOLDED_TEXT_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="E0DEF4" />
-        <option name="BACKGROUND" value="26233A" />
+        <option name="BACKGROUND" value="403D52" />
         <option name="EFFECT_TYPE" value="2" />
       </value>
     </option>
@@ -733,7 +733,7 @@
     </option>
     <option name="GO_BLOCK_COMMENT">
       <value>
-        <option name="FOREGROUND" value="26233A" />
+        <option name="FOREGROUND" value="403D52" />
       </value>
     </option>
     <option name="GO_BUILTIN_CONSTANT">
@@ -778,7 +778,7 @@
     </option>
     <option name="GO_LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="26233A" />
+        <option name="FOREGROUND" value="403D52" />
       </value>
     </option>
     <option name="GO_LOCAL_FUNCTION">
@@ -818,7 +818,7 @@
     </option>
     <option name="HAML_COMMENT">
       <value>
-        <option name="FOREGROUND" value="26233A" />
+        <option name="FOREGROUND" value="403D52" />
       </value>
     </option>
     <option name="HAML_FILTER">
@@ -922,7 +922,7 @@
     <option name="INLINE_PARAMETER_HINT_HIGHLIGHTED">
       <value>
         <option name="FOREGROUND" value="e3ffff" />
-        <option name="BACKGROUND" value="26233A" />
+        <option name="BACKGROUND" value="403D52" />
       </value>
     </option>
     <option name="IVAR">
@@ -1242,7 +1242,7 @@
     </option>
     <option name="MARKDOWN_TABLE_SEPARATOR">
       <value>
-        <option name="FOREGROUND" value="26233A" />
+        <option name="FOREGROUND" value="403D52" />
       </value>
     </option>
     <option name="MARKED_FOR_REMOVAL_ATTRIBUTES">
@@ -1253,7 +1253,7 @@
     </option>
     <option name="MATCHED_BRACE_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="26233A" />
+        <option name="BACKGROUND" value="403D52" />
       </value>
     </option>
     <option name="MESSAGE_ARGUMENT">
@@ -1294,7 +1294,7 @@
     </option>
     <option name="OC.CONDITIONALLY_NOT_COMPILED">
       <value>
-        <option name="FOREGROUND" value="26233A" />
+        <option name="FOREGROUND" value="403D52" />
       </value>
     </option>
     <option name="OC.CPP_KEYWORD">
@@ -1539,7 +1539,7 @@
     </option>
     <option name="REST.FIXED">
       <value>
-        <option name="BACKGROUND" value="26233A" />
+        <option name="BACKGROUND" value="403D52" />
       </value>
     </option>
     <option name="REST.INTERPRETED">
@@ -1587,7 +1587,7 @@
     </option>
     <option name="RUBY_COMMENT">
       <value>
-        <option name="FOREGROUND" value="26233A" />
+        <option name="FOREGROUND" value="403D52" />
       </value>
     </option>
     <option name="RUBY_CONSTANT">
@@ -1763,7 +1763,7 @@
     </option>
     <option name="SLIM_COMMENT">
       <value>
-        <option name="FOREGROUND" value="26233A" />
+        <option name="FOREGROUND" value="403D52" />
       </value>
     </option>
     <option name="SLIM_DOCTYPE_KWD">
@@ -1834,7 +1834,7 @@
     </option>
     <option name="SWIFT_SHEBANG_COMMENT">
       <value>
-        <option name="FOREGROUND" value="26233A" />
+        <option name="FOREGROUND" value="403D52" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>

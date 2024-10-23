@@ -124,7 +124,10 @@ This color palette is from [rose pine theme](https://rosepinetheme.com/)
 
 `#191724` <img src=".colors/rosepine/191724.svg" width="20" height="20" style="vertical-align: middle;"/> base  
 `#1F1D2E` <img src=".colors/rosepine/1F1D2E.svg" width="20" height="20" style="vertical-align: middle;"/> surface  
+`#21202E` <img src=".colors/rosepine/21202E.svg" width="20" height="20" style="vertical-align: middle;"/> highlightLow  
 `#26233A` <img src=".colors/rosepine/26233A.svg" width="20" height="20" style="vertical-align: middle;"/> overlay  
+`#403D52` <img src=".colors/rosepine/403D52.svg" width="20" height="20" style="vertical-align: middle;"/> highlightMed  
+`#524F67` <img src=".colors/rosepine/524F67.svg" width="20" height="20" style="vertical-align: middle;"/> highlightHigh   
 `#6E6A86` <img src=".colors/rosepine/6E6A86.svg" width="20" height="20" style="vertical-align: middle;"/> muted  
 `#908CAA` <img src=".colors/rosepine/908CAA.svg" width="20" height="20" style="vertical-align: middle;"/> subtle  
 
@@ -136,6 +139,3 @@ This color palette is from [rose pine theme](https://rosepinetheme.com/)
 `#9CCFD8` <img src=".colors/rosepine/9CCFD8.svg" width="20" height="20" style="vertical-align: middle;"/> foam  
 `#C4A7E7` <img src=".colors/rosepine/C4A7E7.svg" width="20" height="20" style="vertical-align: middle;"/> iris  
 
-`#21202E` <img src=".colors/rosepine/21202E.svg" width="20" height="20" style="vertical-align: middle;"/> highlightLow  
-`#403D52` <img src=".colors/rosepine/403D52.svg" width="20" height="20" style="vertical-align: middle;"/> highlightMed  
-`#524F67` <img src=".colors/rosepine/524F67.svg" width="20" height="20" style="vertical-align: middle;"/> highlightHigh  
