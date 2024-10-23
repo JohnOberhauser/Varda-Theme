@@ -1,98 +1,33 @@
 @import "colors.css";
-/*
-U R L - B A R
-*/
 
-#urlbar[breakout] {
-    margin-inline-start: 0 !important;
-    width: 100% !important;
-    left: 0 !important;
-    top: calc(
-            (var(--urlbar-container-height) - var(--urlbar-height)) / 2
-    ) !important;
+/**
+ Hidden
+ */
+
+#pageAction-urlbar-_testpilot-containers {
+    display: none;
 }
 
-@-moz-document url(chrome://browser/content/browser.xhtml)
-{
-    #urlbar[breakout][breakout-extend] > #urlbar-background {
-        animation-name: none !important;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) !important;
-    }
-}
-
-#urlbar[breakout]:not([open]) {
-    bottom: calc(
-            (var(--urlbar-container-height) - var(--urlbar-height)) / 2
-    ) !important;
-}
-
-
-#urlbar[breakout-extend] {
-    top: calc(
-            (var(--urlbar-container-height) - var(--urlbar-height)) / 2
-    ) !important;
-    left: calc(
-            (var(--urlbar-toolbar-width) - var(--urlbar-width)) / 2
-    ) !important;
-    width: 100% !important;
-}
-
-#urlbar[breakout-extend] #urlbar-input-container {
-    height: calc(var(--tab-min-height) - 3px) !important;
-    padding: 0 !important;
-}
-
-#urlbar-input-container {
-    padding: 0 !important;
-    height: 100% !important;
-    margin-left: 10px !important;
+#urlbar-label-box, #urlbar-search-mode-indicator {
+    display: none !important;
 }
 
 #identity-box {
     display: none;
 }
 
-.urlbarView-row {
-    padding: 0 !important;
-}
-
-#searchbar {
-    border: none !important;
-}
-
-.searchbar-textbox {
-    font-weight: 700 !important;
-}
+/**
+ Colors
+ */
 
 #urlbar-background {
     background: var(--bg-color) !important;
-}
-
-#urlbar-container {
-    min-width: 150px !important;
 }
 
 #urlbar {
     border: none !important;
     box-shadow: none !important;
     color: var(--fg-color) !important;
-}
-
-#page-action-buttons {
-    margin-right: 10px !important;
-}
-
-#pageAction-urlbar-_testpilot-containers {
-    display: none;
-}
-
-.urlbarView {
-    margin: 0 !important;
-    width: 100% !important;
-}
-
-#urlbar-label-box, #urlbar-search-mode-indicator {
-    display: none !important;
 }
 
 .urlbar-icon {
