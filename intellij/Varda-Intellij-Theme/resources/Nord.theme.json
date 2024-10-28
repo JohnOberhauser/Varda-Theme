@@ -11,8 +11,7 @@
     "buttonBackground": "#5E81AC",
     "foreground": "#D8DEE9",
     "red": "#BF616A",
-    "primary": "#81A1C1",
-    "testFolder": "#A3BE8C"
+    "primary": "#81A1C1"
   },
   "icons": {
     "ColorPalette": {
@@ -181,7 +180,7 @@
     },
     "FileColor": {
       "Yellow": "background",
-      "Green": "testFolder"
+      "Green": "darkGrey2"
     },
     "SearchMatch": {
       "startBackground": "primary",
