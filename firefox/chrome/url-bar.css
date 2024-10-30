@@ -16,6 +16,10 @@
     display: none;
 }
 
+#urlbar-searchmode-switcher {
+    display: none !important;
+}
+
 /**
  Colors
  */
