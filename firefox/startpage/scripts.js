@@ -52,7 +52,7 @@ const bookmarks = [
       {"id":"PeIbQBjpA41kjGD6","label":"Sh","url":"https://reddit.com/"},
       {"id":"PeIbQBjpA41kjGD6","label":"Foss","url":"https://fosstodon.org/home"},
       {"id":"fgOAsCWGRNHCRZQR","label":"G","url":"https://boards.4channel.org/g/catalog"},
-      {"id":"PeIbQBjpA41kjGD6","label":"LinkedIn","url":"https://www.linkedin.com"},
+      {"id":"PeIbQBjpA41kjGD6","label":"Slack","url":"https://app.slack.com/client"},
     ]
   },
   {"id":"qjTUGL2OWFspQdfe","label":"Finance","bookmarks":[
@@ -80,7 +80,7 @@ const bookmarks = [
       {"id":"pZDB2ilcq8t0m611","label":"Maps","url":"https://www.google.com/maps"},
       {"id":"5YRKKQap76zg1Z11","label":"Amazon","url":"https://www.amazon.com/"},
       {"id":"R37Y4hMSIvTGhR11","label":"ChatGPT","url":"https://chat.openai.com/"},
-      {"id":"ereuzztrzJbI0l11","label":"Pi Hole","url":"http://pi.hole/admin/index.php"}
+      {"id":"ereuzztrzJbI0l11","label":"Spotify","url":"https://open.spotify.com/"}
     ]
   }
 ]
