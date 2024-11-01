@@ -5,10 +5,10 @@ import BrightnessAlert from "./js/alerts/BrightnessAlert.js";
 import BluetoothWindow from "./js/bluetooth/BluetoothWindow.js";
 import OverviewWindow from "./js/overview/OverviewWindow.js";
 import NotificationPopups from "./js/notification/NotificationPopups.js";
+import {buildCss, setupStyleUpdater} from "./styleManager.js";
 
-const scss = `${App.configDir}/scss/main.scss`
-const css = `${App.configDir}/style.css`
-Utils.exec(`sassc ${scss} ${css}`)
+buildCss()
+setupStyleUpdater()
 
 App.config({
     style: App.configDir + '/style.css',

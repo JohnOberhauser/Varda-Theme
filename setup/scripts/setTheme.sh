@@ -24,8 +24,7 @@ cd "$(dirname "$0")"
 cd ../..
 
 ags_theme() {
-  cp ./setup/themes/$1/ags/variables.scss ./ags/scss/
-  nohup ./hypr/scripts/launchers/ags.sh > /dev/null 2>&1 &
+  cat ./setup/themes/$1/ags/variables.scss > ./ags/scss/variables.scss
 }
 
 kitty_theme() {
