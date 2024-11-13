@@ -52,7 +52,7 @@ const bookmarks = [
       {"id":"PeIbQBjpA41kjGD6","label":"Sh","url":"https://reddit.com/"},
       {"id":"PeIbQBjpA41kjGD6","label":"Foss","url":"https://fosstodon.org/home"},
       {"id":"fgOAsCWGRNHCRZQR","label":"G","url":"https://boards.4channel.org/g/catalog"},
-      {"id":"PeIbQBjpA41kjGD6","label":"Slack","url":"https://app.slack.com/client"},
+      {"id":"PeIbQBjpA41kjGD6","label":"Bsky","url":"https://bsky.app/"},
     ]
   },
   {"id":"qjTUGL2OWFspQdfe","label":"Finance","bookmarks":[
