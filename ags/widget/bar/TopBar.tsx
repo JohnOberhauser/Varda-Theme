@@ -1,5 +1,5 @@
-import { App, Astal, Gtk, Gdk } from "astal/gtk3"
-import {Workspaces} from "./BarWidgets";
+import { App, Astal, Gtk } from "astal/gtk3"
+import {ClockButton, Workspaces} from "./BarWidgets";
 
 export default function TopBar() {
     return <window
@@ -16,13 +16,13 @@ export default function TopBar() {
                 padding: 2px;
                 min-height: 40px;
             `}>
-            <box hexpand halign={Gtk.Align.START}>
+            <box halign={Gtk.Align.START}>
                 <Workspaces vertical={false}/>
             </box>
             <box>
-
+                <ClockButton css={""} singleLine={true}/>
             </box>
-            <box hexpand halign={Gtk.Align.END}>
+            <box halign={Gtk.Align.END}>
 
             </box>
         </centerbox>
