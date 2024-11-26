@@ -2,6 +2,8 @@ import {bind, GLib, Variable} from "astal"
 import {App} from "astal/gtk3"
 import Hyprland from "gi://AstalHyprland"
 import {CalendarWindow} from "../calendar/Calendar";
+import Wp from "gi://AstalWp"
+import {getVolumeIcon} from "../utils/audio";
 
 export function Workspaces({vertical}: { vertical: boolean }) {
     const hypr = Hyprland.get_default()
@@ -64,4 +66,14 @@ export function ScreenRecordingButton({css}: { css: string }) {
                 }
             })
         }}/>
+}
+
+export function VolumeButton({css}: {css: string}) {
+    const speaker = Wp.get_default()!.audio.defaultSpeaker
+
+    return <label
+    css={css}
+    label={bind(speaker, "volume").as((value: number): string => {
+        return getVolumeIcon(value, speaker)
+    })}/>
 }
