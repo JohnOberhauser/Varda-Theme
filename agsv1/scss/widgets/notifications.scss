@@ -1,0 +1,35 @@
+@import "../variables";
+
+.notification {
+  all: unset;
+  min-width: 350px;
+  margin: 10px;
+}
+
+.notification-close-button {
+  all: unset;
+  margin: 10px;
+  padding: 4px;
+  background: Transparent;
+}
+
+.notification-close-button:hover {
+  background-color: $bgHover;
+}
+
+.notification-time {
+  all: unset;
+  margin-top: 2px;
+}
+
+.notification-title {
+  all: unset;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.notification-description {
+  all: unset;
+  margin-left: 10px;
+  margin-right: 10px;
+}

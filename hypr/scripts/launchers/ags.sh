@@ -1,9 +1,9 @@
 #!/bin/bash
 
-ags -q
+agsv1 -q
 
 if [[ $VARDA == "laptop" ]]; then
-  ags --config $HOME/.config/ags/topbarConfig.js
+  agsv1 --config $HOME/workspace/Varda-Theme/agsv1/topbarConfig.js
 else
-  ags --config $HOME/.config/ags/sidebarConfig.js
+  agsv1 --config $HOME/workspace/Varda-Theme/agsv1/sidebarConfig.js
 fi
