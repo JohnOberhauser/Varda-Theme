@@ -1,9 +1,9 @@
-import { Variable, GLib, bind } from "astal"
-import { App, Astal } from "astal/gtk3"
+import {bind, GLib, Variable} from "astal"
+import {App} from "astal/gtk3"
 import Hyprland from "gi://AstalHyprland"
 import {CalendarWindow} from "../calendar/Calendar";
 
-export function Workspaces({ vertical }: { vertical: boolean }) {
+export function Workspaces({vertical}: { vertical: boolean }) {
     const hypr = Hyprland.get_default()
 
     return <box
@@ -26,7 +26,7 @@ export function Workspaces({ vertical }: { vertical: boolean }) {
     </box>
 }
 
-export function ClockButton({ css, singleLine }: { css: string, singleLine: boolean }) {
+export function ClockButton({css, singleLine}: { css: string, singleLine: boolean }) {
     let format: string
 
     if (singleLine) {
@@ -39,10 +39,29 @@ export function ClockButton({ css, singleLine }: { css: string, singleLine: bool
         GLib.DateTime.new_now_local().format(format)!)
 
     return <button
-    className="iconButton"
-    css={css}
-    label={time()}
-    onClicked={() => { App.toggle_window(CalendarWindow) }}>
+        className="iconButton"
+        css={css}
+        label={time()}
+        onClicked={() => {
+            App.toggle_window(CalendarWindow)
+        }}>
 
     </button>
+}
+
+export function ScreenRecordingButton({css}: { css: string }) {
+    const hypr = Hyprland.get_default()
+
+    return <label
+        className="iconButton"
+        css={css}
+        label="󰹑"
+        visible={false}
+        setup={(self) => {
+            self.hook(hypr, "event", (_, name, data) => {
+                if (name === "screencast") {
+                    self.visible = data[0] === "1"
+                }
+            })
+        }}/>
 }

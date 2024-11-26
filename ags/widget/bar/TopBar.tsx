@@ -1,7 +1,9 @@
 import { App, Astal, Gtk } from "astal/gtk3"
-import {ClockButton, Workspaces} from "./BarWidgets";
+import {ClockButton, Workspaces, ScreenRecordingButton} from "./BarWidgets";
 
 export default function TopBar() {
+    let iconCss = "margin-left: 10px;"
+
     return <window
         className="window"
         monitor={0}
@@ -23,7 +25,7 @@ export default function TopBar() {
                 <ClockButton css={""} singleLine={true}/>
             </box>
             <box halign={Gtk.Align.END}>
-
+                <ScreenRecordingButton css={iconCss}/>
             </box>
         </centerbox>
     </window>
