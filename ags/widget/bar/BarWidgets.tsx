@@ -4,7 +4,7 @@ import Hyprland from "gi://AstalHyprland"
 import {CalendarWindow} from "../calendar/Calendar";
 import Wp from "gi://AstalWp"
 import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio";
-import { timeout } from "astal/time"
+import { execAsync } from "astal/process"
 
 export function Workspaces({vertical}: { vertical: boolean }) {
     const hypr = Hyprland.get_default()
@@ -89,4 +89,16 @@ export function MicrophoneButton({css}: {css: string}) {
         label={bind(defaultMicrophone, "volumeIcon").as((): string => {
             return getMicrophoneIcon(defaultMicrophone)
         })}/>
+}
+
+export function BluetoothButton({css}: {css: string}) {
+    return <button
+        css={css}
+        className="iconButton"
+        label="󰂯"
+        onClicked={() => {
+            execAsync("blueman-manager")
+        }}>
+
+    </button>
 }

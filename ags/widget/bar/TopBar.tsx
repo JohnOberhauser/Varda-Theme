@@ -1,5 +1,12 @@
 import { App, Astal, Gtk } from "astal/gtk3"
-import {ClockButton, Workspaces, ScreenRecordingButton, VolumeButton, MicrophoneButton} from "./BarWidgets";
+import {
+    ClockButton,
+    Workspaces,
+    ScreenRecordingButton,
+    VolumeButton,
+    MicrophoneButton,
+    BluetoothButton
+} from "./BarWidgets";
 
 export default function TopBar() {
     let iconCss = "margin-left: 10px;"
@@ -28,6 +35,7 @@ export default function TopBar() {
                 <ScreenRecordingButton css={iconCss}/>
                 <VolumeButton css={iconCss}/>
                 <MicrophoneButton css={iconCss}/>
+                <BluetoothButton css={iconCss}/>
             </box>
         </centerbox>
     </window>
