@@ -4,8 +4,10 @@ import Hyprland from "gi://AstalHyprland"
 import {CalendarWindow} from "../calendar/Calendar"
 import Wp from "gi://AstalWp"
 import AstalNetwork from "gi://AstalNetwork"
+import Battery from "gi://AstalBattery"
 import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio"
 import {getNetworkIcon} from "../utils/network"
+import {getBatteryIcon} from "../utils/battery"
 import { execAsync } from "astal/process"
 
 export function Workspaces({vertical}: { vertical: boolean }) {
@@ -62,7 +64,7 @@ export function ScreenRecordingButton({css}: { css: string }) {
         css={css}
         label="󰹑"
         visible={false}
-        setup={(self) => {
+        setup={self => {
             self.hook(hypr, "event", (_, name, data) => {
                 if (name === "screencast") {
                     self.visible = data[0] === "1"
@@ -116,5 +118,20 @@ export function NetworkButton({css}: {css: string}) {
             execAsync('bash -c "kitty -e $HOME/.config/kitty/nmtui.sh"')
                 .then((out) => console.log(out))
                 .catch((err) => console.error(err))
+        }}/>
+}
+
+export function BatteryButton({css}: {css: string}) {
+    const battery = Battery.get_default()
+
+    return <label
+        css={css}
+        className="iconButton"
+        label={bind(battery, "iconName").as((): string => {
+            return getBatteryIcon(battery)
+        })}
+        //TODO battery visibility
+        setup={self => {
+            //TODO battery warning
         }}/>
 }
