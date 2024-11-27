@@ -9,6 +9,8 @@ import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio"
 import {getNetworkIcon} from "../utils/network"
 import {getBatteryIcon} from "../utils/battery"
 import { execAsync } from "astal/process"
+import { interval } from "astal/time"
+import AstalIO from "gi://AstalIO?version=0.1";
 
 export function Workspaces({vertical}: { vertical: boolean }) {
     const hypr = Hyprland.get_default()
@@ -124,14 +126,33 @@ export function NetworkButton({css}: {css: string}) {
 export function BatteryButton({css}: {css: string}) {
     const battery = Battery.get_default()
 
+    let batteryWarningInterval: GLib.Source | null = null
+
+    function warningSound() {
+        execAsync('bash -c "play $HOME/.config/hypr/assets/sounds/battery-low.ogg"')
+    }
+
     return <label
         css={css}
-        className="iconButton"
+        className={bind(battery, "warningLevel").as((level): string => {
+            if (level === Battery.WarningLevel.CRITICIAL || battery.state === Battery.State.CHARGING) {
+                if (batteryWarningInterval != null) {
+                    batteryWarningInterval.destroy()
+                    batteryWarningInterval = null
+                }
+                return "iconButton"
+            } else {
+                if (batteryWarningInterval === null) {
+                    batteryWarningInterval = setInterval(() => {
+                        warningSound()
+                    }, 120_000)
+                    warningSound()
+                }
+                return "warningIconButton"
+            }
+        })}
         label={bind(battery, "iconName").as((): string => {
             return getBatteryIcon(battery)
         })}
-        //TODO battery visibility
-        setup={self => {
-            //TODO battery warning
-        }}/>
+        visible={bind(battery, "isBattery")}/>
 }

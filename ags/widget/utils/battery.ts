@@ -2,7 +2,7 @@ import Battery from "gi://AstalBattery"
 
 export function getBatteryIcon(battery: Battery.Device) {
     const percent = battery.percentage
-    if (battery.charging) {
+    if (battery.state === Battery.State.CHARGING) {
         if (percent <= 0.1) {
             return "󰢜"
         } else if (percent <= 0.2) {
