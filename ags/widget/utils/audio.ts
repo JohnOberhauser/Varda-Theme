@@ -1,6 +1,6 @@
 import Wp from "gi://AstalWp"
 
-export function getVolumeIcon(speaker?: Wp.Endpoint): string {
+export function getVolumeIcon(speaker?: Wp.Endpoint) {
     let volume = speaker?.volume
     let speakerDescription = speaker?.description
     if (volume == null || speakerDescription == null) return ""

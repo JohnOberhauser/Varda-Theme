@@ -5,7 +5,7 @@ import {
     ScreenRecordingButton,
     VolumeButton,
     MicrophoneButton,
-    BluetoothButton, NetworkButton, BatteryButton
+    BluetoothButton, NetworkButton, BatteryButton, MenuButton
 } from "./BarWidgets";
 
 export default function TopBar() {
@@ -38,6 +38,7 @@ export default function TopBar() {
                 <BluetoothButton css={iconCss}/>
                 <NetworkButton css={iconCss}/>
                 <BatteryButton css={iconCss}/>
+                <MenuButton css={"margin-right: 10px;"}/>
             </box>
         </centerbox>
     </window>

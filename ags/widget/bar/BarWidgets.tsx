@@ -9,8 +9,6 @@ import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio"
 import {getNetworkIcon} from "../utils/network"
 import {getBatteryIcon} from "../utils/battery"
 import { execAsync } from "astal/process"
-import { interval } from "astal/time"
-import AstalIO from "gi://AstalIO?version=0.1";
 
 export function Workspaces({vertical}: { vertical: boolean }) {
     const hypr = Hyprland.get_default()
@@ -78,12 +76,15 @@ export function ScreenRecordingButton({css}: { css: string }) {
 export function VolumeButton({css}: {css: string}) {
     const {defaultSpeaker} = Wp.get_default()!.audio
 
+    const speakerVar = Variable.derive([
+        bind(defaultSpeaker, "description"),
+        bind(defaultSpeaker, "volume")
+    ])
+
     return <label
         css={css}
         className="iconButton"
-        label={bind(defaultSpeaker, "volumeIcon").as((): string => {
-            return getVolumeIcon(defaultSpeaker)
-        })}/>
+        label={speakerVar(() => getVolumeIcon(defaultSpeaker))}/>
 }
 
 export function MicrophoneButton({css}: {css: string}) {
@@ -110,16 +111,17 @@ export function BluetoothButton({css}: {css: string}) {
 export function NetworkButton({css}: {css: string}) {
     const network = AstalNetwork.get_default()
 
+    const networkVar = Variable.derive([
+        bind(network, "connectivity"),
+        bind(network.wifi, "strength")
+    ])
+
     return <button
         css={css}
         className="iconButton"
-        label={bind(network, "connectivity").as((): string => {
-            return getNetworkIcon(network)
-        })}
+        label={networkVar(() => getNetworkIcon(network))}
         onClicked={() => {
             execAsync('bash -c "kitty -e $HOME/.config/kitty/nmtui.sh"')
-                .then((out) => console.log(out))
-                .catch((err) => console.error(err))
         }}/>
 }
 
@@ -132,10 +134,15 @@ export function BatteryButton({css}: {css: string}) {
         execAsync('bash -c "play $HOME/.config/hypr/assets/sounds/battery-low.ogg"')
     }
 
+    const batteryVar = Variable.derive([
+        bind(battery, "percentage"),
+        bind(battery, "state")
+    ])
+
     return <label
         css={css}
-        className={bind(battery, "warningLevel").as((level): string => {
-            if (level === Battery.WarningLevel.CRITICIAL || battery.state === Battery.State.CHARGING) {
+        className={batteryVar((value) => {
+            if (value[0] > 0.04 || battery.state === Battery.State.CHARGING) {
                 if (batteryWarningInterval != null) {
                     batteryWarningInterval.destroy()
                     batteryWarningInterval = null
@@ -151,8 +158,16 @@ export function BatteryButton({css}: {css: string}) {
                 return "warningIconButton"
             }
         })}
-        label={bind(battery, "iconName").as((): string => {
-            return getBatteryIcon(battery)
-        })}
+        label={batteryVar(() => getBatteryIcon(battery))}
         visible={bind(battery, "isBattery")}/>
+}
+
+export function MenuButton({css}: {css: string}) {
+    return <button
+        css={css}
+        className="iconButton"
+        label=""
+        onClicked={() => {
+
+        }}/>
 }
