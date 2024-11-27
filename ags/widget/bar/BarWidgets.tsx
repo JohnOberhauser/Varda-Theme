@@ -1,9 +1,11 @@
 import {bind, GLib, Variable} from "astal"
 import {App} from "astal/gtk3"
 import Hyprland from "gi://AstalHyprland"
-import {CalendarWindow} from "../calendar/Calendar";
+import {CalendarWindow} from "../calendar/Calendar"
 import Wp from "gi://AstalWp"
-import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio";
+import AstalNetwork from "gi://AstalNetwork"
+import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio"
+import {getNetworkIcon} from "../utils/network"
 import { execAsync } from "astal/process"
 
 export function Workspaces({vertical}: { vertical: boolean }) {
@@ -98,7 +100,21 @@ export function BluetoothButton({css}: {css: string}) {
         label="󰂯"
         onClicked={() => {
             execAsync("blueman-manager")
-        }}>
+        }}/>
+}
 
-    </button>
+export function NetworkButton({css}: {css: string}) {
+    const network = AstalNetwork.get_default()
+
+    return <button
+        css={css}
+        className="iconButton"
+        label={bind(network, "connectivity").as((): string => {
+            return getNetworkIcon(network)
+        })}
+        onClicked={() => {
+            execAsync('bash -c "kitty -e $HOME/.config/kitty/nmtui.sh"')
+                .then((out) => console.log(out))
+                .catch((err) => console.error(err))
+        }}/>
 }
