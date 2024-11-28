@@ -38,8 +38,6 @@ export default function (
         })
     }, 1_000)
 
-    let test = bind(audio, "speakers")
-
     return <box
         vertical={true}>
         <box

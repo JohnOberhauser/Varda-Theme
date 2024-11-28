@@ -10,7 +10,7 @@ export const SystemMenuWindowName = "systemMenuWindow"
 export default function (anchor: Astal.WindowAnchor) {
     const {audio} = Wp.get_default()!
     return <window
-        exclusivity={Astal.Exclusivity.EXCLUSIVE}
+        exclusivity={Astal.Exclusivity.NORMAL}
         anchor={anchor}
         layer={Astal.Layer.OVERLAY}
         className="window"
