@@ -1,27 +1,44 @@
 import Wp from "gi://AstalWp"
-import {bind, Variable} from "astal"
-import {getVolumeIcon} from "../utils/audio";
+import {bind, Variable, Binding} from "astal"
 import {Gtk, App} from "astal/gtk3"
 import {truncateString} from "../utils/strings";
 import {SystemMenuWindowName} from "./SystemMenuWindow";
 
-export function SpeakerVolume() {
-    const speakerChooserRevealed = Variable(false)
+/**
+ * An Endpoint is either a speaker or microphone
+ *
+ * @param defaultEndpoint either [Wp.Audio.default_speaker] or [Wp.Audio.default_microphone]
+ * @param getIcon function that takes an Endpoint and returns the proper string icon
+ * @param endpointsBinding binding obtained via [bind(Wp.Audio, "speakers")] or [bind(Wp.Audio, "microphones"]
+ */
+export function EndpointControls(
+    {
+        defaultEndpoint,
+        getIcon,
+        endpointsBinding
+    }: {
+        defaultEndpoint: Wp.Endpoint,
+        getIcon: (endpoint: Wp.Endpoint) => string,
+        endpointsBinding: Binding<Wp.Endpoint[]>
+    }
+) {
+    const endpointChooserRevealed = Variable(false)
     const {audio} = Wp.get_default()!
-    const {defaultSpeaker} = audio
 
-    const speakerLabelVar = Variable.derive([
-        bind(defaultSpeaker, "description"),
-        bind(defaultSpeaker, "volume")
+    const endpointLabelVar = Variable.derive([
+        bind(defaultEndpoint, "description"),
+        bind(defaultEndpoint, "volume")
     ])
 
     setTimeout(() => {
         bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
             if (!visible) {
-                speakerChooserRevealed.set(false)
+                endpointChooserRevealed.set(false)
             }
         })
     }, 1_000)
+
+    let test = bind(audio, "speakers")
 
     return <box
         vertical={true}>
@@ -30,16 +47,16 @@ export function SpeakerVolume() {
             className="row">
             <button
                 className="systemMenuIconButton"
-                label={speakerLabelVar(() => getVolumeIcon(defaultSpeaker))}/>
+                label={endpointLabelVar(() => getIcon(defaultEndpoint))}/>
             <slider
                 className="systemMenuVolumeProgress"
                 hexpand={true}
-                onDragged={({value}) => defaultSpeaker.volume = value}
-                value={bind(defaultSpeaker, "volume")}
+                onDragged={({value}) => defaultEndpoint.volume = value}
+                value={bind(defaultEndpoint, "volume")}
             />
             <button
                 className="iconButton"
-                label={speakerChooserRevealed((revealed): string => {
+                label={endpointChooserRevealed((revealed): string => {
                     if (revealed) {
                         return ""
                     } else {
@@ -47,24 +64,24 @@ export function SpeakerVolume() {
                     }
                 })}
                 onClicked={() => {
-                    speakerChooserRevealed.set(!speakerChooserRevealed.get())
+                    endpointChooserRevealed.set(!endpointChooserRevealed.get())
                 }}/>
         </box>
         <revealer
             className="audioRevealer"
-            revealChild={speakerChooserRevealed()}
+            revealChild={endpointChooserRevealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
             <box
                 vertical={true}>
-                {bind(audio, "speakers").as((speakers) => {
-                    return speakers.map((speaker) => {
-                        let speakerName = truncateString(speaker.description, 25)
+                {endpointsBinding.as((endpoints) => {
+                    return endpoints.map((endpoint) => {
+                        let endpointName = truncateString(endpoint.description, 25)
                         return <box
                             vertical={false}>
                             <label
                                 className="audioSelectionLabel"
-                                label={bind(speaker, "isDefault").as((isDefault) => {
+                                label={bind(endpoint, "isDefault").as((isDefault) => {
                                     if (isDefault) {
                                         return ""
                                     } else {
@@ -73,9 +90,9 @@ export function SpeakerVolume() {
                                 })}/>
                             <button
                                 className="audioSelectionButton"
-                                label={speakerName}
+                                label={endpointName}
                                 onClicked={() => {
-                                    speaker.set_is_default(true)
+                                    endpoint.set_is_default(true)
                                 }}/>
                         </box>
                     })

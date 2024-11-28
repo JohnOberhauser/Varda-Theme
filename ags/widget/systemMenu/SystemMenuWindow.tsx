@@ -1,9 +1,13 @@
 import { App, Astal, Gtk } from "astal/gtk3"
-import {SpeakerVolume} from "./VolumeControls";
+import {EndpointControls} from "./VolumeControls";
+import Wp from "gi://AstalWp"
+import { bind } from "astal"
+import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
 export default function(anchor: Astal.WindowAnchor) {
+    const {audio} = Wp.get_default()!
     return <window
         exclusivity={Astal.Exclusivity.EXCLUSIVE}
         anchor={anchor}
@@ -16,7 +20,14 @@ export default function(anchor: Astal.WindowAnchor) {
             <box
                 vertical={true}
                 css={"padding-top: 20px;"}>
-                    <SpeakerVolume/>
+                    <EndpointControls
+                        defaultEndpoint={audio.default_speaker}
+                        endpointsBinding={bind(audio, "speakers")}
+                        getIcon={getVolumeIcon}/>
+                    <EndpointControls
+                        defaultEndpoint={audio.default_microphone}
+                        endpointsBinding={bind(audio, "microphones")}
+                        getIcon={getMicrophoneIcon}/>
             </box>
     </window>
 }
