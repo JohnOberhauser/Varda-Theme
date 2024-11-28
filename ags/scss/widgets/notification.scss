@@ -1,0 +1,116 @@
+@use "sass:string";
+@import "../variables";
+
+@function gtkalpha($c, $a) {
+  @return string.unquote("alpha(#{$c},#{$a})");
+}
+
+window.NotificationPopups {
+  all: unset;
+}
+
+eventbox.Notification {
+
+  &:last-child>box {
+    margin-bottom: 1rem;
+  }
+
+  // eventboxes can not take margins so we style its inner box instead
+  >box {
+    min-width: 400px;
+    border-radius: 8px;
+    background-color: $bg;
+    margin: 5px;
+    border: 2px solid $primary;
+  }
+
+  &.critical>box {
+    border: 2px solid $warning;
+
+    .header {
+
+      .app-name {
+        color: $warning;
+
+      }
+
+      .app-icon {
+        color: $warning;
+      }
+    }
+  }
+
+  .header {
+    padding: .5rem;
+    color: $fg;
+
+    .app-icon {
+      margin: 0 .4rem;
+    }
+
+    .app-name {
+      margin-right: .3rem;
+      font-weight: bold;
+
+      &:first-child {
+        margin-left: .4rem;
+      }
+    }
+
+    .time {
+      margin: 0 .4rem;
+    }
+
+    button {
+      padding: .2rem;
+      min-width: 0;
+      min-height: 0;
+    }
+  }
+
+  separator {
+    margin: 0 .4rem;
+    background-color: $primary;
+  }
+
+  .content {
+    margin: 1rem;
+    margin-top: .5rem;
+
+    .summary {
+      font-size: 1.2em;
+      color: $fg;
+    }
+
+    .body {
+      color: $fg;
+    }
+
+    .image {
+      border: 1px solid $fg;
+      margin-right: .5rem;
+      border-radius: 9px;
+      min-width: 100px;
+      min-height: 100px;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .actions {
+    margin: 1rem;
+    margin-top: 0;
+
+    button {
+      margin: 0 .3rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ import SystemMenuWindow from "./widget/systemMenu/SystemMenuWindow";
 import {BrightnessAlert, VolumeAlert} from "./widget/alerts/Alerts";
 import SideBar from "./widget/bar/SideBar";
 import {exec} from "astal/process"
+import NotificationPopups from "./widget/notification/NotificationPopups";
 
 App.start({
     css: style,
@@ -21,6 +22,7 @@ App.start({
         }
         VolumeAlert()
         BrightnessAlert()
+        App.get_monitors().map(NotificationPopups)
     },
     requestHandler(request: string, res: (response: any) => void) {
         if (request == "theme") {
