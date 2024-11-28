@@ -25,7 +25,8 @@ cd ../..
 
 ags_theme() {
   cat ./setup/themes/$1/ags/variables.scss > ./agsv1/scss/variables.scss
-  cat ./setup/themes/$1/ags/variables.scss > ./agsv2/scss/variables.scss
+  cat ./setup/themes/$1/ags/variables.scss > ./ags/scss/variables.scss
+  astal "theme"
 }
 
 kitty_theme() {

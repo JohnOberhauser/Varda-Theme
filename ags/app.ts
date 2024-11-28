@@ -5,6 +5,7 @@ import Calendar from "./widget/calendar/Calendar"
 import SystemMenuWindow from "./widget/systemMenu/SystemMenuWindow";
 import {BrightnessAlert, VolumeAlert} from "./widget/alerts/Alerts";
 import SideBar from "./widget/bar/SideBar";
+import {exec} from "astal/process"
 
 App.start({
     css: style,
@@ -21,4 +22,11 @@ App.start({
         VolumeAlert()
         BrightnessAlert()
     },
+    requestHandler(request: string, res: (response: any) => void) {
+        if (request == "theme") {
+            exec("sass ./scss/main.scss ./style.css")
+            App.apply_css("./style.css")
+            res("ags done")
+        }
+    }
 })
