@@ -8,7 +8,7 @@ import {
     BluetoothButton, NetworkButton, BatteryButton, MenuButton
 } from "./BarWidgets";
 
-export default function TopBar() {
+export default function() {
     let iconCss = "margin-left: 10px;"
 
     return <window

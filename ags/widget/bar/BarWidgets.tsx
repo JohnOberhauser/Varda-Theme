@@ -1,7 +1,7 @@
 import {bind, GLib, Variable} from "astal"
 import {App} from "astal/gtk3"
 import Hyprland from "gi://AstalHyprland"
-import {CalendarWindow} from "../calendar/Calendar"
+import {CalendarWindowName} from "../calendar/Calendar"
 import Wp from "gi://AstalWp"
 import AstalNetwork from "gi://AstalNetwork"
 import Battery from "gi://AstalBattery"
@@ -9,6 +9,7 @@ import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio"
 import {getNetworkIcon} from "../utils/network"
 import {getBatteryIcon} from "../utils/battery"
 import { execAsync } from "astal/process"
+import {SystemMenuWindowName} from "../systemMenu/SystemMenuWindow";
 
 export function Workspaces({vertical}: { vertical: boolean }) {
     const hypr = Hyprland.get_default()
@@ -50,7 +51,7 @@ export function ClockButton({css, singleLine}: { css: string, singleLine: boolea
         css={css}
         label={time()}
         onClicked={() => {
-            App.toggle_window(CalendarWindow)
+            App.toggle_window(CalendarWindowName)
         }}>
 
     </button>
@@ -168,6 +169,6 @@ export function MenuButton({css}: {css: string}) {
         className="iconButton"
         label=""
         onClicked={() => {
-
+            App.toggle_window(SystemMenuWindowName)
         }}/>
 }

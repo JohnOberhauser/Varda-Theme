@@ -1,7 +1,7 @@
 import GObject from "gi://GObject"
 import { Astal, Gtk, astalify, ConstructProps, App } from "astal/gtk3"
 
-export const CalendarWindow = "calendarWindow"
+export const CalendarWindowName = "calendarWindow"
 
 class CalendarWidget extends astalify(Gtk.Calendar) {
     static { GObject.registerClass(this) }
@@ -18,7 +18,7 @@ class CalendarWidget extends astalify(Gtk.Calendar) {
 export default function Calendar(anchor: Astal.WindowAnchor) {
     return <window
     monitor={0}
-    name={CalendarWindow}
+    name={CalendarWindowName}
     application={App}
     anchor={anchor}
     layer={Astal.Layer.OVERLAY}
