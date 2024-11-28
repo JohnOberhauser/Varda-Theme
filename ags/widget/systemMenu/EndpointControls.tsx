@@ -1,6 +1,6 @@
 import Wp from "gi://AstalWp"
-import {bind, Variable, Binding} from "astal"
-import {Gtk, App} from "astal/gtk3"
+import {bind, Binding, Variable} from "astal"
+import {App, Gtk} from "astal/gtk3"
 import {truncateString} from "../utils/strings";
 import {SystemMenuWindowName} from "./SystemMenuWindow";
 
@@ -11,7 +11,7 @@ import {SystemMenuWindowName} from "./SystemMenuWindow";
  * @param getIcon function that takes an Endpoint and returns the proper string icon
  * @param endpointsBinding binding obtained via [bind(Wp.Audio, "speakers")] or [bind(Wp.Audio, "microphones"]
  */
-export function EndpointControls(
+export default function (
     {
         defaultEndpoint,
         getIcon,

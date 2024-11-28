@@ -1,14 +1,17 @@
-import { App, Astal, Gtk } from "astal/gtk3"
+import {App, Astal, Gtk} from "astal/gtk3"
 import {
+    BatteryButton,
+    BluetoothButton,
     ClockButton,
-    Workspaces,
+    MenuButton,
+    MicrophoneButton,
+    NetworkButton,
     ScreenRecordingButton,
     VolumeButton,
-    MicrophoneButton,
-    BluetoothButton, NetworkButton, BatteryButton, MenuButton
+    Workspaces
 } from "./BarWidgets";
 
-export default function() {
+export default function () {
     let iconCss = "margin-left: 10px;"
 
     return <window

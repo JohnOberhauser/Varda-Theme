@@ -8,7 +8,7 @@ import Battery from "gi://AstalBattery"
 import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio"
 import {getNetworkIcon} from "../utils/network"
 import {getBatteryIcon} from "../utils/battery"
-import { execAsync } from "astal/process"
+import {execAsync} from "astal/process"
 import {SystemMenuWindowName} from "../systemMenu/SystemMenuWindow";
 
 export function Workspaces({vertical}: { vertical: boolean }) {
@@ -74,8 +74,8 @@ export function ScreenRecordingButton({css}: { css: string }) {
         }}/>
 }
 
-export function VolumeButton({css}: {css: string}) {
-    const {defaultSpeaker} = Wp.get_default()!.audio
+export function VolumeButton({css}: { css: string }) {
+    const defaultSpeaker = Wp.get_default()!.audio.default_speaker
 
     const speakerVar = Variable.derive([
         bind(defaultSpeaker, "description"),
@@ -88,7 +88,7 @@ export function VolumeButton({css}: {css: string}) {
         label={speakerVar(() => getVolumeIcon(defaultSpeaker))}/>
 }
 
-export function MicrophoneButton({css}: {css: string}) {
+export function MicrophoneButton({css}: { css: string }) {
     const {defaultMicrophone} = Wp.get_default()!.audio
 
     return <label
@@ -99,7 +99,7 @@ export function MicrophoneButton({css}: {css: string}) {
         })}/>
 }
 
-export function BluetoothButton({css}: {css: string}) {
+export function BluetoothButton({css}: { css: string }) {
     return <button
         css={css}
         className="iconButton"
@@ -109,7 +109,7 @@ export function BluetoothButton({css}: {css: string}) {
         }}/>
 }
 
-export function NetworkButton({css}: {css: string}) {
+export function NetworkButton({css}: { css: string }) {
     const network = AstalNetwork.get_default()
 
     const networkVar = Variable.derive([
@@ -126,7 +126,7 @@ export function NetworkButton({css}: {css: string}) {
         }}/>
 }
 
-export function BatteryButton({css}: {css: string}) {
+export function BatteryButton({css}: { css: string }) {
     const battery = Battery.get_default()
 
     let batteryWarningInterval: GLib.Source | null = null
@@ -163,7 +163,7 @@ export function BatteryButton({css}: {css: string}) {
         visible={bind(battery, "isBattery")}/>
 }
 
-export function MenuButton({css}: {css: string}) {
+export function MenuButton({css}: { css: string }) {
     return <button
         css={css}
         className="iconButton"
