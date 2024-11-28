@@ -3,7 +3,7 @@ import style from "./scss/main.scss"
 import TopBar from "./widget/bar/TopBar"
 import Calendar from "./widget/calendar/Calendar"
 import SystemMenuWindow from "./widget/systemMenu/SystemMenuWindow";
-import {VolumeAlert} from "./widget/alerts/Alerts";
+import {BrightnessAlert, VolumeAlert} from "./widget/alerts/Alerts";
 
 App.start({
     css: style,
@@ -12,5 +12,6 @@ App.start({
         Calendar(Astal.WindowAnchor.TOP)
         SystemMenuWindow(Astal.WindowAnchor.TOP | Astal.WindowAnchor.RIGHT)
         VolumeAlert()
+        BrightnessAlert()
     },
 })
