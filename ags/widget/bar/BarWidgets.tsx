@@ -112,15 +112,22 @@ export function BluetoothButton({css}: { css: string }) {
 export function NetworkButton({css}: { css: string }) {
     const network = AstalNetwork.get_default()
 
-    const networkVar = Variable.derive([
-        bind(network, "connectivity"),
-        bind(network.wifi, "strength")
-    ])
+    let networkVar
+    if (network.primary === AstalNetwork.Primary.WIFI) {
+        networkVar = Variable.derive([
+            bind(network, "connectivity"),
+            bind(network.wifi, "strength")
+        ])(() => getNetworkIcon(network))
+    } else {
+        networkVar = Variable.derive([
+            bind(network, "connectivity")
+        ])(() => getNetworkIcon(network))
+    }
 
     return <button
         css={css}
         className="iconButton"
-        label={networkVar(() => getNetworkIcon(network))}
+        label={networkVar}
         onClicked={() => {
             execAsync('bash -c "kitty -e $HOME/.config/kitty/nmtui.sh"')
         }}/>
@@ -150,7 +157,7 @@ export function BatteryButton({css}: { css: string }) {
                 }
                 return "iconButton"
             } else {
-                if (batteryWarningInterval === null) {
+                if (batteryWarningInterval === null && battery.isBattery) {
                     batteryWarningInterval = setInterval(() => {
                         warningSound()
                     }, 120_000)
