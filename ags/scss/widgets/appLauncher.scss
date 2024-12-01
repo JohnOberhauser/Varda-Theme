@@ -1,0 +1,42 @@
+@import "../variables";
+
+.appLauncher {
+  background-color: $bg;
+  margin: 10px;
+
+  .appButton {
+    margin: 4px 0;
+    padding: 4px;
+    background: $bg;
+
+    label.name {
+      font-weight: bold;
+      color: $fg;
+    }
+  }
+
+  .appButton:focus {
+    background: $primary;
+  }
+
+  .searchField {
+    margin-bottom: 4px;
+    box-shadow: none;
+    background: $bg;
+  }
+
+  .searchIcon {
+    color: $fg;
+    padding: 4px 4px 4px 2px;
+    border: none;
+    min-height: 25px;
+    min-width: 30px;
+  }
+
+  .not-found {
+
+    label {
+      color: $fg;
+    }
+  }
+}
