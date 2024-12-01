@@ -1,9 +1,9 @@
 #!/bin/bash
 
-ags -q
+ags quit
 
 if [[ $VARDA == "laptop" ]]; then
-  ags --config $HOME/.config/ags/topbarConfig.js
+  ags run
 else
-  ags --config $HOME/.config/ags/sidebarConfig.js
+  ags run -a "sidebar"
 fi

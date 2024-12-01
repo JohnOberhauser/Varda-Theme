@@ -52,7 +52,7 @@ const bookmarks = [
       {"id":"PeIbQBjpA41kjGD6","label":"Sh","url":"https://reddit.com/"},
       {"id":"PeIbQBjpA41kjGD6","label":"Foss","url":"https://fosstodon.org/home"},
       {"id":"fgOAsCWGRNHCRZQR","label":"G","url":"https://boards.4channel.org/g/catalog"},
-      {"id":"PeIbQBjpA41kjGD6","label":"Slack","url":"https://app.slack.com/client"},
+      {"id":"PeIbQBjpA41kjGD6","label":"Bsky","url":"https://bsky.app/"},
     ]
   },
   {"id":"qjTUGL2OWFspQdfe","label":"Finance","bookmarks":[
@@ -66,7 +66,7 @@ const bookmarks = [
       {"id":"REzi7xXTn6hBm5Vu","label":"Github","url":"https://github.com/"},
       {"id":"oa5G4ZJXzwxLi4CM","label":"ArchWiki","url":"https://wiki.archlinux.org/"},
       {"id":"fgOAsCWGRNHCRZQR","label":"Hyprland","url":"https://wiki.hyprland.org/"},
-      {"id":"PeIbQBjpA41kjGD6","label":"Ags","url":"https://aylur.github.io/ags-docs/"}
+      {"id":"PeIbQBjpA41kjGD6","label":"Ags","url":"https://aylur.github.io/ags/"}
     ]
   },
   {"id":"qjTUGL2OWFspQmm2","label":"Video","bookmarks":[

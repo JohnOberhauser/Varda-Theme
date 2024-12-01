@@ -1,0 +1,9 @@
+@import "../variables";
+
+.window {
+    background-color: $bg;
+    border-radius: 8px;
+    border-color: $primary;
+    border-width: 2px;
+    border-style: solid;
+}

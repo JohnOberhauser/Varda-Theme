@@ -1,0 +1,25 @@
+@import "../variables";
+
+.iconButton {
+  all: unset;
+  background-color: $bg;
+  color: $fg;
+  padding: 4px 4px 4px 2px;
+  border: none;
+  min-height: 25px;
+  min-width: 30px;
+  border-radius: 8px;
+}
+
+.iconButton:hover {
+  background-color: $bgHover;
+}
+
+.primaryButton {
+  all: unset;
+  background-color: $buttonPrimary;
+  color: $fg;
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 200px;
+}

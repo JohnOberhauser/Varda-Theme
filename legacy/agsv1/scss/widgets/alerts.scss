@@ -1,0 +1,37 @@
+@import "../variables";
+
+.alertIcon {
+  all: unset;
+  margin-left: 20px;
+  margin-right: 10px;
+  font-size: 50px;
+  color: $fg;
+}
+
+.alertText {
+  color: $fg;
+}
+
+.alertProgress {
+  all: unset;
+  min-width: 150px;
+  margin-right: 20px;
+}
+
+.alertProgress trough {
+  all: unset;
+  background: $sliderTrough;
+  min-height: 8px;
+  border-radius: 16px;
+}
+
+.alertProgress trough slider {
+  all: unset;
+}
+
+.alertProgress trough highlight {
+  all: unset;
+  min-width: 8px;
+  border-radius: 16px;
+  background: $fg;
+}
