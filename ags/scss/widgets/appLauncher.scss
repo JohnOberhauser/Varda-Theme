@@ -42,6 +42,15 @@
     min-width: 30px;
   }
 
+  .scrollWindow {
+    .frame {
+      border-style: none;
+    }
+    .trough {
+      border-style: none;
+    }
+  }
+
   .not-found {
 
     label {

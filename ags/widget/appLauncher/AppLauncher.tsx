@@ -2,8 +2,6 @@ import Apps from "gi://AstalApps"
 import { App, Astal, Gdk, Gtk } from "astal/gtk3"
 import { Variable } from "astal"
 
-const MAX_ITEMS = 10
-
 export const AppLauncherWindowName = "appLauncher"
 
 function hide() {
@@ -56,7 +54,6 @@ export default function () {
                     return 1
                 }
             })
-            .slice(0, MAX_ITEMS)
         if (listApps.length - 1 < selectedIndex.get()) {
             if (listApps.length === 0) {
                 selectedIndex.set(0)
@@ -99,7 +96,11 @@ export default function () {
         }}
         margin_top={200}
         visible={false}>
-        <box widthRequest={500} heightRequest={550} className="appLauncher" vertical={true}>
+        <box
+            widthRequest={500}
+            heightRequest={550}
+            className="appLauncher"
+            vertical={true}>
             <box
                 vertical={false}>
                 <label
@@ -114,11 +115,17 @@ export default function () {
                     hexpand={true}
                 />
             </box>
-            <box spacing={6} vertical={true}>
-                {listBinding(value => value[0].map((app, index) => (
-                    <AppButton app={app} isSelected={index === value[1]}/>
-                )))}
-            </box>
+            <scrollable
+                className="scrollWindow"
+                vscroll={Gtk.PolicyType.AUTOMATIC}
+                heightRequest={550}
+                canFocus={false}>
+                <box spacing={6} vertical={true}>
+                    {listBinding(value => value[0].map((app, index) => (
+                        <AppButton app={app} isSelected={index === value[1]}/>
+                    )))}
+                </box>
+            </scrollable>
             <box
                 halign={CENTER}
                 className="not-found"
