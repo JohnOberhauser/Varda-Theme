@@ -25,6 +25,7 @@ cd ../..
 
 ags_theme() {
   cat ./setup/themes/$1/ags/variables.scss > ./ags/scss/variables.scss
+  cat ./setup/themes/$1/ags/themeName > ./ags/themeName
   astal "theme"
 }
 

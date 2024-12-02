@@ -68,3 +68,37 @@
 .audioRevealer {
   padding: 6px 30px 6px 30px;
 }
+
+.themeButton {
+  all: unset;
+  background-color: transparent;
+  min-width: 30px;
+  font-size: 25px;
+  margin: 0 10px 0 0;
+  border-radius: 16px;
+  padding: 10px 15px 10px 15px;
+  color: $fg;
+  border: 0;
+}
+
+.themeButton:hover {
+  background-color: $bgHover;
+}
+
+.themeButtonSelected {
+  all: unset;
+  background-color: $primary;
+  min-width: 30px;
+  font-size: 25px;
+  margin: 0 10px 0 0;
+  border-radius: 16px;
+  padding: 10px 15px 10px 15px;
+  color: $fg;
+  border: 0;
+}
+
+.divider {
+  border: 2px solid $bgHover;
+  margin: 0 60px 0 60px;
+  border-radius: 8px;
+}
