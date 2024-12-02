@@ -35,16 +35,40 @@ export default function () {
     const selectedIndex = Variable(0)
     const text = Variable("")
     const list = text(text => {
-        let listApps = apps.fuzzy_query(text).slice(0, MAX_ITEMS)
+        let listApps = apps
+            .exact_query(text)
+            .filter((app) => app.name.toLowerCase().includes(text.toLowerCase()))
+            .sort((a, b) => {
+                if (a.name === b.name) {
+                    return 0
+                }
+                let aMatch = a.name.toLowerCase().startsWith(text.toLowerCase())
+                let bMatch = b.name.toLowerCase().startsWith(text.toLowerCase())
+                if (aMatch && bMatch) {
+                    if (a.name > b.name) {
+                        return 1
+                    } else {
+                        return -1
+                    }
+                } else if (aMatch) {
+                    return -1
+                } else {
+                    return 1
+                }
+            })
+            .slice(0, MAX_ITEMS)
         if (listApps.length - 1 < selectedIndex.get()) {
-            selectedIndex.set(listApps.length - 1)
+            if (listApps.length === 0) {
+                selectedIndex.set(0)
+            } else {
+                selectedIndex.set(listApps.length - 1)
+            }
         }
         return listApps
     })
     const onEnter = () => {
-        let currentApps = apps.fuzzy_query(text.get())
-        if (currentApps.length > 0) {
-            currentApps?.[selectedIndex.get()].launch()
+        if (list.get().length > 0) {
+            list.get()?.[selectedIndex.get()].launch()
         }
         hide()
     }
