@@ -54,7 +54,7 @@ export default function () {
     ])
 
     return <window
-        className="window"
+        className="focusedWindow"
         name={AppLauncherWindowName}
         anchor={Astal.WindowAnchor.TOP}
         exclusivity={Astal.Exclusivity.IGNORE}

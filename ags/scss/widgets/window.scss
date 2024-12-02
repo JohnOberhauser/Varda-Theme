@@ -7,3 +7,11 @@
     border-width: 2px;
     border-style: solid;
 }
+
+.focusedWindow {
+    background-color: $bg;
+    border-radius: 8px;
+    border-color: $fg;
+    border-width: 2px;
+    border-style: solid;
+}
