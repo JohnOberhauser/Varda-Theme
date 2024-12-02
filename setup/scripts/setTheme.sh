@@ -89,10 +89,6 @@ hypr() {
   nohup hyprpaper > /dev/null 2>&1 &
 }
 
-rofi_theme() {
-  cp ./setup/themes/$1/rofi/* ./rofi/shared/
-}
-
 zsh_theme() {
   cp ./setup/themes/$1/zsh/* ./zsh/
 }
@@ -180,7 +176,6 @@ firefox_theme $1
 gtk $1
 cursor_theme $1
 hypr $1
-rofi_theme $1
 zsh_theme $1
 btop_theme $1
 intellij_idea $1

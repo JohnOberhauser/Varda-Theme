@@ -67,7 +67,6 @@ cpio \
 meson \
 cmake \
 plymouth \
-rofi-wayland \
 wl-clipboard \
 atool \
 loupe \
