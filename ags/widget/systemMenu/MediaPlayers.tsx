@@ -39,8 +39,9 @@ function MediaPlayer({ player }: { player: Mpris.Player }) {
             className="artist"
             halign={CENTER}
             label={artist}/>
-        <centerbox
-            className="seekContainer">
+        <box
+            className="seekContainer"
+            vertical={false}>
             <label
                 className="time"
                 halign={START}
@@ -49,7 +50,7 @@ function MediaPlayer({ player }: { player: Mpris.Player }) {
             />
             <slider
                 className="seek"
-                widthRequest={240}
+                hexpand={true}
                 visible={bind(player, "length").as(l => l > 0)}
                 onDragged={({value}) => player.position = value * player.length}
                 value={position}
@@ -60,7 +61,7 @@ function MediaPlayer({ player }: { player: Mpris.Player }) {
                 visible={bind(player, "length").as(l => l > 0)}
                 label={bind(player, "length").as(l => l > 0 ? lengthStr(l) : "0:00")}
             />
-        </centerbox>
+        </box>
         <box
             halign={CENTER}>
             <button

@@ -102,3 +102,19 @@
   margin: 0 60px 0 60px;
   border-radius: 8px;
 }
+
+.notificationHistoryContainer {
+  margin: 0 20px 0 20px;
+}
+
+.notificationHistoryLabel {
+  color: $fg;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.notificationHistoryEmptyLabel {
+  margin: 8px;
+  color: $fg;
+  font-size: 14px;
+}

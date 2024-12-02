@@ -54,7 +54,8 @@ class NotifiationMap implements Subscribable {
                      * after TIMEOUT_DELAY
                      */
                     // this.delete(id)
-                })
+                }),
+                useHistoryCss: false
             }))
         })
 

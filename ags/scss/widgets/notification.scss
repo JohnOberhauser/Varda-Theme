@@ -1,9 +1,4 @@
-@use "sass:string";
 @import "../variables";
-
-@function gtkalpha($c, $a) {
-  @return string.unquote("alpha(#{$c},#{$a})");
-}
 
 window.NotificationPopups {
   all: unset;
@@ -12,7 +7,7 @@ window.NotificationPopups {
 eventbox.Notification {
 
   &:last-child>box {
-    margin-bottom: 1rem;
+    margin-bottom: 1px;
   }
 
   // eventboxes can not take margins so we style its inner box instead
@@ -31,7 +26,6 @@ eventbox.Notification {
 
       .app-name {
         color: $warning;
-
       }
 
       .app-icon {
@@ -40,45 +34,31 @@ eventbox.Notification {
     }
   }
 
+  &.history>box {
+    margin: 5px 0 5px 0;
+    min-width: 0;
+    border: 2px solid $bgHover;
+  }
+
   .header {
-    padding: .5rem;
     color: $fg;
 
-    .app-icon {
-      margin: 0 .4rem;
-    }
-
     .app-name {
-      margin-right: .3rem;
       font-weight: bold;
-
-      &:first-child {
-        margin-left: .4rem;
-      }
+      margin-left: 8px;
     }
 
     .time {
-      margin: 0 .4rem;
+      margin-right: 4px;
     }
-
-    button {
-      padding: .2rem;
-      min-width: 0;
-      min-height: 0;
-    }
-  }
-
-  separator {
-    margin: 0 .4rem;
-    background-color: $primary;
   }
 
   .content {
-    margin: 1rem;
-    margin-top: .5rem;
+    padding: 10px;
 
     .summary {
-      font-size: 1.2em;
+      font-size: 16px;
+      font-weight: bold;
       color: $fg;
     }
 
@@ -88,8 +68,8 @@ eventbox.Notification {
 
     .image {
       border: 1px solid $fg;
-      margin-right: .5rem;
-      border-radius: 9px;
+      margin-right: 8px;
+      border-radius: 8px;
       min-width: 100px;
       min-height: 100px;
       background-size: cover;
@@ -98,19 +78,11 @@ eventbox.Notification {
   }
 
   .actions {
-    margin: 1rem;
-    margin-top: 0;
-
     button {
-      margin: 0 .3rem;
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
+      background: $bg;
+    }
+    button:hover {
+      background: $bgHover;
     }
   }
 }

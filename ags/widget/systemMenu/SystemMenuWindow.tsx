@@ -6,6 +6,7 @@ import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio";
 import PowerOptions from "./PowerOptions";
 import ThemeOptions from "./ThemeOptions";
 import MediaPlayers from "./MediaPlayers";
+import NotificationHistory from "./NotificationHistory";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
@@ -38,6 +39,8 @@ export default function (anchor: Astal.WindowAnchor) {
             <box className="divider"/>
             <box css={"margin-top: 20px;"}/>
             <PowerOptions/>
+            <box css={"margin-top: 20px;"}/>
+            <NotificationHistory/>
             <box css={"margin-top: 20px;"}/>
         </box>
     </window>
