@@ -1,0 +1,65 @@
+@import "../variables";
+
+.mediaPlayersContainer {
+  margin: 0 20px 0 20px;
+}
+
+.mediaPlayer {
+  margin-top: 20px;
+  background-color: $bg;
+  border: 2px solid $bgHover;
+  border-radius: 8px;
+  padding: 4px;
+
+  .title {
+    font-weight: bold;
+    color: $fg;
+  }
+
+  .artist {
+    color: $fg;
+  }
+
+  .time {
+    color: $fg;
+  }
+
+  .controlButton {
+    all: unset;
+    background-color: $bg;
+    color: $fg;
+    padding: 4px 4px 4px 2px;
+    border: none;
+    min-height: 25px;
+    min-width: 30px;
+    border-radius: 8px;
+  }
+
+  .controlButton:hover {
+    background-color: $bgHover;
+  }
+
+  .seekContainer {
+    margin: 10px 0 10px 0;
+  }
+
+  .seek {
+    margin: 0 20px 0 20px;
+
+    trough {
+      background: $sliderTrough;
+      min-height: 4px;
+      border-radius: 8px;
+
+      slider {
+        color: $primary;
+        background: $bg;
+      }
+
+      highlight {
+        background: $primary;
+        border-radius: 8px;
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import {bind} from "astal"
 import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio";
 import PowerOptions from "./PowerOptions";
 import ThemeOptions from "./ThemeOptions";
+import MediaPlayers from "./MediaPlayers";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
@@ -30,6 +31,7 @@ export default function (anchor: Astal.WindowAnchor) {
                 defaultEndpoint={audio.default_microphone}
                 endpointsBinding={bind(audio, "microphones")}
                 getIcon={getMicrophoneIcon}/>
+            <MediaPlayers/>
             <box css={"margin-top: 20px;"}/>
             <ThemeOptions/>
             <box css={"margin-top: 20px;"}/>
