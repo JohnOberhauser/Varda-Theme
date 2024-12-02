@@ -79,7 +79,8 @@ export function VolumeButton({css}: { css: string }) {
 
     const speakerVar = Variable.derive([
         bind(defaultSpeaker, "description"),
-        bind(defaultSpeaker, "volume")
+        bind(defaultSpeaker, "volume"),
+        bind(defaultSpeaker, "mute")
     ])
 
     return <label
@@ -91,12 +92,16 @@ export function VolumeButton({css}: { css: string }) {
 export function MicrophoneButton({css}: { css: string }) {
     const {defaultMicrophone} = Wp.get_default()!.audio
 
+    const micVar = Variable.derive([
+        bind(defaultMicrophone, "description"),
+        bind(defaultMicrophone, "volume"),
+        bind(defaultMicrophone, "mute")
+    ])
+
     return <label
         css={css}
         className="iconButton"
-        label={bind(defaultMicrophone, "volumeIcon").as((): string => {
-            return getMicrophoneIcon(defaultMicrophone)
-        })}/>
+        label={micVar(() => getMicrophoneIcon(defaultMicrophone))}/>
 }
 
 export function BluetoothButton({css}: { css: string }) {

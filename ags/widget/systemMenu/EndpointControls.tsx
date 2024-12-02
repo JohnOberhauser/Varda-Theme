@@ -3,6 +3,7 @@ import {bind, Binding, Variable} from "astal"
 import {App, Gtk} from "astal/gtk3"
 import {truncateString} from "../utils/strings";
 import {SystemMenuWindowName} from "./SystemMenuWindow";
+import {toggleMuteEndpoint} from "../utils/audio";
 
 /**
  * An Endpoint is either a speaker or microphone
@@ -23,11 +24,11 @@ export default function (
     }
 ) {
     const endpointChooserRevealed = Variable(false)
-    const {audio} = Wp.get_default()!
 
     const endpointLabelVar = Variable.derive([
         bind(defaultEndpoint, "description"),
-        bind(defaultEndpoint, "volume")
+        bind(defaultEndpoint, "volume"),
+        bind(defaultEndpoint, "mute")
     ])
 
     setTimeout(() => {
@@ -45,7 +46,10 @@ export default function (
             className="row">
             <button
                 className="systemMenuIconButton"
-                label={endpointLabelVar(() => getIcon(defaultEndpoint))}/>
+                label={endpointLabelVar(() => getIcon(defaultEndpoint))}
+                onClicked={() => {
+                    toggleMuteEndpoint(defaultEndpoint)
+                }}/>
             <slider
                 className="systemMenuVolumeProgress"
                 hexpand={true}

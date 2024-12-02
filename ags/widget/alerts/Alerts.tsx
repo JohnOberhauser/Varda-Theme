@@ -84,7 +84,8 @@ export function VolumeAlert() {
 
     const speakerVar = Variable.derive([
         bind(defaultSpeaker, "description"),
-        bind(defaultSpeaker, "volume")
+        bind(defaultSpeaker, "volume"),
+        bind(defaultSpeaker, "mute")
     ])
 
     return <AlertWindow
