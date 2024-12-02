@@ -33,6 +33,7 @@ App.start({
             res("ags done")
         } else if (request == "appLauncher") {
             App.toggle_window(AppLauncherWindowName)
+            res("app launcher toggled")
         }
     }
 })

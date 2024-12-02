@@ -5,9 +5,10 @@
   margin: 10px;
 
   .appButton {
-    margin: 4px 0;
-    padding: 4px;
+    margin: 2px 0;
+    padding: 8px;
     background: $bg;
+    border-radius: 8px;
 
     label.name {
       font-weight: bold;
@@ -15,8 +16,16 @@
     }
   }
 
-  .appButton:focus {
+  .selectedAppButton {
+    margin: 2px 0;
+    padding: 8px;
     background: $primary;
+    border-radius: 8px;
+
+    label.name {
+      font-weight: bold;
+      color: $fg;
+    }
   }
 
   .searchField {
