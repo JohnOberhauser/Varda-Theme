@@ -21,12 +21,12 @@ export default function (anchor: Astal.WindowAnchor) {
         name={SystemMenuWindowName}
         application={App}
         margin={5}
+        keymode={Astal.Keymode.ON_DEMAND}
         visible={false}>
         <box
             vertical={true}>
             <box css={"margin-top: 20px;"}/>
             <NetworkControls/>
-            <box css={"margin-top: 20px;"}/>
             <EndpointControls
                 defaultEndpoint={audio.default_speaker}
                 endpointsBinding={bind(audio, "speakers")}
