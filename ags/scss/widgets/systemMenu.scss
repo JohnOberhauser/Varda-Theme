@@ -69,6 +69,20 @@
   padding: 6px 30px 6px 30px;
 }
 
+.networkRevealer {
+  padding: 6px 30px 6px 30px;
+}
+
+.currentNetworkLabel {
+  color: $fg;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.networkSelectionLabel {
+  color: $fg;
+}
+
 .themeButton {
   all: unset;
   background-color: transparent;

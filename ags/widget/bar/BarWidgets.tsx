@@ -3,10 +3,9 @@ import {App} from "astal/gtk3"
 import Hyprland from "gi://AstalHyprland"
 import {CalendarWindowName} from "../calendar/Calendar"
 import Wp from "gi://AstalWp"
-import AstalNetwork from "gi://AstalNetwork"
 import Battery from "gi://AstalBattery"
 import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio"
-import {getNetworkIcon} from "../utils/network"
+import {getNetworkIconBinding} from "../utils/network"
 import {getBatteryIcon} from "../utils/battery"
 import {execAsync} from "astal/process"
 import {SystemMenuWindowName} from "../systemMenu/SystemMenuWindow";
@@ -115,24 +114,10 @@ export function BluetoothButton({css}: { css: string }) {
 }
 
 export function NetworkButton({css}: { css: string }) {
-    const network = AstalNetwork.get_default()
-
-    let networkVar
-    if (network.primary === AstalNetwork.Primary.WIFI) {
-        networkVar = Variable.derive([
-            bind(network, "connectivity"),
-            bind(network.wifi, "strength")
-        ])(() => getNetworkIcon(network))
-    } else {
-        networkVar = Variable.derive([
-            bind(network, "connectivity")
-        ])(() => getNetworkIcon(network))
-    }
-
     return <button
         css={css}
         className="iconButton"
-        label={networkVar}
+        label={getNetworkIconBinding()}
         onClicked={() => {
             execAsync('bash -c "kitty -e $HOME/.config/kitty/nmtui.sh"')
         }}/>

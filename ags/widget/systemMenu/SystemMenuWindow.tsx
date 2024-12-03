@@ -7,6 +7,7 @@ import PowerOptions from "./PowerOptions";
 import ThemeOptions from "./ThemeOptions";
 import MediaPlayers from "./MediaPlayers";
 import NotificationHistory from "./NotificationHistory";
+import NetworkControls from "./NetworkControls";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
@@ -22,8 +23,10 @@ export default function (anchor: Astal.WindowAnchor) {
         margin={5}
         visible={false}>
         <box
-            vertical={true}
-            css={"padding-top: 20px;"}>
+            vertical={true}>
+            <box css={"margin-top: 20px;"}/>
+            <NetworkControls/>
+            <box css={"margin-top: 20px;"}/>
             <EndpointControls
                 defaultEndpoint={audio.default_speaker}
                 endpointsBinding={bind(audio, "speakers")}

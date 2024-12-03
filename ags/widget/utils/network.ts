@@ -1,4 +1,30 @@
 import AstalNetwork from "gi://AstalNetwork"
+import {bind, Variable} from "astal"
+
+export function getNetworkNameBinding() {
+    const network = AstalNetwork.get_default()
+
+    if (network.primary === AstalNetwork.Primary.WIFI) {
+        return bind(network.wifi, "ssid")
+    } else {
+        return "ethernet"
+    }
+}
+
+export function getNetworkIconBinding() {
+    const network = AstalNetwork.get_default()
+
+    if (network.primary === AstalNetwork.Primary.WIFI) {
+        return Variable.derive([
+            bind(network, "connectivity"),
+            bind(network.wifi, "strength")
+        ])(() => getNetworkIcon(network))
+    } else {
+        return Variable.derive([
+            bind(network, "connectivity")
+        ])(() => getNetworkIcon(network))
+    }
+}
 
 export function getNetworkIcon(network: AstalNetwork.Network) {
     const { connectivity, primary, wifi, wired } = network;
@@ -62,4 +88,35 @@ export function getNetworkIcon(network: AstalNetwork.Network) {
 
     // Default or unknown status
     return '󰤮';
+}
+
+export function getAccessPointIcon(accessPoint: AstalNetwork.AccessPoint) {
+    const { strength, flags } = accessPoint;
+
+    // Based on Wi-Fi signal strength and internet status
+    if (strength <= 25) {
+        if (flags === 0) {
+            return '󰤟';
+        } else {
+            return '󰤡';
+        }
+    } else if (strength <= 50) {
+        if (flags === 0) {
+            return '󰤢';
+        } else {
+            return '󰤤';
+        }
+    } else if (strength <= 75) {
+        if (flags === 0) {
+            return '󰤥';
+        } else {
+            return '󰤧';
+        }
+    } else {
+        if (flags === 0) {
+            return '󰤨';
+        } else {
+            return '󰤪';
+        }
+    }
 }
