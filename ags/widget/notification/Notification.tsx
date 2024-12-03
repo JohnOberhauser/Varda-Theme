@@ -9,7 +9,7 @@ const isIcon = (icon: string) =>
 const fileExists = (path: string) =>
     GLib.file_test(path, GLib.FileTest.EXISTS)
 
-const time = (time: number, format = "%H:%M") => GLib.DateTime
+const time = (time: number, format = "%I:%M %p") => GLib.DateTime
     .new_from_unix_local(time)
     .format(format)!
 
@@ -33,12 +33,13 @@ type Props = {
 
 export default function Notification(props: Props) {
     const { notification: n, onHoverLost, setup, useHistoryCss } = props
-    const { START, CENTER, END } = Gtk.Align
+    const { START, END } = Gtk.Align
 
     return <eventbox
         className={useHistoryCss ? `Notification history` : `Notification ${urgency(n)}`}
         setup={setup}
-        onHoverLost={onHoverLost}>
+        onHoverLost={onHoverLost}
+        onClick={() => n.dismiss()}>
         <box
             vertical={true}>
             <box className="header">

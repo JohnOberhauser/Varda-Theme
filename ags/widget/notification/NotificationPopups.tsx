@@ -5,7 +5,7 @@ import { type Subscribable } from "astal/binding"
 import { Variable, bind, timeout } from "astal"
 
 // see comment below in constructor
-const TIMEOUT_DELAY = 5000
+const TIMEOUT_DELAY = 7_000
 
 // The purpose if this class is to replace Variable<Array<Widget>>
 // with a Map<number, Widget> type in order to track notification widgets
@@ -53,7 +53,7 @@ class NotifiationMap implements Subscribable {
                      * uncomment this if you want to "hide" the notifications
                      * after TIMEOUT_DELAY
                      */
-                    // this.delete(id)
+                    this.delete(id)
                 }),
                 useHistoryCss: false
             }))
