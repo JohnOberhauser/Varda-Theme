@@ -73,19 +73,6 @@
   padding: 6px 30px 6px 30px;
 }
 
-.currentNetworkLabel {
-  color: $fg;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.networkScanningLabel {
-  color: $fg;
-  margin-bottom: 4px;
-  font-weight: bold;
-  font-size: 16px;
-}
-
 .networkSelectionButton {
   color: $fg;
   background: transparent;
@@ -93,10 +80,6 @@
 
 .networkSelectionButton:hover {
   background: $bgHover;
-}
-
-.networkPasswordLabel {
-  color: $fg;
 }
 
 .themeButton {

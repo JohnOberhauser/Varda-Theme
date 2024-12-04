@@ -2,7 +2,7 @@
 
 .labelSmall {
   color: $fg;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .labelMedium {
@@ -12,5 +12,23 @@
 
 .labelLarge {
   color: $fg;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.labelSmallBold {
+  color: $fg;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.labelMediumBold {
+  color: $fg;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.labelLargeBold {
+  color: $fg;
+  font-size: 18px;
+  font-weight: bold;
 }

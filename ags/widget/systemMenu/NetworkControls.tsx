@@ -4,13 +4,48 @@ import {bind, Variable} from "astal"
 import {Gtk} from "astal/gtk3"
 import {execAsync} from "astal/process"
 
+function updateConnections(connections: Variable<string[]>) {
+    execAsync(["bash", "-c", `nmcli -t -f NAME,TYPE connection show`])
+        .catch((error) => {
+            print(error)
+        })
+        .then((value) => {
+            print(value)
+            if (typeof value !== "string") {
+                return
+            }
+
+            const names = value
+                .split("\n")
+                .filter((line) => line.includes("802-11-wireless"))
+                .map((line) => line.split(":")[0].trim());
+
+            connections.set(names)
+        })
+}
+
+function getConnections() {
+    const connections = Variable<string[]>([])
+    updateConnections(connections)
+    return connections
+}
+
+function deleteConnection(ssid: string, connections: Variable<string[]>) {
+    execAsync(["bash", "-c", `nmcli connection delete "${ssid}"`])
+        .finally(() => {
+            updateConnections(connections)
+        })
+}
+
 function PasswordEntry(
     {
         accessPoint,
-        passwordEntryRevealed
+        passwordEntryRevealed,
+        connections
     }: {
         accessPoint: AstalNetwork.AccessPoint,
-        passwordEntryRevealed: Variable<boolean>
+        passwordEntryRevealed: Variable<boolean>,
+        connections: Variable<string[]>
     }
 ) {
     const text = Variable("")
@@ -25,6 +60,7 @@ function PasswordEntry(
             })
             .finally(() => {
                 passwordEntryRevealed.set(false)
+                updateConnections(connections)
             })
     }
 
@@ -32,7 +68,7 @@ function PasswordEntry(
         vertical={true}>
         <label
             halign={Gtk.Align.START}
-            className="networkPasswordLabel"
+            className="labelSmall"
             label="Password"/>
         <entry
             className="networkPasswordEntry"
@@ -52,8 +88,81 @@ function PasswordEntry(
     </box>
 }
 
+function Connections({connections}: {connections: Variable<string[]>}) {
+    const network = AstalNetwork.get_default()
+
+    return <box
+        vertical={true}>
+        <label
+            halign={Gtk.Align.START}
+            className="labelLargeBold"
+            label="Saved networks"/>
+        {connections((connectionsValue) => {
+            return connectionsValue.map((connection) => {
+                const buttonsRevealed = Variable(false)
+                let label = ""
+                let canConnect = true
+                const accessPoint = network.wifi.accessPoints.find((accessPoint) => {
+                    return accessPoint.ssid === connection
+                })
+                if (accessPoint != null) {
+                    label = `${getAccessPointIcon(accessPoint)}  ${connection}`
+                    canConnect = network.wifi.activeAccessPoint.ssid !== connection;
+                } else {
+                    label = connection
+                    canConnect = false
+                }
+
+                return <box
+                    vertical={true}>
+                    <button
+                        hexpand={true}
+                        className="iconButton"
+                        onClicked={() => {
+                            buttonsRevealed.set(!buttonsRevealed.get())
+                        }}>
+                        <label
+                            halign={Gtk.Align.START}
+                            className="labelSmall"
+                            label={label}/>
+                    </button>
+                    <revealer
+                        revealChild={buttonsRevealed()}
+                        transitionDuration={200}
+                        transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
+                        <box
+                            vertical={false}>
+                            {canConnect && <button
+                                hexpand={true}
+                                className="iconButton"
+                                label="Connect"
+                                onClicked={() => {
+                                    execAsync(`nmcli c up ${connection}`)
+                                        .catch((error) => {
+                                            print(error)
+                                        })
+                                        .finally(() => {
+                                            updateConnections(connections)
+                                        })
+                                }}/>}
+                            <button
+                                hexpand={true}
+                                className="iconButton"
+                                label="Forget"
+                                onClicked={() => {
+                                    deleteConnection(connection, connections)
+                                }}/>
+                        </box>
+                    </revealer>
+                </box>
+            })
+        })}
+    </box>
+}
+
 export default function () {
     const network = AstalNetwork.get_default()
+    const connections = getConnections()
 
     const networkChooserRevealed = Variable(false)
 
@@ -66,7 +175,7 @@ export default function () {
                 className="systemMenuIconButton"
                 label={getNetworkIconBinding()}/>
             <label
-                className="currentNetworkLabel"
+                className="labelMediumBold"
                 halign={Gtk.Align.START}
                 hexpand={true}
                 label={getNetworkNameBinding()}/>
@@ -96,23 +205,29 @@ export default function () {
                 {bind(network.wifi, "activeAccessPoint").as((activeAccessPoint) => {
                     return <button
                         className="iconButton"
-                        css={`margin-bottom: 4px;`}
-                        label="Disconnect"
+                        css={`margin-bottom: 12px;`}
+                        label="Forget"
                         onClicked={() => {
-                            execAsync(["bash", "-c", `nmcli connection delete "${activeAccessPoint.ssid}"`])
+                            deleteConnection(activeAccessPoint.ssid, connections)
                         }}/>
                 })}
+                <Connections connections={connections}/>
+                <box css={`margin-top: 12px;`}/>
                 {bind(network.wifi, "scanning").as((scanning) => {
                     if (scanning) {
                         return <label
                             halign={Gtk.Align.START}
-                            className="networkScanningLabel"
+                            className="labelLargeBold"
+                            css={`margin-bottom: 4px;`}
                             label="Scanning…"/>
                     } else {
                         const accessPoints = network.wifi.accessPoints
 
                         const accessPointsUi = accessPoints.filter((value) => {
-                            return value.ssid != null && value.ssid
+                            return value.ssid != null
+                                && connections.get().find((connection) => {
+                                    return value.ssid === connection
+                                }) == null
                         }).sort((a, b) => {
                             if (a.strength > b.strength) {
                                 return -1
@@ -134,15 +249,18 @@ export default function () {
                                         }}>
                                         <label
                                             halign={Gtk.Align.START}
-                                            className="networkSelectionLabel"
-                                            label={`${getAccessPointIcon(accessPoint)} ${accessPoint.ssid}`}/>
+                                            className="labelSmall"
+                                            label={`${getAccessPointIcon(accessPoint)}  ${accessPoint.ssid}`}/>
                                     </button>
                                 </box>
                                 <revealer
                                     revealChild={passwordEntryRevealed()}
                                     transitionDuration={200}
                                     transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
-                                    <PasswordEntry accessPoint={accessPoint} passwordEntryRevealed={passwordEntryRevealed}/>
+                                    <PasswordEntry
+                                        accessPoint={accessPoint}
+                                        passwordEntryRevealed={passwordEntryRevealed}
+                                        connections={connections}/>
                                 </revealer>
                             </box>
                         })
@@ -151,7 +269,7 @@ export default function () {
                             vertical={true}>
                             <label
                                 halign={Gtk.Align.START}
-                                className="networkScanningLabel"
+                                className="labelLargeBold"
                                 label="Available networks"/>
                             {accessPointsUi}
                         </box>
