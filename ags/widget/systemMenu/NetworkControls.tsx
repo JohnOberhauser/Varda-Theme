@@ -93,6 +93,13 @@ export default function () {
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
             <box
                 vertical={true}>
+                {bind(network.wifi, "activeAccessPoint").as((activeAccessPoint) => {
+                    return <button
+                        label="Disconnect"
+                        onClicked={() => {
+                            execAsync(["bash", "-c", `nmcli connection delete "${activeAccessPoint.ssid}"`])
+                        }}/>
+                })}
                 {bind(network.wifi, "scanning").as((scanning) => {
                     if (scanning) {
                         return <label

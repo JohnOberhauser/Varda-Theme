@@ -4,11 +4,22 @@ import {bind, Variable} from "astal"
 export function getNetworkNameBinding() {
     const network = AstalNetwork.get_default()
 
-    if (network.primary === AstalNetwork.Primary.WIFI) {
-        return bind(network.wifi, "ssid")
-    } else {
-        return "ethernet"
-    }
+    const variable = Variable.derive([
+        bind(network, "primary"),
+        bind(network, "wifi"),
+    ])
+
+    return variable((value) => {
+        const primary = value[0]
+        const wifi = value[1]
+        if (primary === AstalNetwork.Primary.WIFI) {
+            return wifi.ssid
+        } else if (primary === AstalNetwork.Primary.WIRED) {
+            return "Wired"
+        } else {
+            return "Not connected"
+        }
+    })
 }
 
 export function getNetworkIconBinding() {
