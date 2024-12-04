@@ -1,8 +1,9 @@
 import AstalNetwork from "gi://AstalNetwork"
 import {getAccessPointIcon, getNetworkIconBinding, getNetworkNameBinding} from "../utils/network";
 import {bind, Variable} from "astal"
-import {Gtk} from "astal/gtk3"
+import {Gtk, App} from "astal/gtk3"
 import {execAsync} from "astal/process"
+import {SystemMenuWindowName} from "./SystemMenuWindow";
 
 function ssidInRange(ssid: string) {
     const network = AstalNetwork.get_default()
@@ -119,6 +120,13 @@ function Connections({connections}: {connections: Variable<string[]>}) {
         {connections((connectionsValue) => {
             return connectionsValue.map((connection) => {
                 const buttonsRevealed = Variable(false)
+
+                bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
+                    if (!visible) {
+                        buttonsRevealed.set(false)
+                    }
+                })
+
                 let label: string
                 let canConnect: boolean
                 const accessPoint = network.wifi.accessPoints.find((accessPoint) => {
@@ -184,6 +192,14 @@ export default function () {
     const connections = getConnections()
 
     const networkChooserRevealed = Variable(false)
+
+    setTimeout(() => {
+        bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
+            if (!visible) {
+                networkChooserRevealed.set(false)
+            }
+        })
+    }, 1_000)
 
     return <box
         vertical={true}>
@@ -261,6 +277,12 @@ export default function () {
                             }
                         }).map((accessPoint) => {
                             const passwordEntryRevealed = Variable(false)
+
+                            bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
+                                if (!visible) {
+                                    passwordEntryRevealed.set(false)
+                                }
+                            })
 
                             return <box
                                 vertical={true}>
