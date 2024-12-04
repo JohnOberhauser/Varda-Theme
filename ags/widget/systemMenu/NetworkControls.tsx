@@ -210,7 +210,7 @@ export default function () {
                 onClicked={() => {
                     networkChooserRevealed.set(!networkChooserRevealed.get())
                     if (networkChooserRevealed.get()) {
-                        network.wifi.scan()
+                        network.wifi?.scan()
                     }
                 }}/>
         </box>

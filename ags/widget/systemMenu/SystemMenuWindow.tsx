@@ -16,7 +16,7 @@ export default function (anchor: Astal.WindowAnchor) {
     return <window
         exclusivity={Astal.Exclusivity.NORMAL}
         anchor={anchor}
-        layer={Astal.Layer.OVERLAY}
+        layer={Astal.Layer.TOP}
         className="window"
         name={SystemMenuWindowName}
         application={App}
