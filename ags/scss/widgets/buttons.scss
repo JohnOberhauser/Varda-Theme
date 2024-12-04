@@ -1,9 +1,9 @@
-@import "../variables";
+@use "../variables" as vars;
 
 .iconButton {
   all: unset;
-  background-color: $bg;
-  color: $fg;
+  background-color: vars.$bg;
+  color: vars.$fg;
   padding: 4px 4px 4px 2px;
   border: none;
   min-height: 25px;
@@ -12,13 +12,13 @@
 }
 
 .iconButton:hover {
-  background-color: $bgHover;
+  background-color: vars.$bgHover;
 }
 
 .warningIconButton {
   all: unset;
-  background-color: $bg;
-  color: $warning;
+  background-color: vars.$bg;
+  color: vars.$warning;
   padding: 4px 4px 4px 2px;
   border: none;
   min-height: 25px;
@@ -27,13 +27,13 @@
 }
 
 .warningIconButton:hover {
-  background-color: $bgHover;
+  background-color: vars.$bgHover;
 }
 
 .primaryButton {
   all: unset;
-  background-color: $buttonPrimary;
-  color: $fg;
+  background-color: vars.$buttonPrimary;
+  color: vars.$fg;
   border-radius: 8px;
   padding: 8px;
   min-width: 200px;

@@ -1,11 +1,11 @@
-@import "variables";
+@use "variables";
 
-@import 'widgets/buttons';
-@import 'widgets/systemMenu';
-@import 'widgets/alerts';
-@import 'widgets/window';
-@import 'widgets/labels';
-@import 'widgets/calendar';
-@import 'widgets/notification';
-@import 'widgets/appLauncher';
-@import 'widgets/mediaPlayer';
+@use 'widgets/buttons';
+@use 'widgets/systemMenu';
+@use 'widgets/alerts';
+@use 'widgets/window';
+@use 'widgets/labels';
+@use 'widgets/calendar';
+@use 'widgets/notification';
+@use 'widgets/appLauncher';
+@use 'widgets/mediaPlayer';

@@ -12,7 +12,7 @@ import {
 } from "./BarWidgets";
 
 export default function () {
-    let iconCss = "margin-left: 10px;"
+    let iconCss = ""
 
     return <window
         className="window"
@@ -29,6 +29,7 @@ export default function () {
                 min-height: 40px;
             `}>
             <box halign={Gtk.Align.START}>
+                <MenuButton css={""}/>
                 <Workspaces vertical={false}/>
             </box>
             <box>
@@ -41,7 +42,6 @@ export default function () {
                 <BluetoothButton css={iconCss}/>
                 <NetworkButton css={iconCss}/>
                 <BatteryButton css={iconCss}/>
-                <MenuButton css={"margin-right: 10px;"}/>
             </box>
         </centerbox>
     </window>

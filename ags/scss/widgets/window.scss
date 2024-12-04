@@ -1,17 +1,17 @@
-@import "../variables";
+@use "../variables" as vars;
 
 .window {
-    background-color: $bg;
+    background-color: vars.$bg;
     border-radius: 8px;
-    border-color: $primary;
+    border-color: vars.$primary;
     border-width: 2px;
     border-style: solid;
 }
 
 .focusedWindow {
-    background-color: $bg;
+    background-color: vars.$bg;
     border-radius: 8px;
-    border-color: $fg;
+    border-color: vars.$fg;
     border-width: 2px;
     border-style: solid;
 }

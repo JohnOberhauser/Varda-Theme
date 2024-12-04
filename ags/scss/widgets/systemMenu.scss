@@ -1,5 +1,4 @@
-@import "../variables";
-@import "window";
+@use "../variables" as vars;
 
 .systemMenuIconButton {
   all: unset;
@@ -9,12 +8,12 @@
   margin: 0 10px 0 0;
   border-radius: 16px;
   padding: 10px 15px 10px 15px;
-  color: $fg;
+  color: vars.$fg;
   border: 0;
 }
 
 .systemMenuIconButton:hover {
-  background-color: $bgHover;
+  background-color: vars.$bgHover;
 }
 
 .systemMenuVolumeProgress {
@@ -25,7 +24,7 @@
 
 .systemMenuVolumeProgress trough {
   all: unset;
-  background: $sliderTrough;
+  background: vars.$sliderTrough;
   min-height: 8px;
   border-radius: 16px;
 }
@@ -37,7 +36,7 @@
   all: unset;
   min-width: 8px;
   border-radius: 16px;
-  background: $fg;
+  background: vars.$fg;
 }
 
 .row {
@@ -48,13 +47,13 @@
   all: unset;
   padding: 6px;
   min-width: 24px;
-  color: $fg;
+  color: vars.$fg;
 }
 
 .audioSelectionButton {
   all: unset;
-  color: $fg;
-  background-color: $bg;
+  color: vars.$fg;
+  background-color: vars.$bg;
   min-width: 250px;
   min-height: 30px;
   margin: 6px;
@@ -62,7 +61,7 @@
 }
 
 .audioSelectionButton:hover {
-  background-color: $bgHover;
+  background-color: vars.$bgHover;
 }
 
 .audioRevealer {
@@ -74,12 +73,12 @@
 }
 
 .networkSelectionButton {
-  color: $fg;
+  color: vars.$fg;
   background: transparent;
 }
 
 .networkSelectionButton:hover {
-  background: $bgHover;
+  background: vars.$bgHover;
 }
 
 .themeButton {
@@ -90,28 +89,28 @@
   margin: 0 10px 0 0;
   border-radius: 16px;
   padding: 10px 15px 10px 15px;
-  color: $fg;
+  color: vars.$fg;
   border: 0;
 }
 
 .themeButton:hover {
-  background-color: $bgHover;
+  background-color: vars.$bgHover;
 }
 
 .themeButtonSelected {
   all: unset;
-  background-color: $primary;
+  background-color: vars.$primary;
   min-width: 30px;
   font-size: 25px;
   margin: 0 10px 0 0;
   border-radius: 16px;
   padding: 10px 15px 10px 15px;
-  color: $fg;
+  color: vars.$fg;
   border: 0;
 }
 
 .divider {
-  border: 2px solid $bgHover;
+  border: 2px solid vars.$bgHover;
   margin: 0 60px 0 60px;
   border-radius: 8px;
 }
@@ -121,13 +120,13 @@
 }
 
 .notificationHistoryLabel {
-  color: $fg;
+  color: vars.$fg;
   font-weight: bold;
   font-size: 16px;
 }
 
 .notificationHistoryEmptyLabel {
   margin: 8px;
-  color: $fg;
+  color: vars.$fg;
   font-size: 14px;
 }

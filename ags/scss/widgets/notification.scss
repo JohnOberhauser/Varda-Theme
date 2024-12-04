@@ -1,4 +1,4 @@
-@import "../variables";
+@use "../variables" as vars;
 
 window.NotificationPopups {
   all: unset;
@@ -14,22 +14,22 @@ eventbox.Notification {
   >box {
     min-width: 400px;
     border-radius: 8px;
-    background-color: $bg;
+    background-color: vars.$bg;
     margin: 5px;
-    border: 2px solid $primary;
+    border: 2px solid vars.$primary;
   }
 
   &.critical>box {
-    border: 2px solid $warning;
+    border: 2px solid vars.$warning;
 
     .header {
 
       .app-name {
-        color: $warning;
+        color: vars.$warning;
       }
 
       .app-icon {
-        color: $warning;
+        color: vars.$warning;
       }
     }
   }
@@ -37,11 +37,11 @@ eventbox.Notification {
   &.history>box {
     margin: 5px 0 5px 0;
     min-width: 0;
-    border: 2px solid $bgHover;
+    border: 2px solid vars.$bgHover;
   }
 
   .header {
-    color: $fg;
+    color: vars.$fg;
 
     .app-name {
       font-weight: bold;
@@ -59,15 +59,15 @@ eventbox.Notification {
     .summary {
       font-size: 16px;
       font-weight: bold;
-      color: $fg;
+      color: vars.$fg;
     }
 
     .body {
-      color: $fg;
+      color: vars.$fg;
     }
 
     .image {
-      border: 1px solid $fg;
+      border: 1px solid vars.$fg;
       margin-right: 8px;
       border-radius: 8px;
       min-width: 100px;
@@ -79,10 +79,10 @@ eventbox.Notification {
 
   .actions {
     button {
-      background: $bg;
+      background: vars.$bg;
     }
     button:hover {
-      background: $bgHover;
+      background: vars.$bgHover;
     }
   }
 }

@@ -1,4 +1,4 @@
-@import "../variables";
+@use "../variables" as vars;
 
 .mediaPlayersContainer {
   margin: 0 20px 0 20px;
@@ -6,28 +6,28 @@
 
 .mediaPlayer {
   margin-top: 20px;
-  background-color: $bg;
-  border: 2px solid $bgHover;
+  background-color: vars.$bg;
+  border: 2px solid vars.$bgHover;
   border-radius: 8px;
   padding: 4px;
 
   .title {
     font-weight: bold;
-    color: $fg;
+    color: vars.$fg;
   }
 
   .artist {
-    color: $fg;
+    color: vars.$fg;
   }
 
   .time {
-    color: $fg;
+    color: vars.$fg;
   }
 
   .controlButton {
     all: unset;
-    background-color: $bg;
-    color: $fg;
+    background-color: vars.$bg;
+    color: vars.$fg;
     padding: 4px 4px 4px 2px;
     border: none;
     min-height: 25px;
@@ -36,7 +36,7 @@
   }
 
   .controlButton:hover {
-    background-color: $bgHover;
+    background-color: vars.$bgHover;
   }
 
   .seekContainer {
@@ -47,17 +47,17 @@
     margin: 0 20px 0 20px;
 
     trough {
-      background: $sliderTrough;
+      background: vars.$sliderTrough;
       min-height: 4px;
       border-radius: 8px;
 
       slider {
-        color: $primary;
-        background: $bg;
+        color: vars.$primary;
+        background: vars.$bg;
       }
 
       highlight {
-        background: $primary;
+        background: vars.$primary;
         border-radius: 8px;
       }
     }

@@ -104,23 +104,17 @@ export function MicrophoneButton({css}: { css: string }) {
 }
 
 export function BluetoothButton({css}: { css: string }) {
-    return <button
+    return <label
         css={css}
         className="iconButton"
-        label="󰂯"
-        onClicked={() => {
-            execAsync("blueman-manager")
-        }}/>
+        label="󰂯"/>
 }
 
 export function NetworkButton({css}: { css: string }) {
-    return <button
+    return <label
         css={css}
         className="iconButton"
-        label={getNetworkIconBinding()}
-        onClicked={() => {
-            execAsync('bash -c "kitty -e $HOME/.config/kitty/nmtui.sh"')
-        }}/>
+        label={getNetworkIconBinding()}/>
 }
 
 export function BatteryButton({css}: { css: string }) {

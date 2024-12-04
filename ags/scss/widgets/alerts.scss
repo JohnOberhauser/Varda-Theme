@@ -1,15 +1,15 @@
-@import "../variables";
+@use "../variables" as vars;
 
 .alertIcon {
   all: unset;
   margin-left: 20px;
   margin-right: 10px;
   font-size: 50px;
-  color: $fg;
+  color: vars.$fg;
 }
 
 .alertText {
-  color: $fg;
+  color: vars.$fg;
 }
 
 .alertProgress {
@@ -20,7 +20,7 @@
 
 .alertProgress trough {
   all: unset;
-  background: $sliderTrough;
+  background: vars.$sliderTrough;
   min-height: 8px;
   border-radius: 16px;
 }
@@ -33,5 +33,5 @@
   all: unset;
   min-width: 8px;
   border-radius: 16px;
-  background: $fg;
+  background: vars.$fg;
 }

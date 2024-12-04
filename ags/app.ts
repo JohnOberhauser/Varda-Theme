@@ -19,7 +19,7 @@ App.start({
         } else {
             TopBar()
             Calendar(Astal.WindowAnchor.TOP)
-            SystemMenuWindow(Astal.WindowAnchor.TOP | Astal.WindowAnchor.RIGHT)
+            SystemMenuWindow(Astal.WindowAnchor.TOP | Astal.WindowAnchor.LEFT)
         }
         VolumeAlert()
         BrightnessAlert()
@@ -30,7 +30,7 @@ App.start({
         if (request == "theme") {
             exec("sass ./scss/main.scss ./style.css")
             App.apply_css("./style.css")
-            res("ags done")
+            res("ags theme applied")
         } else if (request == "appLauncher") {
             App.toggle_window(AppLauncherWindowName)
             res("app launcher toggled")
