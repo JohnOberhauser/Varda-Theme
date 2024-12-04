@@ -221,7 +221,7 @@ export default function () {
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
             <box
                 vertical={true}>
-                {bind(network.wifi, "activeAccessPoint").as((activeAccessPoint) => {
+                {network.wifi && bind(network.wifi, "activeAccessPoint").as((activeAccessPoint) => {
                     return <button
                         className="iconButton"
                         css={`margin-bottom: 12px;`}
@@ -230,9 +230,14 @@ export default function () {
                             deleteConnection(activeAccessPoint.ssid, connections)
                         }}/>
                 })}
-                <Connections connections={connections}/>
+                {network.wifi ?
+                    <Connections connections={connections}/>
+                    : <label
+                        label="Wifi not available"
+                        className="labelLargeBold"/>
+                }
                 <box css={`margin-top: 12px;`}/>
-                {bind(network.wifi, "scanning").as((scanning) => {
+                {network.wifi && bind(network.wifi, "scanning").as((scanning) => {
                     if (scanning) {
                         return <label
                             halign={Gtk.Align.START}
