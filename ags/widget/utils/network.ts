@@ -7,6 +7,7 @@ export function getNetworkNameBinding() {
     const variable = Variable.derive([
         bind(network, "primary"),
         bind(network, "wifi"),
+        bind(network.wifi, "ssid")
     ])
 
     return variable((value) => {

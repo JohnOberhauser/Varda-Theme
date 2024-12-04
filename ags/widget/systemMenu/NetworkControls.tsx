@@ -4,6 +4,14 @@ import {bind, Variable} from "astal"
 import {Gtk} from "astal/gtk3"
 import {execAsync} from "astal/process"
 
+function ssidInRange(ssid: string) {
+    const network = AstalNetwork.get_default()
+
+    return network.wifi.accessPoints.find((accessPoint) => {
+        return accessPoint.ssid === ssid
+    }) != null
+}
+
 function updateConnections(connections: Variable<string[]>) {
     execAsync(["bash", "-c", `nmcli -t -f NAME,TYPE connection show`])
         .catch((error) => {
@@ -18,7 +26,18 @@ function updateConnections(connections: Variable<string[]>) {
             const names = value
                 .split("\n")
                 .filter((line) => line.includes("802-11-wireless"))
-                .map((line) => line.split(":")[0].trim());
+                .map((line) => line.split(":")[0].trim())
+                .sort((a, b) => {
+                    const aInRange = ssidInRange(a)
+                    const bInRange = ssidInRange(b)
+                    if (aInRange && bInRange) {
+                        return 0
+                    } else if (aInRange) {
+                        return -1
+                    } else {
+                        return 1
+                    }
+                });
 
             connections.set(names)
         })
@@ -100,8 +119,8 @@ function Connections({connections}: {connections: Variable<string[]>}) {
         {connections((connectionsValue) => {
             return connectionsValue.map((connection) => {
                 const buttonsRevealed = Variable(false)
-                let label = ""
-                let canConnect = true
+                let label: string
+                let canConnect: boolean
                 const accessPoint = network.wifi.accessPoints.find((accessPoint) => {
                     return accessPoint.ssid === connection
                 })
@@ -221,6 +240,7 @@ export default function () {
                             css={`margin-bottom: 4px;`}
                             label="Scanning…"/>
                     } else {
+                        updateConnections(connections)
                         const accessPoints = network.wifi.accessPoints
 
                         const accessPointsUi = accessPoints.filter((value) => {
