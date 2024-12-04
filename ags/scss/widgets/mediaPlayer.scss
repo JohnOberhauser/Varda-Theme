@@ -11,19 +11,6 @@
   border-radius: 8px;
   padding: 4px;
 
-  .title {
-    font-weight: bold;
-    color: vars.$fg;
-  }
-
-  .artist {
-    color: vars.$fg;
-  }
-
-  .time {
-    color: vars.$fg;
-  }
-
   .controlButton {
     all: unset;
     background-color: vars.$bg;

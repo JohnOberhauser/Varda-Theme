@@ -32,18 +32,18 @@ function MediaPlayer({ player }: { player: Mpris.Player }) {
         className="mediaPlayer"
         vertical={true}>
         <label
-            className="title"
+            className="labelSmallBold"
             halign={CENTER}
             label={title}/>
         <label
-            className="artist"
+            className="labelSmall"
             halign={CENTER}
             label={artist}/>
         <box
             className="seekContainer"
             vertical={false}>
             <label
-                className="time"
+                className="labelSmall"
                 halign={START}
                 visible={bind(player, "length").as(l => l > 0)}
                 label={bind(player, "position").as(lengthStr)}
@@ -56,7 +56,7 @@ function MediaPlayer({ player }: { player: Mpris.Player }) {
                 value={position}
             />
             <label
-                className="time"
+                className="labelSmall"
                 halign={END}
                 visible={bind(player, "length").as(l => l > 0)}
                 label={bind(player, "length").as(l => l > 0 ? lengthStr(l) : "0:00")}

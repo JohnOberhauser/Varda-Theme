@@ -42,14 +42,17 @@ export default function Notification(props: Props) {
         onClick={() => n.dismiss()}>
         <box
             vertical={true}>
-            <box className="header">
+            <box
+                vertical={false}>
                 <label
-                    className="app-name"
+                    className="labelSmallBold"
+                    css={`margin-left: 8px;`}
                     halign={START}
                     truncate
                     label={n.appName || "Unknown"}/>
                 <label
-                    className="time"
+                    className="labelSmall"
+                    css={`margin-right: 4px;`}
                     hexpand
                     halign={END}
                     label={time(n.time)}/>
@@ -58,16 +61,18 @@ export default function Notification(props: Props) {
                     onClicked={() => n.dismiss()}
                     label=""/>
             </box>
-            <box className="content" vertical={true}>
+            <box
+                vertical={true}
+                css={`padding: 10px;`}>
                 <label
-                    className="summary"
+                    className="labelMediumBold"
                     halign={START}
                     xalign={0}
                     label={n.summary}
                     truncate
                 />
                 {n.body && <label
-                    className="body"
+                    className="labelSmall"
                     wrap
                     useMarkup
                     halign={START}
@@ -75,10 +80,11 @@ export default function Notification(props: Props) {
                     label={n.body}
                 />}
             </box>
-            {n.get_actions().length > 0 && <box className="actions">
+            {n.get_actions().length > 0 && <box>
                 {n.get_actions().map(({ label, id }) => (
                     <button
-                        hexpand
+                        className="primaryButton"
+                        hexpand={true}
                         onClicked={() => n.invoke(id)}
                         label={label}/>
                 ))}

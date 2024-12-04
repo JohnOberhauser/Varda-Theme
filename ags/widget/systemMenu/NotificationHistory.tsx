@@ -12,7 +12,7 @@ export default function () {
         <box
             vertical={false}>
             <label
-                className="notificationHistoryLabel"
+                className="labelMediumBold"
                 label="Notifications"/>
             <box hexpand={true}/>
             <button
@@ -27,7 +27,8 @@ export default function () {
         {bind(notifications, "notifications").as((notificationsList) => {
             if (notificationsList.length === 0) {
                 return <label
-                    className="notificationHistoryEmptyLabel"
+                    className="labelSmall"
+                    css={`margin: 8px;`}
                     halign={Gtk.Align.CENTER}
                     label="All caught up"/>
             } else {

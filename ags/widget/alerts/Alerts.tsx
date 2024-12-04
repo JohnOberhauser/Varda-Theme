@@ -66,7 +66,7 @@ export function AlertWindow(
                 css={"margin-left: 10px;"}
                 valign={Gtk.Align.CENTER}>
                 <label
-                    className="alertText"
+                    className="labelSmall"
                     label={label}
                     halign={Gtk.Align.START}/>
                 <slider

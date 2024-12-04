@@ -128,10 +128,11 @@ export default function () {
             </scrollable>
             <box
                 halign={CENTER}
-                className="not-found"
                 vertical={true}
                 visible={list.as(l => l.length === 0)}>
-                <label label="No match found" />
+                <label
+                    className="labelSmall"
+                    label="No match found"/>
             </box>
         </box>
     </window>

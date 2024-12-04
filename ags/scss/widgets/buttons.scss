@@ -36,5 +36,20 @@
   color: vars.$fg;
   border-radius: 8px;
   padding: 8px;
-  min-width: 200px;
+}
+
+.primaryButton:hover {
+  background-color: vars.$bgHover;
+}
+
+.transparentButton {
+  all: unset;
+  background-color: transparent;
+  color: vars.$fg;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.transparentButton:hover {
+  background-color: vars.$bgHover;
 }

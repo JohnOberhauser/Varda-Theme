@@ -70,7 +70,7 @@ export default function (
                 }}/>
         </box>
         <revealer
-            className="audioRevealer"
+            className="rowRevealer"
             revealChild={endpointChooserRevealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>

@@ -43,6 +43,10 @@
   margin: 0 20px 0 20px;
 }
 
+.rowRevealer {
+  padding: 6px 30px 6px 30px;
+}
+
 .audioSelectionLabel {
   all: unset;
   padding: 6px;
@@ -62,23 +66,6 @@
 
 .audioSelectionButton:hover {
   background-color: vars.$bgHover;
-}
-
-.audioRevealer {
-  padding: 6px 30px 6px 30px;
-}
-
-.networkRevealer {
-  padding: 6px 30px 6px 30px;
-}
-
-.networkSelectionButton {
-  color: vars.$fg;
-  background: transparent;
-}
-
-.networkSelectionButton:hover {
-  background: vars.$bgHover;
 }
 
 .themeButton {
@@ -117,16 +104,4 @@
 
 .notificationHistoryContainer {
   margin: 0 40px 0 40px;
-}
-
-.notificationHistoryLabel {
-  color: vars.$fg;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.notificationHistoryEmptyLabel {
-  margin: 8px;
-  color: vars.$fg;
-  font-size: 14px;
 }

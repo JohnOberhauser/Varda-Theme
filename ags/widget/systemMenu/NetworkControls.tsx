@@ -231,7 +231,7 @@ export default function () {
                 }}/>
         </box>
         <revealer
-            className="audioRevealer"
+            className="rowRevealer"
             revealChild={networkChooserRevealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
