@@ -95,6 +95,8 @@ export default function () {
                 vertical={true}>
                 {bind(network.wifi, "activeAccessPoint").as((activeAccessPoint) => {
                     return <button
+                        className="iconButton"
+                        css={`margin-bottom: 4px;`}
                         label="Disconnect"
                         onClicked={() => {
                             execAsync(["bash", "-c", `nmcli connection delete "${activeAccessPoint.ssid}"`])
