@@ -15,22 +15,41 @@ function PasswordEntry(
 ) {
     const text = Variable("")
 
-    return <entry
-        placeholderText="password"
-        text={text()}
-        onChanged={self => text.set(self.text)}
-        onActivate={(entry) => {
-            execAsync(["bash", "-c", `echo '${text.get()}' | nmcli device wifi connect "${accessPoint.ssid}" --ask`])
-                .catch((error) => {
-                    print(error)
-                })
-                .then((value) => {
-                    print(value)
-                })
-                .finally(() => {
-                    passwordEntryRevealed.set(false)
-                })
-        }}/>
+    const connect = () => {
+        execAsync(["bash", "-c", `echo '${text.get()}' | nmcli device wifi connect "${accessPoint.ssid}" --ask`])
+            .catch((error) => {
+                print(error)
+            })
+            .then((value) => {
+                print(value)
+            })
+            .finally(() => {
+                passwordEntryRevealed.set(false)
+            })
+    }
+
+    const passwordEntry = <box
+        vertical={true}>
+        <label
+            halign={Gtk.Align.START}
+            className="networkPasswordLabel"
+            label="Password"/>
+        <entry
+            className="networkPasswordEntry"
+            text={text()}
+            onChanged={self => text.set(self.text)}
+            onActivate={() => connect()}/>
+    </box>
+
+    return <box
+        vertical={true}>
+        {accessPoint.flags !== 0 ? passwordEntry : null}
+        <button
+            className="iconButton"
+            hexpand={true}
+            label="Connect"
+            onClicked={() => connect()}/>
+    </box>
 }
 
 export default function () {
@@ -84,7 +103,7 @@ export default function () {
                         const accessPoints = network.wifi.accessPoints
 
                         const accessPointsUi = accessPoints.filter((value) => {
-                            return value.ssid != null && value.ssid != network.wifi.ssid
+                            return value.ssid != null && value.ssid
                         }).sort((a, b) => {
                             if (a.strength > b.strength) {
                                 return -1
@@ -100,12 +119,9 @@ export default function () {
                                     vertical={false}>
                                     <button
                                         hexpand={true}
-                                        className="networkSelectionLabel"
-
+                                        className="iconButton"
                                         onClicked={() => {
-                                            if (accessPoint.flags !== 0) {
-                                                passwordEntryRevealed.set(!passwordEntryRevealed.get())
-                                            }
+                                            passwordEntryRevealed.set(!passwordEntryRevealed.get())
                                         }}>
                                         <label
                                             halign={Gtk.Align.START}
@@ -114,7 +130,6 @@ export default function () {
                                     </button>
                                 </box>
                                 <revealer
-                                    className="audioRevealer"
                                     revealChild={passwordEntryRevealed()}
                                     transitionDuration={200}
                                     transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
