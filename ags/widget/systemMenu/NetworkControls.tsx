@@ -278,11 +278,13 @@ export default function () {
                         }).map((accessPoint) => {
                             const passwordEntryRevealed = Variable(false)
 
-                            bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
-                                if (!visible) {
-                                    passwordEntryRevealed.set(false)
-                                }
-                            })
+                            setTimeout(() => {
+                                bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
+                                    if (!visible) {
+                                        passwordEntryRevealed.set(false)
+                                    }
+                                })
+                            }, 1_000)
 
                             return <box
                                 vertical={true}>
