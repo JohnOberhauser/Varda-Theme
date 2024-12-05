@@ -80,11 +80,12 @@ export default function Notification(props: Props) {
                     label={n.body}
                 />}
             </box>
-            {n.get_actions().length > 0 && <box>
+            {n.get_actions().length > 0 && <box vertical={true}>
                 {n.get_actions().map(({ label, id }) => (
                     <button
                         className="primaryButton"
                         hexpand={true}
+                        css={`margin: 4px 8px 8px 8px;`}
                         onClicked={() => n.invoke(id)}
                         label={label}/>
                 ))}

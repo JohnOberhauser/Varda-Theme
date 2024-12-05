@@ -9,7 +9,7 @@ export default function () {
     return <box
         vertical={true}>
         <box
-            className="notificationHistoryContainer"
+            css={`margin: 0 40px 0 40px;`}
             vertical={false}>
             <label
                 className="labelMediumBold"
@@ -38,7 +38,7 @@ export default function () {
                     heightRequest={400}
                     canFocus={false}>
                     <box
-                        className="notificationHistoryContainer"
+                        css={`margin: 0 10px 0 10px;`}
                         vertical={true}>
                         {notificationsList.map((notification) => {
                             return <Notification
