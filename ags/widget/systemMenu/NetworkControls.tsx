@@ -39,8 +39,6 @@ function updateConnections(connections: Variable<string[]>) {
                     }
                 });
 
-            print(names)
-
             connections.set(names)
         })
 }
@@ -122,11 +120,13 @@ function Connections({connections}: {connections: Variable<string[]>}) {
             return connectionsValue.map((connection) => {
                 const buttonsRevealed = Variable(false)
 
-                bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
-                    if (!visible) {
-                        buttonsRevealed.set(false)
-                    }
-                })
+                setTimeout(() => {
+                    bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
+                        if (!visible) {
+                            buttonsRevealed.set(false)
+                        }
+                    })
+                }, 1_000)
 
                 let label: string
                 let canConnect: boolean

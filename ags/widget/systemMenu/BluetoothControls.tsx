@@ -5,16 +5,17 @@ import {SystemMenuWindowName} from "./SystemMenuWindow";
 import {getBluetoothIcon, getBluetoothName} from "../utils/bluetooth";
 import Bluetooth from "gi://AstalBluetooth";
 
-function SavedBluetoothDevices() {
+function BluetoothDevices() {
     const bluetooth = Bluetooth.get_default()
 
     return <box
         vertical={true}>
-        <label
-            halign={Gtk.Align.START}
-            label="Saved devices"
-            className="labelLargeBold"/>
         {bind(bluetooth, "devices").as((devices) => {
+            if (devices.length === 0) {
+                return <label
+                    className="labelMedium"
+                    label="No devices"/>
+            }
             return devices.filter((device) => {
                 return device.name != null
             }).map((device) => {
@@ -90,7 +91,7 @@ function SavedBluetoothDevices() {
                             <button
                                 hexpand={true}
                                 className="primaryButton"
-                                css={`margin-top: 4px;`}
+                                css={`margin-top: 4px; margin-bottom: 4px;`}
                                 label={bind(device, "paired").as((paired) => {
                                     return paired ? "Unpair" : "Pair"
                                 })}
@@ -154,19 +155,28 @@ export default function () {
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
             <box
                 vertical={true}>
-                <button
-                    className="transparentButton"
-                    label={bind(bluetooth.adapter, "discovering").as((discovering) => {
-                        return discovering ? "Stop scanning" : "Scan"
-                    })}
-                    onClicked={() => {
-                        if (bluetooth.adapter.discovering) {
-                            bluetooth.adapter.stop_discovery()
-                        } else {
-                            bluetooth.adapter.start_discovery()
-                        }
-                    }}/>
-                <SavedBluetoothDevices/>
+                <box
+                    vertical={false}>
+                    <label
+                        halign={Gtk.Align.START}
+                        hexpand={true}
+                        label="Devices"
+                        className="labelLargeBold"/>
+                    <button
+                        className="transparentButton"
+                        css={`padding-left: 8px; padding-right: 8px;`}
+                        label={bind(bluetooth.adapter, "discovering").as((discovering) => {
+                            return discovering ? "Stop scanning" : "Scan"
+                        })}
+                        onClicked={() => {
+                            if (bluetooth.adapter.discovering) {
+                                bluetooth.adapter.stop_discovery()
+                            } else {
+                                bluetooth.adapter.start_discovery()
+                            }
+                        }}/>
+                </box>
+                <BluetoothDevices/>
             </box>
         </revealer>
     </box>
