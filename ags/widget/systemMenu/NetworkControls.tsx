@@ -39,6 +39,8 @@ function updateConnections(connections: Variable<string[]>) {
                     }
                 });
 
+            print(names)
+
             connections.set(names)
         })
 }
@@ -135,7 +137,7 @@ function Connections({connections}: {connections: Variable<string[]>}) {
                     label = `${getAccessPointIcon(accessPoint)}  ${connection}`
                     canConnect = network.wifi.activeAccessPoint.ssid !== connection;
                 } else {
-                    label = connection
+                    label = `󰤮  ${connection}`
                     canConnect = false
                 }
 
