@@ -43,7 +43,7 @@ class NotifiationMap implements Subscribable {
                 // so that it acts as a "popup" and we can still display it
                 // in a notification center like widget
                 // but clicking on the close button will close it
-                onHoverLost: () => this.delete(id),
+                onHoverLost: () => {},
 
                 // notifd by default does not close notifications
                 // until user input or the timeout specified by sender

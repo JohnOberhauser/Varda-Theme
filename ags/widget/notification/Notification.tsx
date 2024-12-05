@@ -1,13 +1,7 @@
 import { GLib } from "astal"
-import { Gtk, Astal } from "astal/gtk3"
+import { Gtk } from "astal/gtk3"
 import { type EventBox } from "astal/gtk3/widget"
 import Notifd from "gi://AstalNotifd"
-
-const isIcon = (icon: string) =>
-    !!Astal.Icon.lookup_icon(icon)
-
-const fileExists = (path: string) =>
-    GLib.file_test(path, GLib.FileTest.EXISTS)
 
 const time = (time: number, format = "%I:%M %p") => GLib.DateTime
     .new_from_unix_local(time)
@@ -69,12 +63,12 @@ export default function Notification(props: Props) {
                     halign={START}
                     xalign={0}
                     label={n.summary}
-                    truncate
+                    truncate={true}
                 />
                 {n.body && <label
                     className="labelSmall"
-                    wrap
-                    useMarkup
+                    useMarkup={true}
+                    truncate={true}
                     halign={START}
                     xalign={0}
                     label={n.body}
