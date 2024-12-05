@@ -19,7 +19,6 @@ function updateConnections(connections: Variable<string[]>) {
             print(error)
         })
         .then((value) => {
-            print(value)
             if (typeof value !== "string") {
                 return
             }
