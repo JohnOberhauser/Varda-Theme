@@ -8,6 +8,7 @@ import ThemeOptions from "./ThemeOptions";
 import MediaPlayers from "./MediaPlayers";
 import NotificationHistory from "./NotificationHistory";
 import NetworkControls from "./NetworkControls";
+import BluetoothControls from "./BluetoothControls";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
@@ -27,6 +28,7 @@ export default function (anchor: Astal.WindowAnchor) {
             vertical={true}>
             <box css={"margin-top: 20px;"}/>
             <NetworkControls/>
+            <BluetoothControls/>
             <EndpointControls
                 defaultEndpoint={audio.default_speaker}
                 endpointsBinding={bind(audio, "speakers")}
