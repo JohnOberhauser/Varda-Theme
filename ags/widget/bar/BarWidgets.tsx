@@ -9,6 +9,7 @@ import {getNetworkIconBinding} from "../utils/network"
 import {getBatteryIcon} from "../utils/battery"
 import {execAsync} from "astal/process"
 import {SystemMenuWindowName} from "../systemMenu/SystemMenuWindow";
+import Bluetooth from "gi://AstalBluetooth"
 
 export function Workspaces({vertical}: { vertical: boolean }) {
     const hypr = Hyprland.get_default()
@@ -104,10 +105,14 @@ export function MicrophoneButton({css}: { css: string }) {
 }
 
 export function BluetoothButton({css}: { css: string }) {
+    const bluetooth = Bluetooth.get_default()
     return <label
         css={css}
         className="iconButton"
-        label="󰂯"/>
+        label="󰂯"
+        visible={bind(bluetooth, "adapter").as((adapter) => {
+            return adapter != null
+        })}/>
 }
 
 export function NetworkButton({css}: { css: string }) {

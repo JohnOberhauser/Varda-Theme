@@ -1,5 +1,4 @@
 import Bluetooth from "gi://AstalBluetooth"
-import {bind, Variable} from "astal"
 
 export function getBluetoothIcon() {
     const bluetooth = Bluetooth.get_default()
