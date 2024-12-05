@@ -63,7 +63,7 @@ export default function Notification(props: Props) {
                     className="labelMediumBold"
                     halign={START}
                     xalign={0}
-                    label={insertNewlines(n.summary, 33)}
+                    label={insertNewlines(n.summary, 33)} // wrap causes issues with scrollable height so split lines manually
                 />
                 {n.body && <label
                     className="labelSmall"
