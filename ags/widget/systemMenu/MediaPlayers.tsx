@@ -1,6 +1,6 @@
-import { Astal, Gtk } from "astal/gtk3"
+import { Gtk } from "astal/gtk3"
 import Mpris from "gi://AstalMpris"
-import { bind } from "astal"
+import { bind, Variable } from "astal"
 
 function lengthStr(length: number) {
     const min = Math.floor(length / 60)
@@ -19,8 +19,13 @@ function MediaPlayer({ player }: { player: Mpris.Player }) {
     const artist = bind(player, "artist").as(a =>
         a || "Unknown Artist")
 
-    const position = bind(player, "position").as(p => player.length > 0
-        ? p / player.length : 0)
+    // player.position will keep changing even when the player is paused.  This is a workaround
+    const realPosition = Variable(player.position)
+    bind(player, "position").subscribe((position) => {
+        if (player.playbackStatus === Mpris.PlaybackStatus.PLAYING) {
+            realPosition.set(position)
+        }
+    })
 
     const playIcon = bind(player, "playbackStatus").as(s =>
         s === Mpris.PlaybackStatus.PLAYING
@@ -46,14 +51,19 @@ function MediaPlayer({ player }: { player: Mpris.Player }) {
                 className="labelSmall"
                 halign={START}
                 visible={bind(player, "length").as(l => l > 0)}
-                label={bind(player, "position").as(lengthStr)}
+                label={realPosition().as(lengthStr)}
             />
             <slider
                 className="seek"
                 hexpand={true}
                 visible={bind(player, "length").as(l => l > 0)}
-                onDragged={({value}) => player.position = value * player.length}
-                value={position}
+                onDragged={({value}) => {
+                    player.position = value * player.length
+                    realPosition.set(player.position)
+                }}
+                value={realPosition().as((position) => {
+                    return player.length > 0 ? position / player.length : 0
+                })}
             />
             <label
                 className="labelSmall"
