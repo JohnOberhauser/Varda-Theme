@@ -7,9 +7,9 @@ export default function () {
     const notifications = Notifd.get_default()
 
     return <box
-        className="notificationHistoryContainer"
         vertical={true}>
         <box
+            className="notificationHistoryContainer"
             vertical={false}>
             <label
                 className="labelMediumBold"
@@ -28,19 +28,29 @@ export default function () {
             if (notificationsList.length === 0) {
                 return <label
                     className="labelSmall"
-                    css={`margin: 8px;`}
+                    css={`margin-top: 8px; margin-bottom: 20px;`}
                     halign={Gtk.Align.CENTER}
                     label="All caught up"/>
             } else {
-                return notificationsList.map((notification) => {
-                    return <Notification
-                        setup={() => {
-                        }}
-                        onHoverLost={() => {
-                        }}
-                        notification={notification}
-                        useHistoryCss={true}/>
-                })
+                return <scrollable
+                    className="scrollWindow"
+                    vscroll={Gtk.PolicyType.AUTOMATIC}
+                    heightRequest={400}
+                    canFocus={false}>
+                    <box
+                        className="notificationHistoryContainer"
+                        vertical={true}>
+                        {notificationsList.map((notification) => {
+                            return <Notification
+                                setup={() => {
+                                }}
+                                onHoverLost={() => {
+                                }}
+                                notification={notification}
+                                useHistoryCss={true}/>
+                        })}
+                    </box>
+                </scrollable>
             }
         })}
     </box>

@@ -46,7 +46,6 @@ export default function (anchor: Astal.WindowAnchor) {
             <PowerOptions/>
             <box css={"margin-top: 20px;"}/>
             <NotificationHistory/>
-            <box css={"margin-top: 20px;"}/>
         </box>
     </window>
 }
