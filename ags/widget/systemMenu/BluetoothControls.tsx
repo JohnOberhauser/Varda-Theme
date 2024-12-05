@@ -29,7 +29,7 @@ function BluetoothDevices() {
                     vertical={true}>
                     <button
                         hexpand={true}
-                        className="iconButton"
+                        className="transparentButton"
                         onClicked={() => {
                             buttonsRevealed.set(!buttonsRevealed.get())
                         }}>

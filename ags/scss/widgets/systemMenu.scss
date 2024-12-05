@@ -47,27 +47,6 @@
   padding: 6px 30px 6px 30px;
 }
 
-.audioSelectionLabel {
-  all: unset;
-  padding: 6px;
-  min-width: 24px;
-  color: vars.$fg;
-}
-
-.audioSelectionButton {
-  all: unset;
-  color: vars.$fg;
-  background-color: vars.$bg;
-  min-width: 250px;
-  min-height: 30px;
-  margin: 6px;
-  border: 0;
-}
-
-.audioSelectionButton:hover {
-  background-color: vars.$bgHover;
-}
-
 .themeButton {
   all: unset;
   background-color: transparent;

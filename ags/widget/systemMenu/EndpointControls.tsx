@@ -1,7 +1,6 @@
 import Wp from "gi://AstalWp"
 import {bind, Binding, Variable} from "astal"
 import {App, Gtk} from "astal/gtk3"
-import {truncateString} from "../utils/strings";
 import {SystemMenuWindowName} from "./SystemMenuWindow";
 import {toggleMuteEndpoint} from "../utils/audio";
 
@@ -78,25 +77,24 @@ export default function (
                 vertical={true}>
                 {endpointsBinding.as((endpoints) => {
                     return endpoints.map((endpoint) => {
-                        let endpointName = truncateString(endpoint.description, 25)
-                        return <box
-                            vertical={false}>
+                        return <button
+                            hexpand={true}
+                            className="transparentButton"
+                            onClicked={() => {
+                                endpoint.set_is_default(true)
+                            }}>
                             <label
-                                className="audioSelectionLabel"
+                                halign={Gtk.Align.START}
+                                className="labelSmall"
+                                truncate={true}
                                 label={bind(endpoint, "isDefault").as((isDefault) => {
                                     if (isDefault) {
-                                        return ""
+                                        return `  ${endpoint.description}`
                                     } else {
-                                        return ""
+                                        return `   ${endpoint.description}`
                                     }
                                 })}/>
-                            <button
-                                className="audioSelectionButton"
-                                label={endpointName}
-                                onClicked={() => {
-                                    endpoint.set_is_default(true)
-                                }}/>
-                        </box>
+                        </button>
                     })
                 })}
             </box>
