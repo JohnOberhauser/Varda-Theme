@@ -27,8 +27,7 @@ export default function () {
         visible={false}
         clickThrough={true}>
         <box
-            vertical={true}
-            clickThrough={true}>
+            vertical={true}>
             <box
                 className="window"
                 vertical={true}>
@@ -54,8 +53,7 @@ export default function () {
                 <NotificationHistory/>
             </box>
             <box
-                vexpand={true}
-                clickThrough={true}/>
+                vexpand={true}/>
         </box>
     </window>
 }
