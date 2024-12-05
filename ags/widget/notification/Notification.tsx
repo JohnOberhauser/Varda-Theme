@@ -2,6 +2,7 @@ import { GLib } from "astal"
 import { Gtk } from "astal/gtk3"
 import { type EventBox } from "astal/gtk3/widget"
 import Notifd from "gi://AstalNotifd"
+import {insertNewlines} from "../utils/strings";
 
 const time = (time: number, format = "%I:%M %p") => GLib.DateTime
     .new_from_unix_local(time)
@@ -62,16 +63,14 @@ export default function Notification(props: Props) {
                     className="labelMediumBold"
                     halign={START}
                     xalign={0}
-                    label={n.summary}
-                    truncate={true}
+                    label={insertNewlines(n.summary, 33)}
                 />
                 {n.body && <label
                     className="labelSmall"
                     useMarkup={true}
-                    truncate={true}
                     halign={START}
                     xalign={0}
-                    label={n.body}
+                    label={insertNewlines(n.body, 40)}
                 />}
             </box>
             {n.get_actions().length > 0 && <box vertical={true}>
