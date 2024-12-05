@@ -7,7 +7,6 @@ export default function () {
     const notifications = Notifd.get_default()
 
     return <box
-        vexpand={true}
         vertical={true}
         css={`margin-bottom: 2px;`}>
         <box
@@ -37,7 +36,6 @@ export default function () {
                 return <scrollable
                     className="scrollWindow"
                     vscroll={Gtk.PolicyType.AUTOMATIC}
-                    vexpand={true}
                     propagateNaturalHeight={true}>
                     <box
                         css={`margin: 0 10px 0 10px;`}
