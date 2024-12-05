@@ -1,5 +1,5 @@
 import Notifd from "gi://AstalNotifd"
-import { Variable, bind, timeout } from "astal"
+import { bind } from "astal"
 import Notification from "../notification/Notification"
 import {Gtk} from "astal/gtk3"
 
@@ -7,7 +7,9 @@ export default function () {
     const notifications = Notifd.get_default()
 
     return <box
-        vertical={true}>
+        vexpand={true}
+        vertical={true}
+        css={`margin-bottom: 2px;`}>
         <box
             css={`margin: 0 40px 0 40px;`}
             vertical={false}>
@@ -35,8 +37,8 @@ export default function () {
                 return <scrollable
                     className="scrollWindow"
                     vscroll={Gtk.PolicyType.AUTOMATIC}
-                    heightRequest={400}
-                    canFocus={false}>
+                    vexpand={true}
+                    propagateNaturalHeight={true}>
                     <box
                         css={`margin: 0 10px 0 10px;`}
                         vertical={true}>

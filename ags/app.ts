@@ -15,12 +15,11 @@ App.start({
         if (args.includes("sidebar")) {
             SideBar()
             Calendar(Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.LEFT)
-            SystemMenuWindow(Astal.WindowAnchor.TOP | Astal.WindowAnchor.LEFT)
         } else {
             TopBar()
             Calendar(Astal.WindowAnchor.TOP)
-            SystemMenuWindow(Astal.WindowAnchor.TOP | Astal.WindowAnchor.LEFT)
         }
+        SystemMenuWindow()
         VolumeAlert()
         BrightnessAlert()
         App.get_monitors().map(NotificationPopups)
