@@ -75,9 +75,8 @@ export default function () {
     ])
 
     return <window
-        className="focusedWindow"
         name={AppLauncherWindowName}
-        anchor={Astal.WindowAnchor.TOP}
+        anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.BOTTOM}
         exclusivity={Astal.Exclusivity.IGNORE}
         keymode={Astal.Keymode.EXCLUSIVE}
         application={App}
@@ -94,47 +93,57 @@ export default function () {
                 selectedIndex.set(selectedIndex.get() - 1)
             }
         }}
-        marginTop={5}
+        css={`background: transparent;`}
+        marginTop={100}
         marginBottom={5}
         visible={false}>
         <box
-            widthRequest={500}
-            heightRequest={550}
-            className="appLauncher"
             vertical={true}>
             <box
-                vertical={false}>
-                <label
-                    className="searchIcon"
-                    label=""/>
-                <entry
-                    className="searchField"
-                    placeholderText="Search"
-                    text={text()}
-                    onChanged={self => text.set(self.text)}
-                    onActivate={onEnter}
-                    hexpand={true}
-                />
-            </box>
-            <scrollable
-                className="scrollWindow"
-                vscroll={Gtk.PolicyType.AUTOMATIC}
-                heightRequest={550}
-                canFocus={false}>
-                <box spacing={6} vertical={true}>
-                    {listBinding(value => value[0].map((app, index) => (
-                        <AppButton app={app} isSelected={index === value[1]}/>
-                    )))}
+                className="focusedWindow">
+                <box
+                    widthRequest={500}
+                    className="appLauncher"
+                    vertical={true}>
+                    <box
+                        vertical={false}>
+                        <label
+                            className="searchIcon"
+                            label=""/>
+                        <entry
+                            className="searchField"
+                            placeholderText="Search"
+                            text={text()}
+                            onChanged={self => text.set(self.text)}
+                            onActivate={onEnter}
+                            hexpand={true}
+                        />
+                    </box>
+                    <scrollable
+                        className="scrollWindow"
+                        vscroll={Gtk.PolicyType.AUTOMATIC}
+                        propagateNaturalHeight={true}
+                        canFocus={false}>
+                        <box spacing={6} vertical={true}>
+                            {listBinding(value => value[0].map((app, index) => (
+                                <AppButton app={app} isSelected={index === value[1]}/>
+                            )))}
+                            <box
+                                halign={CENTER}
+                                vertical={true}
+                                css={`margin-bottom: 8px;`}
+                                visible={list.as(l => l.length === 0)}>
+                                <label
+                                    className="labelSmall"
+                                    label="No match found"/>
+                            </box>
+                            <box/>
+                        </box>
+                    </scrollable>
                 </box>
-            </scrollable>
-            <box
-                halign={CENTER}
-                vertical={true}
-                visible={list.as(l => l.length === 0)}>
-                <label
-                    className="labelSmall"
-                    label="No match found"/>
             </box>
+            <box
+                vexpand={true}/>
         </box>
     </window>
 }
