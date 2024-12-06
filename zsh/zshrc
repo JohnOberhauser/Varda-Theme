@@ -41,9 +41,8 @@ alias sv="sudo nvim"
 alias glm="git pull origin main"
 alias bird="rsync -a --info=progress2 /home/john/Pictures/camera /mnt/ssd/"
 alias timezone='sudo timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"'
-alias nmtui="~/.config/kitty/nmtui.sh"
 alias settheme="~/workspace/Varda-Theme/setup/scripts/setTheme.sh"
-alias theme='function _theme() { ~/workspace/Varda-Theme/setup/scripts/setTheme.sh "$1" && clear && fastfetch; }; _theme'
+alias theme='function _theme() { ~/workspace/Varda-Theme/setup/scripts/setTheme.sh "$1" }; _theme'
 alias cd=z
 
 # firefox alias
@@ -130,5 +129,3 @@ function y() {
 }
 
 eval "$(zoxide init zsh)"
-
-fastfetch

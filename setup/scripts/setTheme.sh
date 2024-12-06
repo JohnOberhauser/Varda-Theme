@@ -30,9 +30,9 @@ ags_theme() {
 }
 
 kitty_theme() {
-  cp ./setup/themes/$1/kitty/nmtui_colors.conf ./kitty/
+  cp ./setup/themes/$1/kitty/current-theme.conf ./kitty/localTheme/themes/$1.conf
   cp ./setup/themes/$1/kitty/current-theme.conf ./kitty/
-  kitty @ set-colors ~/.config/kitty/current-theme.conf
+  KITTY_CONFIG_DIRECTORY=$HOME/.config/kitty/localTheme kitty +kitten themes --reload-in=all $1
 }
 
 fastfetch_theme() {

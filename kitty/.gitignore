@@ -1,2 +1,5 @@
 current-theme.conf
-nmtui_colors.conf
+localTheme/current-theme.conf
+localTheme/kitty.conf
+localTheme/kitty.conf.bak
+localTheme/themes/*
