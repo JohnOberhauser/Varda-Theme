@@ -94,7 +94,8 @@ export default function () {
                 selectedIndex.set(selectedIndex.get() - 1)
             }
         }}
-        margin_top={200}
+        marginTop={5}
+        marginBottom={5}
         visible={false}>
         <box
             widthRequest={500}

@@ -1,11 +1,10 @@
 @use "../variables" as vars;
 
 .appLauncher {
-  background-color: vars.$bg;
-  margin: 10px;
+  padding: 2px;
 
   .appButton {
-    margin: 2px 0;
+    margin: 2px 8px 0 8px;
     padding: 8px;
     background: vars.$bg;
     border-radius: 8px;
@@ -17,7 +16,7 @@
   }
 
   .selectedAppButton {
-    margin: 2px 0;
+    margin: 2px 8px 0 8px;
     padding: 8px;
     background: vars.$primary;
     border-radius: 8px;
@@ -29,7 +28,7 @@
   }
 
   .searchField {
-    margin-bottom: 4px;
+    margin: 4px;
     box-shadow: none;
     background: vars.$bg;
   }
