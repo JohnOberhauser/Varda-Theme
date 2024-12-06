@@ -12,7 +12,7 @@ import {
 } from "./BarWidgets";
 
 export default function () {
-    let iconCss = "margin-top: 10px;"
+    let iconCss = ""
 
     return <window
         className="window"
@@ -43,7 +43,7 @@ export default function () {
                 <BluetoothButton css={iconCss}/>
                 <NetworkButton css={iconCss}/>
                 <BatteryButton css={iconCss}/>
-                <ClockButton css={"margin-top: 10px; padding-bottom: 6px;"} singleLine={false}/>
+                <ClockButton css={"padding-bottom: 6px;"} singleLine={false}/>
             </box>
         </centerbox>
     </window>
