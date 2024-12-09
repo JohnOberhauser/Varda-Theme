@@ -88,7 +88,32 @@ hypr() {
   cp ./setup/themes/$1/hypr/hyprlock.conf ./hypr/
   cp ./setup/themes/$1/hypr/hyprpaper.conf ./hypr/
   cat ./setup/themes/$1/themeName > ./hypr/themeName
-  $HOME/.config/hypr/scripts/setWallpaper.sh $1
+  case $1 in
+    "varda")
+        hyprctl hyprpaper wallpaper "desc:LG Electronics LG ULTRAGEAR+ 303NTRL72662,contain:~/workspace/Varda-Theme/setup/themes/varda/hypr/wallpaper/planet-desktop.jpg"
+        hyprctl hyprpaper wallpaper "desc:BOE 0x0BCA,contain:~/workspace/Varda-Theme/setup/themes/varda/hypr/wallpaper/planet-laptop.jpg"
+        hyprctl hyprpaper wallpaper "DP-2,~/workspace/Varda-Theme/setup/themes/varda/hypr/wallpaper/planet-desktop.jpg"
+        hyprctl hyprpaper wallpaper "DP-3,~/workspace/Varda-Theme/setup/themes/varda/hypr/wallpaper/planet-desktop.jpg"
+      ;;
+    "everforest")
+        hyprctl hyprpaper wallpaper "desc:LG Electronics LG ULTRAGEAR+ 303NTRL72662,contain:~/workspace/Varda-Theme/setup/themes/everforest/hypr/wallpaper/forest-walkway.jpg"
+        hyprctl hyprpaper wallpaper "desc:BOE 0x0BCA,contain:~/workspace/Varda-Theme/setup/themes/everforest/hypr/wallpaper/forest-walkway.jpg"
+        hyprctl hyprpaper wallpaper "DP-2,~/workspace/Varda-Theme/setup/themes/everforest/hypr/wallpaper/forest-walkway.jpg"
+        hyprctl hyprpaper wallpaper "DP-3,~/workspace/Varda-Theme/setup/themes/everforest/hypr/wallpaper/forest-walkway.jpg"
+      ;;
+    "nord")
+        hyprctl hyprpaper wallpaper "desc:LG Electronics LG ULTRAGEAR+ 303NTRL72662,contain:~/workspace/Varda-Theme/setup/themes/nord/hypr/wallpaper/winter-forest-frost.jpg"
+        hyprctl hyprpaper wallpaper "desc:BOE 0x0BCA,contain:~/workspace/Varda-Theme/setup/themes/nord/hypr/wallpaper/winter-forest-frost.jpg"
+        hyprctl hyprpaper wallpaper "DP-2,~/workspace/Varda-Theme/setup/themes/nord/hypr/wallpaper/winter-forest-frost.jpg"
+        hyprctl hyprpaper wallpaper "DP-3,~/workspace/Varda-Theme/setup/themes/nord/hypr/wallpaper/winter-forest-frost.jpg"
+      ;;
+    "rosepine")
+        hyprctl hyprpaper wallpaper "desc:LG Electronics LG ULTRAGEAR+ 303NTRL72662,contain:~/workspace/Varda-Theme/setup/themes/rosepine/hypr/wallpaper/lavender-fields.jpg"
+        hyprctl hyprpaper wallpaper "desc:BOE 0x0BCA,contain:~/workspace/Varda-Theme/setup/themes/rosepine/hypr/wallpaper/lavender-fields.jpg"
+        hyprctl hyprpaper wallpaper "DP-2,~/workspace/Varda-Theme/setup/themes/rosepine/hypr/wallpaper/lavender-fields.jpg"
+        hyprctl hyprpaper wallpaper "DP-3,~/workspace/Varda-Theme/setup/themes/rosepine/hypr/wallpaper/lavender-fields.jpg"
+    ;;
+  esac
 }
 
 zsh_theme() {
@@ -182,6 +207,3 @@ zsh_theme $1
 btop_theme $1
 intellij_idea $1
 android_studio $1
-
-capitalizedThemeName=$(echo "$1" | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
-notify-send -a "Theme Switcher" "$capitalizedThemeName theme applied" "Some programs may need to be restarted for the theme change to take effect."
