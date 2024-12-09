@@ -98,7 +98,7 @@
       "selectionBackground": "darkGrey2",
       "selectionForeground": "foreground",
       "selectionInactiveBackground": "darkGrey3",
-      "selectionBackgroundInactive": "#background",
+      "selectionBackgroundInactive": "background",
 
       "disabledBackground": "background",
       "inactiveBackground": "background",

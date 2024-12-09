@@ -6,11 +6,12 @@
   "colors": {
     "background": "#191724",
     "darkGrey": "#1F1D2E",
-    "darkGrey2": "#26233A",
-    "darkGrey3": "#26233A",
+    "darkGrey2": "#21202E",
+    "darkGrey3": "#21202E",
     "foreground": "#E0DEF4",
     "red": "#EB6F92",
-    "primary": "#26233A",
+    "primary": "#403D52",
+    "secondary": "#EBBCBA",
     "testFolder": "#403D52"
   },
   "icons": {
@@ -98,7 +99,7 @@
       "selectionBackground": "darkGrey2",
       "selectionForeground": "foreground",
       "selectionInactiveBackground": "darkGrey3",
-      "selectionBackgroundInactive": "#background",
+      "selectionBackgroundInactive": "background",
 
       "disabledBackground": "background",
       "inactiveBackground": "background",
@@ -121,7 +122,7 @@
 
       "separatorColor": "primary",
       "lineSeparatorColor": "primary",
-      "matchForeground": "primary",
+      "matchForeground": "secondary",
       "linkColor": "primary",
       "activeForeground": "primary",
       "hoverForeground": "primary",
