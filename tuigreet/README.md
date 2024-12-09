@@ -35,7 +35,7 @@ add `setvtrgb` to the `HOOKS` list.  Place it first in the list.
 create a backup of your images in /boot/ just in case something goes terribly wrong
 
 #### Step 4
-run `mkinitcpio -P` to regenerate all of the initramfs images
+run `mkinitcpio -P` to regenerate all the initramfs images
 
 #### Step 5
 Reboot your computer with your new colors
@@ -64,7 +64,7 @@ You should use the above steps, enabling kms for ensuring the native resolution 
 Keeping this documentation in just in case I want to reference it for something else in the future.
 
 #### Step 1
-Add an fb mode in `/etc/fb.modes` like so:
+Add an FB mode in `/etc/fb.modes` like so:
 
 ```
 mode "ultrawide"
