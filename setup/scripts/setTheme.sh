@@ -30,6 +30,7 @@ ags_theme() {
 }
 
 kitty_theme() {
+  mkdir -p ./kitty/localTheme/themes
   cp ./setup/themes/$1/kitty/current-theme.conf ./kitty/localTheme/themes/$1.conf
   cp ./setup/themes/$1/kitty/current-theme.conf ./kitty/
   KITTY_CONFIG_DIRECTORY=$HOME/.config/kitty/localTheme kitty +kitten themes --reload-in=all $1
