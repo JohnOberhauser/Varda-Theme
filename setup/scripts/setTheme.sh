@@ -85,6 +85,7 @@ gtk() {
 hypr() {
   cp ./setup/themes/$1/hypr/theme.conf ./hypr/conf/
   cp ./setup/themes/$1/hypr/hyprlock.conf ./hypr/
+  cp ./setup/themes/$1/hypr/hyprpaper.conf ./hypr/
   cat ./setup/themes/$1/themeName > ./hypr/themeName
   $HOME/.config/hypr/scripts/setWallpaper.sh $1
 }
