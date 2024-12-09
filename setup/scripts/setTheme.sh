@@ -181,3 +181,6 @@ zsh_theme $1
 btop_theme $1
 intellij_idea $1
 android_studio $1
+
+capitalizedThemeName=$(echo "$1" | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
+notify-send -a "Theme Switcher" "$capitalizedThemeName theme applied" "Some programs may need to be restarted for the theme change to take effect."
