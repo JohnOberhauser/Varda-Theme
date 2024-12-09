@@ -25,7 +25,7 @@ cd ../..
 
 ags_theme() {
   cat ./setup/themes/$1/ags/variables.scss > ./ags/scss/variables.scss
-  cat ./setup/themes/$1/ags/themeName > ./ags/themeName
+  cat ./setup/themes/$1/themeName > ./ags/themeName
   astal "theme"
 }
 
@@ -57,26 +57,26 @@ gtk() {
   dconf write /org/gnome/desktop/interface/monospace-font-name "'JetBrainsMono Nerd Font Medium 10'"
   dconf write /org/gnome/desktop/interface/document-font-name "'JetBrainsMono Nerd Font Medium 11'"
   case $1 in
-      "varda")
-          ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Varda/gtk-4.0 $HOME/.config/
-          cp -r $HOME/workspace/Varda-Theme/gtk/themes/Varda/* $HOME/.themes/SystemTheme/
-        ;;
-      "everforest")
-          ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Everforest/gtk-4.0 $HOME/.config/
-          cp -r $HOME/workspace/Varda-Theme/gtk/themes/Everforest/* $HOME/.themes/SystemTheme/
-        ;;
-      "nord")
-          ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Nord/gtk-4.0 $HOME/.config/
-          cp -r $HOME/workspace/Varda-Theme/gtk/themes/Nord/* $HOME/.themes/SystemTheme/
-        ;;
-      "rosepine")
-        ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Rosepine/gtk-4.0 $HOME/.config/
-        cp -r $HOME/workspace/Varda-Theme/gtk/themes/Rosepine/* $HOME/.themes/SystemTheme/
+    "varda")
+        ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Varda/gtk-4.0 $HOME/.config/
+        cp -r $HOME/workspace/Varda-Theme/gtk/themes/Varda/* $HOME/.themes/SystemTheme/
       ;;
-      *)
-        echo "no gtk theme"
-        ;;
-    esac
+    "everforest")
+        ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Everforest/gtk-4.0 $HOME/.config/
+        cp -r $HOME/workspace/Varda-Theme/gtk/themes/Everforest/* $HOME/.themes/SystemTheme/
+      ;;
+    "nord")
+        ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Nord/gtk-4.0 $HOME/.config/
+        cp -r $HOME/workspace/Varda-Theme/gtk/themes/Nord/* $HOME/.themes/SystemTheme/
+      ;;
+    "rosepine")
+      ln -sf $HOME/workspace/Varda-Theme/gtk/themes/Rosepine/gtk-4.0 $HOME/.config/
+      cp -r $HOME/workspace/Varda-Theme/gtk/themes/Rosepine/* $HOME/.themes/SystemTheme/
+    ;;
+    *)
+      echo "no gtk theme"
+      ;;
+  esac
   dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita'"
   dconf write /org/gnome/desktop/interface/gtk-theme "'SystemTheme'"
   flatpak override --user --env=GTK_THEME=SystemTheme
@@ -85,9 +85,8 @@ gtk() {
 hypr() {
   cp ./setup/themes/$1/hypr/theme.conf ./hypr/conf/
   cp ./setup/themes/$1/hypr/hyprlock.conf ./hypr/
-  cp ./setup/themes/$1/hypr/hyprpaper.conf ./hypr/
-  pkill hyprpaper
-  nohup hyprpaper > /dev/null 2>&1 &
+  cat ./setup/themes/$1/themeName > ./hypr/themeName
+  $HOME/.config/hypr/scripts/setWallpaper.sh $1
 }
 
 zsh_theme() {
