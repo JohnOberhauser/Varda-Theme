@@ -8,6 +8,7 @@ import SideBar from "./widget/bar/SideBar";
 import {exec} from "astal/process"
 import NotificationPopups from "./widget/notification/NotificationPopups";
 import AppLauncher, {AppLauncherWindowName} from "./widget/appLauncher/AppLauncher";
+import Screenshot, {ScreenshotWindowName} from "./widget/screenshot/Screenshot";
 
 App.start({
     css: style,
@@ -24,6 +25,7 @@ App.start({
         BrightnessAlert()
         App.get_monitors().map(NotificationPopups)
         AppLauncher()
+        Screenshot()
     },
     requestHandler(request: string, res: (response: any) => void) {
         if (request == "theme") {
@@ -33,6 +35,9 @@ App.start({
         } else if (request == "appLauncher") {
             App.toggle_window(AppLauncherWindowName)
             res("app launcher toggled")
+        } else if (request == "screenshot") {
+            App.toggle_window(ScreenshotWindowName)
+            res("screenshot toggled")
         }
     }
 })

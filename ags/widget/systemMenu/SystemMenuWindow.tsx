@@ -2,7 +2,7 @@ import {App, Astal} from "astal/gtk3"
 import EndpointControls from "./EndpointControls";
 import Wp from "gi://AstalWp"
 import {bind} from "astal"
-import {Gtk} from "astal/gtk3"
+import {Gtk, Gdk} from "astal/gtk3"
 import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio";
 import PowerOptions from "./PowerOptions";
 import ThemeOptions from "./ThemeOptions";
@@ -25,11 +25,15 @@ export default function () {
         margin={5}
         keymode={Astal.Keymode.ON_DEMAND}
         visible={false}
-        clickThrough={true}>
+        onKeyPressEvent={function (self, event: Gdk.Event) {
+            if (event.get_keyval()[1] === Gdk.KEY_Escape) {
+                self.hide()
+            }
+        }}>
         <box
             vertical={true}>
             <box
-                className="window"
+                className="focusedWindow"
                 vertical={true}>
                 <box css={"margin-top: 20px;"}/>
                 <NetworkControls/>

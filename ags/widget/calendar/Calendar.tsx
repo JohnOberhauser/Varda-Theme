@@ -17,7 +17,7 @@ class CalendarWidget extends astalify(Gtk.Calendar) {
     }
 }
 
-export default function Calendar(anchor: Astal.WindowAnchor) {
+export default function (anchor: Astal.WindowAnchor) {
     return <window
         monitor={0}
         name={CalendarWindowName}
