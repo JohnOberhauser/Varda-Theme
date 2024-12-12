@@ -22,18 +22,20 @@ const urgency = (n: Notifd.Notification) => {
 type Props = {
     setup(self: EventBox): void
     onHoverLost(self: EventBox): void
+    onHover(self: EventBox): void
     notification: Notifd.Notification
     useHistoryCss: boolean
 }
 
 export default function Notification(props: Props) {
-    const { notification: n, onHoverLost, setup, useHistoryCss } = props
+    const { notification: n, onHoverLost, onHover, setup, useHistoryCss } = props
     const { START, END } = Gtk.Align
 
     return <eventbox
         className={useHistoryCss ? `Notification history` : `Notification ${urgency(n)}`}
         setup={setup}
         onHoverLost={onHoverLost}
+        onHover={onHover}
         onClick={() => n.dismiss()}>
         <box
             vertical={true}>

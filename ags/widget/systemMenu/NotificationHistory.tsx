@@ -42,10 +42,9 @@ export default function () {
                         vertical={true}>
                         {notificationsList.map((notification) => {
                             return <Notification
-                                setup={() => {
-                                }}
-                                onHoverLost={() => {
-                                }}
+                                setup={() => {}}
+                                onHoverLost={() => {}}
+                                onHover={() => {}}
                                 notification={notification}
                                 useHistoryCss={true}/>
                         })}
