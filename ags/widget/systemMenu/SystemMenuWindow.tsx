@@ -10,6 +10,7 @@ import MediaPlayers from "./MediaPlayers";
 import NotificationHistory from "./NotificationHistory";
 import NetworkControls from "./NetworkControls";
 import BluetoothControls from "./BluetoothControls";
+import Divider from "../common/Divider";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
@@ -50,7 +51,7 @@ export default function () {
                 <box css={"margin-top: 20px;"}/>
                 <ThemeOptions/>
                 <box css={"margin-top: 20px;"}/>
-                <box className="divider"/>
+                <Divider css={"margin: 0 60px 0 60px;"}/>
                 <box css={"margin-top: 20px;"}/>
                 <PowerOptions/>
                 <box css={"margin-top: 20px;"}/>
