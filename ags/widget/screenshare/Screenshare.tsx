@@ -76,133 +76,205 @@ export function updateWindows(input: string) {
 
 function Monitors() {
     const hyprland = Hyprland.get_default()
+    const revealed = Variable(false)
 
     return <box
-        vertical={true}
-        spacing={20}>
-        <label
-            label="󰍹  Monitors"
-            halign={Gtk.Align.CENTER}
-            className="labelLargeBold"/>
-        <Divider/>
-        {bind(hyprland, "monitors").as((monitors) => {
-            return monitors.map((monitor) => {
-                    return <button
-                        hexpand={true}
-                        className={ButtonClass}
-                        css={ButtonCss}
-                        onClicked={() => {
-                            response(`[SELECTION]/screen:${monitor.name}`)
-                            App.toggle_window(ScreenshareWindowName)
-                        }}>
-                        <label
-                            halign={Gtk.Align.START}
-                            className="labelMediumBold"
-                            label={monitor.name}/>
-                    </button>
-                }
-            )
-        })}
+        vertical={true}>
+        <box
+            vertical={false}>
+            <label
+                hexpand={true}
+                label="󰍹  Monitors"
+                halign={Gtk.Align.START}
+                className="labelLargeBold"/>
+            <button
+                className="iconButton"
+                label={revealed((revealed): string => {
+                    if (revealed) {
+                        return ""
+                    } else {
+                        return ""
+                    }
+                })}
+                onClicked={() => {
+                    revealed.set(!revealed.get())
+                }}/>
+        </box>
+        <revealer
+            className="rowRevealer"
+            revealChild={revealed()}
+            transitionDuration={200}
+            transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
+            <box
+                vertical={true}>
+                {bind(hyprland, "monitors").as((monitors) => {
+                    return monitors.map((monitor) => {
+                            return <button
+                                hexpand={true}
+                                className={ButtonClass}
+                                css={ButtonCss}
+                                onClicked={() => {
+                                    response(`[SELECTION]/screen:${monitor.name}`)
+                                    App.toggle_window(ScreenshareWindowName)
+                                }}>
+                                <label
+                                    halign={Gtk.Align.START}
+                                    className="labelMediumBold"
+                                    label={monitor.name}/>
+                            </button>
+                        }
+                    )
+                })}
+            </box>
+        </revealer>
     </box>
 }
 
 function Windows() {
+    const revealed = Variable(false)
+
     return <box
-        vertical={true}
-        spacing={20}>
-        <label
-            label="  Windows"
-            halign={Gtk.Align.CENTER}
-            className="labelLargeBold"/>
-        <Divider/>
-        {screenShareWindows((programs) => {
-            return programs
-                .sort((a, b) => {
-                    if (a.name > b.name) {
-                        return 1
+        vertical={true}>
+        <box
+            vertical={false}>
+            <label
+                hexpand={true}
+                label="  Windows"
+                halign={Gtk.Align.START}
+                className="labelLargeBold"/>
+            <button
+                className="iconButton"
+                label={revealed((revealed): string => {
+                    if (revealed) {
+                        return ""
                     } else {
-                        return -1
+                        return ""
                     }
-                })
-                .map((program) => {
-                        return <box
-                            vertical={true}
-                            spacing={6}>
-                            <label
-                                halign={Gtk.Align.CENTER}
-                                className="labelLargeBold"
-                                label={program.name}/>
-                            {program.windows
-                                .sort((a, b) => {
-                                    if (a.instanceTitle > b.instanceTitle) {
-                                        return 1
-                                    } else {
-                                        return -1
-                                    }
-                                })
-                                .map((instance) => {
-                                    return <button
-                                        hexpand={true}
-                                        className={ButtonClass}
-                                        css={ButtonCss}
-                                        onClicked={() => {
-                                            response(`[SELECTION]/window:${instance.windowId}`)
-                                            App.toggle_window(ScreenshareWindowName)
-                                        }}>
-                                        <box
-                                            vertical={true}>
-                                            <label
-                                                halign={Gtk.Align.START}
-                                                className="labelMediumBold"
-                                                label={`${instance.instanceTitle}`}
-                                                truncate={true}/>
-                                        </box>
-                                    </button>
-                                })
+                })}
+                onClicked={() => {
+                    revealed.set(!revealed.get())
+                }}/>
+        </box>
+        <revealer
+            className="rowRevealer"
+            revealChild={revealed()}
+            transitionDuration={200}
+            transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
+            <box
+                vertical={true}
+                spacing={12}>
+                {screenShareWindows((programs) => {
+                    return programs
+                        .sort((a, b) => {
+                            if (a.name > b.name) {
+                                return 1
+                            } else {
+                                return -1
                             }
-                        </box>
-                    }
-                )
-        })}
+                        })
+                        .map((program) => {
+                            return <box
+                                vertical={true}
+                                spacing={6}>
+                                <label
+                                    halign={Gtk.Align.CENTER}
+                                    className="labelLargeBold"
+                                    label={program.name}/>
+                                {program.windows
+                                    .sort((a, b) => {
+                                        if (a.instanceTitle > b.instanceTitle) {
+                                            return 1
+                                        } else {
+                                            return -1
+                                        }
+                                    })
+                                    .map((instance) => {
+                                        return <button
+                                            hexpand={true}
+                                            className={ButtonClass}
+                                            css={ButtonCss}
+                                            onClicked={() => {
+                                                response(`[SELECTION]/window:${instance.windowId}`)
+                                                App.toggle_window(ScreenshareWindowName)
+                                            }}>
+                                            <box
+                                                vertical={true}>
+                                                <label
+                                                    halign={Gtk.Align.START}
+                                                    className="labelMediumBold"
+                                                    label={`${instance.instanceTitle}`}
+                                                    truncate={true}/>
+                                            </box>
+                                        </button>
+                                    })
+                                }
+                            </box>
+                        })
+                })}
+            </box>
+        </revealer>
     </box>
 }
 
 function Region() {
+    const revealed = Variable(false)
+
     return <box
-        vertical={true}
-        spacing={20}>
-        <label
-            label="  Other"
-            halign={Gtk.Align.CENTER}
-            className="labelLargeBold"/>
-        <Divider/>
-        <button
-            hexpand={true}
-            className={ButtonClass}
-            css={ButtonCss}
-            onClicked={() => {
-                execAsync("slurp -f \"%o %x %y %w %h\"")
-                    .catch((error) => {
-                        print(error)
-                        response(`[SELECTION]/region:`)
-                    })
-                    .then((value) => {
-                        if (typeof value === "string") {
-                            const [name, x, y, w, h] = value.split(" ")
-                            response(`[SELECTION]/region:${name}@${x},${y},${w},${h}`)
-                        } else {
-                            response(`[SELECTION]/region:`)
-                        }
-                    })
-                    .finally(() => {
-                        App.toggle_window(ScreenshareWindowName)
-                    })
-            }}>
+        vertical={true}>
+        <box
+            vertical={false}>
             <label
+                hexpand={true}
+                label="  Other"
                 halign={Gtk.Align.START}
-                className="labelMediumBold"
-                label="Region"/>
-        </button>
+                className="labelLargeBold"/>
+            <button
+                className="iconButton"
+                label={revealed((revealed): string => {
+                    if (revealed) {
+                        return ""
+                    } else {
+                        return ""
+                    }
+                })}
+                onClicked={() => {
+                    revealed.set(!revealed.get())
+                }}/>
+        </box>
+
+        <revealer
+            className="rowRevealer"
+            revealChild={revealed()}
+            transitionDuration={200}
+            transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
+            <button
+                hexpand={true}
+                className={ButtonClass}
+                css={ButtonCss}
+                onClicked={() => {
+                    execAsync("slurp -f \"%o %x %y %w %h\"")
+                        .catch((error) => {
+                            print(error)
+                            response(`[SELECTION]/region:`)
+                        })
+                        .then((value) => {
+                            if (typeof value === "string") {
+                                const [name, x, y, w, h] = value.split(" ")
+                                response(`[SELECTION]/region:${name}@${x},${y},${w},${h}`)
+                            } else {
+                                response(`[SELECTION]/region:`)
+                            }
+                        })
+                        .finally(() => {
+                            App.toggle_window(ScreenshareWindowName)
+                        })
+                }}>
+                <label
+                    halign={Gtk.Align.START}
+                    className="labelMediumBold"
+                    label="Region"/>
+            </button>
+        </revealer>
     </box>
 }
 
