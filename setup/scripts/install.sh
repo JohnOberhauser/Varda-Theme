@@ -28,8 +28,6 @@ polkit-gnome \
 bc \
 socat \
 brightnessctl \
-acpi \
-acpid \
 sox \
 sassc \
 pipewire-pulse \

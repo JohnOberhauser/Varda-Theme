@@ -3,7 +3,7 @@ import style from "./scss/main.scss"
 import TopBar from "./widget/bar/TopBar"
 import Calendar from "./widget/calendar/Calendar"
 import SystemMenuWindow from "./widget/systemMenu/SystemMenuWindow";
-import {BrightnessAlert, VolumeAlert} from "./widget/alerts/Alerts";
+import {BrightnessAlert, ChargingAlertSound, VolumeAlert} from "./widget/alerts/Alerts";
 import SideBar from "./widget/bar/SideBar";
 import {exec} from "astal/process"
 import NotificationPopups from "./widget/notification/NotificationPopups";
@@ -24,6 +24,7 @@ App.start({
         SystemMenuWindow()
         VolumeAlert()
         BrightnessAlert()
+        ChargingAlertSound()
         App.get_monitors().map(NotificationPopups)
         AppLauncher()
         Screenshot()

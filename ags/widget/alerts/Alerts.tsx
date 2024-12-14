@@ -4,6 +4,8 @@ import {bind, Variable, Binding, GLib} from "astal"
 import {getVolumeIcon} from "../utils/audio";
 import Brightness from "../utils/connectables/brightness";
 import {getBrightnessIcon} from "../utils/brightness";
+import Battery from "gi://AstalBattery"
+import {execAsync} from "astal/process"
 
 const VolumeAlertName = "volumeAlert"
 const BrightnessAlertName = "brightnessAlert"
@@ -105,4 +107,15 @@ export function BrightnessAlert() {
         label="Brightness"
         sliderValue={bind(brightness, "screen")}
         windowName={BrightnessAlertName}/>
+}
+
+export function ChargingAlertSound() {
+    const battery = Battery.get_default()
+    bind(battery, "charging").subscribe((charging) => {
+        if (charging) {
+            execAsync('bash -c "play $HOME/.config/hypr/assets/sounds/power-plug.ogg"')
+        } else {
+            execAsync('bash -c "play $HOME/.config/hypr/assets/sounds/power-unplug.ogg"')
+        }
+    })
 }
