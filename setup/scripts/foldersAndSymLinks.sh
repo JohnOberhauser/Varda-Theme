@@ -22,9 +22,6 @@ mkdir -p $HOME/.themes/SystemTheme
 mkdir -p $HOME/.config/gtk-4.0
 ln -s $HOME/workspace/Varda-Theme/gnome/themes/Varda/gtk-4.0 $HOME/.config/
 
-mkdir -p $HOME/.config/Kvantum  # must be capital K
-ln -s $HOME/workspace/Varda-Theme/kvantum/Varda $HOME/.config/Kvantum/
-
 ln -s $HOME/workspace/Varda-Theme/kitty $HOME/.config/
 
 ln -s $HOME/workspace/Varda-Theme/nvim $HOME/.config/

@@ -35,7 +35,6 @@ sassc \
 pipewire-pulse \
 upower \
 gnome-bluetooth-3.0 \
-kvantum \
 zsh \
 fuse2 \
 greetd-tuigreet \
