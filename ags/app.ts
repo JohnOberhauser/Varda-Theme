@@ -9,6 +9,7 @@ import {exec} from "astal/process"
 import NotificationPopups from "./widget/notification/NotificationPopups";
 import AppLauncher, {AppLauncherWindowName} from "./widget/appLauncher/AppLauncher";
 import Screenshot, {ScreenshotWindowName} from "./widget/screenshot/Screenshot";
+import Screenshare, {ScreenshareWindowName, updateResponse, updateWindows} from "./widget/screenshare/Screenshare";
 
 App.start({
     css: style,
@@ -26,6 +27,7 @@ App.start({
         App.get_monitors().map(NotificationPopups)
         AppLauncher()
         Screenshot()
+        Screenshare()
     },
     requestHandler(request: string, res: (response: any) => void) {
         if (request == "theme") {
@@ -38,6 +40,11 @@ App.start({
         } else if (request == "screenshot") {
             App.toggle_window(ScreenshotWindowName)
             res("screenshot toggled")
+        } else if (request.startsWith("screenshare")) {
+            print(request)
+            updateWindows(request)
+            updateResponse(res)
+            App.toggle_window(ScreenshareWindowName)
         }
     }
 })
