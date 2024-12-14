@@ -1,11 +1,10 @@
-import {App, Astal, Gdk} from "astal/gtk3"
+import {App, Astal, Gdk, Gtk} from "astal/gtk3"
 import {bind, Variable} from "astal"
 import Hyprland from "gi://AstalHyprland"
 import {execAsync} from "astal/process"
 
 export const ScreenshareWindowName = "screenshotWindow"
 
-const ButtonWidth = 400
 const ButtonCss = `padding: 12px;`
 
 let response: (response: any) => void = () => {}
@@ -14,12 +13,17 @@ export function updateResponse(res: (response: any) => void) {
     response = res
 }
 
-const screenShareWindows = Variable<ScreenShareWindow[]>([])
+const screenShareWindows = Variable<Program[]>([])
 
 type ScreenShareWindow = {
-    HC: string;
-    HT: string;
-    HE: string;
+    windowId: string;
+    windowProgram: string;
+    instanceTitle: string;
+};
+
+type Program = {
+    name: string;
+    windows: ScreenShareWindow[];
 };
 
 function parseScreenShareString(input: string): ScreenShareWindow[] {
@@ -37,20 +41,40 @@ function parseScreenShareString(input: string): ScreenShareWindow[] {
         const [ht, he] = htAndHe.split("[HT>]");
 
         return {
-            HC: hc.trim(),
-            HT: ht?.trim() || "",
-            HE: he?.trim() || "",
+            windowId: hc.trim(),
+            windowProgram: ht?.trim() || "",
+            instanceTitle: he?.trim() || "",
         };
     });
 }
 
+function groupByWindowProgram(windows: ScreenShareWindow[]): Program[] {
+    const grouped: Program[] = [];
+
+    windows.forEach(window => {
+        // Find an existing group for this windowProgram
+        let group = grouped.find(g => g.name === window.windowProgram);
+
+        // If no group exists, create one
+        if (!group) {
+            group = { name: window.windowProgram, windows: [] };
+            grouped.push(group);
+        }
+
+        // Add the window to the group
+        group.windows.push(window);
+    });
+
+    return grouped;
+}
+
 export function updateWindows(input: string) {
-    screenShareWindows.set(parseScreenShareString(input))
+    screenShareWindows.set(groupByWindowProgram(parseScreenShareString(input)))
 }
 
 function Region() {
     return <button
-        widthRequest={ButtonWidth}
+        hexpand={true}
         className="primaryButton"
         css={ButtonCss}
         onClicked={() => {
@@ -72,6 +96,7 @@ function Region() {
                 })
         }}>
         <label
+            halign={Gtk.Align.START}
             className="labelMediumBold"
             label="Region"/>
     </button>
@@ -83,10 +108,12 @@ export default function () {
     return <window
         monitor={0}
         name={ScreenshareWindowName}
+        anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.BOTTOM}
         application={App}
         layer={Astal.Layer.OVERLAY}
         keymode={Astal.Keymode.EXCLUSIVE}
-        className="focusedWindow"
+
+        css={`background: transparent;`}
         margin={5}
         visible={false}
         onKeyPressEvent={function (self, event: Gdk.Event) {
@@ -97,59 +124,107 @@ export default function () {
         }}>
         <box
             vertical={true}
-            css="padding: 20px;"
-            spacing={6}>
-            <label
-                label="Monitors"
-                className="labelMedium"/>
-            {bind(hyprland, "monitors").as((monitors) => {
-                return monitors.map((monitor) => {
-                        return <button
-                            widthRequest={ButtonWidth}
-                            className="primaryButton"
-                            css={ButtonCss}
-                            onClicked={() => {
-                                response(`[SELECTION]/screen:${monitor.name}`)
-                                App.toggle_window(ScreenshareWindowName)
-                            }}>
-                            <label
-                                className="labelMediumBold"
-                                label={monitor.name}/>
-                        </button>
-                    }
-                )
-            })}
-            <box className="divider" css={`margin: 12px 0 12px 0`}/>
-            <label
-                label="Clients"
-                className="labelMedium"/>
-            {screenShareWindows((clients) => {
-                return clients.map((client) => {
-                        return <button
-                            widthRequest={ButtonWidth}
-                            className="primaryButton"
-                            css={ButtonCss}
-                            onClicked={() => {
-                                response(`[SELECTION]/window:${client.HC}`)
-                                App.toggle_window(ScreenshareWindowName)
-                            }}>
-                            <box
-                                vertical={true}>
-                                <label
-                                    className="labelMediumBold"
-                                    label={`${client.HE}`}
-                                    truncate={true}/>
-                                <label
-                                    className="labelMedium"
-                                    label={`${client.HT}`}
-                                    truncate={true}/>
-                            </box>
-                        </button>
-                    }
-                )
-            })}
-            <box className="divider" css={`margin: 12px 0 12px 0`}/>
-            <Region/>
+            css={`padding: 2px`}>
+            <box
+                vexpand={true}/>
+            <box
+                className="focusedWindow">
+                <scrollable
+                    widthRequest={500}
+                    className="scrollWindow"
+                    vscroll={Gtk.PolicyType.AUTOMATIC}
+                    propagateNaturalHeight={true}>
+                    <box
+                        vertical={true}
+                        css="padding: 20px;"
+                        spacing={6}>
+                        <label
+                            label="Monitors"
+                            halign={Gtk.Align.CENTER}
+                            className="labelLargeBold"/>
+                        {bind(hyprland, "monitors").as((monitors) => {
+                            return monitors.map((monitor) => {
+                                    return <button
+                                        hexpand={true}
+                                        className="primaryButton"
+                                        css={ButtonCss}
+                                        onClicked={() => {
+                                            response(`[SELECTION]/screen:${monitor.name}`)
+                                            App.toggle_window(ScreenshareWindowName)
+                                        }}>
+                                        <label
+                                            halign={Gtk.Align.START}
+                                            className="labelMediumBold"
+                                            label={monitor.name}/>
+                                    </button>
+                                }
+                            )
+                        })}
+                        <box className="divider" css={`margin: 12px 0 12px 0`}/>
+                        <label
+                            label="Clients"
+                            halign={Gtk.Align.CENTER}
+                            className="labelLargeBold"/>
+                        {screenShareWindows((programs) => {
+                            return programs
+                                .sort((a, b) => {
+                                    if (a.name > b.name) {
+                                        return 1
+                                    } else {
+                                        return -1
+                                    }
+                                })
+                                .map((program) => {
+                                        return <box
+                                            vertical={true}
+                                            spacing={6}>
+                                            <label
+                                                halign={Gtk.Align.START}
+                                                className="labelMedium"
+                                                label={program.name}/>
+                                            {program.windows
+                                                .sort((a, b) => {
+                                                    if (a.instanceTitle > b.instanceTitle) {
+                                                        return 1
+                                                    } else {
+                                                        return -1
+                                                    }
+                                                })
+                                                .map((instance) => {
+                                                    return <button
+                                                        hexpand={true}
+                                                        className="primaryButton"
+                                                        css={ButtonCss}
+                                                        onClicked={() => {
+                                                            response(`[SELECTION]/window:${instance.windowId}`)
+                                                            App.toggle_window(ScreenshareWindowName)
+                                                        }}>
+                                                        <box
+                                                            vertical={true}>
+                                                            <label
+                                                                halign={Gtk.Align.START}
+                                                                className="labelMediumBold"
+                                                                label={`${instance.instanceTitle}`}
+                                                                truncate={true}/>
+                                                        </box>
+                                                    </button>
+                                                })
+                                            }
+                                        </box>
+                                    }
+                                )
+                        })}
+                        <box className="divider" css={`margin: 12px 0 12px 0`}/>
+                        <label
+                            label="Other"
+                            halign={Gtk.Align.CENTER}
+                            className="labelLargeBold"/>
+                        <Region/>
+                    </box>
+                </scrollable>
+            </box>
+            <box
+                vexpand={true}/>
         </box>
     </window>
 }
