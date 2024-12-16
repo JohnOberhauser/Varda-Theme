@@ -2,7 +2,6 @@ import {App, Astal, Gdk, Gtk} from "astal/gtk3"
 import {bind, Variable} from "astal"
 import Hyprland from "gi://AstalHyprland"
 import {execAsync} from "astal/process"
-import Divider from "../common/Divider";
 
 export const ScreenshareWindowName = "screenshareWindow"
 
@@ -78,6 +77,14 @@ function Monitors() {
     const hyprland = Hyprland.get_default()
     const revealed = Variable(false)
 
+    setTimeout(() => {
+        bind(App.get_window(ScreenshareWindowName)!, "visible").subscribe((visible) => {
+            if (!visible) {
+                revealed.set(false)
+            }
+        })
+    }, 1_000)
+
     return <box
         vertical={true}>
         <box
@@ -132,6 +139,14 @@ function Monitors() {
 
 function Windows() {
     const revealed = Variable(false)
+
+    setTimeout(() => {
+        bind(App.get_window(ScreenshareWindowName)!, "visible").subscribe((visible) => {
+            if (!visible) {
+                revealed.set(false)
+            }
+        })
+    }, 1_000)
 
     return <box
         vertical={true}>
@@ -218,6 +233,14 @@ function Windows() {
 
 function Region() {
     const revealed = Variable(false)
+
+    setTimeout(() => {
+        bind(App.get_window(ScreenshareWindowName)!, "visible").subscribe((visible) => {
+            if (!visible) {
+                revealed.set(false)
+            }
+        })
+    }, 1_000)
 
     return <box
         vertical={true}>

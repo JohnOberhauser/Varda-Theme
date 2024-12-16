@@ -1,5 +1,5 @@
 import GObject from "gi://GObject"
-import {App, Astal, astalify, ConstructProps, Gtk} from "astal/gtk3"
+import {App, Astal, astalify, ConstructProps, Gtk, Gdk} from "astal/gtk3"
 
 export const CalendarWindowName = "calendarWindow"
 
@@ -23,10 +23,16 @@ export default function (anchor: Astal.WindowAnchor) {
         name={CalendarWindowName}
         application={App}
         anchor={anchor}
-        layer={Astal.Layer.OVERLAY}
-        className="window"
+        layer={Astal.Layer.TOP}
+        className="focusedWindow"
         margin={5}
-        visible={false}>
+        visible={false}
+        keymode={Astal.Keymode.ON_DEMAND}
+        onKeyPressEvent={function (self, event: Gdk.Event) {
+            if (event.get_keyval()[1] === Gdk.KEY_Escape) {
+                self.hide()
+            }
+        }}>
         <box
             css="padding: 20px;">
             <CalendarWidget
