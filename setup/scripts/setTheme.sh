@@ -83,37 +83,64 @@ gtk() {
   flatpak override --user --env=GTK_THEME=SystemTheme
 }
 
+hyprpaper_setup() {
+  # Base directory
+  BASE_DIR="$HOME/.config/hypr/assets/wallpaper"
+
+  # Output file where preload lines will be written
+  OUTPUT_FILE="$HOME/.config/hypr/hyprpaper.conf"
+
+  # Clear the output file
+  > "$OUTPUT_FILE"
+
+  echo "splash = false" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
+
+  for FILE in "$BASE_DIR"/*; do
+      # Check if it's a regular file
+      if [[ -f "$FILE" ]]; then
+          # Extract the file name
+          FILE_NAME=$(basename "$FILE")
+
+          # Write the preload line to the output file
+          echo "preload = $BASE_DIR/$FILE_NAME" >> "$OUTPUT_FILE"
+      fi
+  done
+
+  echo "" >> "$OUTPUT_FILE"
+
+  WALLPAPER=""
+
+  case $1 in
+    "varda")
+        WALLPAPER="planet-desktop.jpg"
+      ;;
+    "everforest")
+        WALLPAPER="forest-walkway.jpg"
+      ;;
+    "nord")
+        WALLPAPER="winter-forest-frost.jpg"
+      ;;
+    "rosepine")
+        WALLPAPER="lavender-fields.jpg"
+    ;;
+  esac
+
+  echo "wallpaper = desc:LG Electronics LG ULTRAGEAR+ 303NTRL72662,contain:$BASE_DIR/$WALLPAPER" >> "$OUTPUT_FILE"
+  echo "wallpaper = desc:BOE 0x0BCA,contain:$BASE_DIR/$WALLPAPER" >> "$OUTPUT_FILE"
+  echo "wallpaper = DP-2,$BASE_DIR/$WALLPAPER" >> "$OUTPUT_FILE"
+  echo "wallpaper = DP-3,$BASE_DIR/$WALLPAPER" >> "$OUTPUT_FILE"
+
+  hyprctl hyprpaper wallpaper "desc:LG Electronics LG ULTRAGEAR+ 303NTRL72662,contain:$BASE_DIR/$WALLPAPER"
+  hyprctl hyprpaper wallpaper "desc:BOE 0x0BCA,contain:$BASE_DIR/$WALLPAPER"
+  hyprctl hyprpaper wallpaper "DP-2,$BASE_DIR/$WALLPAPER"
+  hyprctl hyprpaper wallpaper "DP-3,$BASE_DIR/$WALLPAPER"
+}
+
 hypr() {
   cp ./setup/themes/$1/hypr/theme.conf ./hypr/conf/
   cp ./setup/themes/$1/hypr/hyprlock.conf ./hypr/
-  cp ./setup/themes/$1/hypr/hyprpaper.conf ./hypr/
-  cat ./setup/themes/$1/themeName > ./hypr/themeName
-  case $1 in
-    "varda")
-        hyprctl hyprpaper wallpaper "desc:LG Electronics LG ULTRAGEAR+ 303NTRL72662,contain:~/workspace/Varda-Theme/setup/themes/varda/hypr/wallpaper/planet-desktop.jpg"
-        hyprctl hyprpaper wallpaper "desc:BOE 0x0BCA,contain:~/workspace/Varda-Theme/setup/themes/varda/hypr/wallpaper/planet-laptop.jpg"
-        hyprctl hyprpaper wallpaper "DP-2,~/workspace/Varda-Theme/setup/themes/varda/hypr/wallpaper/planet-desktop.jpg"
-        hyprctl hyprpaper wallpaper "DP-3,~/workspace/Varda-Theme/setup/themes/varda/hypr/wallpaper/planet-desktop.jpg"
-      ;;
-    "everforest")
-        hyprctl hyprpaper wallpaper "desc:LG Electronics LG ULTRAGEAR+ 303NTRL72662,contain:~/workspace/Varda-Theme/setup/themes/everforest/hypr/wallpaper/forest-walkway.jpg"
-        hyprctl hyprpaper wallpaper "desc:BOE 0x0BCA,contain:~/workspace/Varda-Theme/setup/themes/everforest/hypr/wallpaper/forest-walkway.jpg"
-        hyprctl hyprpaper wallpaper "DP-2,~/workspace/Varda-Theme/setup/themes/everforest/hypr/wallpaper/forest-walkway.jpg"
-        hyprctl hyprpaper wallpaper "DP-3,~/workspace/Varda-Theme/setup/themes/everforest/hypr/wallpaper/forest-walkway.jpg"
-      ;;
-    "nord")
-        hyprctl hyprpaper wallpaper "desc:LG Electronics LG ULTRAGEAR+ 303NTRL72662,contain:~/workspace/Varda-Theme/setup/themes/nord/hypr/wallpaper/winter-forest-frost.jpg"
-        hyprctl hyprpaper wallpaper "desc:BOE 0x0BCA,contain:~/workspace/Varda-Theme/setup/themes/nord/hypr/wallpaper/winter-forest-frost.jpg"
-        hyprctl hyprpaper wallpaper "DP-2,~/workspace/Varda-Theme/setup/themes/nord/hypr/wallpaper/winter-forest-frost.jpg"
-        hyprctl hyprpaper wallpaper "DP-3,~/workspace/Varda-Theme/setup/themes/nord/hypr/wallpaper/winter-forest-frost.jpg"
-      ;;
-    "rosepine")
-        hyprctl hyprpaper wallpaper "desc:LG Electronics LG ULTRAGEAR+ 303NTRL72662,contain:~/workspace/Varda-Theme/setup/themes/rosepine/hypr/wallpaper/lavender-fields.jpg"
-        hyprctl hyprpaper wallpaper "desc:BOE 0x0BCA,contain:~/workspace/Varda-Theme/setup/themes/rosepine/hypr/wallpaper/lavender-fields.jpg"
-        hyprctl hyprpaper wallpaper "DP-2,~/workspace/Varda-Theme/setup/themes/rosepine/hypr/wallpaper/lavender-fields.jpg"
-        hyprctl hyprpaper wallpaper "DP-3,~/workspace/Varda-Theme/setup/themes/rosepine/hypr/wallpaper/lavender-fields.jpg"
-    ;;
-  esac
+  hyprpaper_setup $1
 }
 
 zsh_theme() {
