@@ -1,5 +1,6 @@
-import {App, Astal, Gtk, Gdk} from "astal/gtk3"
+import {App, Astal, Gdk} from "astal/gtk3"
 import {execAsync} from "astal/process"
+import {bind} from "astal"
 
 export const ScreenshotWindowName = "screenshotWindow"
 
@@ -36,15 +37,23 @@ export default function () {
         monitor={0}
         name={ScreenshotWindowName}
         application={App}
-        layer={Astal.Layer.OVERLAY}
+        layer={Astal.Layer.TOP}
         keymode={Astal.Keymode.EXCLUSIVE}
-        className="focusedWindow"
         margin={5}
         visible={false}
         onKeyPressEvent={function (self, event: Gdk.Event) {
             if (event.get_keyval()[1] === Gdk.KEY_Escape) {
                 self.hide()
             }
+        }}
+        setup={(self) => {
+            bind(self, "hasToplevelFocus").subscribe((hasFocus) => {
+                if (hasFocus) {
+                    self.className = "focusedWindow"
+                } else {
+                    self.className = "window"
+                }
+            })
         }}>
         <box
             vertical={false}

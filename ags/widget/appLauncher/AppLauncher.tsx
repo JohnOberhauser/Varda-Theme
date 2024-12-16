@@ -1,6 +1,6 @@
 import Apps from "gi://AstalApps"
 import { App, Astal, Gdk, Gtk } from "astal/gtk3"
-import { Variable } from "astal"
+import { Variable, bind } from "astal"
 
 export const AppLauncherWindowName = "appLauncher"
 
@@ -74,11 +74,14 @@ export default function () {
         selectedIndex
     ])
 
+    let window: Gtk.Window
+
     return <window
         name={AppLauncherWindowName}
         anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.BOTTOM}
         exclusivity={Astal.Exclusivity.IGNORE}
         keymode={Astal.Keymode.EXCLUSIVE}
+        layer={Astal.Layer.TOP}
         application={App}
         onShow={() => {
             text.set("")
@@ -96,11 +99,24 @@ export default function () {
         css={`background: transparent;`}
         marginTop={100}
         marginBottom={5}
-        visible={false}>
+        visible={false}
+        setup={(self) => {
+            window = self
+        }}>
         <box
             vertical={true}>
             <box
-                className="focusedWindow">
+                setup={(self) => {
+                    setTimeout(() => {
+                        bind(window, "hasToplevelFocus").subscribe((hasFocus) => {
+                            if (hasFocus) {
+                                self.className = "focusedWindow"
+                            } else {
+                                self.className = "window"
+                            }
+                        })
+                    }, 1_000)
+                }}>
                 <box
                     widthRequest={500}
                     className="appLauncher"

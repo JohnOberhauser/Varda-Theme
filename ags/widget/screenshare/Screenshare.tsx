@@ -302,12 +302,14 @@ function Region() {
 }
 
 export default function () {
+    let window: Gtk.Window
+
     return <window
         monitor={0}
         name={ScreenshareWindowName}
         anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.BOTTOM}
         application={App}
-        layer={Astal.Layer.OVERLAY}
+        layer={Astal.Layer.TOP}
         keymode={Astal.Keymode.EXCLUSIVE}
 
         css={`background: transparent;`}
@@ -318,6 +320,9 @@ export default function () {
                 self.hide()
                 response(`[SELECTION]/`)
             }
+        }}
+        setup={(self) => {
+            window = self
         }}>
         <box
             vertical={true}
@@ -325,7 +330,17 @@ export default function () {
             <box
                 vexpand={true}/>
             <box
-                className="focusedWindow">
+                setup={(self) => {
+                    setTimeout(() => {
+                        bind(window, "hasToplevelFocus").subscribe((hasFocus) => {
+                            if (hasFocus) {
+                                self.className = "focusedWindow"
+                            } else {
+                                self.className = "window"
+                            }
+                        })
+                    }, 1_000)
+                }}>
                 <scrollable
                     widthRequest={500}
                     className="scrollWindow"

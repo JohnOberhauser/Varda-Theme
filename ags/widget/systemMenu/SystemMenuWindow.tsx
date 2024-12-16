@@ -16,6 +16,9 @@ export const SystemMenuWindowName = "systemMenuWindow"
 
 export default function () {
     const {audio} = Wp.get_default()!
+
+    let window: Gtk.Window
+
     return <window
         exclusivity={Astal.Exclusivity.NORMAL}
         anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.LEFT | Astal.WindowAnchor.BOTTOM}
@@ -30,12 +33,25 @@ export default function () {
             if (event.get_keyval()[1] === Gdk.KEY_Escape) {
                 self.hide()
             }
+        }}
+        setup={(self) => {
+            window = self
         }}>
         <box
             vertical={true}>
             <box
-                className="focusedWindow"
-                vertical={true}>
+                vertical={true}
+                setup={(self) => {
+                    setTimeout(() => {
+                        bind(window, "hasToplevelFocus").subscribe((hasFocus) => {
+                            if (hasFocus) {
+                                self.className = "focusedWindow"
+                            } else {
+                                self.className = "window"
+                            }
+                        })
+                    }, 1_000)
+                }}>
                 <box css={"margin-top: 20px;"}/>
                 <NetworkControls/>
                 <BluetoothControls/>
