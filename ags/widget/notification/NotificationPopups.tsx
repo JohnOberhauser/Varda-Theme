@@ -37,6 +37,10 @@ class NotifiationMap implements Subscribable {
         notifd.connect("notified", (_, id) => {
             let hideTimeout: GLib.Source | null = null
 
+            if (notifd.dontDisturb) {
+                return
+            }
+
             this.set(id, Notification({
                 notification: notifd.get_notification(id)!,
 

@@ -10,8 +10,16 @@ export default function () {
         vertical={true}
         css={`margin-bottom: 2px;`}>
         <box
-            css={`margin: 0 40px 0 40px;`}
+            css={`margin: 0 20px 0 20px;`}
             vertical={false}>
+            <button
+                className="iconButton"
+                label={bind(notifications, "dontDisturb").as((dnd) => {
+                    return dnd ? "󰂛" : "󰂚"
+                })}
+                onClicked={() => {
+                    notifications.set_dont_disturb(!notifications.dontDisturb)
+                }}/>
             <label
                 className="labelMediumBold"
                 label="Notifications"/>
