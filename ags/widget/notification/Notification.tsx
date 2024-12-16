@@ -69,7 +69,6 @@ export default function Notification(props: Props) {
                 />
                 {n.body && <label
                     className="labelSmall"
-                    useMarkup={true}
                     halign={START}
                     xalign={0}
                     label={insertNewlines(n.body, 40)}
