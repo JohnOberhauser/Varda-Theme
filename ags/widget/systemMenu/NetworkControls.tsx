@@ -330,6 +330,7 @@ function VpnConnections() {
                         </revealer>
                     </box>
                 })}
+                <box css={`margin-top: 12px;`}/>
             </box>
         })}
 
@@ -392,6 +393,7 @@ function VpnConnections() {
                         </revealer>
                     </box>
                 })}
+                <box css={`margin-top: 12px;`}/>
             </box>
         })}
     </box>
