@@ -68,4 +68,5 @@ plymouth \
 wl-clipboard \
 atool \
 loupe \
-udiskie
+udiskie \
+wf-recorder

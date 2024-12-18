@@ -1,6 +1,9 @@
 import {App, Astal, Gdk} from "astal/gtk3"
 import {execAsync} from "astal/process"
-import {bind} from "astal"
+import {bind, Variable} from "astal"
+import Divider from "../common/Divider";
+
+export const isRecording = Variable(false)
 
 export const ScreenshotWindowName = "screenshotWindow"
 
@@ -56,63 +59,138 @@ export default function () {
             })
         }}>
         <box
-            vertical={false}
+            vertical={true}
             css="padding: 20px;">
-            <ScreenshotButton
-                icon={""}
-                label={"All"}
-                onClicked={() => {
-                    App.toggle_window(ScreenshotWindowName)
-                    execAsync(
-                        [
-                            "bash",
-                            "-c",
-                            `
-                            sleep 0.7
-                            grim $HOME/Pictures/Screenshots/$(date +'%s_grim.png')
-                            play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
-                            `
-                        ]
-                    ).catch((error) => {
-                        print(error)
-                    })
-                }}/>
-            <ScreenshotButton
-                icon={"󰹑"}
-                label={"Monitor"}
-                onClicked={() => {
-                    App.toggle_window(ScreenshotWindowName)
-                    execAsync(
-                        [
-                            "bash",
-                            "-c",
-                            `
-                            grim -g "$(slurp -o)" $HOME/Pictures/Screenshots/$(date +'%s_grim.png')
-                            play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
-                            `
-                        ]
-                    ).catch((error) => {
-                        print(error)
-                    })
-                }}/>
-            <ScreenshotButton
-                icon={""}
-                label={"Area"}
-                onClicked={() => {
-                    App.toggle_window(ScreenshotWindowName)
-                    execAsync(
-                        [
-                            "bash",
-                            "-c",
-                            `
-                            grim -g "$(slurp)" $HOME/Pictures/Screenshots/$(date +'%s_grim.png')
-                            play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
-                            `
-                        ]
-                    ).catch((error) => {
-                        print(error)
-                    })
-                }}/>
+            <label
+                className="labelLargeBold"
+                css={`margin-bottom: 8px;`}
+                label="Screenshot"/>
+            <box
+                vertical={false}>
+                <ScreenshotButton
+                    icon={""}
+                    label={"All"}
+                    onClicked={() => {
+                        App.toggle_window(ScreenshotWindowName)
+                        execAsync(
+                            [
+                                "bash",
+                                "-c",
+                                `
+                                sleep 0.7
+                                grim $HOME/Pictures/Screenshots/$(date +'%s_grim.png')
+                                play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
+                                `
+                            ]
+                        ).catch((error) => {
+                            print(error)
+                        })
+                    }}/>
+                <ScreenshotButton
+                    icon={"󰹑"}
+                    label={"Monitor"}
+                    onClicked={() => {
+                        App.toggle_window(ScreenshotWindowName)
+                        execAsync(
+                            [
+                                "bash",
+                                "-c",
+                                `
+                                grim -g "$(slurp -o)" $HOME/Pictures/Screenshots/$(date +'%s_grim.png')
+                                play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
+                                `
+                            ]
+                        ).catch((error) => {
+                            print(error)
+                        })
+                    }}/>
+                <ScreenshotButton
+                    icon={""}
+                    label={"Area"}
+                    onClicked={() => {
+                        App.toggle_window(ScreenshotWindowName)
+                        execAsync(
+                            [
+                                "bash",
+                                "-c",
+                                `
+                                grim -g "$(slurp)" $HOME/Pictures/Screenshots/$(date +'%s_grim.png')
+                                play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
+                                `
+                            ]
+                        ).catch((error) => {
+                            print(error)
+                        })
+                    }}/>
+            </box>
+            <Divider css={`margin: 20px 0 10px 0;`}/>
+            <label
+                className="labelLargeBold"
+                css={`margin-bottom: 8px;`}
+                label="Screen Record"/>
+            <box
+                vertical={false}>
+                <ScreenshotButton
+                    icon={""}
+                    label={"All"}
+                    onClicked={() => {
+                        App.toggle_window(ScreenshotWindowName)
+                        isRecording.set(true)
+                        execAsync(
+                            [
+                                "bash",
+                                "-c",
+                                `
+                                wf-recorder --file=$(xdg-user-dir VIDEOS)/ScreenRecordings/$(date +'%s_record.mkv')
+                                `
+                            ]
+                        ).catch((error) => {
+                            print(error)
+                        }).finally(() => {
+                            isRecording.set(false)
+                        })
+                    }}/>
+                <ScreenshotButton
+                    icon={"󰹑"}
+                    label={"Monitor"}
+                    onClicked={() => {
+                        App.toggle_window(ScreenshotWindowName)
+                        isRecording.set(true)
+                        execAsync(
+                            [
+                                "bash",
+                                "-c",
+                                `
+                                wf-recorder --file=$(xdg-user-dir VIDEOS)/ScreenRecordings/$(date +'%s_record.mkv') -g "$(slurp -o)"
+                                `
+                            ]
+                        ).catch((error) => {
+                            print(error)
+                        }).finally(() => {
+                            isRecording.set(false)
+                        })
+                    }}/>
+                <ScreenshotButton
+                    icon={""}
+                    label={"Area"}
+                    onClicked={() => {
+                        App.toggle_window(ScreenshotWindowName)
+                        isRecording.set(true)
+                        execAsync(
+                            [
+                                "bash",
+                                "-c",
+                                `
+                                wf-recorder --file=$(xdg-user-dir VIDEOS)/ScreenRecordings/$(date +'%s_record.mkv') -g "$(slurp)"
+                                `
+                            ]
+                        ).catch((error) => {
+                            print(error)
+                        }).finally(() => {
+                            isRecording.set(false)
+                        })
+                    }}/>
+            </box>
         </box>
     </window>
 }

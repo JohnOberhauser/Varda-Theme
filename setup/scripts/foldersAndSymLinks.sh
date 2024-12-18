@@ -2,6 +2,8 @@
 
 mkdir -p $HOME/Pictures
 mkdir -p $HOME/Pictures/Screenshots
+mkdir -p $HOME/Videos
+mkdir -p $HOME/Videos/ScreenRecordings
 
 rm -rf ~/.config/hypr
 ln -s $HOME/workspace/Varda-Theme/hypr $HOME/.config/

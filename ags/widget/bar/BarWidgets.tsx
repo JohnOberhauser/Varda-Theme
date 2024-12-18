@@ -11,6 +11,7 @@ import {execAsync} from "astal/process"
 import {SystemMenuWindowName} from "../systemMenu/SystemMenuWindow";
 import Bluetooth from "gi://AstalBluetooth"
 import {activeVpnConnections} from "../systemMenu/NetworkControls";
+import {isRecording} from "../screenshot/Screenshot";
 
 export function Workspaces({vertical}: { vertical: boolean }) {
     const hypr = Hyprland.get_default()
@@ -69,19 +70,13 @@ export function VpnButton({css}: { css: string }) {
 }
 
 export function ScreenRecordingButton({css}: { css: string }) {
-    const hypr = Hyprland.get_default()
-
-    return <label
-        className="iconButton"
+    return <button
+        className="warningIconButton"
         css={css}
-        label="󰹑"
-        visible={false}
-        setup={self => {
-            self.hook(hypr, "event", (_, name, data) => {
-                if (name === "screencast") {
-                    self.visible = data[0] === "1"
-                }
-            })
+        label=""
+        visible={isRecording()}
+        onClicked={() => {
+            execAsync("pkill wf-recorder")
         }}/>
 }
 

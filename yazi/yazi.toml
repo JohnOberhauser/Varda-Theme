@@ -65,7 +65,7 @@ rules = [
 	# Image
 	{ mime = "image/*", use = [ "open", "reveal" ] },
 	# Media
-	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
+	{ mime = "{audio,video}/*", use = [ "open", "reveal" ] },
 	# Archive
 	{ mime = "application/{,g}zip", use = [ "extract", "reveal" ] },
 	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [ "extract", "reveal" ] },
