@@ -41,23 +41,14 @@ export default function () {
                     halign={Gtk.Align.CENTER}
                     label="All caught up"/>
             } else {
-                return <scrollable
-                    className="scrollWindow"
-                    vscroll={Gtk.PolicyType.AUTOMATIC}
-                    propagateNaturalHeight={true}>
-                    <box
-                        css={`margin: 0 10px 0 10px;`}
-                        vertical={true}>
-                        {notificationsList.map((notification) => {
-                            return <Notification
-                                setup={() => {}}
-                                onHoverLost={() => {}}
-                                onHover={() => {}}
-                                notification={notification}
-                                useHistoryCss={true}/>
-                        })}
-                    </box>
-                </scrollable>
+                return notificationsList.map((notification) => {
+                    return <Notification
+                        setup={() => {}}
+                        onHoverLost={() => {}}
+                        onHover={() => {}}
+                        notification={notification}
+                        useHistoryCss={true}/>
+                })
             }
         })}
     </box>

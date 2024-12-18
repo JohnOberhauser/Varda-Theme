@@ -52,26 +52,36 @@ export default function () {
                         })
                     }, 1_000)
                 }}>
-                <box css={"margin-top: 20px;"}/>
-                <NetworkControls/>
-                <BluetoothControls/>
-                <EndpointControls
-                    defaultEndpoint={audio.default_speaker}
-                    endpointsBinding={bind(audio, "speakers")}
-                    getIcon={getVolumeIcon}/>
-                <EndpointControls
-                    defaultEndpoint={audio.default_microphone}
-                    endpointsBinding={bind(audio, "microphones")}
-                    getIcon={getMicrophoneIcon}/>
-                <MediaPlayers/>
-                <box css={"margin-top: 20px;"}/>
-                <ThemeOptions/>
-                <box css={"margin-top: 20px;"}/>
-                <Divider css={"margin: 0 60px 0 60px;"}/>
-                <box css={"margin-top: 20px;"}/>
-                <PowerOptions/>
-                <box css={"margin-top: 20px;"}/>
-                <NotificationHistory/>
+                <scrollable
+                    className="scrollWindow"
+                    vscroll={Gtk.PolicyType.AUTOMATIC}
+                    propagateNaturalHeight={true}
+                    widthRequest={400}>
+                    <box
+                        css={`margin: 0 10px 0 10px;`}
+                        vertical={true}>
+                        <box css={"margin-top: 20px;"}/>
+                        <NetworkControls/>
+                        <BluetoothControls/>
+                        <EndpointControls
+                            defaultEndpoint={audio.default_speaker}
+                            endpointsBinding={bind(audio, "speakers")}
+                            getIcon={getVolumeIcon}/>
+                        <EndpointControls
+                            defaultEndpoint={audio.default_microphone}
+                            endpointsBinding={bind(audio, "microphones")}
+                            getIcon={getMicrophoneIcon}/>
+                        <MediaPlayers/>
+                        <box css={"margin-top: 20px;"}/>
+                        <ThemeOptions/>
+                        <box css={"margin-top: 20px;"}/>
+                        <Divider css={"margin: 0 60px 0 60px;"}/>
+                        <box css={"margin-top: 20px;"}/>
+                        <PowerOptions/>
+                        <box css={"margin-top: 20px;"}/>
+                        <NotificationHistory/>
+                    </box>
+                </scrollable>
             </box>
             <box
                 vexpand={true}/>
