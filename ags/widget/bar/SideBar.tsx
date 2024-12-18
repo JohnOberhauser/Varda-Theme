@@ -7,7 +7,7 @@ import {
     MicrophoneButton,
     NetworkButton,
     ScreenRecordingButton,
-    VolumeButton,
+    VolumeButton, VpnButton,
     Workspaces
 } from "./BarWidgets";
 
@@ -41,6 +41,7 @@ export default function () {
                 <VolumeButton css={iconCss}/>
                 <MicrophoneButton css={iconCss}/>
                 <BluetoothButton css={iconCss}/>
+                <VpnButton css={iconCss}/>
                 <NetworkButton css={iconCss}/>
                 <BatteryButton css={iconCss}/>
                 <ClockButton css={"padding-bottom: 6px;"} singleLine={false}/>

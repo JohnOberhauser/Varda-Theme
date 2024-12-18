@@ -8,7 +8,7 @@ import {SystemMenuWindowName} from "./SystemMenuWindow";
 const wifiConnections = Variable<string[]>([])
 const activeWifiConnections = Variable<string[]>([])
 const vpnConnections = Variable<string[]>([])
-const activeVpnConnections = Variable<string[]>([])
+export const activeVpnConnections = Variable<string[]>([])
 
 function ssidInRange(ssid: string) {
     const network = AstalNetwork.get_default()
@@ -275,7 +275,7 @@ function VpnConnections() {
                 <label
                     halign={Gtk.Align.START}
                     className="labelLargeBold"
-                    label="Active Vpn"/>
+                    label="Active VPN"/>
                 {connections.map((connection) => {
                     const buttonsRevealed = Variable(false)
 
@@ -344,7 +344,7 @@ function VpnConnections() {
                 <label
                     halign={Gtk.Align.START}
                     className="labelLargeBold"
-                    label="Vpn Connections"/>
+                    label="VPN Connections"/>
                 {connectionsValue.map((connection) => {
                     const buttonsRevealed = Variable(false)
 
@@ -413,6 +413,11 @@ export default function () {
         })
     }, 1_000)
 
+    const networkName = Variable.derive([
+        getNetworkNameBinding(),
+        activeVpnConnections
+    ])
+
     return <box
         vertical={true}>
         <box
@@ -425,7 +430,16 @@ export default function () {
                 className="labelMediumBold"
                 halign={Gtk.Align.START}
                 hexpand={true}
-                label={getNetworkNameBinding()}/>
+                truncate={true}
+                label={networkName().as((value) => {
+                    const networkNameValue = value[0]
+                    const activeVpnConnectionsValue = value[1]
+                    if (activeVpnConnectionsValue.length === 0) {
+                        return networkNameValue
+                    } else {
+                        return `${networkNameValue} (+VPN)`
+                    }
+                })}/>
             <button
                 className="iconButton"
                 label={networkChooserRevealed((revealed): string => {

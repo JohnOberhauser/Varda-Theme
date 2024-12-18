@@ -10,6 +10,7 @@ import {getBatteryIcon} from "../utils/battery"
 import {execAsync} from "astal/process"
 import {SystemMenuWindowName} from "../systemMenu/SystemMenuWindow";
 import Bluetooth from "gi://AstalBluetooth"
+import {activeVpnConnections} from "../systemMenu/NetworkControls";
 
 export function Workspaces({vertical}: { vertical: boolean }) {
     const hypr = Hyprland.get_default()
@@ -55,6 +56,16 @@ export function ClockButton({css, singleLine}: { css: string, singleLine: boolea
         }}>
 
     </button>
+}
+
+export function VpnButton({css}: { css: string }) {
+    return <label
+        className="iconButton"
+        css={css}
+        label="󰯄"
+        visible={activeVpnConnections().as((connections) => {
+            return connections.length !== 0
+        })}/>
 }
 
 export function ScreenRecordingButton({css}: { css: string }) {
