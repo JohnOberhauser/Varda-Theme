@@ -14,10 +14,6 @@
 ./scripts/setupXdgOpen.sh
 ./scripts/setTheme.sh varda
 
-
-xdg-mime default firefox-nightly.desktop x-scheme-handler/http
-xdg-mime default firefox-nightly.desktop x-scheme-handler/https
-
 # things left to do
 
 # run ./scripts/setupVpnConnections.sh $username $password
