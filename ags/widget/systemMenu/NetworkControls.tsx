@@ -158,22 +158,20 @@ function PasswordEntry(
             })
     }
 
-    const passwordEntry = <box
-        vertical={true}>
-        <label
-            halign={Gtk.Align.START}
-            className="labelSmall"
-            label="Password"/>
-        <entry
-            className="networkPasswordEntry"
-            text={text()}
-            onChanged={self => text.set(self.text)}
-            onActivate={() => connect()}/>
-    </box>
-
     return <box
         vertical={true}>
-        {accessPoint.flags !== 0 ? passwordEntry : null}
+        {accessPoint.flags !== 0 && <box
+            vertical={true}>
+            <label
+                halign={Gtk.Align.START}
+                className="labelSmall"
+                label="Password"/>
+            <entry
+                className="networkPasswordEntry"
+                text={text()}
+                onChanged={self => text.set(self.text)}
+                onActivate={() => connect()}/>
+        </box>}
         <button
             className="iconButton"
             hexpand={true}
@@ -259,6 +257,84 @@ function WifiConnections() {
                     </revealer>
                 </box>
             })
+        })}
+    </box>
+}
+
+function WifiScannedConnections() {
+    const network = AstalNetwork.get_default()
+
+    return <box
+        vertical={true}>
+        {bind(network.wifi, "scanning").as((scanning) => {
+            if (scanning) {
+                return <label
+                    halign={Gtk.Align.START}
+                    className="labelLargeBold"
+                    css={`margin-bottom: 4px;`}
+                    label="Scanning…"/>
+            } else {
+                updateConnections()
+                const accessPoints = network.wifi.accessPoints
+
+                const accessPointsUi = accessPoints.filter((value) => {
+                    return value.ssid != null
+                        && wifiConnections.get().find((connection) => {
+                            return value.ssid === connection
+                        }) == null
+                }).sort((a, b) => {
+                    if (a.strength > b.strength) {
+                        return -1
+                    } else {
+                        return 1
+                    }
+                }).map((accessPoint) => {
+                    const passwordEntryRevealed = Variable(false)
+
+                    setTimeout(() => {
+                        bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
+                            if (!visible) {
+                                passwordEntryRevealed.set(false)
+                            }
+                        })
+                    }, 1_000)
+
+                    return <box
+                        vertical={true}>
+                        <box
+                            vertical={false}>
+                            <button
+                                hexpand={true}
+                                className="iconButton"
+                                onClicked={() => {
+                                    passwordEntryRevealed.set(!passwordEntryRevealed.get())
+                                }}>
+                                <label
+                                    halign={Gtk.Align.START}
+                                    className="labelSmall"
+                                    label={`${getAccessPointIcon(accessPoint)}  ${accessPoint.ssid}`}/>
+                            </button>
+                        </box>
+                        <revealer
+                            revealChild={passwordEntryRevealed()}
+                            transitionDuration={200}
+                            transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
+                            <PasswordEntry
+                                accessPoint={accessPoint}
+                                passwordEntryRevealed={passwordEntryRevealed}/>
+                        </revealer>
+                    </box>
+                })
+
+                return <box
+                    vertical={true}>
+                    <label
+                        halign={Gtk.Align.START}
+                        className="labelLargeBold"
+                        label="Available networks"/>
+                    {accessPointsUi}
+                </box>
+            }
         })}
     </box>
 }
@@ -475,76 +551,7 @@ export default function () {
                 <VpnConnections/>
                 {network.wifi && <WifiConnections connections={wifiConnections}/>}
                 <box css={`margin-top: 12px;`}/>
-                {network.wifi && bind(network.wifi, "scanning").as((scanning) => {
-                    if (scanning) {
-                        return <label
-                            halign={Gtk.Align.START}
-                            className="labelLargeBold"
-                            css={`margin-bottom: 4px;`}
-                            label="Scanning…"/>
-                    } else {
-                        updateConnections()
-                        const accessPoints = network.wifi.accessPoints
-
-                        const accessPointsUi = accessPoints.filter((value) => {
-                            return value.ssid != null
-                                && wifiConnections.get().find((connection) => {
-                                    return value.ssid === connection
-                                }) == null
-                        }).sort((a, b) => {
-                            if (a.strength > b.strength) {
-                                return -1
-                            } else {
-                                return 1
-                            }
-                        }).map((accessPoint) => {
-                            const passwordEntryRevealed = Variable(false)
-
-                            setTimeout(() => {
-                                bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
-                                    if (!visible) {
-                                        passwordEntryRevealed.set(false)
-                                    }
-                                })
-                            }, 1_000)
-
-                            return <box
-                                vertical={true}>
-                                <box
-                                    vertical={false}>
-                                    <button
-                                        hexpand={true}
-                                        className="iconButton"
-                                        onClicked={() => {
-                                            passwordEntryRevealed.set(!passwordEntryRevealed.get())
-                                        }}>
-                                        <label
-                                            halign={Gtk.Align.START}
-                                            className="labelSmall"
-                                            label={`${getAccessPointIcon(accessPoint)}  ${accessPoint.ssid}`}/>
-                                    </button>
-                                </box>
-                                <revealer
-                                    revealChild={passwordEntryRevealed()}
-                                    transitionDuration={200}
-                                    transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
-                                    <PasswordEntry
-                                        accessPoint={accessPoint}
-                                        passwordEntryRevealed={passwordEntryRevealed}/>
-                                </revealer>
-                            </box>
-                        })
-
-                        return <box
-                            vertical={true}>
-                            <label
-                                halign={Gtk.Align.START}
-                                className="labelLargeBold"
-                                label="Available networks"/>
-                            {accessPointsUi}
-                        </box>
-                    }
-                })}
+                {network.wifi && <WifiScannedConnections/>}
             </box>
         </revealer>
     </box>
