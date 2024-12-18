@@ -18,6 +18,10 @@ export function getNetworkNameBinding() {
                 return wifi.ssid
             } else if (primary === AstalNetwork.Primary.WIRED) {
                 return "Wired"
+            } else if (network.wired !== null) {
+                return "Wired"
+            } else if (network.wifi !== null) {
+                return network.wifi.ssid
             } else {
                 return "Not connected"
             }
@@ -35,6 +39,10 @@ export function getNetworkNameBinding() {
                 return wifi.ssid
             } else if (primary === AstalNetwork.Primary.WIRED) {
                 return "Wired"
+            } else if (network.wired !== null) {
+                return "Wired"
+            } else if (network.wifi !== null) {
+                return network.wifi.ssid
             } else {
                 return "Not connected"
             }
@@ -45,14 +53,16 @@ export function getNetworkNameBinding() {
 export function getNetworkIconBinding() {
     const network = AstalNetwork.get_default()
 
-    if (network.primary === AstalNetwork.Primary.WIFI) {
+    if (network.wifi !== null) {
         return Variable.derive([
             bind(network, "connectivity"),
-            bind(network.wifi, "strength")
+            bind(network.wifi, "strength"),
+            bind(network, "primary")
         ])(() => getNetworkIcon(network))
     } else {
         return Variable.derive([
-            bind(network, "connectivity")
+            bind(network, "connectivity"),
+            bind(network, "primary")
         ])(() => getNetworkIcon(network))
     }
 }
@@ -61,7 +71,7 @@ export function getNetworkIcon(network: AstalNetwork.Network) {
     const { connectivity, primary, wifi, wired } = network;
 
     // Handle wired connection
-    if (primary === AstalNetwork.Primary.WIRED) {
+    if (wired !== null) {
         if (wired.internet === AstalNetwork.Internet.CONNECTED) {
             return '󰈀';
         } else {
@@ -70,7 +80,7 @@ export function getNetworkIcon(network: AstalNetwork.Network) {
     }
 
     // Handle Wi-Fi connection
-    if (primary === AstalNetwork.Primary.WIFI) {
+    if (wifi !== null) {
         const { ssid, strength, internet, enabled } = wifi;
 
         // If Wi-Fi is disabled or there is no connectivity

@@ -11,6 +11,7 @@ hypridle \
 hyprpaper \
 pipewire \
 networkmanager \
+network-manager-applet \
 greetd \
 flatpak \
 base-devel \

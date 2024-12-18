@@ -20,6 +20,9 @@ xdg-mime default firefox-nightly.desktop x-scheme-handler/https
 
 # things left to do
 
+# run ./scripts/setupVpnConnections.sh $username $password
+# where username and password are protonvpn openvpn credentials
+
 # Need to set fonts in firefox, intellij
 #
 # setup ufw
