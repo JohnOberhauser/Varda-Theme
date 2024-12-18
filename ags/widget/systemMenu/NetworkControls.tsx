@@ -332,59 +332,67 @@ function VpnConnections() {
                 })}
             </box>
         })}
-        <label
-            halign={Gtk.Align.START}
-            className="labelLargeBold"
-            label="Vpn Connections"/>
+
         {vpnConnections((connectionsValue) => {
-            return connectionsValue.map((connection) => {
-                const buttonsRevealed = Variable(false)
+            if (connectionsValue.length === 0) {
+                return <box/>
+            }
 
-                setTimeout(() => {
-                    bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
-                        if (!visible) {
-                            buttonsRevealed.set(false)
-                        }
-                    })
-                }, 1_000)
+            return <box
+                vertical={true}>
+                <label
+                    halign={Gtk.Align.START}
+                    className="labelLargeBold"
+                    label="Vpn Connections"/>
+                {connectionsValue.map((connection) => {
+                    const buttonsRevealed = Variable(false)
 
-                return <box
-                    vertical={true}>
-                    <button
-                        hexpand={true}
-                        className="iconButton"
-                        onClicked={() => {
-                            buttonsRevealed.set(!buttonsRevealed.get())
-                        }}>
-                        <label
-                            halign={Gtk.Align.START}
-                            className="labelSmall"
-                            label={`󰯄  ${connection}`}/>
-                    </button>
-                    <revealer
-                        revealChild={buttonsRevealed()}
-                        transitionDuration={200}
-                        transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
-                        <box
-                            vertical={false}>
-                            <button
-                                hexpand={true}
-                                className="iconButton"
-                                label="Connect"
-                                onClicked={() => {
-                                    connectVpn(connection)
-                                }}/>
-                            <button
-                                hexpand={true}
-                                className="iconButton"
-                                label="Forget"
-                                onClicked={() => {
-                                    deleteConnection(connection)
-                                }}/>
-                        </box>
-                    </revealer>
-                </box>
-            })
+                    setTimeout(() => {
+                        bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
+                            if (!visible) {
+                                buttonsRevealed.set(false)
+                            }
+                        })
+                    }, 1_000)
+
+                    return <box
+                        vertical={true}>
+                        <button
+                            hexpand={true}
+                            className="iconButton"
+                            onClicked={() => {
+                                buttonsRevealed.set(!buttonsRevealed.get())
+                            }}>
+                            <label
+                                halign={Gtk.Align.START}
+                                className="labelSmall"
+                                label={`󰯄  ${connection}`}/>
+                        </button>
+                        <revealer
+                            revealChild={buttonsRevealed()}
+                            transitionDuration={200}
+                            transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
+                            <box
+                                vertical={false}>
+                                <button
+                                    hexpand={true}
+                                    className="iconButton"
+                                    label="Connect"
+                                    onClicked={() => {
+                                        connectVpn(connection)
+                                    }}/>
+                                <button
+                                    hexpand={true}
+                                    className="iconButton"
+                                    label="Forget"
+                                    onClicked={() => {
+                                        deleteConnection(connection)
+                                    }}/>
+                            </box>
+                        </revealer>
+                    </box>
+                })}
+            </box>
         })}
     </box>
 }
