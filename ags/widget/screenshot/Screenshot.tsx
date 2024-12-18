@@ -1,4 +1,4 @@
-import {App, Astal, Gdk} from "astal/gtk3"
+import {App, Astal, Gdk, Gtk} from "astal/gtk3"
 import {execAsync} from "astal/process"
 import {bind, Variable} from "astal"
 import Divider from "../common/Divider";
@@ -6,6 +6,54 @@ import Divider from "../common/Divider";
 export const isRecording = Variable(false)
 
 export const ScreenshotWindowName = "screenshotWindow"
+
+type AudioSource = {
+    name: string;
+    description: string;
+    isMonitor: boolean;
+};
+
+const audioOptions = Variable<AudioSource[]>([])
+
+function updateAudioOptions() {
+    execAsync([
+        "bash",
+        "-c",
+        `pactl list sources | grep -E "Name:|Description"`
+    ]).catch((error) => {
+        print(error)
+    }).then((value) => {
+        if (typeof value !== "string") {
+            return
+        }
+
+        // Split the input into lines
+        const lines = value.split('\n');
+
+        // Initialize an empty array to hold the result
+        const result: AudioSource[] = [];
+
+        // Iterate through the lines in pairs (Name, Description)
+        for (let i = 0; i < lines.length; i += 2) {
+            // Ensure the line is not empty and follows the expected format
+            const nameLine = lines[i].trim();
+            const descriptionLine = lines[i + 1]?.trim();
+
+            // Match the "Name" prefix
+            if (nameLine.startsWith("Name: ") && descriptionLine?.startsWith("Description: ")) {
+                // Extract the name and description values
+                const name = nameLine.replace("Name: ", "");
+                const description = descriptionLine.replace("Description: ", "");
+                const isMonitor = nameLine.includes("monitor")
+
+                // Add to the result array
+                result.push({ name, description, isMonitor });
+            }
+        }
+
+        audioOptions.set(result)
+    })
+}
 
 function ScreenshotButton(
     {
@@ -36,6 +84,21 @@ function ScreenshotButton(
 }
 
 export default function () {
+    const selectedAudio = Variable<AudioSource | null>(null)
+    const audioRevealed = Variable(false)
+    updateAudioOptions()
+
+    setTimeout(() => {
+        bind(App.get_window(ScreenshotWindowName)!, "visible").subscribe((visible) => {
+            if (!visible) {
+                selectedAudio.set(null)
+                audioRevealed.set(false)
+            } else {
+                updateAudioOptions()
+            }
+        })
+    }, 1_000)
+
     return <window
         monitor={0}
         name={ScreenshotWindowName}
@@ -129,19 +192,87 @@ export default function () {
                 css={`margin-bottom: 8px;`}
                 label="Screen Record"/>
             <box
-                vertical={false}>
+                vertical={false}
+                className="row">
+                <label
+                    className="labelLargeBold"
+                    css={`margin-right: 20px;`}
+                    label={selectedAudio().as((value) => {
+                        if (value === null) {
+                            return "󰝟"
+                        } else {
+                            return value.isMonitor ? "󰕾" : ""
+                        }
+                    })}/>
+                <label
+                    className="labelMediumBold"
+                    halign={Gtk.Align.START}
+                    hexpand={true}
+                    truncate={true}
+                    label={selectedAudio().as((value) => {
+                        if (value === null) {
+                            return "No Audio"
+                        } else {
+                            return value.description
+                        }
+                    })}/>
+                <button
+                    className="iconButton"
+                    label={audioRevealed((revealed): string => {
+                        if (revealed) {
+                            return ""
+                        } else {
+                            return ""
+                        }
+                    })}
+                    onClicked={() => {
+                        audioRevealed.set(!audioRevealed.get())
+                    }}/>
+            </box>
+            <revealer
+                className="rowRevealer"
+                revealChild={audioRevealed()}
+                transitionDuration={200}
+                transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
+                <box
+                    vertical={true}>
+                    {audioOptions().as((options) => {
+                        return options.map((option) => {
+                            return <button
+                                hexpand={true}
+                                className="iconButton"
+                                onClicked={() => {
+                                    selectedAudio.set(option)
+                                    audioRevealed.set(false)
+                                }}>
+                                <label
+                                    halign={Gtk.Align.START}
+                                    className="labelSmall"
+                                    truncate={true}
+                                    label={`${option.isMonitor ? "󰕾" : ""}  ${option.description}`}/>
+                            </button>
+                        })
+                    })}
+                </box>
+            </revealer>
+            <box
+                vertical={false}
+                css={`margin-top: 8px;`}>
                 <ScreenshotButton
                     icon={""}
                     label={"All"}
                     onClicked={() => {
-                        App.toggle_window(ScreenshotWindowName)
                         isRecording.set(true)
+                        const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
+                        const command = `wf-recorder --file=$(xdg-user-dir VIDEOS)/ScreenRecordings/$(date +'%s_record.mkv') ${audioParam}`
+                        print(command)
+                        App.toggle_window(ScreenshotWindowName)
                         execAsync(
                             [
                                 "bash",
                                 "-c",
                                 `
-                                wf-recorder --file=$(xdg-user-dir VIDEOS)/ScreenRecordings/$(date +'%s_record.mkv')
+                                ${command}
                                 `
                             ]
                         ).catch((error) => {
@@ -154,14 +285,17 @@ export default function () {
                     icon={"󰹑"}
                     label={"Monitor"}
                     onClicked={() => {
-                        App.toggle_window(ScreenshotWindowName)
                         isRecording.set(true)
+                        const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
+                        const command = `wf-recorder --file=$(xdg-user-dir VIDEOS)/ScreenRecordings/$(date +'%s_record.mkv') -g "$(slurp -o)" ${audioParam}`
+                        print(command)
+                        App.toggle_window(ScreenshotWindowName)
                         execAsync(
                             [
                                 "bash",
                                 "-c",
                                 `
-                                wf-recorder --file=$(xdg-user-dir VIDEOS)/ScreenRecordings/$(date +'%s_record.mkv') -g "$(slurp -o)"
+                                ${command}
                                 `
                             ]
                         ).catch((error) => {
@@ -174,14 +308,17 @@ export default function () {
                     icon={""}
                     label={"Area"}
                     onClicked={() => {
-                        App.toggle_window(ScreenshotWindowName)
                         isRecording.set(true)
+                        const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
+                        const command = `wf-recorder --file=$(xdg-user-dir VIDEOS)/ScreenRecordings/$(date +'%s_record.mkv') -g "$(slurp)" ${audioParam}`
+                        print(command)
+                        App.toggle_window(ScreenshotWindowName)
                         execAsync(
                             [
                                 "bash",
                                 "-c",
                                 `
-                                wf-recorder --file=$(xdg-user-dir VIDEOS)/ScreenRecordings/$(date +'%s_record.mkv') -g "$(slurp)"
+                                ${command}
                                 `
                             ]
                         ).catch((error) => {
