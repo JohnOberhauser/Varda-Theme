@@ -339,7 +339,7 @@ function WifiScannedConnections() {
     </box>
 }
 
-function VpnConnections() {
+function VpnActiveConnections() {
     return <box
         vertical={true}>
         {activeVpnConnections().as((connections) => {
@@ -409,7 +409,12 @@ function VpnConnections() {
                 <box css={`margin-top: 12px;`}/>
             </box>
         })}
+    </box>
+}
 
+function VpnConnections() {
+    return <box
+        vertical={true}>
         {vpnConnections((connectionsValue) => {
             if (connectionsValue.length === 0) {
                 return <box/>
@@ -548,6 +553,7 @@ export default function () {
                             deleteConnection(activeAccessPoint.ssid)
                         }}/>
                 })}
+                <VpnActiveConnections/>
                 <VpnConnections/>
                 {network.wifi && <WifiConnections connections={wifiConnections}/>}
                 <box css={`margin-top: 12px;`}/>
