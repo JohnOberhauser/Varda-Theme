@@ -23,6 +23,7 @@ cp -r /usr/local/share/xdg-desktop-portal-termfilechooser/* $HOME/.config/xdg-de
 systemctl --user restart xdg-desktop-portal.service
 
 # Setup xdg-mime default file manager
+cp $HOME/workspace/Varda-Theme/setup/yazi.sh $HOME/.local/bin/
 mkdir -p $HOME/.local/share/applications
 cp $HOME/workspace/Varda-Theme/setup/yazi.desktop $HOME/.local/share/applications/
 

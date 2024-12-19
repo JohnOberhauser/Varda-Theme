@@ -1,6 +1,6 @@
 import {App, Astal, Gdk, Gtk} from "astal/gtk3"
 import {execAsync} from "astal/process"
-import {bind, Variable} from "astal"
+import {bind, Variable, GLib} from "astal"
 import Divider from "../common/Divider";
 
 export const isRecording = Variable(false)
@@ -14,6 +14,33 @@ type AudioSource = {
 };
 
 const audioOptions = Variable<AudioSource[]>([])
+
+let screenshotDir = ""
+let screenRecordingDir = ""
+
+function setDirectories() {
+    execAsync([
+        "bash",
+        "-c",
+        `
+    mkdir -p $(xdg-user-dir PICTURES)/Screenshots
+    echo $(xdg-user-dir PICTURES)/Screenshots
+    `
+    ]).then((value) => {
+        screenshotDir = value
+    })
+
+    execAsync([
+        "bash",
+        "-c",
+        `
+        mkdir -p $(xdg-user-dir VIDEOS)/ScreenRecordings
+        echo $(xdg-user-dir VIDEOS)/ScreenRecordings
+        `
+    ]).then((value) => {
+        screenRecordingDir = value
+    })
+}
 
 function updateAudioOptions() {
     execAsync([
@@ -55,6 +82,26 @@ function updateAudioOptions() {
     })
 }
 
+function showScreenshotNotification(filePath: string) {
+    execAsync([
+        "bash",
+        "-c",
+        `
+        notify-send "Screenshot" "Screenshot taken\\nFile saved at ${filePath}" \\
+            --hint=string:desktop-entry:Screenshot \\
+            --hint=int:transient:1 \\
+            --action="default,View in Files" &
+        
+        # Listen for the action and open the file manager
+        while IFS= read -r line; do
+            if [[ $line == "default" ]]; then
+                xdg-open "$(dirname "${filePath}")"
+            fi
+        done < <(dbus-monitor "interface='org.freedesktop.Notifications'" | grep --line-buffered "user-action=default")
+    `
+    ])
+}
+
 function ScreenshotButton(
     {
         icon,
@@ -86,6 +133,7 @@ function ScreenshotButton(
 export default function () {
     const selectedAudio = Variable<AudioSource | null>(null)
     const audioRevealed = Variable(false)
+    setDirectories()
     updateAudioOptions()
 
     setTimeout(() => {
@@ -135,18 +183,22 @@ export default function () {
                     label={"All"}
                     onClicked={() => {
                         App.toggle_window(ScreenshotWindowName)
+                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M")!
+                        const path = `${screenshotDir}/${time}_screenshot.png`
                         execAsync(
                             [
                                 "bash",
                                 "-c",
                                 `
                                 sleep 0.7
-                                grim $HOME/Pictures/Screenshots/$(date +'%s_grim.png')
+                                grim ${path}
                                 play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
                                 `
                             ]
                         ).catch((error) => {
                             print(error)
+                        }).finally(() => {
+                            showScreenshotNotification(path)
                         })
                     }}/>
                 <ScreenshotButton
