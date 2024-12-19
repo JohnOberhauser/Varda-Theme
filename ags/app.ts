@@ -10,11 +10,26 @@ import NotificationPopups from "./widget/notification/NotificationPopups";
 import AppLauncher, {AppLauncherWindowName} from "./widget/appLauncher/AppLauncher";
 import Screenshot, {ScreenshotWindowName} from "./widget/screenshot/Screenshot";
 import Screenshare, {ScreenshareWindowName, updateResponse, updateWindows} from "./widget/screenshare/Screenshare";
+import Hyprland from "gi://AstalHyprland"
 
 App.start({
     css: style,
     main(...args: Array<string>) {
+        const hyprland = Hyprland.get_default()
+        const mainMonitor = hyprland.monitors.find((monitor) => monitor.id === 0)
+        const ratio = mainMonitor?.width && mainMonitor?.height
+            ? mainMonitor.width / mainMonitor.height
+            : 1
+
+        print(`Screen ratio: ${ratio}`)
+
         if (args.includes("sidebar")) {
+            SideBar()
+            Calendar(Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.LEFT)
+        } else if (args.includes("topbar")) {
+            TopBar()
+            Calendar(Astal.WindowAnchor.TOP)
+        } else if (ratio > 2) {
             SideBar()
             Calendar(Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.LEFT)
         } else {
