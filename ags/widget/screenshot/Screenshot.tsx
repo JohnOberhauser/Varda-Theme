@@ -83,23 +83,37 @@ function updateAudioOptions() {
 }
 
 function showScreenshotNotification(filePath: string) {
+    showNotification(filePath, "Screenshot")
+}
+
+function showScreenRecordingNotification(filePath: string) {
+    showNotification(filePath, "Screen Recording")
+}
+
+function showNotification(
+    filePath: string,
+    appName: string
+) {
     execAsync([
         "bash",
         "-c",
         `
-        notify-send "Screenshot" "Screenshot taken\\nFile saved at ${filePath}" \\
-            --hint=string:desktop-entry:Screenshot \\
-            --hint=int:transient:1 \\
-            --action="default,View in Files" &
-        
-        # Listen for the action and open the file manager
-        while IFS= read -r line; do
-            if [[ $line == "default" ]]; then
+        ACTION="viewScreenshot"
+        # Send a notification with an action to view the file
+        notify-send "File saved at ${filePath}" \
+            --app-name="${appName}" \
+            --action=$ACTION="View in Files" |
+        while read -r action; do
+            if [[ "$action" == $ACTION ]]; then
                 xdg-open "$(dirname "${filePath}")"
             fi
-        done < <(dbus-monitor "interface='org.freedesktop.Notifications'" | grep --line-buffered "user-action=default")
+        done
     `
-    ])
+    ]).catch((error) => {
+        print(error)
+    }).then((value) => {
+        print(value)
+    })
 }
 
 function ScreenshotButton(
@@ -183,7 +197,7 @@ export default function () {
                     label={"All"}
                     onClicked={() => {
                         App.toggle_window(ScreenshotWindowName)
-                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M")!
+                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
                         const path = `${screenshotDir}/${time}_screenshot.png`
                         execAsync(
                             [
@@ -206,17 +220,21 @@ export default function () {
                     label={"Monitor"}
                     onClicked={() => {
                         App.toggle_window(ScreenshotWindowName)
+                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
+                        const path = `${screenshotDir}/${time}_screenshot.png`
                         execAsync(
                             [
                                 "bash",
                                 "-c",
                                 `
-                                grim -g "$(slurp -o)" $HOME/Pictures/Screenshots/$(date +'%s_grim.png')
+                                grim -g "$(slurp -o)" ${path}
                                 play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
                                 `
                             ]
                         ).catch((error) => {
                             print(error)
+                        }).finally(() => {
+                            showScreenshotNotification(path)
                         })
                     }}/>
                 <ScreenshotButton
@@ -224,17 +242,21 @@ export default function () {
                     label={"Area"}
                     onClicked={() => {
                         App.toggle_window(ScreenshotWindowName)
+                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
+                        const path = `${screenshotDir}/${time}_screenshot.png`
                         execAsync(
                             [
                                 "bash",
                                 "-c",
                                 `
-                                grim -g "$(slurp)" $HOME/Pictures/Screenshots/$(date +'%s_grim.png')
+                                grim -g "$(slurp)" ${path}
                                 play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
                                 `
                             ]
                         ).catch((error) => {
                             print(error)
+                        }).finally(() => {
+                            showScreenshotNotification(path)
                         })
                     }}/>
             </box>
@@ -315,8 +337,10 @@ export default function () {
                     label={"All"}
                     onClicked={() => {
                         isRecording.set(true)
+                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
+                        const path = `${screenRecordingDir}/${time}_record.mkv`
                         const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
-                        const command = `wf-recorder --file=$(xdg-user-dir VIDEOS)/ScreenRecordings/$(date +'%s_record.mkv') ${audioParam}`
+                        const command = `wf-recorder --file=${path} ${audioParam}`
                         print(command)
                         App.toggle_window(ScreenshotWindowName)
                         execAsync(
@@ -331,6 +355,7 @@ export default function () {
                             print(error)
                         }).finally(() => {
                             isRecording.set(false)
+                            showScreenRecordingNotification(path)
                         })
                     }}/>
                 <ScreenshotButton
@@ -338,8 +363,10 @@ export default function () {
                     label={"Monitor"}
                     onClicked={() => {
                         isRecording.set(true)
+                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
+                        const path = `${screenRecordingDir}/${time}_record.mkv`
                         const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
-                        const command = `wf-recorder --file=$(xdg-user-dir VIDEOS)/ScreenRecordings/$(date +'%s_record.mkv') -g "$(slurp -o)" ${audioParam}`
+                        const command = `wf-recorder --file=${path} -g "$(slurp -o)" ${audioParam}`
                         print(command)
                         App.toggle_window(ScreenshotWindowName)
                         execAsync(
@@ -354,6 +381,7 @@ export default function () {
                             print(error)
                         }).finally(() => {
                             isRecording.set(false)
+                            showScreenRecordingNotification(path)
                         })
                     }}/>
                 <ScreenshotButton
@@ -361,8 +389,10 @@ export default function () {
                     label={"Area"}
                     onClicked={() => {
                         isRecording.set(true)
+                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
+                        const path = `${screenRecordingDir}/${time}_record.mkv`
                         const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
-                        const command = `wf-recorder --file=$(xdg-user-dir VIDEOS)/ScreenRecordings/$(date +'%s_record.mkv') -g "$(slurp)" ${audioParam}`
+                        const command = `wf-recorder --file=${path} -g "$(slurp)" ${audioParam}`
                         print(command)
                         App.toggle_window(ScreenshotWindowName)
                         execAsync(
@@ -377,6 +407,7 @@ export default function () {
                             print(error)
                         }).finally(() => {
                             isRecording.set(false)
+                            showScreenRecordingNotification(path)
                         })
                     }}/>
             </box>
