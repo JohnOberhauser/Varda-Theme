@@ -310,6 +310,19 @@ export default function () {
                 transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
                 <box
                     vertical={true}>
+                    <button
+                        hexpand={true}
+                        className="iconButton"
+                        onClicked={() => {
+                            selectedAudio.set(null)
+                            audioRevealed.set(false)
+                        }}>
+                        <label
+                            halign={Gtk.Align.START}
+                            className="labelSmall"
+                            truncate={true}
+                            label={`󰝟  No Audio`}/>
+                    </button>
                     {audioOptions().as((options) => {
                         return options.map((option) => {
                             return <button
