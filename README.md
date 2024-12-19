@@ -10,6 +10,8 @@ The script is `./setup/scripts/setTheme.sh`
 
 # Theme Showcase
 
+![video](.screenshots/asg_showcase.mkv)
+
 ## Varda
 
 ![screenshot](.screenshots/varda2.png)
