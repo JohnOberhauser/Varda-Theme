@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Yazi Kitty
+Exec=yazi-kitty.sh %u
+Type=Application

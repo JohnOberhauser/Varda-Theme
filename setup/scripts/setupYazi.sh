@@ -23,10 +23,10 @@ cp -r /usr/local/share/xdg-desktop-portal-termfilechooser/* $HOME/.config/xdg-de
 systemctl --user restart xdg-desktop-portal.service
 
 # Setup xdg-mime default file manager
-cp $HOME/workspace/Varda-Theme/setup/yazi.sh $HOME/.local/bin/
-mkdir -p $HOME/.local/share/applications
-cp $HOME/workspace/Varda-Theme/setup/yazi.desktop $HOME/.local/share/applications/
+# Needs to go in /usr/ because firefox won't use local user's .desktop files for some reason
+sudo cp $HOME/workspace/Varda-Theme/setup/yazi-kitty.sh /usr/bin/
+sudo cp $HOME/workspace/Varda-Theme/setup/yazi-kitty.desktop /usr/share/applications/
 
-xdg-mime default yazi.desktop inode/directory
+xdg-mime default yazi-kitty.desktop inode/directory
 
 rm -rf $HOME/Downloads/xdg-desktop-portal-termfilechooser
