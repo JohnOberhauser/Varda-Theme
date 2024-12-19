@@ -159,7 +159,9 @@ function PasswordEntry(
     }
 
     return <box
-        vertical={true}>
+        css={`margin-top: 4px;`}
+        vertical={true}
+        spacing={4}>
         {accessPoint.flags !== 0 && <box
             vertical={true}>
             <label
@@ -173,7 +175,7 @@ function PasswordEntry(
                 onActivate={() => connect()}/>
         </box>}
         <button
-            className="iconButton"
+            className="primaryButton"
             hexpand={true}
             label="Connect"
             onClicked={() => connect()}/>
@@ -232,10 +234,12 @@ function WifiConnections() {
                         transitionDuration={200}
                         transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
                         <box
-                            vertical={false}>
+                            css={`margin-top: 4px;`}
+                            vertical={true}
+                            spacing={4}>
                             {canConnect && <button
                                 hexpand={true}
-                                className="iconButton"
+                                className="primaryButton"
                                 label="Connect"
                                 onClicked={() => {
                                     execAsync(`nmcli c up ${connection}`)
@@ -248,7 +252,7 @@ function WifiConnections() {
                                 }}/>}
                             <button
                                 hexpand={true}
-                                className="iconButton"
+                                className="primaryButton"
                                 label="Forget"
                                 onClicked={() => {
                                     deleteConnection(connection)
@@ -274,7 +278,6 @@ function WifiScannedConnections() {
                     css={`margin-bottom: 4px;`}
                     label="Scanning…"/>
             } else {
-                updateConnections()
                 const accessPoints = network.wifi.accessPoints
 
                 const accessPointsUi = accessPoints.filter((value) => {
@@ -381,10 +384,12 @@ function VpnActiveConnections() {
                             transitionDuration={200}
                             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
                             <box
-                                vertical={false}>
+                                css={`margin-top: 4px;`}
+                                vertical={true}
+                                spacing={4}>
                                 <button
                                     hexpand={true}
-                                    className="iconButton"
+                                    className="primaryButton"
                                     label="Disconnect"
                                     onClicked={() => {
                                         execAsync(`nmcli c down ${connection}`)
@@ -397,7 +402,7 @@ function VpnActiveConnections() {
                                     }}/>
                                 <button
                                     hexpand={true}
-                                    className="iconButton"
+                                    className="primaryButton"
                                     label="Forget"
                                     onClicked={() => {
                                         deleteConnection(connection)
@@ -455,17 +460,19 @@ function VpnConnections() {
                             transitionDuration={200}
                             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
                             <box
-                                vertical={false}>
+                                css={`margin-top: 4px;`}
+                                vertical={true}
+                                spacing={4}>
                                 <button
                                     hexpand={true}
-                                    className="iconButton"
+                                    className="primaryButton"
                                     label="Connect"
                                     onClicked={() => {
                                         connectVpn(connection)
                                     }}/>
                                 <button
                                     hexpand={true}
-                                    className="iconButton"
+                                    className="primaryButton"
                                     label="Forget"
                                     onClicked={() => {
                                         deleteConnection(connection)
@@ -490,6 +497,8 @@ export default function () {
         bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
             if (!visible) {
                 networkChooserRevealed.set(false)
+            } else {
+                updateConnections()
             }
         })
     }, 1_000)
@@ -546,7 +555,7 @@ export default function () {
                 vertical={true}>
                 {network.wifi && bind(network.wifi, "activeAccessPoint").as((activeAccessPoint) => {
                     return <button
-                        className="iconButton"
+                        className="primaryButton"
                         css={`margin-bottom: 12px;`}
                         label="Forget"
                         onClicked={() => {
