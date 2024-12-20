@@ -2,7 +2,7 @@
 This repository contains:
 - My dot files for my hyprland setup
 - Scripts to set up everything from a fresh arch install
-- Theme implementations for various programs for the Varda theme
+- Theme implementations for various programs
 
 Some configs will have files ignored by git related to the color scheme / theme.  The missing files 
 are located in `./setup/themes`.  I use a script to easily swap out themes.
