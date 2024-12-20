@@ -22,7 +22,7 @@ export EDITOR='nvim'
 export PATH="/home/john/.mozbuild/git-cinnabar:$PATH"
 export PATH=~/.local/bin:$PATH
 
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 alias sweep="/home/john/Documents/scripts/sweepGitBranches.sh"

@@ -14,9 +14,30 @@ type AudioSource = {
 };
 
 const audioOptions = Variable<AudioSource[]>([])
+const h264QualityPresets = [
+    "ultrafast",
+    "superfast",
+    "veryfast",
+    "faster",
+    "fast",
+    "medium",
+    "slow",
+    "slower",
+    "veryslow"
+]
 
 let screenshotDir = ""
 let screenRecordingDir = ""
+
+function getQualityPresetIcon(value: string) {
+    if (value.includes("fast")) {
+        return "󰓅"
+    } else if (value.includes("medium")) {
+        return "󰾅"
+    } else {
+        return "󰾆"
+    }
+}
 
 function setDirectories() {
     execAsync([
@@ -144,22 +165,328 @@ function ScreenshotButton(
     </button>
 }
 
-export default function () {
+function ScreenShots() {
+    return <box
+        vertical={true}>
+        <label
+            className="labelLargeBold"
+            css={`margin-bottom: 8px;`}
+            label="Screenshot"/>
+        <box
+            vertical={false}>
+            <ScreenshotButton
+                icon={""}
+                label={"All"}
+                onClicked={() => {
+                    App.toggle_window(ScreenshotWindowName)
+                    const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
+                    const path = `${screenshotDir}/${time}_screenshot.png`
+                    execAsync(
+                        [
+                            "bash",
+                            "-c",
+                            `
+                                    sleep 0.7
+                                    grim ${path}
+                                    play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
+                                    `
+                        ]
+                    ).catch((error) => {
+                        print(error)
+                    }).finally(() => {
+                        showScreenshotNotification(path)
+                    })
+                }}/>
+            <ScreenshotButton
+                icon={"󰹑"}
+                label={"Monitor"}
+                onClicked={() => {
+                    App.toggle_window(ScreenshotWindowName)
+                    const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
+                    const path = `${screenshotDir}/${time}_screenshot.png`
+                    execAsync(
+                        [
+                            "bash",
+                            "-c",
+                            `
+                                    grim -g "$(slurp -o)" ${path}
+                                    play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
+                                    `
+                        ]
+                    ).catch((error) => {
+                        print(error)
+                    }).finally(() => {
+                        showScreenshotNotification(path)
+                    })
+                }}/>
+            <ScreenshotButton
+                icon={""}
+                label={"Area"}
+                onClicked={() => {
+                    App.toggle_window(ScreenshotWindowName)
+                    const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
+                    const path = `${screenshotDir}/${time}_screenshot.png`
+                    execAsync(
+                        [
+                            "bash",
+                            "-c",
+                            `
+                                    grim -g "$(slurp)" ${path}
+                                    play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
+                                    `
+                        ]
+                    ).catch((error) => {
+                        print(error)
+                    }).finally(() => {
+                        showScreenshotNotification(path)
+                    })
+                }}/>
+        </box>
+    </box>
+}
+
+function ScreenRecording() {
     const selectedAudio = Variable<AudioSource | null>(null)
     const audioRevealed = Variable(false)
-    setDirectories()
-    updateAudioOptions()
+    const selectedQualityPreset = Variable("medium")
+    const qualityRevealed = Variable(false)
 
     setTimeout(() => {
         bind(App.get_window(ScreenshotWindowName)!, "visible").subscribe((visible) => {
             if (!visible) {
                 selectedAudio.set(null)
                 audioRevealed.set(false)
+                selectedQualityPreset.set("medium")
+                qualityRevealed.set(false)
             } else {
                 updateAudioOptions()
             }
         })
     }, 1_000)
+
+    return <box
+        vertical={true}>
+        <label
+            className="labelLargeBold"
+            css={`margin-bottom: 8px;`}
+            label="Screen Record"/>
+        <box
+            vertical={false}
+            className="row">
+            <label
+                className="labelLargeBold"
+                css={`margin-right: 20px;`}
+                label={selectedAudio().as((value) => {
+                    if (value === null) {
+                        return "󰝟"
+                    } else {
+                        return value.isMonitor ? "󰕾" : ""
+                    }
+                })}/>
+            <label
+                className="labelMediumBold"
+                halign={Gtk.Align.START}
+                hexpand={true}
+                truncate={true}
+                label={selectedAudio().as((value) => {
+                    if (value === null) {
+                        return "No Audio"
+                    } else {
+                        return value.description
+                    }
+                })}/>
+            <button
+                className="iconButton"
+                label={audioRevealed((revealed): string => {
+                    if (revealed) {
+                        return ""
+                    } else {
+                        return ""
+                    }
+                })}
+                onClicked={() => {
+                    audioRevealed.set(!audioRevealed.get())
+                }}/>
+        </box>
+        <revealer
+            className="rowRevealer"
+            revealChild={audioRevealed()}
+            transitionDuration={200}
+            transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
+            <box
+                vertical={true}>
+                <button
+                    hexpand={true}
+                    className="iconButton"
+                    onClicked={() => {
+                        selectedAudio.set(null)
+                        audioRevealed.set(false)
+                    }}>
+                    <label
+                        halign={Gtk.Align.START}
+                        className="labelSmall"
+                        truncate={true}
+                        label={`󰝟  No Audio`}/>
+                </button>
+                {audioOptions().as((options) => {
+                    return options.map((option) => {
+                        return <button
+                            hexpand={true}
+                            className="iconButton"
+                            onClicked={() => {
+                                selectedAudio.set(option)
+                                audioRevealed.set(false)
+                            }}>
+                            <label
+                                halign={Gtk.Align.START}
+                                className="labelSmall"
+                                truncate={true}
+                                label={`${option.isMonitor ? "󰕾" : ""}  ${option.description}`}/>
+                        </button>
+                    })
+                })}
+            </box>
+        </revealer>
+        <box
+            vertical={false}
+            className="row">
+            <label
+                className="labelLargeBold"
+                css={`margin-right: 20px;`}
+                label={selectedQualityPreset().as((value) => {
+                    return getQualityPresetIcon(value)
+                })}/>
+            <label
+                className="labelMediumBold"
+                halign={Gtk.Align.START}
+                hexpand={true}
+                truncate={true}
+                label={selectedQualityPreset()}/>
+            <button
+                className="iconButton"
+                label={qualityRevealed((revealed): string => {
+                    if (revealed) {
+                        return ""
+                    } else {
+                        return ""
+                    }
+                })}
+                onClicked={() => {
+                    qualityRevealed.set(!qualityRevealed.get())
+                }}/>
+        </box>
+        <revealer
+            className="rowRevealer"
+            revealChild={qualityRevealed()}
+            transitionDuration={200}
+            transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
+            <box
+                vertical={true}>
+                {h264QualityPresets.map((value) => {
+                    return <button
+                        hexpand={true}
+                        className="iconButton"
+                        onClicked={() => {
+                            selectedQualityPreset.set(value)
+                            qualityRevealed.set(false)
+                        }}>
+                        <label
+                            halign={Gtk.Align.START}
+                            className="labelSmall"
+                            truncate={true}
+                            label={`${getQualityPresetIcon(value)}  ${value}`}/>
+                    </button>
+                })}
+            </box>
+        </revealer>
+        <box
+            vertical={false}
+            css={`margin-top: 8px;`}>
+            <ScreenshotButton
+                icon={""}
+                label={"All"}
+                onClicked={() => {
+                    isRecording.set(true)
+                    const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
+                    const path = `${screenRecordingDir}/${time}_record.mp4`
+                    const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
+                    const command = `wf-recorder --file=${path} ${audioParam} -p preset=${selectedQualityPreset.get()} -c libx264`
+                    print(command)
+                    App.toggle_window(ScreenshotWindowName)
+                    execAsync(
+                        [
+                            "bash",
+                            "-c",
+                            `
+                                ${command}
+                                `
+                        ]
+                    ).catch((error) => {
+                        print(error)
+                    }).finally(() => {
+                        isRecording.set(false)
+                        showScreenRecordingNotification(path)
+                    })
+                }}/>
+            <ScreenshotButton
+                icon={"󰹑"}
+                label={"Monitor"}
+                onClicked={() => {
+                    isRecording.set(true)
+                    const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
+                    const path = `${screenRecordingDir}/${time}_record.mp4`
+                    const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
+                    const command = `wf-recorder --file=${path} -g "$(slurp -o)" ${audioParam} -p preset=${selectedQualityPreset.get()} -c libx264`
+                    print(command)
+                    App.toggle_window(ScreenshotWindowName)
+                    execAsync(
+                        [
+                            "bash",
+                            "-c",
+                            `
+                                ${command}
+                                `
+                        ]
+                    ).catch((error) => {
+                        print(error)
+                    }).finally(() => {
+                        isRecording.set(false)
+                        showScreenRecordingNotification(path)
+                    })
+                }}/>
+            <ScreenshotButton
+                icon={""}
+                label={"Area"}
+                onClicked={() => {
+                    isRecording.set(true)
+                    const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
+                    const path = `${screenRecordingDir}/${time}_record.mp4`
+                    const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
+                    const command = `wf-recorder --file=${path} -g "$(slurp)" ${audioParam} -p preset=${selectedQualityPreset.get()} -c libx264`
+                    print(command)
+                    App.toggle_window(ScreenshotWindowName)
+                    execAsync(
+                        [
+                            "bash",
+                            "-c",
+                            `
+                                ${command}
+                                `
+                        ]
+                    ).catch((error) => {
+                        print(error)
+                    }).finally(() => {
+                        isRecording.set(false)
+                        showScreenRecordingNotification(path)
+                    })
+                }}/>
+        </box>
+    </box>
+}
+
+export default function () {
+    setDirectories()
+    updateAudioOptions()
 
     return <window
         monitor={0}
@@ -186,244 +513,9 @@ export default function () {
         <box
             vertical={true}
             css="padding: 20px;">
-            <label
-                className="labelLargeBold"
-                css={`margin-bottom: 8px;`}
-                label="Screenshot"/>
-            <box
-                vertical={false}>
-                <ScreenshotButton
-                    icon={""}
-                    label={"All"}
-                    onClicked={() => {
-                        App.toggle_window(ScreenshotWindowName)
-                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
-                        const path = `${screenshotDir}/${time}_screenshot.png`
-                        execAsync(
-                            [
-                                "bash",
-                                "-c",
-                                `
-                                sleep 0.7
-                                grim ${path}
-                                play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
-                                `
-                            ]
-                        ).catch((error) => {
-                            print(error)
-                        }).finally(() => {
-                            showScreenshotNotification(path)
-                        })
-                    }}/>
-                <ScreenshotButton
-                    icon={"󰹑"}
-                    label={"Monitor"}
-                    onClicked={() => {
-                        App.toggle_window(ScreenshotWindowName)
-                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
-                        const path = `${screenshotDir}/${time}_screenshot.png`
-                        execAsync(
-                            [
-                                "bash",
-                                "-c",
-                                `
-                                grim -g "$(slurp -o)" ${path}
-                                play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
-                                `
-                            ]
-                        ).catch((error) => {
-                            print(error)
-                        }).finally(() => {
-                            showScreenshotNotification(path)
-                        })
-                    }}/>
-                <ScreenshotButton
-                    icon={""}
-                    label={"Area"}
-                    onClicked={() => {
-                        App.toggle_window(ScreenshotWindowName)
-                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
-                        const path = `${screenshotDir}/${time}_screenshot.png`
-                        execAsync(
-                            [
-                                "bash",
-                                "-c",
-                                `
-                                grim -g "$(slurp)" ${path}
-                                play $HOME/.config/hypr/assets/sounds/camera-shutter.ogg
-                                `
-                            ]
-                        ).catch((error) => {
-                            print(error)
-                        }).finally(() => {
-                            showScreenshotNotification(path)
-                        })
-                    }}/>
-            </box>
+            <ScreenShots/>
             <Divider css={`margin: 20px 0 10px 0;`}/>
-            <label
-                className="labelLargeBold"
-                css={`margin-bottom: 8px;`}
-                label="Screen Record"/>
-            <box
-                vertical={false}
-                className="row">
-                <label
-                    className="labelLargeBold"
-                    css={`margin-right: 20px;`}
-                    label={selectedAudio().as((value) => {
-                        if (value === null) {
-                            return "󰝟"
-                        } else {
-                            return value.isMonitor ? "󰕾" : ""
-                        }
-                    })}/>
-                <label
-                    className="labelMediumBold"
-                    halign={Gtk.Align.START}
-                    hexpand={true}
-                    truncate={true}
-                    label={selectedAudio().as((value) => {
-                        if (value === null) {
-                            return "No Audio"
-                        } else {
-                            return value.description
-                        }
-                    })}/>
-                <button
-                    className="iconButton"
-                    label={audioRevealed((revealed): string => {
-                        if (revealed) {
-                            return ""
-                        } else {
-                            return ""
-                        }
-                    })}
-                    onClicked={() => {
-                        audioRevealed.set(!audioRevealed.get())
-                    }}/>
-            </box>
-            <revealer
-                className="rowRevealer"
-                revealChild={audioRevealed()}
-                transitionDuration={200}
-                transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
-                <box
-                    vertical={true}>
-                    <button
-                        hexpand={true}
-                        className="iconButton"
-                        onClicked={() => {
-                            selectedAudio.set(null)
-                            audioRevealed.set(false)
-                        }}>
-                        <label
-                            halign={Gtk.Align.START}
-                            className="labelSmall"
-                            truncate={true}
-                            label={`󰝟  No Audio`}/>
-                    </button>
-                    {audioOptions().as((options) => {
-                        return options.map((option) => {
-                            return <button
-                                hexpand={true}
-                                className="iconButton"
-                                onClicked={() => {
-                                    selectedAudio.set(option)
-                                    audioRevealed.set(false)
-                                }}>
-                                <label
-                                    halign={Gtk.Align.START}
-                                    className="labelSmall"
-                                    truncate={true}
-                                    label={`${option.isMonitor ? "󰕾" : ""}  ${option.description}`}/>
-                            </button>
-                        })
-                    })}
-                </box>
-            </revealer>
-            <box
-                vertical={false}
-                css={`margin-top: 8px;`}>
-                <ScreenshotButton
-                    icon={""}
-                    label={"All"}
-                    onClicked={() => {
-                        isRecording.set(true)
-                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
-                        const path = `${screenRecordingDir}/${time}_record.mkv`
-                        const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
-                        const command = `wf-recorder --file=${path} ${audioParam}`
-                        print(command)
-                        App.toggle_window(ScreenshotWindowName)
-                        execAsync(
-                            [
-                                "bash",
-                                "-c",
-                                `
-                                ${command}
-                                `
-                            ]
-                        ).catch((error) => {
-                            print(error)
-                        }).finally(() => {
-                            isRecording.set(false)
-                            showScreenRecordingNotification(path)
-                        })
-                    }}/>
-                <ScreenshotButton
-                    icon={"󰹑"}
-                    label={"Monitor"}
-                    onClicked={() => {
-                        isRecording.set(true)
-                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
-                        const path = `${screenRecordingDir}/${time}_record.mkv`
-                        const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
-                        const command = `wf-recorder --file=${path} -g "$(slurp -o)" ${audioParam}`
-                        print(command)
-                        App.toggle_window(ScreenshotWindowName)
-                        execAsync(
-                            [
-                                "bash",
-                                "-c",
-                                `
-                                ${command}
-                                `
-                            ]
-                        ).catch((error) => {
-                            print(error)
-                        }).finally(() => {
-                            isRecording.set(false)
-                            showScreenRecordingNotification(path)
-                        })
-                    }}/>
-                <ScreenshotButton
-                    icon={""}
-                    label={"Area"}
-                    onClicked={() => {
-                        isRecording.set(true)
-                        const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
-                        const path = `${screenRecordingDir}/${time}_record.mkv`
-                        const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
-                        const command = `wf-recorder --file=${path} -g "$(slurp)" ${audioParam}`
-                        print(command)
-                        App.toggle_window(ScreenshotWindowName)
-                        execAsync(
-                            [
-                                "bash",
-                                "-c",
-                                `
-                                ${command}
-                                `
-                            ]
-                        ).catch((error) => {
-                            print(error)
-                        }).finally(() => {
-                            isRecording.set(false)
-                            showScreenRecordingNotification(path)
-                        })
-                    }}/>
-            </box>
+            <ScreenRecording/>
         </box>
     </window>
 }
