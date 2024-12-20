@@ -361,7 +361,9 @@ function ScreenRecording() {
                 halign={Gtk.Align.START}
                 hexpand={true}
                 truncate={true}
-                label={selectedQualityPreset()}/>
+                label={selectedQualityPreset().as((value) => {
+                    return `${value.charAt(0).toUpperCase() + value.slice(1)} bitrate`
+                })}/>
             <button
                 className="iconButton"
                 label={qualityRevealed((revealed): string => {
@@ -394,7 +396,7 @@ function ScreenRecording() {
                             halign={Gtk.Align.START}
                             className="labelSmall"
                             truncate={true}
-                            label={`${getQualityPresetIcon(value)}  ${value}`}/>
+                            label={`${getQualityPresetIcon(value)}  ${value.charAt(0).toUpperCase() + value.slice(1)}`}/>
                     </button>
                 })}
             </box>
