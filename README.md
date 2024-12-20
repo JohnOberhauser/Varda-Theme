@@ -8,15 +8,11 @@ Some configs will have files ignored by git related to the color scheme / theme.
 are located in `./setup/themes`.  I use a script to easily swap out themes.
 The script is `./setup/scripts/setTheme.sh`
 
-# Theme Showcase
+# Theme Showcase 
 
 ## Varda
 
-![screenshot](.screenshots/varda2.png)
-
-![screenshot](.screenshots/varda1.png)
-
-![screenshot](.screenshots/varda3.png)
+![screenshot](.screenshots/varda.png)
 
 ### Color Palette
 
@@ -42,11 +38,7 @@ This color palette is home-grown
 
 ## Everforest
 
-![screenshot](.screenshots/everforest2.png)
-
-![screenshot](.screenshots/everforest1.png)
-
-![screenshot](.screenshots/everforest3.png)
+![screenshot](.screenshots/everforest.png)
 
 ### Color Palette
 
@@ -72,11 +64,7 @@ This color palette is from [sainnhe](https://github.com/sainnhe/everforest?tab=r
 
 ## Nord
 
-![screenshot](.screenshots/nord2.png)
-
-![screenshot](.screenshots/nord1.png)
-
-![screenshot](.screenshots/nord3.png)
+![screenshot](.screenshots/nord.png)
 
 ### Color Palette
 
@@ -112,11 +100,7 @@ This color palette is from [nord theme](https://www.nordtheme.com/)
 
 ## Rose Pine
 
-![screenshot](.screenshots/rosepine1.png)
-
-![screenshot](.screenshots/rosepine2.png)
-
-![screenshot](.screenshots/rosepine3.png)
+![screenshot](.screenshots/rosepine.png)
 
 ### Color Palette
 
