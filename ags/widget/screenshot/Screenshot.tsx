@@ -13,8 +13,23 @@ type AudioSource = {
     isMonitor: boolean;
 };
 
+type Codec = {
+    display: string;
+    lib: string;
+}
+
 const audioOptions = Variable<AudioSource[]>([])
-const h264QualityPresets = [
+const codecs: Codec[] = [
+    {
+        display: "H264",
+        lib: "libx264"
+    },
+    {
+        display: "H265",
+        lib: "libx265"
+    },
+]
+const h264EncodingPresets = [
     "ultrafast",
     "superfast",
     "veryfast",
@@ -25,17 +40,38 @@ const h264QualityPresets = [
     "slower",
     "veryslow"
 ]
+const crfQualityValues = [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+]
 
 let screenshotDir = ""
 let screenRecordingDir = ""
 
-function getQualityPresetIcon(value: string) {
+function getEncodingPresetIcon(value: string) {
     if (value.includes("fast")) {
         return "󰓅"
     } else if (value.includes("medium")) {
         return "󰾅"
     } else {
         return "󰾆"
+    }
+}
+
+function getCrfQualityIcon(value: number) {
+    if (value > 23) {
+        return "󰨌"
+    } else if (value > 20) {
+        return "󰨍"
+    } else {
+        return "󰐵"
     }
 }
 
@@ -247,17 +283,27 @@ function ScreenShots() {
 
 function ScreenRecording() {
     const selectedAudio = Variable<AudioSource | null>(null)
+    const selectedCodec = Variable(codecs[0])
+    const selectedEncodingPreset = Variable("medium")
+    const selectedCrfQuality = Variable(20)
+
     const audioRevealed = Variable(false)
-    const selectedQualityPreset = Variable("medium")
-    const qualityRevealed = Variable(false)
+    const codecRevealed = Variable(false)
+    const encodingRevealed = Variable(false)
+    const crfRevealed = Variable(false)
 
     setTimeout(() => {
         bind(App.get_window(ScreenshotWindowName)!, "visible").subscribe((visible) => {
             if (!visible) {
                 selectedAudio.set(null)
+                selectedCodec.set(codecs[0])
+                selectedEncodingPreset.set("medium")
+                selectedCrfQuality.set(20)
+
                 audioRevealed.set(false)
-                selectedQualityPreset.set("medium")
-                qualityRevealed.set(false)
+                codecRevealed.set(false)
+                encodingRevealed.set(false)
+                crfRevealed.set(false)
             } else {
                 updateAudioOptions()
             }
@@ -353,20 +399,18 @@ function ScreenRecording() {
             <label
                 className="labelLargeBold"
                 css={`margin-right: 20px;`}
-                label={selectedQualityPreset().as((value) => {
-                    return getQualityPresetIcon(value)
-                })}/>
+                label="󰕧"/>
             <label
                 className="labelMediumBold"
                 halign={Gtk.Align.START}
                 hexpand={true}
                 truncate={true}
-                label={selectedQualityPreset().as((value) => {
-                    return `${value.charAt(0).toUpperCase() + value.slice(1)} bitrate`
+                label={selectedCodec().as((value) => {
+                    return `${value.display} codec`
                 })}/>
             <button
                 className="iconButton"
-                label={qualityRevealed((revealed): string => {
+                label={codecRevealed((revealed): string => {
                     if (revealed) {
                         return ""
                     } else {
@@ -374,29 +418,137 @@ function ScreenRecording() {
                     }
                 })}
                 onClicked={() => {
-                    qualityRevealed.set(!qualityRevealed.get())
+                    codecRevealed.set(!codecRevealed.get())
                 }}/>
         </box>
         <revealer
             className="rowRevealer"
-            revealChild={qualityRevealed()}
+            revealChild={codecRevealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
             <box
                 vertical={true}>
-                {h264QualityPresets.map((value) => {
+                {codecs.map((value) => {
                     return <button
                         hexpand={true}
                         className="iconButton"
                         onClicked={() => {
-                            selectedQualityPreset.set(value)
-                            qualityRevealed.set(false)
+                            selectedCodec.set(value)
+                            codecRevealed.set(false)
                         }}>
                         <label
                             halign={Gtk.Align.START}
                             className="labelSmall"
                             truncate={true}
-                            label={`${getQualityPresetIcon(value)}  ${value.charAt(0).toUpperCase() + value.slice(1)}`}/>
+                            label={`󰕧  ${value.display}`}/>
+                    </button>
+                })}
+            </box>
+        </revealer>
+        <box
+            vertical={false}
+            className="row">
+            <label
+                className="labelLargeBold"
+                css={`margin-right: 20px;`}
+                label={selectedEncodingPreset().as((value) => {
+                    return getEncodingPresetIcon(value)
+                })}/>
+            <label
+                className="labelMediumBold"
+                halign={Gtk.Align.START}
+                hexpand={true}
+                truncate={true}
+                label={selectedEncodingPreset().as((value) => {
+                    return `${value.charAt(0).toUpperCase() + value.slice(1)} encoding speed`
+                })}/>
+            <button
+                className="iconButton"
+                label={encodingRevealed((revealed): string => {
+                    if (revealed) {
+                        return ""
+                    } else {
+                        return ""
+                    }
+                })}
+                onClicked={() => {
+                    encodingRevealed.set(!encodingRevealed.get())
+                }}/>
+        </box>
+        <revealer
+            className="rowRevealer"
+            revealChild={encodingRevealed()}
+            transitionDuration={200}
+            transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
+            <box
+                vertical={true}>
+                {h264EncodingPresets.map((value) => {
+                    return <button
+                        hexpand={true}
+                        className="iconButton"
+                        onClicked={() => {
+                            selectedEncodingPreset.set(value)
+                            encodingRevealed.set(false)
+                        }}>
+                        <label
+                            halign={Gtk.Align.START}
+                            className="labelSmall"
+                            truncate={true}
+                            label={`${getEncodingPresetIcon(value)}  ${value.charAt(0).toUpperCase() + value.slice(1)}`}/>
+                    </button>
+                })}
+            </box>
+        </revealer>
+        <box
+            vertical={false}
+            className="row">
+            <label
+                className="labelLargeBold"
+                css={`margin-right: 20px;`}
+                label={selectedCrfQuality().as((value) => {
+                    return getCrfQualityIcon(value)
+                })}/>
+            <label
+                className="labelMediumBold"
+                halign={Gtk.Align.START}
+                hexpand={true}
+                truncate={true}
+                label={selectedCrfQuality().as((value) => {
+                    return `${value} CRF`
+                })}/>
+            <button
+                className="iconButton"
+                label={crfRevealed((revealed): string => {
+                    if (revealed) {
+                        return ""
+                    } else {
+                        return ""
+                    }
+                })}
+                onClicked={() => {
+                    crfRevealed.set(!crfRevealed.get())
+                }}/>
+        </box>
+        <revealer
+            className="rowRevealer"
+            revealChild={crfRevealed()}
+            transitionDuration={200}
+            transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
+            <box
+                vertical={true}>
+                {crfQualityValues.map((value) => {
+                    return <button
+                        hexpand={true}
+                        className="iconButton"
+                        onClicked={() => {
+                            selectedCrfQuality.set(value)
+                            crfRevealed.set(false)
+                        }}>
+                        <label
+                            halign={Gtk.Align.START}
+                            className="labelSmall"
+                            truncate={true}
+                            label={`${getCrfQualityIcon(value)}  ${value}`}/>
                     </button>
                 })}
             </box>
@@ -412,7 +564,7 @@ function ScreenRecording() {
                     const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
                     const path = `${screenRecordingDir}/${time}_record.mp4`
                     const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
-                    const command = `wf-recorder --file=${path} ${audioParam} -p preset=${selectedQualityPreset.get()} -c libx264`
+                    const command = `wf-recorder --file=${path} ${audioParam} -p preset=${selectedEncodingPreset.get()} -p crf=${selectedCrfQuality.get()} -c ${selectedCodec.get().lib}`
                     print(command)
                     App.toggle_window(ScreenshotWindowName)
                     execAsync(
@@ -420,8 +572,8 @@ function ScreenRecording() {
                             "bash",
                             "-c",
                             `
-                                ${command}
-                                `
+                            ${command}
+                            `
                         ]
                     ).catch((error) => {
                         print(error)
@@ -438,7 +590,7 @@ function ScreenRecording() {
                     const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
                     const path = `${screenRecordingDir}/${time}_record.mp4`
                     const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
-                    const command = `wf-recorder --file=${path} -g "$(slurp -o)" ${audioParam} -p preset=${selectedQualityPreset.get()} -c libx264`
+                    const command = `wf-recorder --file=${path} -g "$(slurp -o)" ${audioParam} -p preset=${selectedEncodingPreset.get()} -p crf=${selectedCrfQuality.get()} -c ${selectedCodec.get().lib}`
                     print(command)
                     App.toggle_window(ScreenshotWindowName)
                     execAsync(
@@ -446,8 +598,8 @@ function ScreenRecording() {
                             "bash",
                             "-c",
                             `
-                                ${command}
-                                `
+                            ${command}
+                            `
                         ]
                     ).catch((error) => {
                         print(error)
@@ -464,7 +616,7 @@ function ScreenRecording() {
                     const time = GLib.DateTime.new_now_local().format("%Y_%m_%d_%H_%M_%S")!
                     const path = `${screenRecordingDir}/${time}_record.mp4`
                     const audioParam = selectedAudio.get() !== null ? `--audio=${selectedAudio.get()!.name}` : ""
-                    const command = `wf-recorder --file=${path} -g "$(slurp)" ${audioParam} -p preset=${selectedQualityPreset.get()} -c libx264`
+                    const command = `wf-recorder --file=${path} -g "$(slurp)" ${audioParam} -p preset=${selectedEncodingPreset.get()} -p crf=${selectedCrfQuality.get()} -c ${selectedCodec.get().lib}`
                     print(command)
                     App.toggle_window(ScreenshotWindowName)
                     execAsync(
@@ -472,8 +624,8 @@ function ScreenRecording() {
                             "bash",
                             "-c",
                             `
-                                ${command}
-                                `
+                            ${command}
+                            `
                         ]
                     ).catch((error) => {
                         print(error)
