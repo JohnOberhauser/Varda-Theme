@@ -147,8 +147,8 @@ export function BluetoothButton({css}: { css: string }) {
         css={css}
         className="iconButton"
         label="󰂯"
-        visible={bind(bluetooth, "adapter").as((adapter) => {
-            return adapter != null
+        visible={bind(bluetooth, "isPowered").as((isPowered) => {
+            return isPowered
         })}/>
 }
 

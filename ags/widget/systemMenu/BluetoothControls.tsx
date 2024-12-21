@@ -1,6 +1,5 @@
 import {bind, Variable} from "astal"
 import {Gtk, App} from "astal/gtk3"
-import {execAsync} from "astal/process"
 import {SystemMenuWindowName} from "./SystemMenuWindow";
 import {getBluetoothIcon, getBluetoothName} from "../utils/bluetooth";
 import Bluetooth from "gi://AstalBluetooth";
@@ -24,6 +23,14 @@ function BluetoothDevices() {
                     bind(device, "connected"),
                     bind(device, "connecting")
                 ])
+
+                setTimeout(() => {
+                    bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
+                        if (!visible) {
+                            buttonsRevealed.set(false)
+                        }
+                    })
+                }, 1_000)
 
                 return <box
                     vertical={true}>
@@ -122,62 +129,67 @@ export default function () {
         })
     }, 1_000)
 
-    return <box
-        vertical={true}>
-        <box
-            vertical={false}
-            className="row">
-            <label
-                className="systemMenuIconButton"
-                label={getBluetoothIcon()}/>
-            <label
-                className="labelMediumBold"
-                halign={Gtk.Align.START}
-                hexpand={true}
-                label={getBluetoothName()}/>
-            <button
-                className="iconButton"
-                label={bluetoothChooserRevealed((revealed): string => {
-                    if (revealed) {
-                        return ""
-                    } else {
-                        return ""
-                    }
-                })}
-                onClicked={() => {
-                    bluetoothChooserRevealed.set(!bluetoothChooserRevealed.get())
-                }}/>
-        </box>
-        <revealer
-            className="rowRevealer"
-            revealChild={bluetoothChooserRevealed()}
-            transitionDuration={200}
-            transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
-            <box
+    return <box>
+        {bind(bluetooth, "isPowered").as((isPowered) => {
+            if (!isPowered) return <box/>
+            return <box
                 vertical={true}>
                 <box
-                    vertical={false}>
+                    vertical={false}
+                    className="row">
                     <label
+                        className="systemMenuIconButton"
+                        label={getBluetoothIcon()}/>
+                    <label
+                        className="labelMediumBold"
                         halign={Gtk.Align.START}
                         hexpand={true}
-                        label="Devices"
-                        className="labelLargeBold"/>
+                        label={getBluetoothName()}/>
                     <button
-                        className="transparentButton"
-                        css={`padding-left: 8px; padding-right: 8px;`}
-                        label={bind(bluetooth.adapter, "discovering").as((discovering) => {
-                            return discovering ? "Stop scanning" : "Scan"
+                        className="iconButton"
+                        label={bluetoothChooserRevealed((revealed): string => {
+                            if (revealed) {
+                                return ""
+                            } else {
+                                return ""
+                            }
                         })}
                         onClicked={() => {
-                            if (bluetooth.adapter.discovering) {
-                                bluetooth.adapter.stop_discovery()
-                            } else {
-                                bluetooth.adapter.start_discovery()
-                            }
+                            bluetoothChooserRevealed.set(!bluetoothChooserRevealed.get())
                         }}/>
                 </box>
-                <BluetoothDevices/>
+                <revealer
+                    className="rowRevealer"
+                    revealChild={bluetoothChooserRevealed()}
+                    transitionDuration={200}
+                    transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
+                    <box
+                        vertical={true}>
+                        <box
+                            vertical={false}>
+                            <label
+                                halign={Gtk.Align.START}
+                                hexpand={true}
+                                label="Devices"
+                                className="labelLargeBold"/>
+                            <button
+                                className="transparentButton"
+                                css={`padding-left: 8px; padding-right: 8px;`}
+                                label={bind(bluetooth.adapter, "discovering").as((discovering) => {
+                                    return discovering ? "Stop scanning" : "Scan"
+                                })}
+                                onClicked={() => {
+                                    if (bluetooth.adapter.discovering) {
+                                        bluetooth.adapter.stop_discovery()
+                                    } else {
+                                        bluetooth.adapter.start_discovery()
+                                    }
+                                }}/>
+                        </box>
+                        <BluetoothDevices/>
+                    </box>
+                </revealer>
             </box>
-        </revealer>
+        })}
     </box>
 }
