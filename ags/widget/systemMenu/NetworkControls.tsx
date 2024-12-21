@@ -433,6 +433,7 @@ function VpnConnections() {
                     label="VPN Connections"/>
                 {connectionsValue.map((connection) => {
                     const buttonsRevealed = Variable(false)
+                    const isConnecting = Variable(false)
 
                     setTimeout(() => {
                         bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
@@ -466,9 +467,18 @@ function VpnConnections() {
                                 <button
                                     hexpand={true}
                                     className="primaryButton"
-                                    label="Connect"
+                                    label={isConnecting().as((connecting) => {
+                                        if (connecting) {
+                                            return "Connecting"
+                                        } else {
+                                            return "Connect"
+                                        }
+                                    })}
                                     onClicked={() => {
-                                        connectVpn(connection)
+                                        if (!isConnecting.get()) {
+                                            isConnecting.set(true)
+                                            connectVpn(connection)
+                                        }
                                     }}/>
                                 <button
                                     hexpand={true}
