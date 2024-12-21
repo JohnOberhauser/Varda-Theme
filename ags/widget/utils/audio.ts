@@ -3,20 +3,20 @@ import Wp from "gi://AstalWp"
 export function getVolumeIcon(speaker?: Wp.Endpoint) {
     let volume = speaker?.volume
     let muted = speaker?.mute
-    let speakerDescription = speaker?.description
-    if (volume == null || speakerDescription == null) return ""
+    let speakerIcon = speaker?.icon
+    if (volume == null || speakerIcon == null) return ""
 
-    if ((speakerDescription.indexOf("Headset") !== -1)) {
-        if (volume === 0 || muted) {
-            return "󰟎"
-        } else {
-            return "󰋋"
-        }
-    } else if (speakerDescription.indexOf("Buds") !== -1 || speakerDescription.indexOf("Jabra") !== -1) {
+    if (speakerIcon.includes("bluetooth")) {
         if (volume === 0 || muted) {
             return "󰟎"
         } else {
             return "󰥰"
+        }
+    } else if (speakerIcon.includes("headset")) {
+        if (volume === 0 || muted) {
+            return "󰟎"
+        } else {
+            return "󰋋"
         }
     } else {
         if (volume === 0 || muted) {
@@ -32,15 +32,21 @@ export function getVolumeIcon(speaker?: Wp.Endpoint) {
 }
 
 export function getMicrophoneIcon(mic?: Wp.Endpoint): string {
-    let micDescription = mic?.description
     let volume = mic?.volume
     let muted = mic?.mute
+    let micIcon = mic?.icon
 
-    if (micDescription != null && (micDescription.indexOf("Buds") !== -1 || micDescription.indexOf("Jabra") !== -1)) {
+    if (micIcon != null && micIcon.includes("bluetooth")) {
         if (volume === 0 || muted) {
             return "󰟎"
         } else {
             return "󰥰"
+        }
+    } else if (micIcon != null && micIcon.includes("headset")) {
+        if (volume === 0 || muted) {
+            return "󰋐"
+        } else {
+            return "󰋎"
         }
     } else {
         if (volume === 0 || muted) {

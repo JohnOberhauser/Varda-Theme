@@ -68,7 +68,7 @@ export function getNetworkIconBinding() {
 }
 
 export function getNetworkIcon(network: AstalNetwork.Network) {
-    const { connectivity, primary, wifi, wired } = network;
+    const { connectivity, wifi, wired } = network;
 
     // Handle wired connection
     if (wired !== null) {
@@ -81,7 +81,7 @@ export function getNetworkIcon(network: AstalNetwork.Network) {
 
     // Handle Wi-Fi connection
     if (wifi !== null) {
-        const { ssid, strength, internet, enabled } = wifi;
+        const { strength, internet, enabled } = wifi;
 
         // If Wi-Fi is disabled or there is no connectivity
         if (!enabled || connectivity === AstalNetwork.Connectivity.NONE) {
