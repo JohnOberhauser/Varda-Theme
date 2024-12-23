@@ -26,14 +26,14 @@ export default function () {
             label=""
             onClicked={() => {
                 App.toggle_window(SystemMenuWindowName)
-                execAsync('bash -c "reboot"')
+                execAsync("systemctl reboot")
             }}/>
         <button
             className="systemMenuIconButton"
             label="⏻"
             onClicked={() => {
                 App.toggle_window(SystemMenuWindowName)
-                execAsync('bash -c "shutdown now"')
+                execAsync("systemctl poweroff")
             }}/>
     </box>
 }
