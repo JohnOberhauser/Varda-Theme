@@ -19,7 +19,7 @@ export default function () {
             label=""
             onClicked={() => {
                 App.toggle_window(SystemMenuWindowName)
-                execAsync('bash -c "loginctl lock-session"')
+                execAsync("uwsm app -- hyprlock")
             }}/>
         <button
             className="systemMenuIconButton"
