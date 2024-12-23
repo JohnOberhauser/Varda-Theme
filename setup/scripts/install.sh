@@ -5,10 +5,6 @@ git \
 vim \
 amd-ucode \
 ufw \
-hyprland \
-hyprlock \
-hypridle \
-hyprpaper \
 pipewire \
 networkmanager \
 network-manager-applet \
@@ -22,7 +18,6 @@ wireplumber \
 playerctl \
 slurp \
 grim \
-xdg-desktop-portal-hyprland \
 xdg-desktop-portal-gtk \
 pacman-contrib \
 polkit-gnome \

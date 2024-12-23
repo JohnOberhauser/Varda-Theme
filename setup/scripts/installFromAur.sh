@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yay -S aylurs-gtk-shell uwsm
+yay -S hyprland-meta-git aylurs-gtk-shell uwsm
