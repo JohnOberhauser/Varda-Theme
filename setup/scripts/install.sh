@@ -20,7 +20,6 @@ slurp \
 grim \
 xdg-desktop-portal-gtk \
 pacman-contrib \
-polkit-gnome \
 bc \
 socat \
 brightnessctl \
@@ -41,7 +40,7 @@ kitty \
 fastfetch \
 yazi \
 ffmpegthumbnailer \
-p7zip \
+7zip \
 jq \
 poppler \
 fd \
