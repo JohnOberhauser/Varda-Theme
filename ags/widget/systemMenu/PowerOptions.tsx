@@ -12,7 +12,7 @@ export default function () {
             label="󰍃"
             onClicked={() => {
                 App.toggle_window(SystemMenuWindowName)
-                execAsync("pkill Hyprland")
+                execAsync("uwsm stop")
             }}/>
         <button
             className="systemMenuIconButton"

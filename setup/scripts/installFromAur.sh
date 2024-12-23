@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yay aylurs-gtk-shell
+yay -S aylurs-gtk-shell uwsm

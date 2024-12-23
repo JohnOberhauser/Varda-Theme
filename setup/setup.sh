@@ -7,7 +7,6 @@
 ./scripts/installFromAur.sh
 ./scripts/foldersAndSymLinks.sh
 ./scripts/zshSetup.sh
-./scripts/waylandSession.sh
 ./scripts/startServices.sh
 ./scripts/setupCursor.sh
 ./scripts/setupYazi.sh

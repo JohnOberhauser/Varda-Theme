@@ -1,6 +1,7 @@
 import Apps from "gi://AstalApps"
 import { App, Astal, Gdk, Gtk } from "astal/gtk3"
 import { Variable, bind } from "astal"
+import {execAsync} from "astal/process"
 
 export const AppLauncherWindowName = "appLauncher"
 
@@ -8,11 +9,21 @@ function hide() {
     App.get_window(AppLauncherWindowName)!.hide()
 }
 
+function launchApp(app: Apps.Application) {
+    execAsync(`uwsm app -- ${app.entry}`)
+        .catch((error) => {
+            print(error)
+        })
+}
+
 function AppButton({ app, isSelected }: { app: Apps.Application, isSelected: boolean }) {
     return <button
         canFocus={false}
         className={isSelected ? "selectedAppButton" : "appButton"}
-        onClicked={() => { hide(); app.launch() }}>
+        onClicked={() => {
+            hide()
+            launchApp(app)
+        }}>
         <box>
             <box valign={Gtk.Align.CENTER} vertical={true}>
                 <label
@@ -65,7 +76,10 @@ export default function () {
     })
     const onEnter = () => {
         if (list.get().length > 0) {
-            list.get()?.[selectedIndex.get()].launch()
+            const app = list.get()?.[selectedIndex.get()]
+            if (app !== null) {
+                launchApp(app)
+            }
         }
         hide()
     }
