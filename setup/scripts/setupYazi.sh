@@ -24,7 +24,7 @@ systemctl --user restart xdg-desktop-portal.service
 
 # Setup xdg-mime default file manager
 # Needs to go in /usr/ because firefox won't use local user's .desktop files for some reason
-sudo cp $HOME/workspace/Varda-Theme/setup/yazi-kitty.sh /usr/bin/
+sudo cp $HOME/workspace/Varda-Theme/setup/yazi-kitty.sh /usr/local/bin/
 sudo cp $HOME/workspace/Varda-Theme/setup/yazi-kitty.desktop /usr/share/applications/
 
 xdg-mime default yazi-kitty.desktop inode/directory
