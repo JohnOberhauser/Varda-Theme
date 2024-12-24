@@ -155,14 +155,19 @@ function showNotification(
         "bash",
         "-c",
         `
-        ACTION="viewScreenshot"
+        ACTION_VIEW="viewScreenshot"
+        ACTION_OPEN_DIR="openDir"
         # Send a notification with an action to view the file
         notify-send "File saved at ${filePath}" \
             --app-name="${appName}" \
-            --action=$ACTION="View in Files" |
+            --action=$ACTION_VIEW="View" \
+            --action=$ACTION_OPEN_DIR="Show in Files" |
         while read -r action; do
-            if [[ "$action" == $ACTION ]]; then
+            if [[ "$action" == $ACTION_OPEN_DIR ]]; then
                 xdg-open "$(dirname "${filePath}")"
+            fi
+            if [[ "$action" == $ACTION_VIEW ]]; then
+                xdg-open ${filePath}
             fi
         done
     `
