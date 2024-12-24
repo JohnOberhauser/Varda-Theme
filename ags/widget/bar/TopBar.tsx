@@ -15,7 +15,7 @@ export default function () {
     let iconCss = ""
 
     return <window
-        className="window"
+        css={`background: transparent;`}
         monitor={0}
         exclusivity={Astal.Exclusivity.EXCLUSIVE}
         margin={5}
@@ -24,6 +24,7 @@ export default function () {
             | Astal.WindowAnchor.RIGHT}
         application={App}>
         <centerbox
+            className="window"
             css={`
                 padding: 2px;
                 min-height: 40px;
