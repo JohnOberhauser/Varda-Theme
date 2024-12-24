@@ -44,14 +44,13 @@ firefox_theme() {
   cp ./setup/themes/$1/firefox/chrome/* ./firefox/chrome/
   cp ./setup/themes/$1/firefox/startpage/* ./firefox/startpage/
 
+  # Dark reader
   colors_file="./setup/themes/$1/firefox/darkreader_colors"
   template_file="./firefox/startpage/darkreader/settings_template.json"
   output_file="./firefox/startpage/darkreader/settings.json"
-
   # Read the colors from the first file
   bg=$(grep '^bg:' "$colors_file" | cut -d':' -f2)
   fg=$(grep '^fg:' "$colors_file" | cut -d':' -f2)
-
   # Replace the placeholders in the second file
   sed -e "s/\${bg}/$bg/g" -e "s/\${fg}/$fg/g" "$template_file" > "$output_file"
 }

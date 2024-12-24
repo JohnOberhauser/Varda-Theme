@@ -19,14 +19,13 @@
 # where username and password are protonvpn openvpn credentials
 
 # Need to set fonts in firefox, intellij
+# edit firefox configs:
+# xpinstall.signatures.required = false
 #
 # setup ufw
 #
 # config tuigreet
 # hyprland wrapper setup in tuigreet
-#
-# edit firefox configs
-#
 #
 # remove extra packages from archinstall
 # wofi, dolphin, sddm (make sure you set up tuigreet first)
