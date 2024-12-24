@@ -51,7 +51,7 @@ const bookmarks = [
   {"id":"njYk5XF49Zdf8g3o","label":"Social","bookmarks":[
       {"id":"PeIbQBjpA41kjGD6","label":"Sh","url":"https://reddit.com/"},
       {"id":"PeIbQBjpA41kjGD6","label":"Foss","url":"https://fosstodon.org/home"},
-      {"id":"fgOAsCWGRNHCRZQR","label":"G","url":"https://boards.4channel.org/g/catalog"},
+      {"id":"fgOAsCWGRNHCRZQR","label":"Discord","url":"https://discord.com/app"},
       {"id":"PeIbQBjpA41kjGD6","label":"Bsky","url":"https://bsky.app/"},
     ]
   },
