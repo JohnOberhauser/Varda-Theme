@@ -667,13 +667,12 @@ export default function () {
         setup={(self) => {
             window = self
         }}>
-        <centerbox
-            vertical={true}>
-            <box/>
+        <box
+            vertical={true}
+            css={`padding: 2px`}>
             <box
-                vertical={true}
-                valign={Gtk.Align.CENTER}
-                css="padding: 20px;"
+                vexpand={true}/>
+            <box
                 setup={(self) => {
                     setTimeout(() => {
                         bind(window, "hasToplevelFocus").subscribe((hasFocus) => {
@@ -685,11 +684,22 @@ export default function () {
                         })
                     }, 1_000)
                 }}>
-                <ScreenShots/>
-                <Divider css={`margin: 20px 0 10px 0;`}/>
-                <ScreenRecording/>
+                <scrollable
+                    widthRequest={430}
+                    className="scrollWindow"
+                    vscroll={Gtk.PolicyType.AUTOMATIC}
+                    propagateNaturalHeight={true}>
+                    <box
+                        vertical={true}
+                        css="padding: 20px;">
+                        <ScreenShots/>
+                        <Divider css={`margin: 20px 0 10px 0;`}/>
+                        <ScreenRecording/>
+                    </box>
+                </scrollable>
             </box>
-            <box/>
-        </centerbox>
+            <box
+                vexpand={true}/>
+        </box>
     </window>
 }
