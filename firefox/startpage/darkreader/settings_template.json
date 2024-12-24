@@ -34,7 +34,8 @@
         "bsky.app",
         "www.twitch.tv",
         "discord.com",
-        "open.spotify.com"
+        "open.spotify.com",
+        "reddit.com"
     ],
     "disabledFor": [],
     "changeBrowserTheme": false,
