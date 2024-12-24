@@ -39,7 +39,7 @@
     ],
     "disabledFor": [],
     "changeBrowserTheme": false,
-    "syncSettings": true,
+    "syncSettings": false,
     "syncSitesFixes": false,
     "automation": {
         "enabled": false,
