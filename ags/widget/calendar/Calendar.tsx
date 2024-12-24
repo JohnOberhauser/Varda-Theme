@@ -1,6 +1,6 @@
 import GObject from "gi://GObject"
 import {App, Astal, astalify, ConstructProps, Gtk, Gdk} from "astal/gtk3"
-import {bind} from "astal"
+import {bind, GLib, Variable} from "astal"
 
 export const CalendarWindowName = "calendarWindow"
 
@@ -19,6 +19,9 @@ class CalendarWidget extends astalify(Gtk.Calendar) {
 }
 
 export default function (anchor: Astal.WindowAnchor) {
+    const time = Variable<GLib.DateTime>(GLib.DateTime.new_now_local())
+        .poll(1000, () => GLib.DateTime.new_now_local())
+
     return <window
         monitor={0}
         name={CalendarWindowName}
@@ -43,7 +46,19 @@ export default function (anchor: Astal.WindowAnchor) {
             })
         }}>
         <box
-            css="padding: 20px;">
+            css="padding: 20px;"
+            vertical={true}>
+            <label
+                className="labelMedium"
+                label={time().as((t) => {
+                    return t.format("%A")!
+                })}/>
+            <label
+                className="labelMedium"
+                label={time().as((t) => {
+                    return t.format("%B %-d, %Y")!
+                })}/>
+            <box css={`margin-top: 12px;`}/>
             <CalendarWidget
                 className="calendar"/>
         </box>
