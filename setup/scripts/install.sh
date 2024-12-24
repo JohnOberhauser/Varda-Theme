@@ -9,6 +9,7 @@ pipewire \
 networkmanager \
 network-manager-applet \
 greetd \
+greetd-tuigreet \
 flatpak \
 base-devel \
 bluez \
@@ -31,7 +32,6 @@ upower \
 gnome-bluetooth-3.0 \
 zsh \
 fuse2 \
-greetd-tuigreet \
 fbset \
 qt5-wayland \
 qt6-wayland \

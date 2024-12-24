@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+build() {
+    # configuration file is required or we will do nothing
+    test -r /etc/vtrgb || return
+ 
+    add_file `readlink -e /etc/vtrgb` /etc/vtrgb
+    add_binary setvtrgb
+    add_systemd_unit "setvtrgb.service"
+    add_symlink "/usr/lib/systemd/system/initrd.target.wants/setvtrgb.service" "setvtrgb.service"
+}
+
+
+help() {
+    cat <<HELPEOF
+    This hook calls the setvtrgb program to apply the currently configured
+    color scheme during the early boot process. It uses /etc/vtrgb as its
+    configuration file.
+HELPEOF
+}
+
+
+# vim: set ft=sh ts=4 sw=4 et:

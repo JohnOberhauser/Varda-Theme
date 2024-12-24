@@ -1,17 +1,4 @@
-### Installing greetd and tuigreet
-
-install the packages
-greetd
-greetd-tuigreet
-
-edit /etc/greetd/config.toml
-so that it uses tuigreet
-
-enable greetd:
-sudo systemctl enable --now greetd
-
-if you have another greeter set up, you will need to disable that first.  i.e. for gdm -> sudo systemctl disable gdm
-
+#### These steps are done in ../setup/scripts/setupTuigreet.sh
 
 ### Setting virtual terminal colors in the early boot process
 
@@ -57,27 +44,3 @@ Make sure `plymouth` is installed
 #### Step 2
 edit /etc/mkinitcpio.conf
 add `plymouth` to the `HOOKS` list.  Place it right before `encrypt`.
-
-
-#### OLD - wrong way to set resolution
-You should use the above steps, enabling kms for ensuring the native resolution is used.
-Keeping this documentation in just in case I want to reference it for something else in the future.
-
-#### Step 1
-Add an FB mode in `/etc/fb.modes` like so:
-
-```
-mode "ultrawide"
-    geometry 5120 1440 5120 1440 32
-    timings 0 0 0 0 0 0 0
-endmode
-```
-
-#### Step 2
-Copy rc.local to `/etc/`
-
-#### Step 3
-Make sure `rc-local.service` is enabled
-`sudo systemctl enable rc-local.service`
-
-If the `rc-local.service` file doesn't exist, copy it to `/etc/systemd/system/`
