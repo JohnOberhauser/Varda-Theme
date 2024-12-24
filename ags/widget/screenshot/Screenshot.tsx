@@ -647,11 +647,15 @@ export default function () {
     setDirectories()
     updateAudioOptions()
 
+    let window: Gtk.Window
+
     return <window
         monitor={0}
+        css={`background: transparent;`}
         name={ScreenshotWindowName}
         application={App}
         layer={Astal.Layer.TOP}
+        anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.BOTTOM}
         keymode={Astal.Keymode.EXCLUSIVE}
         margin={5}
         visible={false}
@@ -661,20 +665,31 @@ export default function () {
             }
         }}
         setup={(self) => {
-            bind(self, "hasToplevelFocus").subscribe((hasFocus) => {
-                if (hasFocus) {
-                    self.className = "focusedWindow"
-                } else {
-                    self.className = "window"
-                }
-            })
+            window = self
         }}>
-        <box
-            vertical={true}
-            css="padding: 20px;">
-            <ScreenShots/>
-            <Divider css={`margin: 20px 0 10px 0;`}/>
-            <ScreenRecording/>
-        </box>
+        <centerbox
+            vertical={true}>
+            <box/>
+            <box
+                vertical={true}
+                valign={Gtk.Align.CENTER}
+                css="padding: 20px;"
+                setup={(self) => {
+                    setTimeout(() => {
+                        bind(window, "hasToplevelFocus").subscribe((hasFocus) => {
+                            if (hasFocus) {
+                                self.className = "focusedWindow"
+                            } else {
+                                self.className = "window"
+                            }
+                        })
+                    }, 1_000)
+                }}>
+                <ScreenShots/>
+                <Divider css={`margin: 20px 0 10px 0;`}/>
+                <ScreenRecording/>
+            </box>
+            <box/>
+        </centerbox>
     </window>
 }
