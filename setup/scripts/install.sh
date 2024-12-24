@@ -20,6 +20,7 @@ slurp \
 grim \
 xdg-desktop-portal-gtk \
 pacman-contrib \
+polkit-gnome \
 bc \
 socat \
 brightnessctl \
