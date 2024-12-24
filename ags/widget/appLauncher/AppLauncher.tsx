@@ -16,10 +16,20 @@ function launchApp(app: Apps.Application) {
         })
 }
 
-function AppButton({ app, isSelected }: { app: Apps.Application, isSelected: boolean }) {
+interface AppButtonProps {
+    app: Apps.Application;
+    isSelected: boolean;
+    indexInList: number;
+    selectedIndexVariable: Variable<number>;
+}
+
+function AppButton({ app, isSelected, indexInList, selectedIndexVariable }: AppButtonProps) {
     return <button
         canFocus={false}
         className={isSelected ? "selectedAppButton" : "appButton"}
+        onHover={() => {
+            selectedIndexVariable.set(indexInList)
+        }}
         onClicked={() => {
             hide()
             launchApp(app)
@@ -156,7 +166,11 @@ export default function () {
                         canFocus={false}>
                         <box spacing={6} vertical={true}>
                             {listBinding(value => value[0].map((app, index) => (
-                                <AppButton app={app} isSelected={index === value[1]}/>
+                                <AppButton
+                                    app={app}
+                                    isSelected={index === value[1]}
+                                    indexInList={index}
+                                    selectedIndexVariable={selectedIndex}/>
                             )))}
                             <box
                                 halign={CENTER}
