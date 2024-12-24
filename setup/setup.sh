@@ -8,6 +8,7 @@
 ./scripts/foldersAndSymLinks.sh
 ./scripts/zshSetup.sh
 ./scripts/startServices.sh
+./scripts/setupUfw.sh
 ./scripts/setupCursor.sh
 ./scripts/setupYazi.sh
 ./scripts/setupXdgOpen.sh
