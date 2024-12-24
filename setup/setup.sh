@@ -26,7 +26,5 @@
 #
 # intellij: set font
 #
-# setup ufw
-#
 # remove extra packages from archinstall
 # wofi, dolphin, sddm (make sure you set up tuigreet first)
