@@ -1,0 +1,53 @@
+(defwidget quick_start []
+    (box
+        (button
+            :class "rightSideIcon"
+            :onclick "terminator &>/dev/null"
+            (image
+                :path "$HOME/.config/hypr/assets/images/programs/terminal.svg"
+            )
+        )
+        (button
+            :class "rightSideIcon"
+            :onclick "nautilus &>/dev/null"
+            (image
+                :path "$HOME/.config/hypr/assets/images/programs/nautilus.svg"
+            )
+        )
+        (button
+            :class "rightSideIcon"
+            :onclick "firefox &>/dev/null"
+            (image
+                :path "$HOME/.config/hypr/assets/images/programs/firefox.svg"
+            )
+        )
+        (button
+            :class "rightSideIcon"
+            :onclick "/opt/android-studio/bin/studio.sh &>/dev/null"
+            (image
+                :path "$HOME/.config/hypr/assets/images/programs/androidstudio.svg"
+            )
+        )
+        (button
+            :class "rightSideIcon"
+            :onclick "flatpak run com.slack.Slack &>/dev/null"
+            (image
+                :path "$HOME/.config/hypr/assets/images/programs/slack.svg"
+            )
+        )
+        (button
+            :class "rightSideIcon"
+            :onclick "flatpak run com.spotify.Client &>/dev/null"
+            (image
+                :path "$HOME/.config/hypr/assets/images/programs/spotify.svg"
+            )
+        )
+        (button
+            :class "rightSideIcon"
+            :onclick "steam &>/dev/null"
+            (image
+                :path "$HOME/.config/hypr/assets/images/programs/steam.svg"
+            )
+        )
+    )
+)

@@ -1,0 +1,9 @@
+(defvar eww "eww -c $HOME/.config/hypr/components/eww")
+
+;(include "./windows/topbar.yuck")
+(include "./windows/sidebar.yuck")
+(include "./windows/volumeAlert.yuck")
+(include "./windows/statusMenu.yuck")
+(include "./windows/systemMenu.yuck")
+(include "./windows/bluetoothWindow.yuck")
+(include "./windows/brightnessAlert.yuck")

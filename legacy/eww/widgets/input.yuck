@@ -1,0 +1,15 @@
+(defpoll input_icon :interval "1h" :run-while false "$HOME/.config/hypr/scripts/audio/getInputIcon.sh")
+
+(defwidget inputButton [?text class]
+    (box
+        :class "${class}"
+        :space-evenly "true"
+        :orientation "h"
+        :spacing "0"
+        (button
+            :class "${class}"
+            :onclick "$HOME/.config/hypr/scripts/audio/swapInput.sh"
+            input_icon
+        )
+    )
+)

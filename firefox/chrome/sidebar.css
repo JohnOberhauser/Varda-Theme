@@ -1,0 +1,30 @@
+@import "colors.css";
+
+/*
+Sidebar
+ */
+#sidebar-main {
+    background-color: var(--bg-color) !important;
+    -moz-appearance: none !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#tabbrowser-tabbox {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.tab-stack {
+    background: var(--bg-color) !important;
+    color: var(--fg-color) !important;
+}
+
+.tab-icon-overlay {
+    display: none !important;
+}
+
+button {
+    color: var(--fg-color) !important;
+}

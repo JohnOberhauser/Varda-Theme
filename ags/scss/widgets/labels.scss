@@ -1,0 +1,34 @@
+@use "../variables" as vars;
+
+.labelSmall {
+  color: vars.$fg;
+  font-size: 14px;
+}
+
+.labelMedium {
+  color: vars.$fg;
+  font-size: 16px;
+}
+
+.labelLarge {
+  color: vars.$fg;
+  font-size: 18px;
+}
+
+.labelSmallBold {
+  color: vars.$fg;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.labelMediumBold {
+  color: vars.$fg;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.labelLargeBold {
+  color: vars.$fg;
+  font-size: 18px;
+  font-weight: bold;
+}

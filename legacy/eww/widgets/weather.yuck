@@ -1,0 +1,56 @@
+(defvar weatherIcon "")
+(defvar weatherDescription "sunny")
+(defvar weatherTemperature "75")
+(defvar windValue "45 mph")
+(defvar sunrise "07:09 AM")
+(defvar sunset "07:09 PM")
+
+(defwidget weather []
+    (box
+        :class "weatherContainer"
+        :orientation "v"
+        :space-evenly false
+        :valign "center"
+        :halign "center"
+        (label
+            :text weatherIcon
+            :class "weatherIcon"
+            :xalign 0.5
+        )
+        (label
+            :text weatherDescription
+            :class "weatherDescription"
+            :xalign 0.5
+        )
+        (label
+            :text weatherTemperature
+            :class "weatherTemp"
+            :xalign 0.5
+        )
+        (label
+            :text " ${windValue}"
+            :class "weatherWind"
+            :xalign 0.5
+        )
+        (box
+            :orientation "h"
+            :space-evenly false
+            (label
+                :text ""
+                :class "sunsetIcon"
+            )
+            (label
+                :text sunrise
+                :class "sunriseText"
+            )
+            (label
+                :text sunset
+                :class "sunsetText"
+            )
+            (label
+                :text ""
+                :class "sunsetIcon"
+            )
+        )
+    )
+)

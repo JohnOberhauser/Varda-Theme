@@ -1,0 +1,39 @@
+[global_config]
+  inactive_color_offset = 1.0
+  suppress_multiple_term_dialog = True
+  always_split_with_profile = True
+[keybindings]
+  new_tab = <Alt>z
+[profiles]
+  [[default]]
+    font = JetBrainsMonoPatchedGlyphs Nerd Font 10
+  [[Varda]]
+    audible_bell = True
+    background_color = "#0c0e11"
+    cursor_shape = underline
+    font = JetBrainsMono Nerd Font Medium 14
+    foreground_color = "#d0ebee"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 10000
+    palette = "#0c0e11:#733447:#257b76:#c78c56:#52677c:#604575:#3fafbf:#d0ebee:#141619:#733447:#257b76:#c78c56:#52677c:#604575:#3fafbf:#d0ebee"
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 26:23
+      maximised = False
+      fullscreen = False
+      size = 1241, 1332
+      title = john@Varda:~
+      last_active_term = 6b84d2b9-f19c-482c-bbd3-c5ff262c3ba3
+      last_active_window = True
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = Varda
+      uuid = 6b84d2b9-f19c-482c-bbd3-c5ff262c3ba3
+[plugins]

@@ -1,0 +1,946 @@
+{
+  "meta": {
+    "theme.name": "Varda",
+    "theme.kind": "Dark",
+    "theme.version": 1
+  },
+  "colors": {
+    "border": "blue",
+    "background.primary": "black",
+    "focusOutline": "blue",
+    "shadow.border": "Black",
+    "shadow.background.small": "#00000033",
+    "shadow.background.medium": "#000000D9",
+    "shadow.background.large": "#000000D9",
+    "text.primary": "white",
+    "tree.focusBorder": "blue",
+    "border.focused": "blue",
+    "text.secondary": "light_blue",
+    "text.dimmed": "light_blue",
+    "text.disabled": "dark_grey2",
+    "text.error": "red",
+    "text.success": "green",
+    "background.dimmed": "Transparent",
+    "background.disabled": "Transparent",
+    "background.error": "light_red",
+    "button.positive.background.default": "green",
+    "button.positive.background.disabled": "black",
+    "button.positive.background.hovered": "light_green",
+    "button.positive.background.pressed": "green",
+    "button.positive.focusOutline": "green",
+    "button.positive.border.default": "Transparent",
+    "button.positive.border.hovered": "Transparent",
+    "button.positive.border.pressed": "Transparent",
+    "button.positive.border.disabled": "dark_grey",
+    "button.positive.text.default": "white",
+    "button.positive.text.disabled": "dark_grey2",
+    "button.positive.text.hovered": "white",
+    "button.positive.text.pressed": "white",
+    "button.secondary.background.default": "dark_grey3",
+    "button.secondary.background.disabled": "black",
+    "button.secondary.background.hovered": "dark_grey2",
+    "button.secondary.background.pressed": "dark_grey3",
+    "button.secondary.border.default": "blue",
+    "button.secondary.border.disabled": "dark_grey3",
+    "button.secondary.focusOutline": "blue",
+    "button.secondary.focusBorder": "blue",
+    "button.secondary.text.default": "white",
+    "button.secondary.text.disabled": "dark_grey2",
+    "button.secondary.text.hovered": "white",
+    "button.secondary.text.pressed": "white",
+    "checkbox.focusBorder": "blue",
+    "checkbox.on.border.default": "blue",
+    "checkbox.icon.default": "white",
+    "checkbox.on.background.default": "blue",
+    "checkbox.off.border.default": "dark_grey3",
+    "checkbox.icon.disabled": "dark_grey2",
+    "checkbox.text.disabled": "dark_grey2",
+    "checkbox.off.background.disabled": "dark_grey2",
+    "button.dangerous.background.default": "red",
+    "button.dangerous.background.hovered": "light_red",
+    "button.dangerous.background.pressed": "red",
+    "button.dangerous.background.disabled": "black",
+    "button.dangerous.focusOutline": "light_red",
+    "button.dangerous.text.default": "white",
+    "button.dangerous.text.disabled": "dark_grey2",
+    "button.dangerous.border.default": "Transparent",
+    "button.dangerous.border.disabled": "dark_grey3",
+    "editor.gitDiff.background.blame": "peach",
+    "editor.gitDiff.background.added": "green",
+    "editor.gitDiff.background.deleted": "red",
+    "editor.gitDiff.background.modified": "blue",
+    "editor.gitDiff.background.conflict": "red",
+    "editor.gitDiff.text.added": "light_green",
+    "editor.gitDiff.text.modified": "blue",
+    "editor.gitDiff.text.conflict": "light_red",
+    "dragAndDrop.background": "#FFFFFF33",
+    "problemsWidget.checkmark.background": "blue",
+    "problemsWidget.checkmark.foreground": "white",
+    "problemsWidget.status.expanded.background.error": "red",
+    "problemsWidget.status.expanded.background.warning": "peach",
+    "problemsWidget.status.expanded.background.weakWarning": "peach",
+    "problemsWidget.status.expanded.border.error": "red",
+    "problemsWidget.status.expanded.border.warning": "peach",
+    "problemsWidget.status.expanded.border.weakWarning": "peach",
+    "editor.renamePostline.border": "blue",
+    "editor.renamePostline.background": "black",
+    "editor.renamePostline.description.text": "white",
+    "editor.renamePostline.usages.text": "peach",
+    "editor.background": "black",
+    "editor.text": "white",
+    "editor.caret.background": "white",
+    "editor.caret.border": "white",
+    "editor.currentLine.background.default": "black",
+    "editor.currentLine.background.focused": "dark_grey",
+    "editor.lineNumber.default": "light_blue",
+    "editor.lineNumber.current": "white",
+    "editor.whitespaceIndicator": "dark_grey3",
+    "editor.foldIndicator.icon.default": "blue",
+    "editor.foldIndicator.icon.hovered": "blue",
+    "editor.foldedMark.text": "green",
+    "editor.foldedMark.background": "dark_grey",
+    "editor.selectableFolded.background.focused": "blue",
+    "editor.selectableFolded.background.default": "Transparent",
+    "editor.selectableFolded.border.focused": "blue",
+    "editor.selectableFolded.border.default": "dark_grey3",
+    "editor.selectableFolded.text.default": "white",
+    "editor.selectableFolded.text.focused": "white",
+    "mainToolbar.background": "black",
+    "smartMode.background.enabled": "blue",
+    "smartMode.border.loading": "blue",
+    "smartMode.background.error": "red",
+    "icon.background.blue": "blue",
+    "icon.background.green": "green",
+    "icon.background.orange": "peach",
+    "icon.background.red": "red",
+    "icon.background.cyan": "aqua",
+    "ghostButton.off.border.default": "Transparent",
+    "ghostButton.off.focusBorder": "blue",
+    "ghostButton.off.background.default": "Transparent",
+    "ghostButton.off.background.hovered": "dark_grey3",
+    "ghostButton.off.background.pressed": "dark_grey3",
+    "ghostButton.off.text.disabled": "dark_grey2",
+    "ghostButton.on.background.default": "dark_grey3",
+    "ghostButton.on.background.disabled": "dark_grey",
+    "ghostButton.on.background.hovered": "dark_grey3",
+    "ghostButton.on.focusBorder": "blue",
+    "ghostButton.on.text.default": "white",
+    "ghostButton.on.text.hovered": "white",
+    "ghostButton.on.text.pressed": "white",
+    "inputField.selectionBackground.default": "blue",
+    "inputField.background.disabled": "dark_grey",
+    "inputField.background.default": "black",
+    "inputField.background.error": "red",
+    "inputField.text.disabled": "dark_grey2",
+    "inputField.border.error": "light_red",
+    "inputField.border.disabled": "dark_grey3",
+    "inputField.caret.default": "white",
+    "inputField.caret.error": "white",
+    "inputField.focusOutline.default": "blue",
+    "inputField.focusOutline.error": "light_red",
+    "inputField.focusBorder.default": "blue",
+    "inputField.focusBorder.error": "light_red",
+    "link.text.default": "blue",
+    "link.focusOutline": "blue",
+    "popup.border": "dark_grey3",
+    "popup.background": "dark_grey",
+    "popup.editor.background": "dark_grey",
+    "popup.tab.background.default": "Transparent",
+    "popup.tab.background.hovered": "dark_grey3",
+    "popup.tab.background.selected": "Transparent",
+    "popup.tab.border": "blue",
+    "popup.tabPanel.background": "dark_grey",
+    "popup.tab.indicator": "blue",
+    "popup.listItem.border.default": "Transparent",
+    "popup.listItem.border.hovered": "Transparent",
+    "popup.listItem.border.selected": "Transparent",
+    "popup.listItem.border.focused": "Transparent",
+    "popup.listItem.background.default": "black",
+    "popup.listItem.background.hovered": "dark_grey",
+    "popup.listItem.background.selected": "dark_grey1",
+    "popup.listItem.background.focused": "dark_grey1",
+    "popup.listItem.text.secondary": "light_blue",
+    "popup.listItem.text.hovered": "white",
+    "popup.listItem.text.selected": "white",
+    "popup.listItem.text.focused": "white",
+    "button.primary.background.default": "blue",
+    "button.primary.background.hovered": "blue",
+    "button.primary.background.pressed": "blue",
+    "button.primary.background.disabled": "black",
+    "button.primary.focusOutline": "blue",
+    "button.primary.focusBorder": "blue",
+    "button.primary.border.default": "blue",
+    "button.primary.border.disabled": "dark_grey3",
+    "button.primary.border.hovered": "blue",
+    "button.primary.border.pressed": "blue",
+    "button.primary.text.disabled": "dark_grey2",
+    "button.primary.text.default": "white",
+    "button.primary.text.hovered": "white",
+    "button.primary.text.pressed": "white",
+    "button.primary.text.focused": "white",
+    "pillButton.background.default": "dark_grey",
+    "pillButton.background.disabled": "dark_grey",
+    "pillButton.background.hovered": "dark_grey3",
+    "pillButton.background.pressed": "dark_grey3",
+    "pillButton.focusOutline": "blue",
+    "pillButton.focusBorder": "blue",
+    "pillButton.border.default": "dark_grey3",
+    "pillButton.border.hovered": "dark_grey3",
+    "pillButton.border.pressed": "dark_grey3",
+    "pillButton.border.disabled": "dark_grey3",
+    "pillButton.text.default": "light_blue",
+    "pillButton.text.disabled": "dark_grey2",
+    "pillButton.text.hovered": "white",
+    "pillButton.text.pressed": "white",
+    "progressBar.determinate.foreground": "blue",
+    "progressBar.determinate.background": "black",
+    "progressBar.indeterminate.foreground": "blue",
+    "progressBar.indeterminate.foregroundAccent": "blue",
+    "editor.interline.block.background": "black",
+    "editor.interline.listItem.border.default": "Transparent",
+    "editor.interline.listItem.border.hovered": "Transparent",
+    "editor.interline.listItem.border.selected": "Transparent",
+    "editor.interline.listItem.border.focused": "Transparent",
+    "editor.interline.listItem.background.default": "black",
+    "editor.interline.listItem.background.hovered": "dark_grey",
+    "editor.interline.listItem.background.selected": "dark_grey1",
+    "editor.interline.listItem.background.focused": "dark_grey1",
+    "editor.interline.listItem.text.secondary": "light_blue",
+    "editor.interline.listItem.text.hovered": "white",
+    "editor.interline.listItem.text.selected": "white",
+    "editor.interline.listItem.text.focused": "white",
+    "listItem.border.default": "Transparent",
+    "listItem.border.hovered": "Transparent",
+    "listItem.border.selected": "Transparent",
+    "listItem.border.focused": "Transparent",
+    "listItem.background.default": "black",
+    "listItem.background.hovered": "dark_grey",
+    "listItem.background.selected": "dark_grey1",
+    "listItem.background.focused": "dark_grey1",
+    "listItem.focusBorder": "blue",
+    "listItem.text.secondary": "light_blue",
+    "listItem.text.hovered": "white",
+    "listItem.text.selected": "white",
+    "listItem.text.focused": "white",
+    "separator.default": "black",
+    "separator.hovered": "blue",
+    "switch.on.thumb": "white",
+    "switch.on.track.default": "blue",
+    "switch.on.track.hovered": "blue",
+    "switch.off.thumb": "white",
+    "switch.off.track.hovered": "dark_grey3",
+    "switch.off.track.default": "dark_grey3",
+    "search.match.background": "dark_grey1",
+    "search.match.text": "white",
+    "search.counter.background": "white26",
+    "completion.match.background": "Transparent",
+    "completion.match.text": "purple",
+    "parameterInfo.match.text": "purple",
+    "tab.border": "Transparent",
+    "tab.background.default": "black",
+    "tab.background.selected": "black",
+    "tab.background.hovered": "dark_grey2",
+    "tabPanel.background": "black",
+    "tab.indicator": "blue",
+    "notification.background.default": "black",
+    "notification.background.unread": "dark_grey",
+    "notification.separator": "dark_grey3",
+    "notification.text": "white",
+    "notification.timestamp": "light_blue",
+    "terminal.ansiColors.background.ansiBlack": "black",
+    "terminal.ansiColors.background.ansiBlue": "blue",
+    "terminal.ansiColors.background.ansiBrightBlack": "dark_grey",
+    "terminal.ansiColors.background.ansiBrightBlue": "blue",
+    "terminal.ansiColors.background.ansiBrightCyan": "aqua",
+    "terminal.ansiColors.background.ansiBrightGreen": "green",
+    "terminal.ansiColors.background.ansiBrightMagenta": "purple",
+    "terminal.ansiColors.background.ansiBrightRed": "red",
+    "terminal.ansiColors.background.ansiBrightWhite": "white",
+    "terminal.ansiColors.background.ansiBrightYellow": "peach",
+    "terminal.ansiColors.background.ansiCyan": "aqua",
+    "terminal.ansiColors.background.ansiGreen": "green",
+    "terminal.ansiColors.background.ansiMagenta": "purple",
+    "terminal.ansiColors.background.ansiRed": "red",
+    "terminal.ansiColors.background.ansiWhite": "light_white",
+    "terminal.ansiColors.background.ansiYellow": "peach",
+    "terminal.ansiColors.foreground.ansiBlack": "white",
+    "terminal.ansiColors.foreground.ansiBlue": "blue",
+    "terminal.ansiColors.foreground.ansiBrightBlack": "white",
+    "terminal.ansiColors.foreground.ansiBrightBlue": "blue",
+    "terminal.ansiColors.foreground.ansiBrightCyan": "aqua",
+    "terminal.ansiColors.foreground.ansiBrightGreen": "light_green",
+    "terminal.ansiColors.foreground.ansiBrightMagenta": "purple",
+    "terminal.ansiColors.foreground.ansiBrightRed": "light_red",
+    "terminal.ansiColors.foreground.ansiBrightWhite": "light_white",
+    "terminal.ansiColors.foreground.ansiBrightYellow": "peach",
+    "terminal.ansiColors.foreground.ansiCyan": "aqua",
+    "terminal.ansiColors.foreground.ansiGreen": "green",
+    "terminal.ansiColors.foreground.ansiMagenta": "purple",
+    "terminal.ansiColors.foreground.ansiRed": "red",
+    "terminal.ansiColors.foreground.ansiWhite": "white",
+    "terminal.ansiColors.foreground.ansiYellow": "peach",
+    "toggleButton.off.background.default": "dark_grey3",
+    "toggleButton.off.background.disabled": "black",
+    "toggleButton.off.background.hovered": "dark_grey3",
+    "toggleButton.off.background.pressed": "dark_grey3",
+    "toggleButton.off.text.disabled": "dark_grey2",
+    "toggleButton.off.text.pressed": "light_blue",
+    "toggleButton.off.border.default": "blue",
+    "toggleButton.off.border.disabled": "Transparent",
+    "toggleButton.off.focusBorder": "blue",
+    "toggleButton.on.border.default": "blue",
+    "toggleButton.on.focusBorder": "blue",
+    "toggleButton.on.background.default": "blue",
+    "toggleButton.on.background.disabled": "dark_grey",
+    "toggleButton.on.background.hovered": "blue",
+    "toggleButton.on.background.pressed": "blue",
+    "tool.background": "black",
+    "remote.userColor.background.one": "red",
+    "remote.userColor.background.two": "peach",
+    "remote.userColor.background.three": "blue",
+    "remote.userColor.background.four": "green",
+    "remote.userColor.background.five": "blue",
+    "remote.userColor.background.six": "blue",
+    "remote.userColor.background.seven": "blue",
+    "remote.userColor.background.eight": "purple",
+    "remote.userColor.background.nine": "purple",
+    "remote.userColor.background.ten": "purple",
+    "statusBar.background": "black",
+    "gitBranchTag.local.text": "blue",
+    "gitBranchTag.local.background": "blue",
+    "gitBranchTag.local.border": "blue",
+    "gitBranchTag.remote.text": "purple",
+    "gitBranchTag.remote.background": "purple",
+    "gitBranchTag.remote.border": "purple",
+    "ai.button.default.border.default": "Transparent",
+    "ai.button.default.border.hovered": "Transparent",
+    "ai.button.default.border.pressed": "Transparent",
+    "ai.button.default.border.disabled": "dark_grey3",
+    "ai.button.default.focusBorder": "blue",
+    "ai.button.default.focusOutline": "blue",
+    "ai.button.default.background.default": "blue",
+    "ai.button.default.background.disabled": "black",
+    "ai.button.default.background.hovered": "blue",
+    "ai.button.default.background.pressed": "blue",
+    "ai.button.default.text.default": "white",
+    "ai.button.default.text.disabled": "dark_grey2",
+    "ai.button.default.text.hovered": "white",
+    "ai.button.default.text.pressed": "white",
+    "ai.button.recipe.border.default": "blue",
+    "ai.button.recipe.border.hovered": "Transparent",
+    "ai.button.recipe.border.pressed": "Transparent",
+    "ai.button.recipe.border.disabled": "dark_grey3",
+    "ai.button.recipe.border.focused": "blue",
+    "ai.button.recipe.focusOutline": "blue",
+    "ai.button.recipe.focusBorder": "blue",
+    "ai.button.recipe.background.default": "black",
+    "ai.button.recipe.background.disabled": "black",
+    "ai.button.recipe.background.hovered": "blue",
+    "ai.button.recipe.background.pressed": "blue",
+    "ai.button.recipe.text.default": "white",
+    "ai.button.recipe.text.disabled": "dark_grey2",
+    "ai.button.recipe.text.hovered": "white",
+    "ai.button.recipe.text.pressed": "white",
+    "survey.button.focusOutline": "blue",
+    "survey.button.focusBorder": "blue",
+    "survey.button.background.default": "dark_grey3",
+    "survey.button.background.hovered": "blue",
+    "survey.button.border.default": "Transparent",
+    "survey.button.border.hovered": "Transparent",
+    "survey.button.text.default": "white",
+    "survey.button.text.hovered": "white",
+    "remoteWorkspaceStatusLabel.background.ssh": "green",
+    "remoteWorkspaceStatusLabel.background.wsl": "peach",
+    "remoteWorkspaceStatusLabel.background.docker": "blue",
+    "remoteWorkspaceStatusLabel.background.space": "purple",
+    "remoteWorkspaceStatusLabel.text.ssh": "white",
+    "remoteWorkspaceStatusLabel.text.wsl": "white",
+    "remoteWorkspaceStatusLabel.text.docker": "white",
+    "remoteWorkspaceStatusLabel.text.space": "white",
+    "remoteHostStatusLabel.background.failed": "red",
+    "remoteHostStatusLabel.background.disconnected": "dark_grey3",
+    "remoteHostStatusLabel.background.connecting": "white",
+    "remoteHostStatusLabel.background.connected": "green",
+    "settings.modified.indicator": "peach",
+    "ai.inputField.selectionBackground.default": "blue",
+    "ai.inputField.background.disabled": "dark_grey",
+    "ai.inputField.background.default": "black",
+    "ai.inputField.text.disabled": "dark_grey2",
+    "ai.inputField.border.disabled": "dark_grey3",
+    "ai.inputField.caret.default": "white",
+    "ai.inputField.focusOutline.default": "blue",
+    "ai.inputField.focusBorder.default": "blue",
+    "ai.icon.background": "purple",
+    "ai.icon.background.secondary": "blue",
+    "ai.icon.text": "purple",
+    "ai.snippet.border": "dark_grey3",
+    "ai.snippet.editor.background": "black",
+    "ai.snippet.header.background": "dark_grey",
+    "ai.user.icon.background": "blue",
+    "ai.user.icon.background.secondary": "blue",
+    "ai.user.icon.text": "blue",
+    "ai.error.border": "red",
+    "ai.warning.border": "peach",
+    "ai.error.fill": "red",
+    "ai.warning.fill": "peach"
+  },
+  "textAttributes": {
+    "editor.text.scheme": {
+      "foregroundColor": "white"
+    },
+    "editor.text.composable": {
+      "textDecoration": {
+        "color": "white"
+      }
+    },
+    "editor.selection": {
+      "backgroundColor": "dark_grey1"
+    },
+    "editor.selection.focused": {
+      "backgroundColor": "dark_grey1"
+    },
+    "editor.search.results": {
+      "border": {
+        "color": "red"
+      },
+      "statusColor": "light_green"
+    },
+    "editor.rename.entries": {
+      "backgroundColor": "green"
+    },
+    "editor.rename.current": {
+      "border": {
+        "color": "purple"
+      }
+    },
+    "editor.brace.match": {
+      "backgroundColor": "green"
+    },
+    "comment": {
+      "foregroundColor": "dark_grey3"
+    },
+    "comment.doc": {
+      "foregroundColor": "dark_grey3"
+    },
+    "comment.doc.tag": {
+      "foregroundColor": "peach"
+    },
+    "comment.doc.value": {
+      "foregroundColor": "white"
+    },
+    "comment.todo": {
+      "foregroundColor": "green"
+    },
+    "link": {},
+    "link.always.visible": {
+      "textDecoration": {}
+    },
+    "link.hovered": {
+      "foregroundColor": "aqua",
+      "textDecoration": {
+        "color": "blue"
+      }
+    },
+    "error.hovered": {
+      "backgroundColor": "red"
+    },
+    "keyword": {
+      "foregroundColor": "peach"
+    },
+    "keyword.typeModifier": {
+      "foregroundColor": "peach"
+    },
+    "metadata": {
+      "foregroundColor": "green"
+    },
+    "number": {
+      "foregroundColor": "blue"
+    },
+    "boolean": {
+      "foregroundColor": "peach"
+    },
+    "string": {
+      "foregroundColor": "blue"
+    },
+    "string.binary": {
+      "foregroundColor": "light_blue"
+    },
+    "string.escape": {
+      "foregroundColor": "peach"
+    },
+    "string.escape.unicode": {
+      "foregroundColor": "blue"
+    },
+    "string.escape.alternative": {
+      "foregroundColor": "peach"
+    },
+    "string.formatItem": {
+      "foregroundColor": "peach"
+    },
+    "string.regexp": {
+      "foregroundColor": "blue"
+    },
+    "identifier": {
+      "foregroundColor": "white"
+    },
+    "identifier.this": {
+      "foregroundColor": "purple"
+    },
+    "identifier.this.mutable": {
+      "foregroundColor": "purple",
+      "textDecoration": {
+        "color": "purple"
+      }
+    },
+    "identifier.underCaret": {
+      "backgroundColor": "green",
+      "statusColor": "green"
+    },
+    "identifier.constant": {
+      "foregroundColor": "purple"
+    },
+    "identifier.constant.predefined": {
+      "foregroundColor": "peach"
+    },
+    "identifier.variable": {
+      "foregroundColor": "white"
+    },
+    "identifier.variable.mutable": {
+      "textDecoration": {
+        "color": "white"
+      }
+    },
+    "identifier.parameter": {
+      "foregroundColor": "white"
+    },
+    "identifier.parameter.js": {
+      "foregroundColor": "green"
+    },
+    "identifier.function.declaration": {
+      "foregroundColor": "peach"
+    },
+    "identifier.function.declaration.js": {
+      "foregroundColor": "peach"
+    },
+    "identifier.function.call": {
+      "foregroundColor": "white"
+    },
+    "identifier.function.call.js": {
+      "foregroundColor": "peach"
+    },
+    "identifier.function.call.package": {
+      "foregroundColor": "white"
+    },
+    "identifier.function.call.composable": {
+      "foregroundColor": "green"
+    },
+    "identifier.method.static": {
+      "foregroundColor": "white",
+      "fontStyle": "ITALIC"
+    },
+    "identifier.method.static.js": {
+      "foregroundColor": "peach",
+      "fontStyle": "ITALIC"
+    },
+    "identifier.type": {
+      "foregroundColor": "white"
+    },
+    "identifier.field": {
+      "foregroundColor": "purple"
+    },
+    "identifier.field.static": {
+      "foregroundColor": "purple",
+      "fontStyle": "ITALIC"
+    },
+    "identifier.interface": {
+      "foregroundColor": "white"
+    },
+    "identifier.type.class": {
+      "foregroundColor": "white"
+    },
+    "identifier.type.enum": {
+      "foregroundColor": "purple"
+    },
+    "identifier.type.struct": {
+      "foregroundColor": "white"
+    },
+    "identifier.type.valueType": {
+      "foregroundColor": "purple"
+    },
+    "identifier.typeParameter": {
+      "foregroundColor": "aqua"
+    },
+    "identifier.namedArgument": {
+      "foregroundColor": "blue"
+    },
+    "identifier.other": {
+      "foregroundColor": "white"
+    },
+    "attributeName.html": {
+      "foregroundColor": "white"
+    },
+    "attributeValue.html": {
+      "foregroundColor": "green"
+    },
+    "entityReference.html": {
+      "foregroundColor": "blue"
+    },
+    "tag.html": {
+      "foregroundColor": "peach"
+    },
+    "tagName.html": {
+      "foregroundColor": "peach"
+    },
+    "tagName.custom.html": {
+      "foregroundColor": "aqua"
+    },
+    "attributeName.css": {
+      "foregroundColor": "peach"
+    },
+    "hex.css": {
+      "foregroundColor": "blue"
+    },
+    "identifier.css": {
+      "foregroundColor": "peach"
+    },
+    "identifier.function.css": {
+      "foregroundColor": "peach"
+    },
+    "identifier.variable.css": {
+      "foregroundColor": "blue"
+    },
+    "identifier.variable.php": {
+      "foregroundColor": "purple"
+    },
+    "property.php": {
+      "foregroundColor": "purple"
+    },
+    "property.static.php": {
+      "foregroundColor": "purple",
+      "fontStyle": "ITALIC"
+    },
+    "generic.php": {
+      "foregroundColor": "blue"
+    },
+    "interpolation.css": {
+      "foregroundColor": "white"
+    },
+    "jsCodeDelimiter.css": {
+      "foregroundColor": "green"
+    },
+    "jsCodeInjection.css": {
+      "foregroundColor": "white"
+    },
+    "key.json": {
+      "foregroundColor": "white"
+    },
+    "keyword.css": {
+      "foregroundColor": "purple"
+    },
+    "keyword.extend.css": {
+      "foregroundColor": "purple"
+    },
+    "keyword.global.css": {
+      "foregroundColor": "purple"
+    },
+    "keyword.important.css": {
+      "foregroundColor": "peach"
+    },
+    "mixin.css": {
+      "foregroundColor": "white"
+    },
+    "number.css": {
+      "foregroundColor": "blue"
+    },
+    "number.unit.css": {
+      "foregroundColor": "green"
+    },
+    "propertyName.css": {
+      "foregroundColor": "white"
+    },
+    "propertyValue.css": {
+      "foregroundColor": "green"
+    },
+    "punctuation.css": {
+      "foregroundColor": "white"
+    },
+    "selector.css": {
+      "foregroundColor": "peach"
+    },
+    "selector.id.css": {
+      "foregroundColor": "peach"
+    },
+    "selector.class.css": {
+      "foregroundColor": "peach"
+    },
+    "selector.pseudo.css": {
+      "foregroundColor": "peach"
+    },
+    "selector.tag.css": {
+      "foregroundColor": "peach"
+    },
+    "string.css": {
+      "foregroundColor": "green"
+    },
+    "url.css": {
+      "foregroundColor": "green"
+    },
+    "attribute.cpp": {
+      "foregroundColor": "purple"
+    },
+    "markup.heading": {
+      "foregroundColor": "purple"
+    },
+    "markup.bold": {
+      "fontWeight": "BOLD"
+    },
+    "markup.italic": {
+      "fontStyle": "ITALIC"
+    },
+    "markup.code.block": {
+      "foregroundColor": "green"
+    },
+    "markup.href": {
+      "foregroundColor": "aqua",
+      "fontStyle": "ITALIC",
+      "textDecoration": {}
+    },
+    "punctuation": {
+      "foregroundColor": "white"
+    },
+    "punctuation.operator": {
+      "foregroundColor": "white"
+    },
+    "snippet": {
+      "border": {
+        "color": "dark_grey3"
+      }
+    },
+    "snippet.selected": {
+      "border": {
+        "color": "purple"
+      }
+    },
+    "debug.currentFrame": {
+      "backgroundColor": "purple"
+    },
+    "diff.added": {
+      "backgroundColor": "green",
+      "statusColor": "green"
+    },
+    "diff.added.word": {
+      "backgroundColor": "green"
+    },
+    "diff.added.withBorder": {
+      "backgroundColor": "green",
+      "border": {
+        "color": "green"
+      }
+    },
+    "diff.added.empty": {
+      "backgroundColor": "green"
+    },
+    "diff.added.resolved": {
+      "backgroundColor": "Transparent",
+      "border": {
+        "color": "green"
+      }
+    },
+    "diff.deleted": {
+      "backgroundColor": "red",
+      "statusColor": "red"
+    },
+    "diff.deleted.word": {
+      "backgroundColor": "red"
+    },
+    "diff.deleted.withBorder": {
+      "backgroundColor": "red",
+      "border": {
+        "color": "red"
+      }
+    },
+    "diff.deleted.empty": {
+      "backgroundColor": "red"
+    },
+    "diff.deleted.resolved": {
+      "backgroundColor": "Transparent",
+      "border": {
+        "color": "red"
+      }
+    },
+    "diff.modified": {
+      "backgroundColor": "blue",
+      "statusColor": "blue"
+    },
+    "diff.modified.word": {
+      "backgroundColor": "blue"
+    },
+    "diff.modified.withBorder": {
+      "backgroundColor": "blue",
+      "border": {
+        "color": "blue"
+      }
+    },
+    "diff.modified.resolved": {
+      "backgroundColor": "Transparent",
+      "border": {
+        "color": "blue"
+      }
+    },
+    "diff.conflict.withBorder": {
+      "backgroundColor": "red",
+      "border": {
+        "color": "red"
+      }
+    },
+    "diff.conflict.resolved": {
+      "backgroundColor": "Transparent",
+      "border": {
+        "color": "red"
+      }
+    },
+    "refactoring.modified.code": {
+      "backgroundColor": "green"
+    },
+    "problem.error": {
+      "statusColor": "red",
+      "textDecoration": {
+        "color": "red",
+        "style": "WAVY"
+      }
+    },
+    "problem.error.badCharacter": {
+      "statusColor": "red",
+      "textDecoration": {
+        "color": "red",
+        "style": "WAVY"
+      }
+    },
+    "problem.warning": {
+      "backgroundColor": "peach",
+      "statusColor": "peach"
+    },
+    "problem.warning.weak": {
+      "statusColor": "peach",
+      "textDecoration": {
+        "color": "peach",
+        "style": "WAVY"
+      }
+    },
+    "problem.deprecated": {
+      "textDecoration": {
+        "color": "dark_grey3",
+        "type": "LINE_THROUGH"
+      }
+    },
+    "problem.info": {
+      "statusColor": "peach",
+      "border": {
+        "color": "peach"
+      }
+    },
+    "problem.unknown": {},
+    "problem.unused": {
+      "foregroundColor": "dark_grey3"
+    },
+    "transparent": {},
+    "comment.buildConstraint.go": {
+      "foregroundColor": "dark_grey3"
+    },
+    "identifier.methodReceiver.go": {
+      "foregroundColor": "blue"
+    },
+    "identifier.package.go": {
+      "foregroundColor": "green"
+    },
+    "identifier.typeDeclaration.go": {
+      "foregroundColor": "white"
+    },
+    "identifier.typeReference.go": {
+      "foregroundColor": "aqua"
+    },
+    "identifier.variable.shadowing.go": {
+      "foregroundColor": "green"
+    },
+    "metadata.structTag.arbitraryText.go": {
+      "foregroundColor": "dark_grey3"
+    },
+    "metadata.structTag.key.go": {
+      "foregroundColor": "white"
+    },
+    "metadata.structTag.value.go": {
+      "foregroundColor": "green"
+    },
+    "identifier.anchor.yaml": {
+      "foregroundColor": "purple"
+    },
+    "identifier.field.yaml": {
+      "foregroundColor": "white"
+    },
+    "identifier.alias.yaml": {
+      "foregroundColor": "peach"
+    },
+    "punctuation.operator.merge.yaml": {
+      "foregroundColor": "blue"
+    },
+    "schema.yaml": {
+      "foregroundColor": "white"
+    },
+    "key.yaml": {
+      "foregroundColor": "peach"
+    },
+    "value.yaml": {
+      "foregroundColor": "white"
+    },
+    "ai.generated": {
+      "backgroundColor": "purple"
+    },
+    "identifier.dependency.scope.amper": {
+      "foregroundColor": "peach"
+    },
+    "identifier.dependency.annotator.amper": {
+      "foregroundColor": "white"
+    },
+    "identifier.dependency.add.amper": {
+      "foregroundColor": "purple"
+    },
+    "editor.indentGuide": {
+      "foregroundColor": "dark_grey3",
+      "textDecoration": {
+        "style": "DASHED"
+      }
+    },
+    "editor.indentGuide.current": {
+      "foregroundColor": "dark_grey3",
+      "textDecoration": {
+        "style": "DASHED"
+      }
+    },
+    "editor.indentGuide.declaration": {
+      "foregroundColor": "dark_grey3"
+    },
+    "editor.indentGuide.declaration.current": {
+      "foregroundColor": "dark_grey3"
+    }
+  },
+  "palette": {
+    "white": "#D0EBEE",
+    "black": "#0C0E11",
+    "green": "#257B76",
+    "blue": "#52677C",
+    "red": "#733447",
+    "peach": "#C78C56",
+    "purple": "#604575",
+    "aqua": "#40AFBF",
+
+    "dark_grey": "#121519",
+    "dark_grey1": "#171B21",
+    "dark_grey2": "#1C2128",
+    "dark_grey3": "#222830",
+
+    "light_white": "#E5FFFF",
+    "light_blue": "#8295A9",
+    "light_red": "#93394A",
+    "light_green": "#98C379"
+  }
+}

@@ -1,0 +1,58 @@
+#================= Main Colors ==================
+theme[main_bg]="#191724"
+theme[main_fg]="#E0DEF4"
+theme[title]="#E0DEF4"
+theme[hi_fg]="#524F67"
+theme[selected_bg]="#524F67"
+theme[selected_fg]="#E0DEF4"
+theme[inactive_fg]="#1F1D2E"
+theme[proc_misc]="#524F67"
+
+#================= Box Outlines ==================
+theme[cpu_box]="#1F1D2E"
+theme[mem_box]="#1F1D2E"
+theme[net_box]="#1F1D2E"
+theme[proc_box]="#1F1D2E"
+theme[div_line]="#1F1D2E"
+
+#================= Meters ==================
+# Mem/Disk used meter
+theme[used_start]="#E0DEF4"
+theme[used_mid]="#524F67"
+theme[used_end]="#524F67"
+
+# Mem/Disk available meter
+theme[available_start]="#E0DEF4"
+theme[available_mid]="#524F67"
+theme[available_end]="#524F67"
+
+# Mem/Disk cached meter
+theme[cached_start]="#E0DEF4"
+theme[cached_mid]="#524F67"
+theme[cached_end]="#524F67"
+
+# Mem/Disk free meter
+theme[free_start]="#E0DEF4"
+theme[free_mid]="#524F67"
+theme[free_end]="#524F67"
+
+#================== Graphs ==================
+# Temperature graph colors
+theme[temp_start]="#E0DEF4"
+theme[temp_mid]="#524F67"
+theme[temp_end]="#524F67"
+
+# CPU graph colors
+theme[cpu_start]="#524F67"
+theme[cpu_mid]="#524F67"
+theme[cpu_end]="#E0DEF4"
+
+# Download graph colors
+theme[download_start]="#E0DEF4"
+theme[download_mid]="#524F67"
+theme[download_end]="#524F67"
+
+# Upload graph colors
+theme[upload_start]="#E0DEF4"
+theme[upload_mid]="#524F67"
+theme[upload_end]="#524F67"

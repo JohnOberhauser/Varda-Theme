@@ -1,0 +1,192 @@
+{
+  "name": "Everforest",
+  "dark": true,
+  "author": "",
+  "editorScheme": "/Everforest_Scheme.xml",
+  "colors": {
+    "background": "#1E2326",
+    "darkGrey": "#272E33",
+    "darkGrey2": "#2E383C",
+    "darkGrey3": "#374145",
+    "bg5": "#4F5B58",
+    "foreground": "#D3C6AA",
+    "red": "#E67E80",
+    "primary": "#7A8478",
+    "testFolder": "#4F5B58"
+  },
+  "icons": {
+    "ColorPalette": {
+      "Actions.Green": "#A7C080",
+      "Actions.Blue": "#7FBBB3",
+      "Actions.Red": "#E67E80",
+      "Actions.Yellow": "#DBBC7F",
+      "Actions.Grey": "#7A8478",
+      "Actions.GreyInline": "#7A8478",
+      "Actions.GreyInline.Dark": "#495156",
+      "Objects.BlackText": "#1E2326",
+      "Objects.Blue": "#7FBBB3",
+      "Objects.Green": "#A7C080",
+      "Objects.GreenAndroid": "#A7C080",
+      "Objects.Grey": "#7A8478",
+      "Objects.Pink": "#D699B6",
+      "Objects.Purple": "#D699B6",
+      "Objects.Red": "#E67E80",
+      "Objects.RedStatus": "#E67E80",
+      "Objects.Yellow": "#DBBC7F",
+      "Objects.YellowDark": "#E69875",
+      "Tree.iconColor": "#7A8478",
+      "Checkbox.Background.Default": "#1E2326",
+      "Checkbox.Background.Default.Dark": "#1E2326",
+      "Checkbox.Background.Disabled": "#1E2326",
+      "Checkbox.Background.Disabled.Dark": "#1E2326",
+      "Checkbox.Background.Selected": "#1E2326",
+      "Checkbox.Background.Selected.Dark": "#1E2326",
+      "Checkbox.Border.Default": "#7A8478",
+      "Checkbox.Border.Default.Dark": "#7A8478",
+      "Checkbox.Border.Disabled": "#7A8478",
+      "Checkbox.Border.Disabled.Dark": "#7A8478",
+      "Checkbox.Border.Selected": "#7A8478",
+      "Checkbox.Border.Selected.Dark": "#7A8478",
+      "Checkbox.Focus.Thin.Default": "#7A8478",
+      "Checkbox.Focus.Thin.Default.Dark": "#7A8478",
+      "Checkbox.Focus.Thin.Selected": "#7A8478",
+      "Checkbox.Focus.Thin.Selected.Dark": "#7A8478",
+      "Checkbox.Focus.Wide": "#7A8478",
+      "Checkbox.Focus.Wide.Dark": "#7A8478",
+      "Checkbox.Foreground.Disabled": "#374145",
+      "Checkbox.Foreground.Disabled.Dark": "#374145",
+      "Checkbox.Foreground.Selected": "#D3C6AA",
+      "Checkbox.Foreground.Selected.Dark": "#D3C6AA",
+      "Blue.Fill": "#7FBBB3",
+      "Blue.Solid": "#7FBBB3",
+      "Blue.Stroke": "#7FBBB3",
+      "Gray.SecondaryStroke": "#D3C6AA",
+      "Gray.Fill": "#7A8478",
+      "Gray.Stroke": "#D3C6AA",
+      "Green.Fill": "#A7C080",
+      "Green.Solid": "#A7C080",
+      "Green.Stroke": "#A7C080",
+      "Orange.Fill": "#E69875",
+      "Orange.Stroke": "#E69875",
+      "Purple.Fill": "#D699B6",
+      "Purple.Stroke": "#D699B6",
+      "Red.Fill": "#E67E80",
+      "Red.Solid": "#E67E80",
+      "Red.Stroke": "#E67E80",
+      "Teal.Fill": "#7FBBB3",
+      "Teal.Stroke": "#7FBBB3",
+      "Yellow.Fill": "#DBBC7F",
+      "Yellow.Solid": "#DBBC7F",
+      "Yellow.Stroke": "#DBBC7F"
+    }
+  },
+  "ui": {
+    "*": {
+      "background": "background",
+      "foreground": "foreground",
+      "textText": "foreground",
+
+      "warningBackground": "background",
+      "iconBackground": "background",
+      "inactiveWarningFocusColor": "background",
+
+      "infoForeground": "foreground",
+
+      "activeBackground": "darkGrey2",
+      "pressedBackground": "darkGrey2",
+      "hoverBackground": "darkGrey2",
+      "selectedBackground": "darkGrey2",
+      "selectionBackground": "darkGrey2",
+      "selectionForeground": "foreground",
+      "selectionInactiveBackground": "darkGrey3",
+      "selectionBackgroundInactive": "background",
+
+      "disabledBackground": "background",
+      "inactiveBackground": "background",
+
+      "disabledForeground": "primary",
+      "disabledText": "primary",
+      "inactiveForeground": "primary",
+
+      "acceleratorForeground": "foreground",
+      "acceleratorSelectionForeground": "foreground",
+
+      "errorForeground": "red",
+
+      "borderColor": "background",
+      "disabledBorderColor": "primary",
+      "focusColor": "background",
+      "focusedBorderColor": "background",
+      "hoverBorderColor": "background",
+      "pressedBorderColor": "background",
+
+      "separatorColor": "primary",
+      "lineSeparatorColor": "primary",
+      "matchForeground": "primary",
+      "linkColor": "primary",
+      "activeForeground": "primary",
+      "hoverForeground": "primary",
+      "visitedForeground": "primary",
+      "spanBackground": "primary",
+      "dropLineColor": "primary",
+      "underlineColor": "primary"
+    },
+    "Button": {
+      "startBackground": "background",
+      "endBackground": "background",
+      "startBorderColor": "primary",
+      "endBorderColor": "primary",
+
+      "default": {
+        "foreground": "foreground",
+        "startBackground": "bg5",
+        "endBackground": "bg5",
+        "startBorderColor": "primary",
+        "endBorderColor": "primary",
+        "focusedBorderColor": "background"
+      }
+    },
+
+    "Borders": {
+      "color": "darkGrey2",
+      "ContrastBorderColor": "background"
+    },
+
+    "DefaultTabs": {
+      "underlineColor": "primary",
+      "inactiveUnderlineColor": "primary",
+      "underlineHeight": 5,
+      "hoverBackground": "primary"
+    },
+
+    "DragAndDrop": {
+      "areaForeground": "foreground",
+      "areaBackground": "background"
+    },
+    "Editor": {
+      "background": "background",
+      "foreground": "foreground",
+      "shortcutForeground": "foreground"
+    },
+    "EditorPane.inactiveBackground": "background",
+    "EditorTabs": {
+      "background": "background",
+      "underlinedTabForeground": "foreground",
+
+      "underlineColor": "primary",
+      "underlineHeight": 4,
+
+      "underlinedTabBackground": "background",
+      "inactiveColoredFileBackground": "background"
+    },
+    "FileColor": {
+      "Yellow": "background",
+      "Green": "testFolder"
+    },
+    "SearchMatch": {
+      "startBackground": "primary",
+      "endBackground": "primary"
+    },
+    "ToolWindow.Button.selectedBackground": "primary"
+  }
+}

@@ -1,0 +1,31 @@
+(include "./widgets/statusMenuVolume.yuck")
+(include "./widgets/powerOptions.yuck")
+(include "./widgets/machineStats.yuck")
+
+(defwindow systemMenuWindow
+    :class "systemMenuWindow"
+    :monitor 0
+    :geometry (geometry
+        :x "5px"
+        :y "5px"
+        :anchor "top left"
+    )
+    (box
+        :orientation "v"
+        :space-evenly false
+        (statusMenuVolume)
+        (powerOptions)
+    )
+)
+
+(defwindow systemMenuWindowCloser
+    :monitor 0
+    :geometry (geometry
+        :width "100%"
+        :height "100%"
+    )
+    (eventbox
+        :class "systemMenuWindowCloser"
+        :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh"
+    )
+)

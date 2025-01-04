@@ -1,0 +1,32 @@
+(defpoll mic_volume_percent :interval "5m" "$HOME/.config/hypr/scripts/audio/getMicVolumePercent.sh")
+(defvar mic_vol_reveal false)
+
+(defwidget mic_volume []
+  (eventbox
+        :onhover "${eww} update mic_vol_reveal=true"
+        :onhoverlost "${eww} update mic_vol_reveal=false"
+        (box
+            :class "rightSideModule"
+            :space-evenly "false"
+            :orientation "h"
+            :spacing "0"
+            (button
+                :class "rightSideIcon"
+                ""
+            )
+            (revealer
+                :transition "slideleft"
+                :reveal mic_vol_reveal
+                :duration "350ms"
+                (scale
+                    :class "volbar"
+                    :value mic_volume_percent
+                    :orientation "h"
+                    :max 100
+                    :min 0
+                    :onchange "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ {}%"
+                )
+            )
+        )
+    )
+)

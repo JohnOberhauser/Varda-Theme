@@ -1,0 +1,27 @@
+<idea-plugin>
+  <id>io.obez.themes</id>
+  <name>Varda</name>
+  <version>1.0.0</version>
+  <vendor>Varda Theme</vendor>
+
+  <description><![CDATA[
+      An intellij theme based on the Varda color scheme.
+    ]]></description>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <themeProvider id="io.obez.themes.varda" path="/Varda.theme.json"/>
+    <themeProvider id="io.obez.themes.everforest" path="/Everforest.theme.json"/>
+    <themeProvider id="io.obez.themes.nord" path="/Nord.theme.json"/>
+    <themeProvider id="io.obez.themes.rosepine" path="/Rosepine.theme.json"/>
+    <themeProvider id="io.obez.themes.bloodrust" path="/Bloodrust.theme.json"/>
+  </extensions>
+
+</idea-plugin>

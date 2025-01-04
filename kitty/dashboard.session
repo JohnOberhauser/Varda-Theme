@@ -1,0 +1,15 @@
+new_tab Dashboard
+layout splits
+launch zsh -c "source ~/.zshrc; yazi; exec zsh"
+launch --location=hsplit --bias=75
+focus
+launch --location=vsplit --bias=60 zsh -c "source ~/.zshrc; cava; exec zsh"
+launch --location=hsplit --bias=90 zsh -c "source ~/.zshrc; btop; exec zsh"
+
+new_tab Music
+layout splits
+launch zsh -c "source ~/.zshrc; spotify_player; exec zsh"
+launch --location=hsplit --bias=10 zsh -c "source ~/.zshrc; cava; exec zsh"
+
+new_tab NeoVim
+launch zsh -c "source ~/.zshrc; nvim; exec zsh"

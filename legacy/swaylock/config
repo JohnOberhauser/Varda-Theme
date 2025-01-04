@@ -1,0 +1,16 @@
+image=$HOME/.config/hypr/assets/wallpaper/narsil.png
+font="JetBrainsMono Patched Glyphs"
+indicator-thickness=10
+indicator-radius=200
+key-hl-color=D0EBEE
+inside-color=0C0E11
+inside-ver-color=0C0E11
+inside-wrong-color=0C0E11
+ring-color=52677C
+ring-ver-color=D0EBEE
+ring-wrong-color=733447
+separator-color=0C0E11
+text-color=D0EBEE
+text-ver-color=0C0E11
+text-wrong-color=D0EBEE
+line-uses-inside

@@ -1,0 +1,9 @@
+(defvar screen_sharing_reveal false)
+
+(defwidget screenSharing [?text class]
+    (box
+        :class "${class}"
+        :visible screen_sharing_reveal
+        "󰹑"
+    )
+)

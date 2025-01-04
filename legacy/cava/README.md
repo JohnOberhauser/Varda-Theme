@@ -1,0 +1,1 @@
+config goes in ~/.config/cava/

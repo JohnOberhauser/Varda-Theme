@@ -1,0 +1,20 @@
+(defpoll timeWithLabel :interval "5s" "$HOME/.config/hypr/scripts/clock/getTime.sh timeWithLabel")
+(defpoll day :interval "20s" "$HOME/.config/hypr/scripts/clock/getTime.sh day")
+(defpoll date :interval "20s" "$HOME/.config/hypr/scripts/clock/getTime.sh date")
+
+(defwidget date []
+    (box
+        :class "dateContainer"
+        :orientation "v"
+        :halign "center"
+        :space-evenly false
+        (label
+            :class "dayText"
+            :text day
+        )
+        (label
+            :class "dateText"
+            :text date
+        )
+    )
+)

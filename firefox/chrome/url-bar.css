@@ -1,0 +1,39 @@
+@import "colors.css";
+
+/**
+ Hidden
+ */
+
+#pageAction-urlbar-_testpilot-containers {
+    display: none;
+}
+
+#urlbar-label-box, #urlbar-search-mode-indicator {
+    display: none !important;
+}
+
+#identity-box {
+    display: none;
+}
+
+#urlbar-searchmode-switcher {
+    display: none !important;
+}
+
+/**
+ Colors
+ */
+
+#urlbar-background {
+    background: var(--bg-color) !important;
+}
+
+#urlbar {
+    border: none !important;
+    box-shadow: none !important;
+    color: var(--fg-color) !important;
+}
+
+.urlbar-icon {
+    fill: var(--fg-color) !important;
+}

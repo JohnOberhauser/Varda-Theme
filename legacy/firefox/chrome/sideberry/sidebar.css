@@ -1,0 +1,7 @@
+#main-window[titlepreface*="🦊 "] #sidebar-splitter{
+    display: none !important;
+}
+
+#main-window[titlepreface*="🦊 "] #sidebar-header {
+    visibility: collapse;
+}

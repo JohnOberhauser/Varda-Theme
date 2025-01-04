@@ -1,0 +1,31 @@
+(defvar ws1_icon "")
+(defvar ws2_icon "")
+(defvar ws3_icon "")
+(defvar ws4_icon "")
+(defvar ws5_icon "")
+
+(defwidget workspaces [?text orientation]
+    (box
+       :orientation "${orientation}"
+        (button :class "workspace_button"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/goToWorkspace.sh 1"
+            "${ws1_icon}"
+        )
+        (button :class "workspace_button"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/goToWorkspace.sh 2"
+            "${ws2_icon}"
+        )
+        (button :class "workspace_button"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/goToWorkspace.sh 3"
+            "${ws3_icon}"
+        )
+        (button :class "workspace_button"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/goToWorkspace.sh 4"
+            "${ws4_icon}"
+        )
+        (button :class "workspace_button"
+            :onclick "$HOME/.config/hypr/scripts/workspaces/goToWorkspace.sh 5"
+            "${ws5_icon}"
+        )
+    )
+)

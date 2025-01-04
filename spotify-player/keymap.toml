@@ -1,0 +1,9 @@
+[[keymaps]]
+command = "OpenCommandHelp"
+key_sequence = "~"
+[[keymaps]]
+command = "ShowActionsOnSelectedItem"
+key_sequence = "space"
+[[keymaps]]
+command = "ShowActionsOnCurrentTrack"
+key_sequence = "C-space"

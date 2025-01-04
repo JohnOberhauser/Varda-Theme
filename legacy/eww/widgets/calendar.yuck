@@ -1,0 +1,12 @@
+;(include "./widgets/weather.yuck")
+
+(defwidget calendarContainer []
+    (box
+        :class "calendarContainer"
+        :width 320
+        (calendar
+            :class "realCalendar"
+            :show-heading false
+        )
+    )
+)

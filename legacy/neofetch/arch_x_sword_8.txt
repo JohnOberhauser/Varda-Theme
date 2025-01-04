@@ -1,0 +1,24 @@
+
+                       ${c3} ${c1}
+                       ${c3}█${c1}
+                       ${c3}██${c1}
+                      '${c3}██${c1}'
+                     ' ${c3}██${c1} '
+                    'X ${c3}██${c1} X'
+                   'XX ${c3}██${c1} XX'
+                  'XXX ${c3}██${c1} XXX'
+                 'XXXX ${c3}██${c1} XXXX'
+                  'XXX ${c3}██${c1} XXXXX'
+               'XXx_'X ${c3}██${c1} XXXXXX'
+              'XXXXXxX ${c3}██${c1} XXXXXXX'
+             'XXXXXXXX ${c3}██${c1} XXXXXXXX'
+            'XXXXXXXXX ${c3}██${c1} XXXXXXXXX'
+           'XXXXXXXXXX ${c3}██${c1} XXXXXXXXXX'
+          'XXXXXXXXXXX ${c3}██${c1} XXXXXXXXXXX'
+         'XXXXXXXXXXXX ${c3}██${c1} XXXXXXx`''XX'
+        'XXXXXXXXXXX'  ${c3}██${c1}  'XXXXXXXx
+       'XXXXXXXX::'   ${c2}██${c1}  '::XXXXXXXX'
+      'XXXXXX:'`       ${c4}██${c1}       `':XXXXXX'
+     'XX:'`            ${c4}██${c1}             `':XX'
+    '`                ${c2}██${c1}                 `'
+    

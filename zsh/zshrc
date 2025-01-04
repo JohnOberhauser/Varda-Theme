@@ -1,0 +1,131 @@
+# Path to your oh-my-zsh installation.
+export ZSH="/home/john/.oh-my-zsh"
+
+ZSH_THEME="varda"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to automatically update without prompting.
+DISABLE_UPDATE_PROMPT="true"
+
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+plugins=(git cp ufw sudo)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+export EDITOR='nvim'
+export PATH="/home/john/.mozbuild/git-cinnabar:$PATH"
+export PATH=~/.local/bin:$PATH
+
+alias ll='ls -alFh'
+alias la='ls -A'
+alias l='ls -CF'
+alias sweep="/home/john/Documents/scripts/sweepGitBranches.sh"
+alias install="sudo pacman -Syu"
+alias update="sudo pacman -Syu && flatpak update"
+alias remove="sudo pacman -Rcns"
+alias uninstall="sudo pacman -Rcns"
+alias adb="/home/john/Android/Sdk/platform-tools/adb"
+alias fastboot="/home/john/Android/Sdk/platform-tools/fastboot"
+alias sshpi="ssh john@192.168.50.158"
+alias v=nvim
+alias sv="sudo nvim"
+alias glm="git pull origin main"
+alias bird="rsync -a --info=progress2 /home/john/Pictures/camera /mnt/ssd/"
+alias timezone='sudo timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"'
+alias theme='function _theme() { ~/workspace/Varda-Theme/themes/setTheme.sh "$1" }; _theme'
+alias wallpaper='function _wallpaper() { ~/workspace/Varda-Theme/hypr/scripts/hyprpaper/setWallpaper.sh "$1" }; _wallpaper'
+alias cd=z
+alias spt=spotify_player
+
+# firefox alias
+alias tryf='./mach try --preset fenix'
+alias tryff='./mach try --preset firefox-android'
+alias tryg='./mach try --preset android-geckoview'
+alias mbuild='./mach clobber && ./mach --no-interactive bootstrap --application-choice mobile_android_artifact_mode && ./mach build && pkill -f "^$HOME/.mozbuild/jdk"'
+alias mlintf='./mach lint -l android-fenix'
+alias mlintac='./mach lint -l android-ac'
+
+# Change folder colors
+# ========= Font ================
+# 0 default color
+# 1 bold
+# 4 underline
+# 5 flashing text
+# 8 invisible
+# ======== Colors ================
+# 31 red
+# 32 green
+# 33 orange
+# 34 blue
+# 35 purple
+# 36 cyan
+# 37 grey
+# 90 dark grey
+# 91 light red
+# 92 light green
+# 93 yellow
+# 94 light blue
+# light purple
+# 96 turqoise
+# 97 white
+# ========= Background Colors ===========
+# 40 black
+# 41 red
+# 42 green
+# 43 orange
+# 44 blue
+# 45 purple
+# 46 cyan
+# 47 grey
+# 100 dark grey
+# 101 light red
+# 102 light green
+# 103 yellow
+# 104 light blue
+# 105 light purple
+# 106 turqoise
+# 107 white
+# ============== Definitions ==================
+# [bd]="block device"
+# [ca]="file with capability"
+# [cd]="character device"
+# [di]="directory"
+# [do]="door"
+# [ex]="executable file"
+# [fi]="regular file"
+# [ln]="symbolic link"
+# [mh]="multi-hardlink"
+# [mi]="missing file"
+# [no]="normal non-filename text"
+# [or]="orphan symlink"
+# [ow]="other-writable directory"
+# [pi]="named pipe, AKA FIFO"
+# [rs]="reset to no color"
+# [sg]="set-group-ID"
+# [so]="socket"
+# [st]="sticky directory"
+# [su]="set-user-ID"
+# [tw]="sticky and other-writable directory"
+LS_COLORS=$LS_COLORS:'di=1;37:'
+LS_COLORS=$LS_COLORS:'ln=4;37:'
+LS_COLORS=$LS_COLORS:'ow=1;37;41:'
+LS_COLORS=$LS_COLORS:'*.bak=00;31:'
+export LS_COLORS
+
+# start yazi.  Makes it so when you quit yazi, you are in the same directory that you were in last
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		z -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+eval "$(zoxide init zsh)"

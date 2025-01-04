@@ -1,0 +1,15 @@
+(include "./widgets/volumeAlert.yuck")
+
+(defwindow volumeAlertWindow
+    :class "volumeAlertWindow"
+    :monitor 0
+    :geometry (geometry
+        :x "0%"
+        :y "100px"
+        :width "250px"
+        :height "100px"
+        :anchor "bottom center"
+    )
+    :focusable false
+    (volumeAlert)
+)

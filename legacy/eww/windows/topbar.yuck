@@ -1,0 +1,76 @@
+(include "./widgets/workspaces.yuck")
+(include "./widgets/clockVertical.yuck")
+(include "./widgets/screenSharing.yuck")
+(include "./widgets/packageUpdatesVertical.yuck")
+(include "./widgets/volume.yuck")
+(include "./widgets/micVolume.yuck")
+(include "./widgets/input.yuck")
+(include "./widgets/systemMenu.yuck")
+(include "./widgets/bluetoothBarButton.yuck")
+
+(defwindow topbar
+    :monitor 0
+    :geometry (geometry
+        :x "0%"
+        :y "10px"
+        :width "100%"
+        :height "30px"
+        :anchor "top center")
+    :stacking "fg"
+    :exclusive true
+    :focusable false
+    (box
+        :class "bar_class"
+        :orientation "h"
+        (left)
+        (center)
+        (right)
+    )
+)
+
+(defwidget left []
+	(box
+        :orientation "h"
+        :space-evenly false
+        :halign "start"
+        :class "left_modules"
+        (workspaces
+            :orientation "h"
+        )
+    )
+)
+
+(defwidget center []
+	(box
+        :orientation "h"
+        :space-evenly false
+        :halign "center"
+        :class "center_modules"
+        (clockVertical)
+    )
+)
+
+(defwidget right []
+	(box
+        :orientation "h"
+        :space-evenly false
+        :halign "end"
+        :class "right_modules"
+        (screenSharing
+            :class "verticalIconMovedLeftAndUp"
+        )
+        (packageUpdatesVertical)
+        (bluetoothBarButton
+            :class "verticalIcon"
+        )
+        (volume
+            :class "verticalIcon"
+        )
+        (inputButton
+            :class "verticalIcon"
+        )
+        (systemMenu
+            :class "rightSideIcon"
+        )
+    )
+)

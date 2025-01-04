@@ -1,0 +1,133 @@
+(include "./widgets/bluetoothDevice.yuck")
+
+(defvar bluetoothDevice1Visible false)
+(defvar bluetoothDevice1Name "")
+(defvar bluetoothDevice1Connected false)
+
+(defvar bluetoothDevice2Visible false)
+(defvar bluetoothDevice2Name "")
+(defvar bluetoothDevice2Connected false)
+
+(defvar bluetoothDevice3Visible false)
+(defvar bluetoothDevice3Name "")
+(defvar bluetoothDevice3Connected false)
+
+(defvar bluetoothDevice4Visible false)
+(defvar bluetoothDevice4Name "")
+(defvar bluetoothDevice4Connected false)
+
+(defvar bluetoothDevice5Visible false)
+(defvar bluetoothDevice5Name "")
+(defvar bluetoothDevice5Connected false)
+
+(defvar bluetoothDevice6Visible false)
+(defvar bluetoothDevice6Name "")
+(defvar bluetoothDevice6Connected false)
+
+(defvar bluetoothDevice7Visible false)
+(defvar bluetoothDevice7Name "")
+(defvar bluetoothDevice7Connected false)
+
+(defvar bluetoothDevice8Visible false)
+(defvar bluetoothDevice8Name "")
+(defvar bluetoothDevice8Connected false)
+
+(defvar bluetoothDevice9Visible false)
+(defvar bluetoothDevice9Name "")
+(defvar bluetoothDevice9Connected false)
+
+(defvar bluetoothDevice10Visible false)
+(defvar bluetoothDevice10Name "")
+(defvar bluetoothDevice10Connected false)
+
+(defwindow bluetoothWindow
+    :monitor 0
+    :class "bluetoothWindow"
+    :geometry (geometry
+        :x "5px"
+        :y "5px"
+        :vexpand true
+        :anchor "bottom left"
+    )
+    (box
+        :space-evenly false
+        :orientation "v"
+        (bluetoothDevices)
+    )
+)
+
+(defwindow bluetoothWindowCloser
+    :monitor 0
+    :geometry (geometry
+        :width "100%"
+        :height "100%"
+    )
+    (eventbox
+        :class "bluetoothWindowCloser"
+        :onclick "$HOME/.config/hypr/scripts/bluetooth/toggleBluetoothMenu.sh"
+    )
+)
+
+(defwidget bluetoothDevices []
+    (box
+        :orientation "v"
+        :space-evenly false
+        :valign "start"
+        :halign "center"
+        (bluetoothDevice
+            :visible bluetoothDevice1Visible
+            :name bluetoothDevice1Name
+            :connected bluetoothDevice1Connected
+        )
+        (bluetoothDevice
+            :visible bluetoothDevice2Visible
+            :name bluetoothDevice2Name
+            :connected bluetoothDevice2Connected
+        )
+        (bluetoothDevice
+            :visible bluetoothDevice3Visible
+            :name bluetoothDevice3Name
+            :connected bluetoothDevice3Connected
+        )
+        (bluetoothDevice
+            :visible bluetoothDevice4Visible
+            :name bluetoothDevice4Name
+            :connected bluetoothDevice4Connected
+        )
+        (bluetoothDevice
+            :visible bluetoothDevice5Visible
+            :name bluetoothDevice5Name
+            :connected bluetoothDevice5Connected
+        )
+        (bluetoothDevice
+            :visible bluetoothDevice6Visible
+            :name bluetoothDevice6Name
+            :connected bluetoothDevice6Connected
+        )
+        (bluetoothDevice
+            :visible bluetoothDevice7Visible
+            :name bluetoothDevice7Name
+            :connected bluetoothDevice7Connected
+        )
+        (bluetoothDevice
+            :visible bluetoothDevice8Visible
+            :name bluetoothDevice8Name
+            :connected bluetoothDevice8Connected
+        )
+        (bluetoothDevice
+            :visible bluetoothDevice9Visible
+            :name bluetoothDevice9Name
+            :connected bluetoothDevice9Connected
+        )
+        (bluetoothDevice
+            :visible bluetoothDevice10Visible
+            :name bluetoothDevice10Name
+            :connected bluetoothDevice10Connected
+        )
+        (button
+            :class "bluetoothScanningIndicator"
+            :onclick "( flatpak run io.github.kaii_lb.Overskride & ) && $HOME/.config/hypr/scripts/bluetooth/toggleBluetoothMenu.sh"
+            "Settings"
+        )
+    )
+)

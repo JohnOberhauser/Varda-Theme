@@ -1,0 +1,9 @@
+(defpoll packages_update :interval "5m" "$HOME/.config/hypr/scripts/updates/checkUpdates.sh")
+
+(defwidget packageUpdates []
+    (button
+        :class "rightSideIcon"
+        :onclick "gtk-launch org.manjaro.pamac.manager &> /dev/null &"
+        packages_update
+    )
+)

@@ -1,0 +1,41 @@
+# A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
+# If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
+"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+
+[manager]
+
+prepend_keymap = [
+	{ on = "y",         run = [ '''
+							shell 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'
+							''', "yank"],                 	  desc = "Copy the selected files" },
+	{ on = "a",			run = ['''shell 'for path in "$@"; do aunpack "$path"; done' --confirm'''],	desc = "Extract compressed file" },
+	{ on = "w", 		run = ['''
+							shell '$HOME/.config/hypr/scripts/hyprpaper/setWallpaper.sh $@'
+							'''], 				 desc = "Show task manager" },
+	# Tasks (used to be w)
+	{ on = "T", 				run = "tasks_show", 					desc = "Show task manager" },
+
+	# Trash manager
+	{ on = [ "e", "t" ], 		run = "shell 'yes | trash-empty'", 		desc = "Empty trash" },
+
+	# New files (used to be a)
+	{ on = [ "n", "f" ],		run = "create",        					desc = "Create a new file" },
+	{ on = [ "n", "d" ], 		run = "create --dir",       			desc = "Create a new directory" },
+
+	# Go to
+	{ on = [ "g", "c" ],       	run = "cd ~/.config",     				desc = "Go to the config directory" },
+	{ on = [ "g", "d" ],       	run = "cd ~/Downloads",   				desc = "Go to the downloads directory" },
+	{ on = [ "g", "e" ],       	run = "cd /etc",          				desc = "Go to the etc directory" },
+	{ on = [ "g", "h" ],       	run = "cd ~",             				desc = "Go to the home directory" },
+	{ on = [ "g", "m" ],	   	run = "cd /run/media/john",				desc = "Go to mounted external media" },
+	{ on = [ "g", "p" ],       	run = "cd ~/Pictures",   				desc = "Go to the pirctures directory" },
+	{ on = [ "g", "t" ],       	run = "cd ~/.local/share/Trash/files",  desc = "Go to the Trash directory" },
+	{ on = [ "g", "v" ],       	run = "cd ~/Videos",  					desc = "Go to the videos directory" },
+	{ on = [ "g", "V" ],       	run = "cd ~/workspace/Varda-Theme",  	desc = "Go to the Varda-Theme directory" },
+	{ on = [ "g", "w" ],       	run = "cd ~/workspace",  				desc = "Go to the workspace directory" },
+	{ on = [ "g", "/" ],       	run = "cd /",          					desc = "Go to the root directory" },
+	{ on = [ "g", "<Space>" ], 	run = "cd --interactive", 				desc = "Go to a directory interactively" },
+
+	# Removed default keybinds
+	{ on = [ "g", "g"],			run = "noop"}
+]

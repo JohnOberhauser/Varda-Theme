@@ -1,0 +1,23 @@
+[[themes]]
+name = "varda"
+[themes.palette]
+black = "black"
+red = "red"
+green = "blue"
+yellow = "blue"
+blue = "blue"
+magenta = "blue"
+cyan = "blue"
+white = "white"
+bright_black = "bright_black"
+bright_red = "bright_red"
+bright_green = "bright_blue"
+bright_yellow = "bright_blue"
+bright_blue = "bright_blue"
+bright_magenta = "bright_blue"
+bright_cyan = "bright_blue"
+bright_white = "bright_white"
+[themes.component_style]
+playback_status = { fg = "White" }
+playback_metadata = { fg = "White" }
+border = { fg = "BrightBlack" }

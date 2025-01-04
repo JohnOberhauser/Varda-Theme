@@ -1,0 +1,29 @@
+(defvar volumeAlertPercent 0)
+(defvar volumeAlertLastUpdateTimeStamp 0)
+(defpoll volume_icon3 :interval "1h" :run-while false "$HOME/.config/hypr/scripts/audio/getVolumeIcon.sh")
+
+(defwidget volumeAlert []
+    (box
+        
+        :space-evenly false
+        :orientation "h"
+        (label
+            :class "volumeAlertIcon"
+            :text volume_icon3
+        )
+        (box
+            :class "volumeAlertBox2"
+            :orientation "v"
+            :space-evenly false
+            :valign "center"
+            (label
+                :text "Volume"
+                :xalign 0
+            )
+            (progress
+                :class "volumeAlertProgress"
+                :value volumeAlertPercent
+            )
+        )
+    )
+)

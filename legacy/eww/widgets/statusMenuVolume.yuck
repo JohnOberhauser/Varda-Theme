@@ -1,0 +1,57 @@
+(defpoll volume_percent2 :initial 100 :interval "1h" :run-while false "$HOME/.config/hypr/scripts/audio/getVolumePercent.sh")
+(defpoll mic_volume_percent2 :initial 100 :interval "1h" "$HOME/.config/hypr/scripts/audio/getMicVolumePercent.sh")
+(defpoll volume_icon2 :interval "1h" :run-while false "$HOME/.config/hypr/scripts/audio/getVolumeIcon.sh")
+
+(defwidget statusMenuVolume []
+    (box
+        :class "statusMenuVolumeContainer"
+        :orientation "v"
+        :halign "center"
+        :valign "center"
+        :space-evenly false
+        (box
+            :class "statusMenuVolumeInnerContainer"
+            :orientation "h"
+            :space-evenly false
+            (button
+                :class "statusMenuVolumeIcon"
+                :valign "center"
+                :halign "center"
+                :onclick "$HOME/.config/hypr/scripts/audio/swapOutput.sh"
+                volume_icon2
+            )
+            (scale
+                :class "statusMenuVolumeProgress"
+                :orientation "h"
+                :valign "center"
+                :halign "center"
+                :value volume_percent2
+                :flipped false
+                :width 200
+                :onchange "$HOME/.config/hypr/scripts/audio/changeVolume.sh value {}%"
+            )
+
+        )
+        (box
+            :class "statusMenuVolumeInnerContainer"
+            :orientation "h"
+            :space-evenly false
+            (button
+                :class "statusMenuVolumeIcon"
+                :valign "center"
+                :halign "center"
+                ""
+            )
+            (scale
+                :class "statusMenuVolumeProgress"
+                :orientation "h"
+                :valign "center"
+                :halign "center"
+                :value mic_volume_percent2
+                :flipped false
+                :width 200
+                :onchange "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ {}%"
+            )
+        )
+    )
+)

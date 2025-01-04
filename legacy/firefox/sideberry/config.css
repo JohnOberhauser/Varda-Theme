@@ -1,0 +1,144 @@
+#root.root {--frame-el-overlay-selected-border: #52677Cff;}
+#root.root {--nav-btn-accent: #52677Cff;}
+#root.root {--status-ok: #257B76ff;}
+#root.root {--status-err: #733447ff;}
+#root.root {--accent: #52677Cff;}
+#root.root {--status-active: #52677Cff;}
+#root.root {--status-notice: #52677Cff;}
+#root.root {--scroll-progress-bg: #52677Cff;}
+#root.root {--toolbar-el-overlay-selected-border: #52677Cff;}
+/* Adjust styles according to sidebar width */
+@media screen and (max-width: 49px) {
+    #root {
+        --tabs-indent: unset;
+    }
+    .ScrollBox > .scroll-container {
+        overflow: hidden;
+    }
+    .Tab .audio {
+        display: none;
+    }
+    .Tab .title {
+        visibility: collapse;
+    }
+    .PinnedTab .title {
+        visibility: collapse;
+    }
+}
+
+@media screen and (min-width: 49px) {
+    .Tab .audio {
+        left: 28px;
+    }
+}
+
+/*
+* Root variables
+*/
+
+#root {
+    --tabs-height: 43px;
+    --nav-btn-width: 48px;
+    --nav-btn-activated-bg: #0C0E11;
+    --tabs-inner-gap: 8px;
+}
+
+/* Background layer */
+
+.Tab {
+    margin: 0 4px;
+    width: unset;
+}
+.PinnedTab {
+    margin: 0 4px;
+    width: unset;
+}
+.Tab .lvl-wrapper:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: calc(100% - 5px);
+    border-radius: 4px;
+    z-index: -1;
+}
+
+/* Reset default styles */
+.Tab:hover,
+.Tab:active,
+.Tab[data-active],
+.Tab[data-active]:active,
+.Tab[data-selected],
+.Tab[data-selected]:hover,
+.Tab[data-selected]:active {
+    background: transparent;
+
+}
+
+/* Reapply styles */
+
+.Tab:hover .lvl-wrapper:after {
+    background-color: var(--tabs-bg-hover);
+}
+
+.Tab:active .lvl-wrapper:after,
+.Tab[data-active]:active .lvl-wrapper:after {
+    background-color: var(--tabs-bg-active);
+}
+
+.Tab[data-active] .lvl-wrapper:after {
+    background-color: var(--tabs-activated-bg);
+}
+
+
+.Tab[data-selected] .lvl-wrapper:after {
+    background-color: var(--tabs-selected-bg);
+}
+
+/* Resize and reposition favicons */
+.Tab .fav {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+.Tab[data-active] .fav {
+    opacity: 1;
+}
+
+.Tab .placeholder > svg {
+    width: 18px;
+    height: 18px;
+}
+
+.Tab .fav,
+.Tab .placeholder,
+.Tab .t-box {
+    margin-bottom: -2px;
+}
+
+.PinnedTab {
+    height: 48px;
+    border-radius: 4px;
+}
+
+.PinnedTab .fav {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+.PinnedTab[data-active] .fav {
+    opacity: 1;
+}
+
+#root[data-pinned-tabs-position="panel"][data-pinned-tabs-list] .PinnedDock .to-the-end {
+    background: #ffffff;
+    height: 1px;
+    opacity: 0.2;
+}
+.NavigationBar .panel-btn[data-active="true"] {
+    background-color: transparent;
+}

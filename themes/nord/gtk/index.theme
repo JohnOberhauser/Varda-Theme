@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=SystemTheme
+Comment=An Flat Gtk+ theme based on Elegant Design
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=SystemTheme
+MetacityTheme=SystemTheme
+ButtonLayout=close,minimize,maximize:menu

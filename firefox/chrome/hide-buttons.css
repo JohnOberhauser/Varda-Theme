@@ -1,0 +1,58 @@
+/*
+
+B U T T O N S
+
+Here you can comment if you want your buttons to be showed up!
+
+*/
+
+/* This one is the forward button  */
+#forward-button {
+    display: none !important;
+}
+
+/* This one is the back button  */
+#back-button {
+    display: none !important;
+}
+
+.titlebar-buttonbox-container {
+    display:none
+}
+
+/* This one is the spacer between tabs and border  */
+.titlebar-spacer {
+    display: none !important;
+}
+
+/* This one is the "shield" icon  */
+/*#tracking-protection-icon-container {*/
+/*    display: none !important;*/
+/*}*/
+
+/* This one clears the tabs icon when they're not pinned  */
+.tabbrowser-tab:not([selected="true"]) .tab-icon-image {
+    /*display: none !important;*/
+filter: grayscale(70%);
+}
+
+/* Removing the zoom button  */
+#urlbar-zoom-button {
+    display: none !important;
+}
+
+/* Page action (right three dash button)  */
+#pageActionButton {
+    display: none !important;
+}
+
+#alltabs-button {
+    display: none !important;
+}
+
+/*
+hide update badge (little circle that indicates there is an update)
+*/
+.toolbarbutton-badge {
+    display: none !important;
+}

@@ -1,0 +1,19 @@
+(include "./widgets/weather.yuck")
+
+(defwindow calendarWindow
+    :monitor 0
+    :geometry (geometry
+        :x "0%"
+        :y "10px"
+        :width "350px"
+        :height "310px"
+        :anchor "top center"
+    )
+    (box
+        :class "calendar"
+        :space-evenly false
+        :orientation "v"
+        (calendar)
+        (weather)
+    )
+)

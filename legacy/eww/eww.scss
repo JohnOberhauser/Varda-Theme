@@ -1,0 +1,377 @@
+.bar_class {
+    background-color: #0C0E11;
+    border-radius: 8px;
+    border-color: #52677C;
+    border-width: 2px;
+    border-style: solid;
+    margin: 5px;
+}
+
+.sidebar .topbar {
+    background-color: transparent;
+}
+
+.workspace_button {
+    background-color: transparent;
+    color: #D0EBEE;
+    padding: 4px 2px 4px 0px;
+}
+
+.rightSideModule {
+    background: transparent;
+}
+
+.rightSideIcon {
+    background: transparent;
+    color: #D0EBEE;
+    padding: 0px 15px 0px 15px;
+}
+
+.verticalIcon {
+    background: transparent;
+    color: #D0EBEE;
+    padding: 5px 0px 5px 0px;
+}
+
+.verticalIconMovedLeft {
+    background: transparent;
+    color: #D0EBEE;
+    padding: 5px 2px 5px 0px;
+}
+
+.verticalIconMovedLeftAndUp {
+    background: transparent;
+    color: #D0EBEE;
+    padding: 10px 2px 10px 0px;
+}
+
+.updateUrgent {
+    background: transparent;
+    color: #733447;
+    padding: 5px 0px 5px 0px;
+}
+
+.updateNormal {
+    background: transparent;
+    color: #D0EBEE;
+    padding: 5px 0px 5px 0px;
+}
+
+.volbar {
+    margin-right:20px;
+}
+
+.volbar slider {
+    box-shadow: 0 0 0 2px #D0EBEE inset;
+}
+
+.volbar trough highlight {
+    background: #D0EBEE;
+    border-radius: 10px;
+    padding-left: 100px;
+}
+
+.powerOptionsContainer {
+    background-color: transparent;
+    border-radius: 16px;
+}
+
+.power_option {
+    background: transparent;
+    margin: 20px 5px 20px 5px;
+    padding: 10px 20px 10px 20px;
+    color: #D0EBEE;
+    font-size: 25px;
+    border-radius: 16px;
+}
+
+.clock {
+    background: transparent;
+    color: #D0EBEE;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.clockVertical {
+    background: transparent;
+    color: #D0EBEE;
+    font-weight: bold;
+}
+
+.dateContainer {
+    margin: 10px;
+}
+
+.dayText {
+    font-size: 20px;
+}
+
+.dateText {
+    font-size: 26px;
+}
+
+.weatherContainer {
+    margin: 10px;
+}
+
+.weatherLabel {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.weather {
+    font-size: 14px;
+    font-weight: bold; 
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.weatherIcon {
+    font-size: 32px;
+}
+
+.weatherDescription {
+
+}
+
+.weatherTemp {
+    font-size: 26px;
+}
+
+.weatherWind {
+
+}
+
+.sunsetIcon {
+    font-size: 26px;
+}
+
+.sunsetText {
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sunriseText {
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.calendar {
+    background-color: #0C0E11;
+    border-radius: 4px;
+    border-color: #52677C;
+    border-width: 2px;
+    border-style: solid;
+    font-weight: bold;
+}
+
+.statusMenuWindow {
+    background-color: #0C0E11;
+    border-radius: 8px;
+    border-color: #52677C;
+    border-width: 2px;
+    border-style: solid;
+    font-weight: bold;
+}
+
+.calendarContainer {
+    margin: 10px;
+    border-color: #52677C;
+    border-width: 1px;
+    border-style: none;
+    border-radius: 16px;
+}
+
+.realCalendar {
+    border-color: transparent;
+    border-radius: 16px;
+}
+
+.volumeAlertWindow {
+    background-color: #0C0E11;
+    border-radius: 8px;
+    border-color: #52677C;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.volumeAlert {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.volumeAlertBox2 {
+    margin-left: 10px;
+}
+
+.volumeAlertProgress {
+    margin-top: 10px;
+}
+
+.volumeAlertProgress trough {
+    background: #141619;
+}
+
+.volumeAlertProgress trough progress {
+    background: #D0EBEE;
+}
+
+.volumeAlertIcon {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 50px;
+}
+
+.mediaControlsContainer {
+    background-color: transparent;
+    padding: 20px 10px 10px 10px;
+    border-color: #52677C;
+    border-width: 1px;
+    border-style: none;
+    border-radius: 16px;
+}
+
+.mediaInfo {
+    margin-bottom: 10px;
+}
+
+.mediaProgress {
+
+}
+
+.mediaProgress trough {
+    min-height: 8px;
+    border-radius: 16px;
+    background: #141619;
+}
+
+.mediaProgress trough slider {
+    all: unset;
+}
+
+.mediaProgress trough highlight {
+    min-height: 8px;
+    border-radius: 16px;
+    background: #D0EBEE;
+}
+
+.trackArtist {
+
+}
+
+.trackTitle {
+
+}
+
+.mediaControlsButton {
+    font-size: 30px;
+    min-width: 30px;
+    background-color: transparent;
+    border-radius: 16px;
+}
+
+.mediaControlsButtonMinor {
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 16px;
+}
+
+.machineStatsContainer{
+    background-color: transparent;
+    margin: 10px 5px 10px 10px;
+    padding: 10px;
+    border-color: #52677C;
+    border-width: 1px;
+    border-style: none;
+    border-radius: 16px;
+}
+
+.statsCircle {
+    background-color: #141619;
+    margin-bottom: 20px;
+}
+
+.statsText {
+    font-size: 20px;
+}
+
+.statusMenuVolumeContainer {
+    background-color: transparent;
+    margin: 10px;
+    padding: 10px 10px 0px 0px;
+    border-color: #52677C;
+    border-width: 1px;
+    border-style: none;
+    border-radius: 16px;
+}
+
+.statusMenuVolumeIcon {
+    background-color: transparent;
+    min-width: 30px;
+    font-size: 25px;
+    margin: -10px 10px -10px 0px;
+    border-radius: 16px;
+    padding: 10px 15px 10px 15px;
+}
+
+.statusMenuVolumeProgress trough {
+    background: #141619;
+    min-height: 8px;
+    border-radius: 16px;
+}
+.statusMenuVolumeProgress trough slider {
+    all: unset;
+}
+
+.statusMenuVolumeProgress trough highlight {
+    min-width: 8px;
+    border-radius: 16px;
+    background: #D0EBEE;
+}
+
+.statusMenuVolumeInnerContainer {
+    margin: 10px;
+}
+
+.systemMenuWindow {
+    background-color: #0C0E11;
+    border-radius: 8px;
+    border-color: #52677C;
+    border-width: 2px;
+    border-style: solid;
+    font-weight: bold;
+}
+
+.systemMenuWindowCloser {
+    background-color: transparent;
+}
+
+.statusMenuWindowCloser {
+    background-color: transparent;
+}
+
+.bluetoothWindowCloser {
+    background-color: transparent;
+}
+
+.bluetoothWindow {
+    background-color: #0C0E11;
+    border-radius: 4px;
+    border-color: #52677C;
+    border-width: 2px;
+    border-style: solid;
+    font-weight: bold;
+}
+
+.bluetoothDeviceContainer {
+    padding: 10px 10px 10px 10px;
+}
+
+.bluetoothScanningIndicator {
+    margin: 10px 10px 10px 10px;
+    min-height: 30px;
+}

@@ -1,0 +1,37 @@
+
+// Config -----------------------------------
+//@syntax-hue-real:          216;
+@syntax-saturation-real:   17.2%;
+@syntax-lightness-real:   5.7%;
+@syntax-hue:          216;
+@syntax-saturation:   55%;
+@syntax-saturation-l:   37.9%;
+@syntax-lightness:   2.5%;
+@syntax-value:   3.4%;
+
+// Monochrome -----------------------------------
+@mono-1:  hsl(@syntax-hue, 14%, 86%); // default text
+@mono-2:  hsl(@syntax-hue,  7%, 74%);
+@mono-3:  hsl(@syntax-hue,  9%, 50%);
+
+// Colors -----------------------------------
+@hue-1:   hsl(29, 50%, 56%); // <- peach/orange
+@hue-2:   hsl(210, 20%, 40%); // <-blue
+@hue-3:   hsl(228, 15%, 31%); // <-purple
+@hue-4:   hsl(177, 54%, 31%); // <-green
+
+@hue-5:   hsl(342, 38%, 33%); // <-red 1
+@hue-5-2: hsl(342, 38%, 33%); // <-red 2
+
+@hue-6:   hsl(29, 50%, 56%); // <- peach/orange
+@hue-6-2: hsl(29, 50%, 56%); // <- peach/orange
+
+
+// Base colors -----------------------------------
+@syntax-fg:     @mono-1;
+//@syntax-fg:     hsl(@syntax-hue, @syntax-saturation, @syntax-lightness);
+// @syntax-bg:     hsv(@syntax-hue, @syntax-saturation, @syntax-value);
+@syntax-bg:     hsl(@syntax-hue, @syntax-saturation-real, @syntax-lightness-real);
+@syntax-gutter: darken(@syntax-fg, 26%); // gutter text
+@syntax-guide:  fade(@syntax-fg, 15%);
+@syntax-accent: @hue-5-2;

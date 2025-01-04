@@ -1,0 +1,13 @@
+(defwidget bluetoothBarButton [?text class]
+    (box
+        :class "${class}"
+        :space-evenly "true"
+        :orientation "h"
+        :spacing "0"
+        (button
+            :class "${class}"
+            :onclick "$HOME/.config/hypr/scripts/bluetooth/toggleBluetoothMenu.sh"
+            "󰂯"
+        )
+    )
+)

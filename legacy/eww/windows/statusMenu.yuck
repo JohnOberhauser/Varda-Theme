@@ -1,0 +1,40 @@
+(include "./widgets/weather.yuck")
+(include "./widgets/calendar.yuck")
+(include "./widgets/date.yuck")
+
+(defwindow statusMenuWindow
+    :class "statusMenuWindow"
+    :monitor 0
+    :geometry (geometry
+        :x "5px"
+        :y "5px"
+        :anchor "bottom left"
+    )
+    (box
+        :halign "center"
+        :valign "center"
+        :space-evenly false
+        :orientation "v"
+        (date)
+        (box
+            :orientation "v"
+            :halign "center"
+            :valign "center"
+            :space-evenly false
+            (weather)
+            (calendarContainer)
+        )
+    )
+)
+
+(defwindow statusMenuWindowCloser
+    :monitor 0
+    :geometry (geometry
+        :width "100%"
+        :height "100%"
+    )
+    (eventbox
+        :class "statusMenuWindowCloser"
+        :onclick "$HOME/.config/hypr/scripts/statusMenu/toggleStatusMenu.sh"
+    )
+)

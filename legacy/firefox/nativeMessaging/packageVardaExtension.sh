@@ -1,0 +1,1 @@
+7z a -tzip varda.xpi ./vardaExtension/*

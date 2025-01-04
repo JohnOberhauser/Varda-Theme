@@ -1,0 +1,47 @@
+@import "colors.css";
+
+/*
+
+V A R I A B L E S
+
+Here you can change the opacity level and the main color of the browser. Also the color of the selections (When you select text)
+
+*/
+
+:root {
+    --urlbar-width:40vw;
+}
+
+/*
+G E N E R A L
+*/
+
+window,
+#main-window,
+#toolbar-menubar,
+#TabsToolbar,
+#PersonalToolbar,
+#navigator-toolbox,
+#sidebar-box,
+#tabbrowser-tabpanels,
+#nav-bar {
+    background-color: var(--bg-color) !important;
+    -moz-appearance: none !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#nav-bar {
+    margin-left: 10px !important;
+}
+
+::selection {
+    background-color: var(--fg-color);
+    /* Text color of your selection */
+    color: #141414;
+}
+
+.toolbarbutton-1 {
+    fill: var(--fg-color) !important;
+}

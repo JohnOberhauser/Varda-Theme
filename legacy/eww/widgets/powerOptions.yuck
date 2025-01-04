@@ -1,0 +1,37 @@
+(defvar power_options_reveal false)
+
+(defwidget powerOptions []
+    (eventbox
+        :onhover "${eww} update power_options_reveal=true"
+        :onhoverlost "${eww} update power_options_reveal=false"
+        (box
+            :class "powerOptionsContainer"
+            :space-evenly "false"
+            :orientation "h"
+            :spacing "0"
+            :halign "center"
+            (box
+                (button
+                    :class "power_option"
+                    :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh && hyprctl dispatch exit 0"
+                    "󰍃"
+                )
+                (button
+                    :class "power_option"
+                    :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh && $HOME/.config/hypr/scripts/powerOptions/lock.sh &> /dev/null &"
+                    ""
+                )
+                (button
+                    :class "power_option"
+                    :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh && reboot"
+                    ""
+                )
+                (button
+                    :class "power_option"
+                    :onclick "$HOME/.config/hypr/scripts/systemMenu/toggleSystemMenu.sh && shutdown now"
+                    "⏻"
+                )
+            )
+        )
+    )
+)

@@ -1,0 +1,16 @@
+(defvar battery_icon_visible false)
+(defvar battery_icon "󰁹")
+
+(defwidget battery [?text class]
+    (box
+        :class "${class}"
+        :visible battery_icon_visible
+        :space-evenly "true"
+        :orientation "h"
+        :spacing "0"
+        (button
+            :class "${class}"
+            battery_icon
+        )
+    )
+)

@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Hyprland X
+Exec=/usr/local/bin/hyprland-wrapper.sh
+Type=Application

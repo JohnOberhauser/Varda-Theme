@@ -1,0 +1,55 @@
+@use "../variables" as vars;
+
+.iconButton {
+  all: unset;
+  background-color: vars.$bg;
+  color: vars.$fg;
+  padding: 4px 4px 4px 2px;
+  border: none;
+  min-height: 25px;
+  min-width: 30px;
+  border-radius: 8px;
+}
+
+.iconButton:hover {
+  background-color: vars.$bgHover;
+}
+
+.warningIconButton {
+  all: unset;
+  background-color: vars.$bg;
+  color: vars.$warning;
+  padding: 4px 4px 4px 2px;
+  border: none;
+  min-height: 25px;
+  min-width: 30px;
+  border-radius: 8px;
+}
+
+.warningIconButton:hover {
+  background-color: vars.$bgHover;
+}
+
+.primaryButton {
+  all: unset;
+  background-color: vars.$buttonPrimary;
+  color: vars.$fg;
+  border-radius: 8px;
+  padding: 4px 8px 4px 8px;
+}
+
+.primaryButton:hover {
+  background-color: vars.$bgHover;
+}
+
+.transparentButton {
+  all: unset;
+  background-color: transparent;
+  color: vars.$fg;
+  border-radius: 8px;
+  padding: 4px 8px 4px 8px;
+}
+
+.transparentButton:hover {
+  background-color: vars.$bgHover;
+}

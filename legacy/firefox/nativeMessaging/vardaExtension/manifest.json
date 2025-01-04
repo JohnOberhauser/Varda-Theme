@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Varda",
+  "version": "1.0",
+  "permissions": ["nativeMessaging"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "applications": {
+    "gecko": {
+      "id": "varda@obez.io",
+      "strict_min_version": "120.0"
+    }
+  }
+}

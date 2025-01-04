@@ -1,0 +1,9 @@
+{
+  "name": "io.obez.varda_native_host",
+  "description": "Native messaging host for UI reload",
+  "path": "/home/john/workspace/Varda-Theme/firefox/nativeMessaging/nativeMessaging.sh",
+  "type": "stdio",
+  "allowed_extensions": [
+    "varda@obez.io"
+  ]
+}

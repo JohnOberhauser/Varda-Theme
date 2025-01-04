@@ -1,0 +1,42 @@
+/*
+SOUND - ICON
+*/
+
+/** Sound Tab - Hide Label **************************************************/
+.tab-secondary-label:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture]){
+    display: none !important;
+}
+
+/** Sound Tab - Show with Favicons ******************************************/
+/* Makes the favicons always visible (also on hover) */
+.tab-icon-image:not([pinned]){
+    opacity: 1 !important
+}
+
+/* Makes the speaker icon always appear if the tab is playing (not only on hover) */
+.tab-icon-overlay:not([crashed]),
+.tab-icon-overlay[pinned][crashed][selected] {
+    /* Position */
+    top: -3.5px !important;
+    inset-inline-end: -9px !important;
+    z-index: 1 !important;
+
+    /* Shape */
+    padding: 1.5px !important;
+    border-radius: 10px !important;
+    width:  17px !important;
+    height: 17px !important;
+}
+
+.tab-icon-overlay:not([sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+    /* Color */
+    color:  currentColor !important;
+    stroke: transparent !important;
+    background: transparent !important;
+    fill-opacity: 0.8 !important;
+    opacity: 1 !important;
+}
+
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+    margin-inline-end: 9.5px !important;
+}

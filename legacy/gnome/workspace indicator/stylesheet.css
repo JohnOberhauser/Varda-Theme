@@ -1,0 +1,39 @@
+.desktop-label-nonempty-active {
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-top: 0px;
+  background-color: #D0EBEE;
+  color: #0C0E11;
+  border: 1px solid #D0EBEE;
+  border-radius: 2px;
+}
+
+.desktop-label-nonempty-inactive {
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-top: 0px;
+  background-color: #0C0E11;
+  color: #D0EBEE;
+  border: 1px solid #D0EBEE;
+  border-radius: 2px;
+}
+
+.desktop-label-empty-active {
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-top: 0px;
+  background-color: #D0EBEE;
+  color: #0C0E11;
+  border: 1px solid #D0EBEE;
+  border-radius: 2px;
+}
+
+.desktop-label-empty-inactive {
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-top: 0px;
+  background-color: #0C0E11;
+  color: #D0EBEE;
+  border: 1px solid #D0EBEE;
+  border-radius: 2px;
+}
