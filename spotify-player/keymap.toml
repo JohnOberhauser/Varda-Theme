@@ -7,3 +7,15 @@ key_sequence = "space"
 [[keymaps]]
 command = "ShowActionsOnCurrentTrack"
 key_sequence = "C-space"
+[[keymaps]]
+command = "PreviousTrack"
+key_sequence = ","
+[[keymaps]]
+command = "NextTrack"
+key_sequence = "."
+[[keymaps]]
+command = "ResumePause"
+key_sequence = "p"
+[[keymaps]]
+command = "CreatePlaylist"
+key_sequence = "n"
