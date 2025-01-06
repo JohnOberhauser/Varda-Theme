@@ -12,7 +12,12 @@
     display: none !important;
 }
 
-#identity-box {
+#identity-box > * {
+    background: var(--bg-color) !important;
+    fill: var(--fg-color) !important;
+}
+
+#identity-icon-box {
     display: none;
 }
 
