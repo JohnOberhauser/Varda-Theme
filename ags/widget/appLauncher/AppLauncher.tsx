@@ -28,7 +28,8 @@ function AppButton({ app, isSelected, indexInList, selectedIndexVariable }: AppB
         canFocus={false}
         className={isSelected ? "selectedAppButton" : "appButton"}
         onHover={() => {
-            selectedIndexVariable.set(indexInList)
+            // Uncomment to select the hovered app.
+            // selectedIndexVariable.set(indexInList)
         }}
         onClicked={() => {
             hide()

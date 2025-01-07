@@ -1,5 +1,5 @@
 theme = "varda"
-client_id = "65b708073fc0480ea92a077233ca87bd"
+client_id = "657a33b23cba437787e4111bd482769e"
 client_port = 8080
 login_redirect_uri = "http://127.0.0.1:8989/login"
 playback_format = """
