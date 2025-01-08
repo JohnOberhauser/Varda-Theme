@@ -10,6 +10,12 @@ networkmanager \
 network-manager-applet \
 greetd \
 greetd-tuigreet \
+hyprland \
+hypridle \
+hyprpaper \
+hyprlock \
+hyprpicker \
+xdg-desktop-portal-hyprland \
 flatpak \
 base-devel \
 bluez \
