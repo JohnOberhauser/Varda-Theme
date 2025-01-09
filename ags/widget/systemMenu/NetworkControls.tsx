@@ -49,7 +49,7 @@ function updateConnections() {
 
             const vpnNames = value
                 .split("\n")
-                .filter((line) => line.includes("vpn"))
+                .filter((line) => line.includes("vpn") || line.includes("wireguard"))
                 .map((line) => line.split(":")[0].trim())
                 .sort((a, b) => {
                     if (a > b) {
@@ -93,7 +93,7 @@ function updateConnections() {
 
                     const vpnNames = value
                         .split("\n")
-                        .filter((line) => line.includes("vpn"))
+                        .filter((line) => line.includes("vpn") || line.includes("wireguard"))
                         .map((line) => line.split(":")[0].trim())
                         .filter((line) => !activeVpnConnections.get().includes(line))
                         .sort((a, b) => {

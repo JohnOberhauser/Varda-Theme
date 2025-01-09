@@ -42,7 +42,8 @@ alias theme='function _theme() { ~/workspace/Varda-Theme/themes/setTheme.sh "$1"
 alias wallpaper='function _wallpaper() { ~/workspace/Varda-Theme/hypr/scripts/hyprpaper/setWallpaper.sh "$1" }; _wallpaper'
 alias cd=z
 alias spt=spotify_player
-alias addvpn='function _vpn() { ~/workspace/Varda-Theme/setup/scripts/addVpnConnection.sh "$1" "$2" "$3" }; _vpn'
+alias addovpn='function _vpn() { ~/workspace/Varda-Theme/setup/scripts/addVpnConnection.sh "$1" "$2" "$3" }; _vpn'
+alias addwg='function _wg() { ~/workspace/Varda-Theme/setup/scripts/addWireguardConnection.sh "$1" }; _wg'
 
 # firefox alias
 alias tryf='./mach try --preset fenix'
