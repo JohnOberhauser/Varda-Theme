@@ -12,11 +12,6 @@
     display: none !important;
 }
 
-#identity-box > * {
-    background: var(--bg-color) !important;
-    fill: var(--fg-color) !important;
-}
-
 #identity-icon-box {
     display: none;
 }
@@ -28,6 +23,15 @@
 /**
  Colors
  */
+
+#identity-box > * {
+    background: var(--bg-color) !important;
+    fill: var(--fg-color) !important;
+}
+
+#webrtc-sharing-icon {
+    fill: var(--fg-color) !important;
+}
 
 #urlbar-background {
     background: var(--bg-color) !important;

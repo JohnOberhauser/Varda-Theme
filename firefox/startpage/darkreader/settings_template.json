@@ -36,7 +36,8 @@
         "www.twitch.tv",
         "discord.com",
         "open.spotify.com",
-        "reddit.com"
+        "reddit.com",
+        "app.zoom.us"
     ],
     "disabledFor": [],
     "changeBrowserTheme": false,
