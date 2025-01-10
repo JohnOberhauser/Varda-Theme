@@ -14,3 +14,7 @@ if [[ -z $FILE ]]; then
 fi
 
 nmcli c i type wireguard file "$1"
+
+# disable auto connect
+CON_NAME=$(basename "$FILE" .conf)
+nmcli c modify "$CON_NAME" connection.autoconnect no
