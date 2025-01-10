@@ -59,7 +59,7 @@ firefox_theme() {
 cursor_theme() {
   rm -rf $HOME/.icons/systemCursor/cursors
   cp -r ./themes/$1/cursor/cursors $HOME/.icons/systemCursor/
-  ./setup/scripts/setCursor.sh
+  ./themes/setCursor.sh
 }
 
 gtk() {

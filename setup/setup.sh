@@ -2,11 +2,11 @@
 
 ./scripts/install.sh
 ./scripts/installFirefoxNightly.sh
-./scripts/setupYay.sh
+./scripts/installYay.sh
 ./scripts/installFromAur.sh
 ./scripts/installSpotify.sh
-./scripts/foldersAndSymLinks.sh
-./scripts/zshSetup.sh
+./scripts/setupFoldersAndSymLinks.sh
+./scripts/setupZsh.sh
 ./scripts/startServices.sh
 ./scripts/setupUfw.sh
 ./scripts/setupCursor.sh

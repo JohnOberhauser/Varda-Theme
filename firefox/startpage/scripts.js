@@ -44,8 +44,8 @@ const bookmarks = [
   {"id":"qjTUGL2OWFspQmm2","label":"Video","bookmarks":[
       {"id":"pZDB2ilcq8t0m6eW","label":"YouTube","url":"https://www.youtube.com/"},
       {"id":"5YRKKQap76zg1ZxO","label":"Jellyfin","url":"http://192.168.50.158:8096"},
-      {"id":"ereuzztrzJbI0lqk","label":"Netflix","url":"https://www.netflix.com/browse"},
-      {"id":"R37Y4hMSIvTGhRmy","label":"Max","url":"https://play.max.com/"}
+      {"id":"ereuzztrzJbI0lqk","label":"Twitch","url":"https://www.twitch.tv/"},
+      {"id":"R37Y4hMSIvTGhRmy","label":"Prime","url":"https://www.amazon.com/gp/video/storefront"}
     ]
   },
   {"id":"qjTUGL2OWFspQm11","label":"Other","bookmarks":[
