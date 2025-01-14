@@ -28,3 +28,7 @@ Sidebar
 button {
     color: var(--fg-color) !important;
 }
+
+.tab-close-button {
+    display: none !important;
+}
