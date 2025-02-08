@@ -52,7 +52,7 @@ const bookmarks = [
       {"id":"pZDB2ilcq8t0m611","label":"Maps","url":"https://maps.google.com"},
       {"id":"5YRKKQap76zg1Z11","label":"Amazon","url":"https://www.amazon.com/"},
       {"id":"R37Y4hMSIvTGhR11","label":"ChatGPT","url":"https://chat.openai.com/"},
-      {"id":"ereuzztrzJbI0l11","label":"Spotify","url":"https://open.spotify.com/"}
+      {"id":"ereuzztrzJbI0l11","label":"Deepseek","url":"https://chat.deepseek.com/"}
     ]
   }
 ]
