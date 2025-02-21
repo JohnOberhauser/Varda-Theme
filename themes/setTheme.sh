@@ -133,6 +133,11 @@ android_studio() {
   sed -i "s/<laf themeId=\".*\" \/>/<laf themeId=\"io.obez.themes.$1\" \/>/" "$BASE_DIR/$RECENT_DIR/options/laf.xml"
 }
 
+darktable() {
+  mkdir -p $HOME/.config/darktable/
+  cp ./themes/$1/darktable/user.css $HOME/.config/darktable/
+}
+
 # Immediately visible first
 ags_theme $1
 hypr $1
@@ -147,3 +152,4 @@ firefox_theme $1
 zsh_theme $1
 intellij_idea $1
 android_studio $1
+darktable $1
