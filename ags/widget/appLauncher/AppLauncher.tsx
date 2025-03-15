@@ -50,7 +50,7 @@ function AppButton({ app, isSelected, indexInList, selectedIndexVariable }: AppB
 
 export default function () {
     const { CENTER } = Gtk.Align
-    const apps = new Apps.Apps()
+    let apps = new Apps.Apps()
 
     const selectedIndex = Variable(0)
     const text = Variable("")
@@ -109,6 +109,7 @@ export default function () {
         layer={Astal.Layer.TOP}
         application={App}
         onShow={() => {
+            apps = new Apps.Apps()
             text.set("")
             selectedIndex.set(0)
         }}

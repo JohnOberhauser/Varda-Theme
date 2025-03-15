@@ -220,7 +220,7 @@ function WifiConnections() {
                     vertical={true}>
                     <button
                         hexpand={true}
-                        className="iconButton"
+                        className="transparentButton"
                         onClicked={() => {
                             buttonsRevealed.set(!buttonsRevealed.get())
                         }}>
@@ -308,7 +308,7 @@ function WifiScannedConnections() {
                             vertical={false}>
                             <button
                                 hexpand={true}
-                                className="iconButton"
+                                className="transparentButton"
                                 onClicked={() => {
                                     passwordEntryRevealed.set(!passwordEntryRevealed.get())
                                 }}>
@@ -370,7 +370,7 @@ function VpnActiveConnections() {
                         vertical={true}>
                         <button
                             hexpand={true}
-                            className="iconButton"
+                            className="transparentButton"
                             onClicked={() => {
                                 buttonsRevealed.set(!buttonsRevealed.get())
                             }}>
@@ -447,7 +447,7 @@ function VpnConnections() {
                         vertical={true}>
                         <button
                             hexpand={true}
-                            className="iconButton"
+                            className="transparentButton"
                             onClicked={() => {
                                 buttonsRevealed.set(!buttonsRevealed.get())
                             }}>
