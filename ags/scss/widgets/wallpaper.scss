@@ -1,0 +1,17 @@
+@use "../variables" as vars;
+
+.wallpaper {
+  margin: 12px;
+  min-height: 150px;
+  min-width: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  border: 2px solid vars.$fg;
+  color: transparent;
+}
+
+.wallpaper:hover {
+  border: 2px solid vars.$primary;
+}
