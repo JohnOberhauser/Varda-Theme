@@ -5,7 +5,21 @@ import {bind, Variable} from "astal"
 import {SystemMenuWindowName} from "./SystemMenuWindow";
 
 const selectedThemeName = Variable(readFile("./themeName"))
-const files: Variable<string[]> = Variable([])
+const files: Variable<string[][]> = Variable([])
+const numberOfColumns = 2
+
+function chunkIntoColumns<T>(arr: T[], numCols: number): T[][] {
+    // Create numCols empty arrays
+    const columns: T[][] = Array.from({ length: numCols }, () => []);
+
+    // Distribute each item into the correct column
+    arr.forEach((item, i) => {
+        const colIndex = i % numCols;
+        columns[colIndex].push(item);
+    });
+
+    return columns;
+}
 
 function updateFiles() {
     execAsync(["bash", "-c", `ls /home/john/workspace/Varda-Theme/themes/${selectedThemeName.get()}/wallpaper`])
@@ -18,9 +32,12 @@ function updateFiles() {
             }
 
             files.set(
-                value
-                    .split("\n")
-                    .filter((line) => line.includes("jpg") || line.includes("png"))
+                chunkIntoColumns(
+                    value
+                        .split("\n")
+                        .filter((line) => line.includes("jpg") || line.includes("png")),
+                    numberOfColumns
+                )
             )
         })
 }
@@ -30,6 +47,35 @@ function setWallpaper(path: string) {
         .catch((error) => {
             print(error)
         })
+}
+
+function WallpaperColumn(
+    {
+        column,
+    }: {
+        column: number
+    }
+) {
+    return <box
+        hexpand={true}
+        vertical={true}>
+        {files((filesList) => {
+            if (filesList.length === 0) {
+                return null
+            }
+            return filesList[column].map((file) => {
+                const path = `/home/john/workspace/Varda-Theme/themes/${selectedThemeName.get()}/wallpaper/${file}`
+                return <button
+                    className="wallpaper"
+                    css={`
+                        background-image: url("${path}");
+                    `}
+                    onClicked={() => {
+                        setWallpaper(path)
+                    }}/>
+            })
+        })}
+    </box>
 }
 
 export default function () {
@@ -87,22 +133,9 @@ export default function () {
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
             <box
-                vertical={true}>
-                {files((filesList) => {
-                    if (filesList.length === 0) {
-                        return <box/>
-                    }
-                    return filesList.map((file) => {
-                        const path = `/home/john/workspace/Varda-Theme/themes/${selectedThemeName.get()}/wallpaper/${file}`
-                        return <button
-                            className="wallpaper"
-                            css={`
-                                background-image: url("${path}");
-                            `}
-                            onClicked={() => {
-                                setWallpaper(path)
-                            }}/>
-                    })
+                vertical={false}>
+                {Array.from({length: numberOfColumns}).map((_, index) => {
+                    return <WallpaperColumn column={index}/>
                 })}
             </box>
         </revealer>
