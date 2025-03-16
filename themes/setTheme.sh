@@ -112,7 +112,7 @@ hypr() {
   sed -e "s|\${bg}|$BG|g" -e "s|\${fg}|$FG|g" -e "s|\${primary}|$PRIMARY|g" -e "s|\${error}|$ERROR|g" "$THEME_TEMPLATE" > "$THEME_OUTPUT"
 
   # Hyprpaper
-  $HOME/.config/hypr/scripts/hyprpaper/setWallpaper.sh $WALLPAPER
+  $HOME/workspace/Varda-Theme/themes/setWallpaper.sh $WALLPAPER
 
   # Hyprlock
   HYPRLOCK_TEMPLATE="./hypr/hyprlock_template.conf"

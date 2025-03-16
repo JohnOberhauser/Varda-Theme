@@ -25,7 +25,7 @@ function updateFiles() {
 }
 
 function setWallpaper(path: string) {
-    execAsync(["bash", "-c", `/home/john/workspace/Varda-Theme/hypr/scripts/hyprpaper/setWallpaper.sh ${path}`])
+    execAsync(["bash", "-c", `/home/john/workspace/Varda-Theme/themes/setWallpaper.sh ${path}`])
         .catch((error) => {
             print(error)
         })
