@@ -1,7 +1,8 @@
-import {Gtk} from "astal/gtk3"
+import {App, Gtk} from "astal/gtk3"
 import {execAsync} from "astal/process"
 import {monitorFile, readFile} from "astal/file"
-import {Variable} from "astal"
+import {bind, Variable} from "astal"
+import {SystemMenuWindowName} from "./SystemMenuWindow";
 
 const selectedThemeName = Variable(readFile("./themeName"))
 const files: Variable<string[]> = Variable([])
@@ -44,6 +45,14 @@ export default function () {
     })
 
     const wallpaperChooserRevealed = Variable(false)
+
+    setTimeout(() => {
+        bind(App.get_window(SystemMenuWindowName)!, "visible").subscribe((visible) => {
+            if (!visible) {
+                wallpaperChooserRevealed.set(false)
+            }
+        })
+    }, 1_000)
 
     return <box
         vertical={true}>
