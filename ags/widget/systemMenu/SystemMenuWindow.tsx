@@ -5,13 +5,13 @@ import {bind} from "astal"
 import {Gtk, Gdk} from "astal/gtk3"
 import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio";
 import PowerOptions from "./PowerOptions";
-import ThemeOptions from "./ThemeOptions";
+import ThemeOptions from "./theme/ThemeOptions";
 import MediaPlayers from "./MediaPlayers";
 import NotificationHistory from "./NotificationHistory";
 import NetworkControls from "./NetworkControls";
 import BluetoothControls from "./BluetoothControls";
 import Divider from "../common/Divider";
-import WallpaperControls from "./WallpaperControls";
+import WallpaperControls from "./theme/WallpaperControls";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
@@ -76,8 +76,8 @@ export default function () {
                         {/*Disabling Media players since it seems to cause heavy lag when I use spotify-player (tui spotify)*/}
                         {/*Also requires gvfs package installed*/}
                         {/*<MediaPlayers/>*/}
-                        <box css={"margin-top: 20px;"}/>
-                        <ThemeOptions/>
+                        {/*<box css={"margin-top: 20px;"}/>*/}
+                        {/*<ThemeOptions/>*/}
                         <box css={"margin-top: 20px;"}/>
                         <Divider css={"margin: 0 60px 0 60px;"}/>
                         <box css={"margin-top: 20px;"}/>

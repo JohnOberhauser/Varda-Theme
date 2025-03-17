@@ -2,9 +2,12 @@ import {App, Gtk} from "astal/gtk3"
 import {execAsync} from "astal/process"
 import {monitorFile, readFile} from "astal/file"
 import {bind, Variable} from "astal"
-import {SystemMenuWindowName} from "./SystemMenuWindow";
+import {SystemMenuWindowName} from "../SystemMenuWindow";
+import ThemeOptions from "./ThemeOptions";
+import Divider from "../../common/Divider";
+import {getThemeFromName, Theme, ThemeDetails} from "./Theme";
 
-const selectedThemeName = Variable(readFile("./themeName"))
+const selectedTheme = Variable(Theme.VARDA)
 const files: Variable<string[][]> = Variable([])
 const numberOfColumns = 2
 
@@ -22,7 +25,7 @@ function chunkIntoColumns<T>(arr: T[], numCols: number): T[][] {
 }
 
 function updateFiles() {
-    execAsync(["bash", "-c", `ls /home/john/workspace/Varda-Theme/themes/${selectedThemeName.get()}/wallpaper`])
+    execAsync(["bash", "-c", `ls /home/john/workspace/Varda-Theme/themes/${ThemeDetails[selectedTheme.get()].name}/wallpaper`])
         .catch((error) => {
             print(error)
         })
@@ -64,7 +67,7 @@ function WallpaperColumn(
                 return null
             }
             return filesList[column].map((file) => {
-                const path = `/home/john/workspace/Varda-Theme/themes/${selectedThemeName.get()}/wallpaper/${file}`
+                const path = `/home/john/workspace/Varda-Theme/themes/${ThemeDetails[selectedTheme.get()].name}/wallpaper/${file}`
                 return <button
                     className="wallpaper"
                     css={`
@@ -79,15 +82,14 @@ function WallpaperColumn(
 }
 
 export default function () {
-    updateFiles()
-    selectedThemeName.subscribe((value) => {
-        if (value != "") {
-            updateFiles()
-        }
+    selectedTheme.set(getThemeFromName(readFile("./themeName")))
+    monitorFile("./themeName", () => {
+        selectedTheme.set(getThemeFromName(readFile("./themeName")))
     })
 
-    monitorFile("./themeName", () => {
-        selectedThemeName.set(readFile("./themeName"))
+    updateFiles()
+    selectedTheme.subscribe(() => {
+        updateFiles()
     })
 
     const wallpaperChooserRevealed = Variable(false)
@@ -107,13 +109,24 @@ export default function () {
             className="row">
             <label
                 className="systemMenuIconButton"
-                label="󰸉"/>
+                css={selectedTheme((theme) => {
+                    let pixelAdjustment = ThemeDetails[theme].pixelAdjustment
+                    const leftPadding = 15 - pixelAdjustment
+                    const rightPadding = 15 + pixelAdjustment
+
+                    return `
+                        padding: 10px ${rightPadding}px 10px ${leftPadding}px;
+                    `
+                })}
+                label={selectedTheme((theme) => {
+                    return ThemeDetails[theme].icon
+                })}/>
             <label
                 className="labelMediumBold"
                 halign={Gtk.Align.START}
                 hexpand={true}
                 truncate={true}
-                label="Wallpaper"/>
+                label="Theme"/>
             <button
                 className="iconButton"
                 label={wallpaperChooserRevealed((revealed): string => {
@@ -133,10 +146,17 @@ export default function () {
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
             <box
-                vertical={false}>
-                {Array.from({length: numberOfColumns}).map((_, index) => {
-                    return <WallpaperColumn column={index}/>
-                })}
+                vertical={true}>
+                <ThemeOptions/>
+                {/*<box css={"margin-top: 20px;"}/>*/}
+                {/*<Divider css={"margin: 0 40px 0 40px;"}/>*/}
+                <box css={"margin-top: 20px;"}/>
+                <box
+                    vertical={false}>
+                    {Array.from({length: numberOfColumns}).map((_, index) => {
+                        return <WallpaperColumn column={index}/>
+                    })}
+                </box>
             </box>
         </revealer>
     </box>
