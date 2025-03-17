@@ -47,9 +47,9 @@ alias addovpn='function _vpn() { ~/workspace/Varda-Theme/zsh/scripts/addVpnConne
 alias addwg='function _wg() { ~/workspace/Varda-Theme/zsh/scripts/addWireguardConnection.sh "$1" }; _wg'
 
 # firefox alias
-alias tryf='./mach try --preset fenix'
-alias tryff='./mach try --preset firefox-android'
-alias tryg='./mach try --preset android-geckoview'
+alias tryf='./mach try --preset fenix --push-to-vcs'
+alias tryff='./mach try --preset firefox-android --push-to-vcs'
+alias tryg='./mach try --preset android-geckoview --push-to-vcs'
 alias mbuild='./mach clobber && ./mach --no-interactive bootstrap --application-choice mobile_android_artifact_mode && ./mach build && pkill -f "^$HOME/.mozbuild/jdk"'
 alias mlintf='./mach lint -l android-fenix'
 alias mlintac='./mach lint -l android-ac'
