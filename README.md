@@ -56,6 +56,8 @@ The script is `./themes/setTheme.sh`
 
 ## Varda
 
+![screenshot](.screenshots/varda.png)
+
 ### Color Palette
 
 This color palette is home-grown
@@ -80,6 +82,8 @@ This color palette is home-grown
 
 ## Everforest
 
+![screenshot](.screenshots/everforest.png)
+
 ### Color Palette
 
 This color palette is from [sainnhe](https://github.com/sainnhe/everforest?tab=readme-ov-file)
@@ -103,6 +107,8 @@ This color palette is from [sainnhe](https://github.com/sainnhe/everforest?tab=r
 `#4F5B58` <img src=".colors/everforest/4F5B58.svg" width="20" height="20" style="vertical-align: middle;"/> bg5  
 
 ## Nord
+
+![screenshot](.screenshots/nord.png)
 
 ### Color Palette
 
@@ -138,6 +144,8 @@ This color palette is from [nord theme](https://www.nordtheme.com/)
 
 ## Rose Pine
 
+![screenshot](.screenshots/rosepine.png)
+
 ### Color Palette
 
 This color palette is from [rose pine theme](https://rosepinetheme.com/)
@@ -160,6 +168,8 @@ This color palette is from [rose pine theme](https://rosepinetheme.com/)
 `#C4A7E7` <img src=".colors/rosepine/C4A7E7.svg" width="20" height="20" style="vertical-align: middle;"/> iris  
 
 ## Blood Rust
+
+![screenshot](.screenshots/bloodrust.png)
 
 ### Color Palette
 
