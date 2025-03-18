@@ -3,12 +3,15 @@ import { bind } from "astal"
 import Notification from "../notification/Notification"
 import {Gtk} from "astal/gtk3"
 
-export default function () {
+export default function (
+    {css}:
+    {css: string}
+) {
     const notifications = Notifd.get_default()
 
     return <box
         vertical={true}
-        css={`margin-bottom: 2px;`}>
+        css={css}>
         <box
             css={`margin: 0 20px 0 20px;`}
             vertical={false}>

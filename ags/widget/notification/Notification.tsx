@@ -40,6 +40,7 @@ export default function Notification(props: Props) {
         <box
             vertical={true}>
             <box
+                css={"margin-top: 2px;"}
                 vertical={false}>
                 <label
                     className="labelSmallBold"
@@ -55,6 +56,10 @@ export default function Notification(props: Props) {
                     label={time(n.time)}/>
                 <button
                     className="iconButton"
+                    css={`
+                        padding: 4px 4px 4px 4px;
+                        margin-right: 2px;
+                    `}
                     onClicked={() => n.dismiss()}
                     label=""/>
             </box>

@@ -58,7 +58,6 @@ export default function () {
                     propagateNaturalHeight={true}
                     widthRequest={400}>
                     <box
-                        css={`margin: 0 10px 0 10px;`}
                         vertical={true}>
                         <box css={"margin-top: 20px;"}/>
                         <NetworkControls/>
@@ -80,7 +79,7 @@ export default function () {
                         <box css={"margin-top: 10px;"}/>
                         <PowerOptions/>
                         <box css={"margin-top: 20px;"}/>
-                        <NotificationHistory/>
+                        <NotificationHistory css={`margin: 0 10px 2px 10px;`}/>
                     </box>
                 </scrollable>
             </box>
