@@ -575,7 +575,7 @@ export default function () {
                 <VpnActiveConnections/>
                 <VpnConnections/>
                 {network.wifi && <WifiConnections connections={wifiConnections}/>}
-                <box css={`margin-top: 12px;`}/>
+                {network.wifi && <box css={`margin-top: 12px;`}/>}
                 {network.wifi && <WifiScannedConnections/>}
             </box>
         </revealer>

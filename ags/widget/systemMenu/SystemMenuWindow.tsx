@@ -75,9 +75,9 @@ export default function () {
                         {/*Disabling Media players since it seems to cause heavy lag when I use spotify-player (tui spotify)*/}
                         {/*Also requires gvfs package installed*/}
                         {/*<MediaPlayers/>*/}
-                        <box css={"margin-top: 20px;"}/>
-                        <Divider css={"margin: 0 60px 0 60px;"}/>
-                        <box css={"margin-top: 20px;"}/>
+                        {/*<box css={"margin-top: 20px;"}/>*/}
+                        {/*<Divider css={"margin: 0 60px 0 60px;"}/>*/}
+                        <box css={"margin-top: 10px;"}/>
                         <PowerOptions/>
                         <box css={"margin-top: 20px;"}/>
                         <NotificationHistory/>
