@@ -387,7 +387,7 @@ function VpnActiveConnections() {
                             transitionDuration={200}
                             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
                             <box
-                                css={`margin-top: 4px;`}
+                                css={`margin-top: 4px; margin-bottom: 4px;`}
                                 vertical={true}
                                 spacing={4}>
                                 <button
@@ -466,7 +466,7 @@ function VpnConnections() {
                             transitionDuration={200}
                             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
                             <box
-                                css={`margin-top: 4px;`}
+                                css={`margin-top: 4px; margin-bottom: 4px;`}
                                 vertical={true}
                                 spacing={4}>
                                 <button
