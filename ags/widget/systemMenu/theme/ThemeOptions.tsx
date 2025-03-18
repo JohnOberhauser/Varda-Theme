@@ -44,7 +44,7 @@ export default function () {
         vertical={false}
         className="row"
         halign={Gtk.Align.CENTER}
-        spacing={8}>
+        spacing={12}>
         <ThemeButton theme={Theme.VARDA}/>
         <ThemeButton theme={Theme.EVER_FOREST}/>
         <ThemeButton theme={Theme.NORD}/>

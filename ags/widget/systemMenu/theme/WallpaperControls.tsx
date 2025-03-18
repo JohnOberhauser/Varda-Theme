@@ -4,7 +4,6 @@ import {monitorFile, readFile} from "astal/file"
 import {bind, Variable} from "astal"
 import {SystemMenuWindowName} from "../SystemMenuWindow";
 import ThemeOptions from "./ThemeOptions";
-import Divider from "../../common/Divider";
 import {getThemeFromName, Theme, ThemeDetails} from "./Theme";
 
 const selectedTheme = Variable(Theme.VARDA)
@@ -148,8 +147,6 @@ export default function () {
             <box
                 vertical={true}>
                 <ThemeOptions/>
-                {/*<box css={"margin-top: 20px;"}/>*/}
-                {/*<Divider css={"margin: 0 40px 0 40px;"}/>*/}
                 <box css={"margin-top: 20px;"}/>
                 <box
                     vertical={false}>
