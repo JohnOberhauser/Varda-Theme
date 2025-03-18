@@ -344,6 +344,9 @@ function WifiScannedConnections() {
 
 function VpnActiveConnections() {
     return <box
+        visible={activeVpnConnections((connections) => {
+            return connections.length !== 0
+        })}
         vertical={true}>
         {activeVpnConnections().as((connections) => {
             if (connections.length === 0) {
@@ -411,7 +414,6 @@ function VpnActiveConnections() {
                         </revealer>
                     </box>
                 })}
-                <box css={`margin-top: 12px;`}/>
             </box>
         })}
     </box>
@@ -419,6 +421,9 @@ function VpnActiveConnections() {
 
 function VpnConnections() {
     return <box
+        visible={vpnConnections((connections) => {
+            return connections.length !== 0
+        })}
         vertical={true}>
         {vpnConnections((connectionsValue) => {
             if (connectionsValue.length === 0) {
@@ -491,7 +496,6 @@ function VpnConnections() {
                         </revealer>
                     </box>
                 })}
-                <box css={`margin-top: 12px;`}/>
             </box>
         })}
     </box>
@@ -562,7 +566,8 @@ export default function () {
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
             <box
-                vertical={true}>
+                vertical={true}
+                spacing={12}>
                 {network.wifi && bind(network.wifi, "activeAccessPoint").as((activeAccessPoint) => {
                     return <button
                         className="primaryButton"
@@ -575,7 +580,6 @@ export default function () {
                 <VpnActiveConnections/>
                 <VpnConnections/>
                 {network.wifi && <WifiConnections connections={wifiConnections}/>}
-                {network.wifi && <box css={`margin-top: 12px;`}/>}
                 {network.wifi && <WifiScannedConnections/>}
             </box>
         </revealer>
