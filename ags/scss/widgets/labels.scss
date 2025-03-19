@@ -32,3 +32,36 @@
   font-size: 18px;
   font-weight: bold;
 }
+
+.transparentLabel {
+  color: transparent;
+}
+
+.screenShotLabel {
+  color: vars.$fg;
+  font-weight: bold;
+  font-size: 34px;
+  padding-right: 6px;
+}
+
+.iconLabel {
+  all: unset;
+  background-color: vars.$bg;
+  color: vars.$fg;
+  padding: 4px 4px 4px 2px;
+  border: none;
+  min-height: 25px;
+  min-width: 30px;
+  border-radius: 8px;
+}
+
+.warningIconLabel {
+  all: unset;
+  background-color: vars.$bg;
+  color: vars.$warning;
+  padding: 4px 4px 4px 2px;
+  border: none;
+  min-height: 25px;
+  min-width: 30px;
+  border-radius: 8px;
+}

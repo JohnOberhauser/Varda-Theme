@@ -1,6 +1,7 @@
-import {Gtk} from "astal/gtk3"
+import {Gtk} from "astal/gtk4"
 import Mpris from "gi://AstalMpris"
 import {bind, Variable} from "astal"
+import Pango from "gi://Pango?version=1.0";
 
 function lengthStr(length: number) {
     const min = Math.floor(length / 60)
@@ -34,32 +35,32 @@ function MediaPlayer({ player }: { player: Mpris.Player }) {
     )
 
     return <box
-        className="mediaPlayer"
+        cssClasses={["mediaPlayer"]}
         vertical={true}>
         <label
-            className="labelSmallBold"
-            truncate={true}
+            cssClasses={["labelSmallBold"]}
+            ellipsize={Pango.EllipsizeMode.END}
             halign={CENTER}
             label={title}/>
         <label
-            className="labelSmall"
-            truncate={true}
+            cssClasses={["labelSmall"]}
+            ellipsize={Pango.EllipsizeMode.END}
             halign={CENTER}
             label={artist}/>
         <box
-            className="seekContainer"
+            cssClasses={["seekContainer"]}
             vertical={false}>
             <label
-                className="labelSmall"
+                cssClasses={["labelSmall"]}
                 halign={START}
                 visible={bind(player, "length").as(l => l > 0)}
                 label={realPosition().as(lengthStr)}
             />
             <slider
-                className="seek"
+                cssClasses={["seek"]}
                 hexpand={true}
                 visible={bind(player, "length").as(l => l > 0)}
-                onDragged={({value}) => {
+                onChangeValue={({value}) => {
                     player.position = value * player.length
                     realPosition.set(player.position)
                 }}
@@ -68,7 +69,7 @@ function MediaPlayer({ player }: { player: Mpris.Player }) {
                 })}
             />
             <label
-                className="labelSmall"
+                cssClasses={["labelSmall"]}
                 halign={END}
                 visible={bind(player, "length").as(l => l > 0)}
                 label={bind(player, "length").as(l => l > 0 ? lengthStr(l) : "0:00")}
@@ -77,7 +78,7 @@ function MediaPlayer({ player }: { player: Mpris.Player }) {
         <box
             halign={CENTER}>
             <button
-                className="controlButton"
+                cssClasses={["controlButton"]}
                 onClicked={() => {
                     if (player.shuffleStatus === Mpris.Shuffle.ON) {
                         player.set_shuffle_status(Mpris.Shuffle.OFF)
@@ -94,22 +95,22 @@ function MediaPlayer({ player }: { player: Mpris.Player }) {
                     }
                 })}/>
             <button
-                className="controlButton"
+                cssClasses={["controlButton"]}
                 onClicked={() => player.previous()}
                 visible={bind(player, "canGoPrevious")}
                 label=""/>
             <button
-                className="controlButton"
+                cssClasses={["controlButton"]}
                 onClicked={() => player.play_pause()}
                 visible={bind(player, "canControl")}
                 label={playIcon}/>
             <button
-                className="controlButton"
+                cssClasses={["controlButton"]}
                 onClicked={() => player.next()}
                 visible={bind(player, "canGoNext")}
                 label=""/>
             <button
-                className="controlButton"
+                cssClasses={["controlButton"]}
                 onClicked={() => {
                     if (player.loopStatus === Mpris.Loop.NONE) {
                         player.set_loop_status(Mpris.Loop.PLAYLIST)
@@ -136,7 +137,7 @@ function MediaPlayer({ player }: { player: Mpris.Player }) {
 export default function () {
     const mpris = Mpris.get_default()
     return <box
-        className="mediaPlayersContainer"
+        cssClasses={["mediaPlayersContainer"]}
         vertical={true}>
         {bind(mpris, "players").as(players => {
             return players.map(player => (

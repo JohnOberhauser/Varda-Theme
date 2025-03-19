@@ -1,4 +1,4 @@
-import {App, Astal, Gtk} from "astal/gtk3"
+import {App, Astal, Gtk} from "astal/gtk4"
 import {
     BatteryButton,
     BluetoothButton,
@@ -12,10 +12,9 @@ import {
 } from "./BarWidgets";
 
 export default function () {
-    let iconCss = ""
-
     return <window
-        css={`background: transparent;`}
+        visible={true}
+        cssClasses={["transparentBackground"]}
         monitor={0}
         exclusivity={Astal.Exclusivity.EXCLUSIVE}
         margin={5}
@@ -24,26 +23,23 @@ export default function () {
             | Astal.WindowAnchor.RIGHT}
         application={App}>
         <centerbox
-            className="window"
-            css={`
-                padding: 2px;
-                min-height: 40px;
-            `}>
+            orientation={Gtk.Orientation.HORIZONTAL}
+            cssClasses={["window", "topBar"]}>
             <box halign={Gtk.Align.START}>
-                <MenuButton css={""}/>
+                <MenuButton cssClasses={[]}/>
                 <Workspaces vertical={false}/>
             </box>
             <box>
-                <ClockButton css={""} singleLine={true}/>
+                <ClockButton cssClasses={[]} singleLine={true}/>
             </box>
             <box halign={Gtk.Align.END}>
-                <ScreenRecordingButton css={iconCss}/>
-                <VolumeButton css={iconCss}/>
-                <MicrophoneButton css={iconCss}/>
-                <BluetoothButton css={iconCss}/>
-                <VpnButton css={iconCss}/>
-                <NetworkButton css={iconCss}/>
-                <BatteryButton css={iconCss}/>
+                <ScreenRecordingButton/>
+                <VolumeButton/>
+                <MicrophoneButton/>
+                <BluetoothButton/>
+                <VpnButton/>
+                <NetworkButton/>
+                <BatteryButton/>
             </box>
         </centerbox>
     </window>

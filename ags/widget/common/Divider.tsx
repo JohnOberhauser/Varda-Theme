@@ -1,11 +1,10 @@
 export default function(
     {
-        css
+        cssClasses
     }: {
-        css?: string
+        cssClasses?: string[]
     }
 ) {
     return <box
-        className="divider"
-        css={css ? css : ""}/>
+        cssClasses={cssClasses != null ? cssClasses.concat(["divider"]) : ["divider"]}/>
 }

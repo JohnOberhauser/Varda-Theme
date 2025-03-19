@@ -16,6 +16,17 @@
   background-color: vars.$bgHover;
 }
 
+.systemMenuIconLabel {
+  all: unset;
+  background-color: transparent;
+  min-width: 30px;
+  font-size: 25px;
+  margin: 0 10px 0 0;
+  border-radius: 16px;
+  color: vars.$fg;
+  border: 0;
+}
+
 .systemMenuVolumeProgress {
   all: unset;
   min-width: 200px;
@@ -44,7 +55,7 @@
 }
 
 .rowRevealer {
-  padding: 6px 30px 6px 30px;
+  padding: 0 30px 0 30px;
 }
 
 .themeButton {

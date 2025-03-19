@@ -1,22 +1,19 @@
 import Notifd from "gi://AstalNotifd"
 import { bind } from "astal"
 import Notification from "../notification/Notification"
-import {Gtk} from "astal/gtk3"
+import {Gtk} from "astal/gtk4"
 
-export default function (
-    {css}:
-    {css: string}
-) {
+export default function() {
     const notifications = Notifd.get_default()
 
     return <box
-        vertical={true}
-        css={css}>
+        vertical={true}>
         <box
-            css={`margin: 0 20px 0 20px;`}
+            marginStart={20}
+            marginEnd={20}
             vertical={false}>
             <button
-                className="iconButton"
+                cssClasses={["iconButton"]}
                 label={bind(notifications, "dontDisturb").as((dnd) => {
                     return dnd ? "󰂛" : "󰂚"
                 })}
@@ -24,11 +21,11 @@ export default function (
                     notifications.set_dont_disturb(!notifications.dontDisturb)
                 }}/>
             <label
-                className="labelMediumBold"
+                cssClasses={["labelMediumBold"]}
                 label="Notifications"/>
             <box hexpand={true}/>
             <button
-                className="iconButton"
+                cssClasses={["iconButton"]}
                 label="Clear all"
                 onClicked={() => {
                     notifications.notifications.forEach((notification) => {
@@ -39,8 +36,9 @@ export default function (
         {bind(notifications, "notifications").as((notificationsList) => {
             if (notificationsList.length === 0) {
                 return <label
-                    className="labelSmall"
-                    css={`margin-top: 8px; margin-bottom: 20px;`}
+                    cssClasses={["labelSmall"]}
+                    marginTop={8}
+                    marginBottom={20}
                     halign={Gtk.Align.CENTER}
                     label="All caught up"/>
             } else {

@@ -1,5 +1,5 @@
 import {bind, GLib, Variable} from "astal"
-import {App} from "astal/gtk3"
+import {App} from "astal/gtk4"
 import Hyprland from "gi://AstalHyprland"
 import {CalendarWindowName} from "../calendar/Calendar"
 import Wp from "gi://AstalWp"
@@ -55,7 +55,7 @@ export function Workspaces({vertical}: { vertical: boolean }) {
                                     activeWorkspace.id == workspace.id ? "" : ""
                                 )
                             }
-                            className="iconButton"
+                            cssClasses={["iconButton"]}
                             onClicked={() => {
                                 hypr.dispatch("workspace", `${workspace.id}`)
                             }}>
@@ -67,7 +67,7 @@ export function Workspaces({vertical}: { vertical: boolean }) {
     </box>
 }
 
-export function ClockButton({css, singleLine}: { css: string, singleLine: boolean }) {
+export function ClockButton({cssClasses, singleLine}: { cssClasses: string[], singleLine: boolean }) {
     let format: string
 
     if (singleLine) {
@@ -80,8 +80,7 @@ export function ClockButton({css, singleLine}: { css: string, singleLine: boolea
         GLib.DateTime.new_now_local().format(format)!)
 
     return <button
-        className="iconButton"
-        css={css}
+        cssClasses={cssClasses.concat(["iconButton"])}
         label={time()}
         onClicked={() => {
             App.toggle_window(CalendarWindowName)
@@ -90,20 +89,18 @@ export function ClockButton({css, singleLine}: { css: string, singleLine: boolea
     </button>
 }
 
-export function VpnButton({css}: { css: string }) {
+export function VpnButton() {
     return <label
-        className="iconButton"
-        css={css}
+        cssClasses={["iconLabel"]}
         label="󰯄"
         visible={activeVpnConnections().as((connections) => {
             return connections.length !== 0
         })}/>
 }
 
-export function ScreenRecordingButton({css}: { css: string }) {
+export function ScreenRecordingButton() {
     return <button
-        className="warningIconButton"
-        css={css}
+        cssClasses={["warningIconButton"]}
         label=""
         visible={isRecording()}
         onClicked={() => {
@@ -111,7 +108,7 @@ export function ScreenRecordingButton({css}: { css: string }) {
         }}/>
 }
 
-export function VolumeButton({css}: { css: string }) {
+export function VolumeButton() {
     const defaultSpeaker = Wp.get_default()!.audio.default_speaker
 
     const speakerVar = Variable.derive([
@@ -121,12 +118,11 @@ export function VolumeButton({css}: { css: string }) {
     ])
 
     return <label
-        css={css}
-        className="iconButton"
+        cssClasses={["iconLabel"]}
         label={speakerVar(() => getVolumeIcon(defaultSpeaker))}/>
 }
 
-export function MicrophoneButton({css}: { css: string }) {
+export function MicrophoneButton() {
     const {defaultMicrophone} = Wp.get_default()!.audio
 
     const micVar = Variable.derive([
@@ -136,30 +132,27 @@ export function MicrophoneButton({css}: { css: string }) {
     ])
 
     return <label
-        css={css}
-        className="iconButton"
+        cssClasses={["iconLabel"]}
         label={micVar(() => getMicrophoneIcon(defaultMicrophone))}/>
 }
 
-export function BluetoothButton({css}: { css: string }) {
+export function BluetoothButton() {
     const bluetooth = Bluetooth.get_default()
     return <label
-        css={css}
-        className="iconButton"
+        cssClasses={["iconLabel"]}
         label="󰂯"
         visible={bind(bluetooth, "isPowered").as((isPowered) => {
             return isPowered
         })}/>
 }
 
-export function NetworkButton({css}: { css: string }) {
+export function NetworkButton() {
     return <label
-        css={css}
-        className="iconButton"
+        cssClasses={["iconLabel"]}
         label={getNetworkIconBinding()}/>
 }
 
-export function BatteryButton({css}: { css: string }) {
+export function BatteryButton() {
     const battery = Battery.get_default()
 
     let batteryWarningInterval: GLib.Source | null = null
@@ -174,14 +167,13 @@ export function BatteryButton({css}: { css: string }) {
     ])
 
     return <label
-        css={css}
-        className={batteryVar((value) => {
+        cssClasses={batteryVar((value) => {
             if (value[0] > 0.04 || battery.state === Battery.State.CHARGING) {
                 if (batteryWarningInterval != null) {
                     batteryWarningInterval.destroy()
                     batteryWarningInterval = null
                 }
-                return "iconButton"
+                return ["iconLabel"]
             } else {
                 if (batteryWarningInterval === null && battery.isBattery) {
                     batteryWarningInterval = setInterval(() => {
@@ -189,17 +181,16 @@ export function BatteryButton({css}: { css: string }) {
                     }, 120_000)
                     warningSound()
                 }
-                return "warningIconButton"
+                return ["warningIconLabel"]
             }
         })}
         label={batteryVar(() => getBatteryIcon(battery))}
         visible={bind(battery, "isBattery")}/>
 }
 
-export function MenuButton({css}: { css: string }) {
+export function MenuButton({cssClasses}: { cssClasses: string[] }) {
     return <button
-        css={css}
-        className="iconButton"
+        cssClasses={cssClasses.concat(["iconButton"])}
         label=""
         onClicked={() => {
             App.toggle_window(SystemMenuWindowName)

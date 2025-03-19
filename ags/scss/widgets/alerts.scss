@@ -2,8 +2,6 @@
 
 .alertIcon {
   all: unset;
-  margin-left: 20px;
-  margin-right: 10px;
   font-size: 50px;
   color: vars.$fg;
 }
@@ -11,7 +9,6 @@
 .alertProgress {
   all: unset;
   min-width: 150px;
-  margin-right: 20px;
 }
 
 .alertProgress trough {

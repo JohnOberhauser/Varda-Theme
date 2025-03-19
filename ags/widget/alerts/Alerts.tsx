@@ -1,4 +1,4 @@
-import {App, Astal, Gtk} from "astal/gtk3"
+import {App, Astal, Gtk} from "astal/gtk4"
 import Wp from "gi://AstalWp"
 import {bind, Variable, Binding, GLib} from "astal"
 import {getVolumeIcon} from "../utils/audio";
@@ -32,7 +32,7 @@ export function AlertWindow(
         anchor={Astal.WindowAnchor.BOTTOM}
         exclusivity={Astal.Exclusivity.NORMAL}
         layer={Astal.Layer.OVERLAY}
-        className="window"
+        cssClasses={["window"]}
         margin_bottom={100}
         visible={false}
         setup={(self) => {
@@ -56,24 +56,33 @@ export function AlertWindow(
             })
         }}>
         <box
+            vertical={true}>
+
+        </box>
+        <box
             vertical={false}
-            halign={Gtk.Align.CENTER}
-            css={"padding: 18px 5px;"}>
+            marginBottom={18}
+            marginTop={18}
+            marginStart={5}
+            marginEnd={5}
+            halign={Gtk.Align.CENTER}>
             <label
-                css={"margin-right: 15px;"}
-                className="alertIcon"
+                marginStart={20}
+                marginEnd={15}
+                cssClasses={["alertIcon"]}
                 label={iconLabel}/>
             <box
                 vertical={true}
-                css={"margin-left: 10px;"}
+                marginStart={10}
                 valign={Gtk.Align.CENTER}>
                 <label
-                    className="labelSmall"
+                    cssClasses={["labelSmall"]}
                     label={label}
                     halign={Gtk.Align.START}/>
                 <slider
-                    css="padding-top: 2px;"
-                    className="alertProgress"
+                    marginTop={2}
+                    marginEnd={20}
+                    cssClasses={["alertProgress"]}
                     hexpand={true}
                     value={sliderValue}/>
             </box>

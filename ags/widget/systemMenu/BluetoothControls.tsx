@@ -1,5 +1,5 @@
 import {bind, Variable} from "astal"
-import {Gtk, App} from "astal/gtk3"
+import {Gtk, App} from "astal/gtk4"
 import {SystemMenuWindowName} from "./SystemMenuWindow";
 import {getBluetoothIcon, getBluetoothName} from "../utils/bluetooth";
 import Bluetooth from "gi://AstalBluetooth";
@@ -12,7 +12,7 @@ function BluetoothDevices() {
         {bind(bluetooth, "devices").as((devices) => {
             if (devices.length === 0) {
                 return <label
-                    className="labelMedium"
+                    cssClasses={["labelMedium"]}
                     label="No devices"/>
             }
             return devices.filter((device) => {
@@ -36,13 +36,13 @@ function BluetoothDevices() {
                     vertical={true}>
                     <button
                         hexpand={true}
-                        className="transparentButton"
+                        cssClasses={["transparentButton"]}
                         onClicked={() => {
                             buttonsRevealed.set(!buttonsRevealed.get())
                         }}>
                         <label
                             halign={Gtk.Align.START}
-                            className="labelSmall"
+                            cssClasses={["labelSmall"]}
                             label={`  ${device.name}`}/>
                     </button>
                     <revealer
@@ -53,8 +53,8 @@ function BluetoothDevices() {
                             vertical={true}>
                             <button
                                 hexpand={true}
-                                className="primaryButton"
-                                css={`margin-top: 4px;`}
+                                cssClasses={["primaryButton"]}
+                                marginTop={4}
                                 visible={bind(device, "paired")}
                                 label={connectionState((value) => {
                                     const connected = value[0]
@@ -82,8 +82,8 @@ function BluetoothDevices() {
                                 }}/>
                             <button
                                 hexpand={true}
-                                className="primaryButton"
-                                css={`margin-top: 4px;`}
+                                cssClasses={["primaryButton"]}
+                                marginTop={4}
                                 visible={bind(device, "paired")}
                                 label={bind(device, "trusted").as((trusted) => {
                                     if (trusted) {
@@ -97,8 +97,9 @@ function BluetoothDevices() {
                                 }}/>
                             <button
                                 hexpand={true}
-                                className="primaryButton"
-                                css={`margin-top: 4px; margin-bottom: 4px;`}
+                                cssClasses={["primaryButton"]}
+                                marginTop={4}
+                                marginBottom={4}
                                 label={bind(device, "paired").as((paired) => {
                                     return paired ? "Unpair" : "Pair"
                                 })}
@@ -136,17 +137,17 @@ export default function () {
                 vertical={true}>
                 <box
                     vertical={false}
-                    className="row">
+                    cssClasses={["row"]}>
                     <label
-                        className="systemMenuIconButton"
+                        cssClasses={["systemMenuIconButton"]}
                         label={getBluetoothIcon()}/>
                     <label
-                        className="labelMediumBold"
+                        cssClasses={["labelMediumBold"]}
                         halign={Gtk.Align.START}
                         hexpand={true}
                         label={getBluetoothName()}/>
                     <button
-                        className="iconButton"
+                        cssClasses={["iconButton"]}
                         label={bluetoothChooserRevealed((revealed): string => {
                             if (revealed) {
                                 return ""
@@ -159,7 +160,7 @@ export default function () {
                         }}/>
                 </box>
                 <revealer
-                    className="rowRevealer"
+                    cssClasses={["rowRevealer"]}
                     revealChild={bluetoothChooserRevealed()}
                     transitionDuration={200}
                     transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
@@ -171,10 +172,11 @@ export default function () {
                                 halign={Gtk.Align.START}
                                 hexpand={true}
                                 label="Devices"
-                                className="labelLargeBold"/>
+                                cssClasses={["labelLargeBold"]}/>
                             <button
-                                className="transparentButton"
-                                css={`padding-left: 8px; padding-right: 8px;`}
+                                cssClasses={["transparentButton"]}
+                                marginStart={8}
+                                marginEnd={8}
                                 label={bind(bluetooth.adapter, "discovering").as((discovering) => {
                                     return discovering ? "Stop scanning" : "Scan"
                                 })}

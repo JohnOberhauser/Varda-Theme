@@ -1,8 +1,8 @@
-import {App, Astal} from "astal/gtk3"
+import {App, Astal} from "astal/gtk4"
 import EndpointControls from "./EndpointControls";
 import Wp from "gi://AstalWp"
 import {bind} from "astal"
-import {Gtk, Gdk} from "astal/gtk3"
+import {Gtk, Gdk} from "astal/gtk4"
 import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio";
 import PowerOptions from "./PowerOptions";
 import MediaPlayers from "./MediaPlayers";
@@ -10,7 +10,7 @@ import NotificationHistory from "./NotificationHistory";
 import NetworkControls from "./NetworkControls";
 import BluetoothControls from "./BluetoothControls";
 import Divider from "../common/Divider";
-import WallpaperControls from "./theme/WallpaperControls";
+import ThemeControls from "./ThemeControls";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
@@ -23,14 +23,14 @@ export default function () {
         exclusivity={Astal.Exclusivity.NORMAL}
         anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.LEFT | Astal.WindowAnchor.BOTTOM}
         layer={Astal.Layer.TOP}
-        css={`background: transparent;`}
+        cssClasses={["transparentBackground"]}
         name={SystemMenuWindowName}
         application={App}
         margin={5}
         keymode={Astal.Keymode.ON_DEMAND}
         visible={false}
-        onKeyPressEvent={function (self, event: Gdk.Event) {
-            if (event.get_keyval()[1] === Gdk.KEY_Escape) {
+        onKeyPressed={function (self, key) {
+            if (key === Gdk.KEY_Escape) {
                 self.hide()
             }
         }}
@@ -41,25 +41,15 @@ export default function () {
             vertical={true}>
             <box
                 vertical={true}
-                setup={(self) => {
-                    setTimeout(() => {
-                        bind(window, "hasToplevelFocus").subscribe((hasFocus) => {
-                            if (hasFocus) {
-                                self.className = "focusedWindow"
-                            } else {
-                                self.className = "window"
-                            }
-                        })
-                    }, 1_000)
-                }}>
-                <scrollable
-                    className="scrollWindow"
-                    vscroll={Gtk.PolicyType.AUTOMATIC}
+                cssClasses={["focusedWindow"]}>
+                <Gtk.ScrolledWindow
+                    cssClasses={["scrollWindow"]}
+                    vscrollbarPolicy={Gtk.PolicyType.AUTOMATIC}
                     propagateNaturalHeight={true}
                     widthRequest={400}>
                     <box
                         vertical={true}>
-                        <box css={"margin-top: 20px;"}/>
+                        <box marginTop={20}/>
                         <NetworkControls/>
                         <BluetoothControls/>
                         <EndpointControls
@@ -70,18 +60,26 @@ export default function () {
                             defaultEndpoint={audio.default_microphone}
                             endpointsBinding={bind(audio, "microphones")}
                             getIcon={getMicrophoneIcon}/>
-                        <WallpaperControls/>
+                        <ThemeControls/>
+
                         {/*Disabling Media players since it seems to cause heavy lag when I use spotify-player (tui spotify)*/}
                         {/*Also requires gvfs package installed*/}
                         {/*<MediaPlayers/>*/}
                         {/*<box css={"margin-top: 20px;"}/>*/}
                         {/*<Divider css={"margin: 0 60px 0 60px;"}/>*/}
-                        <box css={"margin-top: 10px;"}/>
+
+                        <box marginTop={10}/>
                         <PowerOptions/>
-                        <box css={"margin-top: 20px;"}/>
-                        <NotificationHistory css={`margin: 0 10px 2px 10px;`}/>
+                        <box marginTop={20}/>
+                        <box
+                            vertical={false}
+                            marginStart={10}
+                            marginEnd={10}>
+                            <NotificationHistory/>
+                        </box>
+                        <box marginTop={2}/>
                     </box>
-                </scrollable>
+                </Gtk.ScrolledWindow>
             </box>
             <box
                 vexpand={true}/>

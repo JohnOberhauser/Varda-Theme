@@ -1,0 +1,70 @@
+@use "../variables" as vars;
+
+.systemMenuIconButton {
+  all: unset;
+  background-color: transparent;
+  min-width: 30px;
+  font-size: 25px;
+  margin: 0 10px 0 0;
+  border-radius: 16px;
+  padding: 10px 15px 10px 15px;
+  color: vars.$fg;
+  border: 0;
+}
+
+.systemMenuIconButton:hover {
+  background-color: vars.$bgHover;
+}
+
+.systemMenuVolumeProgress {
+  all: unset;
+  min-width: 200px;
+  margin-right: 20px;
+}
+
+.systemMenuVolumeProgress trough {
+  all: unset;
+  background: vars.$sliderTrough;
+  min-height: 8px;
+  border-radius: 16px;
+}
+.systemMenuVolumeProgress trough slider {
+  all: unset;
+}
+
+.systemMenuVolumeProgress trough highlight {
+  all: unset;
+  min-width: 8px;
+  border-radius: 16px;
+  background: vars.$fg;
+}
+
+.row {
+  margin: 0 20px 0 20px;
+}
+
+.rowRevealer {
+  padding: 6px 30px 6px 30px;
+}
+
+.themeButton {
+  all: unset;
+  background-color: transparent;
+  font-size: 25px;
+  border-radius: 16px;
+  color: vars.$fg;
+  border: 0;
+}
+
+.themeButton:hover {
+  background-color: vars.$bgHover;
+}
+
+.themeButtonSelected {
+  all: unset;
+  background-color: vars.$primary;
+  font-size: 25px;
+  border-radius: 16px;
+  color: vars.$fg;
+  border: 0;
+}

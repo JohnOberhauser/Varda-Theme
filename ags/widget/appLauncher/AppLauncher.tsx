@@ -1,7 +1,8 @@
 import Apps from "gi://AstalApps"
-import { App, Astal, Gdk, Gtk } from "astal/gtk3"
-import { Variable, bind } from "astal"
+import { App, Astal, Gdk, Gtk } from "astal/gtk4"
+import { Variable } from "astal"
 import {execAsync} from "astal/process"
+import Pango from "gi://Pango?version=1.0";
 
 export const AppLauncherWindowName = "appLauncher"
 
@@ -26,8 +27,8 @@ interface AppButtonProps {
 function AppButton({ app, isSelected, indexInList, selectedIndexVariable }: AppButtonProps) {
     return <button
         canFocus={false}
-        className={isSelected ? "selectedAppButton" : "appButton"}
-        onHover={() => {
+        cssClasses={isSelected ? ["selectedAppButton"] : ["appButton"]}
+        onHoverEnter={() => {
             // Uncomment to select the hovered app.
             // selectedIndexVariable.set(indexInList)
         }}
@@ -38,10 +39,10 @@ function AppButton({ app, isSelected, indexInList, selectedIndexVariable }: AppB
         <box>
             <box valign={Gtk.Align.CENTER} vertical={true}>
                 <label
-                    className="name"
-                    truncate
+                    cssClasses={["name"]}
                     xalign={0}
                     label={app.name}
+                    ellipsize={Pango.EllipsizeMode.END}
                 />
             </box>
         </box>
@@ -99,8 +100,6 @@ export default function () {
         selectedIndex
     ])
 
-    let window: Gtk.Window
-
     return <window
         name={AppLauncherWindowName}
         anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.BOTTOM}
@@ -113,57 +112,43 @@ export default function () {
             text.set("")
             selectedIndex.set(0)
         }}
-        onKeyPressEvent={function (self, event: Gdk.Event) {
-            if (event.get_keyval()[1] === Gdk.KEY_Escape) {
+        onKeyPressed={function (self, key) {
+            if (key === Gdk.KEY_Escape) {
                 self.hide()
-            } else if (event.get_keyval()[1] === Gdk.KEY_Down && list.get().length >= selectedIndex.get()) {
+            } else if (key === Gdk.KEY_Down && list.get().length >= selectedIndex.get()) {
                 selectedIndex.set(selectedIndex.get() + 1)
-            } else if (event.get_keyval()[1] === Gdk.KEY_Up && selectedIndex.get() != 0) {
+            } else if (key === Gdk.KEY_Up && selectedIndex.get() != 0) {
                 selectedIndex.set(selectedIndex.get() - 1)
             }
         }}
-        css={`background: transparent;`}
-        marginTop={100}
-        marginBottom={5}
-        visible={false}
-        setup={(self) => {
-            window = self
-        }}>
+        cssClasses={["transparentBackground"]}
+        marginTop={200}
+        marginBottom={200}
+        visible={false}>
         <box
             vertical={true}>
             <box
-                setup={(self) => {
-                    setTimeout(() => {
-                        bind(window, "hasToplevelFocus").subscribe((hasFocus) => {
-                            if (hasFocus) {
-                                self.className = "focusedWindow"
-                            } else {
-                                self.className = "window"
-                            }
-                        })
-                    }, 1_000)
-                }}>
+                cssClasses={["focusedWindow"]}>
                 <box
                     widthRequest={500}
-                    className="appLauncher"
+                    cssClasses={["appLauncher"]}
                     vertical={true}>
                     <box
                         vertical={false}>
                         <label
-                            className="searchIcon"
+                            cssClasses={["searchIcon"]}
                             label=""/>
                         <entry
-                            className="searchField"
+                            cssClasses={["searchField"]}
                             placeholderText="Search"
-                            text={text()}
                             onChanged={self => text.set(self.text)}
                             onActivate={onEnter}
                             hexpand={true}
                         />
                     </box>
-                    <scrollable
-                        className="scrollWindow"
-                        vscroll={Gtk.PolicyType.AUTOMATIC}
+                    <Gtk.ScrolledWindow
+                        cssClasses={["scrollWindow"]}
+                        vscrollbarPolicy={Gtk.PolicyType.AUTOMATIC}
                         propagateNaturalHeight={true}
                         canFocus={false}>
                         <box spacing={6} vertical={true}>
@@ -177,15 +162,15 @@ export default function () {
                             <box
                                 halign={CENTER}
                                 vertical={true}
-                                css={`margin-bottom: 8px;`}
+                                marginBottom={8}
                                 visible={list.as(l => l.length === 0)}>
                                 <label
-                                    className="labelSmall"
+                                    cssClasses={["labelSmall"]}
                                     label="No match found"/>
                             </box>
                             <box/>
                         </box>
-                    </scrollable>
+                    </Gtk.ScrolledWindow>
                 </box>
             </box>
             <box

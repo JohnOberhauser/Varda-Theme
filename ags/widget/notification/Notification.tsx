@@ -1,8 +1,8 @@
 import { GLib } from "astal"
-import { Gtk } from "astal/gtk3"
-import { type EventBox } from "astal/gtk3/widget"
+import { Gtk } from "astal/gtk4"
 import Notifd from "gi://AstalNotifd"
 import {insertNewlines} from "../utils/strings";
+import Pango from "gi://Pango?version=1.0";
 
 const time = (time: number, format = "%I:%M %p") => GLib.DateTime
     .new_from_unix_local(time)
@@ -20,9 +20,9 @@ const urgency = (n: Notifd.Notification) => {
 }
 
 type Props = {
-    setup(self: EventBox): void
-    onHoverLost(self: EventBox): void
-    onHover(self: EventBox): void
+    setup(self: Gtk.Box): void
+    onHoverLost(self: Gtk.Box): void
+    onHover(self: Gtk.Box): void
     notification: Notifd.Notification
     useHistoryCss: boolean
 }
@@ -31,64 +31,66 @@ export default function Notification(props: Props) {
     const { notification: n, onHoverLost, onHover, setup, useHistoryCss } = props
     const { START, END } = Gtk.Align
 
-    return <eventbox
-        className={useHistoryCss ? `Notification history` : `Notification ${urgency(n)}`}
+    return <box
+        vertical={true}
+        cssClasses={useHistoryCss ?
+            ["notificationHistorical"] : urgency(n) === "critical"
+                ? ["notificationCritical"] : ["notification"]}
         setup={setup}
-        onHoverLost={onHoverLost}
-        onHover={onHover}
-        onClick={() => n.dismiss()}>
+        onHoverEnter={onHover}
+        onHoverLeave={onHoverLost}>
         <box
-            vertical={true}>
-            <box
-                css={"margin-top: 2px;"}
-                vertical={false}>
-                <label
-                    className="labelSmallBold"
-                    css={`margin-left: 8px;`}
-                    halign={START}
-                    truncate
-                    label={n.appName || "Unknown"}/>
-                <label
-                    className="labelSmall"
-                    css={`margin-right: 4px;`}
-                    hexpand
-                    halign={END}
-                    label={time(n.time)}/>
-                <button
-                    className="iconButton"
-                    css={`
-                        padding: 4px 4px 4px 4px;
-                        margin-right: 2px;
-                    `}
-                    onClicked={() => n.dismiss()}
-                    label=""/>
-            </box>
-            <box
-                vertical={true}
-                css={`padding: 10px;`}>
-                <label
-                    className="labelMediumBold"
-                    halign={START}
-                    xalign={0}
-                    label={insertNewlines(n.summary, 33)} // wrap causes issues with scrollable height so split lines manually
-                />
-                {n.body && <label
-                    className="labelSmall"
-                    halign={START}
-                    xalign={0}
-                    label={insertNewlines(n.body, 40)}
-                />}
-            </box>
-            {n.get_actions().length > 0 && <box vertical={true}>
-                {n.get_actions().map(({ label, id }) => (
-                    <button
-                        className="primaryButton"
-                        hexpand={true}
-                        css={`margin: 4px 8px 8px 8px;`}
-                        onClicked={() => n.invoke(id)}
-                        label={label}/>
-                ))}
-            </box>}
+            marginTop={2}
+            vertical={false}>
+            <label
+                cssClasses={["labelSmallBold"]}
+                marginStart={8}
+                halign={START}
+                ellipsize={Pango.EllipsizeMode.END}
+                label={n.appName || "Unknown"}/>
+            <label
+                cssClasses={["labelSmall"]}
+                marginEnd={4}
+                hexpand
+                halign={END}
+                label={time(n.time)}/>
+            <button
+                cssClasses={["closeButton"]}
+                marginEnd={2}
+                onClicked={() => n.dismiss()}
+                label=""/>
         </box>
-    </eventbox>
+        <box
+            vertical={true}
+            marginTop={10}
+            marginBottom={10}
+            marginStart={10}
+            marginEnd={10}>
+            <label
+                cssClasses={["labelMediumBold"]}
+                halign={START}
+                xalign={0}
+                label={insertNewlines(n.summary, 33)} // wrap causes issues with scrollable height so split lines manually
+            />
+            {n.body && <label
+                cssClasses={["labelSmall"]}
+                halign={START}
+                xalign={0}
+                label={insertNewlines(n.body, 40)}
+            />}
+        </box>
+        {n.get_actions().length > 0 && <box vertical={true}>
+            {n.get_actions().map(({ label, id }) => (
+                <button
+                    cssClasses={["primaryButton"]}
+                    hexpand={true}
+                    marginTop={4}
+                    marginEnd={8}
+                    marginBottom={8}
+                    marginStart={8}
+                    onClicked={() => n.invoke(id)}
+                    label={label}/>
+            ))}
+        </box>}
+    </box>
 }

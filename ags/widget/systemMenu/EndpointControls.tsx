@@ -1,8 +1,9 @@
 import Wp from "gi://AstalWp"
 import {bind, Binding, Variable} from "astal"
-import {App, Gtk} from "astal/gtk3"
+import {App, Gtk} from "astal/gtk4"
 import {SystemMenuWindowName} from "./SystemMenuWindow";
 import {toggleMuteEndpoint} from "../utils/audio";
+import Pango from "gi://Pango?version=1.0";
 
 /**
  * An Endpoint is either a speaker or microphone
@@ -42,21 +43,23 @@ export default function (
         vertical={true}>
         <box
             vertical={false}
-            className="row">
+            cssClasses={["row"]}>
             <button
-                className="systemMenuIconButton"
+                cssClasses={["systemMenuIconButton"]}
                 label={endpointLabelVar(() => getIcon(defaultEndpoint))}
                 onClicked={() => {
                     toggleMuteEndpoint(defaultEndpoint)
                 }}/>
             <slider
-                className="systemMenuVolumeProgress"
+                cssClasses={["systemMenuVolumeProgress"]}
                 hexpand={true}
-                onDragged={({value}) => defaultEndpoint.volume = value}
+                onChangeValue={({value}) => {
+                    defaultEndpoint.volume = value
+                }}
                 value={bind(defaultEndpoint, "volume")}
             />
             <button
-                className="iconButton"
+                cssClasses={["iconButton"]}
                 label={endpointChooserRevealed((revealed): string => {
                     if (revealed) {
                         return ""
@@ -69,7 +72,7 @@ export default function (
                 }}/>
         </box>
         <revealer
-            className="rowRevealer"
+            cssClasses={["rowRevealer"]}
             revealChild={endpointChooserRevealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
@@ -79,14 +82,14 @@ export default function (
                     return endpoints.map((endpoint) => {
                         return <button
                             hexpand={true}
-                            className="transparentButton"
+                            cssClasses={["transparentButton"]}
                             onClicked={() => {
                                 endpoint.set_is_default(true)
                             }}>
                             <label
                                 halign={Gtk.Align.START}
-                                className="labelSmall"
-                                truncate={true}
+                                cssClasses={["labelSmall"]}
+                                ellipsize={Pango.EllipsizeMode.END}
                                 label={bind(endpoint, "isDefault").as((isDefault) => {
                                     if (isDefault) {
                                         return `  ${endpoint.description}`

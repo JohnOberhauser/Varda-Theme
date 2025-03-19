@@ -1,0 +1,6 @@
+@use "../variables" as vars;
+
+.divider {
+  border: 2px solid vars.$bgHover;
+  border-radius: 8px;
+}

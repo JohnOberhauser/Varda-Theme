@@ -15,6 +15,10 @@
     }
   }
 
+  .appButton:hover {
+    background: vars.$bgHover;
+  }
+
   .selectedAppButton {
     margin: 2px 8px 0 8px;
     padding: 8px;

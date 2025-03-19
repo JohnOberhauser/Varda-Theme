@@ -1,9 +1,10 @@
 import AstalNetwork from "gi://AstalNetwork"
 import {getAccessPointIcon, getNetworkIconBinding, getNetworkNameBinding} from "../utils/network";
 import {bind, Variable} from "astal"
-import {Gtk, App} from "astal/gtk3"
+import {Gtk, App} from "astal/gtk4"
 import {execAsync} from "astal/process"
 import {SystemMenuWindowName} from "./SystemMenuWindow";
+import Pango from "gi://Pango?version=1.0";
 
 const wifiConnections = Variable<string[]>([])
 const activeWifiConnections = Variable<string[]>([])
@@ -159,23 +160,22 @@ function PasswordEntry(
     }
 
     return <box
-        css={`margin-top: 4px;`}
+        marginTop={4}
         vertical={true}
         spacing={4}>
         {accessPoint.flags !== 0 && <box
             vertical={true}>
             <label
                 halign={Gtk.Align.START}
-                className="labelSmall"
+                cssClasses={["labelSmall"]}
                 label="Password"/>
             <entry
-                className="networkPasswordEntry"
-                text={text()}
+                cssClasses={["networkPasswordEntry"]}
                 onChanged={self => text.set(self.text)}
                 onActivate={() => connect()}/>
         </box>}
         <button
-            className="primaryButton"
+            cssClasses={["primaryButton"]}
             hexpand={true}
             label="Connect"
             onClicked={() => connect()}/>
@@ -189,7 +189,7 @@ function WifiConnections() {
         vertical={true}>
         <label
             halign={Gtk.Align.START}
-            className="labelLargeBold"
+            cssClasses={["labelLargeBold"]}
             label="Saved networks"/>
         {wifiConnections((connectionsValue) => {
             return connectionsValue.map((connection) => {
@@ -220,13 +220,13 @@ function WifiConnections() {
                     vertical={true}>
                     <button
                         hexpand={true}
-                        className="transparentButton"
+                        cssClasses={["transparentButton"]}
                         onClicked={() => {
                             buttonsRevealed.set(!buttonsRevealed.get())
                         }}>
                         <label
                             halign={Gtk.Align.START}
-                            className="labelSmall"
+                            cssClasses={["labelSmall"]}
                             label={label}/>
                     </button>
                     <revealer
@@ -234,12 +234,12 @@ function WifiConnections() {
                         transitionDuration={200}
                         transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
                         <box
-                            css={`margin-top: 4px;`}
+                            marginTop={4}
                             vertical={true}
                             spacing={4}>
                             {canConnect && <button
                                 hexpand={true}
-                                className="primaryButton"
+                                cssClasses={["primaryButton"]}
                                 label="Connect"
                                 onClicked={() => {
                                     execAsync(`nmcli c up ${connection}`)
@@ -252,7 +252,7 @@ function WifiConnections() {
                                 }}/>}
                             <button
                                 hexpand={true}
-                                className="primaryButton"
+                                cssClasses={["primaryButton"]}
                                 label="Forget"
                                 onClicked={() => {
                                     deleteConnection(connection)
@@ -274,8 +274,8 @@ function WifiScannedConnections() {
             if (scanning) {
                 return <label
                     halign={Gtk.Align.START}
-                    className="labelLargeBold"
-                    css={`margin-bottom: 4px;`}
+                    cssClasses={["labelLargeBold"]}
+                    marginBottom={4}
                     label="Scanning…"/>
             } else {
                 const accessPoints = network.wifi.accessPoints
@@ -308,13 +308,13 @@ function WifiScannedConnections() {
                             vertical={false}>
                             <button
                                 hexpand={true}
-                                className="transparentButton"
+                                cssClasses={["transparentButton"]}
                                 onClicked={() => {
                                     passwordEntryRevealed.set(!passwordEntryRevealed.get())
                                 }}>
                                 <label
                                     halign={Gtk.Align.START}
-                                    className="labelSmall"
+                                    cssClasses={["labelSmall"]}
                                     label={`${getAccessPointIcon(accessPoint)}  ${accessPoint.ssid}`}/>
                             </button>
                         </box>
@@ -333,7 +333,7 @@ function WifiScannedConnections() {
                     vertical={true}>
                     <label
                         halign={Gtk.Align.START}
-                        className="labelLargeBold"
+                        cssClasses={["labelLargeBold"]}
                         label="Available networks"/>
                     {accessPointsUi}
                 </box>
@@ -356,7 +356,7 @@ function VpnActiveConnections() {
                 vertical={true}>
                 <label
                     halign={Gtk.Align.START}
-                    className="labelLargeBold"
+                    cssClasses={["labelLargeBold"]}
                     label="Active VPN"/>
                 {connections.map((connection) => {
                     const buttonsRevealed = Variable(false)
@@ -373,13 +373,13 @@ function VpnActiveConnections() {
                         vertical={true}>
                         <button
                             hexpand={true}
-                            className="transparentButton"
+                            cssClasses={["transparentButton"]}
                             onClicked={() => {
                                 buttonsRevealed.set(!buttonsRevealed.get())
                             }}>
                             <label
                                 halign={Gtk.Align.START}
-                                className="labelSmall"
+                                cssClasses={["labelSmall"]}
                                 label={`󰯄  ${connection}`}/>
                         </button>
                         <revealer
@@ -387,12 +387,13 @@ function VpnActiveConnections() {
                             transitionDuration={200}
                             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
                             <box
-                                css={`margin-top: 4px; margin-bottom: 4px;`}
+                                marginTop={4}
+                                marginBottom={4}
                                 vertical={true}
                                 spacing={4}>
                                 <button
                                     hexpand={true}
-                                    className="primaryButton"
+                                    cssClasses={["primaryButton"]}
                                     label="Disconnect"
                                     onClicked={() => {
                                         execAsync(`nmcli c down ${connection}`)
@@ -405,7 +406,7 @@ function VpnActiveConnections() {
                                     }}/>
                                 <button
                                     hexpand={true}
-                                    className="primaryButton"
+                                    cssClasses={["primaryButton"]}
                                     label="Forget"
                                     onClicked={() => {
                                         deleteConnection(connection)
@@ -434,7 +435,7 @@ function VpnConnections() {
                 vertical={true}>
                 <label
                     halign={Gtk.Align.START}
-                    className="labelLargeBold"
+                    cssClasses={["labelLargeBold"]}
                     label="VPN Connections"/>
                 {connectionsValue.map((connection) => {
                     const buttonsRevealed = Variable(false)
@@ -452,13 +453,13 @@ function VpnConnections() {
                         vertical={true}>
                         <button
                             hexpand={true}
-                            className="transparentButton"
+                            cssClasses={["transparentButton"]}
                             onClicked={() => {
                                 buttonsRevealed.set(!buttonsRevealed.get())
                             }}>
                             <label
                                 halign={Gtk.Align.START}
-                                className="labelSmall"
+                                cssClasses={["labelSmall"]}
                                 label={`󰯄  ${connection}`}/>
                         </button>
                         <revealer
@@ -466,12 +467,13 @@ function VpnConnections() {
                             transitionDuration={200}
                             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
                             <box
-                                css={`margin-top: 4px; margin-bottom: 4px;`}
+                                marginTop={4}
+                                marginBottom={4}
                                 vertical={true}
                                 spacing={4}>
                                 <button
                                     hexpand={true}
-                                    className="primaryButton"
+                                    cssClasses={["primaryButton"]}
                                     label={isConnecting().as((connecting) => {
                                         if (connecting) {
                                             return "Connecting"
@@ -487,7 +489,7 @@ function VpnConnections() {
                                     }}/>
                                 <button
                                     hexpand={true}
-                                    className="primaryButton"
+                                    cssClasses={["primaryButton"]}
                                     label="Forget"
                                     onClicked={() => {
                                         deleteConnection(connection)
@@ -526,15 +528,15 @@ export default function () {
         vertical={true}>
         <box
             vertical={false}
-            className="row">
+            cssClasses={["row"]}>
             <label
-                className="systemMenuIconButton"
+                cssClasses={["systemMenuIconButton"]}
                 label={getNetworkIconBinding()}/>
             <label
-                className="labelMediumBold"
+                cssClasses={["labelMediumBold"]}
                 halign={Gtk.Align.START}
                 hexpand={true}
-                truncate={true}
+                ellipsize={Pango.EllipsizeMode.END}
                 label={networkName().as((value) => {
                     const networkNameValue = value[0]
                     const activeVpnConnectionsValue = value[1]
@@ -545,7 +547,7 @@ export default function () {
                     }
                 })}/>
             <button
-                className="iconButton"
+                cssClasses={["iconButton"]}
                 label={networkChooserRevealed((revealed): string => {
                     if (revealed) {
                         return ""
@@ -561,7 +563,7 @@ export default function () {
                 }}/>
         </box>
         <revealer
-            className="rowRevealer"
+            cssClasses={["rowRevealer"]}
             revealChild={networkChooserRevealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
@@ -570,8 +572,8 @@ export default function () {
                 spacing={12}>
                 {network.wifi && bind(network.wifi, "activeAccessPoint").as((activeAccessPoint) => {
                     return <button
-                        className="primaryButton"
-                        css={`margin-bottom: 12px;`}
+                        cssClasses={["primaryButton"]}
+                        marginBottom={12}
                         label="Forget"
                         onClicked={() => {
                             deleteConnection(activeAccessPoint.ssid)

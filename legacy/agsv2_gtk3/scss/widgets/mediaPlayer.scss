@@ -1,0 +1,52 @@
+@use "../variables" as vars;
+
+.mediaPlayersContainer {
+  margin: 0 20px 0 20px;
+}
+
+.mediaPlayer {
+  margin-top: 20px;
+  background-color: vars.$bg;
+  border: 2px solid vars.$bgHover;
+  border-radius: 8px;
+  padding: 4px;
+
+  .controlButton {
+    all: unset;
+    background-color: vars.$bg;
+    color: vars.$fg;
+    padding: 4px 4px 4px 2px;
+    border: none;
+    min-height: 25px;
+    min-width: 30px;
+    border-radius: 8px;
+  }
+
+  .controlButton:hover {
+    background-color: vars.$bgHover;
+  }
+
+  .seekContainer {
+    margin: 10px 0 10px 0;
+  }
+
+  .seek {
+    margin: 0 20px 0 20px;
+
+    trough {
+      background: vars.$sliderTrough;
+      min-height: 4px;
+      border-radius: 8px;
+
+      slider {
+        color: vars.$primary;
+        background: vars.$bg;
+      }
+
+      highlight {
+        background: vars.$primary;
+        border-radius: 8px;
+      }
+    }
+  }
+}

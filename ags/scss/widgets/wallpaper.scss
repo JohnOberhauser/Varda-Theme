@@ -2,15 +2,15 @@
 
 .wallpaper {
   margin: 8px;
-  min-height: 48px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 8px;
   border: 2px solid vars.$fg;
-  color: transparent;
 }
 
 .wallpaper:hover {
   border: 2px solid vars.$primary;
+}
+
+.wallpaperButton {
+  color: transparent;
+  background: transparent;
 }

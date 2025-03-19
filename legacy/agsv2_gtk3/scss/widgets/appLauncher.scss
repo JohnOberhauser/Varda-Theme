@@ -1,0 +1,43 @@
+@use "../variables" as vars;
+
+.appLauncher {
+  padding: 2px;
+
+  .appButton {
+    margin: 2px 8px 0 8px;
+    padding: 8px;
+    background: vars.$bg;
+    border-radius: 8px;
+
+    label.name {
+      font-weight: bold;
+      color: vars.$fg;
+    }
+  }
+
+  .selectedAppButton {
+    margin: 2px 8px 0 8px;
+    padding: 8px;
+    background: vars.$primary;
+    border-radius: 8px;
+
+    label.name {
+      font-weight: bold;
+      color: vars.$fg;
+    }
+  }
+
+  .searchField {
+    margin: 4px;
+    box-shadow: none;
+    background: vars.$bg;
+  }
+
+  .searchIcon {
+    color: vars.$fg;
+    padding: 4px 4px 4px 2px;
+    border: none;
+    min-height: 25px;
+    min-width: 30px;
+  }
+}

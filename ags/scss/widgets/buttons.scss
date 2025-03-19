@@ -42,6 +42,10 @@
   background-color: vars.$bgHover;
 }
 
+.screenshareButton {
+  padding: 12px;
+}
+
 .transparentButton {
   all: unset;
   background-color: transparent;
@@ -51,5 +55,28 @@
 }
 
 .transparentButton:hover {
+  background-color: vars.$bgHover;
+}
+
+.sideBarMenuButton {
+  padding-top: 6px;
+}
+
+.sideBarClockButton {
+  padding-bottom: 6px;
+}
+
+.closeButton {
+  all: unset;
+  background-color: vars.$bg;
+  color: vars.$fg;
+  padding: 4px 4px 4px 4px;
+  border: none;
+  min-height: 25px;
+  min-width: 30px;
+  border-radius: 8px;
+}
+
+.closeButton:hover {
   background-color: vars.$bgHover;
 }

@@ -1,35 +1,35 @@
-import {App, Gtk} from "astal/gtk3"
+import {App, Gtk} from "astal/gtk4"
 import {SystemMenuWindowName} from "./SystemMenuWindow";
 import {execAsync} from "astal/process"
 
 export default function () {
     return <box
         vertical={false}
-        className="row"
+        cssClasses={["row"]}
         halign={Gtk.Align.CENTER}>
         <button
-            className="systemMenuIconButton"
+            cssClasses={["systemMenuIconButton"]}
             label="󰍃"
             onClicked={() => {
                 App.toggle_window(SystemMenuWindowName)
                 execAsync("uwsm stop")
             }}/>
         <button
-            className="systemMenuIconButton"
+            cssClasses={["systemMenuIconButton"]}
             label=""
             onClicked={() => {
                 App.toggle_window(SystemMenuWindowName)
                 execAsync("uwsm app -- hyprlock")
             }}/>
         <button
-            className="systemMenuIconButton"
+            cssClasses={["systemMenuIconButton"]}
             label=""
             onClicked={() => {
                 App.toggle_window(SystemMenuWindowName)
                 execAsync("systemctl reboot")
             }}/>
         <button
-            className="systemMenuIconButton"
+            cssClasses={["systemMenuIconButton"]}
             label="⏻"
             onClicked={() => {
                 App.toggle_window(SystemMenuWindowName)

@@ -1,12 +1,10 @@
-import {App, Astal, Gdk, Gtk} from "astal/gtk3"
+import {App, Astal, Gdk, Gtk} from "astal/gtk4"
 import {bind, Variable} from "astal"
 import Hyprland from "gi://AstalHyprland"
 import {execAsync} from "astal/process"
+import Pango from "gi://Pango?version=1.0";
 
 export const ScreenshareWindowName = "screenshareWindow"
-
-const ButtonCss = `padding: 12px;`
-const ButtonClass = "primaryButton"
 
 let response: (response: any) => void = () => {}
 
@@ -93,9 +91,9 @@ function Monitors() {
                 hexpand={true}
                 label="󰍹  Monitors"
                 halign={Gtk.Align.START}
-                className="labelLargeBold"/>
+                cssClasses={["labelLargeBold"]}/>
             <button
-                className="iconButton"
+                cssClasses={["iconButton"]}
                 label={revealed((revealed): string => {
                     if (revealed) {
                         return ""
@@ -108,7 +106,7 @@ function Monitors() {
                 }}/>
         </box>
         <revealer
-            className="rowRevealer"
+            cssClasses={["rowRevealer"]}
             revealChild={revealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
@@ -118,15 +116,14 @@ function Monitors() {
                     return monitors.map((monitor) => {
                             return <button
                                 hexpand={true}
-                                className={ButtonClass}
-                                css={ButtonCss}
+                                cssClasses={["primaryButton", "screenshareButton"]}
                                 onClicked={() => {
                                     response(`[SELECTION]/screen:${monitor.name}`)
                                     App.toggle_window(ScreenshareWindowName)
                                 }}>
                                 <label
                                     halign={Gtk.Align.START}
-                                    className="labelMediumBold"
+                                    cssClasses={["labelMediumBold"]}
                                     label={monitor.name}/>
                             </button>
                         }
@@ -156,9 +153,9 @@ function Windows() {
                 hexpand={true}
                 label="  Windows"
                 halign={Gtk.Align.START}
-                className="labelLargeBold"/>
+                cssClasses={["labelLargeBold"]}/>
             <button
-                className="iconButton"
+                cssClasses={["iconButton"]}
                 label={revealed((revealed): string => {
                     if (revealed) {
                         return ""
@@ -171,7 +168,7 @@ function Windows() {
                 }}/>
         </box>
         <revealer
-            className="rowRevealer"
+            cssClasses={["rowRevealer"]}
             revealChild={revealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
@@ -193,7 +190,7 @@ function Windows() {
                                 spacing={6}>
                                 <label
                                     halign={Gtk.Align.CENTER}
-                                    className="labelLargeBold"
+                                    cssClasses={["labelLargeBold"]}
                                     label={program.name}/>
                                 {program.windows
                                     .sort((a, b) => {
@@ -206,8 +203,7 @@ function Windows() {
                                     .map((instance) => {
                                         return <button
                                             hexpand={true}
-                                            className={ButtonClass}
-                                            css={ButtonCss}
+                                            cssClasses={["primaryButton", "screenshareButton"]}
                                             onClicked={() => {
                                                 response(`[SELECTION]/window:${instance.windowId}`)
                                                 App.toggle_window(ScreenshareWindowName)
@@ -216,9 +212,9 @@ function Windows() {
                                                 vertical={true}>
                                                 <label
                                                     halign={Gtk.Align.START}
-                                                    className="labelMediumBold"
+                                                    cssClasses={["labelMediumBold"]}
                                                     label={`${instance.instanceTitle}`}
-                                                    truncate={true}/>
+                                                    ellipsize={Pango.EllipsizeMode.END}/>
                                             </box>
                                         </button>
                                     })
@@ -250,9 +246,9 @@ function Region() {
                 hexpand={true}
                 label="  Other"
                 halign={Gtk.Align.START}
-                className="labelLargeBold"/>
+                cssClasses={["labelLargeBold"]}/>
             <button
-                className="iconButton"
+                cssClasses={["iconButton"]}
                 label={revealed((revealed): string => {
                     if (revealed) {
                         return ""
@@ -266,14 +262,13 @@ function Region() {
         </box>
 
         <revealer
-            className="rowRevealer"
+            cssClasses={["rowRevealer"]}
             revealChild={revealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
             <button
                 hexpand={true}
-                className={ButtonClass}
-                css={ButtonCss}
+                cssClasses={["primaryButton", "screenshareButton"]}
                 onClicked={() => {
                     execAsync("slurp -f \"%o %x %y %w %h\"")
                         .catch((error) => {
@@ -294,7 +289,7 @@ function Region() {
                 }}>
                 <label
                     halign={Gtk.Align.START}
-                    className="labelMediumBold"
+                    cssClasses={["labelMediumBold"]}
                     label="Region"/>
             </button>
         </revealer>
@@ -302,8 +297,6 @@ function Region() {
 }
 
 export default function () {
-    let window: Gtk.Window
-
     return <window
         monitor={0}
         name={ScreenshareWindowName}
@@ -311,50 +304,42 @@ export default function () {
         application={App}
         layer={Astal.Layer.TOP}
         keymode={Astal.Keymode.EXCLUSIVE}
-
-        css={`background: transparent;`}
+        cssClasses={["transparentBackground"]}
         margin={5}
         visible={false}
-        onKeyPressEvent={function (self, event: Gdk.Event) {
-            if (event.get_keyval()[1] === Gdk.KEY_Escape) {
+        onKeyPressed={function (self, key) {
+            if (key === Gdk.KEY_Escape) {
                 self.hide()
                 response(`[SELECTION]/`)
             }
-        }}
-        setup={(self) => {
-            window = self
         }}>
         <box
             vertical={true}
-            css={`padding: 2px`}>
+            marginStart={2}
+            marginBottom={2}
+            marginTop={2}
+            marginEnd={2}>
             <box
                 vexpand={true}/>
             <box
-                setup={(self) => {
-                    setTimeout(() => {
-                        bind(window, "hasToplevelFocus").subscribe((hasFocus) => {
-                            if (hasFocus) {
-                                self.className = "focusedWindow"
-                            } else {
-                                self.className = "window"
-                            }
-                        })
-                    }, 1_000)
-                }}>
-                <scrollable
+                cssClasses={["focusedWindow"]}>
+                <Gtk.ScrolledWindow
                     widthRequest={500}
-                    className="scrollWindow"
-                    vscroll={Gtk.PolicyType.AUTOMATIC}
+                    cssClasses={["scrollWindow"]}
+                    vscrollbarPolicy={Gtk.PolicyType.AUTOMATIC}
                     propagateNaturalHeight={true}>
                     <box
                         vertical={true}
-                        css="padding: 20px;"
+                        marginStart={20}
+                        marginBottom={20}
+                        marginTop={20}
+                        marginEnd={20}
                         spacing={30}>
                         <Monitors/>
                         <Windows/>
                         <Region/>
                     </box>
-                </scrollable>
+                </Gtk.ScrolledWindow>
             </box>
             <box
                 vexpand={true}/>

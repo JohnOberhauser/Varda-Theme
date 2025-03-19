@@ -1,7 +1,8 @@
-import {App, Astal, Gdk, Gtk} from "astal/gtk3"
+import {App, Astal, Gdk, Gtk} from "astal/gtk4"
 import {execAsync} from "astal/process"
 import {bind, Variable, GLib} from "astal"
 import Divider from "../common/Divider";
+import Pango from "gi://Pango?version=1.0";
 
 export const isRecording = Variable(false)
 
@@ -190,15 +191,15 @@ function ScreenshotButton(
     }
 ) {
     return <button
-        widthRequest={130}
-        className="primaryButton"
-        css={`margin: 0 8px 0 8px;`}
+        widthRequest={115}
+        cssClasses={["primaryButton"]}
+        marginStart={8}
+        marginEnd={8}
         onClicked={onClicked}>
         <box
             vertical={true}>
             <label
-                className="labelLargeBold"
-                css={`font-size: 34px; padding-right: 6px`}
+                cssClasses={["screenShotLabel"]}
                 label={icon}/>
             <label
                 label={label}/>
@@ -210,8 +211,8 @@ function ScreenShots() {
     return <box
         vertical={true}>
         <label
-            className="labelLargeBold"
-            css={`margin-bottom: 8px;`}
+            cssClasses={["labelLargeBold"]}
+            marginBottom={8}
             label="Screenshot"/>
         <box
             vertical={false}>
@@ -318,15 +319,15 @@ function ScreenRecording() {
     return <box
         vertical={true}>
         <label
-            className="labelLargeBold"
-            css={`margin-bottom: 8px;`}
+            cssClasses={["labelLargeBold"]}
+            marginBottom={8}
             label="Screen Record"/>
         <box
             vertical={false}
-            className="row">
+            cssClasses={["row"]}>
             <label
-                className="labelLargeBold"
-                css={`margin-right: 20px;`}
+                cssClasses={["labelLargeBold"]}
+                marginEnd={20}
                 label={selectedAudio().as((value) => {
                     if (value === null) {
                         return "󰝟"
@@ -335,10 +336,10 @@ function ScreenRecording() {
                     }
                 })}/>
             <label
-                className="labelMediumBold"
+                cssClasses={["labelMediumBold"]}
                 halign={Gtk.Align.START}
                 hexpand={true}
-                truncate={true}
+                ellipsize={Pango.EllipsizeMode.END}
                 label={selectedAudio().as((value) => {
                     if (value === null) {
                         return "No Audio"
@@ -347,7 +348,7 @@ function ScreenRecording() {
                     }
                 })}/>
             <button
-                className="iconButton"
+                cssClasses={["iconButton"]}
                 label={audioRevealed((revealed): string => {
                     if (revealed) {
                         return ""
@@ -360,7 +361,7 @@ function ScreenRecording() {
                 }}/>
         </box>
         <revealer
-            className="rowRevealer"
+            cssClasses={["rowRevealer"]}
             revealChild={audioRevealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
@@ -368,30 +369,30 @@ function ScreenRecording() {
                 vertical={true}>
                 <button
                     hexpand={true}
-                    className="iconButton"
+                    cssClasses={["iconButton"]}
                     onClicked={() => {
                         selectedAudio.set(null)
                         audioRevealed.set(false)
                     }}>
                     <label
                         halign={Gtk.Align.START}
-                        className="labelSmall"
-                        truncate={true}
+                        cssClasses={["labelSmall"]}
+                        ellipsize={Pango.EllipsizeMode.END}
                         label={`󰝟  No Audio`}/>
                 </button>
                 {audioOptions().as((options) => {
                     return options.map((option) => {
                         return <button
                             hexpand={true}
-                            className="iconButton"
+                            cssClasses={["iconButton"]}
                             onClicked={() => {
                                 selectedAudio.set(option)
                                 audioRevealed.set(false)
                             }}>
                             <label
                                 halign={Gtk.Align.START}
-                                className="labelSmall"
-                                truncate={true}
+                                cssClasses={["labelSmall"]}
+                                ellipsize={Pango.EllipsizeMode.END}
                                 label={`${option.isMonitor ? "󰕾" : ""}  ${option.description}`}/>
                         </button>
                     })
@@ -400,21 +401,21 @@ function ScreenRecording() {
         </revealer>
         <box
             vertical={false}
-            className="row">
+            cssClasses={["row"]}>
             <label
-                className="labelLargeBold"
-                css={`margin-right: 20px;`}
+                cssClasses={["labelLargeBold"]}
+                marginEnd={20}
                 label="󰕧"/>
             <label
-                className="labelMediumBold"
+                cssClasses={["labelMediumBold"]}
                 halign={Gtk.Align.START}
                 hexpand={true}
-                truncate={true}
+                ellipsize={Pango.EllipsizeMode.END}
                 label={selectedCodec().as((value) => {
                     return `${value.display} codec`
                 })}/>
             <button
-                className="iconButton"
+                cssClasses={["iconButton"]}
                 label={codecRevealed((revealed): string => {
                     if (revealed) {
                         return ""
@@ -427,7 +428,7 @@ function ScreenRecording() {
                 }}/>
         </box>
         <revealer
-            className="rowRevealer"
+            cssClasses={["rowRevealer"]}
             revealChild={codecRevealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
@@ -436,15 +437,15 @@ function ScreenRecording() {
                 {codecs.map((value) => {
                     return <button
                         hexpand={true}
-                        className="iconButton"
+                        cssClasses={["iconButton"]}
                         onClicked={() => {
                             selectedCodec.set(value)
                             codecRevealed.set(false)
                         }}>
                         <label
                             halign={Gtk.Align.START}
-                            className="labelSmall"
-                            truncate={true}
+                            cssClasses={["labelSmall"]}
+                            ellipsize={Pango.EllipsizeMode.END}
                             label={`󰕧  ${value.display}`}/>
                     </button>
                 })}
@@ -452,23 +453,23 @@ function ScreenRecording() {
         </revealer>
         <box
             vertical={false}
-            className="row">
+            cssClasses={["row"]}>
             <label
-                className="labelLargeBold"
-                css={`margin-right: 20px;`}
+                cssClasses={["labelLargeBold"]}
+                marginEnd={20}
                 label={selectedEncodingPreset().as((value) => {
                     return getEncodingPresetIcon(value)
                 })}/>
             <label
-                className="labelMediumBold"
+                cssClasses={["labelMediumBold"]}
                 halign={Gtk.Align.START}
                 hexpand={true}
-                truncate={true}
+                ellipsize={Pango.EllipsizeMode.END}
                 label={selectedEncodingPreset().as((value) => {
                     return `${value.charAt(0).toUpperCase() + value.slice(1)} encoding speed`
                 })}/>
             <button
-                className="iconButton"
+                cssClasses={["iconButton"]}
                 label={encodingRevealed((revealed): string => {
                     if (revealed) {
                         return ""
@@ -481,7 +482,7 @@ function ScreenRecording() {
                 }}/>
         </box>
         <revealer
-            className="rowRevealer"
+            cssClasses={["rowRevealer"]}
             revealChild={encodingRevealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
@@ -490,15 +491,15 @@ function ScreenRecording() {
                 {h264EncodingPresets.map((value) => {
                     return <button
                         hexpand={true}
-                        className="iconButton"
+                        cssClasses={["iconButton"]}
                         onClicked={() => {
                             selectedEncodingPreset.set(value)
                             encodingRevealed.set(false)
                         }}>
                         <label
                             halign={Gtk.Align.START}
-                            className="labelSmall"
-                            truncate={true}
+                            cssClasses={["labelSmall"]}
+                            ellipsize={Pango.EllipsizeMode.END}
                             label={`${getEncodingPresetIcon(value)}  ${value.charAt(0).toUpperCase() + value.slice(1)}`}/>
                     </button>
                 })}
@@ -506,23 +507,23 @@ function ScreenRecording() {
         </revealer>
         <box
             vertical={false}
-            className="row">
+            cssClasses={["row"]}>
             <label
-                className="labelLargeBold"
-                css={`margin-right: 20px;`}
+                cssClasses={["labelLargeBold"]}
+                marginEnd={20}
                 label={selectedCrfQuality().as((value) => {
                     return getCrfQualityIcon(value)
                 })}/>
             <label
-                className="labelMediumBold"
+                cssClasses={["labelMediumBold"]}
                 halign={Gtk.Align.START}
                 hexpand={true}
-                truncate={true}
+                ellipsize={Pango.EllipsizeMode.END}
                 label={selectedCrfQuality().as((value) => {
                     return `${value} CRF`
                 })}/>
             <button
-                className="iconButton"
+                cssClasses={["iconButton"]}
                 label={crfRevealed((revealed): string => {
                     if (revealed) {
                         return ""
@@ -535,7 +536,7 @@ function ScreenRecording() {
                 }}/>
         </box>
         <revealer
-            className="rowRevealer"
+            cssClasses={["rowRevealer"]}
             revealChild={crfRevealed()}
             transitionDuration={200}
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
@@ -544,15 +545,15 @@ function ScreenRecording() {
                 {crfQualityValues.map((value) => {
                     return <button
                         hexpand={true}
-                        className="iconButton"
+                        cssClasses={["iconButton"]}
                         onClicked={() => {
                             selectedCrfQuality.set(value)
                             crfRevealed.set(false)
                         }}>
                         <label
                             halign={Gtk.Align.START}
-                            className="labelSmall"
-                            truncate={true}
+                            cssClasses={["labelSmall"]}
+                            ellipsize={Pango.EllipsizeMode.END}
                             label={`${getCrfQualityIcon(value)}  ${value}`}/>
                     </button>
                 })}
@@ -560,7 +561,7 @@ function ScreenRecording() {
         </revealer>
         <box
             vertical={false}
-            css={`margin-top: 8px;`}>
+            marginTop={8}>
             <ScreenshotButton
                 icon={""}
                 label={"All"}
@@ -647,11 +648,9 @@ export default function () {
     setDirectories()
     updateAudioOptions()
 
-    let window: Gtk.Window
-
     return <window
         monitor={0}
-        css={`background: transparent;`}
+        cssClasses={["transparentBackground"]}
         name={ScreenshotWindowName}
         application={App}
         layer={Astal.Layer.TOP}
@@ -659,44 +658,39 @@ export default function () {
         keymode={Astal.Keymode.EXCLUSIVE}
         margin={5}
         visible={false}
-        onKeyPressEvent={function (self, event: Gdk.Event) {
-            if (event.get_keyval()[1] === Gdk.KEY_Escape) {
+        onKeyPressed={function (self, key) {
+            if (key === Gdk.KEY_Escape) {
                 self.hide()
             }
-        }}
-        setup={(self) => {
-            window = self
         }}>
         <box
             vertical={true}
-            css={`padding: 2px`}>
+            marginTop={2}
+            marginBottom={2}
+            marginStart={2}
+            marginEnd={2}>
             <box
                 vexpand={true}/>
             <box
-                setup={(self) => {
-                    setTimeout(() => {
-                        bind(window, "hasToplevelFocus").subscribe((hasFocus) => {
-                            if (hasFocus) {
-                                self.className = "focusedWindow"
-                            } else {
-                                self.className = "window"
-                            }
-                        })
-                    }, 1_000)
-                }}>
-                <scrollable
+                cssClasses={["focusedWindow"]}>
+                <Gtk.ScrolledWindow
                     widthRequest={430}
-                    className="scrollWindow"
-                    vscroll={Gtk.PolicyType.AUTOMATIC}
+                    cssClasses={["scrollWindow"]}
+                    vscrollbarPolicy={Gtk.PolicyType.AUTOMATIC}
                     propagateNaturalHeight={true}>
                     <box
                         vertical={true}
-                        css="padding: 20px;">
+                        marginTop={20}
+                        marginBottom={20}
+                        marginStart={20}
+                        marginEnd={20}>
                         <ScreenShots/>
-                        <Divider css={`margin: 20px 0 10px 0;`}/>
+                        <box marginTop={20}/>
+                        <Divider/>
+                        <box marginTop={10}/>
                         <ScreenRecording/>
                     </box>
-                </scrollable>
+                </Gtk.ScrolledWindow>
             </box>
             <box
                 vexpand={true}/>

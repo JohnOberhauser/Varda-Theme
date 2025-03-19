@@ -1,0 +1,42 @@
+@use "../variables" as vars;
+
+window.NotificationPopups {
+  all: unset;
+}
+
+eventbox.Notification {
+
+  &:last-child>box {
+    margin-bottom: 1px;
+  }
+
+  // eventboxes can not take margins so we style its inner box instead
+  >box {
+    min-width: 340px;
+    border-radius: 8px;
+    background-color: vars.$bg;
+    margin: 5px;
+    border: 2px solid vars.$primary;
+  }
+
+  &.critical>box {
+    border: 2px solid vars.$warning;
+
+    .header {
+
+      .app-name {
+        color: vars.$warning;
+      }
+
+      .app-icon {
+        color: vars.$warning;
+      }
+    }
+  }
+
+  &.history>box {
+    margin: 5px 0 5px 0;
+    min-width: 0;
+    border: 2px solid vars.$bgHover;
+  }
+}

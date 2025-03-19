@@ -1,4 +1,4 @@
-import {App, Astal, Gtk} from "astal/gtk3"
+import {App, Astal, Gtk, Gdk} from "astal/gtk4"
 import {
     BatteryButton,
     BluetoothButton,
@@ -12,11 +12,10 @@ import {
 } from "./BarWidgets";
 
 export default function () {
-    let iconCss = ""
-
     return <window
-        css={`background: transparent;`}
+        cssClasses={["transparentBackground"]}
         monitor={0}
+        visible={true}
         exclusivity={Astal.Exclusivity.EXCLUSIVE}
         margin={5}
         anchor={Astal.WindowAnchor.TOP
@@ -24,28 +23,24 @@ export default function () {
             | Astal.WindowAnchor.BOTTOM}
         application={App}>
         <centerbox
-            vertical={true}
-            className="window"
-            css={`
-                padding: 2px;
-                min-width: 40px;
-            `}>
+            orientation={Gtk.Orientation.VERTICAL}
+            cssClasses={["window", "sideBar"]}>
             <box vertical={true}>
-                <MenuButton css={"padding-top: 6px;"}/>
+                <MenuButton cssClasses={["sideBarMenuButton"]}/>
                 <Workspaces vertical={true}/>
             </box>
             <box/>
             <box
                 vertical={true}
                 valign={Gtk.Align.END}>
-                <ScreenRecordingButton css={iconCss}/>
-                <VolumeButton css={iconCss}/>
-                <MicrophoneButton css={iconCss}/>
-                <BluetoothButton css={iconCss}/>
-                <VpnButton css={iconCss}/>
-                <NetworkButton css={iconCss}/>
-                <BatteryButton css={iconCss}/>
-                <ClockButton css={"padding-bottom: 6px;"} singleLine={false}/>
+                <ScreenRecordingButton/>
+                <VolumeButton/>
+                <MicrophoneButton/>
+                <BluetoothButton/>
+                <VpnButton/>
+                <NetworkButton/>
+                <BatteryButton/>
+                <ClockButton cssClasses={["sideBarClockButton"]} singleLine={false}/>
             </box>
         </centerbox>
     </window>
