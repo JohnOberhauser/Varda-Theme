@@ -131,7 +131,7 @@ function BarButton(
         })}
         onClicked={() => {
             selectedBar.set(barType)
-            execAsync(["bash", "-c", `echo "${BarDetails[barType].name}" > ./bar`])
+            execAsync(["bash", "-c", `echo "${BarDetails[barType].name}" > ./savedBar`])
                 .catch((error) => {
                     print(error)
                 })
