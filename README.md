@@ -22,7 +22,7 @@ The script is `./themes/setTheme.sh`
 
 ![screenshot](.screenshots/features/audio.png)
 
-### Theme and wallpaper switcher
+### Look and Feel controls for theme, bar position, and wallpaper
 
 ![screenshot](.screenshots/features/theme1.png)
 
