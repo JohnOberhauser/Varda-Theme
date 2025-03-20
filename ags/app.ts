@@ -22,7 +22,7 @@ App.start({
         const ratio = mainMonitor?.width && mainMonitor?.height
             ? mainMonitor.width / mainMonitor.height
             : 1
-        const savedBar = getBarFromName(readFile("./bar").trim())
+        const savedBar = getBarFromName(readFile("./savedBar").trim())
 
         print(`Screen ratio: ${ratio}`)
         print(`Saved bar: ${savedBar && BarDetails[savedBar].name}`)
