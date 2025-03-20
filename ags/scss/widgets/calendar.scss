@@ -1,3 +1,5 @@
+@use "../variables" as vars;
+
 .calendar{
   border-color: transparent;
   border-radius: 16px;
@@ -5,4 +7,32 @@
 
 .calendarBox {
   padding: 20px;
+}
+
+// The gtk calendar itself
+calendar {
+  background-color: vars.$bg;
+  border: 2px solid vars.$fg;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+calendar header {
+  background-color: vars.$bg;
+  color: vars.$fg;
+  padding: 5px;
+}
+
+calendar button {
+  background-color: vars.$bg;
+  color: vars.$fg;
+}
+
+calendar grid label {
+  background-color: vars.$bg;
+  color: vars.$fg;
+}
+
+calendar grid label.today {
+  background-color: vars.$primary;
 }
