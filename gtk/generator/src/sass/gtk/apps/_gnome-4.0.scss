@@ -136,7 +136,7 @@
   .nautilus-grid-view {
     &, gridview.view {
       background-color: $base;
-      border-radius: $window-radius - $space-size;
+      border-radius: 0;
     }
 
     @if $variant == 'light' and $topbar == 'dark' {
@@ -147,7 +147,7 @@
   .nautilus-list-view {
     &, columnview.view {
       background-color: $base;
-      border-radius: $window-radius - $space-size;
+      border-radius: 0;
     }
 
     @if $variant == 'light' and $topbar == 'dark' {

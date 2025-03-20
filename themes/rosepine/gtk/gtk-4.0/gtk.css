@@ -90,7 +90,7 @@ label.separator {
 label:disabled {
   color: rgba(224, 222, 244, 0.5);
   opacity: 1;
-  filter: 0;
+  filter: none;
 }
 
 headerbar label:disabled, tab label:disabled, button label:disabled {
@@ -5728,7 +5728,7 @@ popover.entry-completion > contents {
 
 .nautilus-window .nautilus-grid-view, .nautilus-window .nautilus-grid-view gridview.view {
   background-color: #191724;
-  border-radius: -4px;
+  border-radius: 0;
 }
 
 .nautilus-window .nautilus-list-view {
@@ -5737,7 +5737,7 @@ popover.entry-completion > contents {
 
 .nautilus-window .nautilus-list-view, .nautilus-window .nautilus-list-view columnview.view {
   background-color: #191724;
-  border-radius: -4px;
+  border-radius: 0;
 }
 
 .nautilus-window flap > separator {
