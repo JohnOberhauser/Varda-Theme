@@ -79,3 +79,27 @@
   color: vars.$fg;
   border: 0;
 }
+
+.barButton {
+  all: unset;
+  background-color: transparent;
+  font-size: 25px;
+  border-radius: 16px;
+  color: vars.$fg;
+  border: 0;
+  padding: 8px 18px 8px 18px;
+}
+
+.barButton:hover {
+  background-color: vars.$bgHover;
+}
+
+.barButtonSelected {
+  all: unset;
+  background-color: vars.$primary;
+  font-size: 25px;
+  border-radius: 16px;
+  color: vars.$fg;
+  border: 0;
+  padding: 8px 18px 8px 18px;
+}

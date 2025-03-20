@@ -10,7 +10,7 @@ import NotificationHistory from "./NotificationHistory";
 import NetworkControls from "./NetworkControls";
 import BluetoothControls from "./BluetoothControls";
 import Divider from "../common/Divider";
-import ThemeControls from "./ThemeControls";
+import LookAndFeelControls from "./LookAndFeelControls";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
@@ -60,7 +60,7 @@ export default function () {
                             defaultEndpoint={audio.default_microphone}
                             endpointsBinding={bind(audio, "microphones")}
                             getIcon={getMicrophoneIcon}/>
-                        <ThemeControls/>
+                        <LookAndFeelControls/>
 
                         {/*Disabling Media players since it seems to cause heavy lag when I use spotify-player (tui spotify)*/}
                         {/*Also requires gvfs package installed*/}

@@ -1,9 +1,10 @@
 import {App, Astal, Gtk, Gdk} from "astal/gtk4"
 import {GLib, Variable} from "astal"
+import {selectedBar, Bar} from "../bar/Bar";
 
 export const CalendarWindowName = "calendarWindow"
 
-export default function (anchor: Astal.WindowAnchor) {
+export default function () {
     const time = Variable<GLib.DateTime>(GLib.DateTime.new_now_local())
         .poll(1000, () => GLib.DateTime.new_now_local())
 
@@ -12,7 +13,9 @@ export default function (anchor: Astal.WindowAnchor) {
         cssClasses={["focusedWindow"]}
         name={CalendarWindowName}
         application={App}
-        anchor={anchor}
+        anchor={selectedBar((bar) => {
+            return bar === Bar.TOP ? Astal.WindowAnchor.TOP : Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.LEFT
+        })}
         layer={Astal.Layer.TOP}
         margin={5}
         visible={false}

@@ -1,4 +1,4 @@
-import {App, Astal, Gtk, Gdk} from "astal/gtk4"
+import {App, Astal, Gtk} from "astal/gtk4"
 import {
     BatteryButton,
     BluetoothButton,
@@ -10,12 +10,15 @@ import {
     VolumeButton, VpnButton,
     Workspaces
 } from "./BarWidgets";
+import {selectedBar, Bar} from "./Bar";
 
 export default function () {
     return <window
         cssClasses={["transparentBackground"]}
         monitor={0}
-        visible={true}
+        visible={selectedBar((bar) => {
+            return bar === Bar.SIDE
+        })}
         exclusivity={Astal.Exclusivity.EXCLUSIVE}
         margin={5}
         anchor={Astal.WindowAnchor.TOP

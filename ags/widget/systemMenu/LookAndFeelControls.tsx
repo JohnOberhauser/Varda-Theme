@@ -5,6 +5,8 @@ import {bind, Variable} from "astal"
 import {SystemMenuWindowName} from "./SystemMenuWindow";
 import Pango from "gi://Pango?version=1.0";
 import {createScaledTexture} from "../utils/images";
+import {Bar, BarDetails, selectedBar} from "../bar/Bar";
+import Divider from "../common/Divider";
 
 interface ThemeProps {
     name: string;
@@ -109,6 +111,48 @@ function updateMargins(box: Gtk.Box, theme: Theme) {
 
     box.marginStart = leftPadding
     box.marginEnd = rightPadding
+}
+
+function BarButton(
+    {
+        barType,
+        icon,
+    }: {
+        barType: Bar,
+        icon: string,
+    }
+) {
+    return <button
+        cssClasses={selectedBar((bar) => {
+            if (bar === barType) {
+                return ["themeButtonSelected"]
+            }
+            return ["themeButton"]
+        })}
+        onClicked={() => {
+            selectedBar.set(barType)
+            execAsync(["bash", "-c", `echo "${BarDetails[barType].name}" > ./bar`])
+                .catch((error) => {
+                    print(error)
+                })
+        }}>
+        <label
+            marginTop={8}
+            marginBottom={8}
+            marginStart={16}
+            marginEnd={20}
+            label={icon}/>
+    </button>
+}
+
+function BarOptions() {
+    return <box
+        vertical={false}
+        halign={Gtk.Align.CENTER}
+        spacing={12}>
+        <BarButton barType={Bar.SIDE} icon={"󱂪"}/>
+        <BarButton barType={Bar.TOP} icon={"󱔓"}/>
+    </box>
 }
 
 function ThemeButton(
@@ -230,7 +274,7 @@ export default function () {
                 halign={Gtk.Align.START}
                 hexpand={true}
                 ellipsize={Pango.EllipsizeMode.END}
-                label="Theme"/>
+                label="Look and Feel"/>
             <button
                 cssClasses={["iconButton"]}
                 label={wallpaperChooserRevealed((revealed): string => {
@@ -252,6 +296,12 @@ export default function () {
             <box
                 vertical={true}>
                 <ThemeOptions/>
+                <box marginTop={10}/>
+                <Divider
+                    marginStart={20}
+                    marginEnd={20}/>
+                <box marginTop={10}/>
+                <BarOptions/>
                 <box marginTop={20}/>
                 <box
                     vertical={false}>

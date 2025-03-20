@@ -1,4 +1,4 @@
-import { App, Astal } from "astal/gtk4"
+import { App } from "astal/gtk4"
 import style from "./scss/main.scss"
 import TopBar from "./widget/bar/TopBar"
 import Calendar from "./widget/calendar/Calendar"
@@ -11,6 +11,8 @@ import AppLauncher, {AppLauncherWindowName} from "./widget/appLauncher/AppLaunch
 import Screenshot, {ScreenshotWindowName} from "./widget/screenshot/Screenshot";
 import Screenshare, {ScreenshareWindowName, updateResponse, updateWindows} from "./widget/screenshare/Screenshare";
 import Hyprland from "gi://AstalHyprland"
+import {selectedBar, Bar, getBarFromName, BarDetails} from "./widget/bar/Bar";
+import {readFile} from "astal/file";
 
 App.start({
     css: style,
@@ -20,22 +22,26 @@ App.start({
         const ratio = mainMonitor?.width && mainMonitor?.height
             ? mainMonitor.width / mainMonitor.height
             : 1
+        const savedBar = getBarFromName(readFile("./bar").trim())
 
         print(`Screen ratio: ${ratio}`)
+        print(`Saved bar: ${savedBar && BarDetails[savedBar].name}`)
 
         if (args.includes("sidebar")) {
-            SideBar()
-            Calendar(Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.LEFT)
+            selectedBar.set(Bar.SIDE)
         } else if (args.includes("topbar")) {
-            TopBar()
-            Calendar(Astal.WindowAnchor.TOP)
+            selectedBar.set(Bar.TOP)
+        } else if (savedBar !== null) {
+            selectedBar.set(savedBar)
         } else if (ratio > 2) {
-            SideBar()
-            Calendar(Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.LEFT)
+            selectedBar.set(Bar.SIDE)
         } else {
-            TopBar()
-            Calendar(Astal.WindowAnchor.TOP)
+            selectedBar.set(Bar.TOP)
         }
+
+        SideBar()
+        TopBar()
+        Calendar()
         SystemMenuWindow()
         VolumeAlert()
         BrightnessAlert()

@@ -10,10 +10,13 @@ import {
     VolumeButton, VpnButton,
     Workspaces
 } from "./BarWidgets";
+import {selectedBar, Bar} from "./Bar";
 
 export default function () {
     return <window
-        visible={true}
+        visible={selectedBar((bar) => {
+            return bar === Bar.TOP
+        })}
         cssClasses={["transparentBackground"]}
         monitor={0}
         exclusivity={Astal.Exclusivity.EXCLUSIVE}
