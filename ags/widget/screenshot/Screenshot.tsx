@@ -578,6 +578,7 @@ function ScreenRecording() {
                             "bash",
                             "-c",
                             `
+                            sleep 0.7
                             ${command}
                             `
                         ]
@@ -604,6 +605,7 @@ function ScreenRecording() {
                             "bash",
                             "-c",
                             `
+                            sleep 0.7
                             ${command}
                             `
                         ]
@@ -630,6 +632,7 @@ function ScreenRecording() {
                             "bash",
                             "-c",
                             `
+                            sleep 0.7
                             ${command}
                             `
                         ]
