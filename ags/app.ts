@@ -25,7 +25,9 @@ App.start({
         const savedBar = getBarFromName(readFile("./savedBar").trim())
 
         print(`Screen ratio: ${ratio}`)
-        print(`Saved bar: ${savedBar && BarDetails[savedBar].name}`)
+        if (savedBar != null) {
+            print(`Saved bar: ${BarDetails[savedBar].name}`)
+        }
 
         if (args.includes("sidebar")) {
             selectedBar.set(Bar.SIDE)
