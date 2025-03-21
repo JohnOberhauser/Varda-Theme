@@ -3,13 +3,14 @@ import {Variable} from "astal"
 import Pango from "gi://Pango?version=1.0";
 import {LoopStatus, Mpris, PlaybackStatus, Player, ShuffleStatus} from "../utils/mpris"
 
+const mpris = new Mpris()
+
 function lengthStr(length: number) {
     const min = Math.floor(length / 60)
     const sec = Math.floor(length % 60)
     const sec0 = sec < 10 ? "0" : ""
     return `${min}:${sec0}${sec}`
 }
-
 
 function MediaPlayer({ player }: { player: Player }) {
     const { START, END, CENTER } = Gtk.Align
@@ -141,7 +142,6 @@ function MediaPlayer({ player }: { player: Player }) {
 }
 
 export default function () {
-    const mpris = new Mpris()
     return <box
         cssClasses={["mediaPlayersContainer"]}
         vertical={true}>
