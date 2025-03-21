@@ -10,6 +10,7 @@ import NotificationHistory from "./NotificationHistory";
 import NetworkControls from "./NetworkControls";
 import BluetoothControls from "./BluetoothControls";
 import LookAndFeelControls from "./LookAndFeelControls";
+import MediaPlayersAstal from "./MediaPlayersAstal";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
@@ -55,11 +56,10 @@ export default function () {
                             endpointsBinding={bind(audio, "microphones")}
                             getIcon={getMicrophoneIcon}/>
                         <LookAndFeelControls/>
-
-                        {/*Disabling Media players since it seems to cause heavy lag when I use spotify-player (tui spotify)*/}
-                        {/*Also requires gvfs package installed*/}
-                        {/*<MediaPlayers/>*/}
-
+                        {/*MediaPlayersAstal uses the astal mpris component.  It causes UI jank.  Until it gets fix
+                        use MediaPlayers.  It uses a home-made mpris component that doesn't cause the jank.*/}
+                        {/*<MediaPlayersAstal/>*/}
+                        <MediaPlayers/>
                         <box marginTop={10}/>
                         <PowerOptions/>
                         <box marginTop={20}/>

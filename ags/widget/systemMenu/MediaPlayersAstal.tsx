@@ -1,7 +1,7 @@
 import {Gtk} from "astal/gtk4"
-import {Variable} from "astal"
+import Mpris from "gi://AstalMpris"
+import {bind, Variable} from "astal"
 import Pango from "gi://Pango?version=1.0";
-import {LoopStatus, Mpris, PlaybackStatus, Player, ShuffleStatus} from "../utils/mpris"
 
 function lengthStr(length: number) {
     const min = Math.floor(length / 60)
@@ -11,25 +11,25 @@ function lengthStr(length: number) {
 }
 
 
-function MediaPlayer({ player }: { player: Player }) {
+function MediaPlayer({ player }: { player: Mpris.Player }) {
     const { START, END, CENTER } = Gtk.Align
 
-    const title = player.title(t =>
+    const title = bind(player, "title").as(t =>
         t || "Unknown Track")
 
-    const artist = player.artist(a =>
+    const artist = bind(player, "artist").as(a =>
         a || "Unknown Artist")
 
     // player.position will keep changing even when the player is paused.  This is a workaround
-    const realPosition = Variable(player.position.get())
-    player.position.subscribe((position) => {
-        if (player.playbackStatus.get() === PlaybackStatus.Playing) {
+    const realPosition = Variable(player.position)
+    bind(player, "position").subscribe((position) => {
+        if (player.playbackStatus === Mpris.PlaybackStatus.PLAYING) {
             realPosition.set(position)
         }
     })
 
-    const playIcon = player.playbackStatus(s =>
-        s === PlaybackStatus.Playing
+    const playIcon = bind(player, "playbackStatus").as(s =>
+        s === Mpris.PlaybackStatus.PLAYING
             ? ""
             : ""
     )
@@ -53,26 +53,26 @@ function MediaPlayer({ player }: { player: Player }) {
             <label
                 cssClasses={["labelSmall"]}
                 halign={START}
-                visible={player.trackLength(l => l > 0)}
+                visible={bind(player, "length").as(l => l > 0)}
                 label={realPosition().as(lengthStr)}
             />
             <slider
                 cssClasses={["seek"]}
                 hexpand={true}
-                visible={player.trackLength(l => l > 0)}
+                visible={bind(player, "length").as(l => l > 0)}
                 onChangeValue={({value}) => {
-                    player.position.set(value * player.trackLength.get())
-                    realPosition.set(player.position.get())
+                    player.position = value * player.length
+                    realPosition.set(player.position)
                 }}
                 value={realPosition().as((position) => {
-                    return player.trackLength.get() > 0 ? position / player.trackLength.get() : 0
+                    return player.length > 0 ? position / player.length : 0
                 })}
             />
             <label
                 cssClasses={["labelSmall"]}
                 halign={END}
-                visible={player.trackLength(l => l > 0)}
-                label={player.trackLength(l => l > 0 ? lengthStr(l) : "0:00")}
+                visible={bind(player, "length").as(l => l > 0)}
+                label={bind(player, "length").as(l => l > 0 ? lengthStr(l) : "0:00")}
             />
         </box>
         <box
@@ -80,15 +80,15 @@ function MediaPlayer({ player }: { player: Player }) {
             <button
                 cssClasses={["controlButton"]}
                 onClicked={() => {
-                    if (player.shuffleStatus.get() === ShuffleStatus.Enabled) {
-                        player.setShuffleStatus(ShuffleStatus.Disabled)
+                    if (player.shuffleStatus === Mpris.Shuffle.ON) {
+                        player.set_shuffle_status(Mpris.Shuffle.OFF)
                     } else {
-                        player.setShuffleStatus(ShuffleStatus.Enabled)
+                        player.set_shuffle_status(Mpris.Shuffle.ON)
                     }
                 }}
-                visible={player.shuffleStatus((shuffle) => shuffle !== ShuffleStatus.Unsupported)}
-                label={player.shuffleStatus((shuffle) => {
-                    if (shuffle === ShuffleStatus.Enabled) {
+                visible={bind(player, "shuffleStatus").as((shuffle) => shuffle !== Mpris.Shuffle.UNSUPPORTED)}
+                label={bind(player, "shuffleStatus").as((shuffle) => {
+                    if (shuffle === Mpris.Shuffle.ON) {
                         return ""
                     } else {
                         return "󰒞"
@@ -96,41 +96,35 @@ function MediaPlayer({ player }: { player: Player }) {
                 })}/>
             <button
                 cssClasses={["controlButton"]}
-                onClicked={() => {
-                    player.previousTrack()
-                }}
-                visible={player.canGoPrevious()}
+                onClicked={() => player.previous()}
+                visible={bind(player, "canGoPrevious")}
                 label=""/>
             <button
                 cssClasses={["controlButton"]}
-                onClicked={() => {
-                    player.playPause()
-                }}
-                visible={player.canControl()}
+                onClicked={() => player.play_pause()}
+                visible={bind(player, "canControl")}
                 label={playIcon}/>
             <button
                 cssClasses={["controlButton"]}
-                onClicked={() => {
-                    player.nextTrack()
-                }}
-                visible={player.canGoNext()}
+                onClicked={() => player.next()}
+                visible={bind(player, "canGoNext")}
                 label=""/>
             <button
                 cssClasses={["controlButton"]}
                 onClicked={() => {
-                    if (player.loopStatus.get() === LoopStatus.None) {
-                        player.setLoopStatus(LoopStatus.Playlist)
-                    } else if (player.loopStatus.get() === LoopStatus.Playlist) {
-                        player.setLoopStatus(LoopStatus.Track)
+                    if (player.loopStatus === Mpris.Loop.NONE) {
+                        player.set_loop_status(Mpris.Loop.PLAYLIST)
+                    } else if (player.loopStatus === Mpris.Loop.PLAYLIST) {
+                        player.set_loop_status(Mpris.Loop.TRACK)
                     } else {
-                        player.setLoopStatus(LoopStatus.None)
+                        player.set_loop_status(Mpris.Loop.NONE)
                     }
                 }}
-                visible={player.loopStatus((status) => status !== LoopStatus.Unsupported)}
-                label={player.loopStatus((status) => {
-                    if (status === LoopStatus.None) {
+                visible={bind(player, "loopStatus").as((status) => status !== Mpris.Loop.UNSUPPORTED)}
+                label={bind(player, "loopStatus").as((status) => {
+                    if (status === Mpris.Loop.NONE) {
                         return "󰑗"
-                    } else if (status === LoopStatus.Playlist) {
+                    } else if (status === Mpris.Loop.PLAYLIST) {
                         return "󰑖"
                     } else {
                         return "󰑘"
@@ -140,12 +134,16 @@ function MediaPlayer({ player }: { player: Player }) {
     </box>
 }
 
+/**
+ * This media play collection uses the astal library to monitor mpris data.  It's causes noticeable ui jank,
+ * so I created a clone of this in the [MediaPlayers.tsx] file.  Using that one until the jank is fixed.
+ */
 export default function () {
-    const mpris = new Mpris()
+    const mpris = Mpris.get_default()
     return <box
         cssClasses={["mediaPlayersContainer"]}
         vertical={true}>
-        {mpris.players(players => {
+        {bind(mpris, "players").as(players => {
             return players.map(player => (
                 <MediaPlayer player={player}/>
             ))
