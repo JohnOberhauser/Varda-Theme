@@ -71,4 +71,5 @@ atool \
 loupe \
 udiskie \
 wf-recorder \
-trash-cli
+trash-cli \
+gvfs
