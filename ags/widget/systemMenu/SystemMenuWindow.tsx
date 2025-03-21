@@ -9,15 +9,12 @@ import MediaPlayers from "./MediaPlayers";
 import NotificationHistory from "./NotificationHistory";
 import NetworkControls from "./NetworkControls";
 import BluetoothControls from "./BluetoothControls";
-import Divider from "../common/Divider";
 import LookAndFeelControls from "./LookAndFeelControls";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
 export default function () {
     const {audio} = Wp.get_default()!
-
-    let window: Gtk.Window
 
     return <window
         exclusivity={Astal.Exclusivity.NORMAL}
@@ -33,9 +30,6 @@ export default function () {
             if (key === Gdk.KEY_Escape) {
                 self.hide()
             }
-        }}
-        setup={(self) => {
-            window = self
         }}>
         <box
             vertical={true}>
@@ -65,8 +59,6 @@ export default function () {
                         {/*Disabling Media players since it seems to cause heavy lag when I use spotify-player (tui spotify)*/}
                         {/*Also requires gvfs package installed*/}
                         {/*<MediaPlayers/>*/}
-                        {/*<box css={"margin-top: 20px;"}/>*/}
-                        {/*<Divider css={"margin: 0 60px 0 60px;"}/>*/}
 
                         <box marginTop={10}/>
                         <PowerOptions/>
