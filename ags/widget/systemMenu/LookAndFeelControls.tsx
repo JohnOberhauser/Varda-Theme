@@ -217,6 +217,7 @@ function WallpaperColumn(
                         setWallpaper(path)
                     }}>
                     <Gtk.Picture
+                        heightRequest={90}
                         cssClasses={["wallpaper"]}
                         keepAspectRatio={true}
                         contentFit={Gtk.ContentFit.COVER}
