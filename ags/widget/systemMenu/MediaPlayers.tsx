@@ -1,5 +1,4 @@
 import {Gtk} from "astal/gtk4"
-import {Variable} from "astal"
 import Pango from "gi://Pango?version=1.0";
 import {LoopStatus, Mpris, PlaybackStatus, Player, ShuffleStatus} from "../utils/mpris"
 
@@ -20,14 +19,6 @@ function MediaPlayer({ player }: { player: Player }) {
 
     const artist = player.artist(a =>
         a || "Unknown Artist")
-
-    // player.position will keep changing even when the player is paused.  This is a workaround
-    const realPosition = Variable(player.position.get())
-    player.position.subscribe((position) => {
-        if (player.playbackStatus.get() === PlaybackStatus.Playing) {
-            realPosition.set(position)
-        }
-    })
 
     const playIcon = player.playbackStatus(s =>
         s === PlaybackStatus.Playing
@@ -55,17 +46,16 @@ function MediaPlayer({ player }: { player: Player }) {
                 cssClasses={["labelSmall"]}
                 halign={START}
                 visible={player.trackLength(l => l > 0)}
-                label={realPosition().as(lengthStr)}
+                label={player.position(lengthStr)}
             />
             <slider
                 cssClasses={["seek"]}
                 hexpand={true}
                 visible={player.trackLength(l => l > 0)}
                 onChangeValue={({value}) => {
-                    player.position.set(value * player.trackLength.get())
-                    realPosition.set(player.position.get())
+                    player.setPosition(value * player.trackLength.get())
                 }}
-                value={realPosition().as((position) => {
+                value={player.position((position) => {
                     return player.trackLength.get() > 0 ? position / player.trackLength.get() : 0
                 })}
             />

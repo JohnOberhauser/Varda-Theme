@@ -501,6 +501,68 @@ export class Player {
                 }
             }
         );
+        this.playbackStatus.set(this.playbackStatus.get() === PlaybackStatus.Playing ? PlaybackStatus.Paused : PlaybackStatus.Playing)
+    }
+
+    public setPosition(newPosition: number): void {
+        if (!this.proxy) {
+            print(`No proxy available for ${this.busName}`);
+            return;
+        }
+
+        // Retrieve the Metadata property from the proxy.
+        const metaVariant = this.proxy.get_cached_property("Metadata");
+        if (!metaVariant) {
+            print("No metadata available; cannot update track position.");
+            return;
+        }
+
+        // Unpack the metadata to extract the track id.
+        let meta: any;
+        try {
+            meta = metaVariant.deep_unpack();
+        } catch (e) {
+            print("Error unpacking metadata: " + e);
+            return;
+        }
+
+        // Ensure the metadata contains the track id.
+        if (!meta["mpris:trackid"]) {
+            print("No track id available in metadata.");
+            return;
+        }
+
+        let trackId: string;
+        try {
+            // mpris:trackid is itself a variant; extract the plain string.
+            trackId = meta["mpris:trackid"].deep_unpack();
+        } catch (e) {
+            print("Error unpacking track id: " + e);
+            return;
+        }
+
+        // Create a tuple variant for the parameters.
+        // The signature "(ox)" indicates a tuple with an object path ("o") and an int64 ("x").
+        let parameters = new GLib.Variant("(ox)", [trackId, newPosition * 1000000]);
+
+        // Call the "SetPosition" method on the MPRIS interface.
+        this.proxy.call(
+            "SetPosition",
+            parameters,
+            Gio.DBusCallFlags.NONE,
+            -1,
+            null,
+            (proxy, res) => {
+                try {
+                    proxy?.call_finish(res);
+                    print(`Position updated to ${newPosition} (seconds)`);
+                } catch (e) {
+                    print("Error setting position: " + e);
+                }
+            }
+        );
+
+        this.position.set(newPosition)
     }
 }
 
