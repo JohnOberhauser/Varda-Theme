@@ -28,6 +28,10 @@ The script is `./themes/setTheme.sh`
 
 ![screenshot](.screenshots/features/theme2.png)
 
+### Mpris media controls
+
+![screenshot](.screenshots/features/media.png)
+
 ### Notification popups and history
 
 ![screenshot](.screenshots/features/notifications.png)
