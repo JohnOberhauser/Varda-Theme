@@ -99,6 +99,7 @@ export default function () {
         list,
         selectedIndex
     ])
+    let textEntryBox: Gtk.Entry | null = null
 
     return <window
         name={AppLauncherWindowName}
@@ -111,6 +112,9 @@ export default function () {
             apps = new Apps.Apps()
             text.set("")
             selectedIndex.set(0)
+            if (textEntryBox != null) {
+                textEntryBox.text = ""
+            }
         }}
         onKeyPressed={function (self, key) {
             if (key === Gdk.KEY_Escape) {
@@ -144,6 +148,9 @@ export default function () {
                             onChanged={self => text.set(self.text)}
                             onActivate={onEnter}
                             hexpand={true}
+                            setup={(self) => {
+                                textEntryBox = self
+                            }}
                         />
                     </box>
                     <Gtk.ScrolledWindow
