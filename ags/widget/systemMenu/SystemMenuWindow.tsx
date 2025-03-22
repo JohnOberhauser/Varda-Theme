@@ -11,6 +11,7 @@ import NetworkControls from "./NetworkControls";
 import BluetoothControls from "./BluetoothControls";
 import LookAndFeelControls from "./LookAndFeelControls";
 import MediaPlayersAstal from "./MediaPlayersAstal";
+import {Bar, selectedBar} from "../bar/Bar";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
@@ -19,7 +20,17 @@ export default function () {
 
     return <window
         exclusivity={Astal.Exclusivity.NORMAL}
-        anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.LEFT | Astal.WindowAnchor.BOTTOM}
+        anchor={selectedBar((bar) => {
+            if (bar === Bar.RIGHT) {
+                return Astal.WindowAnchor.TOP
+                    | Astal.WindowAnchor.RIGHT
+                    | Astal.WindowAnchor.BOTTOM
+            } else {
+                return Astal.WindowAnchor.TOP
+                    | Astal.WindowAnchor.LEFT
+                    | Astal.WindowAnchor.BOTTOM
+            }
+        })}
         layer={Astal.Layer.TOP}
         cssClasses={["transparentBackground"]}
         name={SystemMenuWindowName}
@@ -34,6 +45,8 @@ export default function () {
         }}>
         <box
             vertical={true}>
+            <box
+                vexpand={selectedBar((bar) => bar === Bar.BOTTOM)}/>
             <box
                 vertical={true}
                 cssClasses={["focusedWindow"]}>
@@ -74,7 +87,7 @@ export default function () {
                 </Gtk.ScrolledWindow>
             </box>
             <box
-                vexpand={true}/>
+                vexpand={selectedBar((bar) => bar !== Bar.BOTTOM)}/>
         </box>
     </window>
 }

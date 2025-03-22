@@ -150,8 +150,10 @@ function BarOptions() {
         vertical={false}
         halign={Gtk.Align.CENTER}
         spacing={12}>
-        <BarButton barType={Bar.SIDE} icon={"󱂪"}/>
+        <BarButton barType={Bar.LEFT} icon={"󱂪"}/>
         <BarButton barType={Bar.TOP} icon={"󱔓"}/>
+        <BarButton barType={Bar.RIGHT} icon={"󱂫"}/>
+        <BarButton barType={Bar.BOTTOM} icon={"󱂩"}/>
     </box>
 }
 

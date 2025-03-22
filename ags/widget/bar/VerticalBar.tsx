@@ -17,13 +17,21 @@ export default function () {
         cssClasses={["transparentBackground"]}
         monitor={0}
         visible={selectedBar((bar) => {
-            return bar === Bar.SIDE
+            return bar === Bar.LEFT || bar === Bar.RIGHT
         })}
         exclusivity={Astal.Exclusivity.EXCLUSIVE}
         margin={5}
-        anchor={Astal.WindowAnchor.TOP
-            | Astal.WindowAnchor.LEFT
-            | Astal.WindowAnchor.BOTTOM}
+        anchor={selectedBar((bar) => {
+            if (bar === Bar.LEFT) {
+                return Astal.WindowAnchor.TOP
+                    | Astal.WindowAnchor.LEFT
+                    | Astal.WindowAnchor.BOTTOM
+            } else {
+                return Astal.WindowAnchor.TOP
+                    | Astal.WindowAnchor.RIGHT
+                    | Astal.WindowAnchor.BOTTOM
+            }
+        })}
         application={App}>
         <centerbox
             orientation={Gtk.Orientation.VERTICAL}

@@ -3,6 +3,7 @@ import Notifd from "gi://AstalNotifd"
 import Notification from "./Notification"
 import { type Subscribable } from "astal/binding"
 import { Variable, bind, timeout, GLib } from "astal"
+import {Bar, selectedBar} from "../bar/Bar";
 
 // see comment below in constructor
 const TIMEOUT_DELAY = 7_000
@@ -109,7 +110,7 @@ class NotifiationMap implements Subscribable {
 }
 
 export default function NotificationPopups(gdkmonitor: Gdk.Monitor) {
-    const { TOP, RIGHT } = Astal.WindowAnchor
+    const { TOP, RIGHT, LEFT } = Astal.WindowAnchor
     const notifs = new NotifiationMap()
 
     return <window
@@ -119,7 +120,13 @@ export default function NotificationPopups(gdkmonitor: Gdk.Monitor) {
         cssClasses={["NotificationPopups"]}
         gdkmonitor={gdkmonitor}
         exclusivity={Astal.Exclusivity.EXCLUSIVE}
-        anchor={TOP | RIGHT}>
+        anchor={selectedBar((bar) => {
+            if (bar === Bar.RIGHT) {
+                return TOP | LEFT
+            } else {
+                return TOP | RIGHT
+            }
+        })}>
         <box
             vertical={true}>
             {bind(notifs)}

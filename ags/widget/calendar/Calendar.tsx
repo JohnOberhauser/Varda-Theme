@@ -14,7 +14,16 @@ export default function () {
         name={CalendarWindowName}
         application={App}
         anchor={selectedBar((bar) => {
-            return bar === Bar.TOP ? Astal.WindowAnchor.TOP : Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.LEFT
+            switch (bar) {
+                case Bar.TOP:
+                    return Astal.WindowAnchor.TOP
+                case Bar.LEFT:
+                    return Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.LEFT
+                case Bar.RIGHT:
+                    return Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.RIGHT
+                case Bar.BOTTOM:
+                    return Astal.WindowAnchor.BOTTOM
+            }
         })}
         layer={Astal.Layer.TOP}
         margin={5}

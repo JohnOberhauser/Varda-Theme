@@ -1,10 +1,8 @@
 import { App } from "astal/gtk4"
 import style from "./scss/main.scss"
-import TopBar from "./widget/bar/TopBar"
 import Calendar from "./widget/calendar/Calendar"
 import SystemMenuWindow from "./widget/systemMenu/SystemMenuWindow";
 import {BrightnessAlert, ChargingAlertSound, VolumeAlert} from "./widget/alerts/Alerts";
-import SideBar from "./widget/bar/SideBar";
 import {exec} from "astal/process"
 import NotificationPopups from "./widget/notification/NotificationPopups";
 import AppLauncher, {AppLauncherWindowName} from "./widget/appLauncher/AppLauncher";
@@ -13,6 +11,8 @@ import Screenshare, {ScreenshareWindowName, updateResponse, updateWindows} from 
 import Hyprland from "gi://AstalHyprland"
 import {selectedBar, Bar, getBarFromName, BarDetails} from "./widget/bar/Bar";
 import {readFile} from "astal/file";
+import VerticalBar from "./widget/bar/VerticalBar";
+import HorizontalBar from "./widget/bar/HorizontalBar";
 
 App.start({
     css: style,
@@ -29,20 +29,16 @@ App.start({
             print(`Saved bar: ${BarDetails[savedBar].name}`)
         }
 
-        if (args.includes("sidebar")) {
-            selectedBar.set(Bar.SIDE)
-        } else if (args.includes("topbar")) {
-            selectedBar.set(Bar.TOP)
-        } else if (savedBar !== null) {
+        if (savedBar !== null) {
             selectedBar.set(savedBar)
         } else if (ratio > 2) {
-            selectedBar.set(Bar.SIDE)
+            selectedBar.set(Bar.LEFT)
         } else {
             selectedBar.set(Bar.TOP)
         }
 
-        SideBar()
-        TopBar()
+        VerticalBar()
+        HorizontalBar()
         Calendar()
         SystemMenuWindow()
         VolumeAlert()

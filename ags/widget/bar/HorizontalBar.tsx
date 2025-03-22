@@ -15,15 +15,23 @@ import {selectedBar, Bar} from "./Bar";
 export default function () {
     return <window
         visible={selectedBar((bar) => {
-            return bar === Bar.TOP
+            return bar === Bar.TOP || bar === Bar.BOTTOM
         })}
         cssClasses={["transparentBackground"]}
         monitor={0}
         exclusivity={Astal.Exclusivity.EXCLUSIVE}
         margin={5}
-        anchor={Astal.WindowAnchor.TOP
-            | Astal.WindowAnchor.LEFT
-            | Astal.WindowAnchor.RIGHT}
+        anchor={selectedBar((bar) => {
+            if (bar === Bar.TOP) {
+                return Astal.WindowAnchor.TOP
+                    | Astal.WindowAnchor.LEFT
+                    | Astal.WindowAnchor.RIGHT
+            } else {
+                return Astal.WindowAnchor.BOTTOM
+                    | Astal.WindowAnchor.LEFT
+                    | Astal.WindowAnchor.RIGHT
+            }
+        })}
         application={App}>
         <centerbox
             orientation={Gtk.Orientation.HORIZONTAL}

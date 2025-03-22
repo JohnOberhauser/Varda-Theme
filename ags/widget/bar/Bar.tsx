@@ -1,8 +1,10 @@
 import {Variable} from "astal";
 
 export enum Bar {
-    SIDE,
+    LEFT,
+    RIGHT,
     TOP,
+    BOTTOM,
 }
 
 interface BarProps {
@@ -10,19 +12,25 @@ interface BarProps {
 }
 
 export const BarDetails: Record<Bar, BarProps> = {
-    [Bar.SIDE]: { name: "sidebar" },
-    [Bar.TOP]: { name: "topbar" },
+    [Bar.LEFT]: { name: "left" },
+    [Bar.TOP]: { name: "top" },
+    [Bar.RIGHT]: { name: "right" },
+    [Bar.BOTTOM]: { name: "bottom" },
 }
 
 export function getBarFromName(name: string): Bar | null {
     switch (name) {
-        case "sidebar":
-            return Bar.SIDE
-        case "topbar":
+        case "left":
+            return Bar.LEFT
+        case "top":
             return Bar.TOP
+        case "right":
+            return Bar.RIGHT
+        case "bottom":
+            return Bar.BOTTOM
         default:
             return null
     }
 }
 
-export const selectedBar = Variable(Bar.SIDE)
+export const selectedBar = Variable(Bar.LEFT)
