@@ -107,37 +107,6 @@ export class Player {
 
         // Initialize our properties from the current state.
         this._updateAllProperties();
-        this._updateOptionalProperty<boolean>("Shuffle", (shuffleBool) => {
-            this.shuffleStatus.set(shuffleBool ? ShuffleStatus.Enabled : ShuffleStatus.Disabled);
-        });
-        this._updateOptionalProperty<string>("LoopStatus", (loopStr) => {
-            this.loopStatus.set(loopStr as LoopStatus);
-        });
-    }
-
-    private _updateOptionalProperty<T>(propertyName: string, update: (value: T) => void): void {
-        if (!this.proxy) return;
-        // Create parameters: the interface and the property name.
-        let parameters = new GLib.Variant("(ss)", ["org.mpris.MediaPlayer2.Player", propertyName]);
-        this.proxy.call(
-            "org.freedesktop.DBus.Properties.Get",
-            parameters,
-            Gio.DBusCallFlags.NONE,
-            -1,
-            null,
-            (proxy, res) => {
-                try {
-                    let result: GLib.Variant = proxy!.call_finish(res);
-                    // The result is a tuple; get the first element which is the property value variant.
-                    // @ts-ignore
-                    let valueVariant = result.deep_unpack()[0];
-                    // Unpack the value to its native type and update.
-                    update(valueVariant.deep_unpack());
-                } catch (e) {
-                    log(`Error getting property ${propertyName}: ${e}`);
-                }
-            }
-        );
     }
 
     private _updateAllProperties(): void {
