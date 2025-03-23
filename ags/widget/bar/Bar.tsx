@@ -69,6 +69,7 @@ export function setBarType(bar: Bar) {
 }
 
 export function setMenuPosition(position: MenuPosition) {
+    print(`setting menu position to: ${position}`)
     menuPosition.set(position)
     execAsync(["bash", "-c", `echo "${selectedBar.get()},${position},${clockPosition.get()}" > ./savedBar`])
         .catch((error) => {
@@ -77,6 +78,7 @@ export function setMenuPosition(position: MenuPosition) {
 }
 
 export function setClockPosition(position: ClockPosition) {
+    print(`setting clock position to: ${position}`)
     clockPosition.set(position)
     execAsync(["bash", "-c", `echo "${selectedBar.get()},${menuPosition.get()},${position}" > ./savedBar`])
         .catch((error) => {

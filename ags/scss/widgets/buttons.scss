@@ -15,6 +15,21 @@
   background-color: vars.$bgHover;
 }
 
+.activeIconButton {
+  all: unset;
+  background-color: vars.$primary;
+  color: vars.$fg;
+  padding: 4px 4px 4px 2px;
+  border: none;
+  min-height: 25px;
+  min-width: 30px;
+  border-radius: 8px;
+}
+
+.activeIconButton:hover {
+  background-color: vars.$bgHover;
+}
+
 .warningIconButton {
   all: unset;
   background-color: vars.$bg;

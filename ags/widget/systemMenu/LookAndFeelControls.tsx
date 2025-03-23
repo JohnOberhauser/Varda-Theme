@@ -5,7 +5,16 @@ import {bind, Variable} from "astal"
 import {SystemMenuWindowName} from "./SystemMenuWindow";
 import Pango from "gi://Pango?version=1.0";
 import {createScaledTexture} from "../utils/images";
-import {Bar, selectedBar, setBarType} from "../bar/Bar";
+import {
+    Bar,
+    ClockPosition,
+    clockPosition,
+    MenuPosition,
+    menuPosition,
+    selectedBar,
+    setBarType, setClockPosition,
+    setMenuPosition
+} from "../bar/Bar";
 import Divider from "../common/Divider";
 
 interface ThemeProps {
@@ -141,7 +150,7 @@ function BarButton(
     </button>
 }
 
-function BarOptions() {
+function BarPositionOptions() {
     return <box
         vertical={false}
         halign={Gtk.Align.CENTER}
@@ -150,6 +159,46 @@ function BarOptions() {
         <BarButton barType={Bar.TOP} icon={"󱔓"}/>
         <BarButton barType={Bar.RIGHT} icon={"󱂫"}/>
         <BarButton barType={Bar.BOTTOM} icon={"󱂩"}/>
+    </box>
+}
+
+function BarWidgetOptions() {
+    return <box
+        vertical={false}
+        halign={Gtk.Align.CENTER}
+        spacing={8}>
+        <button
+            cssClasses={menuPosition((pos) => {
+                if (pos === MenuPosition.DEFAULT) {
+                    return ["iconButton"]
+                } else {
+                    return ["activeIconButton"]
+                }
+            })}
+            label="󰣇"
+            onClicked={() => {
+                if (menuPosition.get() === MenuPosition.DEFAULT) {
+                    setMenuPosition(MenuPosition.ALTERNATE)
+                } else {
+                    setMenuPosition(MenuPosition.DEFAULT)
+                }
+            }}/>
+        <button
+            cssClasses={clockPosition((pos) => {
+                if (pos === ClockPosition.DEFAULT) {
+                    return ["iconButton"]
+                } else {
+                    return ["activeIconButton"]
+                }
+            })}
+            label=""
+            onClicked={() => {
+                if (clockPosition.get() === ClockPosition.DEFAULT) {
+                    setClockPosition(ClockPosition.ALTERNATE)
+                } else {
+                    setClockPosition(ClockPosition.DEFAULT)
+                }
+            }}/>
     </box>
 }
 
@@ -295,13 +344,15 @@ export default function () {
             <box
                 vertical={true}>
                 <ThemeOptions/>
-                <box marginTop={10}/>
                 <Divider
                     marginStart={20}
-                    marginEnd={20}/>
+                    marginEnd={20}
+                    marginTop={10}
+                    marginBottom={10}/>
+                <BarPositionOptions/>
                 <box marginTop={10}/>
-                <BarOptions/>
-                <box marginTop={20}/>
+                <BarWidgetOptions/>
+                <box marginTop={10}/>
                 <box
                     vertical={false}>
                     {Array.from({length: numberOfColumns}).map((_, index) => {
