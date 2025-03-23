@@ -12,7 +12,8 @@ import {
     MenuPosition,
     menuPosition,
     selectedBar,
-    setBarType, setClockPosition,
+    setBarType,
+    setClockPosition,
     setMenuPosition
 } from "../bar/Bar";
 import Divider from "../common/Divider";
@@ -159,6 +160,57 @@ function BarPositionOptions() {
         <BarButton barType={Bar.TOP} icon={"󱔓"}/>
         <BarButton barType={Bar.RIGHT} icon={"󱂫"}/>
         <BarButton barType={Bar.BOTTOM} icon={"󱂩"}/>
+    </box>
+}
+
+function BarWidgetOptions2() {
+    let menuSwitch: Gtk.Switch | null = null
+    let clockSwitch: Gtk.Switch | null = null
+    return <box
+        marginStart={20}
+        marginEnd={20}
+        hexpand={true}
+        vertical={true}>
+        <box
+            vertical={false}
+            hexpand={true}>
+            <label
+                cssClasses={["labelSmall"]}
+                label="󰣇  Alternate menu position"/>
+            <box hexpand={true}/>
+            <switch
+                onNotifyActive={() => {
+                    if (menuSwitch?.active) {
+                        setMenuPosition(MenuPosition.ALTERNATE)
+                    } else {
+                        setMenuPosition(MenuPosition.DEFAULT)
+                    }
+                }}
+                setup={(self) => {
+                    menuSwitch = self
+                    self.active = menuPosition.get() === MenuPosition.ALTERNATE
+                }}/>
+        </box>
+        <box
+            vertical={false}
+            hexpand={true}>
+            <label
+                cssClasses={["labelSmall"]}
+                label="  Alternate clock position"/>
+            <box hexpand={true}/>
+            <switch
+                onNotifyActive={() => {
+                    if (clockSwitch?.active) {
+                        setClockPosition(ClockPosition.ALTERNATE)
+                    } else {
+                        setClockPosition(ClockPosition.DEFAULT)
+                    }
+                }}
+                setup={(self) => {
+                    clockSwitch = self
+                    self.active = clockPosition.get() === ClockPosition.ALTERNATE
+                }}/>
+        </box>
     </box>
 }
 
@@ -351,7 +403,7 @@ export default function () {
                     marginBottom={10}/>
                 <BarPositionOptions/>
                 <box marginTop={10}/>
-                <BarWidgetOptions/>
+                <BarWidgetOptions2/>
                 <box marginTop={10}/>
                 <box
                     vertical={false}>
