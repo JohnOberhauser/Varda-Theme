@@ -11,7 +11,7 @@ import {
     VpnButton,
     Workspaces
 } from "./BarWidgets";
-import {Bar, menuPosition, MenuPosition, selectedBar} from "./Bar";
+import {Bar, ClockPosition, clockPosition, menuPosition, MenuPosition, selectedBar} from "./Bar";
 
 export default function () {
     return <window
@@ -48,7 +48,13 @@ export default function () {
                 <Workspaces vertical={false}/>
             </box>
             <box>
-                <ClockButton cssClasses={[]} singleLine={true}/>
+                {clockPosition((position) => {
+                    if (position === ClockPosition.DEFAULT) {
+                        return <ClockButton cssClasses={[]} singleLine={true}/>
+                    } else {
+                        return <box/>
+                    }
+                })}
             </box>
             <box halign={Gtk.Align.END}>
                 <ScreenRecordingButton/>
@@ -58,6 +64,13 @@ export default function () {
                 <VpnButton/>
                 <NetworkButton/>
                 <BatteryButton/>
+                {clockPosition((position) => {
+                    if (position === ClockPosition.ALTERNATE) {
+                        return <ClockButton cssClasses={[]} singleLine={true}/>
+                    } else {
+                        return <box/>
+                    }
+                })}
                 {menuPosition((position) => {
                     if (position === MenuPosition.ALTERNATE) {
                         return <MenuButton cssClasses={[]}/>

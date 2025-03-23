@@ -24,7 +24,9 @@ export default function () {
     return <window
         exclusivity={Astal.Exclusivity.NORMAL}
         anchor={barValues((values) => {
-            if (values[0] === Bar.RIGHT || ((values[0] === Bar.TOP || values[0] === Bar.BOTTOM) && values[1] === MenuPosition.ALTERNATE)) {
+            const bar = values[0]
+            const menu = values[1]
+            if (bar === Bar.RIGHT || ((bar === Bar.TOP || bar === Bar.BOTTOM) && menu === MenuPosition.ALTERNATE)) {
                 return Astal.WindowAnchor.TOP
                     | Astal.WindowAnchor.RIGHT
                     | Astal.WindowAnchor.BOTTOM
@@ -50,9 +52,11 @@ export default function () {
             vertical={true}>
             <box
                 vexpand={barValues((values) => {
-                    return values[0] === Bar.BOTTOM
-                        || (values[0] === Bar.LEFT && values[1] === MenuPosition.ALTERNATE)
-                        || (values[0] === Bar.RIGHT && values[1] === MenuPosition.ALTERNATE)
+                    const bar = values[0]
+                    const menu = values[1]
+                    return bar === Bar.BOTTOM
+                        || (bar === Bar.LEFT && menu === MenuPosition.ALTERNATE)
+                        || (bar === Bar.RIGHT && menu === MenuPosition.ALTERNATE)
                 })}/>
             <box
                 vertical={true}
@@ -95,9 +99,11 @@ export default function () {
             </box>
             <box
                 vexpand={barValues((values) => {
-                    return values[0] === Bar.TOP
-                        || (values[0] === Bar.LEFT && values[1] === MenuPosition.DEFAULT)
-                        || (values[0] === Bar.RIGHT && values[1] === MenuPosition.DEFAULT)
+                    const bar = values[0]
+                    const menu = values[1]
+                    return bar === Bar.TOP
+                        || (bar === Bar.LEFT && menu === MenuPosition.DEFAULT)
+                        || (bar === Bar.RIGHT && menu === MenuPosition.DEFAULT)
                 })}/>
         </box>
     </window>

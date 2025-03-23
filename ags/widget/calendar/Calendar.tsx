@@ -1,6 +1,6 @@
-import {App, Astal, Gtk, Gdk} from "astal/gtk4"
+import {App, Astal, Gdk, Gtk} from "astal/gtk4"
 import {GLib, Variable} from "astal"
-import {selectedBar, Bar} from "../bar/Bar";
+import {Bar, clockPosition, ClockPosition, selectedBar} from "../bar/Bar";
 
 export const CalendarWindowName = "calendarWindow"
 
@@ -8,21 +8,44 @@ export default function () {
     const time = Variable<GLib.DateTime>(GLib.DateTime.new_now_local())
         .poll(1000, () => GLib.DateTime.new_now_local())
 
+    const barValues = Variable.derive([
+        selectedBar(),
+        clockPosition(),
+    ])
+
     return <window
         monitor={0}
         cssClasses={["focusedWindow"]}
         name={CalendarWindowName}
         application={App}
-        anchor={selectedBar((bar) => {
+        anchor={barValues((values) => {
+            const bar = values[0]
+            const menu = values[1]
             switch (bar) {
                 case Bar.TOP:
-                    return Astal.WindowAnchor.TOP
+                    if (menu === ClockPosition.DEFAULT) {
+                        return Astal.WindowAnchor.TOP
+                    } else {
+                        return Astal.WindowAnchor.TOP | Astal.WindowAnchor.RIGHT
+                    }
                 case Bar.LEFT:
-                    return Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.LEFT
+                    if (menu === ClockPosition.DEFAULT) {
+                        return Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.LEFT
+                    } else {
+                        return Astal.WindowAnchor.LEFT
+                    }
                 case Bar.RIGHT:
-                    return Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.RIGHT
+                    if (menu === ClockPosition.DEFAULT) {
+                        return Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.RIGHT
+                    } else {
+                        return Astal.WindowAnchor.RIGHT
+                    }
                 case Bar.BOTTOM:
-                    return Astal.WindowAnchor.BOTTOM
+                    if (menu === ClockPosition.DEFAULT) {
+                        return Astal.WindowAnchor.BOTTOM
+                    } else {
+                        return Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.RIGHT
+                    }
             }
         })}
         layer={Astal.Layer.TOP}

@@ -1,9 +1,9 @@
-import { Astal, Gtk, Gdk } from "astal/gtk4"
+import {Astal, Gdk, Gtk} from "astal/gtk4"
 import Notifd from "gi://AstalNotifd"
 import Notification from "./Notification"
-import { type Subscribable } from "astal/binding"
-import { Variable, bind, timeout, GLib } from "astal"
-import {Bar, selectedBar} from "../bar/Bar";
+import {type Subscribable} from "astal/binding"
+import {bind, GLib, Variable} from "astal"
+import {Bar, MenuPosition, menuPosition, selectedBar} from "../bar/Bar";
 
 // see comment below in constructor
 const TIMEOUT_DELAY = 7_000
@@ -113,6 +113,11 @@ export default function NotificationPopups(gdkmonitor: Gdk.Monitor) {
     const { TOP, RIGHT, LEFT } = Astal.WindowAnchor
     const notifs = new NotifiationMap()
 
+    const barValues = Variable.derive([
+        selectedBar(),
+        menuPosition(),
+    ])
+
     return <window
         visible={bind(notifs).as((values) => {
             return values.length !== 0
@@ -120,8 +125,10 @@ export default function NotificationPopups(gdkmonitor: Gdk.Monitor) {
         cssClasses={["NotificationPopups"]}
         gdkmonitor={gdkmonitor}
         exclusivity={Astal.Exclusivity.EXCLUSIVE}
-        anchor={selectedBar((bar) => {
-            if (bar === Bar.RIGHT) {
+        anchor={barValues((values) => {
+            const bar = values[0]
+            const menu = values[1]
+            if (bar === Bar.RIGHT || (menu === MenuPosition.ALTERNATE && (bar === Bar.TOP || bar === Bar.BOTTOM))) {
                 return TOP | LEFT
             } else {
                 return TOP | RIGHT

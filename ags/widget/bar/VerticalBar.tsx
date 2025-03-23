@@ -10,7 +10,7 @@ import {
     VolumeButton, VpnButton,
     Workspaces
 } from "./BarWidgets";
-import {selectedBar, Bar, menuPosition, MenuPosition} from "./Bar";
+import {selectedBar, Bar, menuPosition, MenuPosition, clockPosition, ClockPosition} from "./Bar";
 
 export default function () {
     return <window
@@ -46,7 +46,15 @@ export default function () {
                 })}
                 <Workspaces vertical={true}/>
             </box>
-            <box/>
+            <box>
+                {clockPosition((position) => {
+                    if (position === ClockPosition.ALTERNATE) {
+                        return <ClockButton cssClasses={["sideBarClockButton"]} singleLine={false}/>
+                    } else {
+                        return <box/>
+                    }
+                })}
+            </box>
             <box
                 vertical={true}
                 valign={Gtk.Align.END}>
@@ -57,7 +65,13 @@ export default function () {
                 <VpnButton/>
                 <NetworkButton/>
                 <BatteryButton/>
-                <ClockButton cssClasses={["sideBarClockButton"]} singleLine={false}/>
+                {clockPosition((position) => {
+                    if (position === ClockPosition.DEFAULT) {
+                        return <ClockButton cssClasses={["sideBarClockButton"]} singleLine={false}/>
+                    } else {
+                        return <box/>
+                    }
+                })}
                 {menuPosition((position) => {
                     if (position === MenuPosition.ALTERNATE) {
                         return <MenuButton cssClasses={["sideBarMenuButton"]}/>
