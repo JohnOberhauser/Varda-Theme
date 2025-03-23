@@ -9,7 +9,7 @@ import AppLauncher, {AppLauncherWindowName} from "./widget/appLauncher/AppLaunch
 import Screenshot, {ScreenshotWindowName} from "./widget/screenshot/Screenshot";
 import Screenshare, {ScreenshareWindowName, updateResponse, updateWindows} from "./widget/screenshare/Screenshare";
 import Hyprland from "gi://AstalHyprland"
-import {selectedBar, Bar, getBarFromName, BarDetails} from "./widget/bar/Bar";
+import {selectedBar, Bar, unpackBarDetails} from "./widget/bar/Bar";
 import {readFile} from "astal/file";
 import VerticalBar from "./widget/bar/VerticalBar";
 import HorizontalBar from "./widget/bar/HorizontalBar";
@@ -22,19 +22,17 @@ App.start({
         const ratio = mainMonitor?.width && mainMonitor?.height
             ? mainMonitor.width / mainMonitor.height
             : 1
-        const savedBar = getBarFromName(readFile("./savedBar").trim())
+
+        const barRestored = unpackBarDetails(readFile("./savedBar").trim())
 
         print(`Screen ratio: ${ratio}`)
-        if (savedBar != null) {
-            print(`Saved bar: ${BarDetails[savedBar].name}`)
-        }
 
-        if (savedBar !== null) {
-            selectedBar.set(savedBar)
-        } else if (ratio > 2) {
-            selectedBar.set(Bar.LEFT)
-        } else {
-            selectedBar.set(Bar.TOP)
+        if (!barRestored) {
+            if (ratio > 2) {
+                selectedBar.set(Bar.LEFT)
+            } else {
+                selectedBar.set(Bar.TOP)
+            }
         }
 
         VerticalBar()

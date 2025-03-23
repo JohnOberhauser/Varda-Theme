@@ -1,8 +1,7 @@
-import {App, Astal} from "astal/gtk4"
+import {App, Astal, Gdk, Gtk} from "astal/gtk4"
 import EndpointControls from "./EndpointControls";
 import Wp from "gi://AstalWp"
-import {bind} from "astal"
-import {Gtk, Gdk} from "astal/gtk4"
+import {bind, Variable} from "astal"
 import {getMicrophoneIcon, getVolumeIcon} from "../utils/audio";
 import PowerOptions from "./PowerOptions";
 import MediaPlayers from "./MediaPlayers";
@@ -10,18 +9,22 @@ import NotificationHistory from "./NotificationHistory";
 import NetworkControls from "./NetworkControls";
 import BluetoothControls from "./BluetoothControls";
 import LookAndFeelControls from "./LookAndFeelControls";
-import MediaPlayersAstal from "./MediaPlayersAstal";
-import {Bar, selectedBar} from "../bar/Bar";
+import {Bar, MenuPosition, menuPosition, selectedBar} from "../bar/Bar";
 
 export const SystemMenuWindowName = "systemMenuWindow"
 
 export default function () {
     const {audio} = Wp.get_default()!
 
+    const barValues = Variable.derive([
+        selectedBar(),
+        menuPosition(),
+    ])
+
     return <window
         exclusivity={Astal.Exclusivity.NORMAL}
-        anchor={selectedBar((bar) => {
-            if (bar === Bar.RIGHT) {
+        anchor={barValues((values) => {
+            if (values[0] === Bar.RIGHT || ((values[0] === Bar.TOP || values[0] === Bar.BOTTOM) && values[1] === MenuPosition.ALTERNATE)) {
                 return Astal.WindowAnchor.TOP
                     | Astal.WindowAnchor.RIGHT
                     | Astal.WindowAnchor.BOTTOM
@@ -46,7 +49,11 @@ export default function () {
         <box
             vertical={true}>
             <box
-                vexpand={selectedBar((bar) => bar === Bar.BOTTOM)}/>
+                vexpand={barValues((values) => {
+                    return values[0] === Bar.BOTTOM
+                        || (values[0] === Bar.LEFT && values[1] === MenuPosition.ALTERNATE)
+                        || (values[0] === Bar.RIGHT && values[1] === MenuPosition.ALTERNATE)
+                })}/>
             <box
                 vertical={true}
                 cssClasses={["focusedWindow"]}>
@@ -87,7 +94,11 @@ export default function () {
                 </Gtk.ScrolledWindow>
             </box>
             <box
-                vexpand={selectedBar((bar) => bar !== Bar.BOTTOM)}/>
+                vexpand={barValues((values) => {
+                    return values[0] === Bar.TOP
+                        || (values[0] === Bar.LEFT && values[1] === MenuPosition.DEFAULT)
+                        || (values[0] === Bar.RIGHT && values[1] === MenuPosition.DEFAULT)
+                })}/>
         </box>
     </window>
 }

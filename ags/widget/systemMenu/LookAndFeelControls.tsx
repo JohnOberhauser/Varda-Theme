@@ -5,7 +5,7 @@ import {bind, Variable} from "astal"
 import {SystemMenuWindowName} from "./SystemMenuWindow";
 import Pango from "gi://Pango?version=1.0";
 import {createScaledTexture} from "../utils/images";
-import {Bar, BarDetails, selectedBar} from "../bar/Bar";
+import {Bar, selectedBar, setBarType} from "../bar/Bar";
 import Divider from "../common/Divider";
 
 interface ThemeProps {
@@ -130,11 +130,7 @@ function BarButton(
             return ["themeButton"]
         })}
         onClicked={() => {
-            selectedBar.set(barType)
-            execAsync(["bash", "-c", `echo "${BarDetails[barType].name}" > ./savedBar`])
-                .catch((error) => {
-                    print(error)
-                })
+            setBarType(barType)
         }}>
         <label
             marginTop={8}

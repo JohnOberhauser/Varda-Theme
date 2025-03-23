@@ -1,36 +1,85 @@
 import {Variable} from "astal";
+import {execAsync} from "astal/process";
 
 export enum Bar {
-    LEFT,
-    RIGHT,
-    TOP,
-    BOTTOM,
+    LEFT = "left",
+    RIGHT = "right",
+    TOP = "top",
+    BOTTOM = "bottom",
 }
 
-interface BarProps {
-    name: string;
+export enum MenuPosition {
+    DEFAULT = "default",
+    ALTERNATE = "alternate",
 }
 
-export const BarDetails: Record<Bar, BarProps> = {
-    [Bar.LEFT]: { name: "left" },
-    [Bar.TOP]: { name: "top" },
-    [Bar.RIGHT]: { name: "right" },
-    [Bar.BOTTOM]: { name: "bottom" },
+export enum ClockPosition {
+    DEFAULT= "default",
+    ALTERNATE = "alternate",
 }
 
-export function getBarFromName(name: string): Bar | null {
-    switch (name) {
-        case "left":
-            return Bar.LEFT
-        case "top":
-            return Bar.TOP
-        case "right":
-            return Bar.RIGHT
-        case "bottom":
-            return Bar.BOTTOM
-        default:
-            return null
+export function unpackBarDetails(details: string): boolean {
+    if (details.trim() === "") {
+        return false
     }
+    const values = details.split(",")
+    switch (values[0]) {
+        case Bar.LEFT:
+            selectedBar.set(Bar.LEFT)
+            break;
+        case Bar.TOP:
+            selectedBar.set(Bar.TOP)
+            break;
+        case Bar.RIGHT:
+            selectedBar.set(Bar.RIGHT)
+            break;
+        case Bar.BOTTOM:
+            selectedBar.set(Bar.BOTTOM)
+            break;
+    }
+    switch (values[1]) {
+        case MenuPosition.DEFAULT:
+            menuPosition.set(MenuPosition.DEFAULT)
+            break;
+        case MenuPosition.ALTERNATE:
+            menuPosition.set(MenuPosition.ALTERNATE)
+            break;
+    }
+    switch (values[2]) {
+        case ClockPosition.DEFAULT:
+            clockPosition.set(ClockPosition.DEFAULT)
+            break;
+        case ClockPosition.ALTERNATE:
+            clockPosition.set(ClockPosition.ALTERNATE)
+            break;
+    }
+    return true
 }
 
 export const selectedBar = Variable(Bar.LEFT)
+export const menuPosition = Variable(MenuPosition.DEFAULT)
+export const clockPosition = Variable(ClockPosition.DEFAULT)
+
+export function setBarType(bar: Bar) {
+    selectedBar.set(bar)
+    execAsync(["bash", "-c", `echo "${bar},${menuPosition.get()},${clockPosition.get()}" > ./savedBar`])
+        .catch((error) => {
+            print(error)
+        })
+}
+
+export function setMenuPosition(position: MenuPosition) {
+    menuPosition.set(position)
+    execAsync(["bash", "-c", `echo "${selectedBar.get()},${position},${clockPosition.get()}" > ./savedBar`])
+        .catch((error) => {
+            print(error)
+        })
+}
+
+export function setClockPosition(position: ClockPosition) {
+    clockPosition.set(position)
+    execAsync(["bash", "-c", `echo "${selectedBar.get()},${menuPosition.get()},${position}" > ./savedBar`])
+        .catch((error) => {
+            print(error)
+        })
+}

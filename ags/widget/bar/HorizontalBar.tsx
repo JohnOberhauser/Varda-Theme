@@ -7,10 +7,11 @@ import {
     MicrophoneButton,
     NetworkButton,
     ScreenRecordingButton,
-    VolumeButton, VpnButton,
+    VolumeButton,
+    VpnButton,
     Workspaces
 } from "./BarWidgets";
-import {selectedBar, Bar} from "./Bar";
+import {Bar, menuPosition, MenuPosition, selectedBar} from "./Bar";
 
 export default function () {
     return <window
@@ -37,7 +38,13 @@ export default function () {
             orientation={Gtk.Orientation.HORIZONTAL}
             cssClasses={["window", "topBar"]}>
             <box halign={Gtk.Align.START}>
-                <MenuButton cssClasses={[]}/>
+                {menuPosition((position) => {
+                    if (position === MenuPosition.DEFAULT) {
+                        return <MenuButton cssClasses={[]}/>
+                    } else {
+                        return <box/>
+                    }
+                })}
                 <Workspaces vertical={false}/>
             </box>
             <box>
@@ -51,6 +58,13 @@ export default function () {
                 <VpnButton/>
                 <NetworkButton/>
                 <BatteryButton/>
+                {menuPosition((position) => {
+                    if (position === MenuPosition.ALTERNATE) {
+                        return <MenuButton cssClasses={[]}/>
+                    } else {
+                        return <box/>
+                    }
+                })}
             </box>
         </centerbox>
     </window>
