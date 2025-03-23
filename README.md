@@ -22,11 +22,13 @@ The script is `./themes/setTheme.sh`
 
 ![screenshot](.screenshots/features/audio.png)
 
-### Look and Feel controls for theme, bar position, and wallpaper
+### Look and Feel controls for theme, bar position, menu position, clock position, and wallpaper
 
 ![screenshot](.screenshots/features/theme1.png)
 
 ![screenshot](.screenshots/features/theme2.png)
+
+![screenshot](.screenshots/features/theme3.png)
 
 ### Mpris media controls
 
