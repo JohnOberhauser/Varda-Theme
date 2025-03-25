@@ -1,6 +1,33 @@
 @use "../variables" as vars;
 @use "sass:color";
 
-switch:hover slider {
-  box-shadow: 0 0 0 8px color.mix(vars.$fg, transparent, 20%);
+switch {
+
+  background: vars.$bg;
+  border: vars.$fg solid 2px;
+
+  slider {
+    background: vars.$fg;
+  }
+
+  &:hover {
+    background: color.mix(vars.$fg, transparent, 20%);
+    slider {
+      box-shadow: none;
+    }
+  }
+
+  &:checked {
+    background: vars.$primary;
+    border: vars.$primary solid 2px;
+
+    slider {
+      background: vars.$bg;
+    }
+
+    &:hover {
+      border: color.mix(vars.$primary, white, 90%) solid 2px;
+      background: color.mix(vars.$primary, white, 90%);
+    }
+  }
 }
