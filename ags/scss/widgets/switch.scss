@@ -1,0 +1,6 @@
+@use "../variables" as vars;
+@use "sass:color";
+
+switch:hover slider {
+  box-shadow: 0 0 0 8px color.mix(vars.$fg, transparent, 20%);
+}
