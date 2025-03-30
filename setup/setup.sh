@@ -16,17 +16,17 @@
 ./scripts/setupTuigreet.sh
 
 # things left to do
-
-# run ./scripts/setupVpnConnections.sh $username $password
-# where username and password are protonvpn openvpn credentials
-
+#
+# Install system wide wireguard vpn
+#
 # Firefox:
-# sym link user chrome files
+# sym link user chrome directory and the user.js file
 # Set font
-# xpinstall.signatures.required = false
 # install custom dark reader
 #
-# intellij: set font
+# intellij:
+# set font
+# install varda.jar theme plugin
 #
 # remove extra packages from archinstall
 # wofi, dolphin, sddm (make sure you set up tuigreet first)
