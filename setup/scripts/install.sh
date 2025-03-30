@@ -72,4 +72,5 @@ loupe \
 udiskie \
 wf-recorder \
 trash-cli \
-gvfs
+gvfs \
+libnatpmp
