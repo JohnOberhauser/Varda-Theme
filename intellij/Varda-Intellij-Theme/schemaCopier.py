@@ -153,3 +153,24 @@ if __name__ == "__main__":
         "547C71",
         "54737C",
     )
+
+    replace_text_in_file(
+        "resources/Varda_Scheme.xml",
+        "resources/Desertpower_Scheme.xml",
+        "Desert Power",
+        "A1A09F",
+        "11100F",
+        "22201E",
+        "22201E",
+        "33302D",
+        "33302D",
+        "3C3834",
+        "3C3834",
+        "55504D",
+        "9EA886",
+        "AF8F6B",
+        "9EA886",
+        "B5745A",
+        "385752",
+        "8EBABB",
+    )

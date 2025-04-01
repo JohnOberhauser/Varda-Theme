@@ -26,6 +26,7 @@ interface ThemeProps {
 
 enum Theme {
     BLOOD_RUST,
+    DESERT_POWER,
     EVER_FOREST,
     NORD,
     ROSE_PINE,
@@ -34,6 +35,7 @@ enum Theme {
 
 const ThemeDetails: Record<Theme, ThemeProps> = {
     [Theme.BLOOD_RUST]: { name: "bloodrust", icon: "󰚌", pixelAdjustment: 2 },
+    [Theme.DESERT_POWER]: { name: "desertpower", icon: "󱥒", pixelAdjustment: 3 },
     [Theme.EVER_FOREST]: { name: "everforest", icon: "󰌪", pixelAdjustment: 1 },
     [Theme.NORD]: { name: "nord", icon: "", pixelAdjustment: 2 },
     [Theme.ROSE_PINE]: { name: "rosepine", icon: "", pixelAdjustment: 5 },
@@ -49,6 +51,8 @@ function getThemeFromName(themeName: string): Theme | null {
     switch (themeName) {
         case "bloodrust":
             return Theme.BLOOD_RUST
+        case "desertpower":
+            return Theme.DESERT_POWER
         case "everforest":
             return Theme.EVER_FOREST
         case "nord":
@@ -277,15 +281,26 @@ function ThemeButton(
 
 function ThemeOptions() {
     return <box
-        vertical={false}
-        cssClasses={["row"]}
-        halign={Gtk.Align.CENTER}
-        spacing={12}>
-        <ThemeButton theme={Theme.VARDA}/>
-        <ThemeButton theme={Theme.EVER_FOREST}/>
-        <ThemeButton theme={Theme.NORD}/>
-        <ThemeButton theme={Theme.ROSE_PINE}/>
-        <ThemeButton theme={Theme.BLOOD_RUST}/>
+        vertical={true}
+        spacing={4}>
+        <box
+            vertical={false}
+            cssClasses={["row"]}
+            halign={Gtk.Align.CENTER}
+            spacing={12}>
+            <ThemeButton theme={Theme.VARDA}/>
+            <ThemeButton theme={Theme.EVER_FOREST}/>
+            <ThemeButton theme={Theme.NORD}/>
+            <ThemeButton theme={Theme.ROSE_PINE}/>
+        </box>
+        <box
+            vertical={false}
+            cssClasses={["row"]}
+            halign={Gtk.Align.CENTER}
+            spacing={12}>
+            <ThemeButton theme={Theme.BLOOD_RUST}/>
+            <ThemeButton theme={Theme.DESERT_POWER}/>
+        </box>
     </box>
 }
 

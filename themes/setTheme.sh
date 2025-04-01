@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define an array of valid arguments
-valid_args=("varda" "everforest" "nord" "rosepine" "bloodrust")
+valid_args=("varda" "everforest" "nord" "rosepine" "bloodrust" "desertpower")
 
 # Check if an argument is provided
 if [ $# -eq 0 ]; then

@@ -5,3 +5,4 @@
 ./makeTheme.sh -t everforest --bg 1E2326 --fg D3C6AA --primary 7A8478 --error E67E80 --warning DBBC7F --success A7C080
 ./makeTheme.sh -t rosepine --bg 191724 --fg E0DEF4 --primary 26233A --error EB6F92 --warning F6C177 --success 31748F
 ./makeTheme.sh -t bloodrust --bg 1F2932 --fg AFB3BD --primary 7C545F --error 5E4D52 --warning 7C7C54 --success 547C71
+./makeTheme.sh -t desertpower --bg 11100F --fg A1A09F --primary 55504D --error B5745A --warning 9EA886 --success 385752

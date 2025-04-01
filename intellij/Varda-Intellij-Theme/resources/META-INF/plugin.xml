@@ -22,6 +22,7 @@
     <themeProvider id="io.obez.themes.nord" path="/Nord.theme.json"/>
     <themeProvider id="io.obez.themes.rosepine" path="/Rosepine.theme.json"/>
     <themeProvider id="io.obez.themes.bloodrust" path="/Bloodrust.theme.json"/>
+    <themeProvider id="io.obez.themes.desertpower" path="/Desertpower.theme.json"/>
   </extensions>
 
 </idea-plugin>

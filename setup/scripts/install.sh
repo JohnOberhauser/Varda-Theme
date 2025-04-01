@@ -15,6 +15,7 @@ hypridle \
 hyprpaper \
 hyprlock \
 hyprpicker \
+hyprsunset \
 xdg-desktop-portal-hyprland \
 flatpak \
 base-devel \

@@ -198,3 +198,28 @@ This color palette is home-grown
 `#2C3A47` <img src=".colors/bloodrust/2C3A47.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 4  
 `#2F3E4C` <img src=".colors/bloodrust/2F3E4C.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 5  
 `#324351` <img src=".colors/bloodrust/324351.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 6
+
+## Desert Power
+
+### Color Palette
+
+This color palette is home-grown
+
+#### Primary
+`#A1A09F` <img src=".colors/desertpower/A1A09F.svg" width="20" height="20" style="vertical-align: middle;"/> white  
+`#11100F` <img src=".colors/desertpower/11100F.svg" width="20" height="20" style="vertical-align: middle;"/> black  
+`#55504D` <img src=".colors/desertpower/55504D.svg" width="20" height="20" style="vertical-align: middle;"/> primary    
+`#8EBABB` <img src=".colors/desertpower/8EBABB.svg" width="20" height="20" style="vertical-align: middle;"/> blue  
+`#385752` <img src=".colors/desertpower/385752.svg" width="20" height="20" style="vertical-align: middle;"/> green  
+`#9EA886` <img src=".colors/desertpower/9EA886.svg" width="20" height="20" style="vertical-align: middle;"/> yellow  
+`#B5745A` <img src=".colors/desertpower/B5745A.svg" width="20" height="20" style="vertical-align: middle;"/> red    
+`#AF8F6B` <img src=".colors/desertpower/AF8F6B.svg" width="20" height="20" style="vertical-align: middle;"/> lion    
+
+
+#### Background variants
+`#161413` <img src=".colors/desertpower/161413.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey  
+`#1A1817` <img src=".colors/desertpower/1A1817.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 2   
+`#1E1C1B` <img src=".colors/desertpower/1E1C1B.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 3    
+`#22201E` <img src=".colors/desertpower/22201E.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 4    
+`#33302D` <img src=".colors/desertpower/33302D.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 5    
+`#3C3834` <img src=".colors/desertpower/3C3834.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 6    

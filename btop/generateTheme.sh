@@ -43,6 +43,8 @@ if [[ -z $bg || -z $fg || -z $dim || -z $primary || -z $output ]]; then
   exit 1
 fi
 
+mkdir -p $(dirname $output)
+
 # Template content
 template="#================= Main Colors ==================
 theme[main_bg]=\"#${bg}\"

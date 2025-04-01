@@ -32,3 +32,10 @@
 --dim 222830 \
 --primary 52677C \
 --output $HOME/workspace/Varda-Theme/themes/varda/btop/varda.theme
+
+./generateTheme.sh \
+--bg 11100F \
+--fg A1A09F \
+--dim 22201E \
+--primary 55504D \
+--output $HOME/workspace/Varda-Theme/themes/desertpower/btop/desertpower.theme
