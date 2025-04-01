@@ -78,28 +78,6 @@ gtk() {
 
 hypr() {
   COLORS_FILE="./themes/$1/hypr/hypr_colors"
-  WALLPAPER_CACHE_PATH="$HOME/workspace/Varda-Theme/themes/$1/wallpaper/currentName.txt"
-  WALLPAPER_DIR="$(dirname "$WALLPAPER_CACHE_PATH")"
-  # Check if the file exists and is non-empty
-  if [[ -s "$WALLPAPER_CACHE_PATH" ]]; then
-    # Read the wallpaper path from the file
-    potentialWallpaper="$(< "$WALLPAPER_CACHE_PATH")"
-
-    # Check if that file actually exists
-    if [[ -f "$potentialWallpaper" ]]; then
-      WALLPAPER="$potentialWallpaper"
-    else
-      # Fallback: pick the first .jpg or .png in WALLPAPER_DIR
-      WALLPAPER="$(
-        ls -1 "$WALLPAPER_DIR"/*.jpg "$WALLPAPER_DIR"/*.png 2>/dev/null | head -n1
-      )"
-    fi
-  else
-    # If currentName.txt is missing or empty, do the same fallback
-    WALLPAPER="$(
-      ls -1 "$WALLPAPER_DIR"/*.jpg "$WALLPAPER_DIR"/*.png 2>/dev/null | head -n1
-    )"
-  fi
   # Read the colors from the first file
   BG=$(grep '^bg:' "$COLORS_FILE" | cut -d':' -f2)
   FG=$(grep '^fg:' "$COLORS_FILE" | cut -d':' -f2)
@@ -112,14 +90,11 @@ hypr() {
   # Replace the placeholders in the second file
   sed -e "s|\${bg}|$BG|g" -e "s|\${fg}|$FG|g" -e "s|\${primary}|$PRIMARY|g" -e "s|\${error}|$ERROR|g" "$THEME_TEMPLATE" > "$THEME_OUTPUT"
 
-  # Hyprpaper
-  $HOME/workspace/Varda-Theme/themes/setWallpaper.sh $WALLPAPER
-
   # Hyprlock
   HYPRLOCK_TEMPLATE="./hypr/hyprlock_template.conf"
   HYPRLOCK_OUTPUT="./hypr/hyprlock.conf"
   # Replace the placeholders in the second file
-  sed -e "s|\${bg}|$BG|g" -e "s|\${fg}|$FG|g" -e "s|\${error}|$ERROR|g" -e "s|\${bg_path}|$WALLPAPER|g" "$HYPRLOCK_TEMPLATE" > "$HYPRLOCK_OUTPUT"
+  sed -e "s|\${bg}|$BG|g" -e "s|\${fg}|$FG|g" -e "s|\${error}|$ERROR|g" "$HYPRLOCK_TEMPLATE" > "$HYPRLOCK_OUTPUT"
 }
 
 zsh_theme() {
@@ -161,7 +136,7 @@ darktable() {
 }
 
 # Update current theme
-echo $1 > $HOME/workspace/Varda-Theme/themes/currentTheme.txt
+#echo $1 > $HOME/workspace/Varda-Theme/themes/currentTheme.txt
 
 # Immediately visible first
 ags_theme $1
