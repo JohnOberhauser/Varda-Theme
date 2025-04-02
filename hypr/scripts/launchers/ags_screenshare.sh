@@ -1,1 +1,0 @@
-astal "screenshare$XDPH_WINDOW_SHARING_LIST}"
