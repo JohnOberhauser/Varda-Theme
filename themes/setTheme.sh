@@ -24,13 +24,6 @@ fi
 cd "$(dirname "$0")"
 cd ..
 
-ags_theme() {
-  cat ./themes/$1/ags/variables.scss > ./ags/scss/variables.scss
-  cat ./themes/$1/themeName > ./ags/themeName
-
-  astal "theme"
-}
-
 kitty_theme() {
   mkdir -p ./kitty/localTheme/themes
   cp ./themes/$1/kitty/current-theme.conf ./kitty/localTheme/themes/$1.conf
@@ -135,11 +128,7 @@ darktable() {
   cp ./themes/$1/darktable/user.css $HOME/.config/darktable/
 }
 
-# Update current theme
-#echo $1 > $HOME/workspace/Varda-Theme/themes/currentTheme.txt
-
 # Immediately visible first
-ags_theme $1
 hypr $1
 kitty_theme $1
 btop_theme $1

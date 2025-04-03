@@ -33,7 +33,7 @@ bc \
 socat \
 brightnessctl \
 sox \
-sassc \
+dart-sass \
 pipewire-pulse \
 upower \
 gnome-bluetooth-3.0 \
