@@ -1,4 +1,15 @@
 {
+  "themeUpdateScript": "/home/john/workspace/Varda-Theme/themes/setTheme.sh",
+  "wallpaperUpdateScript": "/home/john/workspace/Varda-Theme/themes/setWallpaper.sh",
+  "systemCommands": {
+    "logout": "uwsm stop",
+    "lock": "uwsm app -- hyprlock",
+    "restart": "systemctl reboot",
+    "shutdown": "systemctl poweroff"
+  },
+  "gaps": 5,
+  "borderRadius": 90,
+  "windowBorderRadius": 8,
   "themes": [
     {
       "name": "bloodrust",
@@ -90,13 +101,5 @@
         "warning": "#733447"
       }
     }
-  ],
-  "themeUpdateScript": "/home/john/workspace/Varda-Theme/themes/setTheme.sh",
-  "wallpaperUpdateScript": "/home/john/workspace/Varda-Theme/themes/setWallpaper.sh",
-  "systemCommands": {
-    "logout": "uwsm stop",
-    "lock": "uwsm app -- hyprlock",
-    "restart": "systemctl reboot",
-    "shutdown": "systemctl poweroff"
-  }
+  ]
 }
