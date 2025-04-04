@@ -8,61 +8,7 @@ Some configs will have files ignored by git related to the color scheme / theme.
 are located in `./themes`.  I use a script to easily swap out themes.
 The script is `./themes/setTheme.sh`
 
-# Ags Feature Showcase
-
-### Network management
-
-![screenshot](.screenshots/features/network.png)
-
-### Bluetooth device management
-
-![screenshot](.screenshots/features/bluetooth.png)
-
-### Audio controls
-
-![screenshot](.screenshots/features/audio.png)
-
-### Look and Feel controls for theme, bar position, menu position, clock position, and wallpaper
-
-![screenshot](.screenshots/features/theme1.png)
-
-![screenshot](.screenshots/features/theme2.png)
-
-![screenshot](.screenshots/features/theme3.png)
-
-### Mpris media controls
-
-![screenshot](.screenshots/features/media.png)
-
-### Notification popups and history
-
-![screenshot](.screenshots/features/notifications.png)
-
-### Screenshot and screen recording tool
-
-![screenshot](.screenshots/features/screenshot.png)
-
-### App launcher
-
-![screenshot](.screenshots/features/appLauncher.png)
-
-### Calendar
-
-![screenshot](.screenshots/features/calendar.png)
-
-### Volume and brightness alerts
-
-![screenshot](.screenshots/features/alerts.png)
-
-### Screen share portal
-
-![screenshot](.screenshots/features/portal.png)
-
-# Theme Showcase 
-
-## Varda
-
-![screenshot](.screenshots/varda.png)
+# ⚠️Ags setup moved into a new project repo => https://github.com/JohnOberhauser/OkPanel
 
 ### Color Palette
 
