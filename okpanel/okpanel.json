@@ -8,7 +8,7 @@
     "shutdown": "systemctl poweroff"
   },
   "gaps": 5,
-  "borderRadius": 90,
+  "borderRadius": 8,
   "windowBorderRadius": 8,
   "themes": [
     {
