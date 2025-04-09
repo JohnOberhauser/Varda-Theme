@@ -7,7 +7,6 @@ amd-ucode \
 ufw \
 pipewire \
 networkmanager \
-network-manager-applet \
 greetd \
 greetd-tuigreet \
 hyprland \
