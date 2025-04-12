@@ -37,7 +37,8 @@
         "discord.com",
         "open.spotify.com",
         "reddit.com",
-        "app.zoom.us"
+        "app.zoom.us",
+        "localhost:8384"
     ],
     "disabledFor": [],
     "changeBrowserTheme": false,
