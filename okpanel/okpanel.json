@@ -1,16 +1,13 @@
 {
   "themeUpdateScript": "/home/john/workspace/Varda-Theme/themes/setTheme.sh",
   "wallpaperUpdateScript": "/home/john/workspace/Varda-Theme/themes/setWallpaper.sh",
+  "scrimColor": "#00000010",
   "systemCommands": {
     "logout": "uwsm stop",
     "lock": "uwsm app -- hyprlock",
     "restart": "systemctl reboot",
     "shutdown": "systemctl poweroff"
   },
-  "gaps": 5,
-  "borderRadius": 8,
-  "windowBorderRadius": 8,
-  "largeButtonBorderRadius": 16,
   "themes": [
     {
       "name": "bloodrust",
@@ -24,7 +21,10 @@
         "buttonPrimary": "#7C545F",
         "sliderTrough": "#293642",
         "hover": "#293642",
-        "warning": "#7C7C54"
+        "warning": "#7C7C54",
+        "barBorder": "#7C545F",
+        "windowBorder": "#AFB3BD",
+        "alertBorder": "#7C545F"
       }
     },
     {
@@ -39,7 +39,10 @@
         "buttonPrimary": "#55504D",
         "sliderTrough": "#22201E",
         "hover": "#22201E",
-        "warning": "#E0974B"
+        "warning": "#E0974B",
+        "barBorder": "#55504D",
+        "windowBorder": "#A1A09F",
+        "alertBorder": "#55504D"
       }
     },
     {
@@ -54,7 +57,10 @@
         "buttonPrimary": "#384B55",
         "sliderTrough": "#2E383C",
         "hover": "#2E383C",
-        "warning": "#E67E80"
+        "warning": "#E67E80",
+        "barBorder": "#7A8478",
+        "windowBorder": "#D3C6AA",
+        "alertBorder": "#7A8478"
       }
     },
     {
@@ -69,7 +75,10 @@
         "buttonPrimary": "#5e81ac",
         "sliderTrough": "#4c566a",
         "hover": "#4c566a",
-        "warning": "#BF616A"
+        "warning": "#BF616A",
+        "barBorder": "#81a1c1",
+        "windowBorder": "#d8dee9",
+        "alertBorder": "#81a1c1"
       }
     },
     {
@@ -84,7 +93,10 @@
         "buttonPrimary": "#26233A",
         "sliderTrough": "#1F1D2E",
         "hover": "#1F1D2E",
-        "warning": "#EB6F92"
+        "warning": "#EB6F92",
+        "barBorder": "#403D52",
+        "windowBorder": "#E0DEF4",
+        "alertBorder": "#403D52"
       }
     },
     {
@@ -99,7 +111,10 @@
         "buttonPrimary": "#52677C",
         "sliderTrough": "#1C2128",
         "hover": "#1C2128",
-        "warning": "#733447"
+        "warning": "#733447",
+        "barBorder": "#52677C",
+        "windowBorder": "#D0EBEE",
+        "alertBorder": "#52677C"
       }
     }
   ]
