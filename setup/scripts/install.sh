@@ -73,4 +73,5 @@ udiskie \
 wf-recorder \
 trash-cli \
 gvfs \
-libnatpmp
+libnatpmp \
+libnotify
