@@ -3,6 +3,10 @@
 # designating the VT.
 vt = 1
 
+[initial_session]
+command = "uwsm start -- hyprland.desktop"
+user = "john"
+
 # The default session, also known as the greeter.
 [default_session]
 
