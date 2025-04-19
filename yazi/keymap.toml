@@ -16,7 +16,8 @@ prepend_keymap = [
 	{ on = "T", 				run = "tasks_show", 					desc = "Show task manager" },
 
 	# Trash manager
-	{ on = [ "e", "t" ], 		run = "shell 'yes | trash-empty'", 		desc = "Empty trash" },
+	{ on = [ "e", "t" ], 		run = "shell 'yes | trash-empty'", 		    		desc = "Empty trash" },
+	{ on = [ "e", "j" ], 		run = "shell 'udiskie-umount -a --detach'", 		desc = "Eject USB" },
 
 	# New files (used to be a)
 	{ on = [ "n", "f" ],		run = "create",        					desc = "Create a new file" },
