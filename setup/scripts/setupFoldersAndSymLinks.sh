@@ -28,4 +28,4 @@ ln -s $HOME/workspace/Varda-Theme/yazi $HOME/.config/
 ln -s $HOME/workspace/Varda-Theme/spotify-player/ $HOME/.config/
 
 mkdir -p $HOME/.config/OkPanel
-ln -s $HOME/workspace/Varda-Theme/okpanel/okpanel.json $HOME/.config/OkPanel
+ln -s $HOME/workspace/Varda-Theme/okpanel/okpanel.conf $HOME/.config/OkPanel
