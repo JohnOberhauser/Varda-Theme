@@ -35,6 +35,7 @@ sox \
 dart-sass \
 pipewire-pulse \
 upower \
+power-profiles-daemon \
 gnome-bluetooth-3.0 \
 zsh \
 fuse2 \
@@ -67,6 +68,7 @@ meson \
 cmake \
 plymouth \
 wl-clipboard \
+cliphist \
 atool \
 loupe \
 udiskie \
