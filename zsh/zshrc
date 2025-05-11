@@ -36,6 +36,7 @@ alias sshpi="ssh john@192.168.50.158"
 alias v=nvim
 alias sv="sudo nvim"
 alias glm="git pull origin main"
+alias gcam='sh -c '\''git add -A && git commit -m "$@"'\'' _'
 alias bird="rsync -a --info=progress2 /mnt/ssd/camera /mnt/network/"
 alias camera="rsync -a --info=progress2 --chmod=D755 /run/media/john/EOS_DIGITAL/DCIM/100EOSR6/ /mnt/ssd/camera/$(date +%F)/ && umount /run/media/john/EOS_DIGITAL"
 alias timezone='sudo timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"'
