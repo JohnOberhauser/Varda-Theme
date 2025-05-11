@@ -15,9 +15,10 @@ prepend_keymap = [
 	# Tasks (used to be w)
 	{ on = "T", 				run = "tasks_show", 					desc = "Show task manager" },
 
-	# Trash manager
+	# Everything
 	{ on = [ "e", "t" ], 		run = "shell 'yes | trash-empty'", 		    		desc = "Empty trash" },
 	{ on = [ "e", "j" ], 		run = "shell 'udiskie-umount -a --detach'", 		desc = "Eject USB" },
+	{ on = [ "e", "c" ], 		run = "shell 'rsync -a --info=progress2 --chmod=D755 /run/media/john/EOS_DIGITAL/DCIM/100EOSR6/ /mnt/ssd/camera/$(date +%F)/ && umount /run/media/john/EOS_DIGITAL'", 		desc = "Copy camera files" },
 
 	# New files (used to be a)
 	{ on = [ "n", "f" ],		run = "create",        					desc = "Create a new file" },
