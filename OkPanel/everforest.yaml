@@ -1,10 +1,9 @@
 icon: "󰌪"
 iconOffset: 1
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/everforest/wallpaper
 
 theme:
   name: everforest
-  wallpaperDir: /home/john/workspace/Varda-Theme/themes/everforest/wallpaper
-
   colors:
     background: "#1E2326"
     foreground: "#D3C6AA"

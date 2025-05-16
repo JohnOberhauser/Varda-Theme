@@ -1,0 +1,47 @@
+icon: ""
+iconOffset: 3
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/varda/wallpaper
+
+verticalBar:
+  expanded: false
+  topWidgets:
+    - menu
+    - workspaces
+  centerWidgets: []
+  bottomWidgets:
+    - recording_indicator
+    - clipboard_manager
+    - audio_out
+    - vpn_indicator
+    - clock
+  fullBarCavaWaveform:
+    enabled: true
+  workspaces:
+    marginBottom: 40
+  minimumHeight: 0
+
+horizontalBar:
+  minimumWidth: 1800
+  expanded: false
+
+
+
+theme:
+  name: varda
+  colors:
+    background: "#0C0E11"
+    foreground: "#D0EBEE"
+    primary: "#52677C"
+    buttonPrimary: "#52677C"
+    warning: "#733447"
+    barBorder: "#52677C"
+    windowBorder: "#D0EBEE"
+    alertBorder: "#52677C"
+  windows:
+    borderRadius: 20
+    borderWidth: 2
+  bars:
+    borderRadius: 90
+    borderWidth: 2
+    backgroundColor: "#00000000"
+    borderColor: "#00000000"

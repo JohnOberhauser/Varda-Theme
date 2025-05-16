@@ -1,10 +1,9 @@
 icon: ""
 iconOffset: 2
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/nord/wallpaper
 
 theme:
   name: nord
-  wallpaperDir: /home/john/workspace/Varda-Theme/themes/nord/wallpaper
-
   colors:
     background: "#2e3440"
     foreground: "#d8dee9"

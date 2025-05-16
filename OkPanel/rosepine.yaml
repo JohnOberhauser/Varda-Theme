@@ -1,10 +1,9 @@
 icon: ""
 iconOffset: 5
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/rosepine/wallpaper
 
 theme:
   name: rosepine
-  wallpaperDir: /home/john/workspace/Varda-Theme/themes/rosepine/wallpaper
-
   colors:
     background: "#191724"
     foreground: "#E0DEF4"

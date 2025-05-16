@@ -1,10 +1,9 @@
 icon: "󱥒"
 iconOffset: 3
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/desertpower/wallpaper
 
 theme:
   name: desertpower
-  wallpaperDir: /home/john/workspace/Varda-Theme/themes/desertpower/wallpaper
-
   colors:
     background: "#11100F"
     foreground: "#A1A09F"

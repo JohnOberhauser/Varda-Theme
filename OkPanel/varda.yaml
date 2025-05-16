@@ -1,10 +1,9 @@
 icon: ""
 iconOffset: 3
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/varda/wallpaper
 
 theme:
   name: varda
-  wallpaperDir: /home/john/workspace/Varda-Theme/themes/varda/wallpaper
-
   colors:
     background: "#0C0E11"
     foreground: "#D0EBEE"

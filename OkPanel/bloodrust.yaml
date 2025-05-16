@@ -1,10 +1,9 @@
 icon: "󰚌"
 iconOffset: 2
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/bloodrust/wallpaper
 
 theme:
   name: bloodrust
-  wallpaperDir: /home/john/workspace/Varda-Theme/themes/bloodrust/wallpaper
-
   colors:
     background: "#1F2932"
     foreground: "#AFB3BD"
