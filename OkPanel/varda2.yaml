@@ -21,8 +21,7 @@ verticalBar:
   minimumHeight: 0
 
 horizontalBar:
-  minimumWidth: 1800
-  expanded: false
+  expanded: true
 
 
 
