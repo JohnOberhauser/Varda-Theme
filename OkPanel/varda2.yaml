@@ -3,32 +3,24 @@ iconOffset: 3
 wallpaperDir: /home/john/workspace/Varda-Theme/themes/varda/wallpaper
 
 verticalBar:
-  expanded: false
-  topWidgets:
-    - menu
-    - workspaces
-  centerWidgets: []
-  bottomWidgets:
-    - recording_indicator
-    - clipboard_manager
-    - audio_out
-    - vpn_indicator
-    - clock
-  fullBarCavaWaveform:
-    enabled: true
-  workspaces:
-    marginBottom: 40
+  expanded: true
   minimumHeight: 0
+  marginOuter: 0
+  marginStart: 0
+  marginEnd: 0
+  marginInner: 0
 
 horizontalBar:
   expanded: true
-
-
+  marginOuter: 0
+  marginStart: 0
+  marginEnd: 0
+  marginInner: 0
 
 theme:
   name: varda
   colors:
-    background: "#0C0E11"
+    background: "#0C0E1120"
     foreground: "#D0EBEE"
     primary: "#52677C"
     buttonPrimary: "#52677C"
@@ -44,3 +36,4 @@ theme:
     borderWidth: 2
     backgroundColor: "#00000000"
     borderColor: "#00000000"
+    widgetBackground: "#0C0E1100"
