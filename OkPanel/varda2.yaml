@@ -28,9 +28,6 @@ theme:
     barBorder: "#52677C"
     windowBorder: "#D0EBEE"
     alertBorder: "#52677C"
-  windows:
-    borderRadius: 20
-    borderWidth: 2
   bars:
     borderRadius: 90
     borderWidth: 2
