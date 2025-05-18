@@ -17,8 +17,6 @@ horizontalBar:
   marginStart: 0
   marginEnd: 0
   marginInner: 0
-  clock:
-    marginEnd: 6
 
 theme:
   name: varda
