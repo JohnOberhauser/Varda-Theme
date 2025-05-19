@@ -5,10 +5,16 @@ wallpaperDir: /home/john/workspace/Varda-Theme/themes/varda/wallpaper
 verticalBar:
   compact: true
   expanded: true
+  integratedMenu: true
   marginOuter: 0
   marginStart: 0
   marginEnd: 0
   marginInner: 0
+  centerWidgets:
+    - cava_waveform
+  cava_waveform:
+    position: inner
+    length: 500
 
 horizontalBar:
   compact: true
@@ -17,6 +23,19 @@ horizontalBar:
   marginStart: 0
   marginEnd: 0
   marginInner: 0
+
+systemMenu:
+  widgets:
+    - clock
+    - network
+    - bluetooth
+    - audio_out
+    - audio_in
+    - toolbox
+    - look_and_feel
+    - mpris_players
+    - power_options
+    - notification_history
 
 theme:
   name: varda
@@ -33,5 +52,9 @@ theme:
     borderWidth: 0
     borderRadius: 0
     backgroundColor: "#0C0E1120"
-    borderColor: "#00000000"
+    borderColor: "#D0EBEE"
     widgetBackground: "#0C0E1100"
+  systemMenu:
+    clock:
+      dayFont: "Anurati"
+      dayAllCaps: true
