@@ -2,9 +2,21 @@ configUpdateScript: /home/john/workspace/Varda-Theme/themes/setTheme.sh
 wallpaperUpdateScript: /home/john/workspace/Varda-Theme/themes/setWallpaper.sh
 
 verticalBar:
+  centerWidgets:
+    - cava_waveform
+  bottomWidgets:
+    - tray
+    - audio_out
+    - audio_in
+    - bluetooth
+    - vpn_indicator
+    - network
+    - battery
+    - clock
   integratedMenu: true
   cava_waveform:
     position: inner
+    length: 500
 
 systemMenu:
   widgets:
