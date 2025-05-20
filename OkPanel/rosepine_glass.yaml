@@ -1,6 +1,6 @@
-icon: ""
-iconOffset: 3
-wallpaperDir: /home/john/workspace/Varda-Theme/themes/varda/wallpaper
+icon: ""
+iconOffset: 0
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/rosepine/wallpaper
 
 verticalBar:
   compact: true
@@ -24,16 +24,16 @@ horizontalBar:
   marginInner: 0
 
 theme:
-  name: varda
+  name: rosepine
   colors:
-    background: "#0C0E1120"
-    foreground: "#D0EBEE"
-    primary: "#52677C"
-    buttonPrimary: "#52677C80"
-    warning: "#733447"
-    barBorder: "#52677C"
-    windowBorder: "#D0EBEE"
-    alertBorder: "#52677C"
+    background: "#19172420"
+    foreground: "#E0DEF4"
+    primary: "#403D52"
+    buttonPrimary: "#26233A"
+    warning: "#EB6F92"
+    barBorder: "#403D52"
+    windowBorder: "#E0DEF4"
+    alertBorder: "#403D52"
   bars:
     borderWidth: 0
     borderRadius: 0

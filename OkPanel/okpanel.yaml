@@ -1,2 +1,29 @@
 configUpdateScript: /home/john/workspace/Varda-Theme/themes/setTheme.sh
 wallpaperUpdateScript: /home/john/workspace/Varda-Theme/themes/setWallpaper.sh
+
+verticalBar:
+  integratedMenu: true
+  cava_waveform:
+    position: inner
+
+systemMenu:
+  widgets:
+    - clock
+    - network
+    - bluetooth
+    - audio_out
+    - audio_in
+    - power_profile
+    - toolbox
+    - clipboard_manager
+    - look_and_feel
+    - screen_recording_controls
+    - mpris_players
+    - power_options
+    - notification_history
+
+theme:
+  systemMenu:
+    clock:
+      dayFont: "Anurati"
+      dayAllCaps: true
