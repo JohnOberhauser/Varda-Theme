@@ -29,10 +29,14 @@ systemMenu:
     - toolbox
     - clipboard_manager
     - look_and_feel
+    - weather
     - screen_recording_controls
     - mpris_players
     - power_options
     - notification_history
+  weather:
+    latitude: "42.1656"
+    longitude: "-88.2943"
 
 theme:
   systemMenu:
