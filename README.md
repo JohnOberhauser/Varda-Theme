@@ -10,6 +10,12 @@ The script is `./themes/setTheme.sh`
 
 # ⚠️Ags setup moved into a new project repo => https://github.com/JohnOberhauser/OkPanel
 
+# Theme Showcase
+
+## Varda
+
+![screenshot](.screenshots/varda.png)
+
 ### Color Palette
 
 This color palette is home-grown
