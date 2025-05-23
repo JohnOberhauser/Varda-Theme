@@ -23,6 +23,10 @@
     <themeProvider id="io.obez.themes.rosepine" path="/Rosepine.theme.json"/>
     <themeProvider id="io.obez.themes.bloodrust" path="/Bloodrust.theme.json"/>
     <themeProvider id="io.obez.themes.desertpower" path="/Desertpower.theme.json"/>
+    <themeProvider id="io.obez.themes.catppuccinlatte" path="/Catppuccinlatte.theme.json"/>
+    <themeProvider id="io.obez.themes.catppuccinfrappe" path="/Catppuccinfrappe.theme.json"/>
+    <themeProvider id="io.obez.themes.catppuccinmacchiato" path="/Catppuccinmacchiato.theme.json"/>
+    <themeProvider id="io.obez.themes.catppuccinmocha" path="/Catppuccinmocha.theme.json"/>
   </extensions>
 
 </idea-plugin>

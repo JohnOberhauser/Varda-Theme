@@ -1,0 +1,15 @@
+icon: ""
+iconOffset: 2
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/catppuccinmocha/wallpaper
+
+theme:
+  name: catppuccinmocha
+  colors:
+    background: "#1E1E2E"
+    foreground: "#CDD6F4"
+    primary: "#CBA6F7"
+    buttonPrimary: "#CBA6F7"
+    warning: "#EBA0AC"
+    barBorder: "#CBA6F7"
+    windowBorder: "#CDD6F4"
+    alertBorder: "#CDD6F4"

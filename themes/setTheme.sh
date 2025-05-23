@@ -1,7 +1,18 @@
 #!/bin/bash
 
 # Define an array of valid arguments
-valid_args=("varda" "everforest" "nord" "rosepine" "bloodrust" "desertpower")
+valid_args=(
+  "varda"
+  "everforest"
+  "nord"
+  "rosepine"
+  "bloodrust"
+  "desertpower"
+  "catppuccinfrappe"
+  "catppuccinlatte"
+  "catppuccinmacchiato"
+  "catppuccinmocha"
+)
 
 # Check if an argument is provided
 if [ $# -eq 0 ]; then
@@ -129,16 +140,27 @@ darktable() {
 }
 
 # Immediately visible first
+echo "hypr"
 hypr $1
+echo "kitty"
 kitty_theme $1
+echo "btop"
 btop_theme $1
+echo "cursor"
 cursor_theme $1
+echo "gtk"
 gtk $1
 
 # Then the rest
-fastfetch_theme $1
+#echo "fastfetch"
+#fastfetch_theme $1
+echo "firefox"
 firefox_theme $1
+echo "zsh"
 zsh_theme $1
+echo "intellij"
 intellij_idea $1
+echo "android studio"
 android_studio $1
+echo "darktable"
 darktable $1

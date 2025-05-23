@@ -59,6 +59,7 @@ python \
 qt5-wayland \
 qt6-wayland \
 ripgrep \
+sassc \
 slurp \
 socat \
 sox \

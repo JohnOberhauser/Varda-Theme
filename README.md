@@ -169,3 +169,167 @@ This color palette is home-grown
 `#22201E` <img src=".colors/desertpower/22201E.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 4    
 `#33302D` <img src=".colors/desertpower/33302D.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 5    
 `#3C3834` <img src=".colors/desertpower/3C3834.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 6    
+
+## Catppuccin Latte
+
+### Color Palette
+
+From the Catppuccin Latte theme
+
+#### Accents
+
+`#dc8a78` <img src=".colors/catppuccin_latte/dc8a78.svg" width="20" height="20" style="vertical-align: middle;"/> rosewater    
+`#dd7878` <img src=".colors/catppuccin_latte/dd7878.svg" width="20" height="20" style="vertical-align: middle;"/> flamingo    
+`#ea76cb` <img src=".colors/catppuccin_latte/ea76cb.svg" width="20" height="20" style="vertical-align: middle;"/> pink    
+`#8839ef` <img src=".colors/catppuccin_latte/8839ef.svg" width="20" height="20" style="vertical-align: middle;"/> mauve    
+`#d20f39` <img src=".colors/catppuccin_latte/d20f39.svg" width="20" height="20" style="vertical-align: middle;"/> red    
+`#e64553` <img src=".colors/catppuccin_latte/e64553.svg" width="20" height="20" style="vertical-align: middle;"/> maroon    
+`#fe640b` <img src=".colors/catppuccin_latte/fe640b.svg" width="20" height="20" style="vertical-align: middle;"/> peach    
+`#df8e1d` <img src=".colors/catppuccin_latte/df8e1d.svg" width="20" height="20" style="vertical-align: middle;"/> yellow    
+`#40a02b` <img src=".colors/catppuccin_latte/40a02b.svg" width="20" height="20" style="vertical-align: middle;"/> green    
+`#179299` <img src=".colors/catppuccin_latte/179299.svg" width="20" height="20" style="vertical-align: middle;"/> teal    
+`#04a5e5` <img src=".colors/catppuccin_latte/04a5e5.svg" width="20" height="20" style="vertical-align: middle;"/> sky    
+`#209fb5` <img src=".colors/catppuccin_latte/209fb5.svg" width="20" height="20" style="vertical-align: middle;"/> sapphire    
+`#1e66f5` <img src=".colors/catppuccin_latte/1e66f5.svg" width="20" height="20" style="vertical-align: middle;"/> blue    
+`#7287fd` <img src=".colors/catppuccin_latte/7287fd.svg" width="20" height="20" style="vertical-align: middle;"/> lavender    
+
+#### Text and UI
+
+`#4c4f69` <img src=".colors/catppuccin_latte/4c4f69.svg" width="20" height="20" style="vertical-align: middle;"/> text    
+`#5c5f77` <img src=".colors/catppuccin_latte/5c5f77.svg" width="20" height="20" style="vertical-align: middle;"/> subtext1    
+`#6c6f85` <img src=".colors/catppuccin_latte/6c6f85.svg" width="20" height="20" style="vertical-align: middle;"/> subtext0    
+`#7c7f93` <img src=".colors/catppuccin_latte/7c7f93.svg" width="20" height="20" style="vertical-align: middle;"/> overlay2    
+`#8c8fa1` <img src=".colors/catppuccin_latte/8c8fa1.svg" width="20" height="20" style="vertical-align: middle;"/> overlay1    
+`#9ca0b0` <img src=".colors/catppuccin_latte/9ca0b0.svg" width="20" height="20" style="vertical-align: middle;"/> overlay0    
+`#acb0be` <img src=".colors/catppuccin_latte/acb0be.svg" width="20" height="20" style="vertical-align: middle;"/> surface2    
+`#bcc0cc` <img src=".colors/catppuccin_latte/bcc0cc.svg" width="20" height="20" style="vertical-align: middle;"/> surface1    
+`#ccd0da` <img src=".colors/catppuccin_latte/ccd0da.svg" width="20" height="20" style="vertical-align: middle;"/> surface0    
+
+#### Background
+
+`#eff1f5` <img src=".colors/catppuccin_latte/eff1f5.svg" width="20" height="20" style="vertical-align: middle;"/> base    
+`#e6e9ef` <img src=".colors/catppuccin_latte/e6e9ef.svg" width="20" height="20" style="vertical-align: middle;"/> mantle    
+`#dce0e8` <img src=".colors/catppuccin_latte/dce0e8.svg" width="20" height="20" style="vertical-align: middle;"/> crust    
+
+## Catppuccin Frappé
+
+### Color Palette
+
+From the Catppuccin Frappé theme
+
+#### Accents
+
+`#f2d5cf` <img src=".colors/catppuccin_frappe/f2d5cf.svg" width="20" height="20" style="vertical-align: middle;"/> rosewater    
+`#eebebe` <img src=".colors/catppuccin_frappe/eebebe.svg" width="20" height="20" style="vertical-align: middle;"/> flamingo    
+`#f4b8e4` <img src=".colors/catppuccin_frappe/f4b8e4.svg" width="20" height="20" style="vertical-align: middle;"/> pink    
+`#ca9ee6` <img src=".colors/catppuccin_frappe/ca9ee6.svg" width="20" height="20" style="vertical-align: middle;"/> mauve    
+`#e78284` <img src=".colors/catppuccin_frappe/e78284.svg" width="20" height="20" style="vertical-align: middle;"/> red    
+`#ea999c` <img src=".colors/catppuccin_frappe/ea999c.svg" width="20" height="20" style="vertical-align: middle;"/> maroon    
+`#ef9f76` <img src=".colors/catppuccin_frappe/ef9f76.svg" width="20" height="20" style="vertical-align: middle;"/> peach    
+`#e5c890` <img src=".colors/catppuccin_frappe/e5c890.svg" width="20" height="20" style="vertical-align: middle;"/> yellow    
+`#a6d189` <img src=".colors/catppuccin_frappe/a6d189.svg" width="20" height="20" style="vertical-align: middle;"/> green    
+`#81c8be` <img src=".colors/catppuccin_frappe/81c8be.svg" width="20" height="20" style="vertical-align: middle;"/> teal    
+`#99d1db` <img src=".colors/catppuccin_frappe/99d1db.svg" width="20" height="20" style="vertical-align: middle;"/> sky    
+`#85c1dc` <img src=".colors/catppuccin_frappe/85c1dc.svg" width="20" height="20" style="vertical-align: middle;"/> sapphire    
+`#8caaee` <img src=".colors/catppuccin_frappe/8caaee.svg" width="20" height="20" style="vertical-align: middle;"/> blue    
+`#babbf1` <img src=".colors/catppuccin_frappe/babbf1.svg" width="20" height="20" style="vertical-align: middle;"/> lavender    
+
+#### Text and UI
+
+`#c6d0f5` <img src=".colors/catppuccin_frappe/c6d0f5.svg" width="20" height="20" style="vertical-align: middle;"/> text    
+`#b5bfe2` <img src=".colors/catppuccin_frappe/b5bfe2.svg" width="20" height="20" style="vertical-align: middle;"/> subtext1    
+`#a5adce` <img src=".colors/catppuccin_frappe/a5adce.svg" width="20" height="20" style="vertical-align: middle;"/> subtext0    
+`#949cbb` <img src=".colors/catppuccin_frappe/949cbb.svg" width="20" height="20" style="vertical-align: middle;"/> overlay2    
+`#838ba7` <img src=".colors/catppuccin_frappe/838ba7.svg" width="20" height="20" style="vertical-align: middle;"/> overlay1    
+`#737994` <img src=".colors/catppuccin_frappe/737994.svg" width="20" height="20" style="vertical-align: middle;"/> overlay0    
+`#626880` <img src=".colors/catppuccin_frappe/626880.svg" width="20" height="20" style="vertical-align: middle;"/> surface2    
+`#51576d` <img src=".colors/catppuccin_frappe/51576d.svg" width="20" height="20" style="vertical-align: middle;"/> surface1    
+`#414559` <img src=".colors/catppuccin_frappe/414559.svg" width="20" height="20" style="vertical-align: middle;"/> surface0    
+
+#### Background
+
+`#303446` <img src=".colors/catppuccin_frappe/303446.svg" width="20" height="20" style="vertical-align: middle;"/> base    
+`#292c3c` <img src=".colors/catppuccin_frappe/292c3c.svg" width="20" height="20" style="vertical-align: middle;"/> mantle    
+`#232634` <img src=".colors/catppuccin_frappe/232634.svg" width="20" height="20" style="vertical-align: middle;"/> crust    
+
+## Catppuccin Macchiato
+
+### Color Palette
+
+From the Catppuccin Macchiato theme
+
+#### Accents
+
+`#f4dbd6` <img src=".colors/catppuccin_macchiato/f4dbd6.svg" width="20" height="20" style="vertical-align: middle;"/> rosewater    
+`#f0c6c6` <img src=".colors/catppuccin_macchiato/f0c6c6.svg" width="20" height="20" style="vertical-align: middle;"/> flamingo    
+`#f5bde6` <img src=".colors/catppuccin_macchiato/f5bde6.svg" width="20" height="20" style="vertical-align: middle;"/> pink    
+`#c6a0f6` <img src=".colors/catppuccin_macchiato/c6a0f6.svg" width="20" height="20" style="vertical-align: middle;"/> mauve    
+`#ed8796` <img src=".colors/catppuccin_macchiato/ed8796.svg" width="20" height="20" style="vertical-align: middle;"/> red    
+`#ee99a0` <img src=".colors/catppuccin_macchiato/ee99a0.svg" width="20" height="20" style="vertical-align: middle;"/> maroon    
+`#f5a97f` <img src=".colors/catppuccin_macchiato/f5a97f.svg" width="20" height="20" style="vertical-align: middle;"/> peach    
+`#eed49f` <img src=".colors/catppuccin_macchiato/eed49f.svg" width="20" height="20" style="vertical-align: middle;"/> yellow    
+`#a6da95` <img src=".colors/catppuccin_macchiato/a6da95.svg" width="20" height="20" style="vertical-align: middle;"/> green    
+`#8bd5ca` <img src=".colors/catppuccin_macchiato/8bd5ca.svg" width="20" height="20" style="vertical-align: middle;"/> teal    
+`#91d7e3` <img src=".colors/catppuccin_macchiato/91d7e3.svg" width="20" height="20" style="vertical-align: middle;"/> sky    
+`#7dc4e4` <img src=".colors/catppuccin_macchiato/7dc4e4.svg" width="20" height="20" style="vertical-align: middle;"/> sapphire    
+`#8aadf4` <img src=".colors/catppuccin_macchiato/8aadf4.svg" width="20" height="20" style="vertical-align: middle;"/> blue    
+`#b7bdf8` <img src=".colors/catppuccin_macchiato/b7bdf8.svg" width="20" height="20" style="vertical-align: middle;"/> lavender    
+
+#### Text and UI
+
+`#cad3f5` <img src=".colors/catppuccin_macchiato/cad3f5.svg" width="20" height="20" style="vertical-align: middle;"/> text    
+`#b8c0e0` <img src=".colors/catppuccin_macchiato/b8c0e0.svg" width="20" height="20" style="vertical-align: middle;"/> subtext1    
+`#a5adcb` <img src=".colors/catppuccin_macchiato/a5adcb.svg" width="20" height="20" style="vertical-align: middle;"/> subtext0    
+`#939ab7` <img src=".colors/catppuccin_macchiato/939ab7.svg" width="20" height="20" style="vertical-align: middle;"/> overlay2    
+`#8087a2` <img src=".colors/catppuccin_macchiato/8087a2.svg" width="20" height="20" style="vertical-align: middle;"/> overlay1    
+`#6e738d` <img src=".colors/catppuccin_macchiato/6e738d.svg" width="20" height="20" style="vertical-align: middle;"/> overlay0    
+`#5b6078` <img src=".colors/catppuccin_macchiato/5b6078.svg" width="20" height="20" style="vertical-align: middle;"/> surface2    
+`#494d64` <img src=".colors/catppuccin_macchiato/494d64.svg" width="20" height="20" style="vertical-align: middle;"/> surface1    
+`#363a4f` <img src=".colors/catppuccin_macchiato/363a4f.svg" width="20" height="20" style="vertical-align: middle;"/> surface0    
+
+#### Background
+
+`#24273a` <img src=".colors/catppuccin_macchiato/24273a.svg" width="20" height="20" style="vertical-align: middle;"/> base    
+`#1e2030` <img src=".colors/catppuccin_macchiato/1e2030.svg" width="20" height="20" style="vertical-align: middle;"/> mantle    
+`#181926` <img src=".colors/catppuccin_macchiato/181926.svg" width="20" height="20" style="vertical-align: middle;"/> crust    
+
+## Catppuccin Mocha
+
+### Color Palette
+
+From the Catppuccin Mocha theme
+
+#### Accents
+
+`#f5e0dc` <img src=".colors/catppuccin_mocha/f5e0dc.svg" width="20" height="20" style="vertical-align: middle;"/> rosewater    
+`#f2cdcd` <img src=".colors/catppuccin_mocha/f2cdcd.svg" width="20" height="20" style="vertical-align: middle;"/> flamingo    
+`#f5c2e7` <img src=".colors/catppuccin_mocha/f5c2e7.svg" width="20" height="20" style="vertical-align: middle;"/> pink    
+`#cba6f7` <img src=".colors/catppuccin_mocha/cba6f7.svg" width="20" height="20" style="vertical-align: middle;"/> mauve    
+`#f38ba8` <img src=".colors/catppuccin_mocha/f38ba8.svg" width="20" height="20" style="vertical-align: middle;"/> red    
+`#eba0ac` <img src=".colors/catppuccin_mocha/eba0ac.svg" width="20" height="20" style="vertical-align: middle;"/> maroon    
+`#fab387` <img src=".colors/catppuccin_mocha/fab387.svg" width="20" height="20" style="vertical-align: middle;"/> peach    
+`#f9e2af` <img src=".colors/catppuccin_mocha/f9e2af.svg" width="20" height="20" style="vertical-align: middle;"/> yellow    
+`#a6e3a1` <img src=".colors/catppuccin_mocha/a6e3a1.svg" width="20" height="20" style="vertical-align: middle;"/> green    
+`#94e2d5` <img src=".colors/catppuccin_mocha/94e2d5.svg" width="20" height="20" style="vertical-align: middle;"/> teal    
+`#89dceb` <img src=".colors/catppuccin_mocha/89dceb.svg" width="20" height="20" style="vertical-align: middle;"/> sky    
+`#74c7ec` <img src=".colors/catppuccin_mocha/74c7ec.svg" width="20" height="20" style="vertical-align: middle;"/> sapphire    
+`#89b4fa` <img src=".colors/catppuccin_mocha/89b4fa.svg" width="20" height="20" style="vertical-align: middle;"/> blue    
+`#b4befe` <img src=".colors/catppuccin_mocha/b4befe.svg" width="20" height="20" style="vertical-align: middle;"/> lavender    
+
+#### Text and UI
+
+`#cdd6f4` <img src=".colors/catppuccin_mocha/cdd6f4.svg" width="20" height="20" style="vertical-align: middle;"/> text    
+`#bac2de` <img src=".colors/catppuccin_mocha/bac2de.svg" width="20" height="20" style="vertical-align: middle;"/> subtext1    
+`#a6adc8` <img src=".colors/catppuccin_mocha/a6adc8.svg" width="20" height="20" style="vertical-align: middle;"/> subtext0    
+`#9399b2` <img src=".colors/catppuccin_mocha/9399b2.svg" width="20" height="20" style="vertical-align: middle;"/> overlay2    
+`#7f849c` <img src=".colors/catppuccin_mocha/7f849c.svg" width="20" height="20" style="vertical-align: middle;"/> overlay1    
+`#6c7086` <img src=".colors/catppuccin_mocha/6c7086.svg" width="20" height="20" style="vertical-align: middle;"/> overlay0    
+`#585b70` <img src=".colors/catppuccin_mocha/585b70.svg" width="20" height="20" style="vertical-align: middle;"/> surface2    
+`#45475a` <img src=".colors/catppuccin_mocha/45475a.svg" width="20" height="20" style="vertical-align: middle;"/> surface1    
+`#313244` <img src=".colors/catppuccin_mocha/313244.svg" width="20" height="20" style="vertical-align: middle;"/> surface0    
+
+#### Background
+
+`#1e1e2e` <img src=".colors/catppuccin_mocha/1e1e2e.svg" width="20" height="20" style="vertical-align: middle;"/> base    
+`#181825` <img src=".colors/catppuccin_mocha/181825.svg" width="20" height="20" style="vertical-align: middle;"/> mantle    
+`#11111b` <img src=".colors/catppuccin_mocha/11111b.svg" width="20" height="20" style="vertical-align: middle;"/> crust    
