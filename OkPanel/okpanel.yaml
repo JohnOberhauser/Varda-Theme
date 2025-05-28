@@ -1,9 +1,20 @@
 configUpdateScript: /home/john/workspace/Varda-Theme/themes/setTheme.sh
 wallpaperUpdateScript: /home/john/workspace/Varda-Theme/themes/setWallpaper.sh
 
-verticalBar:
+horizontalBar:
   centerWidgets:
-    - cava_waveform
+    - clock
+  rightWidgets:
+    - tray
+    - audio_out
+    - audio_in
+    - bluetooth
+    - vpn_indicator
+    - network
+    - battery
+
+verticalBar:
+  centerWidgets: []
   bottomWidgets:
     - tray
     - audio_out
