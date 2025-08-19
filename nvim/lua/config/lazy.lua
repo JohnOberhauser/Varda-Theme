@@ -31,5 +31,14 @@ require("lazy").setup({
   -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { "habamax" } },
   -- automatically check for plugin updates
-  checker = { enabled = true },
+  checker = { enabled = false },
+})
+
+-- Auto-update in the background on startup
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.schedule(function()
+      require("lazy").update({ show = false }) -- hides the UI
+    end)
+  end,
 })
