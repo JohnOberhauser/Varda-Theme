@@ -1,0 +1,63 @@
+icon: "󱥒"
+iconOffset: 3
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/desertpower/wallpaper
+
+verticalBar:
+  compact: false
+  expanded: true
+  enableFrame: true
+  splitSections: false
+  marginOuter: 0
+  marginStart: 0
+  marginEnd: 0
+  marginInner: 0
+  topWidgets:
+    - workspaces
+  centerWidgets:
+    - logout
+    - lock
+    - restart
+    - shutdown
+  bottomWidgets:
+    - recording_indicator
+    - audio_out
+    - audio_in
+    - bluetooth
+    - network
+    - battery
+    - menu
+  cava_waveform:
+    length: 800
+    position: outer
+
+theme:
+  name: desertpower
+  colors:
+    background: "#11100F"
+    foreground: "#A1A09F"
+    primary: "#55504D"
+    buttonPrimary: "#55504D"
+    warning: "#E0974B"
+    barBorder: "#55504D"
+    windowBorder: "#A1A09F"
+    alertBorder: "#55504D"
+  bars:
+    borderWidth: 0
+    widgetBackground: "#11100F00"
+    menu:
+      foreground: "#F3CBAA"
+    battery:
+      foreground: "#9C584A"
+    network:
+      foreground: "#805E47"
+    bluetooth:
+      foreground: "#6F6050"
+    audio_in:
+      foreground: "#3A3C46"
+    audio_out:
+      foreground: "#3A5C6C"
+    workspaces:
+      foreground: "#9C584A"
+      largeActive: true
+    cava_waveform:
+      foreground: "#3A5C6C"

@@ -1,0 +1,47 @@
+icon: "󰌪"
+iconOffset: 1
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/everforest/wallpaper
+
+verticalBar:
+  compact: false
+  expanded: true
+  enableFrame: true
+  splitSections: false
+  topWidgets:
+    - workspaces
+  centerWidgets:
+    - menu
+    - screenshot
+    - clipboard_manager
+    - app_launcher
+    - clock
+    - logout
+    - lock
+    - restart
+    - shutdown
+  bottomWidgets:
+    - power_profile
+    - recording_indicator
+    - audio_out
+    - audio_in
+    - bluetooth
+    - network
+    - battery
+  cava_waveform:
+    length: 800
+    position: outer
+
+theme:
+  name: everforest
+  colors:
+    background: "#1E2326"
+    foreground: "#D3C6AA"
+    primary: "#7A8478"
+    buttonPrimary: "#384B55"
+    warning: "#E67E80"
+    barBorder: "#7A8478"
+    windowBorder: "#D3C6AA"
+    alertBorder: "#7A8478"
+  bars:
+    frameThickness: 12
+    borderRadius: 12
