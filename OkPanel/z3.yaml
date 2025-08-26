@@ -2,18 +2,17 @@ icon: "󰌪"
 iconOffset: 1
 wallpaperDir: /home/john/workspace/Varda-Theme/themes/everforest/wallpaper
 
-verticalBar:
+leftBar:
+  enabled: true
   compact: false
-  expanded: true
-  enableFrame: true
-  splitSections: false
   topWidgets:
+    - menu
     - workspaces
   centerWidgets:
-    - menu
     - screenshot
     - clipboard_manager
     - app_launcher
+    - notification_history
     - clock
     - logout
     - lock
@@ -31,6 +30,30 @@ verticalBar:
     length: 800
     position: outer
 
+rightBar:
+  enabled: true
+  compact: false
+  centerWidgets:
+    - cava_waveform
+    - mpris_track_info
+  mpris_track_info:
+    textAlignment: center
+  cava_waveform:
+    length: 800
+    position: outer
+
+topBar:
+  enabled: false
+  compact: false
+  leftWidgets:
+    - workspaces
+
+bottomBar:
+  enabled: false
+  compact: false
+  leftWidgets:
+    - workspaces
+
 theme:
   name: everforest
   colors:
@@ -43,5 +66,6 @@ theme:
     windowBorder: "#D3C6AA"
     alertBorder: "#7A8478"
   bars:
-    frameThickness: 12
+    borderWidth: 2
+    frameThickness: 2
     borderRadius: 12

@@ -2,34 +2,6 @@ icon: "󱥒"
 iconOffset: 3
 wallpaperDir: /home/john/workspace/Varda-Theme/themes/desertpower/wallpaper
 
-verticalBar:
-  compact: false
-  expanded: true
-  enableFrame: true
-  splitSections: false
-  marginOuter: 0
-  marginStart: 0
-  marginEnd: 0
-  marginInner: 0
-  topWidgets:
-    - workspaces
-  centerWidgets:
-    - logout
-    - lock
-    - restart
-    - shutdown
-  bottomWidgets:
-    - recording_indicator
-    - audio_out
-    - audio_in
-    - bluetooth
-    - network
-    - battery
-    - menu
-  cava_waveform:
-    length: 800
-    position: outer
-
 theme:
   name: desertpower
   colors:
@@ -58,6 +30,6 @@ theme:
       foreground: "#3A5C6C"
     workspaces:
       foreground: "#9C584A"
-      largeActive: true
+      largeActive: false
     cava_waveform:
       foreground: "#3A5C6C"

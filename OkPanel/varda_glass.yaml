@@ -2,27 +2,6 @@ icon: ""
 iconOffset: 3
 wallpaperDir: /home/john/workspace/Varda-Theme/themes/varda/wallpaper
 
-verticalBar:
-  compact: true
-  expanded: true
-  marginOuter: 0
-  marginStart: 0
-  marginEnd: 0
-  marginInner: 0
-  centerWidgets:
-    - cava_waveform
-  cava_waveform:
-    position: inner
-    length: 500
-
-horizontalBar:
-  compact: true
-  expanded: true
-  marginOuter: 0
-  marginStart: 0
-  marginEnd: 0
-  marginInner: 0
-
 theme:
   name: varda
   colors:
