@@ -31,13 +31,10 @@ systemMenu:
     - mpris_players
     - power_options
     - notification_history
+  clock:
+    dayFont: "Anurati"
+    dayAllCaps: true
 
 weather:
   latitude: "42.1656"
   longitude: "-88.2943"
-
-theme:
-  systemMenu:
-    clock:
-      dayFont: "Anurati"
-      dayAllCaps: true
