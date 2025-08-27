@@ -2,21 +2,43 @@ icon: "󰌪"
 iconOffset: 1
 wallpaperDir: /home/john/workspace/Varda-Theme/themes/everforest/wallpaper
 
+frame:
+  rightThickness: 0
+  bottomThickness: 0
+  leftThickness: 0
+  topThickness: 0
+
 leftBar:
+  topWidgets:
+    - cava_waveform
+  centerWidgets: []
+  bottomWidgets:
+    - mpris_track_info
+    - mpris_controls
+    - mpris_primary_player_switcher
+  mpris_track_info:
+    textAlignment: center
+  cava_waveform:
+    length: 600
+    position: outer
+
+topBar:
+  leftWidgets:
+    - workspaces
   topWidgets:
     - menu
     - workspaces
   centerWidgets:
-    - screenshot
-    - clipboard_manager
-    - app_launcher
+    - menu
     - notification_history
+    - clipboard_manager
+    - color_picker
     - clock
     - logout
     - lock
     - restart
     - shutdown
-  bottomWidgets:
+  rightWidgets:
     - power_profile
     - recording_indicator
     - audio_out
@@ -24,27 +46,18 @@ leftBar:
     - bluetooth
     - network
     - battery
-  cava_waveform:
-    length: 800
-    position: outer
 
-rightBar:
-  centerWidgets:
-    - cava_waveform
-    - mpris_track_info
-  mpris_track_info:
-    textAlignment: center
-  cava_waveform:
-    length: 800
-    position: outer
-
-topBar:
-  leftWidgets:
-    - workspaces
-
-bottomBar:
-  leftWidgets:
-    - workspaces
+systemMenu:
+  widgets:
+    - clock
+    - network
+    - bluetooth
+    - audio_out
+    - audio_in
+    - power_profile
+    - look_and_feel
+    - screen_recording_controls
+    - mpris_players
 
 theme:
   name: everforest
@@ -58,6 +71,5 @@ theme:
     windowBorder: "#D3C6AA"
     alertBorder: "#7A8478"
   bars:
-    borderWidth: 2
-    frameThickness: 2
+    borderWidth: 0
     borderRadius: 12
