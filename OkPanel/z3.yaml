@@ -70,6 +70,3 @@ theme:
     barBorder: "#7A8478"
     windowBorder: "#D3C6AA"
     alertBorder: "#7A8478"
-  bars:
-    borderWidth: 0
-    borderRadius: 12
