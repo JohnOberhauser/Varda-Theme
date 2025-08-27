@@ -3,8 +3,6 @@ iconOffset: 1
 wallpaperDir: /home/john/workspace/Varda-Theme/themes/everforest/wallpaper
 
 leftBar:
-  enabled: true
-  compact: false
   topWidgets:
     - menu
     - workspaces
@@ -31,8 +29,6 @@ leftBar:
     position: outer
 
 rightBar:
-  enabled: true
-  compact: false
   centerWidgets:
     - cava_waveform
     - mpris_track_info
@@ -43,14 +39,10 @@ rightBar:
     position: outer
 
 topBar:
-  enabled: false
-  compact: false
   leftWidgets:
     - workspaces
 
 bottomBar:
-  enabled: false
-  compact: false
   leftWidgets:
     - workspaces
 
