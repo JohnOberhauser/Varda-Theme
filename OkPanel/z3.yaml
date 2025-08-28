@@ -18,9 +18,6 @@ leftBar:
     - mprisPrimaryPlayerSwitcher
   mpris_track_info:
     textAlignment: center
-  cava_waveform:
-    length: 600
-    position: outer
 
 topBar:
   leftWidgets:
@@ -58,6 +55,11 @@ systemMenu:
     - lookAndFeel
     - screenRecordingControls
     - mprisPlayers
+
+barWidgets:
+  cavaWaveform:
+    length: 600
+    position: outer
 
 theme:
   name: everforest
