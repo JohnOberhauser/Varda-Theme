@@ -1,35 +1,91 @@
-icon: "󱥒"
-iconOffset: 3
-wallpaperDir: /home/john/workspace/Varda-Theme/themes/desertpower/wallpaper
+icon: "󰌪"
+iconOffset: 1
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/everforest/wallpaper
+
+frame:
+  rightThickness: 0
+  bottomThickness: 0
+  leftThickness: 0
+  topThickness: 0
+  borderWidth: 0
+  borderRadius: 0
+  leftGroup:
+    borderWidth: 2
+    borderRadius: 8
+    marginStart: 5
+    marginTop: 12
+    marginBottom: 12
+    paddingTop: 6
+    paddingBottom: 6
+
+
+leftBar:
+  topWidgets:
+    - workspaces
+  centerWidgets: []
+  bottomWidgets:
+    - mprisTrackInfo
+    - mprisControls
+    - mprisPrimaryPlayerSwitcher
+  mpris_track_info:
+    textAlignment: center
+
+topBar:
+  expanded: false
+  marginStart: 5
+  marginTop: 5
+  marginEnd: 5
+  borderRadius: 12
+  borderWidth: 2
+  leftWidgets:
+    - workspaces
+  topWidgets:
+    - menu
+    - workspaces
+  centerWidgets:
+    - menu
+    - notificationHistory
+    - clipboardManager
+    - colorPicker
+    - clock
+    - logout
+    - lock
+    - restart
+    - shutdown
+  rightWidgets:
+    - powerProfile
+    - recordingIndicator
+    - audioOut
+    - audioIn
+    - bluetooth
+    - network
+    - battery
+
+systemMenu:
+  widgets:
+    - clock
+    - network
+    - bluetooth
+    - audioOut
+    - audioIn
+    - powerProfile
+    - lookAndFeel
+    - screenRecordingControls
+    - mprisPlayers
+
+barWidgets:
+  cavaWaveform:
+    length: 600
+    position: outer
 
 theme:
-  name: desertpower
+  name: everforest
   colors:
-    background: "#11100F"
-    foreground: "#A1A09F"
-    primary: "#55504D"
-    buttonPrimary: "#55504D"
-    warning: "#E0974B"
-    barBorder: "#55504D"
-    windowBorder: "#A1A09F"
-    alertBorder: "#55504D"
-  bars:
-    borderWidth: 0
-    widgetBackground: "#11100F00"
-    menu:
-      foreground: "#F3CBAA"
-    battery:
-      foreground: "#9C584A"
-    network:
-      foreground: "#805E47"
-    bluetooth:
-      foreground: "#6F6050"
-    audio_in:
-      foreground: "#3A3C46"
-    audio_out:
-      foreground: "#3A5C6C"
-    workspaces:
-      foreground: "#9C584A"
-      largeActive: false
-    cava_waveform:
-      foreground: "#3A5C6C"
+    background: "#1E2326"
+    foreground: "#D3C6AA"
+    primary: "#7A8478"
+    buttonPrimary: "#384B55"
+    warning: "#E67E80"
+    barBorder: "#7A8478"
+    windowBorder: "#D3C6AA"
+    alertBorder: "#7A8478"
