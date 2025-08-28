@@ -8,11 +8,11 @@ leftBar:
   centerWidgets: []
   bottomWidgets:
     - tray
-    - clipboard_manager
-    - audio_out
-    - audio_in
+    - clipboardManager
+    - audioOut
+    - audioIn
     - bluetooth
-    - vpn_indicator
+    - vpnIndicator
     - network
     - battery
     - clock
@@ -22,15 +22,15 @@ systemMenu:
     - clock
     - network
     - bluetooth
-    - audio_out
-    - audio_in
-    - power_profile
+    - audioOut
+    - audioIn
+    - powerProfile
     - toolbox
-    - look_and_feel
-    - screen_recording_controls
-    - mpris_players
-    - power_options
-    - notification_history
+    - lookAndFeel
+    - screenRecordingControls
+    - mprisPlayers
+    - powerOptions
+    - notificationHistory
   clock:
     dayFont: "Anurati"
     dayAllCaps: true

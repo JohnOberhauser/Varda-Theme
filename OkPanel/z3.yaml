@@ -10,12 +10,12 @@ frame:
 
 leftBar:
   topWidgets:
-    - cava_waveform
+    - cavaWaveform
   centerWidgets: []
   bottomWidgets:
-    - mpris_track_info
-    - mpris_controls
-    - mpris_primary_player_switcher
+    - mprisTrackInfo
+    - mprisControls
+    - mprisPrimaryPlayerSwitcher
   mpris_track_info:
     textAlignment: center
   cava_waveform:
@@ -30,19 +30,19 @@ topBar:
     - workspaces
   centerWidgets:
     - menu
-    - notification_history
-    - clipboard_manager
-    - color_picker
+    - notificationHistory
+    - clipboardManager
+    - colorPicker
     - clock
     - logout
     - lock
     - restart
     - shutdown
   rightWidgets:
-    - power_profile
-    - recording_indicator
-    - audio_out
-    - audio_in
+    - powerProfile
+    - recordingIndicator
+    - audioOut
+    - audioIn
     - bluetooth
     - network
     - battery
@@ -52,12 +52,12 @@ systemMenu:
     - clock
     - network
     - bluetooth
-    - audio_out
-    - audio_in
-    - power_profile
-    - look_and_feel
-    - screen_recording_controls
-    - mpris_players
+    - audioOut
+    - audioIn
+    - powerProfile
+    - lookAndFeel
+    - screenRecordingControls
+    - mprisPlayers
 
 theme:
   name: everforest
