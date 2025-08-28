@@ -27,7 +27,6 @@ systemMenu:
     - powerProfile
     - toolbox
     - lookAndFeel
-    - screenRecordingControls
     - mprisPlayers
     - powerOptions
     - notificationHistory

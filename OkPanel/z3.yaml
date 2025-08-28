@@ -53,7 +53,6 @@ systemMenu:
     - audioIn
     - powerProfile
     - lookAndFeel
-    - screenRecordingControls
     - mprisPlayers
 
 barWidgets:

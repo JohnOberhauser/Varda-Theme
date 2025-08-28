@@ -13,20 +13,16 @@ frame:
     borderWidth: 2
     borderRadius: 8
     marginStart: 5
-    marginTop: 12
-    marginBottom: 12
+    marginTop: 10
+    marginBottom: 10
     paddingTop: 6
     paddingBottom: 6
 
 
 leftBar:
-  topWidgets:
-    - workspaces
+  topWidgets: []
   centerWidgets: []
-  bottomWidgets:
-    - mprisTrackInfo
-    - mprisControls
-    - mprisPrimaryPlayerSwitcher
+  bottomWidgets: []
   mpris_track_info:
     textAlignment: center
 
@@ -35,6 +31,10 @@ topBar:
   marginStart: 5
   marginTop: 5
   marginEnd: 5
+  paddingTop: 2
+  paddingBottom: 2
+  paddingStart: 2
+  paddingEnd: 2
   borderRadius: 12
   borderWidth: 2
   leftWidgets:
@@ -61,6 +61,21 @@ topBar:
     - network
     - battery
 
+bottomBar:
+  marginStart: 5
+  marginBottom: 5
+  marginEnd: 5
+  paddingTop: 2
+  paddingBottom: 2
+  paddingStart: 2
+  paddingEnd: 2
+  borderRadius: 12
+  borderWidth: 2
+  expanded: false
+  centerWidgets:
+    - mprisTrackInfo
+    - cavaWaveform
+
 systemMenu:
   widgets:
     - clock
@@ -70,7 +85,6 @@ systemMenu:
     - audioIn
     - powerProfile
     - lookAndFeel
-    - screenRecordingControls
     - mprisPlayers
 
 barWidgets:
