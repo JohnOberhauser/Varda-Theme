@@ -9,6 +9,12 @@ frame:
   topThickness: 0
   borderWidth: 0
   borderRadius: 0
+  menu:
+    pushContent: true
+  appLauncher:
+    pushContent: false
+  screenshotTool:
+    pushContent: false
   leftGroup:
     borderWidth: 2
     borderRadius: 8
