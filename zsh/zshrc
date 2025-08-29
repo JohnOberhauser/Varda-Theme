@@ -59,6 +59,14 @@ alias mbuild='./mach clobber && ./mach --no-interactive bootstrap --application-
 alias mlintf='./mach lint -l android-fenix'
 alias mlintac='./mach lint -l android-ac'
 
+gdate() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: gdate <number-of-commits>"
+    return 1
+  fi
+  git rebase -i HEAD~$1 --reset-author-date --committer-date-is-author-date
+}
+
 # Change folder colors
 # ========= Font ================
 # 0 default color
