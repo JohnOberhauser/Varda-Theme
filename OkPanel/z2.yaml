@@ -15,17 +15,15 @@ frame:
     pushContent: false
   screenshotTool:
     pushContent: false
-  leftGroup:
-    borderWidth: 2
-    borderRadius: 8
-    marginStart: 5
-    marginTop: 10
-    marginBottom: 10
-    paddingTop: 6
-    paddingBottom: 6
-
 
 leftBar:
+  borderWidth: 2
+  borderRadius: 8
+  marginStart: 5
+  marginTop: 10
+  marginBottom: 10
+  paddingTop: 6
+  paddingBottom: 6
   topWidgets: []
   centerWidgets: []
   bottomWidgets: []
