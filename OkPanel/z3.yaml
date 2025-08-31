@@ -9,13 +9,9 @@ frame:
   topThickness: 0
 
 leftBar:
-  topWidgets:
-    - cavaWaveform
+  topWidgets: []
   centerWidgets: []
-  bottomWidgets:
-    - mprisTrackInfo
-    - mprisControls
-    - mprisPrimaryPlayerSwitcher
+  bottomWidgets: []
   mpris_track_info:
     textAlignment: center
 
