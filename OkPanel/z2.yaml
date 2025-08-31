@@ -65,6 +65,7 @@ topBar:
     - restart
     - shutdown
   rightWidgets:
+    - custom1
     - timer
     - powerProfile
     - recordingIndicator
@@ -104,6 +105,10 @@ barWidgets:
   cavaWaveform:
     length: 600
     position: outer
+  custom1:
+    label: "%"
+    execOnClick: "play /home/john/Downloads/guitar-improvisation-59465.mp3"
+    execOnInit: "play /home/john/workspace/OkPanel/ags/sounds/timer.ogg"
 
 theme:
   name: everforest
