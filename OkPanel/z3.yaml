@@ -51,11 +51,6 @@ systemMenu:
     - lookAndFeel
     - mprisPlayers
 
-barWidgets:
-  cavaWaveform:
-    length: 600
-    position: outer
-
 theme:
   name: everforest
   colors:

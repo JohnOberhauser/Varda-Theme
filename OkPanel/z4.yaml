@@ -1,0 +1,49 @@
+icon: "󰚌"
+iconOffset: 2
+wallpaperDir: /home/john/workspace/Varda-Theme/themes/bloodrust/wallpaper
+
+frame:
+  leftThickness: 0
+  bottomThickness: 0
+  rightThickness: 0
+  topThickness: 0
+  borderRadius: 0
+  borderWidth: 0
+
+topBar:
+  marginStart: 10
+  marginEnd: 10
+  marginTop: 10
+  borderRadius: 8
+  borderWidth: 2
+  leftWidgets:
+    - menu
+    - workspaces
+  centerWidgets:
+    - clock
+  rightWidgets:
+    - tray
+    - clipboardManager
+    - audioOut
+    - audioIn
+    - bluetooth
+    - vpnIndicator
+    - network
+    - battery
+
+leftBar:
+  topWidgets: []
+  centerWidgets: []
+  bottomWidgets: []
+
+theme:
+  name: bloodrust
+  colors:
+    background: "#1F2932"
+    foreground: "#AFB3BD"
+    primary: "#7C545F"
+    buttonPrimary: "#7C545F"
+    warning: "#7C7C54"
+    barBorder: "#7C545F"
+    windowBorder: "#AFB3BD"
+    alertBorder: "#7C545F"
