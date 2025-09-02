@@ -3,19 +3,19 @@ iconOffset: 2
 wallpaperDir: /home/john/workspace/Varda-Theme/themes/bloodrust/wallpaper
 
 frame:
-  leftThickness: 0
-  bottomThickness: 0
+  leftThickness: 12
+  bottomThickness: 12
   rightThickness: 0
   topThickness: 0
-  borderRadius: 0
-  borderWidth: 0
+  borderRadius: 12
+  borderWidth: 2
 
 topBar:
-  marginStart: 10
-  marginEnd: 10
-  marginTop: 10
-  borderRadius: 8
-  borderWidth: 2
+#  marginStart: 10
+#  marginEnd: 10
+#  marginTop: 10
+#  borderRadius: 8
+#  borderWidth: 2
   leftWidgets:
     - menu
     - workspaces
@@ -35,6 +35,16 @@ leftBar:
   topWidgets: []
   centerWidgets: []
   bottomWidgets: []
+
+rightBar:
+  centerWidgets:
+    - cavaWaveform
+    - mprisTrackInfo
+    - mprisControls
+
+barWidgets:
+  cavaWaveform:
+    length: 550
 
 theme:
   name: bloodrust
