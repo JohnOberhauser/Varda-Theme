@@ -33,7 +33,7 @@
     fill: var(--fg-color) !important;
 }
 
-#urlbar-background {
+.urlbar-background {
     background: var(--bg-color) !important;
 }
 
