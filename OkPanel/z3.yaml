@@ -50,6 +50,7 @@ systemMenu:
     - powerProfile
     - lookAndFeel
     - mprisPlayers
+    - quickToggles
 
 theme:
   name: everforest
