@@ -25,9 +25,9 @@ systemMenu:
     - audioOut
     - audioIn
     - powerProfile
-    - toolbox
     - lookAndFeel
     - mprisPlayers
+    - quickToggles
     - powerOptions
     - notificationHistory
   clock:
