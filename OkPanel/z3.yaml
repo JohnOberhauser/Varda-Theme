@@ -46,6 +46,8 @@ topBar:
 
 barWidgets:
   workspaces:
+    inactiveIcon: ""
+    activeIcon: ""
     borderRadius: 90
     marginStart: 12
     foreground: "#1E2326"
