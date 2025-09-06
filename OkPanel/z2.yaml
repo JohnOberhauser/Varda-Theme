@@ -93,6 +93,7 @@ bottomBar:
 systemMenu:
   widgets:
     - clock
+    - quickToggles
     - network
     - bluetooth
     - audioOut
@@ -100,7 +101,6 @@ systemMenu:
     - powerProfile
     - lookAndFeel
     - mprisPlayers
-    - quickToggles
 
 barWidgets:
   cavaWaveform:

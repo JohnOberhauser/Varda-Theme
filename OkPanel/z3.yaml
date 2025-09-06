@@ -12,20 +12,24 @@ leftBar:
   topWidgets: []
   centerWidgets: []
   bottomWidgets: []
-  mpris_track_info:
-    textAlignment: center
 
 topBar:
+  paddingTop: 4
+  paddingBottom: 4
   leftWidgets:
+    - menu
+    - notificationHistory
+    - clipboardManager
+    - colorPicker
     - workspaces
   topWidgets:
     - menu
     - workspaces
   centerWidgets:
-    - menu
-    - notificationHistory
-    - clipboardManager
-    - colorPicker
+    - shortcut1
+    - shortcut2
+    - shortcut3
+    - shortcut4
     - clock
     - logout
     - lock
@@ -40,9 +44,23 @@ topBar:
     - network
     - battery
 
+barWidgets:
+  workspaces:
+    borderRadius: 90
+    marginStart: 12
+    foreground: "#1E2326"
+    background: "#7A8478"
+  clock:
+    marginStart: 12
+    marginEnd: 12
+    borderRadius: 90
+    foreground: "#1E2326"
+    background: "#7A8478"
+
 systemMenu:
   widgets:
     - clock
+    - quickToggles
     - network
     - bluetooth
     - audioOut
@@ -50,7 +68,6 @@ systemMenu:
     - powerProfile
     - lookAndFeel
     - mprisPlayers
-    - quickToggles
 
 theme:
   name: everforest
