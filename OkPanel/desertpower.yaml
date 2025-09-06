@@ -1,6 +1,7 @@
 icon: "󱥒"
 iconOffset: 3
-wallpaperDir: /home/john/workspace/Varda-Theme/themes/desertpower/wallpaper
+wallpaper:
+  wallpaperDir: /home/john/workspace/Varda-Theme/themes/desertpower/wallpaper
 
 theme:
   name: desertpower
