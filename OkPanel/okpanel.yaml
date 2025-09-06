@@ -5,7 +5,11 @@ leftBar:
   topWidgets:
     - menu
     - workspaces
-  centerWidgets: []
+  centerWidgets:
+    - shortcut1
+    - shortcut2
+    - shortcut3
+    - shortcut4
   bottomWidgets:
     - tray
     - clipboardManager
@@ -16,6 +20,28 @@ leftBar:
     - network
     - battery
     - clock
+
+barWidgets:
+  shortcut1:
+    icon: ""
+    launch: "kitty"
+    newWindow: "kitty"
+    class: "kitty"
+  shortcut2:
+    icon: ""
+    launch: "/home/john/.local/share/firefox-nightly/firefox"
+    newWindow: "/home/john/.local/share/firefox-nightly/firefox"
+    class: "firefox-nightly"
+  shortcut3:
+    icon: ""
+    launch: "/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea"
+    newWindow: "/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea"
+    class: "jetbrains-idea"
+  shortcut4:
+    icon: "󰀴"
+    launch: "/home/john/.local/share/JetBrains/Toolbox/apps/android-studio/bin/studio.sh"
+    newWindow: "/home/john/.local/share/JetBrains/Toolbox/apps/android-studio/bin/studio.sh"
+    class: "jetbrains-studio"
 
 systemMenu:
   widgets:
