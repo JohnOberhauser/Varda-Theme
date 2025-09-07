@@ -36,8 +36,10 @@ topBar:
     - restart
     - shutdown
   rightWidgets:
-    - powerProfile
+    - timer
     - recordingIndicator
+    - vpnIndicator
+    - powerProfile
     - audioOut
     - audioIn
     - bluetooth
