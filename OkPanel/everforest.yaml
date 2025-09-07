@@ -1,6 +1,7 @@
 icon: "󰌪"
 iconOffset: 1
-wallpaperDir: /home/john/workspace/Varda-Theme/themes/everforest/wallpaper
+wallpaper:
+  wallpaperDir: /home/john/workspace/Varda-Theme/themes/everforest/wallpaper
 
 theme:
   name: everforest

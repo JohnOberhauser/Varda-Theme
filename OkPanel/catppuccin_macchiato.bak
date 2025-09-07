@@ -1,6 +1,7 @@
 icon: ""
 iconOffset: 2
-wallpaperDir: /home/john/workspace/Varda-Theme/themes/catppuccinmacchiato/wallpaper
+wallpaper:
+    wallpaperDir: /home/john/workspace/Varda-Theme/themes/catppuccinmacchiato/wallpaper
 
 theme:
   name: catppuccinmacchiato

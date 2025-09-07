@@ -41,7 +41,6 @@ alias bird="rsync -a --info=progress2 /mnt/ssd/camera /mnt/network/"
 alias camera="rsync -a --info=progress2 --chmod=D755 /run/media/john/EOS_DIGITAL/DCIM/100EOSR6/ /mnt/ssd/camera/$(date +%F)/ && umount /run/media/john/EOS_DIGITAL"
 alias timezone='sudo timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"'
 alias theme='function _theme() { ~/workspace/Varda-Theme/themes/setTheme.sh "$1" }; _theme'
-alias wallpaper='function _wallpaper() { ~/workspace/Varda-Theme/themes/setWallpaper.sh "$1" }; _wallpaper'
 alias cd=z
 alias spt=spotify_player
 alias addovpn='function _vpn() { ~/workspace/Varda-Theme/zsh/scripts/addVpnConnection.sh "$1" "$2" "$3" }; _vpn'
