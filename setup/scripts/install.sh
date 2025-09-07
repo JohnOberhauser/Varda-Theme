@@ -33,7 +33,6 @@ gvfs \
 hypridle \
 hyprland \
 hyprlock \
-hyprpaper \
 hyprpicker \
 hyprsunset \
 imagemagick \
