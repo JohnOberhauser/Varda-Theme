@@ -1,5 +1,8 @@
 configUpdateScript: /home/john/workspace/Varda-Theme/themes/setTheme.sh
 
+wallpaper:
+  wallpaperUpdateScript: /home/john/workspace/Varda-Theme/themes/setWallpaper.sh
+
 leftBar:
   topWidgets:
     - menu
