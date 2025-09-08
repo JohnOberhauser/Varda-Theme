@@ -70,6 +70,7 @@ ttf-nerd-fonts-symbols \
 udiskie \
 ufw \
 upower \
+uwsm \
 vim \
 wf-recorder \
 wireplumber \

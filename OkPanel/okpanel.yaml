@@ -1,8 +1,5 @@
 configUpdateScript: /home/john/workspace/Varda-Theme/themes/setTheme.sh
 
-wallpaper:
-  wallpaperUpdateScript: /home/john/workspace/Varda-Theme/themes/setWallpaper.sh
-
 leftBar:
   topWidgets:
     - menu
@@ -40,12 +37,10 @@ barWidgets:
     icon: ""
     iconOffset: 3
     launch: "/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea"
-    newWindow: "/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea"
     class: "jetbrains-idea"
   shortcut4:
     icon: "󰀴"
     launch: "/home/john/.local/share/JetBrains/Toolbox/apps/android-studio/bin/studio.sh"
-    newWindow: "/home/john/.local/share/JetBrains/Toolbox/apps/android-studio/bin/studio.sh"
     class: "jetbrains-studio"
 
 systemMenu:
