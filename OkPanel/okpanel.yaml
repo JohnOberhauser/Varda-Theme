@@ -9,6 +9,9 @@ leftBar:
     - shortcut2
     - shortcut3
     - shortcut4
+    - shortcut5
+    - shortcut6
+    - shortcut7
   bottomWidgets:
     - tray
     - clipboardManager
@@ -24,8 +27,8 @@ barWidgets:
   shortcut1:
     icon: ""
     iconOffset: 2
-    launch: "kitty"
-    newWindow: "kitty"
+    launch: "kitty -d ~/"
+    newWindow: "kitty -d ~/"
     class: "kitty"
   shortcut2:
     icon: "󰈹"
@@ -42,6 +45,18 @@ barWidgets:
     icon: "󰀴"
     launch: "/home/john/.local/share/JetBrains/Toolbox/apps/android-studio/bin/studio.sh"
     class: "jetbrains-studio"
+  shortcut5:
+    icon: "󰭹"
+    launch: "flatpak run org.signal.Signal"
+    class: "org.signal.Signal"
+  shortcut6:
+    icon: "󰄄"
+    launch: "darktable"
+    class: "Darktable"
+  shortcut7:
+    icon: ""
+    launch: "steam"
+    class: "steam"
 
 systemMenu:
   widgets:
