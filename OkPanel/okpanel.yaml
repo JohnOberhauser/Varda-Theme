@@ -68,8 +68,8 @@ systemMenu:
     - powerProfile
     - lookAndFeel
     - mprisPlayers
-    - quickToggles
-    - powerOptions
+    - quickActions1
+    - quickActions2
     - notificationHistory
   clock:
     dayFont: "Anurati"

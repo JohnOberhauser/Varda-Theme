@@ -94,7 +94,7 @@ bottomBar:
 systemMenu:
   widgets:
     - clock
-    - quickToggles
+    - quickActions1
     - network
     - bluetooth
     - audioOut
