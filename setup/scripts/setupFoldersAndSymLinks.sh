@@ -27,4 +27,4 @@ ln -s $HOME/workspace/Varda-Theme/yazi $HOME/.config/
 
 ln -s $HOME/workspace/Varda-Theme/spotify-player/ $HOME/.config/
 
-ln -s $HOME/workspace/Varda-Theme/OkPanel $HOME/.config/
+ln -s $HOME/workspace/Varda-Theme/OkPanel/desktop/OkPanel $HOME/.config/
