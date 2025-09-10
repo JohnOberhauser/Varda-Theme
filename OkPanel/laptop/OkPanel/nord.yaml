@@ -1,0 +1,57 @@
+icon: ""
+iconOffset: 2
+wallpaper:
+  wallpaperDir: /home/john/workspace/Varda-Theme/themes/nord/wallpaper
+
+frame:
+  drawFrame: false
+  topThickness: 0
+  rightThickness: 0
+  leftThickness: 0
+  bottomThickness: 0
+  margin: 0
+  borderWidth: 0
+
+topBar:
+  borderWidth: 2
+  marginTop: 5
+  marginStart: 5
+  marginEnd: 5
+  leftWidgets:
+    - menu
+    - workspaces
+  centerWidgets:
+    - clock
+  rightWidgets:
+    - timer
+    - recordingIndicator
+    - vpnIndicator
+    - powerProfile
+    - audioOut
+    - audioIn
+    - bluetooth
+    - network
+    - battery
+
+leftBar:
+  borderWidth: 2
+  marginStart: 5
+  marginBottom: 5
+  marginTop: 20
+
+barWidgets:
+  widgetBorderRadius: 0
+
+theme:
+  name: nord
+  colors:
+    background: "#2e3440"
+    foreground: "#d8dee9"
+    primary: "#81a1c1"
+    buttonPrimary: "#5e81ac"
+    warning: "#BF616A"
+    barBorder: "#81a1c1"
+    windowBorder: "#d8dee9"
+    alertBorder: "#81a1c1"
+  windows:
+    borderRadius: 0

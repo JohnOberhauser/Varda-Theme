@@ -18,9 +18,6 @@ topBar:
     - clipboardManager
     - colorPicker
     - workspaces
-  topWidgets:
-    - menu
-    - workspaces
   centerWidgets:
     - shortcut1
     - shortcut2

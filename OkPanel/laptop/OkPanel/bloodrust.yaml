@@ -1,0 +1,86 @@
+icon: "󰚌"
+iconOffset: 2
+wallpaper:
+  wallpaperDir: /home/john/workspace/Varda-Theme/themes/bloodrust/wallpaper
+
+frame:
+  topThickness: 0
+  menu:
+    position: "right"
+  calendar:
+    position: "right"
+  clipboardManager:
+    position: "right"
+
+topBar:
+  paddingTop: 2
+  paddingBottom: 0
+  paddingEnd: 6
+  leftWidgets:
+    - shortcut1
+    - shortcut2
+    - shortcut3
+    - shortcut4
+    - shortcut5
+    - shortcut6
+    - shortcut7
+  centerWidgets:
+    - cavaWaveform
+    - mprisControls
+    - mprisPrimaryPlayerSwitcher
+    - mprisTrackInfo
+  rightWidgets:
+    - clipboardManager
+    - logout
+    - lock
+    - restart
+    - shutdown
+    - menu
+
+rightBar:
+  topWidgets:
+    - workspaces
+  bottomWidgets:
+    - timer
+    - recordingIndicator
+    - vpnIndicator
+    - powerProfile
+    - audioOut
+    - audioIn
+    - bluetooth
+    - network
+    - battery
+    - clock
+
+barWidgets:
+  widgetBorderRadius: 20
+  cavaWaveform:
+    position: end
+    foreground: "#7C545F"
+  mprisTrackInfo:
+    textAlignment: "start"
+    foreground: "#7C545F"
+
+systemMenu:
+  widgets:
+    - clock
+    - quickActions1
+    - network
+    - bluetooth
+    - audioOut
+    - audioIn
+    - powerProfile
+    - lookAndFeel
+    - mprisPlayers
+
+theme:
+  name: bloodrust
+  colors:
+    background: "#1F2932"
+    foreground: "#AFB3BD"
+    primary: "#7C545F"
+    buttonPrimary: "#7C545F"
+    warning: "#7C7C54"
+    barBorder: "#7C545F"
+    windowBorder: "#AFB3BD"
+    alertBorder: "#7C545F"
