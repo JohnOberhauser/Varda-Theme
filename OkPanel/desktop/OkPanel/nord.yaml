@@ -1,0 +1,16 @@
+icon: ""
+iconOffset: 2
+wallpaper:
+  wallpaperDir: /home/john/workspace/Varda-Theme/themes/nord/wallpaper
+
+theme:
+  name: nord
+  colors:
+    background: "#2e3440"
+    foreground: "#d8dee9"
+    primary: "#81a1c1"
+    buttonPrimary: "#5e81ac"
+    warning: "#BF616A"
+    barBorder: "#81a1c1"
+    windowBorder: "#d8dee9"
+    alertBorder: "#81a1c1"

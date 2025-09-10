@@ -9,11 +9,6 @@ frame:
   leftThickness: 0
   topThickness: 0
 
-leftBar:
-  topWidgets: []
-  centerWidgets: []
-  bottomWidgets: []
-
 topBar:
   paddingTop: 4
   paddingBottom: 4

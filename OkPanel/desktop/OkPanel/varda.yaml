@@ -1,0 +1,16 @@
+icon: ""
+iconOffset: 3
+wallpaper:
+  wallpaperDir: /home/john/workspace/Varda-Theme/themes/varda/wallpaper
+
+theme:
+  name: varda
+  colors:
+    background: "#0C0E11"
+    foreground: "#D0EBEE"
+    primary: "#52677C"
+    buttonPrimary: "#52677C"
+    warning: "#733447"
+    barBorder: "#52677C"
+    windowBorder: "#D0EBEE"
+    alertBorder: "#52677C"
