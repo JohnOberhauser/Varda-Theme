@@ -9,6 +9,9 @@ frame:
   rightThickness: 0
   leftThickness: 0
   bottomThickness: 0
+  enableLeftSpacer: false
+  enableRightSpacer: false
+  enableBottomSpacer: false
   margin: 0
   borderWidth: 0
 
@@ -37,7 +40,7 @@ leftBar:
   borderWidth: 2
   marginStart: 5
   marginBottom: 5
-  marginTop: 20
+  marginTop: 6
 
 barWidgets:
   widgetBorderRadius: 0

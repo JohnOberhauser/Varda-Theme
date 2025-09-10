@@ -1,0 +1,61 @@
+icon: "󱥒"
+iconOffset: 3
+wallpaper:
+  wallpaperDir: /home/john/workspace/Varda-Theme/themes/desertpower/wallpaper
+
+frame:
+  borderWidth: 0
+  topThickness: 0
+  rightThickness: 0
+  leftThickness: 0
+  calendar:
+    position: "right"
+
+bottomBar:
+  marginBottom: 5
+  marginStart: 5
+  marginEnd: 5
+  leftWidgets:
+    - menu
+    - shortcut1
+    - shortcut2
+    - shortcut3
+    - shortcut4
+    - shortcut5
+    - shortcut6
+    - shortcut7
+  centerWidgets:
+    - workspaces
+  rightWidgets:
+    - timer
+    - recordingIndicator
+    - vpnIndicator
+    - powerProfile
+    - audioOut
+    - audioIn
+    - bluetooth
+    - network
+    - battery
+    - clock
+
+barWidgets:
+  workspaces:
+    inactiveIcon: ""
+    activeIcon: ""
+    foreground: "#11100F"
+    background: "#55504D"
+  clock:
+    marginEnd: 4
+    background: "#55504D"
+
+theme:
+  name: desertpower
+  colors:
+    background: "#11100F"
+    foreground: "#A1A09F"
+    primary: "#55504D"
+    buttonPrimary: "#55504D"
+    warning: "#E0974B"
+    barBorder: "#55504D"
+    windowBorder: "#A1A09F"
+    alertBorder: "#55504D"
