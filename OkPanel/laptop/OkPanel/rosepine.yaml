@@ -45,16 +45,6 @@ systemMenu:
       - doNotDisturbToggle
       - colorPicker
 
-barWidgets:
-  clock:
-    foreground: "#925297"
-  battery:
-    foreground: "#565579"
-  network:
-    foreground: "#C76698"
-  bluetooth:
-    foreground: "#871B67"
-
 theme:
   name: rosepine
   colors:
