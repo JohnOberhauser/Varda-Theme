@@ -26,6 +26,7 @@ bottomBar:
     - timer
     - recordingIndicator
     - vpnIndicator
+    - clipboardManager
     - powerProfile
     - audioOut
     - audioIn
@@ -33,6 +34,26 @@ bottomBar:
     - network
     - battery
     - clock
+
+systemMenu:
+  quickActions1:
+    maxPerRow: 5
+    actions:
+      - bluetoothToggle
+      - airplaneModeToggle
+      - nightlightToggle
+      - doNotDisturbToggle
+      - colorPicker
+
+barWidgets:
+  clock:
+    foreground: "#925297"
+  battery:
+    foreground: "#565579"
+  network:
+    foreground: "#C76698"
+  bluetooth:
+    foreground: "#871B67"
 
 theme:
   name: rosepine
