@@ -21,6 +21,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='nvim'
 export PATH="/home/john/.mozbuild/git-cinnabar:$PATH"
 export PATH=~/.local/bin:$PATH
+export PATH=~/Android/Sdk/platform-tools:$PATH
 
 alias ll='ls -alFh'
 alias la='ls -A'
@@ -30,7 +31,6 @@ alias install="sudo pacman -Syu"
 alias update="sudo pacman -Syu && flatpak update && yay -Syu --devel"
 alias remove="sudo pacman -Rcns"
 alias uninstall="sudo pacman -Rcns"
-alias adb="/home/john/Android/Sdk/platform-tools/adb"
 alias fastboot="/home/john/Android/Sdk/platform-tools/fastboot"
 alias sshpi="ssh john@192.168.50.158"
 alias v=nvim

@@ -45,7 +45,7 @@ const bookmarks = [
       {"id":"pZDB2ilcq8t0m6eW","label":"YouTube","url":"https://www.youtube.com/"},
       {"id":"5YRKKQap76zg1ZxO","label":"Jellyfin","url":"http://192.168.50.158:8096"},
       {"id":"ereuzztrzJbI0lqk","label":"Twitch","url":"https://www.twitch.tv/"},
-      {"id":"R37Y4hMSIvTGhRmy","label":"Prime","url":"https://www.amazon.com/gp/video/storefront"}
+      {"id":"R37Y4hMSIvTGhRmy","label":"Audible","url":"https://www.audible.com/library/titles?ref=a_hp_nhe_library"}
     ]
   },
   {"id":"qjTUGL2OWFspQm11","label":"Other","bookmarks":[
