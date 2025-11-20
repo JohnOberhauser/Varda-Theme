@@ -62,6 +62,7 @@ sassc \
 slurp \
 socat \
 sox \
+spotify-player \
 trash-cli \
 ttf-hanazono \
 ttf-hannom \

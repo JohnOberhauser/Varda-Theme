@@ -4,7 +4,6 @@
 ./scripts/installFirefoxNightly.sh
 ./scripts/installYay.sh
 ./scripts/installFromAur.sh
-./scripts/installSpotify.sh
 ./scripts/installFonts.sh
 ./scripts/setupFoldersAndSymLinks.sh
 ./scripts/setupZsh.sh
