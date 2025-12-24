@@ -13,3 +13,8 @@ launch --location=hsplit --bias=10 zsh -c "source ~/.zshrc; cava; exec zsh"
 
 new_tab NeoVim
 launch zsh -c "source ~/.zshrc; nvim; exec zsh"
+
+new_tab Mozilla
+layout splits
+launch zsh -c "source ~/.zshrc; cd ~/workspace/firefox; gitui; exec zsh"
+launch --location=hsplit --bias=40 zsh -c "source ~/.zshrc; cd ~/workspace/firefox; exec zsh"

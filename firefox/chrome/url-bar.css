@@ -20,6 +20,10 @@
     display: none !important;
 }
 
+#trust-icon-container {
+    display: none !important;
+}
+
 /**
  Colors
  */

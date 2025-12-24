@@ -66,6 +66,14 @@ gdate() {
   git rebase -i HEAD~$1 --reset-author-date --committer-date-is-author-date
 }
 
+gri() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: gr <number-of-commits>"
+    return 1
+  fi
+  git rebase -i HEAD~$1
+}
+
 # Change folder colors
 # ========= Font ================
 # 0 default color
