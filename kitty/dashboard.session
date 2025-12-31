@@ -18,3 +18,8 @@ new_tab Mozilla
 layout splits
 launch zsh -c "source ~/.zshrc; cd ~/workspace/firefox; gitui; exec zsh"
 launch --location=hsplit --bias=40 zsh -c "source ~/.zshrc; cd ~/workspace/firefox; exec zsh"
+
+new_tab Firefly
+layout splits
+launch zsh -c "source ~/.zshrc; cd ~/workspace/Firefly; gitui; exec zsh"
+launch --location=hsplit --bias=40 zsh -c "source ~/.zshrc; cd ~/workspace/Firefly; exec zsh"
