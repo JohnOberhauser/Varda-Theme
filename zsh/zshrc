@@ -49,6 +49,7 @@ alias okpanel="/home/john/workspace/OkPanel/bin/okpanel"
 alias protontricks='flatpak run com.github.Matoking.protontricks'
 alias protontricks-launch='flatpak run --command=protontricks-launch com.github.Matoking.protontricks'
 alias windows='sudo mount /dev/sdb3 /mnt/windows'
+alias tablet='systemctl --user restart opentabletdriver.service'
 
 # firefox alias
 alias tryf='./mach try --preset fenix'
