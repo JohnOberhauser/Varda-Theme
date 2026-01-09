@@ -15,6 +15,7 @@ leftBar:
   bottomWidgets:
     - tray
     - clipboardManager
+    - colorPicker
     - audioOut
     - audioIn
     - bluetooth
