@@ -1,0 +1,85 @@
+icon: ""
+iconOffset: 3
+wallpaper:
+  wallpaperDir: /home/john/workspace/Varda-Theme/themes/varda/wallpaper
+
+frame:
+  topThickness: 0
+  bottomThickness: 0
+  menu:
+    position: "left"
+  calendar:
+    position: "right"
+  clipboardManager:
+    position: "right"
+
+topBar:
+  paddingTop: 2
+  paddingBottom: 0
+  paddingEnd: 6
+  leftWidgets:
+    - menu
+    - workspaces
+  centerWidgets:
+    - clock
+  rightWidgets:
+    - clipboardManager
+    - timer
+    - recordingIndicator
+    - vpnIndicator
+    - powerProfile
+    - audioOut
+    - audioIn
+    - bluetooth
+    - network
+    - battery
+
+rightBar:
+  topWidgets:
+    - shortcut1
+    - shortcut2
+    - shortcut3
+    - shortcut4
+    - shortcut5
+    - shortcut6
+    - shortcut7
+  centerWidgets:
+    - cavaWaveform
+  bottomWidgets:
+    - mprisTrackInfo
+    - mprisControls
+    - mprisPrimaryPlayerSwitcher
+
+barWidgets:
+  widgetBorderRadius: 20
+  cavaWaveform:
+    position: end
+    length: 400
+  mprisTrackInfo:
+    textAlignment: "center"
+
+systemMenu:
+  widgets:
+    - clock
+    - quickActions1
+    - network
+    - bluetooth
+    - audioOut
+    - audioIn
+    - powerProfile
+    - lookAndFeel
+    - mprisPlayers
+    - quickActions2
+    - notificationHistory
+
+theme:
+  name: varda
+  colors:
+    background: "#0C0E11"
+    foreground: "#D0EBEE"
+    primary: "#52677C"
+    buttonPrimary: "#52677C"
+    warning: "#733447"
+    barBorder: "#52677C"
+    windowBorder: "#D0EBEE"
+    alertBorder: "#52677C"
