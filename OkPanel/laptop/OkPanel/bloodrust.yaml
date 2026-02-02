@@ -17,13 +17,7 @@ topBar:
   paddingBottom: 0
   paddingEnd: 6
   leftWidgets:
-    - shortcut1
-    - shortcut2
-    - shortcut3
-    - shortcut4
-    - shortcut5
-    - shortcut6
-    - shortcut7
+    - dock
   centerWidgets:
     - cavaWaveform
     - mprisControls

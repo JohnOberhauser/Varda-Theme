@@ -42,7 +42,7 @@ const bookmarks = [
       {"id":"oa5G4ZJXzwxLi4CM","label":"ArchWiki","url":"https://wiki.archlinux.org/"},
       {"id":"fgOAsCWGRNHCRZQR","label":"Hyprland","url":"https://wiki.hyprland.org/"},
       {"id":"PeIbQBjpA41kjGD6","label":"Ags","url":"https://aylur.github.io/ags/"},
-      {"id":"PeIbQBjpA41kjGD6","label":"Yazi","url":"https://yazi-rs.github.io/docs/configuration/overview"}
+      {"id":"PeIbQBjpA41kjGD6","label":"OkPanel","url":"https://johnoberhauser.github.io/OkPanel/"}
     ]
   },
   {"id":"qjTUGL2OWFspQmm2","label":"Media","bookmarks":[

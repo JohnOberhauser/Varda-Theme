@@ -5,13 +5,7 @@ leftBar:
     - menu
     - workspaces
   centerWidgets:
-    - shortcut1
-    - shortcut2
-    - shortcut3
-    - shortcut4
-    - shortcut5
-    - shortcut6
-    - shortcut7
+    - dock
   bottomWidgets:
     - tray
     - clipboardManager
@@ -25,6 +19,20 @@ leftBar:
     - clock
 
 barWidgets:
+  dock:
+    pinnedApps:
+      - kitty
+      - firefox-nightly
+      - jetbrains-idea
+      - jetbrains-studio
+      - org.signal.Signal
+      - Darktable
+      - steam
+    glyphOverride:
+      - "kitty|"
+      - "jetbrains-idea|"
+      - "org.signal.Signal|󰭹"
+      - "Darktable|󰄄"
   shortcut1:
     icon: ""
     iconOffset: 2

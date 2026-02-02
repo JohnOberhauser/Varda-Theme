@@ -1,39 +1,20 @@
 configUpdateScript: /home/john/workspace/Varda-Theme/themes/setTheme.sh
 
 barWidgets:
-  shortcut1:
-    icon: ""
-    iconOffset: 2
-    launch: "kitty -d ~/"
-    newWindow: "kitty -d ~/"
-    class: "kitty"
-  shortcut2:
-    icon: "󰈹"
-    iconOffset: 2
-    launch: "/home/john/.local/share/firefox-nightly/firefox"
-    newWindow: "/home/john/.local/share/firefox-nightly/firefox"
-    class: "firefox-nightly"
-  shortcut3:
-    icon: ""
-    iconOffset: 3
-    launch: "/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea"
-    class: "jetbrains-idea"
-  shortcut4:
-    icon: "󰀴"
-    launch: "/home/john/.local/share/JetBrains/Toolbox/apps/android-studio/bin/studio.sh"
-    class: "jetbrains-studio"
-  shortcut5:
-    icon: "󰭹"
-    launch: "flatpak run org.signal.Signal"
-    class: "org.signal.Signal"
-  shortcut6:
-    icon: "󰄄"
-    launch: "darktable"
-    class: "Darktable"
-  shortcut7:
-    icon: ""
-    launch: "steam"
-    class: "steam"
+  dock:
+    pinnedApps:
+      - kitty
+      - firefox-nightly
+      - jetbrains-idea
+      - jetbrains-studio
+      - org.signal.Signal
+      - Darktable
+      - steam
+    glyphOverride:
+      - "kitty|"
+      - "jetbrains-idea|"
+      - "org.signal.Signal|󰭹"
+      - "Darktable|󰄄"
 
 systemMenu:
   clock:

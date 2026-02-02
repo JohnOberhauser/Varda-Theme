@@ -17,13 +17,7 @@ bottomBar:
   marginEnd: 5
   leftWidgets:
     - menu
-    - shortcut1
-    - shortcut2
-    - shortcut3
-    - shortcut4
-    - shortcut5
-    - shortcut6
-    - shortcut7
+    - dock
   centerWidgets:
     - workspaces
   rightWidgets:
