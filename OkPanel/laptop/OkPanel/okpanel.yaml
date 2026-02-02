@@ -7,7 +7,6 @@ barWidgets:
       - firefox-nightly
       - jetbrains-idea
       - jetbrains-studio
-      - org.signal.Signal
       - Darktable
       - steam
     glyphOverride:

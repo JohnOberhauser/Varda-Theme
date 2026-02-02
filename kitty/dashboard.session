@@ -1,18 +1,13 @@
-new_tab Dashboard
-layout splits
-launch zsh -c "source ~/.zshrc; yazi; exec zsh"
-launch --location=hsplit --bias=75
-focus
-launch --location=vsplit --bias=60 zsh -c "source ~/.zshrc; cava; exec zsh"
-launch --location=hsplit --bias=90 zsh -c "source ~/.zshrc; btop; exec zsh"
+new_tab Top
+launch zsh -c "source ~/.zshrc; btop; exec zsh"
 
 new_tab Music
 layout splits
 launch zsh -c "source ~/.zshrc; spotify_player; exec zsh"
 launch --location=hsplit --bias=10 zsh -c "source ~/.zshrc; cava; exec zsh"
 
-new_tab NeoVim
-launch zsh -c "source ~/.zshrc; nvim; exec zsh"
+new_tab Signal
+launch zsh -c "source ~/.zshrc; gurk; exec zsh"
 
 new_tab Mozilla
 layout splits
@@ -23,3 +18,13 @@ new_tab Firefly
 layout splits
 launch zsh -c "source ~/.zshrc; cd ~/workspace/Firefly; gitui; exec zsh"
 launch --location=hsplit --bias=40 zsh -c "source ~/.zshrc; cd ~/workspace/Firefly; exec zsh"
+
+new_tab OkPanel
+layout splits
+launch zsh -c "source ~/.zshrc; cd ~/workspace/OkPanel; gitui; exec zsh"
+launch --location=hsplit --bias=40 zsh -c "source ~/.zshrc; cd ~/workspace/OkPanel; exec zsh"
+
+new_tab Varda
+layout splits
+launch zsh -c "source ~/.zshrc; cd ~/workspace/Varda-Theme; gitui; exec zsh"
+launch --location=hsplit --bias=40 zsh -c "source ~/.zshrc; cd ~/workspace/Varda-Theme; exec zsh"
