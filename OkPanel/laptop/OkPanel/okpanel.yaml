@@ -11,8 +11,9 @@ barWidgets:
       - Darktable
       - steam
     glyphOverride:
-      - "kitty|"
-      - "jetbrains-idea|"
+      - "kitty||2"
+      - "firefox-nightly|󰈹|2"
+      - "jetbrains-idea||3"
       - "org.signal.Signal|󰭹"
       - "Darktable|󰄄"
 
