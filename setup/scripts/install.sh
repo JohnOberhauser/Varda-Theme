@@ -24,11 +24,13 @@ flatpak \
 fuse2 \
 fzf \
 git \
+gitui \
 gnome-bluetooth-3.0 \
 go-yq \
 greetd \
 greetd-tuigreet \
 grim \
+gurk \
 gvfs \
 hypridle \
 hyprland \
