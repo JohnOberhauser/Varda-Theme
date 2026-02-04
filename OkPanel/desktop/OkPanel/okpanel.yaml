@@ -27,53 +27,48 @@ barWidgets:
       - jetbrains-studio
       - Darktable
       - steam
-    glyphOverride:
-      - class: kitty
-        glyph: 
-        offset: 2
-      - class: firefox-nightly
-        glyph: 󰈹
-        offset: 2
-      - class: jetbrains-idea
-        glyph: 
-        offset: 3
-      - class: org.signal.Signal
-        glyph: 󰭹
-      - class: Darktable
-        glyph: 󰄄
-  shortcut1:
-    icon: ""
-    iconOffset: 2
-    launch: "kitty -d ~/"
-    newWindow: "kitty -d ~/"
-    class: "kitty"
-  shortcut2:
-    icon: "󰈹"
-    iconOffset: 2
-    launch: "/home/john/.local/share/firefox-nightly/firefox"
-    newWindow: "/home/john/.local/share/firefox-nightly/firefox"
-    class: "firefox-nightly"
-  shortcut3:
-    icon: ""
-    iconOffset: 3
-    launch: "/home/john/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea"
-    class: "jetbrains-idea"
-  shortcut4:
-    icon: "󰀴"
-    launch: "/home/john/.local/share/JetBrains/Toolbox/apps/android-studio/bin/studio.sh"
-    class: "jetbrains-studio"
-  shortcut5:
-    icon: "󰭹"
-    launch: "flatpak run org.signal.Signal"
-    class: "org.signal.Signal"
-  shortcut6:
-    icon: "󰄄"
-    launch: "darktable"
-    class: "Darktable"
-  shortcut7:
-    icon: ""
-    launch: "steam"
-    class: "steam"
+
+applicationIcons:
+  glyphOverride:
+    - appName: kitty
+      glyph: 
+      offset: 2
+    - appName: firefox
+      glyph: 󰈹
+      offset: 2
+    - appName: idea
+      glyph: 
+      offset: 3
+    - appName: signal
+      glyph: 󰭹
+    - appName: darktable
+      glyph: 󰄄
+    - appName: chromium
+      glyph: 
+    - appName: audacity
+      glyph: 󰝚
+    - appName: disks
+      glyph: 󰋊
+    - appName: disk usage analyzer
+      glyph: 󰄦
+    - appName: gnu image manipulation program
+      glyph: 
+    - appName: obs
+      glyph: 󰹑
+    - appName: openrgb
+      glyph: 󰪫
+    - appName: opentabletdriver
+      glyph: 
+    - appName: passwords and keys
+      glyph: 󰌆
+    - appName: raspberry pi imager
+      glyph: 
+    - appName: volume control
+      glyph: 󰕾
+    - appName: yubico
+      glyph: 󱊞
+    - appName: flatseal
+      glyph: 
 
 systemMenu:
   widgets:
