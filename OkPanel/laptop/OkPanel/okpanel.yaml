@@ -9,20 +9,48 @@ barWidgets:
       - jetbrains-studio
       - Darktable
       - steam
-    glyphOverride:
-      - class: kitty
-        glyph: 
-        offset: 2
-      - class: firefox-nightly
-        glyph: 󰈹
-        offset: 2
-      - class: jetbrains-idea
-        glyph: 
-        offset: 3
-      - class: org.signal.Signal
-        glyph: 󰭹
-      - class: Darktable
-        glyph: 󰄄
+
+applicationIcons:
+  glyphOverride:
+    - appName: kitty
+      glyph: 
+      offset: 2
+    - appName: firefox
+      glyph: 󰈹
+      offset: 2
+    - appName: idea
+      glyph: 
+      offset: 3
+    - appName: signal
+      glyph: 󰭹
+    - appName: darktable
+      glyph: 󰄄
+    - appName: chromium
+      glyph: 
+    - appName: audacity
+      glyph: 󰝚
+    - appName: disks
+      glyph: 󰋊
+    - appName: disk usage analyzer
+      glyph: 󰄦
+    - appName: gnu image manipulation program
+      glyph: 
+    - appName: obs
+      glyph: 󰹑
+    - appName: openrgb
+      glyph: 󰪫
+    - appName: opentabletdriver
+      glyph: 
+    - appName: passwords and keys
+      glyph: 󰌆
+    - appName: raspberry pi imager
+      glyph: 
+    - appName: volume control
+      glyph: 󰕾
+    - appName: yubico
+      glyph: 󱊞
+    - appName: flatseal
+      glyph: 
 
 systemMenu:
   clock:
