@@ -1,5 +1,8 @@
 configUpdateScript: /home/john/workspace/Varda-Theme/themes/setTheme.sh
 
+systemCommands:
+  lock: "/home/john/workspace/OkPanel/bin/okpanel lock"
+
 barWidgets:
   dock:
     pinnedApps:
