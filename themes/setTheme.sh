@@ -93,12 +93,6 @@ hypr() {
   THEME_OUTPUT="./hypr/conf/theme.conf"
   # Replace the placeholders in the second file
   sed -e "s|\${bg}|$BG|g" -e "s|\${fg}|$FG|g" -e "s|\${primary}|$PRIMARY|g" -e "s|\${error}|$ERROR|g" "$THEME_TEMPLATE" > "$THEME_OUTPUT"
-
-  # Hyprlock
-  HYPRLOCK_TEMPLATE="./hypr/hyprlock_template.conf"
-  HYPRLOCK_OUTPUT="./hypr/hyprlock.conf"
-  # Replace the placeholders in the second file
-  sed -e "s|\${bg}|$BG|g" -e "s|\${fg}|$FG|g" -e "s|\${error}|$ERROR|g" "$HYPRLOCK_TEMPLATE" > "$HYPRLOCK_OUTPUT"
 }
 
 zsh_theme() {

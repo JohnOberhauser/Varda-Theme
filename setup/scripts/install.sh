@@ -34,7 +34,6 @@ gurk \
 gvfs \
 hypridle \
 hyprland \
-hyprlock \
 hyprpicker \
 hyprsunset \
 imagemagick \
