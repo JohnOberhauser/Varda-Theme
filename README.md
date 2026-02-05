@@ -14,7 +14,7 @@ The script is `./themes/setTheme.sh`
 
 ## Varda
 
-![screenshot](.screenshots/varda.png)
+![screenshot](https://raw.githubusercontent.com/JohnOberhauser/OkPanelScreenshots/refs/heads/main/menu.png)
 
 ### Color Palette
 
@@ -40,7 +40,7 @@ This color palette is home-grown
 
 ## Everforest
 
-![screenshot](.screenshots/everforest.png)
+![screenshot](https://raw.githubusercontent.com/JohnOberhauser/OkPanelScreenshots/refs/heads/main/examples/everforest.png)
 
 ### Color Palette
 
@@ -66,7 +66,7 @@ This color palette is from [sainnhe](https://github.com/sainnhe/everforest?tab=r
 
 ## Nord
 
-![screenshot](.screenshots/nord.png)
+![screenshot](https://raw.githubusercontent.com/JohnOberhauser/OkPanelScreenshots/refs/heads/main/examples/nord.png)
 
 ### Color Palette
 
@@ -102,7 +102,7 @@ This color palette is from [nord theme](https://www.nordtheme.com/)
 
 ## Rose Pine
 
-![screenshot](.screenshots/rosepine.png)
+![screenshot](https://raw.githubusercontent.com/JohnOberhauser/OkPanelScreenshots/refs/heads/main/examples/rosepine.png)
 
 ### Color Palette
 
@@ -127,7 +127,7 @@ This color palette is from [rose pine theme](https://rosepinetheme.com/)
 
 ## Blood Rust
 
-![screenshot](.screenshots/bloodrust.png)
+![screenshot](https://raw.githubusercontent.com/JohnOberhauser/OkPanelScreenshots/refs/heads/main/examples/bloodrust.png)
 
 ### Color Palette
 
@@ -152,6 +152,8 @@ This color palette is home-grown
 `#324351` <img src=".colors/bloodrust/324351.svg" width="20" height="20" style="vertical-align: middle;"/> dark grey 6
 
 ## Desert Power
+
+![screenshot](https://raw.githubusercontent.com/JohnOberhauser/OkPanelScreenshots/refs/heads/main/examples/desertpower.png)
 
 ### Color Palette
 
