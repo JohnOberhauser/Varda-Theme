@@ -1,4 +1,4 @@
-result="$(/home/john/workspace/OkPanel/bin/okpanel checkLock)"
+result="$($HOME/workspace/OkPanel/bin/okpanel checkLock)"
 
 echo $result
 
