@@ -52,7 +52,6 @@ pipewire-pulse \
 playerctl \
 plocate \
 plymouth \
-polkit-gnome \
 poppler \
 power-profiles-daemon \
 python \
