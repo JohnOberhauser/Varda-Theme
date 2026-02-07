@@ -56,6 +56,18 @@ applicationIcons:
       glyph: 
 
 systemMenu:
+  widgets:
+    - clock
+    - quickActions1
+    - network
+    - bluetooth
+    - audioOut
+    - audioIn
+    - powerProfile
+    - lookAndFeel
+    - mprisPlayers
+    - quickActions2
+    - notificationHistory
   clock:
     dayFont: "Anurati"
     dayAllCaps: true
