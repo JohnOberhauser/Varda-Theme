@@ -3,6 +3,11 @@ configUpdateScript: /home/john/workspace/Varda-Theme/themes/setTheme.sh
 systemCommands:
   lock: "/home/john/workspace/OkPanel/bin/okpanel lock"
 
+lockScreen:
+  entryBorderWidth: 0
+  entryAlignment: 0.6
+  entryBorderRadius: 90
+
 leftBar:
   topWidgets:
     - menu
