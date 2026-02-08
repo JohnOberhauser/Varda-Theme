@@ -12,6 +12,7 @@ leftBar:
   bottomWidgets:
     - tray
     - clipboardManager
+    - recordingIndicator
     - audioOut
     - audioIn
     - bluetooth

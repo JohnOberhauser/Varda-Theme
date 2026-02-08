@@ -55,6 +55,9 @@ applicationIcons:
     - appName: flatseal
       glyph: 
 
+lockScreen:
+  entryAlignment: 0.6
+
 systemMenu:
   widgets:
     - clock
