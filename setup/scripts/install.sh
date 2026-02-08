@@ -30,6 +30,12 @@ go-yq \
 greetd \
 greetd-tuigreet \
 grim \
+gstreamer \
+gst-libav \
+gst-plugins-bad \
+gst-plugins-base \
+gst-plugins-good \
+gst-plugins-ugly \
 gurk \
 gvfs \
 hypridle \
