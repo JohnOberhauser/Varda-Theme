@@ -15,6 +15,7 @@ leftBar:
   centerWidgets:
     - dock
   bottomWidgets:
+    - recordingIndicator
     - tray
     - clipboardManager
     - colorPicker
