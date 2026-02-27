@@ -38,7 +38,8 @@
         "open.spotify.com",
         "reddit.com",
         "app.zoom.us",
-        "localhost:8384"
+        "localhost:8384",
+        "claude.ai"
     ],
     "disabledFor": [],
     "changeBrowserTheme": false,

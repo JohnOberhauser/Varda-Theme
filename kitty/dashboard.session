@@ -14,10 +14,10 @@ layout splits
 launch zsh -c "source ~/.zshrc; cd ~/workspace/firefox; gitui; exec zsh"
 launch --location=hsplit --bias=40 zsh -c "source ~/.zshrc; cd ~/workspace/firefox; exec zsh"
 
-new_tab Firefly
+new_tab OkShell
 layout splits
-launch zsh -c "source ~/.zshrc; cd ~/workspace/Firefly; gitui; exec zsh"
-launch --location=hsplit --bias=40 zsh -c "source ~/.zshrc; cd ~/workspace/Firefly; exec zsh"
+launch zsh -c "source ~/.zshrc; cd ~/workspace/OkShell; gitui; exec zsh"
+launch --location=hsplit --bias=40 zsh -c "source ~/.zshrc; cd ~/workspace/OkShell; exec zsh"
 
 new_tab OkPanel
 layout splits

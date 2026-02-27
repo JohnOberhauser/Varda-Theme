@@ -57,7 +57,7 @@ const bookmarks = [
       {"id":"pZDB2ilcq8t0m611","label":"Maps","url":"https://maps.google.com"},
       {"id":"5YRKKQap76zg1Z11","label":"Amazon","url":"https://www.amazon.com/"},
       {"id":"R37Y4hMSIvTGhR11","label":"Lumo","url":"https://lumo.proton.me/u/0/"},
-      {"id":"R37Y4hMSIvTGhR11","label":"ChatGPT","url":"https://chatgpt.com/"},
+      {"id":"R37Y4hMSIvTGhR11","label":"Claude","url":"https://claude.ai/"},
       {"id":"ereuzztrzJbI0l11","label":"Syncthing","url":"http://localhost:8384"}
     ]
   }
