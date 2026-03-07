@@ -1,0 +1,37 @@
+frame:
+  enable_frame: true
+
+left_bar:
+  top_widgets:
+    - Menu
+    - HyprlandWorkspaces
+  center_widgets:
+    - HyprlandDock
+  bottom_widgets:
+    - RecordingIndicator
+    - NotificationHistory
+    - Tray
+    - Shutdown
+    - Screenshot
+    - PowerProfile
+    - Reboot
+    - Logout
+    - Lock
+    - HyprPicker
+    - Clipboard
+    - Bluetooth
+    - Battery
+    - AudioOutput
+    - AudioInput
+    - Network
+    - Clock
+
+calendar_menu:
+  position: Left
+  widgets:
+    - Calendar
+
+clock_format_24_h: true
+
+icon_theme: "OkMaterial"
+app_icon_theme: "Tela-circle-dark"
