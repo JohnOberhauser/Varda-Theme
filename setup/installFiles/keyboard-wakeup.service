@@ -1,0 +1,11 @@
+[Unit]
+Description=Enable keyboard wakeup from suspend
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'grep -q "XHC0.*disabled" /proc/acpi/wakeup && echo XHC0 > /proc/acpi/wakeup'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
