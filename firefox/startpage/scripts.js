@@ -39,7 +39,7 @@ const bookmarks = [
   },
   {"id":"njYk5XF49Zdf8g3o","label":"Dev","bookmarks":[
       {"id":"REzi7xXTn6hBm5Vu","label":"Github","url":"https://github.com/"},
-      {"id":"oa5G4ZJXzwxLi4CM","label":"ArchWiki","url":"https://wiki.archlinux.org/"},
+      {"id":"oa5G4ZJXzwxLi4CM","label":"Arch","url":"https://archlinux.org/packages/"},
       {"id":"fgOAsCWGRNHCRZQR","label":"Hyprland","url":"https://wiki.hyprland.org/"},
       {"id":"PeIbQBjpA41kjGD6","label":"Ags","url":"https://aylur.github.io/ags/"},
       {"id":"PeIbQBjpA41kjGD6","label":"OkPanel","url":"https://johnoberhauser.github.io/OkPanel/"}
@@ -56,7 +56,7 @@ const bookmarks = [
   {"id":"qjTUGL2OWFspQm11","label":"Other","bookmarks":[
       {"id":"pZDB2ilcq8t0m611","label":"Maps","url":"https://maps.google.com"},
       {"id":"5YRKKQap76zg1Z11","label":"Amazon","url":"https://www.amazon.com/"},
-      {"id":"R37Y4hMSIvTGhR11","label":"Lumo","url":"https://lumo.proton.me/u/0/"},
+      {"id":"R37Y4hMSIvTGhR11","label":"eBird","url":"https://ebird.org/home"},
       {"id":"R37Y4hMSIvTGhR11","label":"Claude","url":"https://claude.ai/"},
       {"id":"ereuzztrzJbI0l11","label":"Syncthing","url":"http://localhost:8384"}
     ]

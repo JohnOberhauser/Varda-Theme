@@ -21,12 +21,5 @@ left_bar:
     - Network
     - Clock
 
-calendar_menu:
-  position: Left
-  widgets:
-    - Calendar
-
-clock_format_24_h: true
-
-icon_theme: "OkMaterial"
+icon_theme: "OkPhosphor"
 app_icon_theme: "Tela-circle-dark"
