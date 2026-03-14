@@ -1,6 +1,13 @@
 frame:
   enable_frame: true
 
+weather_location_query:
+  type: City
+  name: Algonquin
+  country: USA
+
+temperature_unit: Metric
+
 left_bar:
   top_widgets:
     - Menu
